@@ -8,5 +8,6 @@
     <color name="colorWhiteTran">#80FFFFFF</color>
     <color name="colorBlack">#000000</color>
     <color name="colorBlackTran">#80000000</color>
-    <color name="colorSplitLine">#AAAAAA</color>
+    <color name="colorSplitLine">#80AAAAAA</color>
+    <color name="colorGray">#88888888</color>
 </resources>

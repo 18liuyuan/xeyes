@@ -17,12 +17,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:padding="8dp"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+
                 android:orientation="vertical">
 
                 <TextView
@@ -33,15 +35,20 @@
                 <EditText
                     android:id="@+id/et_name"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/camera_info_height"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:background="@drawable/frame_default"/>
             </LinearLayout>
 
-            <include layout="@layout/split_line" />
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+
                 android:orientation="vertical">
 
                 <TextView
@@ -52,17 +59,112 @@
                 <EditText
                     android:id="@+id/et_ip"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/camera_info_height"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:background="@drawable/frame_default"/>
             </LinearLayout>
 
 
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设备端口" />
+
+                <EditText
+                    android:id="@+id/et_port"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/camera_info_height"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:background="@drawable/frame_default"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设备通道号" />
+
+                <EditText
+                    android:id="@+id/et_channel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/camera_info_height"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:background="@drawable/frame_default"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设备账号" />
+
+                <EditText
+                    android:id="@+id/et_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/camera_info_height"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:background="@drawable/frame_default"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设备密码" />
+
+                <EditText
+                    android:id="@+id/et_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/camera_info_height"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:background="@drawable/frame_default"/>
+            </LinearLayout>
+            <TextView
+                style="@style/DefaultButton"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:text="保存"
+                android:id="@+id/tv_save" />
         </LinearLayout>
+
+
     </ScrollView>
-    <TextView
-        style="@style/DefaultButton"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_margin="20dp"
-        android:text="保存"
-        android:id="@+id/tv_save" />
+
 </LinearLayout>

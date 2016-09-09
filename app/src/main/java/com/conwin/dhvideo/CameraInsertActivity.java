@@ -47,16 +47,43 @@ public class CameraInsertActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText etName = (EditText) findViewById(R.id.et_name);
                 EditText etIp = (EditText) findViewById(R.id.et_ip);
+                EditText etPort = (EditText) findViewById(R.id.et_port);
+                EditText etUser = (EditText) findViewById(R.id.et_user);
+                EditText etPwd = (EditText) findViewById(R.id.et_pwd);
+                EditText etCh = (EditText) findViewById(R.id.et_channel);
+
                 String sName = etName.getText().toString();
                 String sIp = etIp.getText().toString().trim();
-                if(sName.length() == 0 || sIp.length() ==0){
-                    Toast.makeText(CameraInsertActivity.this, "请填写完整信息", Toast.LENGTH_SHORT).show();
+                String sPort = etPort.getText().toString();
+                String sUser = etUser.getText().toString();
+                String sPwd = etPwd.getText().toString();
+                String sCh = etCh.getText().toString();
+
+                int nPort = -1;
+                int nCh = -1;
+                try {
+                    nPort = Integer.parseInt(sPort);
+                    nCh = Integer.parseInt(sCh);
+                } catch (NumberFormatException e) {
+                    Toast.makeText(CameraInsertActivity.this, "数据填写有误", Toast.LENGTH_SHORT).show();
+                    e.printStackTrace();
+                    return ;
+                }
+
+
+                if(sName.length() == 0 || sIp.length() ==0 || nPort < 0 || sUser.length()==0 || sPwd.length() ==0 || nCh < 0){
+                    Toast.makeText(CameraInsertActivity.this, "数据填写有误", Toast.LENGTH_SHORT).show();
                     return ;
                 }
 
                 JSONObject jo = new JSONObject();
                 try {
                     jo.put("name",sName);
+                    jo.put("ip",sIp);
+                    jo.put("port",nPort);
+                    jo.put("user",sUser);
+                    jo.put("pwd",sPwd);
+                    jo.put("channel",sCh);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

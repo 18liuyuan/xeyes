@@ -112,6 +112,19 @@ public class MainActivity extends AppCompatActivity {
             ImageView ivPic = (ImageView) convertView.findViewById(R.id.iv_camera_pic);
             TextView tvName = (TextView) convertView.findViewById(R.id.tv_name);
             tvName.setText(cameraName);
+            convertView.setTag(position);
+            convertView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent iCamera = new Intent(MainActivity.this, CameraActivity.class);
+                    Bundle b = new Bundle();
+
+                    int position = Integer.parseInt(v.getTag().toString());
+                    b.putInt("chId", position);
+                    iCamera.putExtras(b);
+                    startActivity(iCamera);
+                }
+            });
             return convertView;
         }
     }

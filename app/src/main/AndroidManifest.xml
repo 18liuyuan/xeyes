@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".SetActivity" />
         <activity android:name=".CameraManagerActivity" />
-        <activity android:name=".CameraInsertActivity"></activity>
+        <activity android:name=".CameraInsertActivity" />
+        <activity android:name=".CameraActivity"></activity>
     </application>
 
 </manifest>
