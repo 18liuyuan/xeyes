@@ -149,6 +149,19 @@ public class CameraManagerActivity extends AppCompatActivity {
                     return false;
                 }
             });
+
+            convertView.setTag(position);
+            convertView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int position  = Integer.parseInt(view.getTag().toString());
+                    Bundle b = new Bundle();
+                    b.putInt("cameraId", position);
+                    Intent iEdit = new Intent(CameraManagerActivity.this, CameraEditActivity.class);
+                    iEdit.putExtras(b);
+                    startActivity(iEdit);
+                }
+            });
             return convertView;
         }
     }

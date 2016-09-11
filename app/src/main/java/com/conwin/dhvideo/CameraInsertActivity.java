@@ -23,7 +23,7 @@ public class CameraInsertActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_camera_info);
+        setContentView(R.layout.activity_camera_insert);
 
         EventBus.getDefault().register(this);
         mACache = ACache.get(this, "dhvideo");

@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
     <FrameLayout
 
         android:layout_width="match_parent"
         android:layout_height="180dp">
-        <ImageView
+        <com.facebook.drawee.view.SimpleDraweeView
             android:id="@+id/iv_camera_pic"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/default_camera_pic"/>
+
+            fresco:placeholderImage="@drawable/default_camera_pic"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:failureImage="@drawable/default_camera_pic"
+            fresco:failureImageScaleType="centerCrop"
+            fresco:actualImageScaleType="centerCrop"/>
         <TextView
             android:id="@+id/tv_name"
             android:layout_width="match_parent"
@@ -19,9 +24,10 @@
             android:text=""
             android:background="@color/colorBlackTran"
             android:textColor="@color/colorWhite"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="130dp"
+            android:singleLine="true"
             android:paddingLeft="5dp"
-            android:layout_height="30dp" />
+            android:layout_height="50dp" />
     </FrameLayout>
 
 </LinearLayout>

@@ -1,6 +1,8 @@
 package com.conwin.dhvideo;
 
 import android.content.Intent;
+import android.graphics.drawable.Animatable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -12,6 +14,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.conwin.gimoutils.ACache;
+import com.facebook.drawee.backends.pipeline.Fresco;
+import com.facebook.drawee.controller.BaseControllerListener;
+import com.facebook.drawee.controller.ControllerListener;
+import com.facebook.drawee.interfaces.DraweeController;
+import com.facebook.drawee.view.DraweeView;
+import com.facebook.drawee.view.SimpleDraweeView;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -20,6 +28,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,7 +66,9 @@ public class MainActivity extends AppCompatActivity {
         mLvCamera.setAdapter(mCameraAdapter);
         initCameraList();
 
+
     }
+
 
     @Override
     public void onDestroy() {
@@ -109,7 +120,20 @@ public class MainActivity extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            ImageView ivPic = (ImageView) convertView.findViewById(R.id.iv_camera_pic);
+
+
+
+
+            SimpleDraweeView ivPic = (SimpleDraweeView) convertView.findViewById(R.id.iv_camera_pic);
+           // ivPic.setAspectRatio(1.33f); // 设置宽高比为4:3
+            String thumbPath = GlobalFunction.getStoreFile()+"/"+GlobalDefine.DIRS.CAMERA_THUMB+"/camera"+position;
+           // Uri uri = Uri.parse("http://img0.imgtn.bdimg.com/it/u=2925305502,4225644286&fm=206&gp=0.jpg");
+            Uri uri = Uri.fromFile(new File(thumbPath));
+            DraweeController controller = Fresco.newDraweeControllerBuilder()
+                    .setUri(uri)
+                    .build();
+            ivPic.setController(controller);
+
             TextView tvName = (TextView) convertView.findViewById(R.id.tv_name);
             tvName.setText(cameraName);
             convertView.setTag(position);
@@ -129,9 +153,16 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+
+
+
+
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onPostEvent(EventObject.CameraUpdate cu) {
         initCameraList();
       //  Toast.makeText(getActivity(), event.message, Toast.LENGTH_SHORT).show();
     }
+
+
 }
