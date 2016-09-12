@@ -1,25 +1,23 @@
 package com.conwin.dhvideo;
 
 import android.content.Intent;
-import android.graphics.drawable.Animatable;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.conwin.gimoutils.ACache;
 import com.facebook.drawee.backends.pipeline.Fresco;
-import com.facebook.drawee.controller.BaseControllerListener;
-import com.facebook.drawee.controller.ControllerListener;
 import com.facebook.drawee.interfaces.DraweeController;
-import com.facebook.drawee.view.DraweeView;
 import com.facebook.drawee.view.SimpleDraweeView;
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -35,16 +33,18 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    ListView mLvCamera;
+    PullToRefreshListView mLvCamera;
     List<JSONObject> mListCamera;
     LayoutInflater mInflater;
     CameraListAdapter mCameraAdapter;
+    ACache mCache;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         EventBus.getDefault().register(this);
         mInflater = this.getLayoutInflater();
+        mCache = ACache.get(this,"dhvideo");
         TextView tvRight = (TextView)findViewById(R.id.tv_tb_right);
         tvRight.setText("设置");
         tvRight.setVisibility(View.VISIBLE);
@@ -59,7 +59,29 @@ public class MainActivity extends AppCompatActivity {
         TextView tvTitle = (TextView)findViewById(R.id.tv_tb_title);
         tvTitle.setText("我的视频");
 
-        mLvCamera = (ListView) findViewById(R.id.lv_camera);
+        mLvCamera = (PullToRefreshListView) findViewById(R.id.lv_camera);
+        mLvCamera.setMode(PullToRefreshBase.Mode.BOTH);
+        mLvCamera.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ListView>() {
+
+            @Override
+            public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
+                FreshCameraListTask task = new FreshCameraListTask();
+                task.execute("start");
+            }
+
+            @Override
+            public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
+                FreshCameraListTask task = new FreshCameraListTask();
+                task.execute("start");
+            }
+        });
+
+        mLvCamera.setOnPullEventListener(new PullToRefreshBase.OnPullEventListener<ListView>() {
+            @Override
+            public void onPullEvent(PullToRefreshBase<ListView> refreshView, PullToRefreshBase.State state, PullToRefreshBase.Mode direction) {
+
+            }
+        });
         mListCamera = new ArrayList<JSONObject>();
 
         mCameraAdapter = new CameraListAdapter();
@@ -121,15 +143,18 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
 
-
-
-
             SimpleDraweeView ivPic = (SimpleDraweeView) convertView.findViewById(R.id.iv_camera_pic);
            // ivPic.setAspectRatio(1.33f); // 设置宽高比为4:3
-            String thumbPath = GlobalFunction.getStoreFile()+"/"+GlobalDefine.DIRS.CAMERA_THUMB+"/camera"+position;
+            String thumbPath = GlobalFunction.getStoreFile()+"/"+GlobalDefine.DIRS.CAMERA_THUMB+"/camera"+position+".jpg";
            // Uri uri = Uri.parse("http://img0.imgtn.bdimg.com/it/u=2925305502,4225644286&fm=206&gp=0.jpg");
+          //  ImagePipelineFactory.getInstance().getImagePipeline().clearMemoryCaches();
+
+
+           Fresco.getImagePipeline().evictFromCache(Uri.parse(thumbPath));
             Uri uri = Uri.fromFile(new File(thumbPath));
+
             DraweeController controller = Fresco.newDraweeControllerBuilder()
+
                     .setUri(uri)
                     .build();
             ivPic.setController(controller);
@@ -153,7 +178,27 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    class FreshCameraListTask extends AsyncTask<String, Integer, Boolean>{
+        @Override
+        protected Boolean doInBackground(String... strings) {
 
+
+
+            return true;
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... values) {
+            super.onProgressUpdate(values);
+        }
+
+        @Override
+        protected void onPostExecute(Boolean aBoolean) {
+            initCameraList();
+            mLvCamera.onRefreshComplete();
+            super.onPostExecute(aBoolean);
+        }
+    }
 
 
 

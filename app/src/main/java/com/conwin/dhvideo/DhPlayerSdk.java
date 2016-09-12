@@ -6,6 +6,8 @@ import android.view.SurfaceView;
 import com.company.PlaySDK.Constants;
 import com.company.PlaySDK.IPlaySDK;
 
+import java.io.File;
+
 /**
  * Created by Administrator on 2016/9/10.
  */
@@ -101,7 +103,9 @@ public class DhPlayerSdk {
             System.out.println();
         } else if(mSaveThumbFlg == SAVE_THUMB_PIC_FLG.WAIT_SAVE){
             // mSaveThumbFlg = SAVE_THUMB_PIC_FLG.SAVED;
-            String saveFile = GlobalFunction.getStoreFile()+"/"+GlobalDefine.DIRS.CAMERA_THUMB+"/"+"camera"+mCameraId;
+            String saveFile = GlobalFunction.getStoreFile()+"/"+GlobalDefine.DIRS.CAMERA_THUMB+"/"+"camera"+mCameraId+".jpg";
+            File oldFile = new File(saveFile);
+            oldFile.delete();
             boolean bRet = capturePic(saveFile);
             if (bRet) mSaveThumbFlg = SAVE_THUMB_PIC_FLG.SAVED;
         }
