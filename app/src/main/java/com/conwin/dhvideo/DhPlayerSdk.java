@@ -1,6 +1,5 @@
 package com.conwin.dhvideo;
 
-import android.provider.Settings;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
@@ -114,6 +113,7 @@ public class DhPlayerSdk {
         if (mPlayPort < 0){
             return  false;
         }
+
         int nRet =  IPlaySDK.PLAYCatchPicEx(mPlayPort, path, Constants.PicFormat_JPEG);
         return  nRet==0?false:true;
     }
