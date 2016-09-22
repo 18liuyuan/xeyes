@@ -27,7 +27,9 @@
         <activity android:name=".SetActivity" />
         <activity android:name=".CameraManagerActivity" />
         <activity android:name=".CameraInsertActivity" />
-        <activity android:name=".CameraActivity" />
+        <activity android:name=".CameraActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
         <activity android:name=".CameraEditActivity"/>
     </application>
 

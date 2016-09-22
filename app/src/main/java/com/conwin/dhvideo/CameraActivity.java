@@ -1,5 +1,7 @@
 package com.conwin.dhvideo;
 
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -14,7 +16,7 @@ import com.conwin.gimoutils.ACache;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class CameraActivity extends AppCompatActivity {
+public class CameraActivity extends AppCompatActivity implements View.OnClickListener {
 
     ACache mACache;
     int mCameraId;
@@ -28,6 +30,9 @@ public class CameraActivity extends AppCompatActivity {
    // SurfaceView mSurfaceView;
     VideoPlayer mVideoPlayer;
     //IPlaySDK.PLAYInputData
+    TextView mTvFullScreen;
+
+
 
     interface MSG_DEF{
         int LOGIN_SUCCESS = 0;
@@ -42,6 +47,8 @@ public class CameraActivity extends AppCompatActivity {
         mMsgHandler = new MsgHandler();
         TextView tvTitle = (TextView)findViewById(R.id.tv_tb_title);
         tvTitle.setText("视频");
+        mTvFullScreen = (TextView)findViewById(R.id.tv_fullscreen);
+        mTvFullScreen.setOnClickListener(this);
        // mSurfaceView = (SurfaceView) findViewById(R.id.sv_screen);
         mVideoPlayer = (VideoPlayer) findViewById(R.id.video_player);
 //        INetSDK.LoadLibrarys();
@@ -113,6 +120,24 @@ public class CameraActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.tv_fullscreen:
+                switchFullScreen();
+                break;
+        }
+    }
+
+    void switchFullScreen(){
+        if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        } else if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        }
+    }
+
     boolean startRealPlay(){
         String ip ;
         int port ;
@@ -131,6 +156,9 @@ public class CameraActivity extends AppCompatActivity {
             e.printStackTrace();
             return  false;
         }
+        mVideoPlayer.setLoadingTitle("正在连接设备");
+        mVideoPlayer.showLoadding(true);
+
         mDhPlayerSdk.startPlayer(mVideoPlayer.getSurfaceView());
         mChannel = channel;
         mDhNetSdk.login(ip, port, user, pwd, new DhNetSdk.LoginResultCallBack() {
@@ -186,8 +214,10 @@ public class CameraActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(CameraActivity.this, "播放失败", Toast.LENGTH_SHORT).show();
                 }
+                mVideoPlayer.showLoadding(false);
             } else if (msg.what == MSG_DEF.LOGIN_FAILURE){
                 Toast.makeText(CameraActivity.this, "登录失败", Toast.LENGTH_SHORT).show();
+                mVideoPlayer.showLoadding(false);
             }
 
         }

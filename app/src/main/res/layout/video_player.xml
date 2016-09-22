@@ -2,18 +2,49 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-    <com.conwin.dhvideo.VideoSurfaceView
-        android:id="@+id/sv_screen"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal" >
+    android:background="@color/colorBlack"
 
-    </com.conwin.dhvideo.VideoSurfaceView>
-    <TextView
+    android:orientation="vertical">
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="match_parent"
         android:gravity="center"
-        android:background="@color/colorAccent"
-        android:text="播放器"/>
+        android:orientation="vertical">
+
+        <com.conwin.dhvideo.VideoSurfaceView
+            android:id="@+id/sv_screen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+        </com.conwin.dhvideo.VideoSurfaceView>
+
+        <LinearLayout
+            android:id="@+id/ll_loadding"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:padding="3dp"
+            android:visibility="visible"
+            android:background="@color/colorBlackTran"
+            android:orientation="vertical">
+            <ProgressBar
+
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:indeterminateDrawable="@drawable/video_loading" />
+            <TextView
+                android:id="@+id/tv_load_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/colorWhite"
+                android:text="正在缓冲"/>
+            </LinearLayout>
+    </FrameLayout>
+
+
 </LinearLayout>
