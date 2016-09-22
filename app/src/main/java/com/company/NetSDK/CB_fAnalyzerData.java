@@ -4,7 +4,7 @@ package com.company.NetSDK;
  * \if ENGLISH_LANG
  * alarm event type depends on dhnetsdk.h analyzed alarm type 
  * \else
- * 回调方式进行数据解析，dwDataType表示数据解析得到类型
+ * ;X5w7=J==xPPJ}>]=bNv#,dwDataType1mJ>J}>]=bNv5C5=@`PM
  * \endif
  */
 public interface CB_fAnalyzerData {
@@ -19,12 +19,12 @@ public interface CB_fAnalyzerData {
 	 * @param dwBufSize buffering size 
 	 * @see {@link com.company.NetSDK.INetSDK#SetNewDevConfig() SetNewDevConfig} {@link com.company.NetSDK.INetSDK#ParseData() ParseData}  
 	 * \else
-	 * 录像报警事件回调函数
-	 * @param dwDataType 数据类型 
-	 * @param pDataInfo 数据参数
-	 * @param dwStructSize 结构体大小 
-	 * @param pBuffer 缓冲 
-	 * @param dwBufSize 缓冲大小
+	 * B<Oq1(>/JB<~;X5w:/J}
+	 * @param dwDataType J}>]@`PM 
+	 * @param pDataInfo J}>]2NJ}
+	 * @param dwStructSize =a99Le4sP! 
+	 * @param pBuffer ;:3e 
+	 * @param dwBufSize ;:3e4sP!
 	 * @see {@link com.company.NetSDK.INetSDK#SetNewDevConfig() SetNewDevConfig} {@link com.company.NetSDK.INetSDK#ParseData() ParseData}  
 	 * \endif
 	 */

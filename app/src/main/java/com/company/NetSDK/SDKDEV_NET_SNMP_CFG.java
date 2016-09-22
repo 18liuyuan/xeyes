@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * struct SNMP config struct
  * \else
- * SNMP配置结构
+ * SNMPEdVC=a99
  * \endif
  */
 public class SDKDEV_NET_SNMP_CFG implements Serializable {
@@ -20,7 +20,7 @@ public class SDKDEV_NET_SNMP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * SNMP enable
 	 * \else
-	 * SNMP使能
+	 * SNMPJ9D\
 	 * \endif
 	 */
 	public boolean                bEnable;
@@ -29,7 +29,7 @@ public class SDKDEV_NET_SNMP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * SNMP port
 	 * \else
-	 * SNMP端口
+	 * SNMP6K?Z
 	 * \endif
 	 */
 	public int                 iSNMPPort;
@@ -38,7 +38,7 @@ public class SDKDEV_NET_SNMP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * read common
 	 * \else
-	 * 读共同体
+	 * 6A92M,Le
 	 * \endif
 	 */
 	public byte                szReadCommon[] = new byte[FinalVar.SDK_MAX_SNMP_COMMON_LEN];
@@ -47,7 +47,7 @@ public class SDKDEV_NET_SNMP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * write common
 	 * \else
-	 * 写共同体
+	 * P492M,Le
 	 * \endif
 	 */
 	public byte                szWriteCommon[] = new byte[FinalVar.SDK_MAX_SNMP_COMMON_LEN];
@@ -56,7 +56,7 @@ public class SDKDEV_NET_SNMP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * trap address
 	 * \else
-	 * trap地址
+	 * trap5XV7
 	 * \endif
 	 */
 	public byte                szTrapServer[] = new byte[64];
@@ -65,7 +65,7 @@ public class SDKDEV_NET_SNMP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * trap port
 	 * \else
-	 * trap端口
+	 * trap6K?Z
 	 * \endif
 	 */
 	public int                 iTrapPort;
@@ -74,7 +74,7 @@ public class SDKDEV_NET_SNMP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * SNMP V1 enable
 	 * \else
-	 * 设备是否开启支持版本1格式，0不使能；1使能
+	 * Ih18JG7q?*FtV'3V0f1>18qJ=#,02;J9D\#;1J9D\
 	 * \endif
 	 */
 	public byte                bSNMPV1;
@@ -83,7 +83,7 @@ public class SDKDEV_NET_SNMP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * SNMP V2 enable
 	 * \else
-	 * 设备是否开启支持版本2格式，0不使能；1使能
+	 * Ih18JG7q?*FtV'3V0f1>28qJ=#,02;J9D\#;1J9D\
 	 * \endif
 	 */
 	public byte                bSNMPV2;
@@ -92,7 +92,7 @@ public class SDKDEV_NET_SNMP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * SNMP V3 enable
 	 * \else
-	 * 设备是否开启支持版本3格式，0不使能；1使能
+	 * Ih18JG7q?*FtV'3V0f1>38qJ=#,02;J9D\#;1J9D\
 	 * \endif
 	 */
 	public byte                bSNMPV3;

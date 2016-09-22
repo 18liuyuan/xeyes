@@ -13,7 +13,7 @@ public class SDKDEV_DECODER_TOUR_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * the number of Configure structures. The biggest support 32. Specific number of support inquiries through capacity.
 	 * \else
-	 * 配置结构体数目. 现在最大支持32个.具体支持数目可以通过能力查询.
+	 * EdVC=a99LeJ}D?. OVTZWn4sV'3V328v.>_LeV'3VJ}D??IRTM(9}D\A&2iQ/.
 	 * \endif
 	 */
 	public int                             nCfgNum;
@@ -22,7 +22,7 @@ public class SDKDEV_DECODER_TOUR_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Polling configuration array, the effective number of structures by the members of the "nCfgNum" designation. Keep left to expand 32.
 	 * \else
-	 * 轮询配置数组,有效结构体个数由成员"nCfgNum"指定. 保留32个留待扩展.
+	 * BVQ/EdVCJ}Wi,SPP'=a99Le8vJ}SI3IT1"nCfgNum"V86(. 1#At328vAt4}@)U9.
 	 * \endif
 	 */
 	public SDKDEV_DECODER_TOUR_SINGLE_CFG   tourCfg[] = new SDKDEV_DECODER_TOUR_SINGLE_CFG[64];

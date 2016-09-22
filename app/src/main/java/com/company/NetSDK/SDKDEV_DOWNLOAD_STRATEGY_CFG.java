@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Video download policy configuration
  * \else
- * 录象下载策略配置
+ * B<OsOBTX2_BTEdVC
  * \endif
  */
 public class SDKDEV_DOWNLOAD_STRATEGY_CFG implements Serializable {
@@ -17,9 +17,9 @@ public class SDKDEV_DOWNLOAD_STRATEGY_CFG implements Serializable {
 
 	/**
 	 * \if ENGLISH_LANG
-	 * TRUE：High-speed downloads, FALSE: ordinary download
+	 * TRUE#:High-speed downloads, FALSE: ordinary download
 	 * \else
-	 * TRUE：高速下载，FALSE：普通下载
+	 * TRUE#:8_KYOBTX#,FALSE#:FUM(OBTX
 	 * \endif
 	 */
 	public boolean                bEnable;

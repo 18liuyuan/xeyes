@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * explosion proof alarm configuration
  * \else
- * 防爆盒报警事件配置
+ * 7@1,:P1(>/JB<~EdVC
  * \endif
  */
 public class SDKDEV_EXPLOSION_PROOF_CFG implements Serializable {
@@ -20,7 +20,7 @@ public class SDKDEV_EXPLOSION_PROOF_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * explosion proof alarm configuration enable
 	 * \else
-	 * 防爆盒报警使能
+	 * 7@1,:P1(>/J9D\
 	 * \endif
 	 */
 	public boolean                bEnable; 
@@ -29,7 +29,7 @@ public class SDKDEV_EXPLOSION_PROOF_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * handle method
 	 * \else
-	 * 处理方式
+	 * 4&@m7=J=
 	 * \endif
 	 */
 	public SDK_MSG_HANDLE_EX    struHandle = new SDK_MSG_HANDLE_EX(); 

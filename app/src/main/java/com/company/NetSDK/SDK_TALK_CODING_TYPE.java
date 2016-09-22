@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Audio encode type 
  * \else
- * 编码类型
+ * 1`Bk@`PM
  * \endif
  */
 public class SDK_TALK_CODING_TYPE implements Serializable {
@@ -19,18 +19,20 @@ public class SDK_TALK_CODING_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * No-head PCM
 	 * \else
-	 * 无头PCM
+	 * N^M7PCM
 	 * \endif
 	 */
-	public static final int 	SDK_TALK_DEFAULT = 0;				
+	public static final int 	SDK_TALK_DEFAULT = 0;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * With head PCM
 	 * \else
-	 * 带头PCM
+	 * 4xM7PCM
 	 * \endif
 	 */
-	public static final int 	SDK_TALK_PCM = 1;					
+	public static final int 	SDK_TALK_PCM = 1;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * G711a
@@ -38,7 +40,8 @@ public class SDK_TALK_CODING_TYPE implements Serializable {
 	 * G711a
 	 * \endif
 	 */
-	public static final int 	SDK_TALK_G711a = 2;					
+	public static final int 	SDK_TALK_G711a = 2;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * AMR
@@ -46,7 +49,8 @@ public class SDK_TALK_CODING_TYPE implements Serializable {
 	 * AMR
 	 * \endif
 	 */
-	public static final int 	SDK_TALK_AMR = 3;					
+	public static final int 	SDK_TALK_AMR = 3;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * G711u
@@ -54,7 +58,8 @@ public class SDK_TALK_CODING_TYPE implements Serializable {
 	 * G711u
 	 * \endif
 	 */
-	public static final int 	SDK_TALK_G711u = 4;					
+	public static final int 	SDK_TALK_G711u = 4;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * G726
@@ -62,7 +67,8 @@ public class SDK_TALK_CODING_TYPE implements Serializable {
 	 * G726
 	 * \endif
 	 */
-	public static final int		SDK_TALK_G726 = 5;					
+	public static final int		SDK_TALK_G726 = 5;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * G723_53
@@ -70,7 +76,8 @@ public class SDK_TALK_CODING_TYPE implements Serializable {
 	 * G723_53
 	 * \endif
 	 */
-	public static final int 	SDK_TALK_G723_53 = 6;				
+	public static final int 	SDK_TALK_G723_53 = 6;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * G723_63
@@ -78,7 +85,8 @@ public class SDK_TALK_CODING_TYPE implements Serializable {
 	 * G723_63
 	 * \endif
 	 */
-	public static final int 	SDK_TALK_G723_63 = 7;				
+	public static final int 	SDK_TALK_G723_63 = 7;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * AAC
@@ -86,7 +94,8 @@ public class SDK_TALK_CODING_TYPE implements Serializable {
 	 * AAC
 	 * \endif
 	 */
-	public static final int 	SDK_TALK_AAC = 8;					
+	public static final int 	SDK_TALK_AAC = 8;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * OGG
@@ -94,7 +103,8 @@ public class SDK_TALK_CODING_TYPE implements Serializable {
 	 * OGG
 	 * \endif
 	 */
-	public static final int 	SDK_TALK_OGG = 9;                   
+	public static final int 	SDK_TALK_OGG = 9;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * ADPCM
@@ -102,7 +112,8 @@ public class SDK_TALK_CODING_TYPE implements Serializable {
 	 * ADPCM
 	 * \endif
 	 */
-	public static final int 	SDK_TALK_ADPCM = 21;                
+	public static final int 	SDK_TALK_ADPCM = 21;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * MP3
@@ -110,5 +121,5 @@ public class SDK_TALK_CODING_TYPE implements Serializable {
 	 * MP3
 	 * \endif
 	 */
-	public static final int 	SDK_TALK_MP3   = 22;				
+	public static final int 	SDK_TALK_MP3   = 22;
 }

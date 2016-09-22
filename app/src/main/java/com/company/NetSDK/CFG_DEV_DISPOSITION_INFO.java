@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Normal COnfiguration 
  * \else
- * 普通配置 (CFG_CMD_DEV_GENERRAL) General 
+ * FUM(EdVC (CFG_CMD_DEV_GENERRAL) General 
  * \endif
  */
 public class CFG_DEV_DISPOSITION_INFO implements Serializable {
@@ -17,9 +17,9 @@ public class CFG_DEV_DISPOSITION_INFO implements Serializable {
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * Device No.，Mainly for Remoter Indentify Different Device 0~998 
+	 * Device No.#,Mainly for Remoter Indentify Different Device 0~998 
 	 * \else
-	 * 本机编号，主要用于遥控器区分不同设备	0~998
+	 * 1>;z1`:E#,VwR*SCSZR#?XFwGx7V2;M,Ih18	0~998
 	 * \endif
 	 */
 	public int 				nLocalNo;
@@ -28,7 +28,7 @@ public class CFG_DEV_DISPOSITION_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Machine Name Or No. 
 	 * \else
-	 * 机器名称或编号
+	 * ;zFwC{3F;r1`:E
 	 * \endif
 	 */
 	public byte[]			szMachineName = new byte[256];
@@ -37,16 +37,16 @@ public class CFG_DEV_DISPOSITION_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Machine Address is Road Code 
 	 * \else
-	 * 机器部署地点即道路编码
+	 * ;zFw2?Jp5X5c<45@B71`Bk
 	 * \endif
 	 */
 	public byte[]			szMachineAddress = new byte[256];
 	
  	/**
 	 * \if ENGLISH_LANG
-	 * Machine Group Or Machine Affiliated Unit Default Empty，User Can Put Different Machines As One Group，Easy Management，Repeatability
+	 * Machine Group Or Machine Affiliated Unit Default Empty#,User Can Put Different Machines As One Group#,Easy Management#,Repeatability
 	 * \else
-	 * 机器分组或叫设备所属单位	默认为空，用户可以将不同的设备编为一组，便于管理，可重复。
+	 * ;zFw7VWi;r=PIh18KyJt5%N;	D,HON*?U#,SC;'?IRT=+2;M,5DIh181`N*R;Wi#,1cSZ9\@m#,?IVX84!#
 	 * \endif
 	 */
 	public byte[]			szMachineGroup = new byte[256];
@@ -55,7 +55,7 @@ public class CFG_DEV_DISPOSITION_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * device no. , only one in platform with interne
 	 * \else
-	 * 机器编号, 联网平台内唯一
+	 * ;zFw1`:E, A*MxF=L(DZN(R;
 	 * \endif
 	 */
 	public byte[]			szMachineID = new byte[64];

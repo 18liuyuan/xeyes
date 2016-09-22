@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * System information
  * \else
- * 系统信息
+ * O5M3PEO"
  * \endif
  */
 public class SDKDEV_SYSTEM_ATTR_CFG implements Serializable {
@@ -20,35 +20,38 @@ public class SDKDEV_SYSTEM_ATTR_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Version info 
 	 * \else
-	 * 版本信息
+	 * 0f1>PEO"
 	 * \endif
 	 */
-	
 	public SDK_VERSION_INFO		stVersion = new SDK_VERSION_INFO();
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * DSP capacity description 
 	 * \else
-	 * DSP能力描述
+	 * DSPD\A&ChJv
 	 * \endif
 	 */
-	public SDK_DSP_ENCODECAP	stDspEncodeCap = new SDK_DSP_ENCODECAP();			
+	public SDK_DSP_ENCODECAP	stDspEncodeCap = new SDK_DSP_ENCODECAP();
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * SN
 	 * \else
-	 * 序列号
+	 * PrAP:E
 	 * \endif
 	 */
-	public byte				szDevSerialNo[] = new byte[FinalVar.SDK_DEV_SERIALNO_LEN];	
+	public byte				szDevSerialNo[] = new byte[FinalVar.SDK_DEV_SERIALNO_LEN];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Device type. Please refer to enumeration DHDEV_DEVICE_TYPE
 	 * \else
-	 * 设备类型，见枚举NET_DEVICE_TYPE
+	 * Ih18@`PM#,<{C6>YNET_DEVICE_TYPE
 	 * \endif
 	 */
-	public byte				byDevType;				
+	public byte				byDevType;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Device detailed type. String format. It may be empty.
@@ -90,7 +93,7 @@ public class SDKDEV_SYSTEM_ATTR_CFG implements Serializable {
 	 * NET_ITC_SERIAL						ITS camera 
 	 * NET_HWS_SERIAL						Radar speed measuring device 
 	 * NET_PVR_SERIAL						PVR 
-	 * NET_IVS_SERIAL						IVS（intelligent video server series） 
+	 * NET_IVS_SERIAL						IVS#(intelligent video server series#) 
 	 * NET_IVS_B							General intelligent video detect server 
 	 * NET_IVS_F							Facial recognition server 
 	 * NET_IVS_V							Video quality analysis server 
@@ -101,88 +104,93 @@ public class SDKDEV_SYSTEM_ATTR_CFG implements Serializable {
 	 * NET_IVS_PC							People counting server 
 	 * </pre>
 	 * \else
-	 * 设备详细型号，字符串格式，可能为空
-	 * 枚举定义								类型 
-	 * NET_DVR_NONREALTIME_MACE				非实时MACE 
-	 * NET_DVR_NONREALTIME					非实时 
-	 * NET_NVS_MPEG1						网络视频服务器 
-	 * NET_DVR_MPEG1_2						MPEG1二路录像机 
-	 * NET_DVR_MPEG1_8						MPEG1八路录像机 
-	 * NET_DVR_MPEG4_8						MPEG4八路录像机 
-	 * NET_DVR_MPEG4_16						MPEG4十六路录像机 
-	 * NET_DVR_MPEG4_SX2					LB系列录像机 
-	 * NET_DVR_MEPG4_ST2					GB系列录像机 
-	 * NET_DVR_MEPG4_SH2					HB系列录像机 
-	 * NET_DVR_MPEG4_GBE					GBE系列录像机 
-	 * NET_DVR_MPEG4_NVSII					II代网络视频服务器 
-	 * NET_DVR_STD_NEW						新标准配置协议 
-	 * NET_DVR_DDNS							DDNS服务器 
-	 * NET_DVR_ATM							ATM机 
-	 * NET_NB_SERIAL						二代非实时NB系列机器 
-	 * NET_LN_SERIAL						LN系列产品 
-	 * NET_BAV_SERIAL						BAV系列产品 
-	 * NET_SDIP_SERIAL						SDIP系列产品 
-	 * NET_IPC_SERIAL						IPC系列产品 
-	 * NET_NVS_B							NVS B系列 
-	 * NET_NVS_C							NVS H系列 
-	 * NET_NVS_S							NVS S系列 
-	 * NET_NVS_E							NVS E系列 
-	 * NET_DVR_NEW_PROTOCOL					从QueryDevState中查询设备类型,以字符串格式。 
-	 * NET_NVD_SERIAL						解码器。 
+	 * Ih18OjO8PM:E#,WV7{4.8qJ=#,?ID\N*?U
+	 * C6>Y6(Re								@`PM 
+	 * NET_DVR_NONREALTIME_MACE				7GJ5J1MACE 
+	 * NET_DVR_NONREALTIME					7GJ5J1 
+	 * NET_NVS_MPEG1						MxBgJSF57~NqFw 
+	 * NET_DVR_MPEG1_2						MPEG16~B7B<Oq;z 
+	 * NET_DVR_MPEG1_8						MPEG10KB7B<Oq;z 
+	 * NET_DVR_MPEG4_8						MPEG40KB7B<Oq;z 
+	 * NET_DVR_MPEG4_16						MPEG4J.AyB7B<Oq;z 
+	 * NET_DVR_MPEG4_SX2					LBO5APB<Oq;z 
+	 * NET_DVR_MEPG4_ST2					GBO5APB<Oq;z 
+	 * NET_DVR_MEPG4_SH2					HBO5APB<Oq;z 
+	 * NET_DVR_MPEG4_GBE					GBEO5APB<Oq;z 
+	 * NET_DVR_MPEG4_NVSII					II4zMxBgJSF57~NqFw 
+	 * NET_DVR_STD_NEW						PB1jW<EdVCP-Ri 
+	 * NET_DVR_DDNS							DDNS7~NqFw 
+	 * NET_DVR_ATM							ATM;z 
+	 * NET_NB_SERIAL						6~4z7GJ5J1NBO5AP;zFw 
+	 * NET_LN_SERIAL						LNO5AP2zF7 
+	 * NET_BAV_SERIAL						BAVO5AP2zF7 
+	 * NET_SDIP_SERIAL						SDIPO5AP2zF7 
+	 * NET_IPC_SERIAL						IPCO5AP2zF7 
+	 * NET_NVS_B							NVS BO5AP 
+	 * NET_NVS_C							NVS HO5AP 
+	 * NET_NVS_S							NVS SO5AP 
+	 * NET_NVS_E							NVS EO5AP 
+	 * NET_DVR_NEW_PROTOCOL					4SQueryDevStateVP2iQ/Ih18@`PM,RTWV7{4.8qJ=!# 
+	 * NET_NVD_SERIAL						=bBkFw!# 
 	 * NET_DVR_N5							N5 
-	 * NET_DVR_MIX_DVR						混合dvr 
-	 * NET_SVR_SERIAL						SVR系列 
+	 * NET_DVR_MIX_DVR						;l:Odvr 
+	 * NET_SVR_SERIAL						SVRO5AP 
 	 * NET_SVR_BS							SVR-BS 
-	 * NET_NVR_SERIAL						NVR系列 
+	 * NET_NVR_SERIAL						NVRO5AP 
 	 * NET_DVR_N51							N51 
-	 * NET_ITSE_SERIAL						ITSE 智能分析盒 
-	 * NET_ITC_SERIAL						智能交通像机设备 
-	 * NET_HWS_SERIAL						雷达测速仪HWS 
-	 * NET_PVR_SERIAL						便携式音视频录像机 
-	 * NET_IVS_SERIAL						IVS（智能视频服务器系列） 
-	 * NET_IVS_B							通用智能视频侦测服务器 
-	 * NET_IVS_F							人脸识别服务器 
-	 * NET_IVS_V							视频质量诊断服务器 
-	 * NET_MATRIX_SERIAL					矩阵 
+	 * NET_ITSE_SERIAL						ITSE VGD\7VNv:P 
+	 * NET_ITC_SERIAL						VGD\=;M(Oq;zIh18 
+	 * NET_HWS_SERIAL						@W4o2bKYRGHWS 
+	 * NET_PVR_SERIAL						1cP/J=RtJSF5B<Oq;z 
+	 * NET_IVS_SERIAL						IVS#(VGD\JSF57~NqFwO5AP#) 
+	 * NET_IVS_B							M(SCVGD\JSF5Ul2b7~NqFw 
+	 * NET_IVS_F							HKA3J61p7~NqFw 
+	 * NET_IVS_V							JSF5VJA?Uo6O7~NqFw 
+	 * NET_MATRIX_SERIAL					>XUs 
 	 * NET_DVR_N52							N52 
 	 * NET_DVR_N56							N56 
 	 * NET_ESS_SERIAL						ESS 
-	 * NET_IVS_PC							人数统计服务器 
+	 * NET_IVS_PC							HKJ}M3<F7~NqFw 
 	 * \endif
 	 */
-	public byte				szDevType[] = new byte[FinalVar.SDK_DEV_TYPE_LEN];	
+	public byte				szDevType[] = new byte[FinalVar.SDK_DEV_TYPE_LEN];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Video port amount
 	 * \else
-	 * 视频口数量
+	 * JSF5?ZJ}A?
 	 * \endif
 	 */
-	public byte				byVideoCaptureNum;		
+	public byte				byVideoCaptureNum;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Audio port amount 
 	 * \else
-	 * 音频口数量
+	 * RtF5?ZJ}A?
 	 * \endif
 	 */
-	public byte				byAudioCaptureNum;		
+	public byte				byAudioCaptureNum;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * NSP
 	 * \else
-	 * 对讲输入接口数量
+	 * 6T=2JdHk=S?ZJ}A?
 	 * \endif
 	 */
-	public byte				byTalkInChanNum;		
+	public byte				byTalkInChanNum;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * NSP
 	 * \else
-	 * 对讲输出接口数量
+	 * 6T=2Jd3v=S?ZJ}A?
 	 * \endif
 	 */
-	public byte				byTalkOutChanNum;		
+	public byte				byTalkOutChanNum;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * NSP
@@ -190,63 +198,71 @@ public class SDKDEV_SYSTEM_ATTR_CFG implements Serializable {
 	 * NSP
 	 * \endif
 	 */
-	public byte				byDecodeChanNum;		
+	public byte				byDecodeChanNum;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Alarm input port amount
 	 * \else
-	 * 报警输入口数
+	 * 1(>/JdHk?ZJ}
 	 * \endif
 	 */
-	public byte				byAlarmInNum;			
+	public byte				byAlarmInNum;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Alarm output amount port
 	 * \else
-	 * 报警输出口数
+	 * 1(>/Jd3v?ZJ}
 	 * \endif
 	 */
-	public byte				byAlarmOutNum;			
+	public byte				byAlarmOutNum;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Network port amount 
 	 * \else
-	 * 网络口数
+	 * MxBg?ZJ}
 	 * \endif
 	 */
-	public byte				byNetIONum;				
+	public byte				byNetIONum;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * USB USB port amount
 	 * \else
-	 * USB口数量
+	 * USB?ZJ}A?
 	 * \endif
 	 */
-	public byte				byUsbIONum;				
+	public byte				byUsbIONum;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * IDE amount
 	 * \else
-	 * IDE数量
+	 * IDEJ}A?
 	 * \endif
 	 */
-	public byte				byIdeIONum;				
+	public byte				byIdeIONum;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * COM amount
 	 * \else
-	 * 串口数量
+	 * 4.?ZJ}A?
 	 * \endif
 	 */
-	public byte				byComIONum;				
+	public byte				byComIONum;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * LPT amount
 	 * \else
-	 * 并口数量
+	 * 2"?ZJ}A?
 	 * \endif
 	 */
-	public byte				byLPTIONum;				
+	public byte				byLPTIONum;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * NSP
@@ -254,7 +270,8 @@ public class SDKDEV_SYSTEM_ATTR_CFG implements Serializable {
 	 * NSP
 	 * \endif
 	 */
-	public byte				byVgaIONum;				
+	public byte				byVgaIONum;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * NSP
@@ -262,7 +279,8 @@ public class SDKDEV_SYSTEM_ATTR_CFG implements Serializable {
 	 * NSP
 	 * \endif
 	 */
-	public byte				byIdeControlNum;		
+	public byte				byIdeControlNum;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * NSP
@@ -270,20 +288,22 @@ public class SDKDEV_SYSTEM_ATTR_CFG implements Serializable {
 	 * NSP
 	 * \endif
 	 */
-	public byte				byIdeControlType;		
+	public byte				byIdeControlType;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * NSP, expansible description 
 	 * \else
-	 * NSP，扩展描述
+	 * NSP#,@)U9ChJv
 	 * \endif
 	 */
-	public byte				byCapability;			
+	public byte				byCapability;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Video matrix output amount
 	 * \else
-	 * 视频矩阵输出口数
+	 * JSF5>XUsJd3v?ZJ}
 	 * \endif
 	 */
 	public byte				byMatrixOutNum;			
@@ -292,72 +312,80 @@ public class SDKDEV_SYSTEM_ATTR_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Operate when HDD is full(overwrite/stop)
 	 * \else
-	 * 硬盘满处理方式(覆盖、停止)
+	 * S2ELBz4&@m7=J=(828G!"M#V9)
 	 * \endif
 	 */
-	public byte				byOverWrite;			
+	public byte				byOverWrite;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Video file Package length
 	 * \else
-	 * 录象打包长度
+	 * B<Os4r0|3$6H
 	 * \endif
 	 */
-	public byte				byRecordLen;			
+	public byte				byRecordLen;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Enable  DTS or not  1--enable. 0--disable
 	 * \else
-	 * 是否实行夏令时 1-实行 0-不实行
+	 * JG7qJ5PPODAnJ1 1-J5PP 0-2;J5PP
 	 * \endif
 	 */
-	public byte				byDSTEnable;			
+	public byte				byDSTEnable;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Device serial number. Remote control can use this SN to control.
 	 * \else
-	 * 设备编号，用于遥控
+	 * Ih181`:E#,SCSZR#?X
 	 * \endif
 	 */
-	public int					wDevNo;					
+	public int					wDevNo;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Video format
 	 * \else
-	 * 视频制式:0-PAL,1-NTSC
+	 * JSF5VFJ=:0-PAL,1-NTSC
 	 * \endif
 	 */
-	public byte				byVideoStandard;		
+	public byte				byVideoStandard;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Date format
 	 * \else
-	 * 日期格式
+	 * HUFZ8qJ=
 	 * \endif
 	 */
-	public byte				byDateFormat;			
+	public byte				byDateFormat;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Date separator(0:".",1:"-",2:"/")
 	 * \else
-	 * 日期分割符(0："."，1："-"，2："/")
+	 * HUFZ7V8n7{(0#:"."#,1#:"-"#,2#:"/")
 	 * \endif
 	 */
-	public byte				byDateSprtr;			
+	public byte				byDateSprtr;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Time separator  (0-24H,1-12H)
 	 * \else
-	 * 时间格式 (0-24小时，1－12小时)
+	 * J1<d8qJ= (0-24P!J1#,1#-12P!J1)
 	 * \endif
 	 */
-	public byte				byTimeFmt;				
+	public byte				byTimeFmt;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Please refer to SDK_LANGUAGE_TYPE for enumeration value
 	 * \else
-	 * 枚举值详见 SDK_LANGUAGE_TYPE
+	 * C6>YV5Oj<{ SDK_LANGUAGE_TYPE
 	 * \endif
 	 */
-	public byte				byLanguage;				
+	public byte				byLanguage;
 }

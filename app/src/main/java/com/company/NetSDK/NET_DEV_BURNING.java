@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 /**
  * \if ENGLISH_LANG
- * Burner informaiton 
+ * Burner information 
  * \else
- * 刻录机信息
+ * ?LB<;zPEO"
  * \endif
  */
 public class NET_DEV_BURNING implements Serializable {
@@ -19,16 +19,16 @@ public class NET_DEV_BURNING implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Burner driver type;0:DHFS,1:DISK,2:CDRW
 	 * \else
-	 * 刻录驱动器类型；0:DHFS,1:DISK,2:CDRW
+	 * ?LB<G}6/Fw@`PM#;0:DHFS,1:DISK,2:CDRW
 	 * \endif
 	 */
 	public int					dwDriverType;
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * Bus type;0:USB,1:1394,2:IDE
+	 * Bus type;0:USB,1:1394,2:IDE, 3: SATA, 4: ESATA
 	 * \else
-	 * 总线类型；0:USB,1:1394,2:IDE
+	 * W\O_@`PM#;0:USB,1:1394,2:IDE, 3: SATA, 4: ESATA
 	 * \endif
 	 */
 	public int					dwBusType;
@@ -37,7 +37,7 @@ public class NET_DEV_BURNING implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Total space(KB)
 	 * \else
-	 * 总容量(KB)
+	 * W\H]A?(KB)
 	 * \endif
 	 */
 	public int					dwTotalSpace;
@@ -46,7 +46,7 @@ public class NET_DEV_BURNING implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Free space(KB)
 	 * \else
-	 * 剩余容量(KB)
+	 * J#S`H]A?(KB)
 	 * \endif
 	 */
 	public int					dwRemainSpace;			 
@@ -55,7 +55,7 @@ public class NET_DEV_BURNING implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Burner driver name
 	 * \else
-	 * 刻录驱动器名称
+	 * ?LB<G}6/FwC{3F
 	 * \endif
 	 */
 	public byte				dwDriverName[] = new byte[FinalVar.SDK_BURNING_DEV_NAMELEN];	 

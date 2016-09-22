@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Channel audio and video properties
  * \else
- * 通道音视频属性
+ * M(5@RtJSF5JtPT
  * \endif
  */
 public class SDK_VIDEOENC_OPT implements Serializable {
@@ -20,11 +20,12 @@ public class SDK_VIDEOENC_OPT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The Video Enable; 1: open, 0: Close
 	 * \else
-	 * 视频使能；1：打开，0：关闭
+	 * JSF5J9D\#;1#:4r?*#,0#:9X1U
 	 * \endif
 	 */
 	
-	public byte				byVideoEnable;			
+	public byte				byVideoEnable;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Stream Control; referring to the constant stream control "defined as follows:
@@ -32,42 +33,47 @@ public class SDK_VIDEOENC_OPT implements Serializable {
 	 * SDK_CAPTURE_BRC_CBR	0 
 	 * SDK_CAPTURE_BRC_VBR	1 
 	 * \else
-	 * 码流控制；参照常量"码流控制"定义
+	 * BkAw?XVF#;2NUU3#A?"BkAw?XVF"6(Re
 	 * \endif
 	 */
-	public byte				byBitRateControl;		
+	public byte				byBitRateControl;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Frame rate
 	 * \else
-	 * 帧率
+	 * V!BJ
 	 * \endif
 	 */
-	public byte				byFramesPerSec;			
+	public byte				byFramesPerSec;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Encode mode:please refer to constant Encode Mode definition
 	 * \else
-	 * 编码模式；参照常量"编码模式"定义
+	 * 1`BkD#J=#;2NUU3#A?"1`BkD#J="6(Re
 	 * \endif
 	 */
-	public byte				byEncodeMode;			
+	public byte				byEncodeMode;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Resolution:please refer to constant Resolution definition.
 	 * \else
-	 * 分辨率；参照常量"分辨率"定义
+	 * 7V1fBJ#;2NUU3#A?"7V1fBJ"6(Re
 	 * \endif
 	 */
-	public byte				byImageSize;			
+	public byte				byImageSize;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Level 1-6
 	 * \else
-	 * 将byImageQlty进行扩展，若byImageQlty为0，抓图配置的ImgQlty为10/30/50/60/80/100六个值，码流配置的ImgQlty值为1-6，兼容之前的1-6档次，若//ImgQltyType为1，则ImgQlty范围为0~100
+	 * =+byImageQlty=xPP@)U9#,HtbyImageQltyN*0#,W%M<EdVC5DImgQltyN*10/30/50/60/80/100Ay8vV5#,BkAwEdVC5DImgQltyV5N*1-6#,<fH]V.G05D1-6554N#,Ht//ImgQltyTypeN*1#,TrImgQlty76N'N*0~100
 	 * \endif
 	 */
-	public byte				byImageQlty;			
+	public byte				byImageQlty;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * 
@@ -75,79 +81,89 @@ public class SDK_VIDEOENC_OPT implements Serializable {
 	 * 
 	 * \endif
 	 */
-	public byte             byImageQltyType;       
+	public byte             byImageQltyType;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Limit stream parameter
 	 * \else
-	 * 限码流参数
+	 * O^BkAw2NJ}
 	 * \endif
 	 */
-	public int				wLimitStream;			
+	public int				wLimitStream;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Enable audio;1:open,0:close
 	 * \else
-	 * 音频使能；1：打开，0：关闭
+	 * RtF5J9D\#;1#:4r?*#,0#:9X1U
 	 * \endif
 	 */
-	public byte				byAudioEnable;			
+	public byte				byAudioEnable;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Audio encode mode:0:G711A,1:PCM,2:G711U,3:AMR,4:AAC
 	 * \else
-	 * 音频编码类型: 0:G711A,1:PCM,2:G711U,3:AMR,4:AAC
+	 * RtF51`Bk@`PM: 0:G711A,1:PCM,2:G711U,3:AMR,4:AAC
 	 * \endif
 	 */
-	public byte				wFormatTag;				
+	public byte				wFormatTag;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Track amount
 	 * \else
-	 * 声道数
+	 * Iy5@J}
 	 * \endif
 	 */
-	public int				nChannels;				
+	public int				nChannels;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Sampling depth 	
 	 * \else
-	 * 采样深度	
+	 * 2IQyIn6H	
 	 * \endif
 	 */
-	public int				wBitsPerSample;			
+	public int				wBitsPerSample;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Enabling audio
 	 * \else
-	 * 音频叠加使能
+	 * RtF55~<SJ9D\
 	 * \endif
 	 */
-	public byte				bAudioOverlay;			
+	public byte				bAudioOverlay;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * H.264 Profile rank(when byEncodeMode is h264, this value works ), see enmu struct EM_H264_PROFILE_RANK,when this value is 0, it means nothing
 	 * \else
-	 * H.264 Profile等级(当编码模式为H264时此参数值有效),参照枚举类型EM_H264_PROFILE_RANK，传0，兼容以前，表示该字段无效，不需要考虑级别。
+	 * H.264 Profile5H<6(511`BkD#J=N*H264J14K2NJ}V5SPP'),2NUUC6>Y@`PMEM_H264_PROFILE_RANK#,4+0#,<fH]RTG0#,1mJ>8CWV6NN^P'#,2;PhR*?<BG<61p!#
 	 * \endif
 	 */
-	public byte				bH264ProfileRank;       
+	public byte				bH264ProfileRank;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Sampling rate
 	 * \else
-	 * 采样率
+	 * 2IQyBJ
 	 * \endif
 	 */
-	public int				nSamplesPerSec;			
+	public int				nSamplesPerSec;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * 0-149. I frame interval amount. Describe the P frame amount between two I frames.
 	 * \else
-	 * I帧间隔帧数量，描述两个I帧之间的P帧个数，0-149
+	 * IV!<d8tV!J}A?#,ChJvA=8vIV!V.<d5DPV!8vJ}#,0-149
 	 * \endif
 	 */
-	public byte				bIFrameInterval;		
+	public byte				bIFrameInterval;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * NSP
@@ -155,5 +171,5 @@ public class SDK_VIDEOENC_OPT implements Serializable {
 	 * NSP
 	 * \endif
 	 */
-	public byte				bScanMode;				
+	public byte				bScanMode;
 }

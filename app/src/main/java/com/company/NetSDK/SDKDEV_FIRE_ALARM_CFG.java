@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * fire alarm
  * \else
- * 火警报警
+ * ;p>/1(>/
  * \endif
  */
 public class SDKDEV_FIRE_ALARM_CFG implements Serializable {
@@ -20,7 +20,7 @@ public class SDKDEV_FIRE_ALARM_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * enable
 	 * \else
-	 * 火警报警时能；
+	 * ;p>/1(>/J1D\#;
 	 * \endif
 	 */
 	public boolean                byFireEn; 
@@ -29,7 +29,7 @@ public class SDKDEV_FIRE_ALARM_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * handler
 	 * \else
-	 * 处理方式
+	 * 4&@m7=J=
 	 * \endif
 	 */
 	public SDK_MSG_HANDLE_EX    struHandle = new SDK_MSG_HANDLE_EX(); 

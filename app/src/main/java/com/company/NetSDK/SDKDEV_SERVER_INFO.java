@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Auto register parameter configuration
  * \else
- * 主动注册参数配置
+ * Vw6/W"2a2NJ}EdVC
  * \endif
  */
 public class SDKDEV_SERVER_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class SDKDEV_SERVER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Registration server IP
 	 * \else
-	 * 注册服务器IP 
+	 * W"2a7~NqFwIP 
 	 * \endif
 	 */
 	public byte                szServerIp[] = new byte[32];
@@ -28,7 +28,7 @@ public class SDKDEV_SERVER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port No. 
 	 * \else
-	 * 端口号
+	 * 6K?Z:E
 	 * \endif
 	 */
 	public int                 nServerPort;

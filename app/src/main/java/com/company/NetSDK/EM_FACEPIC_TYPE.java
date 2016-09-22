@@ -12,7 +12,7 @@ public class EM_FACEPIC_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Unknown
 	 * \else
-	 * 未知
+	 * N4V*
 	 * \endif
 	 */
 	public final static int NET_FACEPIC_TYPE_UNKOWN = 0;
@@ -21,7 +21,7 @@ public class EM_FACEPIC_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * face full size picture
 	 * \else
-	 * 人脸全景大图
+	 * HKA3H+>04sM<
 	 * \endif
 	 */
 	public final static int NET_FACEPIC_TYPE_GLOBAL_SENCE = 1;
@@ -30,7 +30,7 @@ public class EM_FACEPIC_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * face small pictrure
 	 * \else
-	 * 人脸小图
+	 * HKA3P!M<
 	 * \endif
 	 */
 	public final static int NET_FACEPIC_TYPE_SMALL = 2;

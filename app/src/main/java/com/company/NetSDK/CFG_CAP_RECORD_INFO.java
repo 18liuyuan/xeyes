@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * ability of record information
  * \else
- * 录像能力信息
+ * B<OqD\A&PEO"
  * \endif
  */
 public class CFG_CAP_RECORD_INFO implements Serializable {
@@ -20,7 +20,7 @@ public class CFG_CAP_RECORD_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * video does plan to support the holidat function
 	 * \else
-	 * 录像计划是否支持假日功能
+	 * B<Oq<F;.JG7qV'3V<YHU9&D\
 	 * \endif
 	 */
 	public boolean  bSupportHoliday;
@@ -29,7 +29,7 @@ public class CFG_CAP_RECORD_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * whether to support setting extra stream video mode
 	 * \else
-	 * 是否支持设置辅码流录像模式
+	 * JG7qV'3VIhVC8(BkAwB<OqD#J=
 	 * \endif
 	 */
 	public boolean  bSupportExtraRecordMode;
@@ -38,7 +38,7 @@ public class CFG_CAP_RECORD_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * max record time
 	 * \else
-	 * 最大预录时间
+	 * Wn4sT$B<J1<d
 	 * \endif
 	 */
 	public int dwMaxPreRecordTime;
@@ -47,7 +47,7 @@ public class CFG_CAP_RECORD_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * total access code stream(kbps)
 	 * \else
-	 * 最大接入总码流,单位kbps
+	 * Wn4s=SHkW\BkAw,5%N;kbps
 	 * \endif
 	 */
 	public int dwMaxRemoteBitrate;
@@ -56,7 +56,7 @@ public class CFG_CAP_RECORD_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * maximum access to the bare code stream (include decause,resolution,frame rate,deep calculated on 16bpp)
 	 * \else
-	 * 最大接入祼码流（包括路数、分辨率、帧率，色深按16bpp计算）
+	 * Wn4s=SHk5BkAw#(0|@(B7J}!"7V1fBJ!"V!BJ#,I+In0416bpp<FKc#)
 	 * \endif
 	 */
 	public int dwMaxRemoteRawBitrate;
@@ -65,7 +65,7 @@ public class CFG_CAP_RECORD_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Maximum number of video stream 
 	 * \else
-	 * 最大录像码流个数
+	 * Wn4sB<OqBkAw8vJ}
 	 * \endif
 	 */
 	public int dwMaxStreams;

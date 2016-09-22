@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * alarm arm/disarm control expansion input parameter
  * \else
- * 报警布撤防控制扩展输入参数
+ * 1(>/2<377@?XVF@)U9JdHk2NJ}
  * \endif
  */
 public class CTRL_ARM_DISARM_PARAM_EX_IN implements Serializable {
@@ -20,7 +20,7 @@ public class CTRL_ARM_DISARM_PARAM_EX_IN implements Serializable {
 	 * \if ENGLISH_LANG
 	 * arm/disarm status, NET_ALARM_MODE
 	 * \else
-	 * 布撤防状态, NET_ALARM_MODE
+	 * 2<377@W4L,, NET_ALARM_MODE
 	 * \endif
 	 */
 	public int      emState; 
@@ -29,7 +29,7 @@ public class CTRL_ARM_DISARM_PARAM_EX_IN implements Serializable {
 	 * \if ENGLISH_LANG
 	 * user password
 	 * \else
-	 * 用户密码
+	 * SC;'C\Bk
 	 * \endif
 	 */
     public String         szDevPwd; 
@@ -38,7 +38,7 @@ public class CTRL_ARM_DISARM_PARAM_EX_IN implements Serializable {
      * \if ENGLISH_LANG
      * scene mode, NET_SCENE_MODE
      * \else
-     * 情景模式, NET_SCENE_MODE
+     * Gi>0D#J=, NET_SCENE_MODE
      * \endif
      */
     public int      emSceneMode; 
@@ -47,7 +47,7 @@ public class CTRL_ARM_DISARM_PARAM_EX_IN implements Serializable {
      * \if ENGLISH_LANG
      * transfer target device ID, as NULL means not transfer
      * \else
-     * 转发目标设备ID,为NULL表示不转发
+     * W*7"D?1jIh18ID,N*NULL1mJ>2;W*7"
      * \endif
      */
     public String         szDevID; 

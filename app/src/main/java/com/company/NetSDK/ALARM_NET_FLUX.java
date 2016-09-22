@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * net flux abnormal
  * \else
- * 网络流量异常事件
+ * MxBgAwA?Rl3#JB<~
  * \endif
  */
 public class ALARM_NET_FLUX implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_NET_FLUX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0-start, 1-stop
 	 * \else
-	 * 0-开始, 1-停止
+	 * 0-?*J<, 1-M#V9
 	 * \endif
 	 */
 	public int                dwAction;
@@ -28,7 +28,7 @@ public class ALARM_NET_FLUX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * data flux,KB	
 	 * \else
-	 * 当前数据流量, KB
+	 * 51G0J}>]AwA?, KB
 	 * \endif
 	 */
 	public int                dwDataFlux;
@@ -37,7 +37,7 @@ public class ALARM_NET_FLUX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * time
 	 * \else
-	 * 事件发生时间
+	 * JB<~7"IzJ1<d
 	 * \endif
 	 */
 	public NET_TIME             stuTime = new NET_TIME();

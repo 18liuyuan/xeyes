@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Video output control method
  * \else
- * 视频输出控制方式
+ * JSF5Jd3v?XVF7=J=
  * \endif
  */
 public class EM_VIDEO_OUT_CTRL_TYPE implements Serializable {
@@ -19,7 +19,7 @@ public class EM_VIDEO_OUT_CTRL_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Logic channel no. control method, for physical screen and splicing screen both valid
 	 * \else
-	 * 逻辑通道号控制方式, 对物理屏和拼接屏都有效
+	 * B_<-M(5@:E?XVF7=J=, 6TNo@mFA:MF4=SFA6<SPP'
 	 * \endif
 	 */
 	public static final int     EM_VIDEO_OUT_CTRL_CHANNEL = 0;
@@ -28,7 +28,7 @@ public class EM_VIDEO_OUT_CTRL_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Splicing screen ID control method,for splicing screen only
 	 * \else
-	 * 拼接屏ID控制方式, 只对拼接屏有效
+	 * F4=SFAID?XVF7=J=, V;6TF4=SFASPP'
 	 * \endif
 	 */
 	public static final int     EM_VIDEO_OUT_CTRL_COMPOSITE_ID = 1;

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * External Alarm
  * \else
- * 外部报警
+ * Mb2?1(>/
  * \endif
  */
 public class SDK_ALARMIN_CFG implements Serializable {
@@ -17,16 +17,16 @@ public class SDK_ALARMIN_CFG implements Serializable {
 
 	/**
 	 * \if ENGLISH_LANG
-	 * Alarm Type：
+	 * Alarm Type#:
 	 * <table>
 	 * <tr><td>0</td><td>Normal Close</td></tr>
 	 * <tr><td>1</td><td>Normal Open</td></tr>
 	 * </table>
 	 * \else
-	 * 报警器类型：
+	 * 1(>/Fw@`PM#:
 	 * <table>
-	 * <tr><td>0</td><td>常闭</td></tr>
-	 * <tr><td>1</td><td>常开</td></tr>
+	 * <tr><td>0</td><td>3#1U</td></tr>
+	 * <tr><td>1</td><td>3#?*</td></tr>
 	 * </table>
 	 * \endif
 	 */
@@ -36,7 +36,7 @@ public class SDK_ALARMIN_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable
 	 * \else
-	 * 报警使能
+	 * 1(>/J9D\
 	 * \endif
 	 */
 	public byte                byAlarmEn;
@@ -54,7 +54,7 @@ public class SDK_ALARMIN_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Process Mode
 	 * \else
-	 * 处理方式
+	 * 4&@m7=J=
 	 * \endif
 	 */
 	public SDK_MSG_HANDLE       struHandle = new SDK_MSG_HANDLE();

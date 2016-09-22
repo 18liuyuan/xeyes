@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Flow statistics status info of the channel 
  * \else
- * 通道的流量状态信息
+ * M(5@5DAwA?W4L,PEO"
  * \endif
  */
 public class SDKDEV_USE_CHANNEL_STATE implements Serializable {
@@ -19,23 +19,25 @@ public class SDKDEV_USE_CHANNEL_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel No.
 	 * \else
-	 * 通道号
+	 * M(5@:E
 	 * \endif
 	 */
-	public int				nChannelNum;			
+	public int				nChannelNum;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Channel use purpose 
 	 * \else
-	 * 通道用途
+	 * M(5@SCM>
 	 * \endif
 	 */
-	public char				szUseType[] = new char[32];			
+	public byte				szUseType[] = new byte[32];
+	
 	/**
 	 * \if ENGLISH_LANG
-	 * Flow value(Unit：kb/s)
+	 * Flow value(Unit#:kb/s)
 	 * \else
-	 * 流量大小(单位：kb/s)
+	 * AwA?4sP!(5%N;#:kb/s)
 	 * \endif
 	 */
 	public int				dwStreamSize;			

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Returned Information for Modify device configuration
  * \else
- * 修改设备配置返回信息
+ * P^8DIh18EdVC75;XPEO"
  * \endif
  */
 public class DEV_SET_RESULT implements Serializable {
@@ -19,7 +19,7 @@ public class DEV_SET_RESULT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Type(GetDevConfig and SetDevConfig type)
 	 * \else
-	 * 类型(即GetDevConfig和SetDevConfig的类型)
+	 * @`PM(<4GetDevConfig:MSetDevConfig5D@`PM)
 	 * \endif
 	 */
 	public int               dwType;
@@ -35,13 +35,13 @@ public class DEV_SET_RESULT implements Serializable {
 	 * <tr><td>4</td><td>Without Permission</td></tr>
 	 * </table>
 	 * \else
-	 * 返回码:
+	 * 75;XBk:
 	 * <table>
-	 * <tr><td>0</td><td>成功</td></tr>
-	 * <tr><td>1</td><td>失败</td></tr>
-	 * <tr><td>2</td><td>数据不合法</td></tr>
-	 * <tr><td>3</td><td>暂时无法设置</td></tr>
-	 * <tr><td>4</td><td>没有权限</td></tr>
+	 * <tr><td>0</td><td>3I9&</td></tr>
+	 * <tr><td>1</td><td>J'0\</td></tr>
+	 * <tr><td>2</td><td>J}>]2;:O7(</td></tr>
+	 * <tr><td>3</td><td>T]J1N^7(IhVC</td></tr>
+	 * <tr><td>4</td><td>C;SPH(O^</td></tr>
 	 * </table>
 	 * \endif
 	 */
@@ -55,10 +55,10 @@ public class DEV_SET_RESULT implements Serializable {
 	 * <tr><td>1</td><td>Effective after reboot</td></tr>
 	 * </table>
 	 * \else
-	 * 重启标志
+	 * VXFt1jV>
 	 * <table>
-	 * <tr><td>0</td><td>不需要重启</td></tr>
-	 * <tr><td>1</td><td>需要重启才生效</td></tr>
+	 * <tr><td>0</td><td>2;PhR*VXFt</td></tr>
+	 * <tr><td>1</td><td>PhR*VXFt2EIzP'</td></tr>
 	 * </table>
 	 * \endif
 	 */

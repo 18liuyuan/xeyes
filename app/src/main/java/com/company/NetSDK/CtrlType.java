@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Control type, Corresponding to ControlDevice
  * \else
- * 控制类型，对应ControlDevice接口
+ * ?XVF@`PM#,6TS&ControlDevice=S?Z
  * \endif
  */
 public class CtrlType implements Serializable {
@@ -19,7 +19,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Reboot device
 	 * \else
-	 * 重启设备
+	 * VXFtIh18
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_REBOOT = 0;
@@ -28,7 +28,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Shut down device
 	 * \else
-	 * 关闭设备
+	 * 9X1UIh18
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_SHUTDOWN = 1;
@@ -37,7 +37,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * HDD management
 	 * \else
-	 * 硬盘管理
+	 * S2EL9\@m
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_DISK = 2;
@@ -46,7 +46,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Network keyboard
 	 * \else
-	 * 网络键盘
+	 * MxBg<|EL
 	 * \endif
 	 */
 	public static final int     SDK_KEYBOARD_POWER = 3;						
@@ -97,7 +97,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * new network keyboard function
 	 * \else
-	 * 新网络键盘功能
+	 * PBMxBg<|EL9&D\
 	 * \endif
 	 */
 	public static final int     SDK_KEYBOARD_LOGIN = 46; 
@@ -106,7 +106,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * switch video channel
 	 * \else
-	 * 切换视频通道
+	 * GP;;JSF5M(5@
 	 * \endif
 	 */
 	public static final int     SDK_KEYBOARD_CHNNEL = 47; 
@@ -115,7 +115,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Activate alarm input
 	 * \else
-	 * 触发报警输入
+	 * 4%7"1(>/JdHk
 	 * \endif
 	 */
 	public static final int     SDK_TRIGGER_ALARM_IN = 100;
@@ -124,7 +124,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Activate alarm output
 	 * \else
-	 * 触发报警输出
+	 * 4%7"1(>/Jd3v
 	 * \endif
 	 */
 	public static final int     SDK_TRIGGER_ALARM_OUT = 101;
@@ -133,7 +133,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Matrix control
 	 * \else
-	 * 矩阵控制
+	 * >XUs?XVF
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_MATRIX = 102;
@@ -142,7 +142,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * SD card control(for IPC series). Please refer to HDD control
 	 * \else
-	 * SD卡控制(IPC产品)参数同硬盘控制
+	 * SD?(?XVF(IPC2zF7)2NJ}M,S2EL?XVF
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_SDCARD = 103;
@@ -151,7 +151,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Burner control:begin burning 
 	 * \else
-	 * 刻录机控制，开始刻录
+	 * ?LB<;z?XVF#,?*J<?LB<
 	 * \endif
 	 */
 	public static final int     SDK_BURNING_START = 104;
@@ -160,7 +160,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Burner control:stop burning
 	 * \else
-	 * 刻录机控制，结束刻录
+	 * ?LB<;z?XVF#,=aJx?LB<
 	 * \endif
 	 */
 	public static final int     SDK_BURNING_STOP = 105;
@@ -169,7 +169,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Burner control:overlay password(The string ended with '\0'. Max length is 8 bits. )
 	 * \else
-	 * 刻录机控制，叠加密码(以'\0'为结尾的字符串，最大长度8位)
+	 * ?LB<;z?XVF#,5~<SC\Bk(RT'\0'N*=aN25DWV7{4.#,Wn4s3$6H8N;)
 	 * \endif
 	 */
 	public static final int     SDK_BURNING_ADDPWD = 106;
@@ -178,7 +178,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Burner control:overlay head title(The string ended with '\0'. Max length is 1024 bytes. Use '\n' to Enter.)
 	 * \else
-	 * 刻录机控制，叠加片头(以'\0'为结尾的字符串，最大长度1024字节，支持分行，行分隔符'\n')
+	 * ?LB<;z?XVF#,5~<SF,M7(RT'\0'N*=aN25DWV7{4.#,Wn4s3$6H1024WV=Z#,V'3V7VPP#,PP7V8t7{'\n')
 	 * \endif
 	 */
 	public static final int     SDK_BURNING_ADDHEAD = 107;
@@ -187,7 +187,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Burner control:overlay dot to the burned information(No parameter)
 	 * \else
-	 * 刻录机控制，叠加打点到刻录信息(参数无)
+	 * ?LB<;z?XVF#,5~<S4r5c5=?LB<PEO"(2NJ}N^)
 	 * \endif
 	 */
 	public static final int     SDK_BURNING_ADDSIGN = 108;
@@ -196,7 +196,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Burner control:self-defined overlay (The string ended with '\0'. Max length is 1024 bytes. Use '\n' to Enter)
 	 * \else
-	 * 刻录机控制，自定义叠加(以'\0'为结尾的字符串，最大长度1024字节，支持分行，行分隔符'\n')
+	 * ?LB<;z?XVF#,WT6(Re5~<S(RT'\0'N*=aN25DWV7{4.#,Wn4s3$6H1024WV=Z#,V'3V7VPP#,PP7V8t7{'\n')
 	 * \endif
 	 */
 	public static final int     SDK_BURNING_ADDCURSTOMINFO = 109;
@@ -205,7 +205,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * restore device default setup 
 	 * \else
-	 * 恢复设备的默认设置
+	 * ;V84Ih185DD,HOIhVC
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_RESTOREDEFAULT = 110;
@@ -214,7 +214,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Activate device snapshot
 	 * \else
-	 * 触发设备抓图
+	 * 4%7"Ih18W%M<
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_CAPTURE_START = 111;
@@ -223,7 +223,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Clear log
 	 * \else
-	 * 清除日志
+	 * Ge3}HUV>
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_CLEARLOG = 112;
@@ -232,7 +232,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Activate wireless alarm (IPC series)
 	 * \else
-	 * 触发无线报警(IPC产品)
+	 * 4%7"N^O_1(>/(IPC2zF7)
 	 * \endif
 	 */
 	public static final int     SDK_TRIGGER_ALARM_WIRELESS = 200;
@@ -241,7 +241,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Mark important record
 	 * \else
-	 * 标识重要录像文件
+	 * 1jJ6VXR*B<OqND<~
 	 * \endif
 	 */
 	public static final int     SDK_MARK_IMPORTANT_RECORD = 201;
@@ -250,7 +250,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Network hard disk partition
 	 * \else
-	 * 网络硬盘分区
+	 * MxBgS2EL7VGx
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_DISK_SUBAREA = 202;
@@ -259,7 +259,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Annex burning
 	 * \else
-	 * 刻录机控制，附件刻录.
+	 * ?LB<;z?XVF#,8=<~?LB<.
 	 * \endif
 	 */
 	public static final int     SDK_BURNING_ATTACH = 203;
@@ -268,7 +268,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Burn Pause
 	 * \else
-	 * 刻录暂停
+	 * ?LB<T]M#
 	 * \endif
 	 */
 	public static final int     SDK_BURNING_PAUSE = 204;
@@ -277,7 +277,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Burn Resume
 	 * \else
-	 * 刻录继续
+	 * ?LB<<LPx
 	 * \endif
 	 */
 	public static final int     SDK_BURNING_CONTINUE = 205;
@@ -286,7 +286,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Burn Postponed
 	 * \else
-	 * 刻录顺延
+	 * ?LB<K3QS
 	 * \endif
 	 */
 	public static final int     SDK_BURNING_POSTPONE = 206;
@@ -295,7 +295,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * OEM control
 	 * \else
-	 * 报停控制
+	 * 1(M#?XVF
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_OEMCTRL = 207;
@@ -304,7 +304,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Start to device backup
 	 * \else
-	 * 设备备份开始
+	 * Ih18187]?*J<
 	 * \endif
 	 */
 	public static final int     SDK_BACKUP_START = 208;
@@ -313,7 +313,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Stop to device backup
 	 * \else
-	 * 设备备份停止
+	 * Ih18187]M#V9
 	 * \endif
 	 */
 	public static final int     SDK_BACKUP_STOP = 209;
@@ -322,7 +322,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Add WIFI configuration manually for car device
 	 * \else
-	 * 车载手动增加WIFI配置
+	 * 35TXJV6/Tv<SWIFIEdVC
 	 * \endif
 	 */
 	public static final int     SDK_VIHICLE_WIFI_ADD = 210;
@@ -331,7 +331,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Delete WIFI configuration manually for car device
 	 * \else
-	 * 车载手动删除WIFI配置
+	 * 35TXJV6/I>3}WIFIEdVC
 	 * \endif
 	 */
 	public static final int     SDK_VIHICLE_WIFI_DEC = 211;
@@ -340,7 +340,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Start to buzzer control 
 	 * \else
-	 * 蜂鸣器控制开始
+	 * 7dCyFw?XVF?*J<
 	 * \endif
 	 */
 	public static final int     SDK_BUZZER_START = 212;
@@ -349,7 +349,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Stop to buzzer control
 	 * \else
-	 * 蜂鸣器控制结束
+	 * 7dCyFw?XVF=aJx
 	 * \endif
 	 */
 	public static final int     SDK_BUZZER_STOP = 213;
@@ -358,7 +358,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Reject User
 	 * \else
-	 * 剔除用户
+	 * L^3}SC;'
 	 * \endif
 	 */
 	public static final int     SDK_REJECT_USER = 214;
@@ -367,7 +367,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Shield User
 	 * \else
-	 * 屏蔽用户
+	 * FA1NSC;'
 	 * \endif
 	 */
 	public static final int     SDK_SHIELD_USER = 215;
@@ -376,7 +376,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Rain Brush 
 	 * \else
-	 * 智能交通, 雨刷控制 
+	 * VGD\=;M(, SjK"?XVF 
 	 * \endif
 	 */
 	public static final int     SDK_RAINBRUSH = 216;
@@ -385,7 +385,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * manual snap (struct MANUAL_SNAP_PARAMETER)
 	 * \else
-	 * 年智能交通, 手动抓拍 (对应结构体MANUAL_SNAP_PARAMETER)
+	 * DjVGD\=;M(, JV6/W%ED (6TS&=a99LeMANUAL_SNAP_PARAMETER)
 	 * \endif
 	 */
 	public static final int     SDK_MANUAL_SNAP = 217;
@@ -394,7 +394,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * manual ntp time adjust
 	 * \else
-	 * 手动NTP校时
+	 * JV6/NTPP#J1
 	 * \endif
 	 */
 	public static final int     SDK_MANUAL_NTP_TIMEADJUST = 218;
@@ -403,7 +403,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * navigation info and note
 	 * \else
-	 * 导航信息和短消息
+	 * 5<:=PEO":M6LO{O"
 	 * \endif
 	 */
 	public static final int     SDK_NAVIGATION_SMS = 219;
@@ -412,7 +412,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * route info
 	 * \else
-	 * 路线点位信息
+	 * B7O_5cN;PEO"
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_ROUTE_CROSSING = 220;
@@ -421,7 +421,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * backup device format
 	 * \else
-	 * 格式化备份设备
+	 * 8qJ=;/187]Ih18
 	 * \endif
 	 */
 	public static final int     SDK_BACKUP_FORMAT = 221;
@@ -430,7 +430,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * local preview split(struct DEVICE_LOCALPREVIEW_SLIPT_PARAMETER)
 	 * \else
-	 * 控制设备端本地预览分割(对应结构体DEVICE_LOCALPREVIEW_SLIPT_PARAMETER)  
+	 * ?XVFIh186K1>5XT$@@7V8n(6TS&=a99LeDEVICE_LOCALPREVIEW_SLIPT_PARAMETER)  
 	 * \endif
 	 */
 	public static final int     SDK_DEVICE_LOCALPREVIEW_SLIPT = 222;
@@ -439,7 +439,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * RAID init
 	 * \else
-	 * RAID初始化
+	 * RAID3uJ<;/
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_INIT_RAID = 223;
@@ -448,7 +448,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * RAID control
 	 * \else
-	 * RAID操作
+	 * RAID2YWw
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_RAID = 224;
@@ -457,7 +457,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * sapredisk control
 	 * \else
-	 * 热备盘操作
+	 * HH18EL2YWw
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_SAPREDISK = 225;
@@ -466,7 +466,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * wifi connect(struct WIFI_CONNECT)
 	 * \else
-	 * 手动发起WIFI连接(对应结构体WIFI_CONNECT)
+	 * JV6/7"FpWIFIA,=S(6TS&=a99LeWIFI_CONNECT)
 	 * \endif
 	 */
 	public static final int     SDK_WIFI_CONNECT = 226;
@@ -475,7 +475,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * wifi disconnect(struct WIFI_CONNECT)
 	 * \else
-	 * 手动断开WIFI连接(对应结构体WIFI_CONNECT)
+	 * JV6/6O?*WIFIA,=S(6TS&=a99LeWIFI_CONNECT)
 	 * \endif
 	 */
 	public static final int     SDK_WIFI_DISCONNECT = 227;
@@ -484,7 +484,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Arm/disarm operation 
 	 * \else
-	 * 布撤防操作
+	 * 2<377@2YWw
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_ARMED = 228;
@@ -493,7 +493,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * IP modify(struct DHCTRL_IPMODIFY_PARAM)     
 	 * \else
-	 * 修改前端IP(对应结构体SDKCTRL_IPMODIFY_PARAM)  
+	 * P^8DG06KIP(6TS&=a99LeSDKCTRL_IPMODIFY_PARAM)  
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_IP_MODIFY = 229;
@@ -502,7 +502,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * wps connect wifi(struct DHCTRL_CONNECT_WIFI_BYWPS)
 	 * \else
-	 * wps连接wifi(对应结构体SDKCTRL_CONNECT_WIFI_BYWPS)
+	 * wpsA,=Swifi(6TS&=a99LeSDKCTRL_CONNECT_WIFI_BYWPS)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_WIFI_BY_WPS = 230;
@@ -511,7 +511,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * format pattion (struct DH_FORMAT_PATITION)
 	 * \else
-	 * 格式化分区(对应结构体SDK_FORMAT_PATITION)
+	 * 8qJ=;/7VGx(6TS&=a99LeSDK_FORMAT_PATITION)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_FORMAT_PATITION = 231;
@@ -520,7 +520,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * eject storage device(struct DH_EJECT_STORAGE_DEVICE)
 	 * \else
-	 * 手动卸载设备(对应结构体SDK_EJECT_STORAGE_DEVICE)
+	 * JV6/P6TXIh18(6TS&=a99LeSDK_EJECT_STORAGE_DEVICE)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_EJECT_STORAGE = 232;
@@ -529,7 +529,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * load storage device(struct DH_LOAD_STORAGE_DEVICE)
 	 * \else
-	 * 手动装载设备(对应结构体SDK_LOAD_STORAGE_DEVICE)
+	 * JV6/W0TXIh18(6TS&=a99LeSDK_LOAD_STORAGE_DEVICE)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_LOAD_STORAGE = 233;
@@ -538,7 +538,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * close burner(struct NET_CTRL_BURNERDOOR) need wait 6s
 	 * \else
-	 * 关闭刻录机光驱门(对应结构体 NET_CTRL_BURNERDOOR) 一般需要等6秒
+	 * 9X1U?LB<;z9bG}CE(6TS&=a99Le NET_CTRL_BURNERDOOR) R;0cPhR*5H6Ck
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_CLOSE_BURNER = 234;
@@ -547,7 +547,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * eject burner(struct NET_CTRL_BURNERDOOR) need wait 4s
 	 * \else
-	 * 弹出刻录机光驱门(对应结构体 NET_CTRL_BURNERDOOR) 一般需要等4秒
+	 * 5/3v?LB<;z9bG}CE(6TS&=a99Le NET_CTRL_BURNERDOOR) R;0cPhR*5H4Ck
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_EJECT_BURNER = 235;
@@ -556,7 +556,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * confirm alarm NET_CTRL_CLEAR_ALARM
 	 * \else
-	 * 消警(对应结构体 NET_CTRL_CLEAR_ALARM)
+	 * O{>/(6TS&=a99Le NET_CTRL_CLEAR_ALARM)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_CLEAR_ALARM = 236;
@@ -565,7 +565,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Monitorwall_TV info (struct  NET_CTRL_MONITORWALL_TVINFO)
 	 * \else
-	 * 电视墙信息显示(对应结构体 NET_CTRL_MONITORWALL_TVINFO)
+	 * 5gJSG=PEO"OTJ>(6TS&=a99Le NET_CTRL_MONITORWALL_TVINFO)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_MONITORWALL_TVINFO = 237;
@@ -574,7 +574,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * start Intelligent VIDEO analysis (corresponding structure NET CTRL START VIDEO ANALYSE)
 	 * \else
-	 * 开始视频智能分析(对应结构体 NET_CTRL_START_VIDEO_ANALYSE)
+	 * ?*J<JSF5VGD\7VNv(6TS&=a99Le NET_CTRL_START_VIDEO_ANALYSE)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_START_VIDEO_ANALYSE =   238; 
@@ -583,7 +583,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * STOP intelligent VIDEO analysis corresponding structure NET (CTRL STOP VIDEO ANALYSE)
 	 * \else
-	 * 停止视频智能分析(对应结构体 NET_CTRL_STOP_VIDEO_ANALYSE)
+	 * M#V9JSF5VGD\7VNv(6TS&=a99Le NET_CTRL_STOP_VIDEO_ANALYSE)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_STOP_VIDEO_ANALYSE =   239;
@@ -592,7 +592,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Controlled start equipment upgrades, independently complete the upgrade process by the equipment do not need to upgrade file
 	 * \else
-	 * 控制启动设备升级,由设备独立完成升级过程,不需要传输升级文件
+	 * ?XVFFt6/Ih18I}<6,SIIh186@A"Mj3II}<69}3L,2;PhR*4+JdI}<6ND<~
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_UPGRADE_DEVICE =   240;
@@ -601,7 +601,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Multi-channel preview playback channel switching corresponding structure NET (CTRL MULTIPLAYBACK CHANNALES)
 	 * \else
-	 * 切换多通道预览回放的通道(对应结构体 NET_CTRL_MULTIPLAYBACK_CHANNALES)
+	 * GP;;6`M(5@T$@@;X7E5DM(5@(6TS&=a99Le NET_CTRL_MULTIPLAYBACK_CHANNALES)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_MULTIPLAYBACK_CHANNALES =   241;
@@ -610,7 +610,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Turn on the switch power supply timing device output corresponding.net (CTRL SEQPOWER PARAM)
 	 * \else
-	 * 电源时序器打开开关量输出口(对应 NET_CTRL_SEQPOWER_PARAM)
+	 * 5gT4J1PrFw4r?*?*9XA?Jd3v?Z(6TS& NET_CTRL_SEQPOWER_PARAM)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_SEQPOWER_OPEN =   242;
@@ -619,7 +619,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Close the switch power supply timing device output corresponding.net (CTRL SEQPOWER PARAM)
 	 * \else
-	 * 电源时序器关闭开关量输出口(对应 NET_CTRL_SEQPOWER_PARAM)
+	 * 5gT4J1PrFw9X1U?*9XA?Jd3v?Z(6TS& NET_CTRL_SEQPOWER_PARAM)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_SEQPOWER_CLOSE =   243;
@@ -628,7 +628,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Power timing group open the switch quantity output corresponding.net (CTRL SEQPOWER PARAM)
 	 * \else
-	 * 电源时序器打开开关量输出口组(对应 NET_CTRL_SEQPOWER_PARAM)
+	 * 5gT4J1PrFw4r?*?*9XA?Jd3v?ZWi(6TS& NET_CTRL_SEQPOWER_PARAM)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_SEQPOWER_OPEN_ALL =   244;
@@ -637,7 +637,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Power sequence set close the switch quantity output corresponding.net (CTRL SEQPOWER PARAM)
 	 * \else
-	 * 电源时序器关闭开关量输出口组(对应 NET_CTRL_SEQPOWER_PARAM)
+	 * 5gT4J1PrFw9X1U?*9XA?Jd3v?ZWi(6TS& NET_CTRL_SEQPOWER_PARAM)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_SEQPOWER_CLOSE_ALL =   245;
@@ -646,7 +646,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * PROJECTOR up corresponding.net (CTRL PROJECTOR PARAM)
 	 * \else
-	 * 投影仪上升(对应 NET_CTRL_PROJECTOR_PARAM)
+	 * M6S0RGIOI}(6TS& NET_CTRL_PROJECTOR_PARAM)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_PROJECTOR_RISE =   246;
@@ -655,7 +655,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * PROJECTOR drop (corresponding to the.net CTRL PROJECTOR PARAM)
 	 * \else
-	 * 投影仪下降(对应 NET_CTRL_PROJECTOR_PARAM)
+	 * M6S0RGOB=5(6TS& NET_CTRL_PROJECTOR_PARAM)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_PROJECTOR_FALL =   247;
@@ -664,7 +664,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * PROJECTOR stop (corresponding to the.net CTRL PROJECTOR PARAM)
 	 * \else
-	 * 投影仪停止(对应 NET_CTRL_PROJECTOR_PARAM)
+	 * M6S0RGM#V9(6TS& NET_CTRL_PROJECTOR_PARAM)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_PROJECTOR_STOP =   248;
@@ -673,7 +673,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * INFRARED buttons (corresponding to the.net CTRL INFRARED KEY PARAM)
 	 * \else
-	 * 红外按键(对应 NET_CTRL_INFRARED_KEY_PARAM)
+	 * :lMb04<|(6TS& NET_CTRL_INFRARED_KEY_PARAM)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_INFRARED_KEY =   249;
@@ -682,7 +682,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device START playback of audio file corresponding structure NET (CTRL START PLAYAUDIO)
 	 * \else
-	 * 设备开始播放音频文件(对应结构体 NET_CTRL_START_PLAYAUDIO)
+	 * Ih18?*J<2%7ERtF5ND<~(6TS&=a99Le NET_CTRL_START_PLAYAUDIO)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_START_PLAYAUDIO =   250;
@@ -691,7 +691,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Equipment stop playback of audio file
 	 * \else
-	 * 设备停止播放音频文件
+	 * Ih18M#V92%7ERtF5ND<~
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_STOP_PLAYAUDIO =   251;
@@ -700,7 +700,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Corresponding structure NET open alarm (CTRL ALARMBELL)
 	 * \else
-	 * 开启警号(对应结构体 NET_CTRL_ALARMBELL)
+	 * ?*Ft>/:E(6TS&=a99Le NET_CTRL_ALARMBELL)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_START_ALARMBELL =   252;
@@ -709,7 +709,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Close the warning signal corresponding structure NET (CTRL ALARMBELL)
 	 * \else
-	 * 关闭警号(对应结构体 NET_CTRL_ALARMBELL)
+	 * 9X1U>/:E(6TS&=a99Le NET_CTRL_ALARMBELL)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_STOP_ALARMBELL =   253;
@@ -718,7 +718,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * OPEN ACCESS control - corresponding structure NET (CTRL ACCESS OPEN)
 	 * \else
-	 * 门禁控制-开门(对应结构体 NET_CTRL_ACCESS_OPEN)
+	 * CE={?XVF-?*CE(6TS&=a99Le NET_CTRL_ACCESS_OPEN)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_ACCESS_OPEN =   254;
@@ -727,7 +727,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Corresponding structure NET BYPASS function (CTRL SET BYPASS)
 	 * \else
-	 * 设置旁路功能(对应结构体 NET_CTRL_SET_BYPASS)
+	 * IhVCETB79&D\(6TS&=a99Le NET_CTRL_SET_BYPASS)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_SET_BYPASS =   255;
@@ -736,7 +736,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Add records to record set number (corresponding to the.net CTRL you INSERT PARAM)
 	 * \else
-	 * 添加记录，获得记录集编号(对应NET_CTRL_RECORDSET_INSERT_PARAM)
+	 * Lm<S<GB<#,;q5C<GB<</1`:E(6TS&NET_CTRL_RECORDSET_INSERT_PARAM)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_RECORDSET_INSERT =   256;
@@ -745,7 +745,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Update a record of the number (corresponding to the.net CTRL you PARAM)
 	 * \else
-	 * 更新某记录集编号的记录(对应NET_CTRL_RECORDSET_PARAM)
+	 * 8|PBD3<GB<</1`:E5D<GB<(6TS&NET_CTRL_RECORDSET_PARAM)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_RECORDSET_UPDATE =   257;
@@ -754,7 +754,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * According to the record set number to delete a record (corresponding to the.net CTRL you PARAM)
 	 * \else
-	 * 根据记录集编号删除某记录(对应NET_CTRL_RECORDSET_PARAM)
+	 * 8y>]<GB<</1`:EI>3}D3<GB<(6TS&NET_CTRL_RECORDSET_PARAM)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_RECORDSET_REMOVE =   258;
@@ -763,7 +763,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Remove all RECORDSET information corresponding.net (CTRL you PARAM)
 	 * \else
-	 * 清除所有记录集信息(对应NET_CTRL_RECORDSET_PARAM)
+	 * Ge3}KySP<GB<</PEO"(6TS&NET_CTRL_RECORDSET_PARAM)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_RECORDSET_CLEAR =   259;
@@ -772,7 +772,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Entrance guard control - CLOSE corresponding structure NET (CTRL ACCESS CLOSE)
 	 * \else
-	 * 门禁控制-关门(对应结构体 NET_CTRL_ACCESS_CLOSE)
+	 * CE={?XVF-9XCE(6TS&=a99Le NET_CTRL_ACCESS_CLOSE)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_ACCESS_CLOSE =   260;
@@ -781,7 +781,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm sub system activation setup(corresponding structure NET_CTRL_ALARM_SUBSYSTEM_SETACTIVE)
 	 * \else
-	 * 报警子系统激活设置(对应结构体NET_CTRL_ALARM_SUBSYSTEM_SETACTIVE)
+	 * 1(>/WSO5M3<$;nIhVC(6TS&=a99LeNET_CTRL_ALARM_SUBSYSTEM_SETACTIVE)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_ALARM_SUBSYSTEM_ACTIVE_SET =   261;
@@ -790,7 +790,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Disable device open gateway(corresponding to structure  NET_CTRL_FORBID_OPEN_STROBE)
 	 * \else
-	 * 禁止设备端开闸(对应结构体 NET_CTRL_FORBID_OPEN_STROBE)
+	 * ={V9Ih186K?*U"(6TS&=a99Le NET_CTRL_FORBID_OPEN_STROBE)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_FORBID_OPEN_STROBE =   262;
@@ -799,7 +799,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable gateway(corresponding to structure  NET_CTRL_OPEN_STROBE)
 	 * \else
-	 * 开启道闸(对应结构体 NET_CTRL_OPEN_STROBE)
+	 * ?*Ft5@U"(6TS&=a99Le NET_CTRL_OPEN_STROBE)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_OPEN_STROBE =   263;
@@ -808,16 +808,16 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Talk no response(corresponding to structure  NET_CTRL_TALKING_REFUSE)
 	 * \else
-	 * 对讲拒绝接听(对应结构体 NET_CTRL_TALKING_REFUSE)
+	 * 6T=2>\>x=SL}(6TS&=a99Le NET_CTRL_TALKING_REFUSE)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_TALKING_REFUSE =   264;
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * arm-disarm operation(corresponding to structure CTRL_ARM_DISARM_PARAM_EX), CTRL_ARM_DISARM_PARAM upgrade，recommended
+	 * arm-disarm operation(corresponding to structure CTRL_ARM_DISARM_PARAM_EX), CTRL_ARM_DISARM_PARAM upgrade#,recommended
 	 * \else
-	 * 布撤防操作(对应结构体 CTRL_ARM_DISARM_PARAM_EX), 对CTRL_ARM_DISARM_PARAM 升级，建议用这个
+	 * 2<377@2YWw(6TS&=a99Le CTRL_ARM_DISARM_PARAM_EX), 6TCTRL_ARM_DISARM_PARAM I}<6#,=(RiSCUb8v
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_ARMED_EX = 265;
@@ -826,7 +826,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Net keyboard control(corresponding to structure  DHCTRL_NET_KEYBOARD)
 	 * \else
-	 * 网络键盘控制(对应结构体 DHCTRL_NET_KEYBOARD)
+	 * MxBg<|EL?XVF(6TS&=a99Le DHCTRL_NET_KEYBOARD)
 	 * \endif
 	 */
     public static final int     SDK_CTRL_NET_KEYBOARD = 400;
@@ -835,7 +835,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Open air conditioner(corresponding to structure  NET_CTRL_OPEN_AIRCONDITION)
 	 * \else
-	 * 打开空调(对应结构体 NET_CTRL_OPEN_AIRCONDITION)
+	 * 4r?*?U5w(6TS&=a99Le NET_CTRL_OPEN_AIRCONDITION)
 	 * \endif
 	 */
     public static final int     SDK_CTRL_AIRCONDITION_OPEN = 401;
@@ -844,7 +844,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Close air-conditioner(corresponding to structure  NET_CTRL_CLOSE_AIRCONDITION)
 	 * \else
-	 * 关闭空调(对应结构体 NET_CTRL_CLOSE_AIRCONDITION)
+	 * 9X1U?U5w(6TS&=a99Le NET_CTRL_CLOSE_AIRCONDITION)
 	 * \endif
 	 */
     public static final int     SDK_CTRL_AIRCONDITION_CLOSE = 402;
@@ -853,7 +853,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Set temperature (corresponding to structure  NET_CTRL_SET_TEMPERATURE)
 	 * \else
-	 * 设定空调温度(对应结构体 NET_CTRL_SET_TEMPERATURE)
+	 * Ih6(?U5wNB6H(6TS&=a99Le NET_CTRL_SET_TEMPERATURE)
 	 * \endif
 	 */
     public static final int     SDK_CTRL_AIRCONDITION_SET_TEMPERATURE = 403;
@@ -862,7 +862,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Adjust temperature(corresponding to structure  NET_CTRL_ADJUST_TEMPERATURE)
 	 * \else
-	 * 调节空调温度(对应结构体 NET_CTRL_ADJUST_TEMPERATURE)
+	 * 5w=Z?U5wNB6H(6TS&=a99Le NET_CTRL_ADJUST_TEMPERATURE)
 	 * \endif
 	 */
     public static final int     SDK_CTRL_AIRCONDITION_ADJUST_TEMPERATURE = 404;
@@ -871,7 +871,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Set air work mode(corresponding to structure  NET_CTRL_ADJUST_TEMPERATURE)
 	 * \else
-	 * 设置空调工作模式(对应结构体 NET_CTRL_ADJUST_TEMPERATURE)
+	 * IhVC?U5w9$WwD#J=(6TS&=a99Le NET_CTRL_ADJUST_TEMPERATURE)
 	 * \endif
 	 */
     public static final int     SDK_CTRL_AIRCONDITION_SETMODE = 405;
@@ -880,7 +880,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Set fan mode(corresponding to structure  NET_CTRL_AIRCONDITION_SETMODE)
 	 * \else
-	 * 设置空调送风模式(对应结构体 NET_CTRL_AIRCONDITION_SETMODE)
+	 * IhVC?U5wKM7gD#J=(6TS&=a99Le NET_CTRL_AIRCONDITION_SETMODE)
 	 * \endif
 	 */
     public static final int     SDK_CTRL_AIRCONDITION_SETWINDMODE = 406;
@@ -891,9 +891,9 @@ public class CtrlType implements Serializable {
 	 * Recover config and use this enumeration first, if port failed,
 	 * and CLIENT_GetLastError return NET_UNSUPPORTED, try again DH_CTRL_RESTOREDEFAULT restore config
 	 * \else
-	 * 恢复设备的默认设置新协议(对应结构体NET_CTRL_RESTORE_DEFAULT)
-	 * 恢复配置优先使用该枚举，如果接口失败，
-	 * 且CLIENT_GetLastError返回NET_UNSUPPORTED,再尝试使用SDK_CTRL_RESTOREDEFAULT恢复配置
+	 * ;V84Ih185DD,HOIhVCPBP-Ri(6TS&=a99LeNET_CTRL_RESTORE_DEFAULT)
+	 * ;V84EdVCSEOHJ9SC8CC6>Y#,Hg9{=S?ZJ'0\#,
+	 * GRCLIENT_GetLastError75;XNET_UNSUPPORTED,TY3"JTJ9SCSDK_CTRL_RESTOREDEFAULT;V84EdVC
 	 * \endif
 	 */
     public static final int     SDK_CTRL_RESTOREDEFAULT_EX  = 407;
@@ -902,7 +902,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * send event to device (corresponding to  structure  NET_NOTIFY_EVENT_DATA)
 	 * \else
-	 * 向设备发送事件(对应结构体 NET_NOTIFY_EVENT_DATA)
+	 * OrIh187"KMJB<~(6TS&=a99Le NET_NOTIFY_EVENT_DATA)
 	 * \endif
 	 */
     public static final int     SDK_CTRL_NOTIFY_EVENT = 408;
@@ -911,7 +911,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * mute alarm setup
 	 * \else
-	 * 无声报警设置
+	 * N^Iy1(>/IhVC
 	 * \endif
 	 */
     public static final int     SDK_CTRL_SILENT_ALARM_SET = 409;
@@ -920,7 +920,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * device start sound report(corresponding to  structure  NET_CTRL_START_PLAYAUDIOEX)
 	 * \else
-	 * 设备开始语音播报(对应结构体 NET_CTRL_START_PLAYAUDIOEX)
+	 * Ih18?*J<SoRt2%1((6TS&=a99Le NET_CTRL_START_PLAYAUDIOEX)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_START_PLAYAUDIOEX = 410;
@@ -929,7 +929,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * device stop sound report
 	 * \else
-	 * 设备停止语音播报
+	 * Ih18M#V9SoRt2%1(
 	 * \endif
 	 */
     public static final int     SDK_CTRL_STOP_PLAYAUDIOEX = 411;
@@ -938,7 +938,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * close gateway(corresponding to  structure  NET_CTRL_CLOSE_STROBE)
 	 * \else
-	 * 关闭道闸(对应结构体 NET_CTRL_CLOSE_STROBE)
+	 * 9X1U5@U"(6TS&=a99Le NET_CTRL_CLOSE_STROBE)
 	 * \endif
 	 */
     public static final int     SDK_CTRL_CLOSE_STROBE = 412;
@@ -947,25 +947,25 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * set parking reservation status (corresponding to  structure  NET_CTRL_SET_ORDER_STATE)
 	 * \else
-	 * 设置车位预定状态(对应结构体 NET_CTRL_SET_ORDER_STATE)
+	 * IhVC35N;T$6(W4L,(6TS&=a99Le NET_CTRL_SET_ORDER_STATE)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_SET_ORDER_STATE = 413;
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * add record，get record collection no.(corresponding to NET_CTRL_RECORDSET_INSERT_PARAM)
+	 * add record#,get record collection no.(corresponding to NET_CTRL_RECORDSET_INSERT_PARAM)
 	 * \else
-	 * 添加记录，获得记录集编号(对应NET_CTRL_RECORDSET_INSERT_PARAM)
+	 * Lm<S<GB<#,;q5C<GB<</1`:E(6TS&NET_CTRL_RECORDSET_INSERT_PARAM)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_RECORDSET_INSERTEX = 414;
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * update record set no.’s record(corresponding to NET_CTRL_RECORDSET_PARAM)
+	 * update record set no.!/s record(corresponding to NET_CTRL_RECORDSET_PARAM)
 	 * \else
-	 * 更新某记录集编号的记录(对应NET_CTRL_RECORDSET_PARAM)
+	 * 8|PBD3<GB<</1`:E5D<GB<(6TS&NET_CTRL_RECORDSET_PARAM)
 	 * \endif
 	 */
     public static final int     SDK_CTRL_RECORDSET_UPDATEEX = 415;
@@ -974,7 +974,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * fingerprint collection (corresponding to structure NET_CTRL_CAPTURE_FINGER_PRINT)
 	 * \else
-	 * 指纹采集(对应结构体 NET_CTRL_CAPTURE_FINGER_PRINT)
+	 * V8NF2I</(6TS&=a99Le NET_CTRL_CAPTURE_FINGER_PRINT)
 	 * \endif
 	 */
     public static final int     SDK_CTRL_CAPTURE_FINGER_PRINT = 416;
@@ -983,7 +983,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Parking lot entrance/exit controller LED setup(corresponding structure  NET_CTRL_ECK_LED_SET_PARAM)
 	 * \else
-	 * 停车场出入口控制器LED设置(对应结构体 NET_CTRL_ECK_LED_SET_PARAM)
+	 * M#353!3vHk?Z?XVFFwLEDIhVC(6TS&=a99Le NET_CTRL_ECK_LED_SET_PARAM)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_ECK_LED_SET = 417;
@@ -992,7 +992,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Intelligent parking system in/out device IC card info import (corresponding structure  NET_CTRL_ECK_IC_CARD_IMPORT_PARAM)
 	 * \else
-	 * 智能停车系统出入口机IC卡信息导入(对应结构体 NET_CTRL_ECK_IC_CARD_IMPORT_PARAM)
+	 * VGD\M#35O5M33vHk?Z;zIC?(PEO"5<Hk(6TS&=a99Le NET_CTRL_ECK_IC_CARD_IMPORT_PARAM)
 	 * \endif
 	 */
     public static final int     SDK_CTRL_ECK_IC_CARD_IMPORT = 418;
@@ -1001,7 +1001,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Intelligent parking system in/out device IC card info sync command, receive this command, device will delete original IC card info(corresponding structure  NET_CTRL_ECK_SYNC_IC_CARD_PARAM)
 	 * \else
-	 * 智能停车系统出入口机IC卡信息同步指令，收到此指令后，设备删除原有IC卡信息(对应结构体 NET_CTRL_ECK_SYNC_IC_CARD_PARAM)
+	 * VGD\M#35O5M33vHk?Z;zIC?(PEO"M,2=V8An#,JU5=4KV8An:s#,Ih18I>3}T-SPIC?(PEO"(6TS&=a99Le NET_CTRL_ECK_SYNC_IC_CARD_PARAM)
 	 * \endif
 	 */
     public static final int     SDK_CTRL_ECK_SYNC_IC_CARD = 419;
@@ -1010,7 +1010,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Delete specific wireless device(corresponding structure  NET_CTRL_LOWRATEWPAN_REMOVE)
 	 * \else
-	 * 删除指定无线设备(对应结构体 NET_CTRL_LOWRATEWPAN_REMOVE)
+	 * I>3}V86(N^O_Ih18(6TS&=a99Le NET_CTRL_LOWRATEWPAN_REMOVE)
 	 * \endif
 	 */
     public static final int     SDK_CTRL_LOWRATEWPAN_REMOVE = 420;
@@ -1019,7 +1019,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Modify wireless device info(corresponding structure  NET_CTRL_LOWRATEWPAN_MODIFY)
 	 * \else
-	 * 修改无线设备信息(对应结构体 NET_CTRL_LOWRATEWPAN_MODIFY)
+	 * P^8DN^O_Ih18PEO"(6TS&=a99Le NET_CTRL_LOWRATEWPAN_MODIFY)
 	 * \endif
 	 */
     public static final int     SDK_CTRL_LOWRATEWPAN_MODIFY = 421;
@@ -1028,7 +1028,7 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Set up the vehicle spot information of the machine at the passageway of the intelligent parking system (corresponding to  NET_CTRL_ECK_SET_PARK_INFO_PARAM)
 	 * \else
-	 * 智能停车系统出入口机设置车位信息(对应结构体 NET_CTRL_ECK_SET_PARK_INFO_PARAM)
+	 * VGD\M#35O5M33vHk?Z;zIhVC35N;PEO"(6TS&=a99Le NET_CTRL_ECK_SET_PARK_INFO_PARAM)
 	 * \endif
 	 */
     public static final int     SDK_CTRL_ECK_SET_PARK_INFO = 422;
@@ -1037,8 +1037,31 @@ public class CtrlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * hang up the video phone (corresponding to NET_CTRL_VTP_DISCONNECT)
 	 * \else
-	 * 挂断视频电话(对应结构体 NET_CTRL_VTP_DISCONNECT)
+	 * 9R6OJSF55g;0(6TS&=a99Le NET_CTRL_VTP_DISCONNECT)
 	 * \endif
 	 */
 	public static final int     SDK_CTRL_VTP_DISCONNECT = 423;
+	
+	public static final int     SDK_CTRL_UPDATE_FILES = 424;
+	
+	public static final int     SDK_CTRL_MATRIX_SAVE_SWITCH = 425;
+	
+	public static final int     SDK_CTR_MATRIX_RESTORE_SWITCH = 426;
+	
+    public static final int     SDK_CTRL_THERMO_GRAPHY_ENSHUTTER = 0x10000;     // IhVCHH3IOq?lCEFtSC/={SC, pInBuf= NET_IN_THERMO_EN_SHUTTER*, pOutBuf= NET_OUT_THERMO_EN_SHUTTER * 
+    public static final int     SDK_CTRL_RADIOMETRY_SETOSDMARK = 0x10001;       // IhVC2bNBOn5DosdN*8_AA, pInBuf= NET_IN_RADIOMETRY_SETOSDMARK*, pOutBuf= NET_OUT_RADIOMETRY_SETOSDMARK *    
+    public static final int     SDK_CTRL_AUDIO_REC_START_NAME = 0x10002;        // ?*FtRtF5B<Rt2"5C5=B<RtC{, pInBuf = NET_IN_AUDIO_REC_MNG_NAME *, pOutBuf = NET_OUT_AUDIO_REC_MNG_NAME *
+    public static final int     SDK_CTRL_AUDIO_REC_STOP_NAME = 0x10003;         // 9X1URtF5B<Rt2"75;XND<~C{3F, pInBuf = NET_IN_AUDIO_REC_MNG_NAME *, pOutBuf = NET_OUT_AUDIO_REC_MNG_NAME *
+    public static final int     SDK_CTRL_SNAP_MNG_SNAP_SHOT = 0x10004;          // <4J1W%M<(SVC{JV6/W%M<), pInBuf = NET_IN_SNAP_MNG_SHOT *, pOutBuf = NET_OUT_SNAP_MNG_SHOT *
+    public static final int     SDK_CTRL_LOG_STOP = 0x10005;                    // G?VFM,2=;:4fJ}>]5=J}>]?b2"9X1UJ}>]?b, pInBuf = NET_IN_LOG_MNG_CTRL *, pOutBuf = NET_OUT_LOG_MNG_CTRL *
+    public static final int     SDK_CTRL_LOG_RESUME = 0x10006;                  // ;V84J}>]?b, pInBuf = NET_IN_LOG_MNG_CTRL *, pOutBuf = NET_OUT_LOG_MNG_CTRL *
+    public static final int     SDK_CTRL_POS_ADD = 0x10007;                     // Tv<SR;8vPosIh18, pInBuf = NET_IN_POS_ADD *, pOutBuf = NET_OUT_POS_ADD *
+    public static final int     SDK_CTRL_POS_REMOVE = 0x10008;                  // I>3}R;8vPosIh18, pInBuf = NET_IN_POS_REMOVE *, pOutBuf = NET_OUT_POS_REMOVE *
+    public static final int     SDK_CTRL_POS_REMOVE_MULTI = 0x10009;            // EzA?I>3}PosIh18, pInBuf = NET_IN_POS_REMOVE_MULTI *, pOutBuf = NET_OUT_POS_REMOVE_MULTI *
+    public static final int     SDK_CTRL_POS_MODIFY = 0x1000A;                  // P^8DR;8vPosIh18, pInBuf = NET_IN_POS_ADD *, pOutBuf = NET_OUT_POS_ADD *
+    public static final int     SDK_CTRL_SET_SOUND_ALARM = 0x1000B;             // 4%7"SPIy1(>/, pInBuf = NET_IN_SOUND_ALARM *, pOutBuf = NET_OUT_SOUND_ALARM *
+    public static final int 	SDK_CTRL_AUDIO_MATRIX_SILENCE = 0x1000C;	    // RtF5>XUsR;<|>2Rt?XVF(6TS&pInBuf = NET_IN_AUDIO_MATRIX_SILENCE, pOutBuf =  NET_OUT_AUDIO_MATRIX_SILENCE)
+    public static final int     SDK_CTRL_LOWRATEWPAN_ADD = 0x10011;				// Tv<SN^O_Ih18PEO"(6TS&  pInBuf = NET_CTRL_LOWRATEWPAN_ADD *, pOutBUf = NULL)
+    public static final int 	SDK_CTRL_LOWRATEWPAN_REMOVEALL = 0x10012;		// I>3}KySP5DN^O_Ih18PEO"(6TS& pInBuf = NET_CTRL_LOWRATEWPAN_REMOVEALL *, pOutBUf = NULL)
+    public static final int     SDK_CTRL_TEST_MAIL = 0x10014;                   // 2bJTSJ<~(6TS& pInBuf = NET_IN_TEST_MAIL, pOutBuf = NET_OUT_TEST_MAIL)
 }

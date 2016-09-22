@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Auto Maintenance
  * \else
- * 自动维护
+ * WT6/N,;$
  * \endif
  */
 public class AV_CFG_AutoMaintain implements Serializable {
@@ -20,7 +20,7 @@ public class AV_CFG_AutoMaintain implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Auto Reboot Date, -1 Never, 0~6 Sunday~Saturday, 7 Everyday
 	 * \else
-	 * 自动重启日期, -1永不, 0~6周日~周六, 7每天
+	 * WT6/VXFtHUFZ, -1S@2;, 0~6V\HU~V\Ay, 7C?Ll
 	 * \endif
 	 */
 	public int			nAutoRebootDay;
@@ -29,7 +29,7 @@ public class AV_CFG_AutoMaintain implements Serializable {
 	 * \if ENGLISH_LANG
 	 * AUto Reboot Hour, 0~23 
 	 * \else
-	 * 自动重启小时, 0~23
+	 * WT6/VXFtP!J1, 0~23
 	 * \endif
 	 */
 	public int			nAutoRebootHour;
@@ -38,7 +38,7 @@ public class AV_CFG_AutoMaintain implements Serializable {
 	 * \if ENGLISH_LANG
 	 * AUto Reboot Minute, 0~59 
 	 * \else
-	 * 自动重启分钟, 0~59
+	 * WT6/VXFt7VVS, 0~59
 	 * \endif
 	 */
 	public int			nAutoRebootMinute;
@@ -47,7 +47,7 @@ public class AV_CFG_AutoMaintain implements Serializable {
 	 * \if ENGLISH_LANG
 	 * AUto Shutdown Date 
 	 * \else
-	 * 自动关机日期
+	 * WT6/9X;zHUFZ
 	 * \endif
 	 */
 	public int			nAutoShutdownDay;
@@ -56,7 +56,7 @@ public class AV_CFG_AutoMaintain implements Serializable {
 	 * \if ENGLISH_LANG
 	 * AUto Shutdown Hour 
 	 * \else
-	 * 自动关机小时
+	 * WT6/9X;zP!J1
 	 * \endif
 	 */
 	public int			nAutoShutdownHour;
@@ -65,7 +65,7 @@ public class AV_CFG_AutoMaintain implements Serializable {
 	 * \if ENGLISH_LANG
 	 * AUto Shutdown Minute 
 	 * \else
-	 * 自动关机分钟
+	 * WT6/9X;z7VVS
 	 * \endif
 	 */
 	public int			nAutoShutdownMinute;
@@ -74,7 +74,7 @@ public class AV_CFG_AutoMaintain implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Auto Start Date 
 	 * \else
-	 * 自动启动日期
+	 * WT6/Ft6/HUFZ
 	 * \endif
 	 */
 	public int			nAutoStartupDay;
@@ -83,7 +83,7 @@ public class AV_CFG_AutoMaintain implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Auto Start Hour 
 	 * \else
-	 * 自动启动小时
+	 * WT6/Ft6/P!J1
 	 * \endif
 	 */
 	public int			nAutoStartupHour;
@@ -92,16 +92,16 @@ public class AV_CFG_AutoMaintain implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Auto Start Minute 
 	 * \else
-	 * 自动启动分钟
+	 * WT6/Ft6/7VVS
 	 * \endif
 	 */
 	public int			nAutoStartupMinute;
 	
  	/**
 	 * \if ENGLISH_LANG
-	 * true means enable auto reboot，false means disable auto reboot
+	 * true means enable auto reboot#,false means disable auto reboot
 	 * \else
-	 * true表示开启自动重启，false表示关闭自动重启
+	 * true1mJ>?*FtWT6/VXFt#,false1mJ>9X1UWT6/VXFt
 	 * \endif
 	 */
 	public boolean		bAutoRebootEnable;

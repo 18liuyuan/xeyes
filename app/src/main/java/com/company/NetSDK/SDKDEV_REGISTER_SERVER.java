@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Auto register service
  * \else
- * 主动注册服务
+ * Vw6/W"2a7~Nq
  * \endif
  */
 public class SDKDEV_REGISTER_SERVER implements Serializable {
@@ -19,7 +19,7 @@ public class SDKDEV_REGISTER_SERVER implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Max IP amount supported.
 	 * \else
-	 * 支持的最大ip数
+	 * V'3V5DWn4sipJ}
 	 * \endif
 	 */
 	public byte                bServerNum;
@@ -28,7 +28,7 @@ public class SDKDEV_REGISTER_SERVER implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Registration server IP, port info.
 	 * \else
-	 * 注册服务器ip，端口信息.
+	 * W"2a7~NqFwip#,6K?ZPEO".
 	 * \endif
 	 */
 	public SDKDEV_SERVER_INFO   lstServer[] = new SDKDEV_SERVER_INFO[FinalVar.SDK_MAX_REGISTER_SERVER_NUM];
@@ -37,7 +37,7 @@ public class SDKDEV_REGISTER_SERVER implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable
 	 * \else
-	 * 使能
+	 * J9D\
 	 * \endif
 	 */
     public byte                bEnable;
@@ -46,7 +46,7 @@ public class SDKDEV_REGISTER_SERVER implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device ID
 	 * \else
-	 * 设备id
+	 * Ih18id
 	 * \endif
 	 */
     public byte                szDeviceID[] = new byte[32];

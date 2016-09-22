@@ -4,7 +4,7 @@ package com.company.NetSDK;
  * \if ENGLISH_LANG
  * Alarm event type depends on alarm type analyzed
  * \else
- * 报警事件类型根据netsdk.h解析出来的报警类型
+ * 1(>/JB<~@`PM8y>]netsdk.h=bNv3v@45D1(>/@`PM
  * \endif
  */
 public interface CB_fALARMEvent {
@@ -18,12 +18,12 @@ public interface CB_fALARMEvent {
 	 * @param dwBufSize buffering size 
 	 * @see {@link com.company.NetSDK.INetSDK#ParseData() ParseData}  
 	 * \else
-	 * 报警事件回调函数
-	 * @param dwAlarmType 报警类型
-	 * @param pAlarmInfo 报警参数 
-	 * @param dwStructSize 结构体大小 
-	 * @param pBuffer 缓冲 
-	 * @param dwBufSize 缓冲大小
+	 * 1(>/JB<~;X5w:/J}
+	 * @param dwAlarmType 1(>/@`PM
+	 * @param pAlarmInfo 1(>/2NJ} 
+	 * @param dwStructSize =a99Le4sP! 
+	 * @param pBuffer ;:3e 
+	 * @param dwBufSize ;:3e4sP!
 	 * @see {@link com.company.NetSDK.INetSDK#ParseData() ParseData}  
 	 * \endif
 	 */

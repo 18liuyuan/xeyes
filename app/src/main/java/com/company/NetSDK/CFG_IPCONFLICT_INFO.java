@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * IP Conflict Alarm Linkage Configuration 
  * \else
- * IP冲突报警配置
+ * IP3eM;1(>/EdVC
  * \endif
  */
 public class CFG_IPCONFLICT_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_IPCONFLICT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable Switch 
 	 * \else
-	 * 使能开关
+	 * J9D\?*9X
 	 * \endif
 	 */
 	public boolean 					bEnable;
@@ -28,7 +28,7 @@ public class CFG_IPCONFLICT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm Linkage 
 	 * \else
-	 * 报警联动
+	 * 1(>/A*6/
 	 * \endif
 	 */
 	public CFG_ALARM_MSG_HANDLE		stuEventHandler = new CFG_ALARM_MSG_HANDLE();

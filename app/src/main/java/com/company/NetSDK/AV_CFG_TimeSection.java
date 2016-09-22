@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Period
  * \else
- * 时间段
+ * J1<d6N
  * \endif
  */
 public class AV_CFG_TimeSection implements Serializable {
@@ -19,7 +19,7 @@ public class AV_CFG_TimeSection implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Sub Mask
 	 * \else
-	 * 掩码
+	 * QZBk
 	 * \endif
 	 */
 	public int			nMask;
@@ -28,7 +28,7 @@ public class AV_CFG_TimeSection implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Begin hour
 	 * \else
-	 * 开始时间
+	 * ?*J<J1<d
 	 * \endif
 	 */
 	public int			nBeginHour;
@@ -41,7 +41,7 @@ public class AV_CFG_TimeSection implements Serializable {
 	 * \if ENGLISH_LANG
 	 * End hour
 	 * \else
-	 * 结束时间
+	 * =aJxJ1<d
 	 * \endif
 	 */
 	public int			nEndHour;

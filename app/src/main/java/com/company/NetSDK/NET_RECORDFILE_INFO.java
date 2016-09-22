@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Record file information
  * \else
- * 录像文件信息
+ * B<OqND<~PEO"
  * \endif
  */
 public class NET_RECORDFILE_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class NET_RECORDFILE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel number
 	 * \else
-	 * 通道号
+	 * M(5@:E
 	 * \endif
 	 */
 	public int					ch;
@@ -28,16 +28,16 @@ public class NET_RECORDFILE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * File name 
 	 * \else
-	 * 文件名
+	 * ND<~C{
 	 * \endif
 	 */
-	public char					filename[] = new char[128];
+	public byte					filename[] = new byte[128];
 	
 	/**
 	 * \if ENGLISH_LANG
 	 * File length 
 	 * \else
-	 * 文件长度
+	 * ND<~3$6H
 	 * \endif
 	 */
 	public int					size;
@@ -46,7 +46,7 @@ public class NET_RECORDFILE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Start time
 	 * \else
-	 * 开始时间
+	 * ?*J<J1<d
 	 * \endif
 	 */
 	public NET_TIME				starttime = new NET_TIME();
@@ -55,7 +55,7 @@ public class NET_RECORDFILE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * End time 
 	 * \else
-	 * 结束时间
+	 * =aJxJ1<d
 	 * \endif
 	 */
 	public NET_TIME				endtime = new NET_TIME();
@@ -64,7 +64,7 @@ public class NET_RECORDFILE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * HDD number 
 	 * \else
-	 * 磁盘号(区分网络录像和本地录像的类型，0－127表示本地录像,其中64表示光盘1，128表示网络录像)
+	 * 4EEL:E(Gx7VMxBgB<Oq:M1>5XB<Oq5D@`PM#,0#-1271mJ>1>5XB<Oq,FdVP641mJ>9bEL1#,1281mJ>MxBgB<Oq)
 	 * \endif
 	 */
 	public int					driveno;
@@ -73,7 +73,7 @@ public class NET_RECORDFILE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Initial cluster number 
 	 * \else
-	 * 起始簇号
+	 * FpJ<4X:E
 	 * \endif
 	 */
 	public int					startcluster;
@@ -82,7 +82,7 @@ public class NET_RECORDFILE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Recorded file type  0:general record;1:alarm record ;2:motion detection;3:card number record ;4:image
 	 * \else
-	 * 录象文件类型  0：普通录象；1：报警录象；2：移动检测；3：卡号录象；4：图片
+	 * B<OsND<~@`PM  0#:FUM(B<Os#;1#:1(>/B<Os#;2#:RF6/<l2b#;3#:?(:EB<Os#;4#:M<F,
 	 * \endif
 	 */
 	public byte					nRecordFileType;
@@ -91,16 +91,16 @@ public class NET_RECORDFILE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:general record 1:Important record
 	 * \else
-	 * 0:普通录像 1:重要录像
+	 * 0:FUM(B<Oq 1:VXR*B<Oq
 	 * \endif
 	 */
 	public byte                 bImportantRecID;
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * Document Indexing, when nRecordFileType == 4<Picture>, "bImportantRecID << 8 + bHint" is index 
+	 * Document Indexing, when nRecordFileType == 4(Picture), "bImportantRecID << 8 + bHint" is index 
 	 * \else
-	 * 文件定位索引, nRecordFileType == 4<图片>时, "bImportantRecID << 8 + bHint", 组成图片定位索引 
+	 * ND<~6(N;KwR}, nRecordFileType == 4(M<F,)J1, "bImportantRecID << 8 + bHint", Wi3IM<F,6(N;KwR} 
 	 * \endif
 	 */
 	public byte                 bHint;
@@ -109,7 +109,7 @@ public class NET_RECORDFILE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0-main stream record 1-sub1 stream record 2-sub2 stream record 3-sub3 stream record
 	 * \else
-	 * 0-主码流录像 1-辅码1流录像 2-辅码流2 3-辅码流3录像
+	 * 0-VwBkAwB<Oq 1-8(Bk1AwB<Oq 2-8(BkAw2 3-8(BkAw3B<Oq
 	 * \endif
 	 */
 	public byte                 bRecType;

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Time period structure 
  * \else
- * 时间段结构	
+ * J1<d6N=a99	
  * \endif
  */
 public class SDK_TSECT implements Serializable {
@@ -19,10 +19,10 @@ public class SDK_TSECT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Current record period . Bit means the four Enable functions. From the low bit to the high bit:Motion detection record, alarm record and general record, when Motion detection and alarm happened at the same time can record.
 	 * \else
-	 * 当表示录像时间段时，按位表示四个使能，从低位到高位分别表示动检录象、报警录象、普通录象、动检和报警同时发生才录像
+	 * 511mJ>B<OqJ1<d6NJ1#,04N;1mJ>KD8vJ9D\#,4S5MN;5=8_N;7V1p1mJ>6/<lB<Os!"1(>/B<Os!"FUM(B<Os!"6/<l:M1(>/M,J17"Iz2EB<Oq
 	 * \endif
 	 */
-	public boolean				bEnable;				
+	public int     				bEnable;				
 	public int					iBeginHour;
 	public int					iBeginMin;
 	public int					iBeginSec;

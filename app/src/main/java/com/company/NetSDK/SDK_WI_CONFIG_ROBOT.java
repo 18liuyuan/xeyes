@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Wireless remote configuration
  * \else
- * ÎÞÏßÒ£¿ØÆ÷ÅäÖÃ
+ * N^O_R#?XFwEdVC
  * \endif
  */
 public class SDK_WI_CONFIG_ROBOT implements Serializable {
@@ -19,7 +19,7 @@ public class SDK_WI_CONFIG_ROBOT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The address of the remote control
 	 * \else
-	 * Ò£¿ØÆ÷µØÖ·
+	 * R#?XFw5XV7
 	 * \endif
 	 */
 	public byte                address[] = new byte[FinalVar.ALARM_MAX_NAME];
@@ -28,8 +28,8 @@ public class SDK_WI_CONFIG_ROBOT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The name of the remote control
 	 * \else
-	 * Ò£¿ØÆ÷Ãû³Æ
+	 * R#?XFwC{3F
 	 * \endif
 	 */
-	public byte                name[] = new byte[FinalVar.ALARM_MAX_NAME];           // Ò£¿ØÆ÷Ãû³Æ
+	public byte                name[] = new byte[FinalVar.ALARM_MAX_NAME];           // R#?XFwC{3F
 }

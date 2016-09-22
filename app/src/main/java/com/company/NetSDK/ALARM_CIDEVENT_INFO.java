@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * CID Event
  * \else
- * CID事件
+ * CIDJB<~
  * \endif
  */
 public class ALARM_CIDEVENT_INFO implements Serializable {
@@ -20,7 +20,7 @@ public class ALARM_CIDEVENT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm event time
 	 * \else
-	 * 报警事件发生的时间
+	 * 1(>/JB<~7"Iz5DJ1<d
 	 * \endif
 	 */
 	public NET_TIME        stuTime = new NET_TIME();
@@ -29,7 +29,7 @@ public class ALARM_CIDEVENT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * bell status event
 	 * \else
-	 * CID code, standard protocolcode, string length is 16，string value is 0~F
+	 * CID code, standard protocolcode, string length is 16#,string value is 0~F
 	 * 4 bit user code + 2 bit recognition code + 1 bit event limit code + 3 bit event code + 2 bit system code + 3 bit zone code + 1 bit parity code
 	 * \endif
 	 */

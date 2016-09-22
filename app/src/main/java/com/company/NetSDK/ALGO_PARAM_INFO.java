@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * encrypt algorithm
  * \else
- * 加密算法参数
+ * <SC\Kc7(2NJ}
  * \endif
  */
 public class ALGO_PARAM_INFO implements Serializable {
@@ -23,9 +23,9 @@ public class ALGO_PARAM_INFO implements Serializable {
 	 * when the encrypt algorithm is DES,it has a fixed value 64
 	 * when the encrypt algorithm is DES,it means the encrypt key's number(2 or 3 encrypt key)
 	 * \else
-	 * 密钥长度，当前为AES算法类型时，表示密钥位数(目前支持128，192，256位三种, 如: wEncryptLenth为128，则密钥信息ENCRYPT_KEY_INFO里的byAesKey[0]~[15])
-	 * 为DES算法类型时，密钥长度固定为64位
-	 * 为3DES算法类型时，表示密钥的个数(2或3个密钥)
+	 * C\T?3$6H#,51G0N*AESKc7(@`PMJ1#,1mJ>C\T?N;J}(D?G0V'3V128#,192#,256N;H}VV, Hg: wEncryptLenthN*128#,TrC\T?PEO"ENCRYPT_KEY_INFO@o5DbyAesKey[0]~[15])
+	 * N*DESKc7(@`PMJ1#,C\T?3$6H9L6(N*64N;
+	 * N*3DESKc7(@`PMJ1#,1mJ>C\T?5D8vJ}(2;r38vC\T?)
 	 * \endif
 	 */
 	public short       wEncryptLenth;
@@ -34,7 +34,7 @@ public class ALGO_PARAM_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * work mode, see EM_ENCRYPT_ALOG_WORKMODE 
 	 * \else
-	 * 工作模式,参考枚举类型 EM_ENCRYPT_ALOG_WORKMODE 
+	 * 9$WwD#J=,2N?<C6>Y@`PM EM_ENCRYPT_ALOG_WORKMODE 
 	 * \endif
 	 */
 	public byte       byAlgoWorkMode; 

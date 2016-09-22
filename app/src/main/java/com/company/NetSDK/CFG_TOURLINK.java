@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Tour activation config
  * \else
- * 轮巡联动配置
+ * BVQ2A*6/EdVC
  * \endif
  */
 public class CFG_TOURLINK implements Serializable {
@@ -20,7 +20,7 @@ public class CFG_TOURLINK implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Tour enable
 	 * \else
-	 * 轮巡使能
+	 * BVQ2J9D\
 	 * \endif
 	 */
 	public boolean				bEnable;
@@ -29,7 +29,7 @@ public class CFG_TOURLINK implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Tour split mode
 	 * \else
-	 * 轮巡时的分割模式, CFG_SPLITMODE
+	 * BVQ2J15D7V8nD#J=, CFG_SPLITMODE
 	 * \endif
 	 */
 	public int				    emSplitMode;
@@ -38,7 +38,7 @@ public class CFG_TOURLINK implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Tour channel no.list
 	 * \else
-	 * 轮巡通道号列表
+	 * BVQ2M(5@:EAP1m
 	 * \endif
 	 */
 	public int[]			    nChannels = new int[FinalVar.MAX_VIDEO_CHANNEL_NUM];
@@ -47,7 +47,7 @@ public class CFG_TOURLINK implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Tour channel quantity
 	 * \else
-	 * 轮巡通道数量
+	 * BVQ2M(5@J}A?
 	 * \endif
 	 */
 	public int			        nChannelCount;

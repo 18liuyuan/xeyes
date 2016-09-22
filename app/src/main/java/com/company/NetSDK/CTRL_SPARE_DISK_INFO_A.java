@@ -12,7 +12,7 @@ public class CTRL_SPARE_DISK_INFO_A implements Serializable {
 	 * \if ENGLISH_LANG
 	 * count
 	 * \else
-	 * 热备盘的个数
+	 * HH18EL5D8vJ}
 	 * \endif
 	 */
 	public int                     nCnt;

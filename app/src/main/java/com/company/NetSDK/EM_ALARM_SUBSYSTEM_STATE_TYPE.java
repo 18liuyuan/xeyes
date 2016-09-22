@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Alarm Sub System Status Type
  * \else
- * 报警子系统状态类型
+ * 1(>/WSO5M3W4L,@`PM
  * \endif
  */
 public class EM_ALARM_SUBSYSTEM_STATE_TYPE implements Serializable {
@@ -19,7 +19,7 @@ public class EM_ALARM_SUBSYSTEM_STATE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Unkown
 	 * \else
-	 * 未知
+	 * N4V*
 	 * \endif
 	 */
 	public static final int ALARM_SUBSYSTEM_STATE_UNKNOWN 			= 		0 ;
@@ -28,7 +28,7 @@ public class EM_ALARM_SUBSYSTEM_STATE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Activated
 	 * \else
-	 * 已激活
+	 * RQ<$;n
 	 * \endif
 	 */
 	public static final int ALARM_SUBSYSTEM_STATE_ACTIVE 			= 		1 ;
@@ -37,7 +37,7 @@ public class EM_ALARM_SUBSYSTEM_STATE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Not activated
 	 * \else
-	 * 未激活
+	 * N4<$;n
 	 * \endif
 	 */
 	public static final int	ALARM_SUBSYSTEM_STATE_INACTIVE 			=     	2 ;
@@ -46,7 +46,7 @@ public class EM_ALARM_SUBSYSTEM_STATE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Not distributed
 	 * \else
-	 * 未分配
+	 * N47VEd
 	 * \endif
 	 */
 	public static final int	ALARM_SUBSYSTEM_STATE_UNDISTRIBUTED     =     	3 ;

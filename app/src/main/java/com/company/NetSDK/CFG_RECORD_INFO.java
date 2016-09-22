@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Record Configuration
  * \else
- * 定时录像配置信息
+ * 6(J1B<OqEdVCPEO"
  * \endif
  */
 public class CFG_RECORD_INFO implements Serializable {
@@ -20,7 +20,7 @@ public class CFG_RECORD_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel ID(from 0) 
 	 * \else
-	 * 通道号(0开始)
+	 * M(5@:E(0?*J<)
 	 * \endif
 	 */
 	public int                 	nChannelID;					
@@ -29,25 +29,25 @@ public class CFG_RECORD_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Time Section 
 	 * \else
-	 * 时间表
+	 * J1<d1m
 	 * \endif
 	 */
 	public CFG_TIME_SECTION		stuTimeSection[][] = new CFG_TIME_SECTION[FinalVar.WEEK_DAY_NUM][FinalVar.MAX_REC_TSECT]; 
 
 	/**
 	 * \if ENGLISH_LANG
-	 * Prerecord Time，(0~300) 0 means closed
+	 * Prerecord Time#,(0~300) 0 means closed
 	 * \else
-	 * 预录时间，为零时表示关闭(0~300)
+	 * T$B<J1<d#,N*AcJ11mJ>9X1U(0~300)
 	 * \endif
 	 */
 	public int					nPreRecTime;				
 
 	/**
 	 * \if ENGLISH_LANG
-	 * Prerecord Time，(0~300) 0 means closed 
+	 * Prerecord Time#,(0~300) 0 means closed 
 	 * \else
-	 * 录像冗余开关
+	 * B<OqH_S`?*9X
 	 * \endif
 	 */
 	public boolean				bRedundancyEn;				
@@ -63,7 +63,7 @@ public class CFG_RECORD_INFO implements Serializable {
 	 * 3 Auxiliary Stream 3 
 	 * </pre>
 	 * \else
-	 * 0－主码流，1－辅码流1，2－辅码流2，3－辅码流3
+	 * 0#-VwBkAw#,1#-8(BkAw1#,2#-8(BkAw2#,3#-8(BkAw3
 	 * \endif
 	 */
 	public int					nStreamType;				
@@ -72,16 +72,16 @@ public class CFG_RECORD_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Protocol Version, Read-Only 
 	 * \else
-	 * 协议版本号, 只读
+	 * P-Ri0f1>:E, V;6A
 	 * \endif
 	 */
 	public int					nProtocolVer;				
 
 	/**
 	 * \if ENGLISH_LANG
-	 * as true, holiday config info，bHolidayEn, only stuHolTimeSection valid;
+	 * as true, holiday config info#,bHolidayEn, only stuHolTimeSection valid;
 	 * \else
-	 * 为true时有假日配置信息，bHolidayEn、stuHolTimeSection才有效;
+	 * N*trueJ1SP<YHUEdVCPEO"#,bHolidayEn!"stuHolTimeSection2ESPP';
 	 * \endif
 	 */
 	public boolean				abHolidaySchedule;          
@@ -89,7 +89,7 @@ public class CFG_RECORD_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Holiday record enable TRUE: enable,FALSE:disable
 	 * \else
-	 * 假日录像使能TRUE:使能,FALSE:未使能
+	 * <YHUB<OqJ9D\TRUE:J9D\,FALSE:N4J9D\
 	 * \endif
 	 */
 	public boolean              bHolidayEn;                 
@@ -98,7 +98,7 @@ public class CFG_RECORD_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Holiday record schedule
 	 * \else
-	 * 假日录像时间表
+	 * <YHUB<OqJ1<d1m
 	 * \endif
 	 */
 	public CFG_TIME_SECTION    	stuHolTimeSection[] = new CFG_TIME_SECTION[FinalVar.MAX_REC_TSECT];          

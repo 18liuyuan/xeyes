@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Activate device to snapshot overlay card number information, INetSDK.ControlDevice(SDK_CTRL_CAPTURE_START)
  * \else
- * 触发设备抓图，叠加卡号信息, INetSDK.ControlDevice(SDK_CTRL_CAPTURE_START)
+ * 4%7"Ih18W%M<#,5~<S?(:EPEO", INetSDK.ControlDevice(SDK_CTRL_CAPTURE_START)
  * \endif
  */
 public class NET_SNAP_COMMANDINFO implements Serializable {
@@ -19,8 +19,8 @@ public class NET_SNAP_COMMANDINFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Card information
 	 * \else
-	 * 卡号信息
+	 * ?(:EPEO"
 	 * \endif
 	 */
-	public char				szCardInfo[] 	= new char[16];
+	public byte				szCardInfo[] 	= new byte[16];
 }

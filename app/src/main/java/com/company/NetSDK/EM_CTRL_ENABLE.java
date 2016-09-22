@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Alarm enable control. 
  * \else
- * 报警使能控制方式枚举类型
+ * 1(>/J9D\?XVF7=J=C6>Y@`PM
  * \endif
  */
 public class EM_CTRL_ENABLE implements Serializable {
@@ -19,7 +19,7 @@ public class EM_CTRL_ENABLE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * no control enable
 	 * \else
-	 * 不控制使能
+	 * 2;?XVFJ9D\
 	 * \endif
 	 */
 	public static final int EM_CTRL_NORMAL = 0;   
@@ -28,7 +28,7 @@ public class EM_CTRL_ENABLE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * always enable
 	 * \else
-	 * 总是使能
+	 * W\JGJ9D\
 	 * \endif
 	 */
 	public static final int EM_CTRL_ALWAYS_EN = 1;  
@@ -37,7 +37,7 @@ public class EM_CTRL_ENABLE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * bypass
 	 * \else
-	 * 旁路
+	 * ETB7
 	 * \endif
 	 */
 	public static final int EM_CTRL_ONCE_DIS = 2;   
@@ -46,7 +46,7 @@ public class EM_CTRL_ENABLE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * remove
 	 * \else
-	 * 移除
+	 * RF3}
 	 * \endif
 	 */
 	public static final int EM_CTRL_ALWAYS_DIS = 3; 
@@ -55,7 +55,7 @@ public class EM_CTRL_ENABLE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * enumeration type total
 	 * \else
-	 * 枚举类型总数
+	 * C6>Y@`PMW\J}
 	 * \endif
 	 */
 	public static final int EM_CTRL_NUM = 4;         

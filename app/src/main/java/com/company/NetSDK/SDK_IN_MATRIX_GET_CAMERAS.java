@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * INetSDK.MatrixGetCameras's interface input param
  * \else
- * INetSDK.MatrixGetCameras接口的输入参数
+ * INetSDK.MatrixGetCameras=S?Z5DJdHk2NJ}
  * \endif
  */
 public class SDK_IN_MATRIX_GET_CAMERAS implements Serializable {
@@ -15,5 +15,4 @@ public class SDK_IN_MATRIX_GET_CAMERAS implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
 }

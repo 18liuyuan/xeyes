@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Mail configuration
  * \else
- * 邮件配置
+ * SJ<~EdVC
  * \endif
  */
 public class SDK_MAIL_CFG implements Serializable {
@@ -19,7 +19,7 @@ public class SDK_MAIL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The IP address of the mail server
 	 * \else
-	 * 邮件服务器IP地址
+	 * SJ<~7~NqFwIP5XV7
 	 * \endif
 	 */
 	public byte                sMailIPAddr[] = new byte[FinalVar.SDK_MAX_IPADDR_LEN];
@@ -28,7 +28,7 @@ public class SDK_MAIL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Mail server port
 	 * \else
-	 * 邮件服务器端口
+	 * SJ<~7~NqFw6K?Z
 	 * \endif
 	 */
 	public short                wMailPort;
@@ -37,7 +37,7 @@ public class SDK_MAIL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Send address
 	 * \else
-	 * 发送地址
+	 * 7"KM5XV7
 	 * \endif
 	 */
     public byte                sSenderAddr[] = new byte[FinalVar.SDK_MAX_MAIL_ADDR_LEN];
@@ -46,7 +46,7 @@ public class SDK_MAIL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * User name
 	 * \else
-	 * 用户名
+	 * SC;'C{
 	 * \endif
 	 */
     public byte                sUserName[] = new byte[FinalVar.SDK_MAX_NAME_LEN];
@@ -55,7 +55,7 @@ public class SDK_MAIL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * User password
 	 * \else
-	 * 用户密码
+	 * SC;'C\Bk
 	 * \endif
 	 */
     public byte                sUserPsw[] = new byte[FinalVar.SDK_MAX_NAME_LEN];
@@ -64,7 +64,7 @@ public class SDK_MAIL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Destination address
 	 * \else
-	 * 目的地址
+	 * D?5D5XV7
 	 * \endif
 	 */
     public byte                sDestAddr[] = new byte[FinalVar.SDK_MAX_MAIL_ADDR_LEN];
@@ -73,7 +73,7 @@ public class SDK_MAIL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * CC address
 	 * \else
-	 * 抄送地址
+	 * 3-KM5XV7
 	 * \endif
 	 */
     public byte                sCcAddr[] = new byte[FinalVar.SDK_MAX_MAIL_ADDR_LEN];
@@ -82,7 +82,7 @@ public class SDK_MAIL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Dark copied address
 	 * \else
-	 * 暗抄地址
+	 * 053-5XV7
 	 * \endif
 	 */
     public byte                sBccAddr[] = new byte[FinalVar.SDK_MAX_MAIL_ADDR_LEN];
@@ -91,7 +91,7 @@ public class SDK_MAIL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Title
 	 * \else
-	 * 标题
+	 * 1jLb
 	 * \endif
 	 */
     public byte                sSubject[] = new byte[FinalVar.SDK_MAX_MAIL_SUBJECT_LEN];

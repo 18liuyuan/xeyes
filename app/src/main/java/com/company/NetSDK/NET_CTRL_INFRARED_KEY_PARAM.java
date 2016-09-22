@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * IR button
  * \else
- * 红外按键
+ * :lMb04<|
  * \endif
  */
 public class NET_CTRL_INFRARED_KEY_PARAM implements Serializable {
@@ -19,7 +19,7 @@ public class NET_CTRL_INFRARED_KEY_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * IR control channel no.
 	 * \else
-	 * 红外控制通道号
+	 * :lMb?XVFM(5@:E
 	 * \endif
 	 */
 	public int		nChannel; 
@@ -28,7 +28,7 @@ public class NET_CTRL_INFRARED_KEY_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * IR button ID
 	 * \else
-	 * 红外按键ID
+	 * :lMb04<|ID
 	 * \endif
 	 */
 	public int		nKey; 

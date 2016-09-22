@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Alarming Decoder Alarm
  * \else
- * 报警解码器报警
+ * 1(>/=bBkFw1(>/
  * \endif
  */
 public class ALARM_DECODER_ALARM implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_DECODER_ALARM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Current Alarming Decoder Numbers 
 	 * \else
-	 * 发生报警的报警解码器个数 
+	 * 7"Iz1(>/5D1(>/=bBkFw8vJ} 
 	 * \endif
 	 */
 	public int                 nAlarmDecoderNum;
@@ -28,7 +28,7 @@ public class ALARM_DECODER_ALARM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarming Decoder Alarm 
 	 * \else
-	 * 警解码器报警 
+	 * >/=bBkFw1(>/ 
 	 * \endif
 	 */
 	public ALARM_DECODER       stuAlarmDecoder[] = new ALARM_DECODER[FinalVar.MAX_ALARM_DECODER_NUM];

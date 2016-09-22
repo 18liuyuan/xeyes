@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Lift running parameter configuration
  * \else
- * 电梯运行参数配置
+ * 5gL]TKPP2NJ}EdVC
  * \endif
  */
 public class SDKDEV_ELEVATOR_ATTRI_CFG implements Serializable {
@@ -20,7 +20,7 @@ public class SDKDEV_ELEVATOR_ATTRI_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Max floor. Min is 2.
 	 * \else
-	 * 最大楼层 最小2
+	 * Wn4sB%2c WnP!2
 	 * \endif
 	 */
 	public int    nMAXFloorNum;
@@ -29,7 +29,7 @@ public class SDKDEV_ELEVATOR_ATTRI_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Stay verification time ranges from 5-60. It regards as stop current floor if keep this time period.
 	 * \else
-	 * 停靠判断时间,5-60；保持此时间长度认为是电梯停靠此楼层。
+	 * M#??EP6OJ1<d,5-60#;1#3V4KJ1<d3$6HHON*JG5gL]M#??4KB%2c!#
 	 * \endif
 	 */
 	public int    nFloorDelayTime;
@@ -38,7 +38,7 @@ public class SDKDEV_ELEVATOR_ATTRI_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The max time for the lift to go up/down a floor. It regars the lift is malfunction if the time is out of the threshold. The lift stopsa between two floors.
 	 * \else
-	 * 电梯上行或下行经过一层的最大时间，如果超过此时间，则认为电梯故障，轿厢停止了两层之间。
+	 * 5gL]IOPP;rOBPP>-9}R;2c5DWn4sJ1<d#,Hg9{3,9}4KJ1<d#,TrHON*5gL]9JUO#,=NOaM#V9AKA=2cV.<d!#
 	 * \endif
 	 */
 	public int    nIntervalTime;

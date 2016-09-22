@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Year
  * \else
- * 解码器画面组合信息
+ * =bBkFw;-CfWi:OPEO"
  * \endif
  */
 public class DEC_COMBIN_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class DEC_COMBIN_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Combin ID
 	 * \else
-	 * 组合ID
+	 * Wi:OID
 	 * \endif
 	 */
 	public int				nCombinID;
@@ -28,7 +28,7 @@ public class DEC_COMBIN_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Partition number
 	 * \else
-	 * 画面分割数 
+	 * ;-Cf7V8nJ} 
 	 * \endif
 	 */
 	public int             nSplitType;
@@ -37,7 +37,7 @@ public class DEC_COMBIN_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Display channel
 	 * \else
-	 * 显示通道
+	 * OTJ>M(5@
 	 * \endif
 	 */
 	public byte            bDisChn[]		= new byte[16];

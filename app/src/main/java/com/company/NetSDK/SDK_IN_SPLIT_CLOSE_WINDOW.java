@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * CloseSplitWindow's interface input param(close window)
  * \else
- * CloseSplitWindow接口输入参数(关窗)
+ * CloseSplitWindow=S?ZJdHk2NJ}(9X40)
  * \endif
  */
 public class SDK_IN_SPLIT_CLOSE_WINDOW implements Serializable {
@@ -19,16 +19,17 @@ public class SDK_IN_SPLIT_CLOSE_WINDOW implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel ID
 	 * \else
-	 * 通道号(屏号)
+	 * M(5@:E(FA:E)
 	 * \endif
 	 */
-	public int					nChannel;					
+	public int					nChannel;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Window order
 	 * \else
-	 * 窗口序号
+	 * 40?ZPr:E
 	 * \endif
 	 */
-	public int					nWindowID;					
+	public int					nWindowID;
 }

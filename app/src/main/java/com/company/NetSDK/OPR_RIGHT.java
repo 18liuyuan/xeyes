@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Support the device with max 8 bits user name. Corresponding to the  QueryUserInfo and  OperateUserInfo .Right information 
  * \else
- * 权限信息, 支持用户名最大长度为8位的设备，对应  QueryUserInfo 和 OperateUserInfo 接口
+ * H(O^PEO", V'3VSC;'C{Wn4s3$6HN*8N;5DIh18#,6TS&  QueryUserInfo :M OperateUserInfo =S?Z
  * \endif
  */
 public class OPR_RIGHT implements Serializable {
@@ -19,23 +19,25 @@ public class OPR_RIGHT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Right ID
 	 * \else
-	 * 权限ID
+	 * H(O^ID
 	 * \endif
 	 */
 	public int				dwID;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Name
 	 * \else
-	 * 权限名字
+	 * H(O^C{WV
 	 * \endif
 	 */
 	public char			name[] = new char[FinalVar.SDK_RIGHT_NAME_LENGTH];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Memo
 	 * \else
-	 * 备注
+	 * 18W"
 	 * \endif
 	 */
 	public char			memo[] = new char[FinalVar.SDK_MEMO_LENGTH];

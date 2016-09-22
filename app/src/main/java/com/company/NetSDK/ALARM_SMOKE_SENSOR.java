@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * alarm of smoke sensor
  * \else
- * 烟感报警
+ * QL8P1(>/
  * \endif
  */
 public class ALARM_SMOKE_SENSOR implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_SMOKE_SENSOR implements Serializable {
 	 * \if ENGLISH_LANG
 	 * current time
 	 * \else
-	 * 当前时间
+	 * 51G0J1<d
 	 * \endif
 	 */
 	public NET_TIME        stuCurTime = new NET_TIME();
@@ -28,7 +28,7 @@ public class ALARM_SMOKE_SENSOR implements Serializable {
 	 * \if ENGLISH_LANG
 	 * channel
 	 * \else
-	 * 报警通道
+	 * 1(>/M(5@
 	 * \endif
 	 */
 	public int             nChannel;
@@ -37,7 +37,7 @@ public class ALARM_SMOKE_SENSOR implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 1:hight temperature alarm start,0:end
 	 * \else
-	 * 1:高温报警开始，0：高温报警结束
+	 * 1:8_NB1(>/?*J<#,0#:8_NB1(>/=aJx
 	 * \endif
 	 */
 	public byte            byHighTemperature;
@@ -46,7 +46,7 @@ public class ALARM_SMOKE_SENSOR implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 1:smoke alarm start,0:end
 	 * \else
-	 * 1:烟感报警开始，0：烟感报警结束
+	 * 1:QL8P1(>/?*J<#,0#:QL8P1(>/=aJx
 	 * \endif
 	 */
 	public byte            bySmoke;

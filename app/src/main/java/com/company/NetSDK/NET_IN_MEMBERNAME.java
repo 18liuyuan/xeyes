@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * GetMemberNames Input and output parameter
  * \else
- * GetMemberNames 输入输出参数
+ * GetMemberNames JdHkJd3v2NJ}
  * \endif
  */
 public class NET_IN_MEMBERNAME implements Serializable {
@@ -19,7 +19,7 @@ public class NET_IN_MEMBERNAME implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Configuration command
 	 * \else
-	 * 配置命令
+	 * EdVCC|An
 	 * \endif
 	 */
 	public String         szCommand;                     

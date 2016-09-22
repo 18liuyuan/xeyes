@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Port serial number
  * \else
- * 码流控制模式
+ * BkAw?XVFD#J=
  * \endif
  */
 public class CFG_BITRATE_CONTROL implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_BITRATE_CONTROL implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Control Bit Rate
 	 * \else
-	 * 固定码流
+	 * 9L6(BkAw
 	 * \endif
 	 */
 	public static final int     BITRATE_CBR = 0;
@@ -28,7 +28,7 @@ public class CFG_BITRATE_CONTROL implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Variable Bit Rate
 	 * \else
-	 * 可变码流
+	 * ?I1dBkAw
 	 * \endif
 	 */
 	public static final int     BITRATE_VBR = 1;

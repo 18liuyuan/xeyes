@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Compression Format 
  * \else
- *  ”∆µ—πÀı∏Ò Ω, CFG_VIDEO_COMPRESSION
+ * JSF5Q9Ku8qJ=, CFG_VIDEO_COMPRESSION
  * \endif
  */
 public class CFG_VIDEO_COMPRESSION implements Serializable {
@@ -95,4 +95,13 @@ public class CFG_VIDEO_COMPRESSION implements Serializable {
 	 * \endif
 	 */
 	public static final int     VIDEO_FORMAT_H265 = 8;
+
+	/**
+	 * \if ENGLISH_LANG
+	 * SVAC
+	 * \else
+	 * SVAC
+	 * \endif
+	 */
+	public static final int     VIDEO_FORMAT_SVAC = 9;
 }

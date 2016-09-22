@@ -1,8 +1,9 @@
 package com.conwin.dhvideo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.SurfaceView;
+import android.os.Handler;
+import android.os.Message;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -22,14 +23,27 @@ public class CameraActivity extends AppCompatActivity {
     DhPlayerSdk mDhPlayerSdk;
 
     MyRealStreamCalllBack mRealStreamCalllBack;
+    MsgHandler mMsgHandler;
+    int mChannel;
+   // SurfaceView mSurfaceView;
+    VideoPlayer mVideoPlayer;
     //IPlaySDK.PLAYInputData
+
+    interface MSG_DEF{
+        int LOGIN_SUCCESS = 0;
+        int LOGIN_FAILURE = 1;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
 
+        mMsgHandler = new MsgHandler();
         TextView tvTitle = (TextView)findViewById(R.id.tv_tb_title);
         tvTitle.setText("视频");
+       // mSurfaceView = (SurfaceView) findViewById(R.id.sv_screen);
+        mVideoPlayer = (VideoPlayer) findViewById(R.id.video_player);
 //        INetSDK.LoadLibrarys();
 //        INetSDK.LoadLibrarys();
 //        INetSDK.LoadLibrarys();
@@ -78,6 +92,7 @@ public class CameraActivity extends AppCompatActivity {
         });
 
 
+
         mDhPlayerSdk.initPlayer();
         mDhPlayerSdk.setSaveThumbEnable(true, ""+mCameraId);
         startRealPlay();
@@ -116,37 +131,29 @@ public class CameraActivity extends AppCompatActivity {
             e.printStackTrace();
             return  false;
         }
-
-
-        if(mDhNetSdk.mLoginHandle == 0){
-            long lRet = 0;
-            lRet = mDhNetSdk.login(ip, port, user, pwd );
-            String loginResult = "";
-            if (lRet == 0){
-                loginResult = "登录失败";
-                Toast.makeText(CameraActivity.this, loginResult, Toast.LENGTH_SHORT).show();
-                return false;
-            } else {
-               // loginResult = "登录成功";
-               // Toast.makeText(CameraActivity.this, loginResult, Toast.LENGTH_SHORT).show();
+        mDhPlayerSdk.startPlayer(mVideoPlayer.getSurfaceView());
+        mChannel = channel;
+        mDhNetSdk.login(ip, port, user, pwd, new DhNetSdk.LoginResultCallBack() {
+            @Override
+            public void OnLoginResult(long lResult) {
+                Message msg = Message.obtain();
+                if (lResult == 0){
+                    msg.what = MSG_DEF.LOGIN_FAILURE;
+                } else {
+                    msg.what = MSG_DEF.LOGIN_SUCCESS;
+                }
+                mMsgHandler.sendMessage(msg);
             }
+        });
 
-        }
 
-        SurfaceView sv = (SurfaceView) findViewById(R.id.sv_screen);
-        mDhPlayerSdk.startPlayer(sv);
-       boolean bRet =  mDhNetSdk.realPlay(channel, mRealStreamCalllBack );
-        return bRet;
+
+      return true;
     }
 
 
-    private class MyRealStreamCalllBack implements DhNetSdk.RealStreamCalllBack {
 
-        @Override
-        public void invoke(long lRealHandle, int dwDataType, byte[] pBuffer, int dwBufSize, int param) {
-            mDhPlayerSdk.inputData(pBuffer, pBuffer.length);
-        }
-    }
+
 
     //抓图
     boolean capPicture(){
@@ -157,4 +164,33 @@ public class CameraActivity extends AppCompatActivity {
     boolean saveCameraThumbPic(){
         return false;
     }
+
+    private class MyRealStreamCalllBack implements DhNetSdk.RealStreamCalllBack {
+
+        @Override
+        public void invoke(long lRealHandle, int dwDataType, byte[] pBuffer, int dwBufSize, int param) {
+            mDhPlayerSdk.inputData(pBuffer, pBuffer.length);
+        }
+    }
+
+    class MsgHandler extends Handler {
+
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            if (msg.what == MSG_DEF.LOGIN_SUCCESS){
+
+                boolean bRet =  mDhNetSdk.realPlay(mChannel, mRealStreamCalllBack );
+                if (bRet){
+
+                } else {
+                    Toast.makeText(CameraActivity.this, "播放失败", Toast.LENGTH_SHORT).show();
+                }
+            } else if (msg.what == MSG_DEF.LOGIN_FAILURE){
+                Toast.makeText(CameraActivity.this, "登录失败", Toast.LENGTH_SHORT).show();
+            }
+
+        }
+    }
+
 }

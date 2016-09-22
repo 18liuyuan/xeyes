@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Alarm Types
  * \else
- * 报警类型
+ * 1(>/@`PM
  * \endif
  */
 public class ENCLOSURE_ALARM_TYPE implements Serializable {
@@ -19,7 +19,7 @@ public class ENCLOSURE_ALARM_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Drive In
 	 * \else
-	 * 驶入
+	 * J;Hk
 	 * \endif
 	 */
 	public static final int ENCLOSURE_ALARM_DRIVEIN = 0;
@@ -28,7 +28,7 @@ public class ENCLOSURE_ALARM_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Drive Out
 	 * \else
-	 * 驶出
+	 * J;3v
 	 * \endif
 	 */
 	public static final int ENCLOSURE_ALARM_DRIVEOUT = 1;
@@ -37,7 +37,7 @@ public class ENCLOSURE_ALARM_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Overspeed
 	 * \else
-	 * 超速
+	 * 3,KY
 	 * \endif
 	 */
 	public static final int ENCLOSURE_ALARM_OVERSPEED = 2;
@@ -46,7 +46,7 @@ public class ENCLOSURE_ALARM_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Overspeed Disapper
 	 * \else
-	 * 超速消失
+	 * 3,KYO{J'
 	 * \endif
 	 */
 	public static final int ENCLOSURE_ALARM_SPEEDCLEAR = 3;

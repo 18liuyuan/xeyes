@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * ftp configuration
  * \else
- * ftp配置
+ * ftpEdVC
  * \endif
  */
 public class SDKDEV_FTP_PROTO_CFG implements Serializable {
@@ -19,7 +19,7 @@ public class SDKDEV_FTP_PROTO_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Whether to enable
 	 * \else
-	 * 是否启用
+	 * JG7qFtSC
 	 * \endif
 	 */
 	public boolean                bEnable;
@@ -28,7 +28,7 @@ public class SDKDEV_FTP_PROTO_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Host IP
 	 * \else
-	 * 主机IP
+	 * Vw;zIP
 	 * \endif
 	 */
 	public byte                szHostIp[] = new byte[FinalVar.SDK_MAX_IPADDR_LEN];
@@ -37,7 +37,7 @@ public class SDKDEV_FTP_PROTO_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Host port
 	 * \else
-	 * 主机端口
+	 * Vw;z6K?Z
 	 * \endif
 	 */
 	public short                wHostPort;
@@ -46,7 +46,7 @@ public class SDKDEV_FTP_PROTO_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * FTP directory path
 	 * \else
-	 * FTP目录路径
+	 * FTPD?B<B7>6
 	 * \endif
 	 */
     public byte                szDirName[] = new byte[FinalVar.SDK_FTP_MAX_PATH];
@@ -55,7 +55,7 @@ public class SDKDEV_FTP_PROTO_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * User name
 	 * \else
-	 * 用户名
+	 * SC;'C{
 	 * \endif
 	 */
     public byte                szUserName[] = new byte[FinalVar.SDK_FTP_USERNAME_LEN];
@@ -64,7 +64,7 @@ public class SDKDEV_FTP_PROTO_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Password
 	 * \else
-	 * 密码
+	 * C\Bk
 	 * \endif
 	 */
     public byte                szPassword[] = new byte[FinalVar.SDK_FTP_PASSWORD_LEN];
@@ -73,7 +73,7 @@ public class SDKDEV_FTP_PROTO_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Length of the file
 	 * \else
-	 * 文件长度
+	 * ND<~3$6H
 	 * \endif
 	 */
     public int                 iFileLen;
@@ -82,7 +82,7 @@ public class SDKDEV_FTP_PROTO_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Adjacent the file time intervals (1 to 600), in seconds
 	 * \else
-	 * 相邻文件时间间隔(1~600),单位秒
+	 * O`AZND<~J1<d<d8t(1~600),5%N;Ck
 	 * \endif
 	 */
     public int                 iInterval;
@@ -91,7 +91,7 @@ public class SDKDEV_FTP_PROTO_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * FTP upload configuration
 	 * \else
-	 * FTP上传配置
+	 * FTPIO4+EdVC
 	 * \endif
 	 */
     public SDK_FTP_UPLOAD_CFG   struUploadCfg[][] = new SDK_FTP_UPLOAD_CFG[FinalVar.SDK_MAX_CHANNUM][FinalVar.SDK_N_WEEKS];
@@ -100,7 +100,7 @@ public class SDKDEV_FTP_PROTO_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0-FTP, 1-SMB 2-NFS,3-ISCSI
 	 * \else
-	 * 0-FTP， 1-SMB 2-NFS，3-ISCSI
+	 * 0-FTP#, 1-SMB 2-NFS#,3-ISCSI
 	 * \endif
 	 */
     public byte                protocol;
@@ -109,7 +109,7 @@ public class SDKDEV_FTP_PROTO_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Network storage server version 0 = old FTP (time period) interface (shielded interface 1 = NAS storage period). 
 	 * \else
-	 * 网络存储服务器版本0=老的FTP(界面上显示时间段)，1=NAS存储(界面上屏蔽时间段)。
+	 * MxBg4f4"7~NqFw0f1>0=@O5DFTP(=gCfIOOTJ>J1<d6N)#,1=NAS4f4"(=gCfIOFA1NJ1<d6N)!#
 	 * \endif
 	 */
     public byte                NASVer;
@@ -118,7 +118,7 @@ public class SDKDEV_FTP_PROTO_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The functional capabilities mask, bitwise, low 16 (network storage) followed by FTP, SMB, NFS, high 16 (local storage) order DISK, U. 
 	 * \else
-	 * 功能能力掩码，按位表示，低16位(网络存储)依次表示FTP，SMB，NFS，高16位(本地存储)依次为DISK，U。
+	 * 9&D\D\A&QZBk#,04N;1mJ>#,5M16N;(MxBg4f4")R@4N1mJ>FTP#,SMB#,NFS#,8_16N;(1>5X4f4")R@4NN*DISK#,U!#
 	 * \endif
 	 */
     public int               dwFunctionMask;
@@ -127,7 +127,7 @@ public class SDKDEV_FTP_PROTO_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Data type 0 - type 1 - Video 2 - Pictures 
 	 * \else
-	 * 数据类型, 0-所有类型, 1-视频, 2-图片
+	 * J}>]@`PM, 0-KySP@`PM, 1-JSF5, 2-M<F,
 	 * \endif
 	 */
     public byte                bDataType;

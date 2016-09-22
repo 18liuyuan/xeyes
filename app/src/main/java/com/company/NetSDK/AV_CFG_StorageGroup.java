@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Storage group config
  * \else
- * 存储组配置
+ * 4f4"WiEdVC
  * \endif
  */
 public class AV_CFG_StorageGroup implements Serializable { 	
@@ -20,7 +20,7 @@ public class AV_CFG_StorageGroup implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Group name
 	 * \else
-	 * 分组名称
+	 * 7VWiC{3F
 	 * \endif
 	 */
 	public byte[]		szName = new byte[FinalVar.AV_CFG_Group_Name_Len];
@@ -29,7 +29,7 @@ public class AV_CFG_StorageGroup implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Group note
 	 * \else
-	 * 分组说明
+	 * 7VWiK5Cw
 	 * \endif
 	 */
 	public byte[]		szMemo = new byte[FinalVar.AV_CFG_Group_Memo_Len];
@@ -38,7 +38,7 @@ public class AV_CFG_StorageGroup implements Serializable {
 	 * \if ENGLISH_LANG
 	 * File reserve time
 	 * \else
-	 * 文件保留时间
+	 * ND<~1#AtJ1<d
 	 * \endif
 	 */
 	public int			nFileHoldTime;
@@ -47,7 +47,7 @@ public class AV_CFG_StorageGroup implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Storage space is overlapped or not
 	 * \else
-	 * 存储空间满是否覆盖
+	 * 4f4"?U<dBzJG7q828G
 	 * \endif
 	 */
 	public boolean		bOverWrite;
@@ -56,7 +56,7 @@ public class AV_CFG_StorageGroup implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Record file path naming rule
 	 * \else
-	 * 录像文件路径命名规则
+	 * B<OqND<~B7>6C|C{9fTr
 	 * \endif
 	 */
 	public byte[]		szRecordPathRule = new byte[FinalVar.AV_CFG_Max_Path];
@@ -67,9 +67,9 @@ public class AV_CFG_StorageGroup implements Serializable {
 	 * %y year, %M month, %d day, %h hour, %m minute, %s second, %c channel path
 	 * If year month day hour minute second appear for two times, then first time means start time, second time means end time.
 	 * \else
-	 * 图片文件路径命名规则
-	 * %y年, %M月, %d日, %h时, %m分, %s秒, %c通道路径
-	 * 如果年月日时分秒出现两次, 第一次表示开始时间, 第二次表示结束时间
+	 * M<F,ND<~B7>6C|C{9fTr
+	 * %yDj, %MTB, %dHU, %hJ1, %m7V, %sCk, %cM(5@B7>6
+	 * Hg9{DjTBHUJ17VCk3vOVA=4N, 5ZR;4N1mJ>?*J<J1<d, 5Z6~4N1mJ>=aJxJ1<d
 	 * \endif
 	 */
 	public byte[]		szPicturePathRule = new byte[FinalVar.AV_CFG_Max_Path];
@@ -78,7 +78,7 @@ public class AV_CFG_StorageGroup implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel related config 
 	 * \else
-	 * 通道相关配置 
+	 * M(5@O`9XEdVC 
 	 * \endif
 	 */
 	public AV_CFG_StorageGroupChannel[] stuChannels = new AV_CFG_StorageGroupChannel[FinalVar.AV_CFG_Max_Channel_Num];
@@ -87,7 +87,7 @@ public class AV_CFG_StorageGroup implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel config number
 	 * \else
-	 * 通道配置数
+	 * M(5@EdVCJ}
 	 * \endif
 	 */
 	public int			nChannelCount;

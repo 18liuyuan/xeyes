@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * RTSP Configuration Structure
  * \else
- * RTSP的配置结构体
+ * RTSP5DEdVC=a99Le
  * \endif
  */
 public class CFG_RTSP_INFO_OUT implements Serializable {
@@ -20,7 +20,7 @@ public class CFG_RTSP_INFO_OUT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable 
 	 * \else
-	 * 整个功能是否使能
+	 * U{8v9&D\JG7qJ9D\
 	 * \endif
 	 */
 	public boolean 			bEnable;
@@ -29,7 +29,7 @@ public class CFG_RTSP_INFO_OUT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * RTSP Port 
 	 * \else
-	 * RTSP服务端口
+	 * RTSP7~Nq6K?Z
 	 * \endif
 	 */
 	public int				nPort;
@@ -38,7 +38,7 @@ public class CFG_RTSP_INFO_OUT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Rtp Start Port 
 	 * \else
-	 * RTP起始端口
+	 * RTPFpJ<6K?Z
 	 * \endif
 	 */
 	public int				nRtpStartPort;
@@ -47,7 +47,7 @@ public class CFG_RTSP_INFO_OUT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * nRtp End Port 
 	 * \else
-	 * RTP结束端口
+	 * RTP=aJx6K?Z
 	 * \endif
 	 */
 	public int				nRtpEndPort;
@@ -56,7 +56,7 @@ public class CFG_RTSP_INFO_OUT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * RtspOverHttp Enable 
 	 * \else
-	 * RtspOverHttp使能
+	 * RtspOverHttpJ9D\
 	 * \endif
 	 */
 	public boolean			bHttpEnable;
@@ -65,7 +65,7 @@ public class CFG_RTSP_INFO_OUT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * RtspOverHttp Port 
 	 * \else
-	 * RtspOverHttp端口
+	 * RtspOverHttp6K?Z
 	 * \endif
 	 */
 	public int				nHttpPort;

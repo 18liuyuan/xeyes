@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Sensor enumeration type
  * \else
- * 传感器感应方式枚举类型
+ * 4+8PFw8PS&7=J=C6>Y@`PM
  * \endif
  */
 public class EM_SENSE_METHOD implements Serializable {
@@ -19,7 +19,7 @@ public class EM_SENSE_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Door Sensor
 	 * \else
-	 * 门磁
+	 * CE4E
 	 * \endif
 	 */
 	public static final int EM_SENSE_DOOR = 0;         
@@ -28,7 +28,7 @@ public class EM_SENSE_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Passive IR
 	 * \else
-	 * 被动红外
+	 * 1;6/:lMb
 	 * \endif
 	 */
 	public static final int EM_SENSE_PASSIVEINFRA = 1;   
@@ -37,7 +37,7 @@ public class EM_SENSE_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Gas Sensor 
 	 * \else
-	 * 气感
+	 * Fx8P
 	 * \endif
 	 */
 	public static final int EM_SENSE_GAS = 2;            
@@ -46,7 +46,7 @@ public class EM_SENSE_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Smoke Sensor 
 	 * \else
-	 * 烟感
+	 * QL8P
 	 * \endif
 	 */
 	public static final int EM_SENSE_SMOKING = 3;        
@@ -55,7 +55,7 @@ public class EM_SENSE_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Water Sensor
 	 * \else
-	 * 水感
+	 * K.8P
 	 * \endif
 	 */
 	public static final int EM_SENSE_WATER = 4;          
@@ -64,7 +64,7 @@ public class EM_SENSE_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Active IR 
 	 * \else
-	 * 主动红外
+	 * Vw6/:lMb
 	 * \endif
 	 */
 	public static final int EM_SENSE_ACTIVEFRA = 5;
@@ -73,7 +73,7 @@ public class EM_SENSE_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Glass Broken
 	 * \else
-	 * 玻璃破碎
+	 * 2#A'FFKi
 	 * \endif
 	 */
 	public static final int EM_SENSE_GLASS = 6;
@@ -82,7 +82,7 @@ public class EM_SENSE_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * SOS
 	 * \else
-	 * 紧急开关
+	 * =t<1?*9X
 	 * \endif
 	 */
 	public static final int EM_SENSE_EMERGENCYSWITCH = 7;
@@ -91,7 +91,7 @@ public class EM_SENSE_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Vibrate
 	 * \else
-	 * 震动
+	 * Up6/
 	 * \endif
 	 */
 	public static final int EM_SENSE_SHOCK = 8;
@@ -100,7 +100,7 @@ public class EM_SENSE_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Dual(IR+Microwave)
 	 * \else
-	 * 双鉴(红外+微波)
+	 * K+<x(:lMb+N"2()
 	 * \endif
 	 */
 	public static final int EM_SENSE_DOUBLEMETHOD = 9;
@@ -109,7 +109,7 @@ public class EM_SENSE_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Tritechnology
 	 * \else
-	 * 三技术
+	 * H}<<Ju
 	 * \endif
 	 */
 	public static final int EM_SENSE_THREEMETHOD = 10;
@@ -118,7 +118,7 @@ public class EM_SENSE_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Temperature
 	 * \else
-	 * 温度
+	 * NB6H
 	 * \endif
 	 */
 	public static final int EM_SENSE_TEMP = 11;
@@ -127,7 +127,7 @@ public class EM_SENSE_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Humidity
 	 * \else
-	 * 湿度
+	 * J*6H
 	 * \endif
 	 */
 	public static final int EM_SENSE_HUMIDITY = 12;
@@ -136,7 +136,7 @@ public class EM_SENSE_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Call button
 	 * \else
-	 * 呼叫按钮
+	 * :t=P04E%
 	 * \endif
 	 */
 	public static final int EM_SENSE_CALLBUTTON = 13;
@@ -145,7 +145,7 @@ public class EM_SENSE_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Gas pressure
 	 * \else
-	 * 气体压力
+	 * FxLeQ9A&
 	 * \endif
 	 */
 	public static final int EM_SENSE_GASPRESSURE = 14;
@@ -154,7 +154,7 @@ public class EM_SENSE_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Gas concentration
 	 * \else
-	 * 燃气浓度
+	 * H<FxE(6H
 	 * \endif
 	 */
 	public static final int EM_SENSE_GASCONCENTRATION = 15;
@@ -163,7 +163,7 @@ public class EM_SENSE_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Gas flow
 	 * \else
-	 * 气体流量
+	 * FxLeAwA?
 	 * \endif
 	 */
 	public static final int EM_SENSE_GASFLOW = 16;
@@ -172,7 +172,7 @@ public class EM_SENSE_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Other
 	 * \else
-	 * 其他
+	 * FdK{
 	 * \endif
 	 */
 	public static final int EM_SENSE_OTHER = 17;
@@ -181,7 +181,7 @@ public class EM_SENSE_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enumeration total
 	 * \else
-	 * 枚举类型总数
+	 * C6>Y@`PMW\J}
 	 * \endif
 	 */
 	public static final int EM_SENSE_NUM = 18;             

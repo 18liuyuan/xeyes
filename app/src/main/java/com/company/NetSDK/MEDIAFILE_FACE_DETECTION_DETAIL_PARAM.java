@@ -12,7 +12,7 @@ public class MEDIAFILE_FACE_DETECTION_DETAIL_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * object ID
 	 * \else
-	 * 物体ID
+	 * NoLeID
 	 * \endif
 	 */
 	public long			    dwObjectId;
@@ -21,7 +21,7 @@ public class MEDIAFILE_FACE_DETECTION_DETAIL_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * frame no.
 	 * \else
-	 * 帧序号
+	 * V!Pr:E
 	 * \endif
 	 */
 	public long             dwFrameSequence;
@@ -30,7 +30,7 @@ public class MEDIAFILE_FACE_DETECTION_DETAIL_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * time
 	 * \else
-	 * 发生时间
+	 * 7"IzJ1<d
 	 * \endif
 	 */
 	public NET_TIME_EX      stTime = new NET_TIME_EX();

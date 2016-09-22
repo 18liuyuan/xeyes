@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * OSD info
  * \else
- * OSD信息
+ * OSDPEO"
  * \endif
  */
 public class CFG_OSD_INFO implements Serializable {
@@ -20,7 +20,7 @@ public class CFG_OSD_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Dsiplay Ability 
 	 * \else
-	 * 能力
+	 * D\A&
 	 * \endif
 	 */
 	public boolean				abShowEnable;
@@ -29,7 +29,7 @@ public class CFG_OSD_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Foreground Color 
 	 * \else
-	 * 前景颜色
+	 * G0>0QUI+
 	 * \endif
 	 */
 	public CFG_RGBA				stuFrontColor = new CFG_RGBA();				
@@ -38,7 +38,7 @@ public class CFG_OSD_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Background Color 
 	 * \else
-	 * 背景颜色
+	 * 13>0QUI+
 	 * \endif
 	 */
 	public CFG_RGBA				stuBackColor = new CFG_RGBA();				
@@ -47,7 +47,7 @@ public class CFG_OSD_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 
 	 * \else
-	 * 矩形区域
+	 * >XPNGxSr
 	 * \endif
 	 */
 	public CFG_RECT				stuRect = new CFG_RECT();					
@@ -56,7 +56,7 @@ public class CFG_OSD_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Rectangle Area 
 	 * \else
-	 * 显示使能
+	 * OTJ>J9D\
 	 * \endif
 	 */
 	public boolean				bShowEnable;				

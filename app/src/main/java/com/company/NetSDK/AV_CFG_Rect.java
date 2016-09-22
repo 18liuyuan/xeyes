@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Zone
  * \else
- * ÇøÓò
+ * GxSr
  * \endif
  */
 public class AV_CFG_Rect implements Serializable {

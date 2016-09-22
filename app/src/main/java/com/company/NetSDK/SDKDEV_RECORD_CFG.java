@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Schedule record
  * \else
- * 定时录象
+ * 6(J1B<Os
  * \endif
  */
 public class SDKDEV_RECORD_CFG implements Serializable {
@@ -19,7 +19,7 @@ public class SDKDEV_RECORD_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Schedule
 	 * \else
-	 * 时间表
+	 * J1<d1m
 	 * \endif
 	 */
 	public SDK_TSECT            stSect[][] = new SDK_TSECT[FinalVar.SDK_N_WEEKS][FinalVar.SDK_N_REC_TSECT];
@@ -28,7 +28,7 @@ public class SDKDEV_RECORD_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Pre-record time. Unit is second. 0=Disable pre-record
 	 * \else
-	 * 预录时间，单位是s，0表示不预录
+	 * T$B<J1<d#,5%N;JGs#,01mJ>2;T$B<
 	 * \endif
 	 */
 	public byte                byPreRecordLen;
@@ -37,7 +37,7 @@ public class SDKDEV_RECORD_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Record redundancy enable/disable
 	 * \else
-	 * 录像冗余开关
+	 * B<OqH_S`?*9X
 	 * \endif
 	 */
 	public byte                byRedundancyEn;
@@ -53,15 +53,15 @@ public class SDKDEV_RECORD_CFG implements Serializable {
 	 * </table>
 	 * \else
 	 * <table>
-	 * <tr><td>数值</td><td>录像码流类型</td></tr>
-	 * <tr><td>0</td><td>主码流 </td></tr>
-	 * <tr><td>1</td><td>辅码流1</td></tr>
-	 * <tr><td>2</td><td>辅码流2</td></tr>
-	 * <tr><td>3</td><td>辅码流3</td></tr>
+	 * <tr><td>J}V5</td><td>B<OqBkAw@`PM</td></tr>
+	 * <tr><td>0</td><td>VwBkAw </td></tr>
+	 * <tr><td>1</td><td>8(BkAw1</td></tr>
+	 * <tr><td>2</td><td>8(BkAw2</td></tr>
+	 * <tr><td>3</td><td>8(BkAw3</td></tr>
 	 * </table>
 	 * \endif
 	 */
-	public byte                byRecordType;                       // 录像码流类型：0-主码流 1-辅码流1 2-辅码流2 3-辅码流3
+	public byte                byRecordType;                       // B<OqBkAw@`PM#:0-VwBkAw 1-8(BkAw1 2-8(BkAw2 3-8(BkAw3
 	
 	public SDKDEV_RECORD_CFG() {
 		for (int i = 0; i < FinalVar.SDK_N_WEEKS; i++) {

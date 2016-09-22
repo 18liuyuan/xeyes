@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Lose focus alarm configuration
  * \else
- * 失去焦点报警配置
+ * J'H%=95c1(>/EdVC
  * \endif
  */
 public class SDK_LOST_FOCUS_CFG implements Serializable {
@@ -19,7 +19,7 @@ public class SDK_LOST_FOCUS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enabled
 	 * \else
-	 * 使能
+	 * J9D\
 	 * \endif
 	 */
 	public boolean                bEnable;
@@ -30,7 +30,7 @@ public class SDK_LOST_FOCUS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Process way
 	 * \else
-	 * 报警联动
+	 * 1(>/A*6/
 	 * \endif
 	 */
 	public SDK_MSG_HANDLE       struHandle = new SDK_MSG_HANDLE();

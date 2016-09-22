@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Unlock Method(Access control event,entry/exit record, actual unlock method)
  * \else
- * 开门方式(门禁事件,门禁出入记录,实际的开门方式)
+ * ?*CE7=J=(CE={JB<~,CE={3vHk<GB<,J5<J5D?*CE7=J=)
  * \endif
  */
 public class NET_ACCESS_DOOROPEN_METHOD implements Serializable {
@@ -19,7 +19,7 @@ public class NET_ACCESS_DOOROPEN_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Unknown
 	 * \else
-	 * 未知
+	 * N4V*
 	 * \endif
 	 */
 	public static final int NET_ACCESS_DOOROPEN_METHOD_UNKNOWN = 0;
@@ -28,7 +28,7 @@ public class NET_ACCESS_DOOROPEN_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Password Unlock
 	 * \else
-	 * 密码开锁
+	 * C\Bk?*Kx
 	 * \endif
 	 */
 	public static final int NET_ACCESS_DOOROPEN_METHOD_PWD_ONLY = 1;
@@ -37,7 +37,7 @@ public class NET_ACCESS_DOOROPEN_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Swipe Unlock
 	 * \else
-	 * 刷卡开锁
+	 * K"?(?*Kx
 	 * \endif
 	 */
 	public static final int NET_ACCESS_DOOROPEN_METHOD_CARD = 2;
@@ -46,7 +46,7 @@ public class NET_ACCESS_DOOROPEN_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * SwipeCard and Unlock with Password
 	 * \else
-	 * 先刷卡后密码开锁
+	 * OHK"?(:sC\Bk?*Kx
 	 * \endif
 	 */
 	public static final int NET_ACCESS_DOOROPEN_METHOD_CARD_FIRST = 3;
@@ -55,16 +55,16 @@ public class NET_ACCESS_DOOROPEN_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * InputPassword and Swipe Card to Unlock
 	 * \else
-	 * 先密码后刷卡开锁
+	 * OHC\Bk:sK"?(?*Kx
 	 * \endif
 	 */
 	public static final int NET_ACCESS_DOOROPEN_METHOD_PWD_FIRST = 4;
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * Remotely Unlock，such as unlock VTO via VTH or platform
+	 * Remotely Unlock#,such as unlock VTO via VTH or platform
 	 * \else
-	 * 远程开锁，如通过室内机或者平台对门口机开锁
+	 * T63L?*Kx#,HgM(9}JRDZ;z;rU_F=L(6TCE?Z;z?*Kx
 	 * \endif
 	 */
 	public static final int NET_ACCESS_DOOROPEN_METHOD_REMOTE = 5;
@@ -73,7 +73,7 @@ public class NET_ACCESS_DOOROPEN_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Unlock via Button
 	 * \else
-	 * 开锁按钮进行开锁
+	 * ?*Kx04E%=xPP?*Kx
 	 * \endif
 	 */
 	public static final int NET_ACCESS_DOOROPEN_METHOD_BUTTON = 6;

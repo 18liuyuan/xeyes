@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * SDK_FILE_QUERY_FACE Corresponding face recognition service search parameter
  * \else
- * SDK_FILE_QUERY_FACE对应的人脸识别服务查询参数
+ * SDK_FILE_QUERY_FACE6TS&5DHKA3J61p7~Nq2iQ/2NJ}
  * \endif
  */
 public class MEDIAFILE_FACERECOGNITION_PARAM implements Serializable {
@@ -19,7 +19,7 @@ public class MEDIAFILE_FACERECOGNITION_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * start time
 	 * \else
-	 * 开始时间
+	 * ?*J<J1<d
 	 * \endif
 	 */
 	public NET_TIME            stStartTime = new NET_TIME();
@@ -28,7 +28,7 @@ public class MEDIAFILE_FACERECOGNITION_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * closing time
 	 * \else
-	 * 结束时间
+	 * =aJxJ1<d
 	 * \endif
 	 */
 	public NET_TIME            stEndTime = new NET_TIME();
@@ -37,7 +37,7 @@ public class MEDIAFILE_FACERECOGNITION_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Place to support fuzzy matching
 	 * \else
-	 * 地点，支持模糊匹配
+	 * 5X5c#,V'3VD#:}F%Ed
 	 * \endif
 	 */
 	public byte                szMachineAddress[] = new byte[FinalVar.MAX_PATH];
@@ -46,7 +46,7 @@ public class MEDIAFILE_FACERECOGNITION_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * To query the type of alarm, see EM_FACERECOGNITION_ALARM_TYPE
 	 * \else
-	 * 待查询报警类型，详见 EM_FACERECOGNITION_ALARM_TYPE
+	 * 4}2iQ/1(>/@`PM#,Oj<{ EM_FACERECOGNITION_ALARM_TYPE
 	 * \endif
 	 */
 	public int                 nAlarmType;
@@ -55,7 +55,7 @@ public class MEDIAFILE_FACERECOGNITION_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * staff info is valid or not
 	 * \else
-	 * 人员信息是否有效
+	 * HKT1PEO"JG7qSPP'
 	 * \endif
 	 */
 	public boolean                abPersonInfo;
@@ -64,7 +64,7 @@ public class MEDIAFILE_FACERECOGNITION_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * staff info
 	 * \else
-	 * 人员信息
+	 * HKT1PEO"
 	 * \endif
 	 */
 	public FACERECOGNITION_PERSON_INFO stPersonInfo = new FACERECOGNITION_PERSON_INFO();
@@ -73,7 +73,7 @@ public class MEDIAFILE_FACERECOGNITION_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * channel no.
 	 * \else
-	 * 通道号
+	 * M(5@:E
 	 * \endif
 	 */
 	public int                 nChannelId;
@@ -82,7 +82,7 @@ public class MEDIAFILE_FACERECOGNITION_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * staff group
 	 * \else
-	 * 人员组数
+	 * HKT1WiJ}
 	 * \endif
 	 */
 	public int                 nGroupIdNum;
@@ -91,7 +91,7 @@ public class MEDIAFILE_FACERECOGNITION_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * staff group ID
 	 * \else
-	 * 人员组ID
+	 * HKT1WiID
 	 * \endif
 	 */
 	public byte                szGroupId[][] = new byte[FinalVar.MAX_GOURP_NUM][FinalVar.SDK_COMMON_STRING_64];

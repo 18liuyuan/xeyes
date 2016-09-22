@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * power sequence control parameter
  * \else
- * 电源时序器控制参数
+ * 5gT4J1PrFw?XVF2NJ}
  * \endif
  */
 public class NET_CTRL_SEQPOWER_PARAM implements Serializable {
@@ -19,7 +19,7 @@ public class NET_CTRL_SEQPOWER_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * device ID
 	 * \else
-	 * 设备ID
+	 * Ih18ID
 	 * \endif
 	 */
 	public String				pszDeviceID; 
@@ -28,7 +28,7 @@ public class NET_CTRL_SEQPOWER_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * output or output sequence
 	 * \else
-	 * 输出口或输出组序号
+	 * Jd3v?Z;rJd3vWiPr:E
 	 * \endif
 	 */
 	public int					nChannel; 

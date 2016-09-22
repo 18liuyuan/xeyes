@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Burner control 
  * \else
- * 刻录控制
+ * ?LB<?XVF
  * \endif
  */
 public class BURNNG_PARM implements Serializable {
@@ -19,7 +19,7 @@ public class BURNNG_PARM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel subnet mask. Bit means the channel to be burned.
 	 * \else
-	 * 通道掩码，按位表示要刻录的通道
+	 * M(5@QZBk#,04N;1mJ>R*?LB<5DM(5@
 	 * \endif
 	 */
 	public int					channelMask;
@@ -28,7 +28,7 @@ public class BURNNG_PARM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Burner subnet mask.  Use bit to represent according to the searched burner list 
 	 * \else
-	 * 刻录机掩码，根据查询到的刻录机列表，按位表示
+	 * ?LB<;zQZBk#,8y>]2iQ/5=5D?LB<;zAP1m#,04N;1mJ>
 	 * \endif
 	 */
 	public byte				devMask;
@@ -37,7 +37,7 @@ public class BURNNG_PARM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * PIP channel(Channel No.+32)
 	 * \else
-	 * 画中画通道(通道数+32)
+	 * ;-VP;-M(5@(M(5@J}+32)
 	 * \endif
 	 */
 	public byte                bySpicalChannel;

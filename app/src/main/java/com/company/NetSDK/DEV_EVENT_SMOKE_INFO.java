@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * the describe of EVENT_IVS_SMOKEDETECTION's data
  * \else
- * 事件类型EVENT_IVS_SMOKEDETECTION(烟雾报警事件)对应的数据块描述信息
+ * JB<~@`PMEVENT_IVS_SMOKEDETECTION(QLNm1(>/JB<~)6TS&5DJ}>]?iChJvPEO"
  * \endif
  */
 public class DEV_EVENT_SMOKE_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class DEV_EVENT_SMOKE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * ChannelId
 	 * \else
-	 * 通道号
+	 * M(5@:E
 	 * \endif
 	 */
 	public int                 nChannelID;
@@ -28,7 +28,7 @@ public class DEV_EVENT_SMOKE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * event name
 	 * \else
-	 * 事件名称
+	 * JB<~C{3F
 	 * \endif
 	 */
 	public byte                szName[] = new byte[128];
@@ -37,7 +37,7 @@ public class DEV_EVENT_SMOKE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * PTS(ms)
 	 * \else
-	 * 时间戳(单位是毫秒)
+	 * J1<d4A(5%N;JG:ACk)
 	 * \endif
 	 */
 	public double              PTS;
@@ -46,7 +46,7 @@ public class DEV_EVENT_SMOKE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * the event happen time
 	 * \else
-	 * 事件发生的时间
+	 * JB<~7"Iz5DJ1<d
 	 * \endif
 	 */
 	public NET_TIME_EX         UTC = new NET_TIME_EX();
@@ -55,7 +55,7 @@ public class DEV_EVENT_SMOKE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * event ID
 	 * \else
-	 * 事件ID
+	 * JB<~ID
 	 * \endif
 	 */
 	public int                 nEventID;
@@ -64,7 +64,7 @@ public class DEV_EVENT_SMOKE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * have being detected object
 	 * \else
-	 * 检测到的物体
+	 * <l2b5=5DNoLe
 	 * \endif
 	 */
 	public SDK_MSG_OBJECT       stuObject = new SDK_MSG_OBJECT();
@@ -73,7 +73,7 @@ public class DEV_EVENT_SMOKE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * event file info
 	 * \else
-	 * 事件对应文件信息
+	 * JB<~6TS&ND<~PEO"
 	 * \endif
 	 */
 	public SDK_EVENT_FILE_INFO  stuFileInfo = new SDK_EVENT_FILE_INFO();
@@ -82,7 +82,7 @@ public class DEV_EVENT_SMOKE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Event action,0 means pulse event,1 means continuous event's begin,2means continuous event's end;
 	 * \else
-	 * 事件动作，0表示脉冲事件,1表示持续性事件开始,2表示持续性事件结束;
+	 * JB<~6/Ww#,01mJ>Bv3eJB<~,11mJ>3VPxPTJB<~?*J<,21mJ>3VPxPTJB<~=aJx;
 	 * \endif
 	 */
 	public byte                bEventAction;
@@ -91,7 +91,7 @@ public class DEV_EVENT_SMOKE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Serial number of the picture, in the same time (accurate to seconds) may have multiple images, starting from 0
 	 * \else
-	 * 图片的序号, 同一时间内(精确到秒)可能有多张图片, 从0开始
+	 * M<F,5DPr:E, M,R;J1<dDZ(>+H75=Ck)?ID\SP6`UEM<F,, 4S0?*J<
 	 * \endif
 	 */
 	public byte                byImageIndex;
@@ -100,7 +100,7 @@ public class DEV_EVENT_SMOKE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * flag(by bit),see NET_RESERVED_COMMON
 	 * \else
-	 * 抓图标志(按位)，具体见NET_RESERVED_COMMON
+	 * W%M<1jV>(04N;)#,>_Le<{NET_RESERVED_COMMON
 	 * \endif
 	 */
 	public int               dwSnapFlagMask;
@@ -109,7 +109,7 @@ public class DEV_EVENT_SMOKE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * event trigger accumilated times
 	 * \else
-	 * 事件触发累计次数
+	 * JB<~4%7"@[<F4NJ}
 	 * \endif
 	 */
 	public int        nOccurrenceCount;

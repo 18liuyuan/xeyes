@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * atm: query overlay ability information
  * \else
- * atm:查询叠加相关能力信息
+ * atm:2iQ/5~<SO`9XD\A&PEO"
  * \endif
  */
 public class SDKDEV_ATM_OVERLAY_GENERAL implements Serializable {
@@ -20,7 +20,7 @@ public class SDKDEV_ATM_OVERLAY_GENERAL implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 1:Network, 2:Comm, 3:Network&Comm
 	 * \else
-	 * 按位, 位0:Net(网络), 位1:Com(串口), 位2:Com422(串口422)
+	 * 04N;, N;0:Net(MxBg), N;1:Com(4.?Z), N;2:Com422(4.?Z422)
 	 * \endif
 	 */
 	public int               dwDataSource;
@@ -29,7 +29,7 @@ public class SDKDEV_ATM_OVERLAY_GENERAL implements Serializable {
 	 * \if ENGLISH_LANG
 	 * protocol name
 	 * \else
-	 * 协议名字,最大长度32(保留一个结束符).
+	 * P-RiC{WV,Wn4s3$6H32(1#AtR;8v=aJx7{).
 	 * \endif
 	 */
 	public byte                szProtocol[][] = new byte[32][33];

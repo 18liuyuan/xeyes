@@ -12,7 +12,7 @@ public class CFG_FISHEYE_DETAIL_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * module number
 	 * \else
-	 * 模块数
+	 * D#?iJ}
 	 * \endif
 	 */
 	public int                nModeNum;
@@ -21,7 +21,7 @@ public class CFG_FISHEYE_DETAIL_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * detailed module info  
 	 * \else
-	 * 具体模块信息  
+	 * >_LeD#?iPEO"  
 	 * \endif
 	 */
 	public CFG_FISHEYE_MODE_INFO stuModes[] = new CFG_FISHEYE_MODE_INFO[FinalVar.CFG_MAX_FISHEYE_MODE_NUM];

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Sensor Enumeration Type
  * \else
- * 传感器感应方式枚举类型
+ * 4+8PFw8PS&7=J=C6>Y@`PM
  * \endif
  */
 public class NET_SENSE_METHOD implements Serializable {
@@ -19,152 +19,152 @@ public class NET_SENSE_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Unknown Type
 	 * \else
-	 * 未知类型
+	 * N4V*@`PM
 	 * \endif
 	 */
-	public static final int NET_SENSE_UNKNOWN = -1;      //未知类型
+	public static final int NET_SENSE_UNKNOWN = -1;
 	
 	/**
 	 * \if ENGLISH_LANG
 	 * Door Sensor
 	 * \else
-	 * 门磁
+	 * CE4E
 	 * \endif
 	 */
-	public static final int NET_SENSE_DOOR = 0;            //门磁
+	public static final int NET_SENSE_DOOR = 0;
 	
 	/**
 	 * \if ENGLISH_LANG
 	 * Passive IR
 	 * \else
-	 * 被动红外
+	 * 1;6/:lMb
 	 * \endif
 	 */
-	public static final int NET_SENSE_PASSIVEINFRA = 2;      //被动红外
+	public static final int NET_SENSE_PASSIVEINFRA = 2;
 	
 	/**
 	 * \if ENGLISH_LANG
 	 * Gas Sensor
 	 * \else
-	 * 气感
+	 * Fx8P
 	 * \endif
 	 */
-	public static final int NET_SENSE_GAS = 3;               //气感
+	public static final int NET_SENSE_GAS = 3;
 	
 	/**
 	 * \if ENGLISH_LANG
 	 * Smoke Sensor
 	 * \else
-	 * 烟感
+	 * QL8P
 	 * \endif
 	 */
-	public static final int NET_SENSE_SMOKING = 4;           //烟感
+	public static final int NET_SENSE_SMOKING = 4;
 	
 	/**
 	 * \if ENGLISH_LANG
 	 * Water Sensor
 	 * \else
-	 * 水感
+	 * K.8P
 	 * \endif
 	 */
-	public static final int NET_SENSE_WATER = 5;             //水感
+	public static final int NET_SENSE_WATER = 5;
 	
 	/**
 	 * \if ENGLISH_LANG
 	 * Active IR
 	 * \else
-	 * 主动红外
+	 * Vw6/:lMb
 	 * \endif
 	 */
-	public static final int NET_SENSE_ACTIVEFRA = 6;         //主动红外
+	public static final int NET_SENSE_ACTIVEFRA = 6;
 	
 	/**
 	 * \if ENGLISH_LANG
 	 * Broken Glass
 	 * \else
-	 * 玻璃破碎
+	 * 2#A'FFKi
 	 * \endif
 	 */
-	public static final int NET_SENSE_GLASS = 7;             //玻璃破碎
+	public static final int NET_SENSE_GLASS = 7;
 	
 	/**
 	 * \if ENGLISH_LANG
 	 * Emergency
 	 * \else
-	 * 紧急开关
+	 * =t<1?*9X
 	 * \endif
 	 */
-	public static final int NET_SENSE_EMERGENCYSWITCH = 8;   //紧急开关
+	public static final int NET_SENSE_EMERGENCYSWITCH = 8;
 	
 	/**
 	 * \if ENGLISH_LANG
 	 * Shock
 	 * \else
-	 * 震动
+	 * Up6/
 	 * \endif
 	 */
-	public static final int NET_SENSE_SHOCK = 9;             //震动
+	public static final int NET_SENSE_SHOCK = 9;
 	
 	/**
 	 * \if ENGLISH_LANG
 	 * Dual(IR+Microwave)
 	 * \else
-	 * 双鉴(红外+微波)
+	 * K+<x(:lMb+N"2()
 	 * \endif
 	 */
-	public static final int NET_SENSE_DOUBLEMETHOD = 10;      //双鉴(红外+微波)
+	public static final int NET_SENSE_DOUBLEMETHOD = 10;
 	
 	/**
 	 * \if ENGLISH_LANG
 	 * Three Technology
 	 * \else
-	 * 三技术
+	 * H}<<Ju
 	 * \endif
 	 */
-	public static final int NET_SENSE_THREEMETHOD = 11;       //三技术
+	public static final int NET_SENSE_THREEMETHOD = 11;
 	
 	/**
 	 * \if ENGLISH_LANG
 	 * Temperature
 	 * \else
-	 * 温度
+	 * NB6H
 	 * \endif
 	 */
-	public static final int NET_SENSE_TEMP = 12;              //温度
+	public static final int NET_SENSE_TEMP = 12;
 	
 	/**
 	 * \if ENGLISH_LANG
 	 * Humidity
 	 * \else
-	 * 湿度
+	 * J*6H
 	 * \endif
 	 */
-	public static final int NET_SENSE_HUMIDITY = 13;          //湿度
+	public static final int NET_SENSE_HUMIDITY = 13;
 	
 	/**
 	 * \if ENGLISH_LANG
 	 * Call Button
 	 * \else
-	 * 呼叫按钮
+	 * :t=P04E%
 	 * \endif
 	 */
-	public static final int NET_SENSE_CALLBUTTON = 14;        //呼叫按钮
+	public static final int NET_SENSE_CALLBUTTON = 14;
 	
 	/**
 	 * \if ENGLISH_LANG
 	 * Other
 	 * \else
-	 * 其他
+	 * FdK{
 	 * \endif
 	 */
-	public static final int NET_SENSE_OTHER = 15;             //其他
+	public static final int NET_SENSE_OTHER = 15;
 	
 	/**
 	 * \if ENGLISH_LANG
 	 * Enumeration Type Total
 	 * \else
-	 * 枚举类型总数
+	 * C6>Y@`PMW\J}
 	 * \endif
 	 */
-	public static final int NET_SENSE_NUM = 16;               //枚举类型总数
+	public static final int NET_SENSE_NUM = 16;
 }

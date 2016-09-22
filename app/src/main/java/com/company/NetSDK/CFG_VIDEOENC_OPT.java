@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Video Encoding Options
  * \else
- * 视频编码参数
+ * JSF51`Bk2NJ}
  * \endif
  */
 public class CFG_VIDEOENC_OPT implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_VIDEOENC_OPT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable 
 	 * \else
-	 * 使能
+	 * J9D\
 	 * \endif
 	 */
 	public boolean				abVideoEnable;
@@ -32,7 +32,7 @@ public class CFG_VIDEOENC_OPT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Video Enable 
 	 * \else
-	 * 视频使能
+	 * JSF5J9D\
 	 * \endif
 	 */
 	public boolean				bVideoEnable;				
@@ -41,7 +41,7 @@ public class CFG_VIDEOENC_OPT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Video Format 
 	 * \else
-	 * 视频格式
+	 * JSF58qJ=
 	 * \endif
 	 */
 	public CFG_VIDEO_FORMAT		stuVideoFormat = new CFG_VIDEO_FORMAT();				
@@ -50,7 +50,7 @@ public class CFG_VIDEOENC_OPT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Audio Enable 
 	 * \else
-	 * 音频使能
+	 * RtF5J9D\
 	 * \endif
 	 */
 	public boolean				bAudioEnable;				
@@ -59,7 +59,7 @@ public class CFG_VIDEOENC_OPT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Snap Enable 
 	 * \else
-	 * 定时抓图使能
+	 * 6(J1W%M<J9D\
 	 * \endif
 	 */
 	public boolean				bSnapEnable;				
@@ -68,7 +68,7 @@ public class CFG_VIDEOENC_OPT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Audio Add Enable 
 	 * \else
-	 * 音频叠加使能
+	 * RtF55~<SJ9D\
 	 * \endif
 	 */
 	public boolean              bAudioAddEnable;            
@@ -77,7 +77,7 @@ public class CFG_VIDEOENC_OPT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Audio Format 
 	 * \else
-	 * 音频格式
+	 * RtF58qJ=
 	 * \endif
 	 */
 	public CFG_AUDIO_ENCODE_FORMAT	stuAudioFormat = new CFG_AUDIO_ENCODE_FORMAT();			

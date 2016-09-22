@@ -4,7 +4,7 @@ package com.company.NetSDK;
  * \if ENGLISH_LANG
  * Asynchronism register device call
  * \else
- * 异步注册设备回调函数
+ * Rl2=W"2aIh18;X5w:/J}
  * \endif
  */
 public interface CB_fHaveLogin {
@@ -18,13 +18,13 @@ public interface CB_fHaveLogin {
 	 * @param stuDeviceInfo device info
 	 * @param nError error info
 	 * \else
-	 * 网络断线回调函数
-	 * @param lLoginID 登录句柄, {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx}或者{@link com.company.NetSDK.INetSDK#Login() Login}的返回值
-	 * @param pchDVRIP 设备IP
-	 * @param nDVRPort 设备端口
-	 * @param bOnline 是否在线
-	 * @param stuDeviceInfo 设备信息
-	 * @param nError 出错信息
+	 * MxBg6OO_;X5w:/J}
+	 * @param lLoginID 5GB<>d1z, {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx};rU_{@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5
+	 * @param pchDVRIP Ih18IP
+	 * @param nDVRPort Ih186K?Z
+	 * @param bOnline JG7qTZO_
+	 * @param stuDeviceInfo Ih18PEO"
+	 * @param nError 3v4mPEO"
 	 * \endif
 	 */
 	public void invoke(long lLoginID, String pchDVRIP, int nDVRPort, boolean bOnline, NET_DEVICEINFO_Ex stuDeviceInfo, int nError);

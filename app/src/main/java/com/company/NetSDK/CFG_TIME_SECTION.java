@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Period information
  * \else
- * 时间段信息
+ * J1<d6NPEO"
  * \endif
  */
 public class CFG_TIME_SECTION implements Serializable {
@@ -32,7 +32,7 @@ public class CFG_TIME_SECTION implements Serializable {
 	 * Bit19~Bit31 	Reserved 
 	 * </pre>
 	 * \else
-	 * 录像掩码，按位分别为动态检测录像、报警录像、定时录像、Bit3~Bit15保留、Bit16动态检测抓图、Bit17报警抓图、Bit18定时抓图
+	 * B<OqQZBk#,04N;7V1pN*6/L,<l2bB<Oq!"1(>/B<Oq!"6(J1B<Oq!"Bit3~Bit151#At!"Bit166/L,<l2bW%M<!"Bit171(>/W%M<!"Bit186(J1W%M<
 	 * \endif
 	 */
 	public int					dwRecordMask; 

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * TV adjust
  * \else
- * µ÷½ÚTVÊä³ö
+ * 5w=ZTVJd3v
  * \endif
  */
 public class SDKDEV_TVADJUST_CFG implements Serializable {
@@ -20,7 +20,7 @@ public class SDKDEV_TVADJUST_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * top(0 - 100)
 	 * \else
-	 * ÉÏ²â±ß¾à£¨0£­100£©
+	 * IO2b1_>`#(0#-100#)
 	 * \endif
 	 */
 	public int             nTop;
@@ -29,7 +29,7 @@ public class SDKDEV_TVADJUST_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * botton(0 - 100)
 	 * \else
-	 * ÏÂ²â±ß¾à£¨0£­100£©
+	 * OB2b1_>`#(0#-100#)
 	 * \endif
 	 */
 	public int             nBotton;
@@ -38,7 +38,7 @@ public class SDKDEV_TVADJUST_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * left(0 - 100)
 	 * \else
-	 * ×ó²â±ß¾à£¨0£­100£©
+	 * Ws2b1_>`#(0#-100#)
 	 * \endif
 	 */
 	public int             nLeft;
@@ -47,7 +47,7 @@ public class SDKDEV_TVADJUST_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * right(0 - 100)
 	 * \else
-	 * ÓÒ²â±ß¾à£¨0£­100£©
+	 * SR2b1_>`#(0#-100#)
 	 * \endif
 	 */
 	public int             nRight;

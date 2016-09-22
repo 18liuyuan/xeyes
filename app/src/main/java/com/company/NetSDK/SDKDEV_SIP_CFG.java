@@ -112,7 +112,7 @@ public class SDKDEV_SIP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable
 	 * \else
-	 * 使能
+	 * J9D\
 	 * \endif
 	 */
 	public boolean        bEnable;
@@ -121,7 +121,7 @@ public class SDKDEV_SIP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Notify ID
 	 * \else
-	 * 联动ID
+	 * A*6/ID
 	 * \endif
 	 */
 	public byte        szNotifyID[] = new byte[128];
@@ -130,7 +130,7 @@ public class SDKDEV_SIP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * register time, read only
 	 * \else
-	 * 注册成功的时间；只读字段，设备指定。
+	 * W"2a3I9&5DJ1<d#;V;6AWV6N#,Ih18V86(!#
 	 * \endif
 	 */
 	public NET_TIME    stuRegTime = new NET_TIME();

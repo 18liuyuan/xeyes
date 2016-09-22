@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * IP Information
  * \else
- * IP–≈œ¢
+ * IPPEO"
  * \endif
  */
 public class IPIFILTER_INFO implements Serializable {

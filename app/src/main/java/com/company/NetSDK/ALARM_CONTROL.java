@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Alarm IO control
  * \else
- * ±¨¾¯¿ØÖÆÀà
+ * 1(>/?XVF@`
  * \endif
  */
 public class ALARM_CONTROL implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_CONTROL implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * ¶Ë¿ÚÐòºÅ
+	 * 6K?ZPr:E
 	 * \endif
 	 */
 	public short		index;
@@ -28,7 +28,7 @@ public class ALARM_CONTROL implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port status
 	 * \else
-	 * ¶Ë¿Ú×´Ì¬
+	 * 6K?ZW4L,
 	 * \endif
 	 */
 	public short		state;

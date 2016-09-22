@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * power current status type
  * \else
- * 电源电流状态类型
+ * 5gT45gAwW4L,@`PM
  * \endif
  */
 public class EM_CURRENT_STATE_TYPE implements Serializable {
@@ -19,7 +19,7 @@ public class EM_CURRENT_STATE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Unknown
 	 * \else
-	 * 未知
+	 * N4V*
 	 * \endif
 	 */
     public static final int EM_CURRENT_STATE_UNKNOWN 		= 0 ;
@@ -28,7 +28,7 @@ public class EM_CURRENT_STATE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * current too high
 	 * \else
-	 * 电流过载
+	 * 5gAw9}TX
 	 * \endif
 	 */
     public static final int EM_CURRENT_STATE_OVER_CURRENT 	= 1 ;
@@ -37,7 +37,7 @@ public class EM_CURRENT_STATE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * current normal
 	 * \else
-	 * 电流正常
+	 * 5gAwU}3#
 	 * \endif
 	 */
     public static final int EM_CURRENT_STATE_NORMAL			= 2 ;
@@ -46,7 +46,7 @@ public class EM_CURRENT_STATE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * current too low
 	 * \else
-	 * 电源欠流
+	 * 5gT4G7Aw
 	 * \endif
 	 */
     public static final int EM_CURRENT_STATE_UNDER_CURRENT  = 3 ;

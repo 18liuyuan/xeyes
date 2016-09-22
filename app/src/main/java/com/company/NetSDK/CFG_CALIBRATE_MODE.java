@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * fish eye mode
  * \else
- * 鱼眼矫正模式
+ * ScQ[=CU}D#J=
  * \endif
  */
 public class CFG_CALIBRATE_MODE implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_CALIBRATE_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * unknown mode 
 	 * \else
-	 * 未知模式 
+	 * N4V*D#J= 
 	 * \endif
 	 */
 	public static final int CFG_CALIBRATE_MODE_UNKOWN = 0;
@@ -28,7 +28,7 @@ public class CFG_CALIBRATE_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * original image mode
 	 * \else
-	 * 原始图像模式
+	 * T-J<M<OqD#J=
 	 * \endif
 	 */
 	public static final int CFG_CALIBRATE_MODE_ORIGIAL = 1;
@@ -37,7 +37,7 @@ public class CFG_CALIBRATE_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * config mode
 	 * \else
-	 * 配置模式
+	 * EdVCD#J=
 	 * \endif
 	 */
 	public static final int CFG_CALIBRATE_MODE_CONFIG = 2;
@@ -46,7 +46,7 @@ public class CFG_CALIBRATE_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * panorama mode
 	 * \else
-	 * 全景模式
+	 * H+>0D#J=
 	 * \endif
 	 */
 	public static final int CFG_CALIBRATE_MODE_PANORAMA = 3;
@@ -55,34 +55,34 @@ public class CFG_CALIBRATE_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * dual panorama mode
 	 * \else
-	 * 双全景模式
+	 * K+H+>0D#J=
 	 * \endif
 	 */
 	public static final int CFG_CALIBRATE_MODE_DOUBLEPANORAMA = 4;
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * 1+3 mode￡¨one original fish eyeimage plus 3 EPtz images￡?
+	 * 1+3 mode!j!'one original fish eyeimage plus 3 EPtz images!j?
 	 * \else
-	 * 1+3模式（一个原始鱼眼图像加3个EPtz图像）
+	 * 1+3D#J=#(R;8vT-J<ScQ[M<Oq<S38vEPtzM<Oq#)
 	 * \endif
 	 */
 	public static final int CFG_CALIBRATE_MODE_ORIGIALPLUSTHREEEPTZREGION = 5;
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * single image EPtz mode￡¨only one EPtz image￡?
+	 * single image EPtz mode!j!'only one EPtz image!j?
 	 * \else
-	 * 单画面EPtz模式（只有一个EPtz画面）
+	 * 5%;-CfEPtzD#J=#(V;SPR;8vEPtz;-Cf#)
 	 * \endif
 	 */
 	public static final int CFG_CALIBRATE_MODE_SINGLE = 6;
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * 4 image mode￡¨4 EPtz control images￡?
+	 * 4 image mode!j!'4 EPtz control images!j?
 	 * \else
-	 * 4画面模式（4个EPtz控制画面）
+	 * 4;-CfD#J=#(48vEPtz?XVF;-Cf#)
 	 * \endif
 	 */
 	public static final int CFG_CALIBRATE_MODE_FOUREPTZREGION = 7;
@@ -91,7 +91,7 @@ public class CFG_CALIBRATE_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * normal mode
 	 * \else
-	 * 普通模式
+	 * FUM(D#J=
 	 * \endif
 	 */
 	public static final int CFG_CALIBRATE_MODE_NORMAL = 8;

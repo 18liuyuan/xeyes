@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * DSP Ability Structure
  * \else
- * 网络DSP能力结构体
+ * MxBgDSPD\A&=a99Le
  * \endif
  */
 public class SDK_DSP_CFG implements Serializable {
@@ -20,7 +20,7 @@ public class SDK_DSP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Number of SDK_DSP_CFG_ITEM 
 	 * \else
-	 * SDK_DSP_CFG_ITEM的有效个数,等于通道数
+	 * SDK_DSP_CFG_ITEM5DSPP'8vJ},5HSZM(5@J}
 	 * \endif
 	 */
 	public int				nItemNum;				
@@ -29,7 +29,7 @@ public class SDK_DSP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Main Stream Information 
 	 * \else
-	 * 主码流的信息
+	 * VwBkAw5DPEO"
 	 * \endif
 	 */
 	public SDK_DSP_CFG_ITEM	stuDspCfgItem[] = new SDK_DSP_CFG_ITEM[32];	

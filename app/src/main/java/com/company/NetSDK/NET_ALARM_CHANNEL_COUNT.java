@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Alarm channel number
  * \else
- * 报警通道数
+ * 1(>/M(5@J}
  * \endif
  */
 public class NET_ALARM_CHANNEL_COUNT implements Serializable {
@@ -19,7 +19,7 @@ public class NET_ALARM_CHANNEL_COUNT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Local alarm input channel no.
 	 * \else
-	 * 本地报警输入通道数
+	 * 1>5X1(>/JdHkM(5@J}
 	 * \endif
 	 */
 	public int nLocalAlarmIn;
@@ -28,7 +28,7 @@ public class NET_ALARM_CHANNEL_COUNT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Local alarm output channel no.
 	 * \else
-	 * 本地报警输出通道数
+	 * 1>5X1(>/Jd3vM(5@J}
 	 * \endif
 	 */
 	public int nLocalAlarmOut;
@@ -37,7 +37,7 @@ public class NET_ALARM_CHANNEL_COUNT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Remote alarm input channel no.
 	 * \else
-	 * 远程报警输入通道数
+	 * T63L1(>/JdHkM(5@J}
 	 * \endif
 	 */
 	public int nRemoteAlarmIn;
@@ -46,7 +46,7 @@ public class NET_ALARM_CHANNEL_COUNT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Remote alarm output channel no.
 	 * \else
-	 * 远程报警输出通道数
+	 * T63L1(>/Jd3vM(5@J}
 	 * \endif
 	 */
 	public int nRemoteAlarmOut;

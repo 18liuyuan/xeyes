@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Static detection alarm
  * \else
- * 静态检测报警 
+ * >2L,<l2b1(>/ 
  * \endif
  */
 public class SDK_STATIC_DETECT_CFG_EX implements Serializable {
@@ -20,7 +20,7 @@ public class SDK_STATIC_DETECT_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Static detection alarm enabling
 	 * \else
-	 * 静态检测报警使能
+	 * >2L,<l2b1(>/J9D\
 	 * \endif
 	 */
 	public byte                byStaticEn;
@@ -29,7 +29,7 @@ public class SDK_STATIC_DETECT_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * detect delay (old struct)
 	 * \else
-	 * 检测延时(范围0-127，若超出范围则用nLatch)
+	 * <l2bQSJ1(76N'0-127#,Ht3,3v76N'TrSCnLatch)
 	 * \endif
 	 */
 	public byte                byLatch;
@@ -38,7 +38,7 @@ public class SDK_STATIC_DETECT_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Sensitivity
 	 * \else
-	 * 灵敏度
+	 * AiCt6H
 	 * \endif
 	 */
 	public short                wSenseLevel;
@@ -47,7 +47,7 @@ public class SDK_STATIC_DETECT_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Static detection area rows
 	 * \else
-	 * 静态检测区域的行数
+	 * >2L,<l2bGxSr5DPPJ}
 	 * \endif
 	 */
 	public short                wStaticRow;
@@ -56,7 +56,7 @@ public class SDK_STATIC_DETECT_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Static detection area lines
 	 * \else
-	 * 静态检测区域的列数
+	 * >2L,<l2bGxSr5DAPJ}
 	 * \endif
 	 */
 	public short                wStaticCol;
@@ -65,7 +65,7 @@ public class SDK_STATIC_DETECT_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Static detection area,most 32*32
 	 * \else
-	 * 检测区域，最多32*32块区域
+	 * <l2bGxSr#,Wn6`32*32?iGxSr
 	 * \endif
 	 */
     public byte                byDetected[][] = new byte[FinalVar.SDK_STATIC_ROW][FinalVar.SDK_STATIC_COL];
@@ -83,7 +83,7 @@ public class SDK_STATIC_DETECT_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Handle method
 	 * \else
-	 * 处理方式
+	 * 4&@m7=J=
 	 * \endif
 	 */
     public SDK_MSG_HANDLE_EX    struHandle = new SDK_MSG_HANDLE_EX();
@@ -92,7 +92,7 @@ public class SDK_STATIC_DETECT_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * detect delay (new struct)
 	 * \else
-	 * 检测延时
+	 * <l2bQSJ1
 	 * \endif
 	 */
     public int                 nLatch;

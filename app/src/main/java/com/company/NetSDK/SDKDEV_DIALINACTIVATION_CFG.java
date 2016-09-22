@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * (Dailing triggers the wireless connection)
  * \else
- * (拨号激活无线连接配置)
+ * (2&:E<$;nN^O_A,=SEdVC)
  * \endif
  */
 public class SDKDEV_DIALINACTIVATION_CFG implements Serializable {
@@ -19,7 +19,7 @@ public class SDKDEV_DIALINACTIVATION_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable
 	 * \else
-	 * 使能
+	 * J9D\
 	 * \endif
 	 */
 	public int               dwEnable; 
@@ -28,7 +28,7 @@ public class SDKDEV_DIALINACTIVATION_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Sender amount
 	 * \else
-	 * 发送者个数
+	 * 7"KMU_8vJ}
 	 * \endif
 	 */
 	public int               dwCallerNum; 
@@ -37,7 +37,7 @@ public class SDKDEV_DIALINACTIVATION_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Sender, normally the cellphone
 	 * \else
-	 * 发送者, 一般为手机号码
+	 * 7"KMU_, R;0cN*JV;z:EBk
 	 * \endif
 	 */
 	public byte              SZCaller[][] = new byte[FinalVar.SDK_MMS_DIALINACTIVATION_NUM][32];

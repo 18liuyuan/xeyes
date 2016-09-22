@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Alarm decoder configuration
  * \else
- * 报警解码器配置
+ * 1(>/=bBkFwEdVC
  * \endif
  */
 public class SDK_ALARMDEC_CFG implements Serializable {
@@ -20,7 +20,7 @@ public class SDK_ALARMDEC_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm decoder address
 	 * \else
-	 * 报警解码器地址
+	 * 1(>/=bBkFw5XV7
 	 * \endif
 	 */
 	public int               dwAddr;
@@ -29,7 +29,7 @@ public class SDK_ALARMDEC_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm decoder enable
 	 * \else
-	 * 报警解码器使能
+	 * 1(>/=bBkFwJ9D\
 	 * \endif
 	 */
 	public boolean                bEnable;
@@ -38,7 +38,7 @@ public class SDK_ALARMDEC_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Now only support 8
 	 * \else
-	 * 现在只支持8个.
+	 * OVTZV;V'3V88v.
 	 * \endif
 	 */
 	public int                dwOutSlots[] = new int[FinalVar.DECODER_OUT_SLOTS_MAX_NUM];
@@ -47,7 +47,7 @@ public class SDK_ALARMDEC_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Effective number of array elements.
 	 * \else
-	 * dwOutSlots数组有效元素个数.
+	 * dwOutSlotsJ}WiSPP'T*KX8vJ}.
 	 * \endif
 	 */
 	public int                 nOutSlotNum;
@@ -65,7 +65,7 @@ public class SDK_ALARMDEC_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Now only support 8
 	 * \else
-	 * 现在只支持8个.
+	 * OVTZV;V'3V88v.
 	 * \endif
 	 */
 	public SDK_MSG_HANDLE       struHandle[] = new SDK_MSG_HANDLE[FinalVar.DECODER_IN_SLOTS_MAX_NUM];
@@ -74,7 +74,7 @@ public class SDK_ALARMDEC_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Effective number of array elements.
 	 * \else
-	 * stuHandle数组有效元素个数.
+	 * stuHandleJ}WiSPP'T*KX8vJ}.
 	 * \endif
 	 */
 	public int                 nMsgHandleNum;

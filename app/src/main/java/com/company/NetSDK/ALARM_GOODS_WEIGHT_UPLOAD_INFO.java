@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * goods weight uploa
  * \else
- * 车载货重信息上传
+ * 35TX;uVXPEO"IO4+
  * \endif
  */
 public class ALARM_GOODS_WEIGHT_UPLOAD_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_GOODS_WEIGHT_UPLOAD_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * goods weight(kg)
 	 * \else
-	 * 当前货重(kg)
+	 * 51G0;uVX(kg)
 	 * \endif
 	 */
 	public int        dwGoodsWeight;
@@ -28,7 +28,7 @@ public class ALARM_GOODS_WEIGHT_UPLOAD_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * self weight(kg)
 	 * \else
-	 * 自重(kg)
+	 * WTVX(kg)
 	 * \endif
 	 */
 	public int        dwSelfWeight;
@@ -37,7 +37,7 @@ public class ALARM_GOODS_WEIGHT_UPLOAD_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * total weight(kg)
 	 * \else
-	 * 总重(kg)
+	 * W\VX(kg)
 	 * \endif
 	 */
 	public int        dwTotalWeight;
@@ -46,7 +46,7 @@ public class ALARM_GOODS_WEIGHT_UPLOAD_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * standard weight(kg)
 	 * \else
-	 * 核定货重(kg)
+	 * :K6(;uVX(kg)
 	 * \endif
 	 */
 	public int        dwStandardWeight;
@@ -55,7 +55,7 @@ public class ALARM_GOODS_WEIGHT_UPLOAD_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * weight scale	
 	 * \else
-	 * 货重比例    
+	 * ;uVX1H@}    
 	 * \endif
 	 */
 	public int        dwWeightScale;

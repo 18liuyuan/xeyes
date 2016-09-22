@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Access Control Open Event Detail
  * \else
- * 门禁未关事件详细信息
+ * CE={N49XJB<~OjO8PEO"
  * \endif
  */
 public class ALARM_ACCESS_CTL_NOT_CLOSE_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_ACCESS_CTL_NOT_CLOSE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Door Channel No.
 	 * \else
-	 * 门通道号
+	 * CEM(5@:E
 	 * \endif
 	 */
 	public int             nDoor;
@@ -28,7 +28,7 @@ public class ALARM_ACCESS_CTL_NOT_CLOSE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Access Control Name
 	 * \else
-	 * 门禁名称
+	 * CE={C{3F
 	 * \endif
 	 */
 	public byte            szDoorName[] = new byte[FinalVar.SDK_MAX_DOORNAME_LEN];
@@ -37,7 +37,7 @@ public class ALARM_ACCESS_CTL_NOT_CLOSE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm Event Time
 	 * \else
-	 * 报警事件发生的时间
+	 * 1(>/JB<~7"Iz5DJ1<d
 	 * \endif
 	 */
 	public NET_TIME        stuTime = new NET_TIME();
@@ -46,7 +46,7 @@ public class ALARM_ACCESS_CTL_NOT_CLOSE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:start 1:stop
 	 * \else
-	 * 0:开始 1:停止
+	 * 0:?*J< 1:M#V9
 	 * \endif
 	 */
 	public int             nAction;

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * longitude latitude
  * \else
- * 经纬度
+ * >-N36H
  * \endif
  */
 public class SDKDEV_LONGI_LATI implements Serializable {
@@ -19,7 +19,7 @@ public class SDKDEV_LONGI_LATI implements Serializable {
 	 * \if ENGLISH_LANG
 	 * preflag of longitude:N(north),S(south),W(west),E(east)
 	 * \else
-	 * 经度前置标志：N、S、W、E，分别表示北、南、西、东。
+	 * >-6HG0VC1jV>#:N!"S!"W!"E#,7V1p1mJ>11!"DO!"Nw!"6+!#
 	 * \endif
 	 */
 	public byte                chPreLogi;
@@ -28,7 +28,7 @@ public class SDKDEV_LONGI_LATI implements Serializable {
 	 * \if ENGLISH_LANG
 	 * preflag of latitude:N(north),S(south),W(west),E(east)
 	 * \else
-	 * 纬度前置标志：N、S、W、E，分别表示北、南、西、东。
+	 * N36HG0VC1jV>#:N!"S!"W!"E#,7V1p1mJ>11!"DO!"Nw!"6+!#
 	 * \endif
 	 */
 	public byte                chPreLati;
@@ -37,7 +37,7 @@ public class SDKDEV_LONGI_LATI implements Serializable {
 	 * \if ENGLISH_LANG
 	 * longitude
 	 * \else
-	 * 经度
+	 * >-6H
 	 * \endif
 	 */
 	public double              dbLongitude;
@@ -46,7 +46,7 @@ public class SDKDEV_LONGI_LATI implements Serializable {
 	 * \if ENGLISH_LANG
 	 * latitude
 	 * \else
-	 * 纬度
+	 * N36H
 	 * \endif
 	 */
 	public double              dbLatitude;

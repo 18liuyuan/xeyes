@@ -4,7 +4,7 @@ package com.company.NetSDK;
  * \if ENGLISH_LANG
  * Snapshot callback function original shape 
  * \else
- * 抓图回调
+ * W%M<;X5w
  * \endif
  */
 public interface CB_fSnapRev {
@@ -14,15 +14,15 @@ public interface CB_fSnapRev {
 	 * @param lLoginID login handle,{@link com.company.NetSDK.INetSDK#LoginEx() LoginEx}or{@link com.company.NetSDK.INetSDK#Login() Login}
 	 * @param pBuf data pointer 
 	 * @param RevLen data length(unit byte)
-	 * @param EncodeType image encode type：0：mpeg4 I frame 
-	 * @param CmdSerial operation NO.，not used in Synchronous capture conditions 
+	 * @param EncodeType image encode type#:0#:mpeg4 I frame 
+	 * @param CmdSerial operation NO.#,not used in Synchronous capture conditions 
 	 * \else
-	 * 抓图回调
-	 * @param lLoginID 登录句柄，{@link com.company.NetSDK.INetSDK#LoginEx() LoginEx}or{@link com.company.NetSDK.INetSDK#Login() Login}
-	 * @param pBuf 数据指针 
-	 * @param RevLen 数据长度(单位字节)
-	 * @param EncodeType 图片编码类型：0：mpeg4 I帧 
-	 * @param CmdSerial 操作流水号，同步抓图的情况下用不上 
+	 * W%M<;X5w
+	 * @param lLoginID 5GB<>d1z#,{@link com.company.NetSDK.INetSDK#LoginEx() LoginEx}or{@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pBuf J}>]V8Uk 
+	 * @param RevLen J}>]3$6H(5%N;WV=Z)
+	 * @param EncodeType M<F,1`Bk@`PM#:0#:mpeg4 IV! 
+	 * @param CmdSerial 2YWwAwK.:E#,M,2=W%M<5DGi?vOBSC2;IO 
 	 * \endif
 	 */
 	public void invoke(long lLoginID, byte pBuf[], int RevLen, int EncodeType, int CmdSerial);

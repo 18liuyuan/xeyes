@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Service Status
  * \else
- * 服务状态
+ * 7~NqW4L,
  * \endif
  */
 public class CFG_IPSERVER_STATUS implements Serializable { 	
@@ -19,7 +19,7 @@ public class CFG_IPSERVER_STATUS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Supported Server Num
 	 * \else
-	 * 提供的服务个数
+	 * La9)5D7~Nq8vJ}
 	 * \endif
 	 */
 	public int			nSupportedServerNum;
@@ -28,7 +28,7 @@ public class CFG_IPSERVER_STATUS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Supported Server Name
 	 * \else
-	 * 提供的服务名称  
+	 * La9)5D7~NqC{3F  
 	 * \endif
 	 */
 	public byte[][]		szSupportServer = new byte[FinalVar.MAX_SEVER_NUM][FinalVar.MAX_NAME_LEN];
@@ -37,7 +37,7 @@ public class CFG_IPSERVER_STATUS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Svr Supported SubServer Info Num 
 	 * \else
-	 * Svr提供的子服务信息个数
+	 * SvrLa9)5DWS7~NqPEO"8vJ}
 	 * \endif
 	 */
 	public int 			nSvrSuppSubServerNum;
@@ -46,7 +46,7 @@ public class CFG_IPSERVER_STATUS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Svr Supported SubServer Info CMS DMS MTS SS RMS DBR
 	 * \else
-	 * Svr提供的子服务信息 CMS DMS	MTS	SS RMS DBR
+	 * SvrLa9)5DWS7~NqPEO" CMS DMS	MTS	SS RMS DBR
 	 * \endif
 	 */
 	public byte[][]		szSvrSuppSubServer = new byte[FinalVar.MAX_SEVER_NUM][FinalVar.MAX_NAME_LEN];
@@ -55,7 +55,7 @@ public class CFG_IPSERVER_STATUS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:Unknown 1:Run 2:Not Run 
 	 * \else
-	 * 0:未知 1:运行 2:未运行
+	 * 0:N4V* 1:TKPP 2:N4TKPP
 	 * \endif
 	 */
 	public byte			byCMS;
@@ -64,7 +64,7 @@ public class CFG_IPSERVER_STATUS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:Unknown 1:Run 2:Not Run
 	 * \else
-	 * 0:未知 1:运行 2:未运行
+	 * 0:N4V* 1:TKPP 2:N4TKPP
 	 * \endif
 	 */
 	public byte			byDMS;
@@ -73,7 +73,7 @@ public class CFG_IPSERVER_STATUS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:Unknown 1:Run 2:Not Run
 	 * \else
-	 * 0:未知 1:运行 2:未运行
+	 * 0:N4V* 1:TKPP 2:N4TKPP
 	 * \endif
 	 */
 	public byte			byMTS;
@@ -82,7 +82,7 @@ public class CFG_IPSERVER_STATUS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:Unknown 1:Run 2:Not Run
 	 * \else
-	 * 0:未知 1:运行 2:未运行
+	 * 0:N4V* 1:TKPP 2:N4TKPP
 	 * \endif
 	 */
 	public byte			bySS;
@@ -91,7 +91,7 @@ public class CFG_IPSERVER_STATUS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:Unknown 1:Run 2:Not Run
 	 * \else
-	 * 0:未知 1:运行 2:未运行
+	 * 0:N4V* 1:TKPP 2:N4TKPP
 	 * \endif
 	 */
 	public byte			byRMS;
@@ -100,7 +100,7 @@ public class CFG_IPSERVER_STATUS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:Unknown 1:Run 2:Not Run
 	 * \else
-	 * 0:未知 1:运行 2:未运行
+	 * 0:N4V* 1:TKPP 2:N4TKPP
 	 * \endif
 	 */
 	public byte			byDBR;
@@ -109,7 +109,7 @@ public class CFG_IPSERVER_STATUS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:Unknown 1:Run 2:Not Run
 	 * \else
-	 * 0:未知 1:运行 2:未运行
+	 * 0:N4V* 1:TKPP 2:N4TKPP
 	 * \endif
 	 */
 	public byte			bySvrd;
@@ -118,7 +118,7 @@ public class CFG_IPSERVER_STATUS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:Unknown 1:Run 2:Not Run
 	 * \else
-	 * 0:未知 1:运行 2:未运行
+	 * 0:N4V* 1:TKPP 2:N4TKPP
 	 * \endif
 	 */
 	public byte			byDataBase;
@@ -127,7 +127,7 @@ public class CFG_IPSERVER_STATUS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:Unknown 1:Run 2:Not Run
 	 * \else
-	 * 0:未知 1:运行 2:未运行
+	 * 0:N4V* 1:TKPP 2:N4TKPP
 	 * \endif
 	 */
 	public byte			byDataBased;
@@ -136,7 +136,7 @@ public class CFG_IPSERVER_STATUS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:Unknown 1:Run 2:Not Run
 	 * \else
-	 * 0:未知 1:运行 2:未运行
+	 * 0:N4V* 1:TKPP 2:N4TKPP
 	 * \endif
 	 */
 	public byte			byNtpServer;
@@ -145,7 +145,7 @@ public class CFG_IPSERVER_STATUS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:Unknown 1:Run 2:Not Run
 	 * \else
-	 * 0:未知 1:运行 2:未运行
+	 * 0:N4V* 1:TKPP 2:N4TKPP
 	 * \endif
 	 */
 	public byte			byNtpServerd;
@@ -154,7 +154,7 @@ public class CFG_IPSERVER_STATUS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:Unknown 1:Run 2:Not Run
 	 * \else
-	 * 0:未知 1:运行 2:未运行
+	 * 0:N4V* 1:TKPP 2:N4TKPP
 	 * \endif
 	 */
 	public byte			byPrivateII;
@@ -163,7 +163,7 @@ public class CFG_IPSERVER_STATUS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:Unknown 1:Run 2:Not Run
 	 * \else
-	 * 0:未知 1:运行 2:未运行
+	 * 0:N4V* 1:TKPP 2:N4TKPP
 	 * \endif
 	 */
 	public byte			byPrivateIId;
@@ -172,7 +172,7 @@ public class CFG_IPSERVER_STATUS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:Unknown 1:Run 2:Not Run
 	 * \else
-	 * 0:未知 1:运行 2:未运行
+	 * 0:N4V* 1:TKPP 2:N4TKPP
 	 * \endif
 	 */
 	public byte			bySAMBA;
@@ -181,7 +181,7 @@ public class CFG_IPSERVER_STATUS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:Unknown 1:Run 2:Not Run
 	 * \else
-	 * 0:未知 1:运行 2:未运行
+	 * 0:N4V* 1:TKPP 2:N4TKPP
 	 * \endif
 	 */
 	public byte			byNFS;
@@ -190,7 +190,7 @@ public class CFG_IPSERVER_STATUS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:Unknown 1:Run 2:Not Run
 	 * \else
-	 * 0:未知 1:运行 2:未运行
+	 * 0:N4V* 1:TKPP 2:N4TKPP
 	 * \endif
 	 */
 	public byte			byFTP;
@@ -199,7 +199,7 @@ public class CFG_IPSERVER_STATUS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:Unknown 1:Run 2:Not Run
 	 * \else
-	 * 0:未知 1:运行 2:未运行
+	 * 0:N4V* 1:TKPP 2:N4TKPP
 	 * \endif
 	 */
 	public byte			byISCSI;

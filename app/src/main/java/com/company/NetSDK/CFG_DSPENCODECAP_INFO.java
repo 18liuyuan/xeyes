@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * dsp Configuration
  * \else
- * dsp配置
+ * dspEdVC
  * \endif
  */
 public class CFG_DSPENCODECAP_INFO implements Serializable {
@@ -20,7 +20,7 @@ public class CFG_DSPENCODECAP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Video Standard Mask,Video Standard Supported By Device Indicated By Bits 
 	 * \else
-	 * 视频制式掩码,按位表示设备能够支持的视频制式
+	 * JSF5VFJ=QZBk,04N;1mJ>Ih18D\9;V'3V5DJSF5VFJ=
 	 * \endif
 	 */
 	public int				dwVideoStandardMask;	
@@ -29,7 +29,7 @@ public class CFG_DSPENCODECAP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Resolution Mask,Resolution Supported By Device Indicated By Bits
 	 * \else
-	 * 分辨率掩码,按位表示设备能够支持的分辨率
+	 * 7V1fBJQZBk,04N;1mJ>Ih18D\9;V'3V5D7V1fBJ
 	 * \endif
 	 */
 	public int				dwImageSizeMask;		
@@ -38,7 +38,7 @@ public class CFG_DSPENCODECAP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Encode Mode Mask,Encode Mode Supported By Device Indicated By Bits
 	 * \else
-	 * 编码模式掩码,按位表示设备能够支持的编码模式
+	 * 1`BkD#J=QZBk,04N;1mJ>Ih18D\9;V'3V5D1`BkD#J=
 	 * \endif
 	 */
 	public int				dwEncodeModeMask;		
@@ -47,11 +47,11 @@ public class CFG_DSPENCODECAP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Multimedia Function Supported By Device Indicated By Bits,First Bit Means Support Main Stream, Second Means Support Substream 1, Third Bit Means Support Main Stream 2, Fifth Bit Means Support jpg Snapshot 
 	 * \else
-	 * 按位表示设备支持的多媒体功能,\n
-	 * 第一位表示支持主码流\n
-	 * 第二位表示支持辅码流1\n
-	 * 第三位表示支持辅码流2\n
-	 * 第五位表示支持jpg抓图
+	 * 04N;1mJ>Ih18V'3V5D6`C=Le9&D\,\n
+	 * 5ZR;N;1mJ>V'3VVwBkAw\n
+	 * 5Z6~N;1mJ>V'3V8(BkAw1\n
+	 * 5ZH}N;1mJ>V'3V8(BkAw2\n
+	 * 5ZNeN;1mJ>V'3VjpgW%M<
 	 * \endif
 	 */
 	public int				dwStreamCap;			
@@ -61,7 +61,7 @@ public class CFG_DSPENCODECAP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Means when Main Stream Is Each Resolution,the Substream Resolution Mask Supported 
 	 * \else
-	 * 表示主码流为各分辨率时,支持的辅码流分辨率掩码
+	 * 1mJ>VwBkAwN*8w7V1fBJJ1,V'3V5D8(BkAw7V1fBJQZBk
 	 * \endif
 	 */
 	public int				dwImageSizeMask_Assi[] = new int[32];
@@ -70,7 +70,7 @@ public class CFG_DSPENCODECAP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * DSP Supported Max Encode Power 
 	 * \else
-	 * DSP支持的最高编码能力 
+	 * DSPV'3V5DWn8_1`BkD\A& 
 	 * \endif
 	 */
 	public int				dwMaxEncodePower;		
@@ -79,7 +79,7 @@ public class CFG_DSPENCODECAP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Each DSP Supports Max Support Channel Num 
 	 * \else
-	 * 每块DSP支持最多输入视频通道数 
+	 * C??iDSPV'3VWn6`JdHkJSF5M(5@J} 
 	 * \endif
 	 */
 	public int				wMaxSupportChannel;		
@@ -88,7 +88,7 @@ public class CFG_DSPENCODECAP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * DSP If Every Channel Max Encode Set Sync;0:Not Sync,1:Sync 
 	 * \else
-	 * DSP每通道的最大编码设置是否同步;0:不同步,1:同步
+	 * DSPC?M(5@5DWn4s1`BkIhVCJG7qM,2=;0:2;M,2=,1:M,2=
 	 * \endif
 	 */
 	public int				wChannelMaxSetSync;		
@@ -97,7 +97,7 @@ public class CFG_DSPENCODECAP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Max Collect Frame Rate Under Different Resolutions,Corresponding To dwVideoStandardMask By Bits 
 	 * \else
-	 * 不同分辨率下的最大采集帧率,与dwVideoStandardMask按位对应
+	 * 2;M,7V1fBJOB5DWn4s2I</V!BJ,SkdwVideoStandardMask04N;6TS&
 	 * \endif
 	 */
 	public byte				bMaxFrameOfImageSize[] = new byte[256];
@@ -113,16 +113,16 @@ public class CFG_DSPENCODECAP_INFO implements Serializable {
 	 * 2:N5 Calculation,Substream Resolution >= Main Stream Resolution,Supported Check Resolution and Corresponding Max Frame Rate
 	 * </pre>
 	 * \else
-	 * 标志,配置时要求符合下面条件,否则配置不能生效;
+	 * 1jV>,EdVCJ1R*Gs7{:OOBCfLu<~,7qTrEdVC2;D\IzP';
 	 * <pre>
-	 * 0:主码流的编码能力+辅码流的编码能力 <= 设备的编码能力,
-	 * 1:主码流的编码能力+辅码流的编码能力 <= 设备的编码能力,
-	 * 辅码流的编码能力 <= 主码流的编码能力,
-	 * 辅码流的分辨率 <= 主码流的分辨率,
-	 * 主码流和辅码流的帧率 <= 前端视频采集帧率
-	 * 2:N5的计算方法
-	 * 辅码流的分辨率 <= 主码流的分辨率
-	 * 查询支持的分辨率和相应最大帧率
+	 * 0:VwBkAw5D1`BkD\A&+8(BkAw5D1`BkD\A& <= Ih185D1`BkD\A&,
+	 * 1:VwBkAw5D1`BkD\A&+8(BkAw5D1`BkD\A& <= Ih185D1`BkD\A&,
+	 * 8(BkAw5D1`BkD\A& <= VwBkAw5D1`BkD\A&,
+	 * 8(BkAw5D7V1fBJ <= VwBkAw5D7V1fBJ,
+	 * VwBkAw:M8(BkAw5DV!BJ <= G06KJSF52I</V!BJ
+	 * 2:N55D<FKc7=7(
+	 * 8(BkAw5D7V1fBJ <= VwBkAw5D7V1fBJ
+	 * 2iQ/V'3V5D7V1fBJ:MO`S&Wn4sV!BJ
 	 * </pre>
 	 * \endif
 	 */
@@ -133,7 +133,7 @@ public class CFG_DSPENCODECAP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * bResolution Length 
 	 * \else
-	 * bResolution的长度
+	 * bResolution5D3$6H
 	 * \endif
 	 */
 	public byte				byResolutionNum;			
@@ -142,7 +142,7 @@ public class CFG_DSPENCODECAP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * bResolution_1 Length 
 	 * \else
-	 * bResolution_1的长度
+	 * bResolution_15D3$6H
 	 * \endif
 	 */
 	public byte				byResolutionNum_1;		
@@ -151,7 +151,7 @@ public class CFG_DSPENCODECAP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Main Stream,Index As Resolution,If Support This Resolution,Then bResolution[n]is Supported Max Frame Rate.Ortherwise0.
 	 * \else
-	 * 主码流,按照分辨率进行索引,如果支持该分辨率,则bResolution[n]等于支持的最大帧率.否则为0.
+	 * VwBkAw,04UU7V1fBJ=xPPKwR},Hg9{V'3V8C7V1fBJ,TrbResolution[n]5HSZV'3V5DWn4sV!BJ.7qTrN*0.
 	 * \endif
 	 */
 	public byte				byResolution[] = new byte[256];								
@@ -160,7 +160,7 @@ public class CFG_DSPENCODECAP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Substream 1,Same as The Main Stream Specification 
 	 * \else
-	 * 辅助码流1,同主码流说明.
+	 * 8(VzBkAw1,M,VwBkAwK5Cw.
 	 * \endif
 	 */
 	public byte				byResolution_1[] = new byte[256];		
@@ -169,7 +169,7 @@ public class CFG_DSPENCODECAP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Supported Resolution Array,See CFG_SNAPCAPINFO_INFO Page CAPTURE_SIZE Specification 
 	 * \else
-	 * 支持的分辨率数组,参见enum CAPTURE_SIZE
+	 * V'3V5D7V1fBJJ}Wi,2N<{enum CAPTURE_SIZE
 	 * \endif
 	 */
 	public byte				byImageSize[] = new byte[256];		
@@ -178,7 +178,7 @@ public class CFG_DSPENCODECAP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Means When Main Streams are Each Resolition,Wupported SubStream Resolution,Array Subscript Means Main Stream Support Resolition
 	 * \else
-	 * 表示主码流为各分辨率时,支持的辅码流分辨率,数组下标表示主码流所支持的分辨率值.
+	 * 1mJ>VwBkAwN*8w7V1fBJJ1,V'3V5D8(BkAw7V1fBJ,J}WiOB1j1mJ>VwBkAwKyV'3V5D7V1fBJV5.
 	 * \endif
 	 */
 	public byte				byImageSize_Assi[][] = new byte[256][256]; 

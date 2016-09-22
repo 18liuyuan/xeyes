@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Video analysis object info expansion structure 
  * \else
- * 视频分析物体信息扩展结构体
+ * JSF57VNvNoLePEO"@)U9=a99Le
  * \endif
  */
 public class SDK_MSG_OBJECT_EX implements Serializable {
@@ -20,7 +20,7 @@ public class SDK_MSG_OBJECT_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * object ID, each ID means a exclusive object
 	 * \else
-	 * 物体ID,每个ID表示一个唯一的物体
+	 * NoLeID,C?8vID1mJ>R;8vN(R;5DNoLe
 	 * \endif
 	 */
 	public int                 nObjectID;
@@ -29,16 +29,16 @@ public class SDK_MSG_OBJECT_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * object  type
 	 * \else
-	 * 物体类型
+	 * NoLe@`PM
 	 * \endif
 	 */
 	public byte                szObjectType[] = new byte[128];
 
 	/**
 	 * \if ENGLISH_LANG
-	 * confidence coefficient (0~255)， value the bigger means  confidence coefficient the higher
+	 * confidence coefficient (0~255)#, value the bigger means  confidence coefficient the higher
 	 * \else
-	 * 置信度(0~255)，值越大表示置信度越高
+	 * VCPE6H(0~255)#,V5T=4s1mJ>VCPE6HT=8_
 	 * \endif
 	 */
 	public int                 nConfidence;
@@ -47,7 +47,7 @@ public class SDK_MSG_OBJECT_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * object  motion :1:Appear 2:Move 3:Stay 4:Remove 5:Disappear 6:Split 7:Merge 8:Rename
 	 * \else
-	 * 物体动作:1:Appear 2:Move 3:Stay 4:Remove 5:Disappear 6:Split 7:Merge 8:Rename
+	 * NoLe6/Ww:1:Appear 2:Move 3:Stay 4:Remove 5:Disappear 6:Split 7:Merge 8:Rename
 	 * \endif
 	 */
 	public int                 nAction;
@@ -56,7 +56,7 @@ public class SDK_MSG_OBJECT_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * box
 	 * \else
-	 * 包围盒
+	 * 0|N':P
 	 * \endif
 	 */
 	public SDK_RECT             BoundingBox = new SDK_RECT();
@@ -65,7 +65,7 @@ public class SDK_MSG_OBJECT_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * object model center
 	 * \else
-	 * 物体型心
+	 * NoLePMPD
 	 * \endif
 	 */
 	public SDK_POINT            Center = new SDK_POINT();
@@ -74,7 +74,7 @@ public class SDK_MSG_OBJECT_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * polygon vertex number
 	 * \else
-	 * 多边形顶点个数
+	 * 6`1_PN6%5c8vJ}
 	 * \endif
 	 */
 	public int                 nPolygonNum;
@@ -83,16 +83,16 @@ public class SDK_MSG_OBJECT_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * relatively accurate outline the polygon
 	 * \else
-	 * 较精确的轮廓多边形
+	 * =O>+H75DBV@*6`1_PN
 	 * \endif
 	 */
 	public SDK_POINT            Contour[] = new SDK_POINT[FinalVar.SDK_MAX_POLYGON_NUM];
 
 	/**
 	 * \if ENGLISH_LANG
-	 * means plate, vehicle body and etc. object major color；by byte means ，are red, green, blue and transparency , such as:RGB value is (0,255,0), transparency is 0, its value is 0x00ff0000.
+	 * means plate, vehicle body and etc. object major color#;by byte means #,are red, green, blue and transparency , such as:RGB value is (0,255,0), transparency is 0, its value is 0x00ff0000.
 	 * \else
-	 * 表示车牌、车身等物体主要颜色；按字节表示，分别为红、绿、蓝和透明度,例如:RGB值为(0,255,0),透明度为0时, 其值为0x00ff0000.
+	 * 1mJ>35EF!"35Im5HNoLeVwR*QUI+#;04WV=Z1mJ>#,7V1pN*:l!"BL!"@6:MM8Cw6H,@}Hg:RGBV5N*(0,255,0),M8Cw6HN*0J1, FdV5N*0x00ff0000.
 	 * \endif
 	 */
 	public int               rgbaMainColor;
@@ -101,16 +101,16 @@ public class SDK_MSG_OBJECT_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * same as DH_MSG_OBJECT corresponding field
 	 * \else
-	 * 同DH_MSG_OBJECT相应字段
+	 * M,DH_MSG_OBJECTO`S&WV6N
 	 * \endif
 	 */
 	public byte                szText[] = new byte[128];
 
 	/**
 	 * \if ENGLISH_LANG
-	 * object sub type ，according to different object  types ，may use the following sub type ：
+	 * object sub type #,according to different object  types #,may use the following sub type #:
 	 * \else
-	 * 物体子类别，根据不同的物体类型，可以取以下子类型：
+	 * NoLeWS@`1p#,8y>]2;M,5DNoLe@`PM#,?IRTH!RTOBWS@`PM#:
 	 * \endif
 	 */
 	public byte                szObjectSubType[] = new byte[64];
@@ -119,7 +119,7 @@ public class SDK_MSG_OBJECT_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * object corresponding to picture file info or not
 	 * \else
-	 * 是否有物体对应图片文件信息
+	 * JG7qSPNoLe6TS&M<F,ND<~PEO"
 	 * \endif
 	 */
 	public boolean                bPicEnble;
@@ -128,7 +128,7 @@ public class SDK_MSG_OBJECT_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * object corresponding to picture info
 	 * \else
-	 * 物体对应图片信息
+	 * NoLe6TS&M<F,PEO"
 	 * \endif
 	 */
 	public SDK_PIC_INFO         stPicInfo = new SDK_PIC_INFO();
@@ -137,7 +137,7 @@ public class SDK_MSG_OBJECT_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * snapshot recognition result or not
 	 * \else
-	 * 是否是抓拍张的识别结果
+	 * JG7qJGW%EDUE5DJ61p=a9{
 	 * \endif
 	 */
 	public boolean                bShotFrame;
@@ -146,7 +146,7 @@ public class SDK_MSG_OBJECT_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * object  color (rgbaMainColor) usable or not
 	 * \else
-	 * 物体颜色(rgbaMainColor)是否可用
+	 * NoLeQUI+(rgbaMainColor)JG7q?ISC
 	 * \endif
 	 */
 	public boolean                bColor;
@@ -155,43 +155,43 @@ public class SDK_MSG_OBJECT_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * lower color (rgbaLowerBodyColor) usable or not
 	 * \else
-	 * 下半身颜色(rgbaLowerBodyColor)是否可用
+	 * OB0kImQUI+(rgbaLowerBodyColor)JG7q?ISC
 	 * \endif
 	 */
 	public byte                bLowerBodyColor;
 
 	/**
 	 * \if ENGLISH_LANG
-	 * time means type ， see EM_TIME_TYPE note
+	 * time means type #, see EM_TIME_TYPE note
 	 * \else
-	 * 时间表示类型，详见EM_TIME_TYPE说明
+	 * J1<d1mJ>@`PM#,Oj<{EM_TIME_TYPEK5Cw
 	 * \endif
 	 */
 	public byte                byTimeType;
 
 	/**
 	 * \if ENGLISH_LANG
-	 * for video compression， current time stamp（object snapshot or recognition， attach this recognition frame in one vire frame or jpegpicture，this frame’s appearance time in original video）
+	 * for video compression#, current time stamp#(object snapshot or recognition#, attach this recognition frame in one vire frame or jpegpicture#,this frame!/s appearance time in original video#)
 	 * \else
-	 * 针对视频浓缩，当前时间戳（物体抓拍或识别时，会将此识别智能帧附在一个视频帧或jpeg图片中，此帧所在原始视频中的出现时间）
+	 * Uk6TJSF5E(Ku#,51G0J1<d4A#(NoLeW%ED;rJ61pJ1#,;a=+4KJ61pVGD\V!8=TZR;8vJSF5V!;rjpegM<F,VP#,4KV!KyTZT-J<JSF5VP5D3vOVJ1<d#)
 	 * \endif
 	 */
 	public NET_TIME_EX         stuCurrentTime = new NET_TIME_EX();
 
 	/**
 	 * \if ENGLISH_LANG
-	 * start time stamp（object start appearance）
+	 * start time stamp#(object start appearance#)
 	 * \else
-	 * 开始时间戳（物体开始出现时）
+	 * ?*J<J1<d4A#(NoLe?*J<3vOVJ1#)
 	 * \endif
 	 */
 	public NET_TIME_EX         stuStartTime = new NET_TIME_EX();
 
 	/**
 	 * \if ENGLISH_LANG
-	 * end time stamp（object last aapearance）
+	 * end time stamp#(object last aapearance#)
 	 * \else
-	 * 结束时间戳（物体最后出现时）
+	 * =aJxJ1<d4A#(NoLeWn:s3vOVJ1#)
 	 * \endif
 	 */
 	public NET_TIME_EX         stuEndTime = new NET_TIME_EX();
@@ -200,7 +200,7 @@ public class SDK_MSG_OBJECT_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * box(absolute coordinate)
 	 * \else
-	 * 包围盒(绝对坐标)
+	 * 0|N':P(>x6TWx1j)
 	 * \endif
 	 */
 	public SDK_RECT             stuOriginalBoundingBox = new SDK_RECT();
@@ -209,61 +209,61 @@ public class SDK_MSG_OBJECT_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * LGO coordinate box
 	 * \else
-	 * 车标坐标包围盒
+	 * 351jWx1j0|N':P
 	 * \endif
 	 */
 	public SDK_RECT             stuSignBoundingBox = new SDK_RECT();
 
 	/**
 	 * \if ENGLISH_LANG
-	 * current frame no.（snapshot this object frame）
+	 * current frame no.#(snapshot this object frame#)
 	 * \else
-	 * 当前帧序号（抓下这个物体时的帧）
+	 * 51G0V!Pr:E#(W%OBUb8vNoLeJ15DV!#)
 	 * \endif
 	 */
 	public int               dwCurrentSequence;
 
 	/**
 	 * \if ENGLISH_LANG
-	 * start frame no.（object start appearance frame no.）
+	 * start frame no.#(object start appearance frame no.#)
 	 * \else
-	 * 开始帧序号（物体开始出现时的帧序号）
+	 * ?*J<V!Pr:E#(NoLe?*J<3vOVJ15DV!Pr:E#)
 	 * \endif
 	 */
 	public int               dwBeginSequence;
 
 	/**
 	 * \if ENGLISH_LANG
-	 * end frame no.（object disappearance frame no.）
+	 * end frame no.#(object disappearance frame no.#)
 	 * \else
-	 * 结束帧序号（物体消逝时的帧序号）
+	 * =aJxV!Pr:E#(NoLeO{JEJ15DV!Pr:E#)
 	 * \endif
 	 */
 	public int               dwEndSequence;
 
 	/**
 	 * \if ENGLISH_LANG
-	 * start file shift, unit: byte（object start appearance，video in original video file moves toward file origin）
+	 * start file shift, unit: byte#(object start appearance#,video in original video file moves toward file origin#)
 	 * \else
-	 * 开始时文件偏移, 单位: 字节（物体开始出现时，视频帧在原始视频文件中相对于文件起始处的偏移）
+	 * ?*J<J1ND<~F+RF, 5%N;: WV=Z#(NoLe?*J<3vOVJ1#,JSF5V!TZT-J<JSF5ND<~VPO`6TSZND<~FpJ<4&5DF+RF#)
 	 * \endif
 	 */
 	public long               nBeginFileOffset;
 
 	/**
 	 * \if ENGLISH_LANG
-	 * End file shift, unit: byte（object disappearance，video in original video file moves toward file origin）
+	 * End file shift, unit: byte#(object disappearance#,video in original video file moves toward file origin#)
 	 * \else
-	 * 结束时文件偏移, 单位: 字节（物体消逝时，视频帧在原始视频文件中相对于文件起始处的偏移）
+	 * =aJxJ1ND<~F+RF, 5%N;: WV=Z#(NoLeO{JEJ1#,JSF5V!TZT-J<JSF5ND<~VPO`6TSZND<~FpJ<4&5DF+RF#)
 	 * \endif
 	 */
 	public long               nEndFileOffset;
 
 	/**
 	 * \if ENGLISH_LANG
-	 * object  color similarity，take  value range ：0-100，group subscript value represents certain color ， see EM_COLOR_TYPE
+	 * object  color similarity#,take  value range #:0-100#,group subscript value represents certain color #, see EM_COLOR_TYPE
 	 * \else
-	 * 物体颜色相似度，取值范围：0-100，数组下标值代表某种颜色，详见EM_COLOR_TYPE
+	 * NoLeQUI+O`KF6H#,H!V576N'#:0-100#,J}WiOB1jV54z1mD3VVQUI+#,Oj<{EM_COLOR_TYPE
 	 * \endif
 	 */
 	public byte                byColorSimilar[] = new byte[EM_COLOR_TYPE.NET_COLOR_TYPE_MAX];
@@ -272,7 +272,7 @@ public class SDK_MSG_OBJECT_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * upper object  color  similarity (object  type as human is valid )
 	 * \else
-	 * 上半身物体颜色相似度(物体类型为人时有效)
+	 * IO0kImNoLeQUI+O`KF6H(NoLe@`PMN*HKJ1SPP')
 	 * \endif
 	 */
 	public byte                byUpperBodyColorSimilar[] = new byte[EM_COLOR_TYPE.NET_COLOR_TYPE_MAX];
@@ -281,7 +281,7 @@ public class SDK_MSG_OBJECT_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * lower object  color  similarity (object  type as human is valid )
 	 * \else
-	 * 下半身物体颜色相似度(物体类型为人时有效)
+	 * OB0kImNoLeQUI+O`KF6H(NoLe@`PMN*HKJ1SPP')
 	 * \endif
 	 */
 	public byte                byLowerBodyColorSimilar[] = new byte[EM_COLOR_TYPE.NET_COLOR_TYPE_MAX];
@@ -290,25 +290,25 @@ public class SDK_MSG_OBJECT_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * related object ID
 	 * \else
-	 * 相关物体ID
+	 * O`9XNoLeID
 	 * \endif
 	 */
 	public int                 nRelativeID;
 
 	/**
 	 * \if ENGLISH_LANG
-	 * "ObjectType"is "Vehicle"or "Logo"， means LOGO lower brand，such as Audi A6L，since there are many brands，SDK shows this field in real-time,device filled as real.
+	 * "ObjectType"is "Vehicle"or "Logo"#, means LOGO lower brand#,such as Audi A6L#,since there are many brands#,SDK shows this field in real-time,device filled as real.
 	 * \else
-	 * "ObjectType"为"Vehicle"或者"Logo"时，表示车标下的某一车系，比如奥迪A6L，由于车系较多，SDK实现时透传此字段,设备如实填写。
+	 * "ObjectType"N*"Vehicle";rU_"Logo"J1#,1mJ>351jOB5DD3R;35O5#,1HHg0B5OA6L#,SISZ35O5=O6`#,SDKJ5OVJ1M84+4KWV6N,Ih18HgJ5LnP4!#
 	 * \endif
 	 */
 	public byte				szSubText[] = new byte[20];
 
 	/**
 	 * \if ENGLISH_LANG
-	 * Intrusion staff height，unit cm
+	 * Intrusion staff height#,unit cm
 	 * \else
-	 * 入侵人员身高，单位cm
+	 * HkGVHKT1Im8_#,5%N;cm
 	 * \endif
 	 */
 	public int					nPersonStature;
@@ -317,7 +317,7 @@ public class SDK_MSG_OBJECT_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Staff intrusion direction
 	 * \else
-	 * 人员入侵方向
+	 * HKT1HkGV7=Or
 	 * \endif
 	 */
 	public int	emPersonDirection;
@@ -326,7 +326,7 @@ public class SDK_MSG_OBJECT_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Use direction same as rgbaMainColor,object  type as human is valid
 	 * \else
-	 * 使用方法同rgbaMainColor,物体类型为人时有效
+	 * J9SC7=7(M,rgbaMainColor,NoLe@`PMN*HKJ1SPP'
 	 * \endif
 	 */
 	public int               rgbaLowerBodyColor;

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Storage position set structure.  Each channel set separately.Each channel can set several storage types including local,portableand remote storage.
  * \else
- * 存储位置设置结构体，每通道独立设置,每通道可以选择各种存储类型, 目前包括本地, 可移动, 远程存储.
+ * 4f4"N;VCIhVC=a99Le#,C?M(5@6@A"IhVC,C?M(5@?IRTQ!Tq8wVV4f4"@`PM, D?G00|@(1>5X, ?IRF6/, T63L4f4".
  * \endif
  */
 public class SDK_STORAGE_STATION_CFG implements Serializable {
@@ -21,9 +21,9 @@ public class SDK_STORAGE_STATION_CFG implements Serializable {
 	 * The first bit:system pre-record. The second bit:scheduled record. The third bit:motion detection record.
 	 * The fourth bit:alarm record. The fifth bit:card record. The sixth bit:manual record.
 	 * \else
-	 * 本地存储掩码；按位表示：
-	 * 第一位：系统预录，第二位：定时录像，第三位：动检录像，
-	 * 第四位：报警录像，第五位：卡号录像，第六位：手动录像
+	 * 1>5X4f4"QZBk#;04N;1mJ>#:
+	 * 5ZR;N;#:O5M3T$B<#,5Z6~N;#:6(J1B<Oq#,5ZH}N;#:6/<lB<Oq#,
+	 * 5ZKDN;#:1(>/B<Oq#,5ZNeN;#:?(:EB<Oq#,5ZAyN;#:JV6/B<Oq
 	 * \endif
 	 */
 	public int               dwLocalMask;
@@ -32,7 +32,7 @@ public class SDK_STORAGE_STATION_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Moving storage mask. Storage mask such as local storage mask.
 	 * \else
-	 * 可移动存储掩码 存储掩码如本地存储掩码
+	 * ?IRF6/4f4"QZBk 4f4"QZBkHg1>5X4f4"QZBk
 	 * \endif
 	 */
 	public int               dwMobileMask;
@@ -41,7 +41,7 @@ public class SDK_STORAGE_STATION_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Remote storage type 0: Ftp  1: Smb
 	 * \else
-	 * 远程存储类型 0: Ftp  1: Smb
+	 * T63L4f4"@`PM 0: Ftp  1: Smb
 	 * \endif
 	 */
 	public int                 RemoteType;
@@ -50,7 +50,7 @@ public class SDK_STORAGE_STATION_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Remote storage mask.  Storage mask such as local storage mask.
 	 * \else
-	 * 远程存储掩码 存储掩码如本地存储掩码
+	 * T63L4f4"QZBk 4f4"QZBkHg1>5X4f4"QZBk
 	 * \endif
 	 */
 	public int               dwRemoteMask;
@@ -59,7 +59,7 @@ public class SDK_STORAGE_STATION_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Local storage mask when remote is abnormal
 	 * \else
-	 * 远程异常时本地存储掩码
+	 * T63LRl3#J11>5X4f4"QZBk
 	 * \endif
 	 */
 	public int               dwRemoteSecondSelLocal;
@@ -68,7 +68,7 @@ public class SDK_STORAGE_STATION_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Moving storage mask when remote is abnormal.
 	 * \else
-	 * 远程异常时可移动存储掩码
+	 * T63LRl3#J1?IRF6/4f4"QZBk
 	 * \endif
 	 */
 	public int               dwRemoteSecondSelMobile;
@@ -77,7 +77,7 @@ public class SDK_STORAGE_STATION_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Remote path. Its length is 240
 	 * \else
-	 * 远程目录, 其中长度为240
+	 * T63LD?B<, FdVP3$6HN*240
 	 * \endif
 	 */
 	public byte                SubRemotePath[] = new byte[FinalVar.MAX_PATH_STOR];
@@ -86,7 +86,7 @@ public class SDK_STORAGE_STATION_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Function shield bit. Use bit to represent bit0 = 1:Shield sanpshot event activate storage position function.
 	 * \else
-	 * 功能屏蔽位，按位表示，bit0 = 1:屏蔽抓图事件触发存储位置功能
+	 * 9&D\FA1NN;#,04N;1mJ>#,bit0 = 1:FA1NW%M<JB<~4%7"4f4"N;VC9&D\
 	 * \endif
 	 */
 	public int               dwFunctionMask;
@@ -95,7 +95,7 @@ public class SDK_STORAGE_STATION_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * If synchronous mask; after remote storage network recovery, the local storage data will automatically synchronized to the remote storage.
 	 * \else
-	 * 是否同步掩码;远程存储网络故障恢复后，自动将本地存储的数据同步到远程存储。
+	 * JG7qM,2=QZBk;T63L4f4"MxBg9JUO;V84:s#,WT6/=+1>5X4f4"5DJ}>]M,2=5=T63L4f4"!#
 	 * \endif
 	 */
 	public int               dwAutoSyncMask;
@@ -104,7 +104,7 @@ public class SDK_STORAGE_STATION_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * the time for synchronous from the network synchronous time. In hour. 0:all data  1:data in one hour n:data in n hours
 	 * \else
-	 * 从网络恢复的时刻开始，需要往前同步的数据时间范围，小时为单位。0:同步所有数据  1:1小时内的数据 n:n小时内的数据
+	 * 4SMxBg;V845DJ1?L?*J<#,PhR*MyG0M,2=5DJ}>]J1<d76N'#,P!J1N*5%N;!#0:M,2=KySPJ}>]  1:1P!J1DZ5DJ}>] n:nP!J1DZ5DJ}>]
 	 * \endif
 	 */
 	public byte                bAutoSyncRange;

@@ -12,7 +12,7 @@ public class CFG_NET_TIME_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Year 
 	 * \else
-	 * 年
+	 * Dj
 	 * \endif
 	 */
 	public int				dwYear;
@@ -21,7 +21,7 @@ public class CFG_NET_TIME_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Month 
 	 * \else
-	 * 月
+	 * TB
 	 * \endif
 	 */
 	public int				dwMonth;
@@ -30,7 +30,7 @@ public class CFG_NET_TIME_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Day 
 	 * \else
-	 * 日
+	 * HU
 	 * \endif
 	 */
 	public int				dwDay;
@@ -39,7 +39,7 @@ public class CFG_NET_TIME_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Hour
 	 * \else
-	 * 时
+	 * J1
 	 * \endif
 	 */
 	public int				dwHour;
@@ -48,7 +48,7 @@ public class CFG_NET_TIME_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Minute 
 	 * \else
-	 * 分
+	 * 7V
 	 * \endif
 	 */
 	public int				dwMinute;
@@ -57,7 +57,7 @@ public class CFG_NET_TIME_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Second 
 	 * \else
-	 * 秒
+	 * Ck
 	 * \endif
 	 */
 	public int				dwSecond;
@@ -66,7 +66,7 @@ public class CFG_NET_TIME_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Millisecond
 	 * \else
-	 * 毫秒
+	 * :ACk
 	 * \endif
 	 */
 	public int             dwMillisecond;

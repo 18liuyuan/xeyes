@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Manual snap parameter
  * \else
- * 手动抓拍参数
+ * JV6/W%ED2NJ}
  * \endif
  */
 public class MANUAL_SNAP_PARAMETER implements Serializable {
@@ -19,7 +19,7 @@ public class MANUAL_SNAP_PARAMETER implements Serializable {
 	 * \if ENGLISH_LANG
 	 * snap channel,start with 0
 	 * \else
-	 * 抓图通道,从0开始
+	 * W%M<M(5@,4S0?*J<
 	 * \endif
 	 */
 	public int                 nChannel; 
@@ -28,7 +28,7 @@ public class MANUAL_SNAP_PARAMETER implements Serializable {
 	 * \if ENGLISH_LANG
 	 * snap sequence string
 	 * \else
-	 * 抓图序列号字符串
+	 * W%M<PrAP:EWV7{4.
 	 * \endif
 	 */
 	public byte                bySequence[] = new byte[64]; 

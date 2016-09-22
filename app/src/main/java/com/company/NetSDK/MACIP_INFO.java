@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * MAC, IP filter configuration info
  * \else
- * MAC£¬IP¹ýÂËÐÅÏ¢
+ * MAC#,IP9}BKPEO"
  * \endif
  */
 public class MACIP_INFO implements Serializable {

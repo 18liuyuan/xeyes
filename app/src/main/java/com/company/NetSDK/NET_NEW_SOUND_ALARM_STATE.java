@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * New audio detect alarm
  * \else
- * 新音频检测报警信息
+ * PBRtF5<l2b1(>/PEO"
  * \endif
  */
 public class NET_NEW_SOUND_ALARM_STATE implements Serializable {
@@ -19,15 +19,15 @@ public class NET_NEW_SOUND_ALARM_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm channel No. 
 	 * \else
-	 * 报警通道号
+	 * 1(>/M(5@:E
 	 * \endif
 	 */
 	public int                 channel;                        
 	/**
 	 * \if ENGLISH_LANG
-	 * Alarm type；0：Audio value is too long，1：Audio value is too high 
+	 * Alarm type#;0#:Audio value is too long#,1#:Audio value is too high 
 	 * \else
-	 * 报警类型；0：音频值过低，1：音频值过高
+	 * 1(>/@`PM#;0#:RtF5V59}5M#,1#:RtF5V59}8_
 	 * \endif
 	 */
 	public int                 alarmType;                      
@@ -35,7 +35,7 @@ public class NET_NEW_SOUND_ALARM_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Volume value 
 	 * \else
-	 * 音量值
+	 * RtA?V5
 	 * \endif
 	 */
 	public int        			volume;                        
@@ -43,7 +43,7 @@ public class NET_NEW_SOUND_ALARM_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Audio alarm status, 0:Audio alarm occurred , 1: Audio alarm disappear 
 	 * \else
-	 * 音频报警状态, 0: 音频报警出现, 1: 音频报警消失
+	 * RtF51(>/W4L,, 0: RtF51(>/3vOV, 1: RtF51(>/O{J'
 	 * \endif
 	 */
 	public byte                byState;                        

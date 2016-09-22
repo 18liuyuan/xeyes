@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * CB_fBurnCheckCallBack parameter
  * \else
- * CB_fBurnCheckCallBack 参数
+ * CB_fBurnCheckCallBack 2NJ}
  * \endif
  */
 public class NET_CB_BURN_CHECK_STATE implements Serializable {
@@ -21,9 +21,9 @@ public class NET_CB_BURN_CHECK_STATE implements Serializable {
 	 * "Checking": Calibrating
 	 * "CheckResult": Result
 	 * \else
-	 * 消息类型
-	 * "Checking": 校验中
-	 * "CheckResult": 校验结果	
+	 * O{O"@`PM
+	 * "Checking": P#QiVP
+	 * "CheckResult": P#Qi=a9{	
 	 * \endif
 	 */
 	public char             	szType[] = new char[32];
@@ -32,7 +32,7 @@ public class NET_CB_BURN_CHECK_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Result, for "CheckResult", TRUE-successful, FALSE-failed
 	 * \else
-	 * 校验结果, 用于"CheckResult", TRUE-成功, FALSE-失败
+	 * P#Qi=a9{, SCSZ"CheckResult", TRUE-3I9&, FALSE-J'0\
 	 * \endif
 	 */
 	public boolean				bCheckResult;
@@ -41,7 +41,7 @@ public class NET_CB_BURN_CHECK_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Progress, for "Checking", percentage, 0~100
 	 * \else
-	 * 校验进度, 用于"Checking", 百分比, 0~100
+	 * P#Qi=x6H, SCSZ"Checking", 0Y7V1H, 0~100
 	 * \endif
 	 */
 	public byte				byProgress;

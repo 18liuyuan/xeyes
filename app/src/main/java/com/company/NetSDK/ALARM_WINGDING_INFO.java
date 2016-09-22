@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * CoilFault alarm event
  * \else
- * 线圈 / 车检器报警
+ * O_H& / 35<lFw1(>/
  * \endif
  */
 public class ALARM_WINGDING_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_WINGDING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * road number
 	 * \else
-	 * 车道号
+	 * 355@:E
 	 * \endif
 	 */
 	public int                 nDriveWayID;
@@ -28,7 +28,7 @@ public class ALARM_WINGDING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * coil ID
 	 * \else
-	 * 线圈ID
+	 * O_H&ID
 	 * \endif
 	 */
 	public int                 nWindingID;
@@ -37,7 +37,7 @@ public class ALARM_WINGDING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * event happen time 
 	 * \else
-	 * 报警发生时间
+	 * 1(>/7"IzJ1<d
 	 * \endif
 	 */
 	public NET_TIME            stuTime = new NET_TIME();
@@ -46,7 +46,7 @@ public class ALARM_WINGDING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device state,0 indicate fault recover,1 indicate fault happen
 	 * \else
-	 * 设备状态，0表示故障恢复，1表示发生故障
+	 * Ih18W4L,#,01mJ>9JUO;V84#,11mJ>7"Iz9JUO
 	 * \endif
 	 */
 	public int                 nState;
@@ -54,7 +54,7 @@ public class ALARM_WINGDING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel of alarm
 	 * \else
-	 * 报警的通道号
+	 * 1(>/5DM(5@:E
 	 * \endif
 	 */
 	public int                 dwChannel;

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Capture network configuration
  * \else
- * 网络抓包配置
+ * MxBgW%0|EdVC
  * \endif
  */
 public class SDK_SNIFFER_FRAME_EX implements Serializable {
@@ -19,7 +19,7 @@ public class SDK_SNIFFER_FRAME_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Each FRAME ID Options
 	 * \else
-	 * 每个FRAME ID 选项
+	 * C?8vFRAME ID Q!On
 	 * \endif
 	 */
 	public SDK_SNIFFER_FRAMEID    snifferFrameId = new SDK_SNIFFER_FRAMEID(); 
@@ -28,7 +28,7 @@ public class SDK_SNIFFER_FRAME_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Each FRAME Corresponding to the contents of capture
 	 * \else
-	 * 每个FRAME对应的8个抓包内容
+	 * C?8vFRAME6TS&5D88vW%0|DZH]
 	 * \endif
 	 */
 	public SDK_SNIFFER_CONTENT    snifferContent[] = new SDK_SNIFFER_CONTENT[FinalVar.SDK_SNIFFER_CONTENT_NUM_EX]; 

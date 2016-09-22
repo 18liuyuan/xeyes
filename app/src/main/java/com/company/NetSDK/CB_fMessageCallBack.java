@@ -4,7 +4,7 @@ package com.company.NetSDK;
  * \if ENGLISH_LANG
  * Alarm message callback function original shape
  * \else
- * 消息回调函数原型
+ * O{O";X5w:/J}T-PM
  * \endif
  */
 public interface CB_fMessageCallBack {
@@ -20,13 +20,13 @@ public interface CB_fMessageCallBack {
 	 * <tr><td>lCommand</td><td>pBuf</td></tr>
 	 * <tr><td>SDK_COMM_ALARM</td><td>data is 1 NET_CLIENT_STATE structure .</td></tr>
 	 * <tr><td>SDK_SHELTER_ALARM</td><td>data is 16 byte, each byte means 1 video channel mask alarm status,1 is has alarm,0 is no alarm </td></tr>
-	 * <tr><td>SDK_DISK_FULL_ALARM</td><td>data is 1个DWORD value,1 means hard disk full ,0 means hard disk unfull </td></tr>
+	 * <tr><td>SDK_DISK_FULL_ALARM</td><td>data is 18vDWORD value,1 means hard disk full ,0 means hard disk unfull </td></tr>
 	 * <tr><td>SDK_DISK_ERROR_ALARM	</td><td>data is one DWORD value,by means up to 32 hard disk malfunction alarm,each is 1 means has alarm, is 0 means no alarm </td></tr>
 	 * <tr><td>SDK_SOUND_DETECT_ALARM</td><td>data is 16 byte, each byte means 1 video channel audio alarm status,1 is has alarm,0 is no alarm </td></tr>
 	 * <tr><td>SDK_ALARM_DECODER_ALARM</td><td>data is 16 byte, each byte means 1 alarm decoder channel alarm status,1 is has alarm ,0 is no alarm </td></tr>
 	 * </table>
 	 * \n
-	 * 如果调用的侦听接口为CLENT_StartListenEx,则lCommand的可能值是:
+	 * Hg9{5wSC5DUlL}=S?ZN*CLENT_StartListenEx,TrlCommand5D?ID\V5JG:
 	 * <table>
 	 * <tr><td>lCommand</td><td>pBuf</td></tr>
 	 * <tr><td>SDK_ALARM_ALARM_EXdata</td><td>byte and device alarm channel number are same , each byte means 1 alarm channel alarm status ,1 is has alarm ,0 is no alarm . </td></tr>
@@ -62,7 +62,7 @@ public interface CB_fMessageCallBack {
 	 * <tr><td>SDK_ALARM_3GFLOW_EXCEED</td><td>3G flow exceend threshold value alarm DHDEV_3GFLOW_EXCEED_STATE_INFO </td></tr>
 	 * <tr><td>SDK_ALARM_SPEED_LIMIT</td><td>limit alarm ALARM_SPEED_LIMIT </td></tr>
 	 * <tr><td>SDK_ALARM_VEHICLE_INFO_UPLOAD</td><td>mobile user customized info uploadALARM_VEHICLE_INFO_UPLOAD </td></tr>
-	 * <tr><td>SDK_STATIC_ALARM_EX</td><td>data byte and device video channel number are same , each byte means 1 video channel 静态 detection alarm status ,1 is has alarm ,0 is no alarm . </td></tr>
+	 * <tr><td>SDK_STATIC_ALARM_EX</td><td>data byte and device video channel number are same , each byte means 1 video channel >2L, detection alarm status ,1 is has alarm ,0 is no alarm . </td></tr>
 	 * <tr><td>SDK_PTZ_LOCATION_EXPTZ</td><td>positioning info SDK_PTZ_LOCATION_INFO </td></tr>
 	 * <tr><td>SDK_ALARM_CARD_RECORD_UPLOAD</td><td>card NO. record uploadALARM_CARD_RECORD_INFO_UPLOAD </td></tr>
 	 * <tr><td>SDK_ALARM_ATM_INFO_UPLOAD</td><td>ATM trade info uploadALARM_ATM_INFO_UPLOAD </td></tr>
@@ -121,7 +121,7 @@ public interface CB_fMessageCallBack {
 	 * <table>
 	 * <tr><td>command</td><td>xplanation</td></tr>
 	 * <tr><td>SDK_CONFIG_RESULT_EVENT_EX</td><td>data is change config return code,return structure as DEV_SET_RESULT. </td></tr>
-	 * <tr><td>SDK_REBOOT_EVENT_EX</td><td>device reboot event； if reboot command not sent,current change will bot be valid immediately </td></tr>
+	 * <tr><td>SDK_REBOOT_EVENT_EX</td><td>device reboot event#; if reboot command not sent,current change will bot be valid immediately </td></tr>
 	 * <tr><td>SDK_AUTO_TALK_START_EX</td><td>device actively invite to bidirectional talk. </td></tr>
 	 * <tr><td>SDK_AUTO_TALK_STOP_EX</td><td>device actively stop bidirectional talk. </td></tr>
 	 * <tr><td>SDK_CONFIG_CHANGE_EX	</td><td>device config changed. </td></tr>
@@ -130,130 +130,130 @@ public interface CB_fMessageCallBack {
 	 * <tr><td>SDK_REALPLAY_FAILD_EVENT</td><td>monitor invalid event,retunr structure DEV_PLAY_RESULT </td></tr>
 	 * <tr><td>SDK_PLAYBACK_FAILD_EVENT</td><td>playback failed event,return structure DEV_PLAY_RESULT </td></tr>
 	 * </table>
-	 * @param pchDVRIP 设备IP
-	 * @param nDVRPort 设备端口
+	 * @param pchDVRIP Ih18IP
+	 * @param nDVRPort Ih186K?Z
 	 * \else
-	 * 消息回调函数
-	 * @param lCommand 回调类型,具体见下pBuf的说明
-	 * @param lLoginID  {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx}或者{@link com.company.NetSDK.INetSDK#Login() Login}的返回值
-	 * @param obj 接收报警数据的缓存,根据调用的侦听接口和lCommand值不同,填充的数据不同 
-	 * 如果调用的侦听接口为 StartListen,则lCommand的可能值是:
+	 * O{O";X5w:/J}
+	 * @param lCommand ;X5w@`PM,>_Le<{OBpBuf5DK5Cw
+	 * @param lLoginID  {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx};rU_{@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5
+	 * @param obj =SJU1(>/J}>]5D;:4f,8y>]5wSC5DUlL}=S?Z:MlCommandV52;M,,Ln3d5DJ}>]2;M, 
+	 * Hg9{5wSC5DUlL}=S?ZN* StartListen,TrlCommand5D?ID\V5JG:
 	 * <table>
 	 * <tr><td>lCommand</td><td>pBuf</td></tr>
-	 * <tr><td>SDK_COMM_ALARM</td><td>数据为一个NET_CLIENT_STATE结构体.</td></tr>
-	 * <tr><td>SDK_SHELTER_ALARM</td><td>数据为16个字节,每个字节表示一个视频通道的遮挡报警状态,1为有报警,0为无报警.</td></tr>
-	 * <tr><td>SDK_DISK_FULL_ALARM</td><td>数据为1个DWORD值,1表示硬盘满,0表示硬盘未满.</td></tr>
-	 * <tr><td>SDK_DISK_ERROR_ALARM</td><td>数据为1个DWORD值,按位表示最多32个硬盘的故障报警,每位为1表示有报警,为0表示无报警.</td></tr>
-	 * <tr><td>SDK_SOUND_DETECT_ALARM</td><td>数据为16个字节,每个字节表示一个视频通道的音频报警状态,1为有报警,0为无报警.</td></tr>
-	 * <tr><td>SDK_ALARM_DECODER_ALARM</td><td>数据为16个字节,每个字节表示一个报警解码器通道的报警状态,1为有报警,0为无报警.</td></tr>
+	 * <tr><td>SDK_COMM_ALARM</td><td>J}>]N*R;8vNET_CLIENT_STATE=a99Le.</td></tr>
+	 * <tr><td>SDK_SHELTER_ALARM</td><td>J}>]N*168vWV=Z,C?8vWV=Z1mJ>R;8vJSF5M(5@5DUZ521(>/W4L,,1N*SP1(>/,0N*N^1(>/.</td></tr>
+	 * <tr><td>SDK_DISK_FULL_ALARM</td><td>J}>]N*18vDWORDV5,11mJ>S2ELBz,01mJ>S2ELN4Bz.</td></tr>
+	 * <tr><td>SDK_DISK_ERROR_ALARM</td><td>J}>]N*18vDWORDV5,04N;1mJ>Wn6`328vS2EL5D9JUO1(>/,C?N;N*11mJ>SP1(>/,N*01mJ>N^1(>/.</td></tr>
+	 * <tr><td>SDK_SOUND_DETECT_ALARM</td><td>J}>]N*168vWV=Z,C?8vWV=Z1mJ>R;8vJSF5M(5@5DRtF51(>/W4L,,1N*SP1(>/,0N*N^1(>/.</td></tr>
+	 * <tr><td>SDK_ALARM_DECODER_ALARM</td><td>J}>]N*168vWV=Z,C?8vWV=Z1mJ>R;8v1(>/=bBkFwM(5@5D1(>/W4L,,1N*SP1(>/,0N*N^1(>/.</td></tr>
 	 * </table>
 	 * \n
-	 * 如果调用的侦听接口为CLENT_StartListenEx,则lCommand的可能值是:
+	 * Hg9{5wSC5DUlL}=S?ZN*CLENT_StartListenEx,TrlCommand5D?ID\V5JG:
 	 * <table>
 	 * <tr><td>lCommand</td><td>pBuf</td></tr>
-	 * <tr><td>SDK_ALARM_ALARM_EX</td><td>数据字节数与设备报警通道个数相同,每个字节表示一个报警通道的报警状态,1为有报警,0为无报警. </td></tr>
-	 * <tr><td>SDK_MOTION_ALARM_EX</td><td>数据字节数与设备视频通道个数相同,每个字节表示一个视频通道的动态检测报警状态,1为有报警,0为无报警. </td></tr>
-	 * <tr><td>SDK_VIDEOLOST_ALARM_EX</td><td>数据字节数与设备视频通道个数相同,每个字节表示一个视频通道的视频丢失报警状态,1为有报警,0为无报警. </td></tr>
-	 * <tr><td>SDK_SHELTER_ALARM_EX	</td><td>数据字节数与设备视频通道个数相同,每个字节表示一个视频通道的遮挡(黑屏)报警状态,1为有报警,0为无报警. </td></tr>
-	 * <tr><td>SDK_SOUND_DETECT_ALARM_EX</td><td>数据为16个字节,每个字节表示一个视频通道的音频检测报警状态,1为有报警,0为无报警. </td></tr>
-	 * <tr><td>SDK_DISKFULL_ALARM_EX</td><td>数据为1个字节,1为有硬盘满报警,0为无报警. </td></tr>
-	 * <tr><td>SDK_DISKERROR_ALARM_EX</td><td>数据为32个字节,每个字节表示一个硬盘的故障报警状态,1为有报警,0为无报警.</td></tr> 
-	 * <tr><td>SDK_ENCODER_ALARM_EX	</td><td>数据为16个字节,每个字节表示一个通道编码器状态,1为有报警,0为无报警. </td></tr>
-	 * <tr><td>SDK_REBOOT_EVENT_EX</td><td>设备重启事件,用户进行一些配置时,有些需要设备重启才能生效,当收到此事件,可以调用重启接口重启设备. </td></tr>
-	 * <tr><td>SDK_URGENCY_ALARM_EX	</td><td>紧急报警,数据为16个字节,每个字节表示一个通道编码器状态,1为有报警,0为无报警. </td></tr>
-	 * <tr><td>SDK_WIRELESS_ALARM_EX</td><td>无线报警,数据为16个字节,每个字节表示一个通道编码器状态,1为有报警,0为无报警. </td></tr>
-	 * <tr><td>SDK_NEW_SOUND_DETECT_ALARM_EX</td><td>新音频检测报警,报警信息的结构体见  SDK_NEW_SOUND_ALARM_STATE . </td></tr>
-	 * <tr><td>SDK_ALARM_DECODER_ALARM_EX</td><td>报警解码器报警,报警结构体见  ALARM_DECODER_ALARM . </td></tr>
-	 * <tr><td>SDK_DECODER_DECODE_ABILITY</td><td>解码器:解码器能力不足报警, 一个字节,0:能正常解码 1:表示超出解码能力. </td></tr>
-	 * <tr><td>SDK_FDDI_DECODER_ABILITY</td><td>光纤编码器状态报警,结构体见ALARM_FDDI_ALARM. </td></tr>
-	 * <tr><td>SDK_PANORAMA_SWITCH_ALARM_EX</td><td>切换场景报警,数据为16个字节,每个字节表示一个通道编码器状态,1为有报警,0为无报警. </td></tr>
-	 * <tr><td>SDK_LOSTFOCUS_ALARM_EX</td><td>失去焦点报警,数据为16个字节,每个字节表示一个通道编码器状态,1为有报警,0为无报警. </td></tr>
-	 * <tr><td>SDK_OEMSTATE_EX</td><td>oem报停状态,类型为BYTE. </td></tr>
-	 * <tr><td>SDK_DSP_ALARM_EXDSP</td><td>报警,类型为DSP_ALARM. </td></tr>
-	 * <tr><td>SDK_ATMPOS_BROKEN_EX	</td><td>atm和pos机断开报警,类型为BYTE, 0:连接断开 1:连接正常. </td></tr>
-	 * <tr><td>SDK_RECORD_CHANGED_EX</td><td>录像状态变化报警,数据为ALARM_RECORDING_CHANGED.的结构体数组 </td></tr>
-	 * <tr><td>SDK_CONFIG_CHANGED_EX</td><td>配置发生变化报警,pBuf为空. </td></tr>
-	 * <tr><td>SDK_DEVICE_REBOOT_EX</td><td>设备重启报警,pBuf为空. </td></tr>
-	 * <tr><td>SDK_PTZ_LOCATION_EX</td><td>云台定位信息 ALARM_PTZ_LOCATION_INFO. </td></tr>
-	 * <tr><td>SDK_WINGDING_ALARM_EX</td><td>线圈/车检器故障报警 ALARM_WINGDING_INFO. </td></tr>
-	 * <tr><td>SDK_TRAF_CONGESTION_ALARM_E</td><td>X交通阻塞报警(车辆出现异常停止或者排队) ALARM_TRAF_CONGESTION_INFO </td></tr>. 
-	 * <tr><td>SDK_TRAF_EXCEPTION_ALARM_EX</td><td>交通异常报警(交通流量趋于0或异常空闲) ALARM_TRAF_EXCEPTION_INFO </td></tr>. 
-	 * <tr><td>SDK_EQUIPMENT_FILL_ALARM_EX</td><td>补光设备故障报警ALARM_EQUIPMENT_FILL_INFO. </td></tr>
-	 * <tr><td>SDK_ALARM_ARM_DISARM_STATE</td><td>报警布撤防状态ALARM_EQUIPMENT_FILL_INFO. </td></tr>
-	 * <tr><td>SDK_ALARM_ACC_POWEROFF</td><td>ACC断电报警,类型为DWORD 0:ACC通电 1:ACC断电 </td></tr>
-	 * <tr><td>SDK_ALARM_3GFLOW_EXCEED</td><td>3G流量超出阈值报警  DHDEV_3GFLOW_EXCEED_STATE_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_SPEED_LIMIT</td><td>限速报警ALARM_SPEED_LIMIT </td></tr>
-	 * <tr><td>SDK_ALARM_VEHICLE_INFO_UPLOAD</td><td>车载自定义信息上传ALARM_VEHICLE_INFO_UPLOAD </td></tr>
-	 * <tr><td>SDK_STATIC_ALARM_EX</td><td>数据字节数与设备视频通道个数相同,每个字节表示一个视频通道的静态检测报警状态,1为有报警,0为无报警. </td></tr>
-	 * <tr><td>SDK_PTZ_LOCATION_EX</td><td>云台定位信息 SDK_PTZ_LOCATION_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_CARD_RECORD_UPLOAD</td><td>卡号录像信息上传 ALARM_CARD_RECORD_INFO_UPLOAD </td></tr>
-	 * <tr><td>SDK_ALARM_ATM_INFO_UPLOADATM</td><td>交易信息上传 ALARM_ATM_INFO_UPLOAD </td></tr>
-	 * <tr><td>SDK_ALARM_ENCLOSURE</td><td>电子围栏报警 ALARM_ENCLOSURE_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_SIP_STATE</td><td>SIP状态报警  ALARM_SIP_STATE </td></tr>
-	 * <tr><td>SDK_ALARM_RAID_STATE</td><td>RAID异常报警 ALARM_RAID_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_CROSSING_SPEED_LIMIT</td><td>路口限速报警 ALARM_SPEED_LIMIT </td></tr>
-	 * <tr><td>SDK_ALARM_OVER_LOADING</td><td>超载报警 ALARM_OVER_LOADING </td></tr>
-	 * <tr><td>SDK_ALARM_HARD_BRAKING</td><td>急刹车报警 ALARM_HARD_BRAKING </td></tr>
-	 * <tr><td>SDK_ALARM_SMOKE_SENSOR</td><td>烟感报警 ALARM_SMOKE_SENSOR </td></tr>
-	 * <tr><td>SDK_ALARM_TRAFFIC_LIGHT_FAULT</td><td>交通灯故障报警 ALARM_TRAFFIC_LIGHT_FAULT </td></tr>
-	 * <tr><td>SDK_ALARM_TRAFFIC_FLUX_STAT</td><td>交通流量统计报警 ALARM_TRAFFIC_FLUX_LANE_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_CAMERA_MOVE</td><td>摄像机移位报警事件 ALARM_CAMERA_MOVE_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_DETAILEDMOTION</td><td>详细动检报警上报信息 ALARM_DETAILEDMOTION_CHNL_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_STORAGE_FAILURE</td><td>存储异常报警,数据为 ALARM_STORAGE_FAILURE 的结构体数组 </td></tr>
-	 * <tr><td>SDK_ALARM_FRONTDISCONNECT</td><td>前端IPC断网报警 ALARM_FRONTDISCONNET_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_ALARM_EX_REMOTE</td><td>远程外部报警 ALARM_REMOTE_ALARM_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_BATTERYLOWPOWER</td><td>电池电量低报警 ALARM_BATTERYLOWPOWER_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_TEMPERATURE</td><td>温度过高报警 ALARM_TEMPERATURE_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_TIREDDRIVE</td><td>疲劳驾驶报警 ALARM_TIREDDRIVE_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_LOST_RECORD</td><td>丢录像事件报警 ALARM_LOST_RECORD </td></tr>
-	 * <tr><td>SDK_ALARM_HIGH_CPU</td><td>CPU占用率过高事件报警 ALARM_HIGH_CPU </td></tr>
-	 * <tr><td>SDK_ALARM_LOST_NETPACKET</td><td>网络发送数据丢包事件报警 ALARM_LOST_NETPACKET </td></tr>
-	 * <tr><td>SDK_ALARM_HIGH_MEMORY</td><td>内存占用率过高事件报警 ALARM_HIGH_MEMORY </td></tr>
-	 * <tr><td>SDK_LONG_TIME_NO_OPERATIONWEB</td><td>用户长时间无操作事件(无扩展信息) </td></tr>
-	 * <tr><td>SDK_BLACKLIST_SNAP</td><td>黑名单车辆抓拍事件 SDK_BLACKLIST_SNAP_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_DISK</td><td>硬盘报警 ALARM_DISK_INFO数组 </td></tr>
-	 * <tr><td>SDK_ALARM_FILE_SYSTEM</td><td>文件系统报警 ALARM_FILE_SYSTEM_INFO数组 </td></tr>
-	 * <tr><td>SDK_ALARM_IVS</td><td>智能报警事件 ALARM_IVS_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_GOODS_WEIGHT_UPLOAD</td><td>货重信息上报 ALARM_GOODS_WEIGHT_UPLOAD_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_GOODS_WEIGHT</td><td>货重信息报警 ALARM_GOODS_WEIGHT_INFO </td></tr>
-	 * <tr><td>SDK_GPS_STATUSGPS</td><td>定位信息 NET_GPS_STATUS_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_DISKBURNED_FULL</td><td>硬盘刻录满报警 ALARM_DISKBURNED_FULL_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_STORAGE_LOW_SPACE</td><td>存储容量不足事件 ALARM_STORAGE_LOW_SPACE_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_DISK_FLUX</td><td>硬盘数据异常事件 ALARM_DISK_FLUX </td></tr>
-	 * <tr><td>SDK_ALARM_NET_FLUX</td><td>网络数据异常事件 LARM_NET_FLUX </td></tr>
-	 * <tr><td>SDK_ALARM_FAN_SPEED</td><td>扇转速异常事件 ALARM_FAN_SPEED </td></tr>
-	 * <tr><td>SDK_ALARM_STORAGE_FAILURE_EX</td><td>存储错误报警 ALARM_STORAGE_FAILURE_EX </td></tr>
-	 * <tr><td>SDK_ALARM_RECORD_FAILED</td><td>录像异常报警 ALARM_RECORD_FAILED_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_STORAGE_BREAK_DOWN</td><td>存储崩溃事件 ALARM_STORAGE_BREAK_DOWN_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_VIDEO_ININVALID</td><td>视频输入通道失效事件(例:配置的视频输入通道码流,超出设备处理能力)ALARM_VIDEO_ININVALID_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_ALARM_EX2</td><td>本地报警输入通道事件,返回结构体 ALARM_ALARM_INFO_EX2 </td></tr>
-	 * <tr><td>SDK_ALARM_POWERFAULT</td><td>电源故障事件,返回结构体 ALARM_POWERFAULT_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_CHASSISINTRUDED</td><td>防拆事件,返回结构体 ALARM_CHASSISINTRUDED_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_ALARMEXTENDED</td><td>扩展报警输入通道事件 ALARM_ALARMEXTENDED_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_TALKING_INVITE</td><td>设备邀请平台对讲事件 ALARM_TALKING_INVITE_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_ARMMODE_CHANGE_EVENT</td><td>设备布防模式变化事件 ALARM_ARMMODE_CHANGE_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_BYPASSMODE_CHANGE_EVENT</td><td>防区旁路状态变化事件 ALARM_BYPASSMODE_CHANGE_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_ACCESS_CTL_NOT_CLOSE</td><td>门禁未关事件 ALARM_ACCESS_CTL_NOT_CLOSE_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_ACCESS_CTL_BREAK_IN</td><td>闯入事件 ALARM_ACCESS_CTL_BREAK_IN_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_ACCESS_CTL_REPEAT_ENTER</td><td>反复进入事件ALARM_ACCESS_CTL_REPEAT_ENTER_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_ACCESS_CTL_DURESS</td><td>胁迫卡刷卡事件 ALARM_ACCESS_CTL_DURESS_INFO </td></tr>
-	 * <tr><td>SDK_ALARM_ACCESS_CTL_EVENT</td><td>门禁事件 ALARM_ACCESS_CTL_EVENT_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_ALARM_EX</td><td>J}>]WV=ZJ}SkIh181(>/M(5@8vJ}O`M,,C?8vWV=Z1mJ>R;8v1(>/M(5@5D1(>/W4L,,1N*SP1(>/,0N*N^1(>/. </td></tr>
+	 * <tr><td>SDK_MOTION_ALARM_EX</td><td>J}>]WV=ZJ}SkIh18JSF5M(5@8vJ}O`M,,C?8vWV=Z1mJ>R;8vJSF5M(5@5D6/L,<l2b1(>/W4L,,1N*SP1(>/,0N*N^1(>/. </td></tr>
+	 * <tr><td>SDK_VIDEOLOST_ALARM_EX</td><td>J}>]WV=ZJ}SkIh18JSF5M(5@8vJ}O`M,,C?8vWV=Z1mJ>R;8vJSF5M(5@5DJSF56*J'1(>/W4L,,1N*SP1(>/,0N*N^1(>/. </td></tr>
+	 * <tr><td>SDK_SHELTER_ALARM_EX	</td><td>J}>]WV=ZJ}SkIh18JSF5M(5@8vJ}O`M,,C?8vWV=Z1mJ>R;8vJSF5M(5@5DUZ52(:ZFA)1(>/W4L,,1N*SP1(>/,0N*N^1(>/. </td></tr>
+	 * <tr><td>SDK_SOUND_DETECT_ALARM_EX</td><td>J}>]N*168vWV=Z,C?8vWV=Z1mJ>R;8vJSF5M(5@5DRtF5<l2b1(>/W4L,,1N*SP1(>/,0N*N^1(>/. </td></tr>
+	 * <tr><td>SDK_DISKFULL_ALARM_EX</td><td>J}>]N*18vWV=Z,1N*SPS2ELBz1(>/,0N*N^1(>/. </td></tr>
+	 * <tr><td>SDK_DISKERROR_ALARM_EX</td><td>J}>]N*328vWV=Z,C?8vWV=Z1mJ>R;8vS2EL5D9JUO1(>/W4L,,1N*SP1(>/,0N*N^1(>/.</td></tr> 
+	 * <tr><td>SDK_ENCODER_ALARM_EX	</td><td>J}>]N*168vWV=Z,C?8vWV=Z1mJ>R;8vM(5@1`BkFwW4L,,1N*SP1(>/,0N*N^1(>/. </td></tr>
+	 * <tr><td>SDK_REBOOT_EVENT_EX</td><td>Ih18VXFtJB<~,SC;'=xPPR;P)EdVCJ1,SPP)PhR*Ih18VXFt2ED\IzP',51JU5=4KJB<~,?IRT5wSCVXFt=S?ZVXFtIh18. </td></tr>
+	 * <tr><td>SDK_URGENCY_ALARM_EX	</td><td>=t<11(>/,J}>]N*168vWV=Z,C?8vWV=Z1mJ>R;8vM(5@1`BkFwW4L,,1N*SP1(>/,0N*N^1(>/. </td></tr>
+	 * <tr><td>SDK_WIRELESS_ALARM_EX</td><td>N^O_1(>/,J}>]N*168vWV=Z,C?8vWV=Z1mJ>R;8vM(5@1`BkFwW4L,,1N*SP1(>/,0N*N^1(>/. </td></tr>
+	 * <tr><td>SDK_NEW_SOUND_DETECT_ALARM_EX</td><td>PBRtF5<l2b1(>/,1(>/PEO"5D=a99Le<{  SDK_NEW_SOUND_ALARM_STATE . </td></tr>
+	 * <tr><td>SDK_ALARM_DECODER_ALARM_EX</td><td>1(>/=bBkFw1(>/,1(>/=a99Le<{  ALARM_DECODER_ALARM . </td></tr>
+	 * <tr><td>SDK_DECODER_DECODE_ABILITY</td><td>=bBkFw:=bBkFwD\A&2;Wc1(>/, R;8vWV=Z,0:D\U}3#=bBk 1:1mJ>3,3v=bBkD\A&. </td></tr>
+	 * <tr><td>SDK_FDDI_DECODER_ABILITY</td><td>9bOK1`BkFwW4L,1(>/,=a99Le<{ALARM_FDDI_ALARM. </td></tr>
+	 * <tr><td>SDK_PANORAMA_SWITCH_ALARM_EX</td><td>GP;;3!>01(>/,J}>]N*168vWV=Z,C?8vWV=Z1mJ>R;8vM(5@1`BkFwW4L,,1N*SP1(>/,0N*N^1(>/. </td></tr>
+	 * <tr><td>SDK_LOSTFOCUS_ALARM_EX</td><td>J'H%=95c1(>/,J}>]N*168vWV=Z,C?8vWV=Z1mJ>R;8vM(5@1`BkFwW4L,,1N*SP1(>/,0N*N^1(>/. </td></tr>
+	 * <tr><td>SDK_OEMSTATE_EX</td><td>oem1(M#W4L,,@`PMN*BYTE. </td></tr>
+	 * <tr><td>SDK_DSP_ALARM_EXDSP</td><td>1(>/,@`PMN*DSP_ALARM. </td></tr>
+	 * <tr><td>SDK_ATMPOS_BROKEN_EX	</td><td>atm:Mpos;z6O?*1(>/,@`PMN*BYTE, 0:A,=S6O?* 1:A,=SU}3#. </td></tr>
+	 * <tr><td>SDK_RECORD_CHANGED_EX</td><td>B<OqW4L,1d;/1(>/,J}>]N*ALARM_RECORDING_CHANGED.5D=a99LeJ}Wi </td></tr>
+	 * <tr><td>SDK_CONFIG_CHANGED_EX</td><td>EdVC7"Iz1d;/1(>/,pBufN*?U. </td></tr>
+	 * <tr><td>SDK_DEVICE_REBOOT_EX</td><td>Ih18VXFt1(>/,pBufN*?U. </td></tr>
+	 * <tr><td>SDK_PTZ_LOCATION_EX</td><td>TFL(6(N;PEO" ALARM_PTZ_LOCATION_INFO. </td></tr>
+	 * <tr><td>SDK_WINGDING_ALARM_EX</td><td>O_H&/35<lFw9JUO1(>/ ALARM_WINGDING_INFO. </td></tr>
+	 * <tr><td>SDK_TRAF_CONGESTION_ALARM_E</td><td>X=;M(WhH{1(>/(35A>3vOVRl3#M#V9;rU_EE6S) ALARM_TRAF_CONGESTION_INFO </td></tr>. 
+	 * <tr><td>SDK_TRAF_EXCEPTION_ALARM_EX</td><td>=;M(Rl3#1(>/(=;M(AwA?GwSZ0;rRl3#?UOP) ALARM_TRAF_EXCEPTION_INFO </td></tr>. 
+	 * <tr><td>SDK_EQUIPMENT_FILL_ALARM_EX</td><td>299bIh189JUO1(>/ALARM_EQUIPMENT_FILL_INFO. </td></tr>
+	 * <tr><td>SDK_ALARM_ARM_DISARM_STATE</td><td>1(>/2<377@W4L,ALARM_EQUIPMENT_FILL_INFO. </td></tr>
+	 * <tr><td>SDK_ALARM_ACC_POWEROFF</td><td>ACC6O5g1(>/,@`PMN*DWORD 0:ACCM(5g 1:ACC6O5g </td></tr>
+	 * <tr><td>SDK_ALARM_3GFLOW_EXCEED</td><td>3GAwA?3,3vcPV51(>/  DHDEV_3GFLOW_EXCEED_STATE_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_SPEED_LIMIT</td><td>O^KY1(>/ALARM_SPEED_LIMIT </td></tr>
+	 * <tr><td>SDK_ALARM_VEHICLE_INFO_UPLOAD</td><td>35TXWT6(RePEO"IO4+ALARM_VEHICLE_INFO_UPLOAD </td></tr>
+	 * <tr><td>SDK_STATIC_ALARM_EX</td><td>J}>]WV=ZJ}SkIh18JSF5M(5@8vJ}O`M,,C?8vWV=Z1mJ>R;8vJSF5M(5@5D>2L,<l2b1(>/W4L,,1N*SP1(>/,0N*N^1(>/. </td></tr>
+	 * <tr><td>SDK_PTZ_LOCATION_EX</td><td>TFL(6(N;PEO" SDK_PTZ_LOCATION_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_CARD_RECORD_UPLOAD</td><td>?(:EB<OqPEO"IO4+ ALARM_CARD_RECORD_INFO_UPLOAD </td></tr>
+	 * <tr><td>SDK_ALARM_ATM_INFO_UPLOADATM</td><td>=;RWPEO"IO4+ ALARM_ATM_INFO_UPLOAD </td></tr>
+	 * <tr><td>SDK_ALARM_ENCLOSURE</td><td>5gWSN'@81(>/ ALARM_ENCLOSURE_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_SIP_STATE</td><td>SIPW4L,1(>/  ALARM_SIP_STATE </td></tr>
+	 * <tr><td>SDK_ALARM_RAID_STATE</td><td>RAIDRl3#1(>/ ALARM_RAID_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_CROSSING_SPEED_LIMIT</td><td>B7?ZO^KY1(>/ ALARM_SPEED_LIMIT </td></tr>
+	 * <tr><td>SDK_ALARM_OVER_LOADING</td><td>3,TX1(>/ ALARM_OVER_LOADING </td></tr>
+	 * <tr><td>SDK_ALARM_HARD_BRAKING</td><td><1I2351(>/ ALARM_HARD_BRAKING </td></tr>
+	 * <tr><td>SDK_ALARM_SMOKE_SENSOR</td><td>QL8P1(>/ ALARM_SMOKE_SENSOR </td></tr>
+	 * <tr><td>SDK_ALARM_TRAFFIC_LIGHT_FAULT</td><td>=;M(5F9JUO1(>/ ALARM_TRAFFIC_LIGHT_FAULT </td></tr>
+	 * <tr><td>SDK_ALARM_TRAFFIC_FLUX_STAT</td><td>=;M(AwA?M3<F1(>/ ALARM_TRAFFIC_FLUX_LANE_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_CAMERA_MOVE</td><td>IcOq;zRFN;1(>/JB<~ ALARM_CAMERA_MOVE_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_DETAILEDMOTION</td><td>OjO86/<l1(>/IO1(PEO" ALARM_DETAILEDMOTION_CHNL_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_STORAGE_FAILURE</td><td>4f4"Rl3#1(>/,J}>]N* ALARM_STORAGE_FAILURE 5D=a99LeJ}Wi </td></tr>
+	 * <tr><td>SDK_ALARM_FRONTDISCONNECT</td><td>G06KIPC6OMx1(>/ ALARM_FRONTDISCONNET_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_ALARM_EX_REMOTE</td><td>T63LMb2?1(>/ ALARM_REMOTE_ALARM_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_BATTERYLOWPOWER</td><td>5g3X5gA?5M1(>/ ALARM_BATTERYLOWPOWER_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_TEMPERATURE</td><td>NB6H9}8_1(>/ ALARM_TEMPERATURE_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_TIREDDRIVE</td><td>F#@M<]J;1(>/ ALARM_TIREDDRIVE_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_LOST_RECORD</td><td>6*B<OqJB<~1(>/ ALARM_LOST_RECORD </td></tr>
+	 * <tr><td>SDK_ALARM_HIGH_CPU</td><td>CPUU<SCBJ9}8_JB<~1(>/ ALARM_HIGH_CPU </td></tr>
+	 * <tr><td>SDK_ALARM_LOST_NETPACKET</td><td>MxBg7"KMJ}>]6*0|JB<~1(>/ ALARM_LOST_NETPACKET </td></tr>
+	 * <tr><td>SDK_ALARM_HIGH_MEMORY</td><td>DZ4fU<SCBJ9}8_JB<~1(>/ ALARM_HIGH_MEMORY </td></tr>
+	 * <tr><td>SDK_LONG_TIME_NO_OPERATIONWEB</td><td>SC;'3$J1<dN^2YWwJB<~(N^@)U9PEO") </td></tr>
+	 * <tr><td>SDK_BLACKLIST_SNAP</td><td>:ZC{5%35A>W%EDJB<~ SDK_BLACKLIST_SNAP_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_DISK</td><td>S2EL1(>/ ALARM_DISK_INFOJ}Wi </td></tr>
+	 * <tr><td>SDK_ALARM_FILE_SYSTEM</td><td>ND<~O5M31(>/ ALARM_FILE_SYSTEM_INFOJ}Wi </td></tr>
+	 * <tr><td>SDK_ALARM_IVS</td><td>VGD\1(>/JB<~ ALARM_IVS_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_GOODS_WEIGHT_UPLOAD</td><td>;uVXPEO"IO1( ALARM_GOODS_WEIGHT_UPLOAD_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_GOODS_WEIGHT</td><td>;uVXPEO"1(>/ ALARM_GOODS_WEIGHT_INFO </td></tr>
+	 * <tr><td>SDK_GPS_STATUSGPS</td><td>6(N;PEO" NET_GPS_STATUS_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_DISKBURNED_FULL</td><td>S2EL?LB<Bz1(>/ ALARM_DISKBURNED_FULL_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_STORAGE_LOW_SPACE</td><td>4f4"H]A?2;WcJB<~ ALARM_STORAGE_LOW_SPACE_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_DISK_FLUX</td><td>S2ELJ}>]Rl3#JB<~ ALARM_DISK_FLUX </td></tr>
+	 * <tr><td>SDK_ALARM_NET_FLUX</td><td>MxBgJ}>]Rl3#JB<~ LARM_NET_FLUX </td></tr>
+	 * <tr><td>SDK_ALARM_FAN_SPEED</td><td>IHW*KYRl3#JB<~ ALARM_FAN_SPEED </td></tr>
+	 * <tr><td>SDK_ALARM_STORAGE_FAILURE_EX</td><td>4f4"4mNs1(>/ ALARM_STORAGE_FAILURE_EX </td></tr>
+	 * <tr><td>SDK_ALARM_RECORD_FAILED</td><td>B<OqRl3#1(>/ ALARM_RECORD_FAILED_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_STORAGE_BREAK_DOWN</td><td>4f4"1@@#JB<~ ALARM_STORAGE_BREAK_DOWN_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_VIDEO_ININVALID</td><td>JSF5JdHkM(5@J'P'JB<~(@}:EdVC5DJSF5JdHkM(5@BkAw,3,3vIh184&@mD\A&)ALARM_VIDEO_ININVALID_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_ALARM_EX2</td><td>1>5X1(>/JdHkM(5@JB<~,75;X=a99Le ALARM_ALARM_INFO_EX2 </td></tr>
+	 * <tr><td>SDK_ALARM_POWERFAULT</td><td>5gT49JUOJB<~,75;X=a99Le ALARM_POWERFAULT_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_CHASSISINTRUDED</td><td>7@2pJB<~,75;X=a99Le ALARM_CHASSISINTRUDED_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_ALARMEXTENDED</td><td>@)U91(>/JdHkM(5@JB<~ ALARM_ALARMEXTENDED_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_TALKING_INVITE</td><td>Ih18Q{GkF=L(6T=2JB<~ ALARM_TALKING_INVITE_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_ARMMODE_CHANGE_EVENT</td><td>Ih182<7@D#J=1d;/JB<~ ALARM_ARMMODE_CHANGE_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_BYPASSMODE_CHANGE_EVENT</td><td>7@GxETB7W4L,1d;/JB<~ ALARM_BYPASSMODE_CHANGE_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_ACCESS_CTL_NOT_CLOSE</td><td>CE={N49XJB<~ ALARM_ACCESS_CTL_NOT_CLOSE_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_ACCESS_CTL_BREAK_IN</td><td>43HkJB<~ ALARM_ACCESS_CTL_BREAK_IN_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_ACCESS_CTL_REPEAT_ENTER</td><td>7484=xHkJB<~ALARM_ACCESS_CTL_REPEAT_ENTER_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_ACCESS_CTL_DURESS</td><td>P2FH?(K"?(JB<~ ALARM_ACCESS_CTL_DURESS_INFO </td></tr>
+	 * <tr><td>SDK_ALARM_ACCESS_CTL_EVENT</td><td>CE={JB<~ ALARM_ACCESS_CTL_EVENT_INFO </td></tr>
 	 * </table>
-	 * 一些操作的异步回调事件,则lCommand的可能值是:
+	 * R;P)2YWw5DRl2=;X5wJB<~,TrlCommand5D?ID\V5JG:
 	 * <table>
-	 * <tr><td>命令</td><td>说明</td></tr>
-	 * <tr><td>SDK_CONFIG_RESULT_EVENT_EX</td><td>数据为修改配置的返回码,返回结构体见DEV_SET_RESULT. </td></tr>
-	 * <tr><td>SDK_REBOOT_EVENT_EX</td><td>设备重启事件:如果未发送重启命令,当前修改的配置不会立即生效 </td></tr>
-	 * <tr><td>SDK_AUTO_TALK_START_EX</td><td>设备主动邀请开始语音对讲. </td></tr>
-	 * <tr><td>SDK_AUTO_TALK_STOP_EX</td><td>设备主动停止语音对讲. </td></tr>
-	 * <tr><td>SDK_CONFIG_CHANGE_EX</td><td>设备配置发生改变. </td></tr>
-	 * <tr><td>SDK_IPSEARCH_EVENT_EX</td><td>IP搜索事件,返回字符串格式如下:DevName::Manufacturer::MAC::IP::Port::DevType::POEPort::SubMask::GateWay&& </td></tr>
-	 * <tr><td>SDK_AUTO_RECONNECT_FAILD</td><td>自动重连失败事件,返回一个int型数据,表示重连失败返回码,具体参见 Login接口的登录错误码说明 </td></tr>
-	 * <tr><td>SDK_REALPLAY_FAILD_EVENT</td><td>监视失败事件,返回结构体  DEV_PLAY_RESULT </td></tr>
-	 * <tr><td>SDK_PLAYBACK_FAILD_EVENT</td><td>回放失败事件,返回结构体  DEV_PLAY_RESULT </td></tr>
+	 * <tr><td>C|An</td><td>K5Cw</td></tr>
+	 * <tr><td>SDK_CONFIG_RESULT_EVENT_EX</td><td>J}>]N*P^8DEdVC5D75;XBk,75;X=a99Le<{DEV_SET_RESULT. </td></tr>
+	 * <tr><td>SDK_REBOOT_EVENT_EX</td><td>Ih18VXFtJB<~:Hg9{N47"KMVXFtC|An,51G0P^8D5DEdVC2;;aA"<4IzP' </td></tr>
+	 * <tr><td>SDK_AUTO_TALK_START_EX</td><td>Ih18Vw6/Q{Gk?*J<SoRt6T=2. </td></tr>
+	 * <tr><td>SDK_AUTO_TALK_STOP_EX</td><td>Ih18Vw6/M#V9SoRt6T=2. </td></tr>
+	 * <tr><td>SDK_CONFIG_CHANGE_EX</td><td>Ih18EdVC7"Iz8D1d. </td></tr>
+	 * <tr><td>SDK_IPSEARCH_EVENT_EX</td><td>IPKQKwJB<~,75;XWV7{4.8qJ=HgOB:DevName::Manufacturer::MAC::IP::Port::DevType::POEPort::SubMask::GateWay&& </td></tr>
+	 * <tr><td>SDK_AUTO_RECONNECT_FAILD</td><td>WT6/VXA,J'0\JB<~,75;XR;8vintPMJ}>],1mJ>VXA,J'0\75;XBk,>_Le2N<{ Login=S?Z5D5GB<4mNsBkK5Cw </td></tr>
+	 * <tr><td>SDK_REALPLAY_FAILD_EVENT</td><td><`JSJ'0\JB<~,75;X=a99Le  DEV_PLAY_RESULT </td></tr>
+	 * <tr><td>SDK_PLAYBACK_FAILD_EVENT</td><td>;X7EJ'0\JB<~,75;X=a99Le  DEV_PLAY_RESULT </td></tr>
 	 * </table>
-	 * @param pchDVRIP 设备IP
-	 * @param nDVRPort 设备端口
+	 * @param pchDVRIP Ih18IP
+	 * @param nDVRPort Ih186K?Z
 	 * \endif
 	 */
 	public boolean invoke(int lCommand, long lLoginID, Object obj, String pchDVRIP, int nDVRPort);

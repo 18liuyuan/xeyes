@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Device relative configuration
  * \else
- * 机器相关的配置
+ * ;zFwO`9X5DEdVC
  * \endif
  */
 public class SDKDEV_MACHINE_CFG implements Serializable {
@@ -20,7 +20,7 @@ public class SDKDEV_MACHINE_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device name or SN 
 	 * \else
-	 * 机器名称或编号
+	 * ;zFwC{3F;r1`:E
 	 * \endif
 	 */
 	public byte                szMachineName[] = new byte[FinalVar.SDK_MACHINE_NAME_NUM]; 
@@ -29,7 +29,7 @@ public class SDKDEV_MACHINE_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device location
 	 * \else
-	 * 机器部署地点
+	 * ;zFw2?Jp5X5c
 	 * \endif
 	 */
 	public byte                szMachineAddress[] = new byte[FinalVar.SDK_MACHINE_NAME_NUM]; 

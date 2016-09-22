@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Video OSD overlay
  * \else
- * 视频OSD叠加配置
+ * JSF5OSD5~<SEdVC
  * \endif
  */
 public class SDK_DVR_VIDEO_WIDGET implements Serializable {
@@ -19,7 +19,7 @@ public class SDK_DVR_VIDEO_WIDGET implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Front ground
 	 * \else
-	 * 物件的前景；按字节表示，分别为红、绿、蓝和透明度
+	 * No<~5DG0>0#;04WV=Z1mJ>#,7V1pN*:l!"BL!"@6:MM8Cw6H
 	 * \endif
 	 */
 	public int   rgbaFrontground;
@@ -28,7 +28,7 @@ public class SDK_DVR_VIDEO_WIDGET implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Background
 	 * \else
-	 * 物件的背景；按字节表示，分别为红、绿、蓝和透明度
+	 * No<~5D13>0#;04WV=Z1mJ>#,7V1pN*:l!"BL!"@6:MM8Cw6H
 	 * \endif
 	 */
 	public int   rgbaBackground;
@@ -37,7 +37,7 @@ public class SDK_DVR_VIDEO_WIDGET implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Position
 	 * \else
-	 * 位置,物件边距与整长的比例*8191 
+	 * N;VC,No<~1_>`SkU{3$5D1H@}*8191 
 	 * \endif
 	 */
 	public RECT    rcRelativePos = new RECT();
@@ -46,7 +46,7 @@ public class SDK_DVR_VIDEO_WIDGET implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Preview Blend
 	 * \else
-	 * 预览叠加使能
+	 * T$@@5~<SJ9D\
 	 * \endif
 	 */
 	public boolean    bPreviewBlend;
@@ -55,7 +55,7 @@ public class SDK_DVR_VIDEO_WIDGET implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Encode Blend
 	 * \else
-	 * 编码叠加使能
+	 * 1`Bk5~<SJ9D\
 	 * \endif
 	 */
 	public boolean    bEncodeBlend;

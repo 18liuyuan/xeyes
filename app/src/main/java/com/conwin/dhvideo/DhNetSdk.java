@@ -16,8 +16,10 @@ public class DhNetSdk {
 
     long mLoginHandle = 0;
     long mRealStreamHandle = 0;
-   // RealStreamCalllBack mRealStreamCallBack;
+    boolean mLogining = false;//正在登陆
 
+   // RealStreamCalllBack mRealStreamCallBack;
+    LoginResultCallBack mLoginResultCallBack;
 
 
     class DeviceDisConnect implements CB_fDisConnect {
@@ -43,42 +45,74 @@ public class DhNetSdk {
         }
     }
 
+    class LoginRunnable implements  Runnable{
+        String _ip,_user,_pwd;
+        int _port;
+        public LoginRunnable(String ip, int port, String user, String pwd) {
+            _ip = ip;
+            _port = port;
+            _user = user;
+            _pwd = pwd;
+
+        }
+
+        @Override
+        public void run() {
+
+            mLogining = true;
+          //  INetSDK.Cleanup();
+            DeviceDisConnect disConnect = new DeviceDisConnect();
+            boolean zRet = INetSDK.Init(disConnect);
+
+            INetSDK.SetConnectTime(3000, 3);
+            NET_PARAM stNetParam = new NET_PARAM();
+            stNetParam.nWaittime = 6 * 1000; // ??????????
+            stNetParam.nSearchRecordTime = 20 * 1000; // ?????????????
+            INetSDK.SetNetworkParam(stNetParam);
+
+            NET_DEVICEINFO deviceInfo = new NET_DEVICEINFO();
+            Integer error = new Integer(0);
+
+            DeviceReConnect reConnect = new DeviceReConnect();
+            INetSDK.SetAutoReconnect(reConnect);
+
+            DeviceSubDisConnect subDisConnect = new DeviceSubDisConnect();
+            INetSDK.SetSubconnCallBack(subDisConnect);
+
+            int loginType = 20;
+            long handle = INetSDK.LoginEx(_ip, _port, _user, _pwd,
+                    loginType, null, deviceInfo, error);
+            if (handle != 0) {
+                mLoginHandle = handle;
+            }
+            if (mLoginResultCallBack != null){
+                mLoginResultCallBack.OnLoginResult(handle);
+            }
+            mLogining = false;
+        }
+    }
 
     public interface RealStreamCalllBack extends CB_fRealDataCallBackEx{
 
     }
 
 
-    public long login(String ip, int port, String user, String pwd) {
-        DeviceDisConnect disConnect = new DeviceDisConnect();
-      //  mRealStreamCallBack = new RealStreamCalllBack();
+    public interface LoginResultCallBack {
+        void OnLoginResult(long lResult);
+    }
 
-        boolean zRet = INetSDK.Init(disConnect);
-
-        INetSDK.SetConnectTime(3000, 3);
-        NET_PARAM stNetParam = new NET_PARAM();
-        stNetParam.nWaittime = 6 * 1000; // ����ȴ�ʱʱ��
-        stNetParam.nSearchRecordTime = 20 * 1000; // ¼��طŲ�ѯ��ʱʱ��
-        INetSDK.SetNetworkParam(stNetParam);
-
-        NET_DEVICEINFO deviceInfo = new NET_DEVICEINFO();
-        Integer error = new Integer(0);
-
-        DeviceReConnect reConnect = new DeviceReConnect();
-        INetSDK.SetAutoReconnect(reConnect);
-
-        DeviceSubDisConnect subDisConnect = new DeviceSubDisConnect();
-        INetSDK.SetSubconnCallBack(subDisConnect);
-
-        int loginType = 20;
-        long handle = INetSDK.LoginEx(ip, port, user, pwd,
-                loginType, null, deviceInfo, error);
-        if (handle != 0) {
-            mLoginHandle = handle;
-        } else {
-
+    public long login(String ip, int port, String user, String pwd, LoginResultCallBack callBack) {
+        if (mLogining){
+            return 0;
         }
-        return handle;
+        if (callBack == null){
+            return 0;
+        }
+        mLoginResultCallBack = callBack;
+
+        new Thread( new LoginRunnable(ip, port, user, pwd)).start();
+
+        return 0;
     }
 
     public boolean logout() {

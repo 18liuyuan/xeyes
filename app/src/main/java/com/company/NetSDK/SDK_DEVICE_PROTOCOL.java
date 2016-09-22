@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Device protocol type
  * \else
- * SDK_DEVICE_PROTOCOL, 设备协议类型
+ * SDK_DEVICE_PROTOCOL, Ih18P-Ri@`PM
  * \endif
  */
 public class SDK_DEVICE_PROTOCOL implements Serializable {
@@ -19,18 +19,20 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Private 2nd protocol
 	 * \else
-	 * 私有2代协议
+	 * K=SP24zP-Ri
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_DAHUA2 = 0;						
+	public static final int     SDK_PROTOCOL_DAHUA2 = 0;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Private 3rd protocol
 	 * \else
-	 * 私有3代协议
+	 * K=SP34zP-Ri
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_DAHUA3 = 1;						
+	public static final int     SDK_PROTOCOL_DAHUA3 = 1;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Onvif
@@ -38,47 +40,53 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * Onvif
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_ONVIF = 2;							
+	public static final int     SDK_PROTOCOL_ONVIF = 2;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Virtual network computer
 	 * \else
-	 * 虚拟网络计算机
+	 * PiDbMxBg<FKc;z
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_VNC = 3;						
+	public static final int     SDK_PROTOCOL_VNC = 3;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Private protocol of private    
 	 * \else
-	 * 大华私有协议      
+	 * 4s;*K=SPP-Ri      
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_PRIVATE = 100;                
+	public static final int     SDK_PROTOCOL_PRIVATE = 100;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Aebell
 	 * \else
-	 * 美电贝尔  
+	 * C@5g146{  
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_AEBELL = 101;                      
+	public static final int     SDK_PROTOCOL_AEBELL = 101;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Panasonic
 	 * \else
-	 * 松下   
+	 * KIOB   
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_PANASONIC = 102;                       
+	public static final int     SDK_PROTOCOL_PANASONIC = 102;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Sony
 	 * \else
-	 * 索尼   
+	 * KwDa   
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_SONY = 103;                         
+	public static final int     SDK_PROTOCOL_SONY = 103;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Dynacolor 
@@ -86,23 +94,26 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * Dynacolor 
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_DYNACOLOR = 104;                   
+	public static final int     SDK_PROTOCOL_DYNACOLOR = 104;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Tcsw
 	 * \else
-	 * 天城威视   
+	 * Ll3GM~JS   
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_TCWS = 105;						
+	public static final int     SDK_PROTOCOL_TCWS = 105;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Sansung
 	 * \else
-	 * 三星     
+	 * H}PG     
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_SAMSUNG = 106;                     
+	public static final int     SDK_PROTOCOL_SAMSUNG = 106;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * YOKO  
@@ -110,23 +121,26 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * YOKO  
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_YOKO = 107;                       
+	public static final int     SDK_PROTOCOL_YOKO = 107;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * axis
 	 * \else
-	 * 安讯视     
+	 * 02Q6JS     
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_AXIS = 108;                         
+	public static final int     SDK_PROTOCOL_AXIS = 108;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Sanyo
 	 * \else
-	 * 三洋    
+	 * H}Qs    
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_SANYO = 109;						   	
+	public static final int     SDK_PROTOCOL_SANYO = 109;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Bosch
@@ -134,7 +148,8 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * Bosch
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_BOSH = 110;						
+	public static final int     SDK_PROTOCOL_BOSH = 110;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Peclo	
@@ -142,7 +157,8 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * Peclo	
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_PECLO = 111;						
+	public static final int     SDK_PROTOCOL_PECLO = 111;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Provideo	
@@ -150,7 +166,8 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * Provideo	
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_PROVIDEO = 112;					
+	public static final int     SDK_PROTOCOL_PROVIDEO = 112;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * ACTi	
@@ -158,7 +175,8 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * ACTi	
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_ACTI = 113;						
+	public static final int     SDK_PROTOCOL_ACTI = 113;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Vivotek
@@ -166,7 +184,8 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * Vivotek
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_VIVOTEK = 114;						
+	public static final int     SDK_PROTOCOL_VIVOTEK = 114;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Arecont 
@@ -174,7 +193,8 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * Arecont 
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_ARECONT = 115;					
+	public static final int     SDK_PROTOCOL_ARECONT = 115;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * PrivateEH
@@ -182,7 +202,8 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * PrivateEH
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_PRIVATEEH = 116;			        
+	public static final int     SDK_PROTOCOL_PRIVATEEH = 116;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * IMatek 
@@ -190,7 +211,8 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * IMatek 
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_IMATEK = 117;					     
+	public static final int     SDK_PROTOCOL_IMATEK = 117;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Shany
@@ -198,15 +220,17 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * Shany
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_SHANY = 118;                        
+	public static final int     SDK_PROTOCOL_SHANY = 118;
+	
 	/**
 	 * \if ENGLISH_LANG
-	 * 动力盈科
+	 * 6/A&S/?F
 	 * \else
-	 * 动力盈科
+	 * 6/A&S/?F
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_VIDEOTREC = 119;                          
+	public static final int     SDK_PROTOCOL_VIDEOTREC = 119;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Ura
@@ -214,7 +238,8 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * Ura
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_URA = 120;						     
+	public static final int     SDK_PROTOCOL_URA = 120;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Bticino
@@ -222,31 +247,35 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * Bticino
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_BITICINO = 121;                     
+	public static final int     SDK_PROTOCOL_BITICINO = 121;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Onvif's protocol type, same to SDK_PROTOCOL_ONVIF   
 	 * \else
-	 * Onvif协议类型, 同 SDK_PROTOCOL_ONVIF 
+	 * OnvifP-Ri@`PM, M, SDK_PROTOCOL_ONVIF 
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_ONVIF2 = 122;                     
+	public static final int     SDK_PROTOCOL_ONVIF2 = 122;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Shepherd
 	 * \else
-	 * 视霸   
+	 * JS0T   
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_SHEPHERD = 123;                   
+	public static final int     SDK_PROTOCOL_SHEPHERD = 123;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Yaan
 	 * \else
-	 * 亚安       
+	 * QG02       
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_YAAN = 124;                       
+	public static final int     SDK_PROTOCOL_YAAN = 124;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Airpop 
@@ -254,7 +283,8 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * Airpop 
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_AIRPOINT = 125;					  
+	public static final int     SDK_PROTOCOL_AIRPOINT = 125;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * TYCO
@@ -262,23 +292,26 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * TYCO
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_TYCO = 126;                       
+	public static final int     SDK_PROTOCOL_TYCO = 126;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Xunmei
 	 * \else
-	 * 讯美   
+	 * Q6C@   
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_XUNMEI = 127;                        
+	public static final int     SDK_PROTOCOL_XUNMEI = 127;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Hikvision
 	 * \else
-	 * 海康
+	 * :#?5
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_HIKVISION = 128;                     
+	public static final int     SDK_PROTOCOL_HIKVISION = 128;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * LG 
@@ -286,23 +319,26 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * LG 
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_LG = 129;                         
+	public static final int     SDK_PROTOCOL_LG = 129;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Aoqiman
 	 * \else
-	 * 奥奇曼   
+	 * 0BFfB|   
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_AOQIMAN = 130;					 
+	public static final int     SDK_PROTOCOL_AOQIMAN = 130;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Baokang
 	 * \else
-	 * 宝康      
+	 * 1&?5      
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_BAOKANG = 131;                       
+	public static final int     SDK_PROTOCOL_BAOKANG = 131;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Watchnet  
@@ -310,7 +346,8 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * Watchnet  
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_WATCHNET = 132;                   
+	public static final int     SDK_PROTOCOL_WATCHNET = 132;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Xvision
@@ -318,15 +355,17 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * Xvision 
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_XVISION = 133;                    
+	public static final int     SDK_PROTOCOL_XVISION = 133;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Fusitsu
 	 * \else
-	 * 富士通 
+	 * 8;J?M( 
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_FUSITSU = 134;                           
+	public static final int     SDK_PROTOCOL_FUSITSU = 134;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Canon
@@ -334,7 +373,8 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * Canon
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_CANON = 135;							
+	public static final int     SDK_PROTOCOL_CANON = 135;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * GE
@@ -342,71 +382,80 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * GE
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_GE = 136;									
+	public static final int     SDK_PROTOCOL_GE = 136;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Basler
 	 * \else
-	 * 巴斯勒	
+	 * 0MK9@U	
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_Basler = 137;							
+	public static final int     SDK_PROTOCOL_Basler = 137;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Patro
 	 * \else
-	 * 帕特罗	
+	 * EALXB^	
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_Patro = 138;						  
+	public static final int     SDK_PROTOCOL_Patro = 138;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * CPPLUS K series
 	 * \else
-	 * CPPLUS K系列
+	 * CPPLUS KO5AP
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_CPKNC = 139;							
+	public static final int     SDK_PROTOCOL_CPKNC = 139;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * CPPLUS R series
 	 * \else
-	 * CPPLUS R系列
+	 * CPPLUS RO5AP
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_CPRNC = 140;							
+	public static final int     SDK_PROTOCOL_CPRNC = 140;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * CPPLUS U series	
 	 * \else
-	 * CPPLUS U系列	
+	 * CPPLUS UO5AP	
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_CPUNC = 141;						
+	public static final int     SDK_PROTOCOL_CPUNC = 141;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * CPPLUS IPC	
 	 * \else
-	 * cpplus oem 大华的ipc
+	 * cpplus oem 4s;*5Dipc
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_CPPLUS = 142;							
+	public static final int     SDK_PROTOCOL_CPPLUS = 142;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Xunmeis,protocal is Onvif
 	 * \else
-	 * 讯美s,实际协议为Onvif	
+	 * Q6C@s,J5<JP-RiN*Onvif	
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_XunmeiS = 143;					
+	public static final int     SDK_PROTOCOL_XunmeiS = 143;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * GDDW
 	 * \else
-	 * 广东电网
+	 * 9c6+5gMx
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_GDDW = 144;						
+	public static final int     SDK_PROTOCOL_GDDW = 144;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * PSIA 
@@ -414,7 +463,8 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * PSIA 
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_PSIA = 145;                       
+	public static final int     SDK_PROTOCOL_PSIA = 145;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * GB2818
@@ -422,7 +472,8 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * GB2818
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_GB2818 = 146;                     
+	public static final int     SDK_PROTOCOL_GB2818 = 146;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * GDYX
@@ -430,13 +481,14 @@ public class SDK_DEVICE_PROTOCOL implements Serializable {
 	 * GDYX
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_GDYX = 147;                       
+	public static final int     SDK_PROTOCOL_GDYX = 147;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * others
 	 * \else
-	 * 由用户自定义
+	 * SISC;'WT6(Re
 	 * \endif
 	 */
-	public static final int     SDK_PROTOCOL_OTHER = 148;                      
+	public static final int     SDK_PROTOCOL_OTHER = 148;
 }

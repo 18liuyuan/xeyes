@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * GPS status info
  * \else
- * GPS状态信息
+ * GPSW4L,PEO"
  * \endif
  */
 public class NET_GPS_STATUS_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class NET_GPS_STATUS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * time
 	 * \else
-	 * 定位时间
+	 * 6(N;J1<d
 	 * \endif
 	 */
 	public NET_TIME            revTime = new NET_TIME();                        
@@ -27,7 +27,7 @@ public class NET_GPS_STATUS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * device number
 	 * \else
-	 * 设备序列号
+	 * Ih18PrAP:E
 	 * \endif
 	 */
 	public byte                DvrSerial[] = new byte[50];                  
@@ -35,7 +35,7 @@ public class NET_GPS_STATUS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * longitude(1/1000000,range[0-360])
 	 * \else
-	 * 经度(单位是百万分之度，范围0-360度)
+	 * >-6H(5%N;JG0YMr7VV.6H#,76N'0-3606H)
 	 * \endif
 	 */
 	public double              longitude;                      
@@ -43,7 +43,7 @@ public class NET_GPS_STATUS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * latitude(1/1000000,range[0-180])
 	 * \else
-	 * 纬度(单位是百万分之度，范围0-180度)
+	 * N36H(5%N;JG0YMr7VV.6H#,76N'0-1806H)
 	 * \endif
 	 */
 	public double              latidude;                       
@@ -51,7 +51,7 @@ public class NET_GPS_STATUS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * highness(m)
 	 * \else
-	 * 高度(米)
+	 * 8_6H(CW)
 	 * \endif
 	 */
 	public double              height;                         
@@ -59,7 +59,7 @@ public class NET_GPS_STATUS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * angle(north is source point,clockwise is positive)
 	 * \else
-	 * 方向角(正北方向为原点，顺时针为正)
+	 * 7=Or=G(U}117=OrN*T-5c#,K3J1UkN*U})
 	 * \endif
 	 */
 	public double              angle;                          
@@ -67,7 +67,7 @@ public class NET_GPS_STATUS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * speed(sea mile,speed/1000*1.852km/h)
 	 * \else
-	 * 速度(单位是海里，speed/1000*1.852公里/小时)
+	 * KY6H(5%N;JG:#@o#,speed/1000*1.8529+@o/P!J1)
 	 * \endif
 	 */
 	public double              speed;                          
@@ -75,7 +75,7 @@ public class NET_GPS_STATUS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * star count
 	 * \else
-	 * 定位星数
+	 * 6(N;PGJ}
 	 * \endif
 	 */
 	public boolean                starCount;                      
@@ -83,7 +83,7 @@ public class NET_GPS_STATUS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * antenna state(true good, false bad)
 	 * \else
-	 * 天线状态(true 好，false 坏)
+	 * LlO_W4L,(true :C#,false ;5)
 	 * \endif
 	 */
 	public boolean                antennaState;                   
@@ -91,7 +91,7 @@ public class NET_GPS_STATUS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * orientation state(true orientation, false not)
 	 * \else
-	 * 定位状态(true 定位，false 不定位)
+	 * 6(N;W4L,(true 6(N;#,false 2;6(N;)
 	 * \endif
 	 */
 	public boolean                orientationState;               
@@ -99,7 +99,7 @@ public class NET_GPS_STATUS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * working state(true normal, false abnormity)
 	 * \else
-	 * 工作状态(0=未定位，1=非差分定位，2=差分定位，3=无效PPS，6=正在估算 
+	 * 9$WwW4L,(0=N46(N;#,1=7G2n7V6(N;#,2=2n7V6(N;#,3=N^P'PPS#,6=U}TZ9@Kc 
 	 * \endif
 	 */
 	public boolean                workStae;                       
@@ -107,7 +107,7 @@ public class NET_GPS_STATUS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * alarm count
 	 * \else
-	 * 发生的报警位置个数
+	 * 7"Iz5D1(>/N;VC8vJ}
 	 * \endif
 	 */
 	public int                 nAlarmCount;                    
@@ -115,7 +115,7 @@ public class NET_GPS_STATUS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * alarm type
 	 * \else
-	 * 发生的报警位置，值可能多个
+	 * 7"Iz5D1(>/N;VC#,V5?ID\6`8v
 	 * \endif
 	 */
 	public int                 nAlarmState[] = new int[128];               
@@ -123,7 +123,7 @@ public class NET_GPS_STATUS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0- real time 1-fill 
 	 * \else
-	 * 0-实时 1-补传 
+	 * 0-J5J1 1-294+ 
 	 * \endif
 	 */
 	public byte                bOffline;                       

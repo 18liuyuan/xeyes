@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Arm/Disarm Mode
  * \else
- * 布撤防模式
+ * 2<377@D#J=
  * \endif
  */
 public class NET_ALARM_MODE implements Serializable {
@@ -19,7 +19,7 @@ public class NET_ALARM_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Unknown
 	 * \else
-	 * 未知
+	 * N4V*
 	 * \endif
 	 */
 	public static final int NET_ALARM_MODE_UNKNOWN = -1;
@@ -28,7 +28,7 @@ public class NET_ALARM_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Disarm
 	 * \else
-	 * 撤防
+	 * 377@
 	 * \endif
 	 */
 	public static final int NET_ALARM_MODE_DISARMING = 0;
@@ -37,7 +37,7 @@ public class NET_ALARM_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Arm
 	 * \else
-	 * 布防
+	 * 2<7@
 	 * \endif
 	 */
 	public static final int NET_ALARM_MODE_ARMING = 1;
@@ -46,7 +46,7 @@ public class NET_ALARM_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enhanced Arm
 	 * \else
-	 * 强制布防
+	 * G?VF2<7@
 	 * \endif
 	 */
 	public static final int NET_ALARM_MODE_FORCEON = 2;

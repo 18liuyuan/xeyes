@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * GetMonitorWallCollections's interface output param(get plan infomation of monitor wall)
  * \else
- * GetMonitorWallCollections接口输出参数(获取电视墙预案信息)
+ * GetMonitorWallCollections=S?ZJd3v2NJ}(;qH!5gJSG=T$08PEO")
  * \endif
  */
 public class SDK_OUT_WM_GET_COLLECTIONS implements Serializable {
@@ -19,32 +19,33 @@ public class SDK_OUT_WM_GET_COLLECTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Plan of monitor wall array
 	 * \else
-	 * 电视墙预案数组
+	 * 5gJSG=T$08J}Wi
 	 * \endif
 	 */
-	public SDK_MONITORWALL_COLLECTION pCollections[];		
+	public SDK_MONITORWALL_COLLECTION pCollections[];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Array size
 	 * \else
-	 * 电视墙预案数组大小
+	 * 5gJSG=T$08J}Wi4sP!
 	 * \endif
 	 */
-	public int					nMaxCollectionsCount;		
+	public int					nMaxCollectionsCount;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Max count of plan
 	 * \else
-	 * 电视墙预案数量
+	 * 5gJSG=T$08J}A?
 	 * \endif
 	 */
-	public int					nCollectionsCount;			
+	public int					nCollectionsCount;
 	
-	public SDK_OUT_WM_GET_COLLECTIONS(int nMax)
-	{
+	public SDK_OUT_WM_GET_COLLECTIONS(int nMax) {
 		nMaxCollectionsCount = nMax;
-		for (int i = 0; i < nMaxCollectionsCount; i++)
-		{
+		pCollections = new SDK_MONITORWALL_COLLECTION[nMax];
+		for (int i = 0; i < nMaxCollectionsCount; i++) {
 			pCollections[i] = new SDK_MONITORWALL_COLLECTION();
 		}
 	}

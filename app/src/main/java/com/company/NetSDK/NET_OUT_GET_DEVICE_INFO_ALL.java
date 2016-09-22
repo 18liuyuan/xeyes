@@ -9,9 +9,9 @@ public class NET_OUT_GET_DEVICE_INFO_ALL implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public int                         nDevMax;        // 设备信息的最大个数, 指明pstuInfo内存空间
-	public int                         nDevNum;        // 实际返回的设备信息的个数
-	public SDK_REMOTE_DEVICE            pstuInfo[];       // 设备信息指针，该结构体内部成员 dwSize 需用户赋值
+	public int                         nDevMax;        // Ih18PEO"5DWn4s8vJ}, V8CwpstuInfoDZ4f?U<d
+	public int                         nDevNum;        // J5<J75;X5DIh18PEO"5D8vJ}
+	public SDK_REMOTE_DEVICE            pstuInfo[];       // Ih18PEO"V8Uk#,8C=a99LeDZ2?3IT1 dwSize PhSC;'83V5
 	
 	public NET_OUT_GET_DEVICE_INFO_ALL(int nDevMax) {
 		this.nDevMax = nDevMax;

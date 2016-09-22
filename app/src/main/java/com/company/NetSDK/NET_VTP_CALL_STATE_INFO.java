@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Video phone status informations
  * \else
- * 视频电话状态信息
+ * JSF55g;0W4L,PEO"
  * \endif
  */
 public class NET_VTP_CALL_STATE_INFO implements Serializable {
@@ -20,7 +20,7 @@ public class NET_VTP_CALL_STATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Call number
 	 * \else
-	 * 呼叫号码
+	 * :t=P:EBk
 	 * \endif
 	 */
     public byte                        szNumber[] = new byte[FinalVar.SDK_COMMON_STRING_128];
@@ -29,7 +29,7 @@ public class NET_VTP_CALL_STATE_INFO implements Serializable {
      * \if ENGLISH_LANG
      * Intercom unique identifier
      * \else
-     * 对讲唯一标识
+     * 6T=2N(R;1jJ6
      * \endif
      */
     public byte                        szCallID[] = new byte[FinalVar.SDK_COMMON_STRING_128];
@@ -38,7 +38,7 @@ public class NET_VTP_CALL_STATE_INFO implements Serializable {
      * \if ENGLISH_LANG
      * Call status
      * \else
-     * 呼叫状态, EM_NET_VTP_CALL_STATE_TYPE
+     * :t=PW4L,, EM_NET_VTP_CALL_STATE_TYPE
      * \endif
      */
     public int                         emCallState; 

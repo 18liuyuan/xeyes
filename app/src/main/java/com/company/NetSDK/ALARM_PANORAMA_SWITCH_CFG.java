@@ -12,7 +12,7 @@ public class ALARM_PANORAMA_SWITCH_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Number of alarm channels
 	 * \else
-	 * 报警通道个数
+	 * 1(>/M(5@8vJ}
 	 * \endif
 	 */
 	public int                    nAlarmChnNum;

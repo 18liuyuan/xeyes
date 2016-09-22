@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Preview type.Corresponding to CLIENT_RealPlayEx
  * \else
- * 端口序号
+ * 6K?ZPr:E
  * \endif
  */
 public class SDK_RealPlayType implements Serializable {
@@ -19,104 +19,116 @@ public class SDK_RealPlayType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Real-time preview
 	 * \else
-	 * 实时预览
+	 * J5J1T$@@
 	 * \endif
 	 */
-	public static final int     SDK_RType_Realplay = 0;			
+	public static final int     SDK_RType_Realplay = 0;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Multiple-channel preview 
 	 * \else
-	 * 多画面预览
+	 * 6`;-CfT$@@
 	 * \endif
 	 */
-	public static final int     SDK_RType_Multiplay = 1;			
+	public static final int     SDK_RType_Multiplay = 1;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Real-time monitor-main stream. It is the same as DH_RType_Realplay
 	 * \else
-	 * 实时监视-主码流，等同于SDK_RType_Realplay
+	 * J5J1<`JS-VwBkAw#,5HM,SZSDK_RType_Realplay
 	 * \endif
 	 */
-	public static final int     SDK_RType_Realplay_0 = 2;		
+	public static final int     SDK_RType_Realplay_0 = 2;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * 1 Real-time monitor---extra stream 1
 	 * \else
-	 * 实时监视-从码流1
+	 * J5J1<`JS-4SBkAw1
 	 * \endif
 	 */
-	public static final int     SDK_RType_Realplay_1 = 3;		
+	public static final int     SDK_RType_Realplay_1 = 3;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * 2 Real-time monitor-- extra stream 2
 	 * \else
-	 * 实时监视-从码流2
+	 * J5J1<`JS-4SBkAw2
 	 * \endif
 	 */
-	public static final int     SDK_RType_Realplay_2 = 4; 		
+	public static final int     SDK_RType_Realplay_2 = 4;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * 3 Real-time monitor -- extra stream 3
 	 * \else
-	 * 实时监视-从码流3
+	 * J5J1<`JS-4SBkAw3
 	 * \endif
 	 */
-	public static final int     SDK_RType_Realplay_3 = 5;		
+	public static final int     SDK_RType_Realplay_3 = 5;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Multiple-channel preview-- 1-window 
 	 * \else
-	 * 多画面预览－1画面
+	 * 6`;-CfT$@@#-1;-Cf
 	 * \endif
 	 */
-	public static final int     SDK_RType_Multiplay_1 = 6;		
+	public static final int     SDK_RType_Multiplay_1 = 6;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Multiple-channel preview--4-window
 	 * \else
-	 * 多画面预览－4画面
+	 * 6`;-CfT$@@#-4;-Cf
 	 * \endif
 	 */
-	public static final int     SDK_RType_Multiplay_4 = 7;		
+	public static final int     SDK_RType_Multiplay_4 = 7;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Multiple-channel preview--8-window
 	 * \else
-	 * 多画面预览－8画面
+	 * 6`;-CfT$@@#-8;-Cf
 	 * \endif
 	 */
-	public static final int     SDK_RType_Multiplay_8 = 8;		
+	public static final int     SDK_RType_Multiplay_8 = 8;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Multiple-channel preview--9-window
 	 * \else
-	 * 多画面预览－9画面
+	 * 6`;-CfT$@@#-9;-Cf
 	 * \endif
 	 */
-	public static final int     SDK_RType_Multiplay_9 = 9;		
+	public static final int     SDK_RType_Multiplay_9 = 9;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Multiple-channel preview--16-window
 	 * \else
-	 * 多画面预览－16画面
+	 * 6`;-CfT$@@#-16;-Cf
 	 * \endif
 	 */
-	public static final int     SDK_RType_Multiplay_16 = 10;		
+	public static final int     SDK_RType_Multiplay_16 = 10;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Multiple-channel preview--6-window
 	 * \else
-	 * 多画面预览－6画面
+	 * 6`;-CfT$@@#-6;-Cf
 	 * \endif
 	 */
-	public static final int     SDK_RType_Multiplay_6 = 11;		
+	public static final int     SDK_RType_Multiplay_6 = 11;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Multiple-channel preview--12-window
 	 * \else
-	 * 多画面预览－12画面
+	 * 6`;-CfT$@@#-12;-Cf
 	 * \endif
 	 */
-	public static final int     SDK_RType_Multiplay_12 = 12;		
+	public static final int     SDK_RType_Multiplay_12 = 12;
 }

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Year
  * \else
- * 轮巡控制类型
+ * BVQ2?XVF@`PM
  * \endif
  */
 public class DEC_CTRL_TOUR_TYPE implements Serializable {
@@ -19,7 +19,7 @@ public class DEC_CTRL_TOUR_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * stop
 	 * \else
-	 * 停止
+	 * M#V9
 	 * \endif
 	 */
 	public static final int     Dec_Tour_Stop = 0;
@@ -28,7 +28,7 @@ public class DEC_CTRL_TOUR_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * start
 	 * \else
-	 * 开始
+	 * ?*J<
 	 * \endif
 	 */
 	public static final int     Dec_Tour_Start = 1;
@@ -37,7 +37,7 @@ public class DEC_CTRL_TOUR_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * pause
 	 * \else
-	 * 暂停
+	 * T]M#
 	 * \endif
 	 */
 	public static final int     Dec_Tour_Pause = 2;
@@ -46,7 +46,7 @@ public class DEC_CTRL_TOUR_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * resume
 	 * \else
-	 * 恢复
+	 * ;V84
 	 * \endif
 	 */
 	public static final int     Dec_Tour_Resume = 3;

@@ -2,12 +2,11 @@ package com.company.NetSDK;
 
 import java.io.Serializable;
 
-
 /**
  * \if ENGLISH_LANG
  * WEB path configuration
  * \else
- * WEB路径配置
+ * WEBB7>6EdVC
  * \endif
  */
 public class SDKDEV_URL_CFG implements Serializable {
@@ -20,7 +19,7 @@ public class SDKDEV_URL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Snap or not
 	 * \else
-	 * 是否抓图
+	 * JG7qW%M<
 	 * \endif
 	 */
 	public boolean                bSnapEnable;
@@ -29,7 +28,7 @@ public class SDKDEV_URL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Snap interval
 	 * \else
-	 * 抓图周期
+	 * W%M<V\FZ
 	 * \endif
 	 */
 	public int                 iSnapInterval;
@@ -38,7 +37,7 @@ public class SDKDEV_URL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * HTTP host IP
 	 * \else
-	 * HTTP主机IP
+	 * HTTPVw;zIP
 	 * \endif
 	 */
 	public byte                szHostIp[] = new byte[FinalVar.SDK_MAX_IPADDR_LEN];
@@ -47,7 +46,7 @@ public class SDKDEV_URL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Host port
 	 * \else
-	 * 主机port
+	 * Vw;zport
 	 * \endif
 	 */
     public short                wHostPort;
@@ -56,7 +55,7 @@ public class SDKDEV_URL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Status message send out interval
 	 * \else
-	 * 状态消息发送间隔
+	 * W4L,O{O"7"KM<d8t
 	 * \endif
 	 */
     public int                 iMsgInterval;
@@ -65,7 +64,7 @@ public class SDKDEV_URL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Message status upload URL
 	 * \else
-	 * 状态消息上传URL
+	 * W4L,O{O"IO4+URL
 	 * \endif
 	 */
     public byte                szUrlState[] = new byte[FinalVar.SDK_MAX_URL_LEN];
@@ -74,7 +73,7 @@ public class SDKDEV_URL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Picture upload Url 
 	 * \else
-	 * 图片上传Url 
+	 * M<F,IO4+Url 
 	 * \endif
 	 */
     public byte                szUrlImage[] = new byte[FinalVar.SDK_MAX_URL_LEN];
@@ -83,7 +82,7 @@ public class SDKDEV_URL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device web SN
 	 * \else
-	 * 机器的web编号
+	 * ;zFw5Dweb1`:E
 	 * \endif
 	 */
     public byte                szDevId[] = new byte[FinalVar.SDK_MAX_DEV_ID_LEN];

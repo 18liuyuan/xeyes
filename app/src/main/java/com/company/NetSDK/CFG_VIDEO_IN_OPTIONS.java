@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Video input options
  * \else
- * 视频输入前端选项
+ * JSF5JdHkG06KQ!On
  * \endif
  */
 public class CFG_VIDEO_IN_OPTIONS implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * BLC:Range value depends on device capacity set, 0-off, 1-BLC level 1, 2- BLC level 2...n-max BLC level
 	 * \else
-	 * 背光补偿：取值范围取决于设备能力集：0-关闭1-启用2-指定区域背光补偿
+	 * 139b293%#:H!V576N'H!>vSZIh18D\A&</#:0-9X1U1-FtSC2-V86(GxSr139b293%
 	 * \endif
 	 */
 	public byte				byBacklight;
@@ -28,7 +28,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Day/night mode; 0-color.1-automatic switch according to the brightness.2- black/white
 	 * \else
-	 * 日/夜模式；0-总是彩色，1-根据亮度自动切换，2-总是黑白
+	 * HU/R9D#J=#;0-W\JG2JI+#,1-8y>]AA6HWT6/GP;;#,2-W\JG:Z0W
 	 * \endif
 	 */
 	public byte				byDayNightColor;
@@ -37,7 +37,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * WB. 0-"Disable", 1-"Auto", 2-"Custom", 3-"Sunny", 4-"Cloudy", 5-"Home", 6-"Office", 7-"Night", 8-"HighColorTemperature", 9-"LowColorTemperature", 10-"AutoColorTemperature", 11-"CustomColorTemperature"
 	 * \else
-	 * 白平衡, 0-"Disable", 1-"Auto", 2-"Custom", 3-"Sunny", 4-"Cloudy", 5-"Home", 6-"Office", 7-"Night", 8-"HighColorTemperature", 9-"LowColorTemperature", 10-"AutoColorTemperature", 11-"CustomColorTemperature"
+	 * 0WF=:b, 0-"Disable", 1-"Auto", 2-"Custom", 3-"Sunny", 4-"Cloudy", 5-"Home", 6-"Office", 7-"Night", 8-"HighColorTemperature", 9-"LowColorTemperature", 10-"AutoColorTemperature", 11-"CustomColorTemperature"
 	 * \endif
 	 */
 	public byte				byWhiteBalance;
@@ -46,7 +46,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Color temperature level. valid when WB is "CustomColorTemperature" .
 	 * \else
-	 * 色温等级, 白平衡为"CustomColorTemperature"模式下有效
+	 * I+NB5H<6, 0WF=:bN*"CustomColorTemperature"D#J=OBSPP'
 	 * \endif
 	 */
 	public byte				byColorTemperature;
@@ -55,7 +55,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Mirror
 	 * \else
-	 * 镜像
+	 * >5Oq
 	 * \endif
 	 */
 	public boolean				bMirror;
@@ -64,7 +64,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Flip
 	 * \else
-	 * 翻转
+	 * 7-W*
 	 * \endif
 	 */
 	public boolean				bFlip;
@@ -73,7 +73,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Iris automatic
 	 * \else
-	 * 自动光圈
+	 * WT6/9bH&
 	 * \endif
 	 */
 	public boolean				bIrisAuto;
@@ -82,7 +82,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Auto enable IR compensation light according to the environment.
 	 * \else
-	 * 根据环境光自动开启红外补偿灯
+	 * 8y>];7>39bWT6/?*Ft:lMb293%5F
 	 * \endif
 	 */
 	public boolean				bInfraRed;
@@ -91,7 +91,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Red gain red. Valid when WB is "Custom" mode (0~100)
 	 * \else
-	 * 红色增益调节，白平衡为"Custom"模式下有效 0~100
+	 * :lI+TvRf5w=Z#,0WF=:bN*"Custom"D#J=OBSPP' 0~100
 	 * \endif
 	 */
 	public byte				byGainRed;
@@ -100,7 +100,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Blue gain setup. Valid when WB is "Custom" mode (0~100)
 	 * \else
-	 * 蓝色增益调节，白平衡为"Custom"模式下有效 0~100
+	 * @6I+TvRf5w=Z#,0WF=:bN*"Custom"D#J=OBSPP' 0~100
 	 * \endif
 	 */
 	public byte				byGainBlue;
@@ -109,7 +109,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Green gain. Valid when WB is "Custom" mode  (0~100)
 	 * \else
-	 * 绿色增益调节，白平衡为"Custom"模式下有效 0~100
+	 * BLI+TvRf5w=Z#,0WF=:bN*"Custom"D#J=OBSPP' 0~100
 	 * \endif
 	 */
 	public byte				byGainGreen;
@@ -118,7 +118,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Exposure mode; range value depends on device capacity set; 0-automatic, 1- exposure level1, 2-exposure level 2.  Mn-1:Max exposure level  n auto exposure of max and min time. n+1 custom exposure time (n==byExposureEn)
 	 * \else
-	 * 曝光模式；取值范围取决于设备能力集：0-自动曝光，1-曝光等级1，2-曝光等级2…n-1最大曝光等级数 n带时间上下限的自动曝光 n+1自定义时间手动曝光 (n==byExposureEn）
+	 * FX9bD#J=#;H!V576N'H!>vSZIh18D\A&</#:0-WT6/FX9b#,1-FX9b5H<61#,2-FX9b5H<62!-n-1Wn4sFX9b5H<6J} n4xJ1<dIOOBO^5DWT6/FX9b n+1WT6(ReJ1<dJV6/FX9b (n==byExposureEn#)
 	 * \endif
 	 */
 	public byte				byExposure;
@@ -127,7 +127,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Auto exposure value min limit or manual axposure custom, unit is millisecond (0.1ms~80ms).
 	 * \else
-	 * 自动曝光时间下限或者手动曝光自定义时间,毫秒为单位，取值0.1ms~80ms
+	 * WT6/FX9bJ1<dOBO^;rU_JV6/FX9bWT6(ReJ1<d,:ACkN*5%N;#,H!V50.1ms~80ms
 	 * \endif
 	 */
 	public float				fExposureValue1;
@@ -136,7 +136,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Auto exposure time max limit, unit is millisecond (0.1ms~80ms)
 	 * \else
-	 * 自动曝光时间上限,毫秒为单位，取值0.1ms~80ms
+	 * WT6/FX9bJ1<dIOO^,:ACkN*5%N;#,H!V50.1ms~80ms
 	 * \endif
 	 */
 	public float				fExposureValue2;
@@ -145,7 +145,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Auto gain 
 	 * \else
-	 * 自动增益
+	 * WT6/TvRf
 	 * \endif
 	 */
 	public boolean				bGainAuto;
@@ -154,7 +154,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * When gainAuto is true, it is max gain automatic limit, otherwise, it is fixed value gain
 	 * \else
-	 * 增益调节, GainAuto为true时表示自动增益的上限，否则表示固定的增益值
+	 * TvRf5w=Z, GainAutoN*trueJ11mJ>WT6/TvRf5DIOO^#,7qTr1mJ>9L6(5DTvRfV5
 	 * \endif
 	 */
 	public byte				byGain;
@@ -163,7 +163,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Signal format, 0-Inside (internal input).1-BT656 2-720p 3-1080p  4-1080i  5-1080sF 
 	 * \else
-	 * 信号格式, 0-Inside(内部输入) 1-BT656 2-720p 3-1080p  4-1080i  5-1080sF
+	 * PE:E8qJ=, 0-Inside(DZ2?JdHk) 1-BT656 2-720p 3-1080p  4-1080i  5-1080sF
 	 * \endif
 	 */
 	public byte				bySignalFormat;
@@ -172,7 +172,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0-non-rotate, 1- rotate 90 clockwise, 2-rotate 90 counterclockwise
 	 * \else
-	 * 0-不旋转，1-顺时针90°，2-逆时针90°
+	 * 0-2;P}W*#,1-K3J1Uk90!c#,2-DfJ1Uk90!c
 	 * \endif
 	 */
 	public byte				byRotate90;
@@ -181,7 +181,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * External sych phase set up.0~360	
 	 * \else
-	 * 外同步的相位设置 0~360
+	 * MbM,2=5DO`N;IhVC 0~360
 	 * \endif
 	 */
 	public float               fExternalSyncPhase;
@@ -190,7 +190,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * External sync signal input, 0-INT. 1- LL
 	 * \else
-	 * 外部同步信号输入,0-内部同步 1-外部同步
+	 * Mb2?M,2=PE:EJdHk,0-DZ2?M,2= 1-Mb2?M,2=
 	 * \endif
 	 */
 	public byte                byExternalSync;
@@ -199,7 +199,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Double exposure, 0-not use, 1-double exposure with full frame, as image and video differentiated only in parameter  2- double  exposure with half frame, as image and and video differentiated completely
 	 * \else
-	 * 双快门, 0-不启用，1-双快门全帧率，即图像和视频只有快门参数不同，2-双快门半帧率，即图像和视频快门及白平衡参数均不同
+	 * K+?lCE, 0-2;FtSC#,1-K+?lCEH+V!BJ#,<4M<Oq:MJSF5V;SP?lCE2NJ}2;M,#,2-K+?lCE0kV!BJ#,<4M<Oq:MJSF5?lCE<00WF=:b2NJ}>y2;M,
 	 * \endif
 	 */
 	public byte				byDoubleExposure;
@@ -208,7 +208,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * WDR value
 	 * \else
-	 * 宽动态值
+	 * ?m6/L,V5
 	 * \endif
 	 */
 	public byte                byWideDynamicRange;
@@ -217,7 +217,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Night config
 	 * \else
-	 * 夜晚参数
+	 * R9Mm2NJ}
 	 * \endif
 	 */
 	public CFG_VIDEO_IN_NIGHT_OPTIONS stuNightOptions = new CFG_VIDEO_IN_NIGHT_OPTIONS();
@@ -226,7 +226,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Flashling config 
 	 * \else
-	 * 闪光灯配置
+	 * IA9b5FEdVC
 	 * \endif
 	 */
 	public CFG_FLASH_CONTROL	stuFlash = new CFG_FLASH_CONTROL();
@@ -235,7 +235,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Snapshot option, doule exposure only
 	 * \else
-	 * 抓拍参数, 双快门时有效
+	 * W%ED2NJ}, K+?lCEJ1SPP'
 	 * \endif
 	 */
 	public CFG_VIDEO_IN_SNAPSHOT_OPTIONS stuSnapshot = new CFG_VIDEO_IN_SNAPSHOT_OPTIONS();
@@ -244,16 +244,16 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * fish eye
 	 * \else
-	 * 鱼眼镜头
+	 * ScQ[>5M7
 	 * \endif
 	 */
 	public CFG_FISH_EYE        stuFishEye = new CFG_FISH_EYE();
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * 0-off￡?1-easy focus￡?2-auto focus
+	 * 0-off!j?1-easy focus!j?2-auto focus
 	 * \else
-	 * 0-关闭，1-辅助聚焦，2-自动聚焦
+	 * 0-9X1U#,1-8(Vz>[=9#,2-WT6/>[=9
 	 * \endif
 	 */
 	public byte                byFocusMode;
@@ -262,7 +262,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * min gain
 	 * \else
-	 * 增益下限
+	 * TvRfOBO^
 	 * \endif
 	 */
 	public byte				byGainMin;
@@ -271,7 +271,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * max gain
 	 * \else
-	 * 增益上限
+	 * TvRfIOO^
 	 * \endif
 	 */
 	public byte				byGainMax;
@@ -280,7 +280,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * prevent flashing mode 0-Outdoor 1-50Hz prevent flashing 2-60Hz prevent flashing
 	 * \else
-	 * 防闪烁模式 0-Outdoor 1-50Hz防闪烁 2-60Hz防闪烁
+	 * 7@IAK8D#J= 0-Outdoor 1-50Hz7@IAK8 2-60Hz7@IAK8
 	 * \endif
 	 */
 	public byte				byAntiFlicker;
@@ -289,7 +289,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * exposure mode, effective exposure levels for automatic exposure,0-auto,1-plus,4-manual
 	 * \else
-	 * 曝光模式调节 曝光等级为自动曝光时有效，取值：0-默认自动，1-增益优先，2-快门优先,4-手动
+	 * FX9bD#J=5w=Z FX9b5H<6N*WT6/FX9bJ1SPP'#,H!V5#:0-D,HOWT6/#,1-TvRfSEOH#,2-?lCESEOH,4-JV6/
 	 * \endif
 	 */
 	public byte				byExposureMode;
@@ -298,7 +298,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * glare inhibition[1~100] 0-close
 	 * \else
-	 * 强光抑制 0-关闭， 1~100为范围值
+	 * G?9bRVVF 0-9X1U#, 1~100N*76N'V5
 	 * \endif
 	 */
 	public byte                byGlareInhibition;
@@ -307,7 +307,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * back light region       
 	 * \else
-	 * 背光补偿区域
+	 * 139b293%GxSr
 	 * \endif
 	 */
 	public CFG_RECT			stuBacklightRegion = new CFG_RECT();
@@ -316,7 +316,7 @@ public class CFG_VIDEO_IN_OPTIONS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * normal option
 	 * \else
-	 * 普通参数
+	 * FUM(2NJ}
 	 * \endif
 	 */
 	public CFG_VIDEO_IN_NORMAL_OPTIONS stuNormalOptions = new CFG_VIDEO_IN_NORMAL_OPTIONS();

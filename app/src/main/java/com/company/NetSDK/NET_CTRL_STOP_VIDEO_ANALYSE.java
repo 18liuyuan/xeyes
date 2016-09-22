@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * INetSDK.ControlDevice's param: SDK_CTRL_STOP_VIDEO_ANALYSE 
  * \else
- * INetSDK.ControlDevice接口的 SDK_CTRL_STOP_VIDEO_ANALYSE 命令参数
+ * INetSDK.ControlDevice=S?Z5D SDK_CTRL_STOP_VIDEO_ANALYSE C|An2NJ}
  * \endif
  */
 public class NET_CTRL_STOP_VIDEO_ANALYSE implements Serializable {
@@ -19,7 +19,7 @@ public class NET_CTRL_STOP_VIDEO_ANALYSE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel ID  
 	 * \else
-	 * 通道号  
+	 * M(5@:E  
 	 * \endif
 	 */
 	public int                 nChannelId;  

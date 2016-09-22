@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * disk alarm
  * \else
- * ”≤≈Ã±®æØ
+ * S2EL1(>/
  * \endif
  */
 public class ALARM_DISK_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_DISK_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * channel number
 	 * \else
-	 * ”≤≈ÃÕ®µ¿∫≈
+	 * S2ELM(5@:E
 	 * \endif
 	 */
 	public int                nChannel;
@@ -28,7 +28,7 @@ public class ALARM_DISK_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * number, 0: main trank,1: extern trank1, 2: extern trank2 
 	 * \else
-	 * ¥≈≈Ã¡–’Û∫≈, 0: ÷˜πÒ£¨1: ¿©’ππÒ1,  2: ¿©’ππÒ2 
+	 * 4EELAPUs:E, 0: Vw9q#,1: @)U99q1,  2: @)U99q2 
 	 * \endif
 	 */
 	public int                nHDDNumber;
@@ -37,7 +37,7 @@ public class ALARM_DISK_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * state, 0: Unknown, 1: Running, 2: Offline, 3: Warning, 4: Failed
 	 * \else
-	 * ”≤≈Ã◊¥Ã¨, 0: Unknown, 1: Running, 2: Offline, 3: Warning, 4: Failed
+	 * S2ELW4L,, 0: Unknown, 1: Running, 2: Offline, 3: Warning, 4: Failed
 	 * \endif
 	 */
 	public int                nHDDState;                           

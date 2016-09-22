@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 /**
  * \if ENGLISH_LANG
- * iscsi Direct Deposit，Source Data Server Configuration Port Structure
+ * iscsi Direct Deposit#,Source Data Server Configuration Port Structure
  * \else
- * iscsi直存，元数据服务器配置接口
+ * iscsiV14f#,T*J}>]7~NqFwEdVC=S?Z
  * \endif
  */
 public class CFG_METADATA_SERVER implements Serializable {
@@ -20,7 +20,7 @@ public class CFG_METADATA_SERVER implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable Swch 
 	 * \else
-	 * 使能开关
+	 * J9D\?*9X
 	 * \endif
 	 */
 	public boolean			bEnable;
@@ -29,7 +29,7 @@ public class CFG_METADATA_SERVER implements Serializable {
 	 * \if ENGLISH_LANG
 	 * IP Adrress Or Nerwork Domian Name 
 	 * \else
-	 * IP地址或网络名
+	 * IP5XV7;rMxBgC{
 	 * \endif
 	 */
 	public byte[]			szAddress = new byte[FinalVar.MAX_ADDRESS_LEN];
@@ -38,7 +38,7 @@ public class CFG_METADATA_SERVER implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port No.	
 	 * \else
-	 * 端口号
+	 * 6K?Z:E
 	 * \endif
 	 */
 	public int				dwPort;
@@ -47,7 +47,7 @@ public class CFG_METADATA_SERVER implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Username 
 	 * \else
-	 * 帐户名  
+	 * UJ;'C{  
 	 * \endif
 	 */
 	public byte[]			szUserName = new byte[FinalVar.MAX_USERNAME_LEN];
@@ -56,16 +56,16 @@ public class CFG_METADATA_SERVER implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Password 
 	 * \else
-	 * 密码
+	 * C\Bk
 	 * \endif
 	 */
 	public byte[]			szPassword = new byte[FinalVar.MAX_PASSWORD_LEN];
 	
  	/**
 	 * \if ENGLISH_LANG
-	 * distributed ID in a unified way For the Device Using Source Data Server，Device Marked By the ID  
+	 * distributed ID in a unified way For the Device Using Source Data Server#,Device Marked By the ID  
 	 * \else
-	 * 为使用元数据服务器的设备统一分配的ID，设备以此ID标识自己
+	 * N*J9SCT*J}>]7~NqFw5DIh18M3R;7VEd5DID#,Ih18RT4KID1jJ6WT<:
 	 * \endif
 	 */
 	public byte[]			szDeviceID = new byte[FinalVar.MAX_REMOTEDEVICENAME_LEN];

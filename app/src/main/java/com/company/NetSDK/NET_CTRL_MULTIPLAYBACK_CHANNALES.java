@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * INetSDK.ControlDevice's param SDK_CTRL_MULTIPLAYBACK_CHANNALES 
  * \else
- * INetSDK.ControlDevice接口的 SDK_CTRL_MULTIPLAYBACK_CHANNALES 命令参数 
+ * INetSDK.ControlDevice=S?Z5D SDK_CTRL_MULTIPLAYBACK_CHANNALES C|An2NJ} 
  * \endif
  */
 public class NET_CTRL_MULTIPLAYBACK_CHANNALES implements Serializable {
@@ -17,9 +17,9 @@ public class NET_CTRL_MULTIPLAYBACK_CHANNALES implements Serializable {
 
 	/**
 	 * \if ENGLISH_LANG
-	 * Playback Handle，CLIENT_MultiPlayBack Returns the Value
+	 * Playback Handle#,CLIENT_MultiPlayBack Returns the Value
 	 * \else
-	 * 回放句柄，CLIENT_MultiPlayBack接口返回值
+	 * ;X7E>d1z#,CLIENT_MultiPlayBack=S?Z75;XV5
 	 * \endif
 	 */
 	public long     	lPlayBackHandle; 
@@ -28,7 +28,7 @@ public class NET_CTRL_MULTIPLAYBACK_CHANNALES implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Preview Channel ID
 	 * \else
-	 * 预览通道号
+	 * T$@@M(5@:E
 	 * \endif
 	 */
 	public int        	nChannels[] = new int[FinalVar.SDK_MAX_MULTIPLAYBACK_CHANNEL_NUM];
@@ -37,7 +37,7 @@ public class NET_CTRL_MULTIPLAYBACK_CHANNALES implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Preview Channel Number 
 	 * \else
-	 * 预览通道数 
+	 * T$@@M(5@J} 
 	 * \endif
 	 */
 	public int      	nChannelNum; 

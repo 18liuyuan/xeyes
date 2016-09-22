@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * 485 Decoder Configuration
  * \else
- * 485解码器配置
+ * 485=bBkFwEdVC
  * \endif
  */
 public class SDK_485_CFG implements Serializable {
@@ -20,7 +20,7 @@ public class SDK_485_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Com Attributes
 	 * \else
-	 * 串口属性
+	 * 4.?ZJtPT
 	 * \endif
 	 */
 	public SDK_COMM_PROP        struComm = new SDK_COMM_PROP();
@@ -29,7 +29,7 @@ public class SDK_485_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Protocol type,corresponding to the subscriptof "Protocol List(Refer to SDKDEV_COMM_CFG)
 	 * \else
-	 * 协议类型，对应"协议名列表(参考SDKDEV_COMM_CFG)下标
+	 * P-Ri@`PM#,6TS&"P-RiC{AP1m(2N?<SDKDEV_COMM_CFG)OB1j
 	 * \endif
 	 */
 	public byte                wProtocol;
@@ -38,16 +38,16 @@ public class SDK_485_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0-Compatible,local PTZ 1-Remote network PTZ(DEV_ENCODER_CFG) 
 	 * \else
-	 * 0-兼容，本地云台 1-远程网络云台,通过能力查询(DEV_ENCODER_CFG) 
+	 * 0-<fH]#,1>5XTFL( 1-T63LMxBgTFL(,M(9}D\A&2iQ/(DEV_ENCODER_CFG) 
 	 * \endif
 	 */
 	public byte                bPTZType;
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * Decoder Address；0 - 255
+	 * Decoder Address#;0 - 255
 	 * \else
-	 * 解码器地址；0 - 255 
+	 * =bBkFw5XV7#;0 - 255 
 	 * \endif
 	 */
 	public byte                wDecoderAddress;
@@ -56,7 +56,7 @@ public class SDK_485_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Martix ID
 	 * \else
-	 * 矩阵号
+	 * >XUs:E
 	 * \endif
 	 */
 	public byte                byMartixID;

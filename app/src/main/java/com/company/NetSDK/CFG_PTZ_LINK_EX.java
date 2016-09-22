@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Activated PTZ info extension
  * \else
- * 联动云台信息扩展
+ * A*6/TFL(PEO"@)U9
  * \endif
  */
 public class CFG_PTZ_LINK_EX implements Serializable {
@@ -20,7 +20,7 @@ public class CFG_PTZ_LINK_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Activated type 
 	 * \else
-	 * 联动类型 , CFG_LINK_TYPE
+	 * A*6/@`PM , CFG_LINK_TYPE
 	 * \endif
 	 */
 	public int				emType;				
@@ -29,7 +29,7 @@ public class CFG_PTZ_LINK_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Activated parameter 1
 	 * \else
-	 * 联动参数1
+	 * A*6/2NJ}1
 	 * \endif
 	 */
 	public int			    nParam1;			
@@ -38,7 +38,7 @@ public class CFG_PTZ_LINK_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Activated parameter 2
 	 * \else
-	 * 联动参数2
+	 * A*6/2NJ}2
 	 * \endif
 	 */
 	public int			    nParam2;            
@@ -47,7 +47,7 @@ public class CFG_PTZ_LINK_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Activated parameter 3
 	 * \else
-	 * 联动参数3
+	 * A*6/2NJ}3
 	 * \endif
 	 */
 	public int			    nParam3;            
@@ -56,7 +56,7 @@ public class CFG_PTZ_LINK_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * All activated PTZ channels
 	 * \else
-	 * 所联动云台通道
+	 * KyA*6/TFL(M(5@
 	 * \endif
 	 */
 	public int			    nChannelID;         

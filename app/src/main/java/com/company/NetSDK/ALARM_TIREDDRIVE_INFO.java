@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Fatigue Driving Alarm
  * \else
- * 疲劳驾驶报警
+ * F#@M<]J;1(>/
  * \endif
  */
 public class ALARM_TIREDDRIVE_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_TIREDDRIVE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * struct size
 	 * \else
-	 * 0:开始 1:停止
+	 * 0:?*J< 1:M#V9
 	 * \endif
 	 */
 	public int               nAction;
@@ -28,7 +28,7 @@ public class ALARM_TIREDDRIVE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:stop 1:start
 	 * \else
-	 * 持续驾驶时间，单位分钟
+	 * 3VPx<]J;J1<d#,5%N;7VVS
 	 * \endif
 	 */
 	public int               nDriveTime;
@@ -37,7 +37,7 @@ public class ALARM_TIREDDRIVE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * drive time, unit:minute
 	 * \else
-	 * 事件发生时间
+	 * JB<~7"IzJ1<d
 	 * \endif
 	 */
 	public NET_TIME          stTime = new NET_TIME();

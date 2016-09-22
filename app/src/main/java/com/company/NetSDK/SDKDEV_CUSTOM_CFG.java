@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * custom configuration
  * \else
- * 用户自定义配置
+ * SC;'WT6(ReEdVC
  * \endif
  */
 public class SDKDEV_CUSTOM_CFG implements Serializable {
@@ -20,7 +20,7 @@ public class SDKDEV_CUSTOM_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * custom configuration information
 	 * \else
-	 * 用户自定义配置信息
+	 * SC;'WT6(ReEdVCPEO"
 	 * \endif
 	 */
 	public byte                   szData[] = new byte[1024]; 

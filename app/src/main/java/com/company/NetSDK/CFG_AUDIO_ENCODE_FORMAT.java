@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Audio Format
  * \else
- * 音频格式
+ * RtF58qJ=
  * \endif
  */
 public class CFG_AUDIO_ENCODE_FORMAT implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_AUDIO_ENCODE_FORMAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * ability
 	 * \else
-	 * 能力
+	 * D\A&
 	 * \endif
 	 */
 	public boolean				abCompression;
@@ -31,9 +31,9 @@ public class CFG_AUDIO_ENCODE_FORMAT implements Serializable {
 
 	/**
 	 * \if ENGLISH_LANG
-	 * Audio Compression Format，CFG_AUDIO_FORMAT 
+	 * Audio Compression Format#,CFG_AUDIO_FORMAT 
 	 * \else
-	 * 音频压缩模式, CFG_AUDIO_FORMAT
+	 * RtF5Q9KuD#J=, CFG_AUDIO_FORMAT
 	 * \endif
 	 */
 	public int					emCompression;
@@ -42,7 +42,7 @@ public class CFG_AUDIO_ENCODE_FORMAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Audio Sample Depth 
 	 * \else
-	 * 音频采样深度
+	 * RtF52IQyIn6H
 	 * \endif
 	 */
 	public int					nDepth;
@@ -51,7 +51,7 @@ public class CFG_AUDIO_ENCODE_FORMAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Audio Sample Frequency 
 	 * \else
-	 * 音频采样频率
+	 * RtF52IQyF5BJ
 	 * \endif
 	 */
 	public int					nFrequency;
@@ -60,7 +60,7 @@ public class CFG_AUDIO_ENCODE_FORMAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Audio Sample Mode 
 	 * \else
-	 * 音频编码模式
+	 * RtF51`BkD#J=
 	 * \endif
 	 */
 	public int					nMode;
@@ -69,7 +69,7 @@ public class CFG_AUDIO_ENCODE_FORMAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Audio Packet Mode, 0-DHAV, 1-PS 
 	 * \else
-	 * 音频打包模式, 0-DHAV, 1-PS
+	 * RtF54r0|D#J=, 0-DHAV, 1-PS
 	 * \endif
 	 */
 	public int					nFrameType;
@@ -78,7 +78,7 @@ public class CFG_AUDIO_ENCODE_FORMAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Audio Packet Period, ms 
 	 * \else
-	 * 音频打包周期, ms
+	 * RtF54r0|V\FZ, ms
 	 * \endif
 	 */
 	public int					nPacketPeriod;

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * GetSplitWindowsInfo's interface output param
  * \else
- * GetSplitWindowsInfo接口输出参数
+ * GetSplitWindowsInfo=S?ZJd3v2NJ}
  * \endif
  */
 public class SDK_OUT_SPLIT_GET_WINDOWS implements Serializable {
@@ -19,8 +19,8 @@ public class SDK_OUT_SPLIT_GET_WINDOWS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Windows info
 	 * \else
-	 * 窗口信息
+	 * 40?ZPEO"
 	 * \endif
 	 */
-	public SDK_BLOCK_COLLECTION	stuWindows;					
+	public SDK_BLOCK_COLLECTION	stuWindows = new SDK_BLOCK_COLLECTION();					
 }

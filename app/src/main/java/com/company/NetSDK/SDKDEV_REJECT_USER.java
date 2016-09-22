@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Reject User, INetSDK.ControlDevice(SDK_REJECT_USER)
  * \else
- * 剔除用户, INetSDK.ControlDevice(SDK_REJECT_USER)
+ * L^3}SC;', INetSDK.ControlDevice(SDK_REJECT_USER)
  * \endif
  */
 public class SDKDEV_REJECT_USER implements Serializable {
@@ -19,7 +19,7 @@ public class SDKDEV_REJECT_USER implements Serializable {
 	 * \if ENGLISH_LANG
 	 * User Account
 	 * \else
-	 * 用户数量
+	 * SC;'J}A?
 	 * \endif
 	 */
 	public int                      nUserCount;

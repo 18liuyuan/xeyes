@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Record Operation Parameter
  * \else
- * 记录集操作参数
+ * <GB<</2YWw2NJ}
  * \endif
  */
 public class NET_CTRL_RECORDSET_PARAM implements Serializable {
@@ -19,25 +19,25 @@ public class NET_CTRL_RECORDSET_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Record Information Type, EM_NET_RECORD_TYPE
 	 * \else
-	 * 记录集信息类型, EM_NET_RECORD_TYPE
+	 * <GB<</PEO"@`PM, EM_NET_RECORD_TYPE
 	 * \endif
 	 */
 	public int					nType; 
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * New/Renew/Inquire,It is Record Information Cache，the EM_NET_RECORD_TYPE Note is Details)
+	 * New/Renew/Inquire,It is Record Information Cache#,the EM_NET_RECORD_TYPE Note is Details)
 	 * Delete,It is Record Number(Int Model)
 	 * \else
-	 * 新增\更新\查询时,为记录集信息缓存，详见EM_NET_RECORD_TYPE注释
-	 * 1:交通白名单账户记录,对应 FIND_RECORD_TRAFFICREDLIST_CONDITION
-	 * 2:交通黑名单账号记录,对应 FIND_RECORD_TRAFFICREDLIST_CONDITION
-	 * 3:刻录案件记录,对应 FIND_RECORD_BURN_CASE_CONDITION
-	 * 4:门禁卡,对应 NET_RECORDSET_ACCESS_CTL_CARD
-	 * 5:门禁密码,对应 NET_RECORDSET_ACCESS_CTL_PWD
-	 * 6:门禁出入记录,对应 NET_RECORDSET_ACCESS_CTL_CARDREC
-	 * 7:假日记录集, 对应 NET_RECORDSET_HOLIDAY
-	 * 删除时,为记录编号(int型)
+	 * PBTv\8|PB\2iQ/J1,N*<GB<</PEO";:4f#,Oj<{EM_NET_RECORD_TYPEW"JM
+	 * 1:=;M(0WC{5%UK;'<GB<,6TS& FIND_RECORD_TRAFFICREDLIST_CONDITION
+	 * 2:=;M(:ZC{5%UK:E<GB<,6TS& FIND_RECORD_TRAFFICREDLIST_CONDITION
+	 * 3:?LB<08<~<GB<,6TS& FIND_RECORD_BURN_CASE_CONDITION
+	 * 4:CE={?(,6TS& NET_RECORDSET_ACCESS_CTL_CARD
+	 * 5:CE={C\Bk,6TS& NET_RECORDSET_ACCESS_CTL_PWD
+	 * 6:CE={3vHk<GB<,6TS& NET_RECORDSET_ACCESS_CTL_CARDREC
+	 * 7:<YHU<GB<</, 6TS& NET_RECORDSET_HOLIDAY
+	 * I>3}J1,N*<GB<1`:E(intPM)
 	 * \endif
 	 */
 	public Object				pBuf;
@@ -46,7 +46,7 @@ public class NET_CTRL_RECORDSET_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Record Information Cache Size
 	 * \else
-	 * 记录集信息缓存大小
+	 * <GB<</PEO";:4f4sP!
 	 * \endif
 	 */
 	public int					nBufLen; 

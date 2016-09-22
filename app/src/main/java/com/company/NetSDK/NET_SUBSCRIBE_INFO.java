@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Subscription type
  * \else
- * 订阅类型
+ * 6)TD@`PM
  * \endif
  */
 public class NET_SUBSCRIBE_INFO implements Serializable {
@@ -20,7 +20,7 @@ public class NET_SUBSCRIBE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Event code
 	 * \else
-	 * 事件码
+	 * JB<~Bk
 	 * \endif
 	 */
 	public int                             nCode;
@@ -30,8 +30,8 @@ public class NET_SUBSCRIBE_INFO implements Serializable {
 	 * Event sub-types, EM_EVENT_SUB_CODE_UNKNOWN as invalid
 	 * Effective only VideoAbnormalDetection, alarmLocal and other alarm events include a variety of types 
 	 * \else
-	 * 事件子类型 EM_EVENT_SUB_CODE, EM_EVENT_SUB_CODE_UNKNOWN为无效
-	 * 仅对VideoAbnormalDetection,AlarmLocal等包含多种类型的报警事件有效
+	 * JB<~WS@`PM EM_EVENT_SUB_CODE, EM_EVENT_SUB_CODE_UNKNOWNN*N^P'
+	 * =v6TVideoAbnormalDetection,AlarmLocal5H0|:,6`VV@`PM5D1(>/JB<~SPP'
 	 * \endif
 	 */
 	public int                             emSubCode;
@@ -40,7 +40,7 @@ public class NET_SUBSCRIBE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Subscribe to the number of channels, without channel concept is 0
 	 * \else
-	 * 订阅的通道数量, 若无通道概念则为0
+	 * 6)TD5DM(5@J}A?, HtN^M(5@8EDnTrN*0
 	 * \endif
 	 */
     public int                             nChnNum;
@@ -49,7 +49,7 @@ public class NET_SUBSCRIBE_INFO implements Serializable {
      * \if ENGLISH_LANG
      * Channel number collection
      * \else
-     * 通道号集合
+     * M(5@:E</:O
      * \endif
      */
     public int                             nIndexs[] = new int[FinalVar.MAX_MOBILE_CHANNEL_NUM];
@@ -60,10 +60,12 @@ public class NET_SUBSCRIBE_INFO implements Serializable {
      * Event is effective when to subscribe to "CallNoAnswered" 
      * CFG_CMD_MOBILE_PUSH_NOFITY_CFG is valid
      * \else
-     * 无应答号码（设备呼叫这些号码，无应答时，将向手机推送消息）
-     * 订阅"CallNoAnswered "事件时有效
-     * CFG_CMD_MOBILE_PUSH_NOFITY_CFG时有效
+     * N^S&4p:EBk#(Ih18:t=PUbP):EBk#,N^S&4pJ1#,=+OrJV;zMFKMO{O"#)
+     * 6)TD"CallNoAnswered "JB<~J1SPP'
+     * CFG_CMD_MOBILE_PUSH_NOFITY_CFGJ1SPP'
      * \endif
      */
     public byte                            szNumber[] = new byte[FinalVar.SDK_COMMON_STRING_16];
+    
+    public byte                            szSound[] = new byte[FinalVar.SDK_COMMON_STRING_64];
 }

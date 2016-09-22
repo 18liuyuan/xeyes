@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * tour enable configuration
  * \else
- * 轮巡使能配置
+ * BVQ2J9D\EdVC
  * \endif
  */
 public class SDKDEV_TOUR_ENABLE_CFG implements Serializable {
@@ -20,7 +20,7 @@ public class SDKDEV_TOUR_ENABLE_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * enable
 	 * \else
-	 * 轮巡使能
+	 * BVQ2J9D\
 	 * \endif
 	 */
 	public boolean                bEnable; 
@@ -29,7 +29,7 @@ public class SDKDEV_TOUR_ENABLE_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * is touring or not(read only). bStart=FALSE when tour is able but doesn't set
 	 * \else
-	 * 是否正在轮巡(只读). 轮巡使能打开但没有配置轮巡输入源时, bStart=FALSE
+	 * JG7qU}TZBVQ2(V;6A). BVQ2J9D\4r?*5+C;SPEdVCBVQ2JdHkT4J1, bStart=FALSE
 	 * \endif
 	 */
 	public boolean                bStart; 

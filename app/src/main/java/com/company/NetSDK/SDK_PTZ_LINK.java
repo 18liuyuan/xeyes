@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * PTZ activation
  * \else
- * 云台联动
+ * TFL(A*6/
  * \endif
  */
 public class SDK_PTZ_LINK implements Serializable {
@@ -25,12 +25,12 @@ public class SDK_PTZ_LINK implements Serializable {
 	 * <tr><td>3</td><td>Mode</td></tr>
 	 * </table>
 	 * \else
-	 * 类型
+	 * @`PM
 	 * <table>
-	 * <tr><td>iType</td><td>类型</td></tr>
-	 * <tr><td>1</td><td>预置点</td></tr>
-	 * <tr><td>2</td><td>点间巡航</td></tr>
-	 * <tr><td>3</td><td>模式</td></tr>
+	 * <tr><td>iType</td><td>@`PM</td></tr>
+	 * <tr><td>1</td><td>T$VC5c</td></tr>
+	 * <tr><td>2</td><td>5c<dQ2:=</td></tr>
+	 * <tr><td>3</td><td>D#J=</td></tr>
 	 * </table>
 	 * \endif
 	 */
@@ -40,7 +40,7 @@ public class SDK_PTZ_LINK implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Value
 	 * \else
-	 * 值
+	 * V5
 	 * \endif
 	 */
 	public int                 iValue;

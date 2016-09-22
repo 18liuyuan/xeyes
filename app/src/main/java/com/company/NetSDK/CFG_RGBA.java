@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * RGB Information
  * \else
- * RGBA–≈œ¢
+ * RGBAPEO"
  * \endif
  */
 public class CFG_RGBA implements Serializable {

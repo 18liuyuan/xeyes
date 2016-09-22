@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * HDD operation
  * \else
- * 硬盘操作, INetSDK.ControlDevice(sdk_CTRL_DISK)
+ * S2EL2YWw, INetSDK.ControlDevice(sdk_CTRL_DISK)
  * \endif
  */
 public class DISKCTRL_PARAM implements Serializable {
@@ -19,7 +19,7 @@ public class DISKCTRL_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Subscript of array stDisks of information structure DH_HARDDISK_STATE. It begins from 0. 
 	 * \else
-	 * 为硬盘信息结构体DH_HARDDISK_STATE里的数组stDisks下标，从0开始
+	 * N*S2ELPEO"=a99LeDH_HARDDISK_STATE@o5DJ}WistDisksOB1j#,4S0?*J<
 	 * \endif
 	 */
 	public int					nIndex;
@@ -30,9 +30,9 @@ public class DISKCTRL_PARAM implements Serializable {
 	 * 0 -  clear data, 1 - set as read-write HDD , 2 -  set as read-only HDD
 	 * 3 - set as redundant , 4 - restore error , 5 -set as snapshot disk  
 	 * \else
-	 * 操作类型，
-	 * 0 - 清除数据, 1 - 设为读写盘, 2 - 设为只读盘
-	 * 3 - 设为冗余盘, 4 - 恢复错误, 5 - 设为快照盘，7 - 弹出SD卡（对SD卡操作有效）
+	 * 2YWw@`PM#,
+	 * 0 - Ge3}J}>], 1 - IhN*6AP4EL, 2 - IhN*V;6AEL
+	 * 3 - IhN*H_S`EL, 4 - ;V844mNs, 5 - IhN*?lUUEL#,7 - 5/3vSD?(#(6TSD?(2YWwSPP'#)
 	 * \endif
 	 */
 	public 	int					ctrlType;
@@ -41,7 +41,7 @@ public class DISKCTRL_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * diskInfo, replace nIndex
 	 * \else
-	 * 磁盘信息, 由于磁盘顺序可能改变导致下标不准, 用来代替下标
+	 * 4EELPEO", SISZ4EELK3Pr?ID\8D1d5<VBOB1j2;W<, SC@44zLfOB1j
 	 * \endif
 	 */
 	public NET_DEV_DISKSTATE stuDisk = new NET_DEV_DISKSTATE();

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Capture each of the corresponding structure
  * \else
- * 每组抓包对应的配置结构
+ * C?WiW%0|6TS&5DEdVC=a99
  * \endif
  */
 public class SDK_ATM_SNIFFER_CFG_EX implements Serializable {
@@ -19,7 +19,7 @@ public class SDK_ATM_SNIFFER_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Source address capture
 	 * \else
-	 * 抓包源地址
+	 * W%0|T45XV7
 	 * \endif
 	 */
 	public byte                SnifferSrcIP[] = new byte[FinalVar.SDK_MAX_IPADDR_LEN];
@@ -28,7 +28,7 @@ public class SDK_ATM_SNIFFER_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Capture source port
 	 * \else
-	 * 抓包源端口
+	 * W%0|T46K?Z
 	 * \endif
 	 */
 	public int                 SnifferSrcPort;
@@ -37,7 +37,7 @@ public class SDK_ATM_SNIFFER_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Destination address capture
 	 * \else
-	 * 抓包目标地址
+	 * W%0|D?1j5XV7
 	 * \endif
 	 */
 	public byte                SnifferDestIP[] = new byte[FinalVar.SDK_MAX_IPADDR_LEN];
@@ -46,7 +46,7 @@ public class SDK_ATM_SNIFFER_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Capture the target port
 	 * \else
-	 * 抓包目标端口
+	 * W%0|D?1j6K?Z
 	 * \endif
 	 */
 	public int                 SnifferDestPort;
@@ -55,7 +55,7 @@ public class SDK_ATM_SNIFFER_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 6 FRAME Options
 	 * \else
-	 * 6个FRAME 选项
+	 * 68vFRAME Q!On
 	 * \endif
 	 */
 	public SDK_SNIFFER_FRAME_EX snifferFrame[] = new SDK_SNIFFER_FRAME_EX[FinalVar.SDK_SNIFFER_FRAMEID_NUM];
@@ -64,7 +64,7 @@ public class SDK_ATM_SNIFFER_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Display Position
 	 * \else
-	 * 显示位置
+	 * OTJ>N;VC
 	 * \endif
 	 */
 	public int                 displayPosition;
@@ -73,7 +73,7 @@ public class SDK_ATM_SNIFFER_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel mask
 	 * \else
-	 * 通道掩码  0  ~ 31 通道
+	 * M(5@QZBk  0  ~ 31 M(5@
 	 * \endif
 	 */
 	public int                 recdChannelMask;
@@ -82,7 +82,7 @@ public class SDK_ATM_SNIFFER_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Data sources enable
 	 * \else
-	 * 数据来源使能
+	 * J}>]@4T4J9D\
 	 * \endif
 	 */
 	public boolean                bDateScopeEnable;
@@ -91,7 +91,7 @@ public class SDK_ATM_SNIFFER_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Protocol enable
 	 * \else
-	 * 协议使能
+	 * P-RiJ9D\
 	 * \endif
 	 */
 	public boolean                bProtocolEnable;
@@ -100,7 +100,7 @@ public class SDK_ATM_SNIFFER_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Protocol name
 	 * \else
-	 * 协议名字
+	 * P-RiC{WV
 	 * \endif
 	 */
 	public byte                szProtocolName[] = new byte[FinalVar.SDK_SNIFFER_PROTOCOL_SIZE];
@@ -109,7 +109,7 @@ public class SDK_ATM_SNIFFER_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Capture mode; 0:net,1:232.
 	 * \else
-	 * 抓包方式，0:net,1:232.
+	 * W%0|7=J=#,0:net,1:232.
 	 * \endif
 	 */
 	public int                 nSnifferMode;
@@ -118,7 +118,7 @@ public class SDK_ATM_SNIFFER_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel submask  32 ~ 63 channel
 	 * \else
-	 * 通道掩码  32 ~ 63 通道
+	 * M(5@QZBk  32 ~ 63 M(5@
 	 * \endif
 	 */
 	public int                 recdChannelMask1;

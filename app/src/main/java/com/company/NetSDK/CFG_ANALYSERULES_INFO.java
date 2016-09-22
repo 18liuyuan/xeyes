@@ -4,7 +4,7 @@ package com.company.NetSDK;
  * \if ENGLISH_LANG
  * The Video Analysis Rule Configuration Corresponding To Every Video Input
  * \else
- * 每个视频输入通道对应的所有事件规则：缓冲区pRuleBuf填充多个事件规则信息，每个事件规则信息内容为CFG_RULE_INFO+"事件类型对应的规则配置结构体"。
+ * C?8vJSF5JdHkM(5@6TS&5DKySPJB<~9fTr#:;:3eGxpRuleBufLn3d6`8vJB<~9fTrPEO"#,C?8vJB<~9fTrPEO"DZH]N*CFG_RULE_INFO+"JB<~@`PM6TS&5D9fTrEdVC=a99Le"!#
  * \endif
  */
 public class CFG_ANALYSERULES_INFO
@@ -13,7 +13,7 @@ public class CFG_ANALYSERULES_INFO
 	 * \if ENGLISH_LANG
 	 * Event Rule Count 
 	 * \else
-	 * 事件规则个数
+	 * JB<~9fTr8vJ}
 	 * \endif
 	 */
 	public int 						nRuleCount;
@@ -22,7 +22,7 @@ public class CFG_ANALYSERULES_INFO
 	 * \if ENGLISH_LANG
 	 * The Event Analysis Rule Configuration Corresponding To Each Video Input 
 	 * \else
-	 * 每个视频输入通道对应的视频分析事件规则配置缓冲
+	 * C?8vJSF5JdHkM(5@6TS&5DJSF57VNvJB<~9fTrEdVC;:3e
 	 * \endif
 	 */
 	public int						nRuleLen;
@@ -31,7 +31,7 @@ public class CFG_ANALYSERULES_INFO
 	 * \if ENGLISH_LANG
 	 * Cache Size 
 	 * \else
-	 * 缓冲大小
+	 * ;:3e4sP!
 	 * \endif
 	 */
 	public byte[]					pRuleBuf;

@@ -13,7 +13,7 @@ public class SDK_TRAFFICFLOWSTAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * same as DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO.MachineGroup
 	 * \else
-	 * 同DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO.MachineGroup
+	 * M,DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO.MachineGroup
 	 * \endif
 	 */
 	public byte                szMachineAddress[] = new byte[256];
@@ -22,7 +22,7 @@ public class SDK_TRAFFICFLOWSTAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * same as DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO.MachineName
 	 * \else
-	 * 同DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO.MachineName
+	 * M,DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO.MachineName
 	 * \endif
 	 */
 	public byte                szMachineName[] = new byte[256];
@@ -31,7 +31,7 @@ public class SDK_TRAFFICFLOWSTAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * DrivingDirection "Approach" means driving direction,where the car is more near;"Leave"-means where if mor far to the car,the scend and third param means the location of the driving direction
 	 * \else
-	 * 行驶方向"Approach"-上行，即车辆离设备部署点越来越近；"Leave"-下行，即车辆离设备部署点越来越远，第二和第三个参数分别代表上行和下行的两个地点，UTF-8编码
+	 * PPJ;7=Or"Approach"-IOPP#,<435A>@kIh182?Jp5cT=@4T==|#;"Leave"-OBPP#,<435A>@kIh182?Jp5cT=@4T=T6#,5Z6~:M5ZH}8v2NJ}7V1p4z1mIOPP:MOBPP5DA=8v5X5c#,UTF-81`Bk
 	 * \endif
 	 */
 	public byte                szDrivingDirection[][] = new byte[3][32];
@@ -40,7 +40,7 @@ public class SDK_TRAFFICFLOWSTAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * lane number
 	 * \else
-	 * 车道号 使用用户配置的车道编号
+	 * 355@:E J9SCSC;'EdVC5D355@1`:E
 	 * \endif
 	 */
 	public int                 nLane;
@@ -49,7 +49,7 @@ public class SDK_TRAFFICFLOWSTAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Statistic time
 	 * \else
-	 * 统计时间，转换到UTC
+	 * M3<FJ1<d#,W*;;5=UTC
 	 * \endif
 	 */
 	public NET_TIME_EX         UTC = new NET_TIME_EX();
@@ -58,7 +58,7 @@ public class SDK_TRAFFICFLOWSTAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Statistic period, m
 	 * \else
-	 * 统计周期，单位分钟
+	 * M3<FV\FZ#,5%N;7VVS
 	 * \endif
 	 */
 	public int                 nPeriod;
@@ -67,7 +67,7 @@ public class SDK_TRAFFICFLOWSTAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * passed vehicle number
 	 * \else
-	 * 通过车辆总数
+	 * M(9}35A>W\J}
 	 * \endif
 	 */
 	public int                 nVehicles;
@@ -76,7 +76,7 @@ public class SDK_TRAFFICFLOWSTAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * average speed, km/h
 	 * \else
-	 * 平均车速，单位km/h
+	 * F=>y35KY#,5%N;km/h
 	 * \endif
 	 */
 	public float               fAverageSpeed;
@@ -85,7 +85,7 @@ public class SDK_TRAFFICFLOWSTAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * average length, m
 	 * \else
-	 * 平均车长，单位米
+	 * F=>y353$#,5%N;CW
 	 * \endif
 	 */
 	public float               fAverageLength;
@@ -94,7 +94,7 @@ public class SDK_TRAFFICFLOWSTAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * time occupy ratio,
 	 * \else
-	 * 时间占有率，即单位时间内通过断面的车辆所用时间的总和占单位时间的比例
+	 * J1<dU<SPBJ#,<45%N;J1<dDZM(9}6OCf5D35A>KySCJ1<d5DW\:MU<5%N;J1<d5D1H@}
 	 * \endif
 	 */
 	public float               fTimeOccupyRatio;
@@ -103,7 +103,7 @@ public class SDK_TRAFFICFLOWSTAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * space occupy ratio,
 	 * \else
-	 * 空间占有率，即按百分率计量的车辆长度总和除以时间间隔内车辆平均行驶距离
+	 * ?U<dU<SPBJ#,<4040Y7VBJ<FA?5D35A>3$6HW\:M3}RTJ1<d<d8tDZ35A>F=>yPPJ;>`@k
 	 * \endif
 	 */
 	public float               fSpaceOccupyRatio;
@@ -112,7 +112,7 @@ public class SDK_TRAFFICFLOWSTAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * space between two cars,m
 	 * \else
-	 * 车头间距，相邻车辆之间的距离，单位米/辆
+	 * 35M7<d>`#,O`AZ35A>V.<d5D>`@k#,5%N;CW/A>
 	 * \endif
 	 */
 	public float               fSpaceHeadway;
@@ -121,7 +121,7 @@ public class SDK_TRAFFICFLOWSTAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * time between two cars, s
 	 * \else
-	 * 车头时距，单位秒/辆
+	 * 35M7J1>`#,5%N;Ck/A>
 	 * \endif
 	 */
 	public float               fTimeHeadway;
@@ -130,7 +130,7 @@ public class SDK_TRAFFICFLOWSTAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * car density, every km
 	 * \else
-	 * 车辆密度，每公里的车辆数，单位辆/km
+	 * 35A>C\6H#,C?9+@o5D35A>J}#,5%N;A>/km
 	 * \endif
 	 */
 	public float               fDensity;
@@ -139,7 +139,7 @@ public class SDK_TRAFFICFLOWSTAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * over speed vehicle number
 	 * \else
-	 * 超速车辆数
+	 * 3,KY35A>J}
 	 * \endif
 	 */
 	public int                 nOverSpeedVehicles;
@@ -148,7 +148,7 @@ public class SDK_TRAFFICFLOWSTAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * under speed vehicle number
 	 * \else
-	 * 低速车辆数
+	 * 5MKY35A>J}
 	 * \endif
 	 */
 	public int                 nUnderSpeedVehicles;
@@ -157,7 +157,7 @@ public class SDK_TRAFFICFLOWSTAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * big car number
 	 * \else
-	 * 大车数量  车辆类型判断标准参见TrafficSnapshot配置表
+	 * 4s35J}A?  35A>@`PMEP6O1jW<2N<{TrafficSnapshotEdVC1m
 	 * \endif
 	 */
 	public int                 nLargeVehicles;
@@ -166,7 +166,7 @@ public class SDK_TRAFFICFLOWSTAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * mid car number
 	 * \else
-	 * 中型车数量
+	 * VPPM35J}A?
 	 * \endif
 	 */
 	public int                 nMediumVehicles;
@@ -175,7 +175,7 @@ public class SDK_TRAFFICFLOWSTAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * small car number
 	 * \else
-	 * 小车数量
+	 * P!35J}A?
 	 * \endif
 	 */
 	public int                 nSmallVehicles;
@@ -184,7 +184,7 @@ public class SDK_TRAFFICFLOWSTAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * moto car number
 	 * \else
-	 * 摩托车数量
+	 * D&MP35J}A?
 	 * \endif
 	 */
 	public int                 nMotoVehicles;
@@ -193,7 +193,7 @@ public class SDK_TRAFFICFLOWSTAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * long vehicle number
 	 * \else
-	 * 超长车数量
+	 * 3,3$35J}A?
 	 * \endif
 	 */
 	public int                 nLongVehicles;

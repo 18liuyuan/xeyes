@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Rainbush Configuration Information
  * \else
- * 雨刷配置
+ * SjK"EdVC
  * \endif
  */
 public class CFG_RAINBRUSH_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_RAINBRUSH_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Rainbush Enalbe 
 	 * \else
-	 * 雨刷使能
+	 * SjK"J9D\
 	 * \endif
 	 */
 	public boolean			bEnable;
@@ -28,7 +28,7 @@ public class CFG_RAINBRUSH_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Speed Rate,1:Fast;2:Middle;3:Slow 
 	 * \else
-	 * 雨刷速度,1:快速;2:中速;3:慢速
+	 * SjK"KY6H,1:?lKY;2:VPKY;3:B}KY
 	 * \endif
 	 */
 	public byte				bSpeedRate;
@@ -37,7 +37,7 @@ public class CFG_RAINBRUSH_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Event Response Period 
 	 * \else
-	 * 事件响应时间段
+	 * JB<~OlS&J1<d6N
 	 * \endif
 	 */
 	public CFG_TIME_SECTION[][]	stuTimeSection = new CFG_TIME_SECTION[FinalVar.WEEK_DAY_NUM][FinalVar.MAX_REC_TSECT];

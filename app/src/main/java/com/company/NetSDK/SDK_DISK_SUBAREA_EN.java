@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Net Disk Partition ability Structure
  * \else
- * 网络硬盘分区能力结构体
+ * MxBgS2EL7VGxD\A&=a99Le
  * \endif
  */
 public class SDK_DISK_SUBAREA_EN implements Serializable {
@@ -20,7 +20,7 @@ public class SDK_DISK_SUBAREA_EN implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Support NAS Partition or not 
 	 * \else
-	 * 是否支持网络硬盘分区
+	 * JG7qV'3VMxBgS2EL7VGx
 	 * \endif
 	 */
 	public boolean		bSupported;				
@@ -29,7 +29,7 @@ public class SDK_DISK_SUBAREA_EN implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Supported Partition Number 
 	 * \else
-	 * 支持分区的数目
+	 * V'3V7VGx5DJ}D?
 	 * \endif
 	 */
 	public int			nSupportNum;			

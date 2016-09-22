@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * MACcollision detection configuration
  * \else
- * MAC冲突检测配置
+ * MAC3eM;<l2bEdVC
  * \endif
  */
 public class ALARM_MAC_COLLISION_CFG implements Serializable {
@@ -20,7 +20,7 @@ public class ALARM_MAC_COLLISION_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable
 	 * \else
-	 * 使能
+	 * J9D\
 	 * \endif
 	 */
 	public boolean                bEnable;
@@ -29,7 +29,7 @@ public class ALARM_MAC_COLLISION_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm activation
 	 * \else
-	 * 报警联动
+	 * 1(>/A*6/
 	 * \endif
 	 */
 	public SDK_MSG_HANDLE       struHandle = new SDK_MSG_HANDLE();

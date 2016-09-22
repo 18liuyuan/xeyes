@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Snap function configuration
  * \else
- * 抓图功能配置
+ * W%M<9&D\EdVC
  * \endif
  */
 public class SDKDEV_SNAP_CFG implements Serializable {
@@ -21,7 +21,7 @@ public class SDKDEV_SNAP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Schedule snap button. (Go to alarm activation setup interface to enable alarm snap function.)
 	 * \else
-	 * 定时抓图开关(报警抓图开关在各报警联动配置中体现)
+	 * 6(J1W%M<?*9X(1(>/W%M<?*9XTZ8w1(>/A*6/EdVCVPLeOV)
 	 * \endif
 	 */
 	public byte             bTimingEnable;
@@ -30,7 +30,7 @@ public class SDKDEV_SNAP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * timing snapshot interval hour
 	 * \else
-	 * 定时抓图时间间隔小时数
+	 * 6(J1W%M<J1<d<d8tP!J1J}
 	 * \endif
 	 */
 	public byte             bPicIntervalHour;
@@ -39,7 +39,7 @@ public class SDKDEV_SNAP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Schedule snap interval. Unit is second. Now device max supports 30 minutes interval. 
 	 * \else
-	 * 定时抓图时间间隔，单位为秒,目前设备支持最大的抓图时间间隔为30分钟
+	 * 6(J1W%M<J1<d<d8t#,5%N;N*Ck,D?G0Ih18V'3VWn4s5DW%M<J1<d<d8tN*307VVS
 	 * \endif
 	 */
 	public short            PicTimeInterval;
@@ -48,10 +48,10 @@ public class SDKDEV_SNAP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Snap encode setup. Now supports resolution, video quality, frame rate setup. The frame rate here is negative number. It stands for the snap amount in one second.
 	 * \else
-	 * 抓图编码配置，现支持其中的分辨率、画质、帧率设置，帧率在这里是负数，表示一秒抓图的次数。
+	 * W%M<1`BkEdVC#,OVV'3VFdVP5D7V1fBJ!";-VJ!"V!BJIhVC#,V!BJTZUb@oJG8:J}#,1mJ>R;CkW%M<5D4NJ}!#
 	 * \endif
 	 */
-	public SDK_VIDEOENC_OPT  struSnapEnc[] = new SDK_VIDEOENC_OPT[SNAP_TYPE.SNAP_TYP_NUM];     // 抓图编码配置，现支持其中的分辨率、画质、帧率设置，帧率在这里是负数，表示一秒抓图的次数。
+	public SDK_VIDEOENC_OPT  struSnapEnc[] = new SDK_VIDEOENC_OPT[SNAP_TYPE.SNAP_TYP_NUM];     // W%M<1`BkEdVC#,OVV'3VFdVP5D7V1fBJ!";-VJ!"V!BJIhVC#,V!BJTZUb@oJG8:J}#,1mJ>R;CkW%M<5D4NJ}!#
 	
 	public SDKDEV_SNAP_CFG() {
 		for (int i = 0; i < SNAP_TYPE.SNAP_TYP_NUM; i++) {

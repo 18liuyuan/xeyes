@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Channel quantity info
  * \else
- * 通道数量信息
+ * M(5@J}A?PEO"
  * \endif
  */
 public class NET_CHN_COUNT_INFO implements Serializable {
@@ -20,7 +20,7 @@ public class NET_CHN_COUNT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device total channels(all valid channel sum)
 	 * \else
-	 * 设备总通道数(所有有效通道数之和)
+	 * Ih18W\M(5@J}(KySPSPP'M(5@J}V.:M)
 	 * \endif
 	 */
 	public int					nMaxTotal;
@@ -29,7 +29,7 @@ public class NET_CHN_COUNT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Configured channel number
 	 * \else
-	 * 已配置的通道数
+	 * RQEdVC5DM(5@J}
 	 * \endif
 	 */
 	public int					nCurTotal;
@@ -38,7 +38,7 @@ public class NET_CHN_COUNT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Max local channel number, including motherboard and pluggable sub channel
 	 * \else
-	 * 最大本地通道数, 含主板和可插拔子卡通道
+	 * Wn4s1>5XM(5@J}, :,Vw0e:M?I2e0NWS?(M(5@
 	 * \endif
 	 */
 	public int					nMaxLocal;
@@ -47,7 +47,7 @@ public class NET_CHN_COUNT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Configured local channel number
 	 * \else
-	 * 已配置本地通道数
+	 * RQEdVC1>5XM(5@J}
 	 * \endif
 	 */
 	public int					nCurLocal;
@@ -56,7 +56,7 @@ public class NET_CHN_COUNT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Max remote channel number
 	 * \else
-	 * 最大远程通道数
+	 * Wn4sT63LM(5@J}
 	 * \endif
 	 */
 	public int					nMaxRemote;
@@ -65,7 +65,7 @@ public class NET_CHN_COUNT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Configured remote channel
 	 * \else
-	 * 已配置远程通道数
+	 * RQEdVCT63LM(5@J}
 	 * \endif
 	 */
 	public int					nCurRemote;

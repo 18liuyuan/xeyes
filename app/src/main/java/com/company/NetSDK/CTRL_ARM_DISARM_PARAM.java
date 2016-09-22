@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Alarm arm and disarm control
  * \else
- * 报警布撤防控制, INetSDK.ControlDevice(SDK_CTRL_ARMED)
+ * 1(>/2<377@?XVF, INetSDK.ControlDevice(SDK_CTRL_ARMED)
  * \endif
  */
 public class CTRL_ARM_DISARM_PARAM implements Serializable {
@@ -19,7 +19,7 @@ public class CTRL_ARM_DISARM_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Arm/disarm state, 0 means disarm, 1 means arm, 2 means forced arm
 	 * \else
-	 * 布撤防状态，0表示撤防，1表示布防，2表示强制布防
+	 * 2<377@W4L,#,01mJ>377@#,11mJ>2<7@#,21mJ>G?VF2<7@
 	 * \endif
 	 */
 	public byte             bState; 
@@ -28,7 +28,7 @@ public class CTRL_ARM_DISARM_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * User's Password
 	 * \else
-	 * 用户密码
+	 * SC;'C\Bk
 	 * \endif
 	 */
 	public String			szDevPwd; 
@@ -37,7 +37,7 @@ public class CTRL_ARM_DISARM_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Contextual Mode, NET_SCENE_MODE
 	 * \else
-	 * 情景模式, NET_SCENE_MODE
+	 * Gi>0D#J=, NET_SCENE_MODE
 	 * \endif
 	 */
 	public int 	            emSceneMode; 
@@ -46,7 +46,7 @@ public class CTRL_ARM_DISARM_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Forwarding the Target Device ID,Null=Non Forward
 	 * \else
-	 * 转发目标设备ID,为NULL表示不转发
+	 * W*7"D?1jIh18ID,N*NULL1mJ>2;W*7"
 	 * \endif
 	 */
 	public String			szDevID; 

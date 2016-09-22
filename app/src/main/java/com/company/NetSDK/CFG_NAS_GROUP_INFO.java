@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * NVS config, including multiple servers
  * \else
- * 网络存储服务器配置, 包含多个服务器
+ * MxBg4f4"7~NqFwEdVC, 0|:,6`8v7~NqFw
  * \endif
  */
 public class CFG_NAS_GROUP_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_NAS_GROUP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Storage server quantity
 	 * \else
-	 * 存储服务器数量
+	 * 4f4"7~NqFwJ}A?
 	 * \endif
 	 */
 	public int				nNasNum;
@@ -28,7 +28,7 @@ public class CFG_NAS_GROUP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Storage server group
 	 * \else
-	 * 存储服务器数组	
+	 * 4f4"7~NqFwJ}Wi	
 	 * \endif
 	 */
 	public CFG_NAS_INFO_NEW[]			stuNasInfo = new CFG_NAS_INFO_NEW[FinalVar.MAX_NAS_NUM];

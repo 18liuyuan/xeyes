@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * RenameMonitorWallCollection's interface input param(plan rename)
  * \else
- * RenameMonitorWallCollection接口输出参数(预案重命名)
+ * RenameMonitorWallCollection=S?ZJd3v2NJ}(T$08VXC|C{)
  * \endif
  */
 public class SDK_OUT_WM_RENAME_COLLECTION implements Serializable {
@@ -14,6 +14,5 @@ public class SDK_OUT_WM_RENAME_COLLECTION implements Serializable {
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-
 	
 }

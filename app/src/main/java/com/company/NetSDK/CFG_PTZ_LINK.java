@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * PTZ Activation Configuration
  * \else
- * 联动云台信息
+ * A*6/TFL(PEO"
  * \endif
  */
 public class CFG_PTZ_LINK implements Serializable {
@@ -20,7 +20,7 @@ public class CFG_PTZ_LINK implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Activation Type , CFG_LINK_TYPE
 	 * \else
-	 * 联动类型, CFG_LINK_TYPE
+	 * A*6/@`PM, CFG_LINK_TYPE
 	 * \endif
 	 */
 	public int					emType;						
@@ -29,7 +29,7 @@ public class CFG_PTZ_LINK implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Value reffered to Preset Number,Tour Pattern Number and etc 
 	 * \else
-	 * 联动取值分别对应预置点号，巡航号等等
+	 * A*6/H!V57V1p6TS&T$VC5c:E#,Q2:=:E5H5H
 	 * \endif
 	 */
 	public int					nValue;						

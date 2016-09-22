@@ -6,8 +6,8 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Corresponding INetSDK.QueryDevState() Interface's SDK_DEVSTATE_ALL_ALARM_CHANNELS_STATE Command Parameter 
  * \else
- * 对应INetSDK.QueryDevState()接口的 SDK_DEVSTATE_ALL_ALARM_CHANNELS_STATE命令参数
- * 获取报警通道状态
+ * 6TS&INetSDK.QueryDevState()=S?Z5D SDK_DEVSTATE_ALL_ALARM_CHANNELS_STATEC|An2NJ}
+ * ;qH!1(>/M(5@W4L,
  * \endif
  */
 public class NET_ALARM_CHANNEL_TYPE implements Serializable {
@@ -20,7 +20,7 @@ public class NET_ALARM_CHANNEL_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * All channels (including all of the following)
 	 * \else
-	 * 所有通道（包含以下所有）
+	 * KySPM(5@#(0|:,RTOBKySP#)
 	 * \endif
 	 */
 	public static final int NET_ALARM_CHANNEL_TYPE_ALL = 0; 
@@ -29,7 +29,7 @@ public class NET_ALARM_CHANNEL_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm input channel 
 	 * \else
-	 * 报警输入通道
+	 * 1(>/JdHkM(5@
 	 * \endif
 	 */
 	public static final int NET_ALARM_CHANNEL_TYPE_ALARMIN = 1; 
@@ -38,7 +38,7 @@ public class NET_ALARM_CHANNEL_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm output channel 
 	 * \else
-	 * 报警输出通道
+	 * 1(>/Jd3vM(5@
 	 * \endif
 	 */
 	public static final int NET_ALARM_CHANNEL_TYPE_ALARMOUT = 2; 
@@ -47,7 +47,7 @@ public class NET_ALARM_CHANNEL_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Signal channel 
 	 * \else
-	 * 警号通道
+	 * >/:EM(5@
 	 * \endif
 	 */
 	public static final int NET_ALARM_CHANNEL_TYPE_ALARMBELL = 3; 
@@ -56,7 +56,7 @@ public class NET_ALARM_CHANNEL_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Extension module alarm input channel 
 	 * \else
-	 * 扩展模块报警输入通道
+	 * @)U9D#?i1(>/JdHkM(5@
 	 * \endif
 	 */
 	public static final int NET_ALARM_CHANNEL_TYPE_EXALARMIN = 4; 
@@ -65,7 +65,7 @@ public class NET_ALARM_CHANNEL_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Extension module and alarm output channel
 	 * \else
-	 * 扩展模块报警输出通道
+	 * @)U9D#?i1(>/Jd3vM(5@
 	 * \endif
 	 */
 	public static final int NET_ALARM_CHANNEL_TYPE_EXALARMOUT = 5; 

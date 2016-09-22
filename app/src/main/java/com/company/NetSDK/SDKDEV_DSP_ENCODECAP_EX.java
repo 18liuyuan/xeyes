@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * DSP extend capacity description. Corresponding to INetSDK.QueryDevState
  * \else
- * DSP扩展能力描述，对应INetSDK.QueryDevState接口
+ * DSP@)U9D\A&ChJv#,6TS&INetSDK.QueryDevState=S?Z
  * \endif
  */
 public class SDKDEV_DSP_ENCODECAP_EX implements Serializable {
@@ -19,7 +19,7 @@ public class SDKDEV_DSP_ENCODECAP_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * video format mask. Bit stands for the video format device supported.
 	 * \else
-	 * 视频制式掩码，按位表示设备能够支持的视频制式
+	 * JSF5VFJ=QZBk#,04N;1mJ>Ih18D\9;V'3V5DJSF5VFJ=
 	 * \endif
 	 */
 	public int               dwVideoStandardMask;
@@ -28,7 +28,7 @@ public class SDKDEV_DSP_ENCODECAP_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Resolution mask bit. Bit stands for the resolution setup devices supported.
 	 * \else
-	 * 分辨率掩码，按位表示设备能够支持的分辨率
+	 * 7V1fBJQZBk#,04N;1mJ>Ih18D\9;V'3V5D7V1fBJ
 	 * \endif
 	 */
 	public int               dwImageSizeMask;
@@ -37,7 +37,7 @@ public class SDKDEV_DSP_ENCODECAP_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Encode mode mask bit. Bit stands for the encode mode devices supported.
 	 * \else
-	 * 编码模式掩码，按位表示设备能够支持的编码模式
+	 * 1`BkD#J=QZBk#,04N;1mJ>Ih18D\9;V'3V5D1`BkD#J=
 	 * \endif
 	 */
 	public int               dwEncodeModeMask;
@@ -51,12 +51,12 @@ public class SDKDEV_DSP_ENCODECAP_EX implements Serializable {
 	 * The forth bit:extra stream 3
 	 * The fifth bit: snapshot in .jpg format
 	 * \else
-	 * 按位表示设备支持的多媒体功能，
-	 * 第一位表示支持主码流
-	 *  第二位表示支持辅码流1
-	 *  第三位表示支持辅码流2
-	 *  第四位表示支持辅码流3
-	 *  第五位表示支持jpg抓图
+	 * 04N;1mJ>Ih18V'3V5D6`C=Le9&D\#,
+	 * 5ZR;N;1mJ>V'3VVwBkAw
+	 *  5Z6~N;1mJ>V'3V8(BkAw1
+	 *  5ZH}N;1mJ>V'3V8(BkAw2
+	 *  5ZKDN;1mJ>V'3V8(BkAw3
+	 *  5ZNeN;1mJ>V'3VjpgW%M<
 	 * \endif
 	 */
 	public int               dwStreamCap;
@@ -65,7 +65,7 @@ public class SDKDEV_DSP_ENCODECAP_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * When the main stream is the corresponding resolution, the supported extra stream resolution mask, the 0,1,2 member in the group correspond extra stream1,2,3
 	 * \else
-	 * 表示主码流为各分辨率时，支持的辅码流分辨率掩码, 数组中的0,1,2元素分别代表辅码流1,2,3
+	 * 1mJ>VwBkAwN*8w7V1fBJJ1#,V'3V5D8(BkAw7V1fBJQZBk, J}WiVP5D0,1,2T*KX7V1p4z1m8(BkAw1,2,3
 	 * \endif
 	 */
 	public int               dwImageSizeMask_Assi[][] = new int[3][64];
@@ -73,7 +73,7 @@ public class SDKDEV_DSP_ENCODECAP_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The highest encode capacity DSP supported
 	 * \else
-	 * DSP支持的最高编码能力
+	 * DSPV'3V5DWn8_1`BkD\A&
 	 * \endif
 	 */
 	public int               dwMaxEncodePower;
@@ -82,7 +82,7 @@ public class SDKDEV_DSP_ENCODECAP_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The max video channel amount each DSP supported.
 	 * \else
-	 * 每块DSP支持最多输入视频通道数
+	 * C??iDSPV'3VWn6`JdHkJSF5M(5@J}
 	 * \endif
 	 */
 	public short                wMaxSupportChannel;
@@ -91,7 +91,7 @@ public class SDKDEV_DSP_ENCODECAP_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Max encode bit setup in each DSP channel  are synchronized or not;0:do not synchronized,1:synchronized
 	 * \else
-	 * DSP每通道的最大编码设置是否同步；0：不同步，1：同步
+	 * DSPC?M(5@5DWn4s1`BkIhVCJG7qM,2=#;0#:2;M,2=#,1#:M,2=
 	 * \endif
 	 */
 	public short                wChannelMaxSetSync;
@@ -100,7 +100,7 @@ public class SDKDEV_DSP_ENCODECAP_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The max sampling frame rate in different resolution. Bit corresponding to the dwVideoStandardMask.
 	 * \else
-	 * 不同分辨率下的最大采集帧率，与dwVideoStandardMask按位对应
+	 * 2;M,7V1fBJOB5DWn4s2I</V!BJ#,SkdwVideoStandardMask04N;6TS&
 	 * \endif
 	 */
 	public byte                bMaxFrameOfImageSize[] = new byte[32];
@@ -117,15 +117,15 @@ public class SDKDEV_DSP_ENCODECAP_EX implements Serializable {
 	 * Extra stream encode capacity <=main stream encode capacity
 	 * Query  the supported resolution and the corresponding maximum frame rate
 	 * \else
-	 * 标志，配置时要求符合下面条件，否则配置不能生效；
-	 * 0：主码流的编码能力+辅码流的编码能力 <= 设备的编码能力，
-	 *  1：主码流的编码能力+辅码流的编码能力 <= 设备的编码能力，
-	 *  辅码流的编码能力 <= 主码流的编码能力，
-	 *  辅码流的分辨率 <= 主码流的分辨率，
-	 *  主码流和辅码流的帧率 <= 前端视频采集帧率
-	 *  2：N5的计算方法
-	 *  辅码流的分辨率 <= 主码流的分辨率
-	 *  查询支持的分辨率和相应最大帧率
+	 * 1jV>#,EdVCJ1R*Gs7{:OOBCfLu<~#,7qTrEdVC2;D\IzP'#;
+	 * 0#:VwBkAw5D1`BkD\A&+8(BkAw5D1`BkD\A& <= Ih185D1`BkD\A&#,
+	 *  1#:VwBkAw5D1`BkD\A&+8(BkAw5D1`BkD\A& <= Ih185D1`BkD\A&#,
+	 *  8(BkAw5D1`BkD\A& <= VwBkAw5D1`BkD\A&#,
+	 *  8(BkAw5D7V1fBJ <= VwBkAw5D7V1fBJ#,
+	 *  VwBkAw:M8(BkAw5DV!BJ <= G06KJSF52I</V!BJ
+	 *  2#:N55D<FKc7=7(
+	 *  8(BkAw5D7V1fBJ <= VwBkAw5D7V1fBJ
+	 *  2iQ/V'3V5D7V1fBJ:MO`S&Wn4sV!BJ
 	 * \endif
 	 */
 	public byte                bEncodeCap;
@@ -134,7 +134,7 @@ public class SDKDEV_DSP_ENCODECAP_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * bit0-main stream, bit1-extra stream1, bit2-extra stream2
 	 * \else
-	 * 第0位表示主码流, 其它按位依次表示辅码流, 如第一位表示辅码流1,第二们表示辅码流2
+	 * 5Z0N;1mJ>VwBkAw, FdK|04N;R@4N1mJ>8(BkAw, Hg5ZR;N;1mJ>8(BkAw1,5Z6~CG1mJ>8(BkAw2
 	 * \endif
 	 */
 	public int               dwExtraStream;
@@ -143,7 +143,7 @@ public class SDKDEV_DSP_ENCODECAP_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * extra stream compression
 	 * \else
-	 * 每一个值表示对应辅码流的编码格式支持
+	 * C?R;8vV51mJ>6TS&8(BkAw5D1`Bk8qJ=V'3V
 	 * \endif
 	 */
 	public int               dwCompression[] = new int[3];

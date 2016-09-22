@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Configure Automated Maintenance
  * \else
- * 自动维护配置
+ * WT6/N,;$EdVC
  * \endif
  */
 public class SDKDEV_AUTOMT_CFG implements Serializable {
@@ -30,17 +30,17 @@ public class SDKDEV_AUTOMT_CFG implements Serializable {
 	 * <tr><td>8</td><td>Every Saturday</td></tr>
 	 * </table> 
 	 * \else
-	 * 自动重启时间
+	 * WT6/VXFtJ1<d
 	 * <table>
-	 * <tr><td>0</td><td>从不</td></tr>
-	 * <tr><td>1</td><td>每天</td></tr>
-	 * <tr><td>2</td><td>每星期日</td></tr>
-	 * <tr><td>3</td><td>每星期一</td></tr>
-	 * <tr><td>4</td><td>每星期二</td></tr>
-	 * <tr><td>5</td><td>每星期三</td></tr>
-	 * <tr><td>6</td><td>每星期四</td></tr>
-	 * <tr><td>7</td><td>每星期五</td></tr>
-	 * <tr><td>8</td><td>每星期六</td></tr>
+	 * <tr><td>0</td><td>4S2;</td></tr>
+	 * <tr><td>1</td><td>C?Ll</td></tr>
+	 * <tr><td>2</td><td>C?PGFZHU</td></tr>
+	 * <tr><td>3</td><td>C?PGFZR;</td></tr>
+	 * <tr><td>4</td><td>C?PGFZ6~</td></tr>
+	 * <tr><td>5</td><td>C?PGFZH}</td></tr>
+	 * <tr><td>6</td><td>C?PGFZKD</td></tr>
+	 * <tr><td>7</td><td>C?PGFZNe</td></tr>
+	 * <tr><td>8</td><td>C?PGFZAy</td></tr>
 	 * </table>
 	 * \endif
 	 */
@@ -48,18 +48,18 @@ public class SDKDEV_AUTOMT_CFG implements Serializable {
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * (Restart point time)0：0, 1：1, ......, 23：23
+	 * (Restart point time)0#:0, 1#:1, ......, 23#:23
 	 * \else
-	 * (重启时间点)0：0点， 1：1点， ......， 23：23点
+	 * (VXFtJ1<d5c)0#:05c#, 1#:15c#, ......#, 23#:235c
 	 * \endif
 	 */
 	public byte                byAutoRebootTime;
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * Automatically delete files；0：never,1：24 hours,2：48 hours,3：72 hours,4：96 hours,5：week,6：month
+	 * Automatically delete files#;0#:never,1#:24 hours,2#:48 hours,3#:72 hours,4#:96 hours,5#:week,6#:month
 	 * \else
-	 * 自动删除文件；0：从不，1：24小时，2：48小时，3：72小时，4：96小时，5：周，6：月
+	 * WT6/I>3}ND<~#;0#:4S2;#,1#:24P!J1#,2#:48P!J1#,3#:72P!J1#,4#:96P!J1#,5#:V\#,6#:TB
 	 * \endif
 	 */
 	public byte                byAutoDeleteFilesTime;

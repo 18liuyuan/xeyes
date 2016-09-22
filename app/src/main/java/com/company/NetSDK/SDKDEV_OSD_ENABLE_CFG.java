@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Zhengzhou EC_U video data overlay enabling configuration
  * \else
- * 郑州威科姆EC_U视频数据叠加使能配置
+ * V#V]M~?FD7EC_UJSF5J}>]5~<SJ9D\EdVC
  * \endif
  */
 public class SDKDEV_OSD_ENABLE_CFG implements Serializable {
@@ -20,7 +20,7 @@ public class SDKDEV_OSD_ENABLE_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 
 	 * \else
-	 * 使能
+	 * J9D\
 	 * \endif
 	 */
 	public boolean                bEnable; 
@@ -29,7 +29,7 @@ public class SDKDEV_OSD_ENABLE_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 
 	 * \else
-	 * 端口
+	 * 6K?Z
 	 * \endif
 	 */
 	public int                 nPort; 

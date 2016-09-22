@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Query Conditions Of Traffic Black And White List Account Records
  * \else
- * 交通黑白名单账户记录查询条件
+ * =;M(:Z0WC{5%UK;'<GB<2iQ/Lu<~
  * \endif
  */
 public class FIND_RECORD_TRAFFICREDLIST_CONDITION implements Serializable {
@@ -19,7 +19,7 @@ public class FIND_RECORD_TRAFFICREDLIST_CONDITION implements Serializable {
 	 * \if ENGLISH_LANG
 	 * License Plate Number
 	 * \else
-	 * 车牌号
+	 * 35EF:E
 	 * \endif
 	 */
 	public char                     szPlateNumber[] = new char[FinalVar.SDK_MAX_PLATE_NUMBER_LEN];
@@ -28,7 +28,7 @@ public class FIND_RECORD_TRAFFICREDLIST_CONDITION implements Serializable {
 	 * \if ENGLISH_LANG
 	 * License Plate Number Fuzzy Query
 	 * \else
-	 * 车牌号码模糊查询
+	 * 35EF:EBkD#:}2iQ/
 	 * \endif
 	 */
 	public char                     szPlateNumberVague[] = new char[FinalVar.SDK_MAX_PLATE_NUMBER_LEN];
@@ -37,7 +37,7 @@ public class FIND_RECORD_TRAFFICREDLIST_CONDITION implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Offset in the query results of first results returned
 	 * \else
-	 * 第一个条返回结果在查询结果中的偏移量
+	 * 5ZR;8vLu75;X=a9{TZ2iQ/=a9{VP5DF+RFA?
 	 * \endif
 	 */
 	public int                      nQueryResultBegin;
@@ -46,7 +46,7 @@ public class FIND_RECORD_TRAFFICREDLIST_CONDITION implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Whether support the quick query, TRUE: for quick, quick query time don't wait for all add, delete, change operation is completed. The default is non-quick query
 	 * \else
-	 * 是否快速查询, TRUE:为快速，快速查询时不等待所有增、删、改操作完成。默认为非快速查询
+	 * JG7q?lKY2iQ/, TRUE:N*?lKY#,?lKY2iQ/J12;5H4}KySPTv!"I>!"8D2YWwMj3I!#D,HON*7G?lKY2iQ/
 	 * \endif
 	 */
 	public boolean                     bRapidQuery;

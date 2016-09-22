@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Remote Channel Structure
  * \else
- * 远程通道
+ * T63LM(5@
  * \endif
  */
 public class AV_CFG_RemoteChannel implements Serializable {
@@ -20,7 +20,7 @@ public class AV_CFG_RemoteChannel implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable 
 	 * \else
-	 * 使能
+	 * J9D\
 	 * \endif
 	 */
 	public boolean		bEnable;
@@ -29,7 +29,7 @@ public class AV_CFG_RemoteChannel implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device ID 
 	 * \else
-	 * 设备ID
+	 * Ih18ID
 	 * \endif
 	 */
 	public byte[]		szDeviceID = new byte[FinalVar.AV_CFG_Device_ID_Len];
@@ -38,7 +38,7 @@ public class AV_CFG_RemoteChannel implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel No. 
 	 * \else
-	 * 通道号
+	 * M(5@:E
 	 * \endif
 	 */
 	public int			nChannel;

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Port serial number
  * \else
- * CLIENT_AttachBurnCheckState 接口的输入参数(监听刻录校验状态)
+ * CLIENT_AttachBurnCheckState =S?Z5DJdHk2NJ}(<`L}?LB<P#QiW4L,)
  * \endif
  */
 public class NET_IN_ATTACH_BURN_CHECK implements Serializable {
@@ -19,7 +19,7 @@ public class NET_IN_ATTACH_BURN_CHECK implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 刻录校验回调
+	 * ?LB<P#Qi;X5w
 	 * \endif
 	 */
 	public CB_fBurnCheckCallBack  cbBurnCheck;					 

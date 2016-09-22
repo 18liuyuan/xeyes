@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Dynamic Monitoring alarm linkage configuration
  * \else
- * 动态检测报警配置
+ * 6/L,<l2b1(>/EdVC
  * \endif
  */
 public class CFG_MOTION_INFO implements Serializable {
@@ -20,7 +20,7 @@ public class CFG_MOTION_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm channel number(from 0) 
 	 * \else
-	 * 报警通道号(0开始), nVersion=1时，此字段无效
+	 * 1(>/M(5@:E(0?*J<), nVersion=1J1#,4KWV6NN^P'
 	 * \endif
 	 */
 	public int					 nChannelID;									
@@ -29,16 +29,16 @@ public class CFG_MOTION_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable 
 	 * \else
-	 * 使能开关
+	 * J9D\?*9X
 	 * \endif
 	 */
 	public boolean				 bEnable;									    
 
 	/**
 	 * \if ENGLISH_LANG
-	 * SenseLevel1~6，min:1 max:6
+	 * SenseLevel1~6#,min:1 max:6
 	 * \else
-	 * 灵敏度1～6
+	 * AiCt6H1!+6
 	 * \endif
 	 */
 	public int					 nSenseLevel;								    
@@ -47,7 +47,7 @@ public class CFG_MOTION_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The number of rows of the dynamic detection area 
 	 * \else
-	 * 动态检测区域的行数
+	 * 6/L,<l2bGxSr5DPPJ}
 	 * \endif
 	 */
 	public int					 nMotionRow;									
@@ -56,16 +56,16 @@ public class CFG_MOTION_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The number of lines of the dynamic detection area 
 	 * \else
-	 * 动态检测区域的列数
+	 * 6/L,<l2bGxSr5DAPJ}
 	 * \endif
 	 */
 	public int					 nMotionCol;									
 
 	/**
 	 * \if ENGLISH_LANG
-	 * Detection area，max: 32*32 areas 
+	 * Detection area#,max: 32*32 areas 
 	 * \else
-	 * 检测区域，最多32*32块区域
+	 * <l2bGxSr#,Wn6`32*32?iGxSr
 	 * \endif
 	 */
 	public byte				 	byRegion[][] = new byte[FinalVar.MAX_MOTION_ROW][FinalVar.MAX_MOTION_COL];	    
@@ -74,7 +74,7 @@ public class CFG_MOTION_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm linkage 
 	 * \else
-	 * 报警联动
+	 * 1(>/A*6/
 	 * \endif
 	 */
 	public CFG_ALARM_MSG_HANDLE stuEventHandler = new CFG_ALARM_MSG_HANDLE();							    
@@ -83,7 +83,7 @@ public class CFG_MOTION_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Incident response period 
 	 * \else
-	 * 事件响应时间段
+	 * JB<~OlS&J1<d6N
 	 * \endif
 	 */
 	public CFG_TIME_SECTION	 	stuTimeSection[][] = new CFG_TIME_SECTION[FinalVar.WEEK_DAY_NUM][FinalVar.MAX_REC_TSECT];   
@@ -92,25 +92,25 @@ public class CFG_MOTION_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0, 1, depends on capacity set, read only, when equat to 1 and lower to be valid 
 	 * \else
-	 * 0, 1, 由能力集确定, 只读, 等于1时以下字段有效
+	 * 0, 1, SID\A&</H76(, V;6A, 5HSZ1J1RTOBWV6NSPP'
 	 * \endif
 	 */
 	public int			         nVersion;                                      
 
 	/**
 	 * \if ENGLISH_LANG
-	 * real only，depends on nSenseLevel valid or not 
+	 * real only#,depends on nSenseLevel valid or not 
 	 * \else
-	 * 只读，决定nSenseLevel是否有效
+	 * V;6A#,>v6(nSenseLevelJG7qSPP'
 	 * \endif
 	 */
 	public boolean                 bSenseLevelEn;                                 
 
 	/**
 	 * \if ENGLISH_LANG
-	 * real only，area occupy enable， depends on nVolumeRatio valid or not 
+	 * real only#,area occupy enable#, depends on nVolumeRatio valid or not 
 	 * \else
-	 * 只读，面积占用比使能， 决定nVolumeRatio是否有效
+	 * V;6A#,Cf;}U<SC1HJ9D\#, >v6(nVolumeRatioJG7qSPP'
 	 * \endif
 	 */
 	public boolean                 bVRatioEn;                                     
@@ -119,16 +119,16 @@ public class CFG_MOTION_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * area occupy ratio,1-100
 	 * \else
-	 * 面积占用比,1-100
+	 * Cf;}U<SC1H,1-100
 	 * \endif
 	 */
 	public int                  nVolumeRatio;                                  
 
 	/**
 	 * \if ENGLISH_LANG
-	 * real only，sensitivity enable，depends on nSubRatio valid or not 
+	 * real only#,sensitivity enable#,depends on nSubRatio valid or not 
 	 * \else
-	 * 只读，灵敏度使能，决定nSubRatio值是否有效
+	 * V;6A#,AiCt6HJ9D\#,>v6(nSubRatioV5JG7qSPP'
 	 * \endif
 	 */
 	public boolean                 bSRatioEn;                                     
@@ -137,16 +137,16 @@ public class CFG_MOTION_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * motion detect difference threshold, 1-100 
 	 * \else
-	 * 动检的残差阈值, 1-100
+	 * 6/<l5D2P2ncPV5, 1-100
 	 * \endif
 	 */
 	public int                  nSubRatio;                                     
 
 	/**
 	 * \if ENGLISH_LANG
-	 * real only，0: nMotionRow, nMotionCol and byRegion text valid, 1: window text
+	 * real only#,0: nMotionRow, nMotionCol and byRegion text valid, 1: window text
 	 * \else
-	 * 只读，0: nMotionRow, nMotionCol和byRegion字段有效, 1: 下面视频窗口字段 
+	 * V;6A#,0: nMotionRow, nMotionCol:MbyRegionWV6NSPP', 1: OBCfJSF540?ZWV6N 
 	 * \endif
 	 */
 	public boolean                 abWindow;                                      
@@ -155,7 +155,7 @@ public class CFG_MOTION_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * video window 
 	 * \else
-	 * 视频窗口个数
+	 * JSF540?Z8vJ}
 	 * \endif
 	 */
 	public int                  nWindowCount;                                  
@@ -164,7 +164,7 @@ public class CFG_MOTION_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * video window group 
 	 * \else
-	 * 视频窗口数组
+	 * JSF540?ZJ}Wi
 	 * \endif
 	 */
 	public CFG_MOTION_WINDOW    stuWindows[] = new CFG_MOTION_WINDOW[FinalVar.MAX_MOTION_WINDOW];
@@ -174,8 +174,8 @@ public class CFG_MOTION_INFO implements Serializable {
 	 * Read only: 1, onRegionCount, stuRegion valid
 	 * 0, onMotionRow, nMotionCol, byRegion valid
 	 * \else
-	 * 只读，1：nRegionCount，stuRegion有效
-	 * 0：nMotionRow，nMotionCol，byRegion有效
+	 * V;6A#,1#:nRegionCount#,stuRegionSPP'
+	 * 0#:nMotionRow#,nMotionCol#,byRegionSPP'
 	 * \endif
 	 */
 	public boolean                 abDetectRegion;
@@ -184,7 +184,7 @@ public class CFG_MOTION_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 3rd generation motion detection zone quantity
 	 * \else
-	 * 三代动态检测区域个数
+	 * H}4z6/L,<l2bGxSr8vJ}
 	 * \endif
 	 */
 	public int                  nRegionCount; 
@@ -193,7 +193,7 @@ public class CFG_MOTION_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 3rd generation motion detection zone
 	 * \else
-	 * 三代动态检测区域
+	 * H}4z6/L,<l2bGxSr
 	 * \endif
 	 */
 	public CFG_DETECT_REGION    stuRegion[] = new CFG_DETECT_REGION[FinalVar.MAX_MOTION_WINDOW];

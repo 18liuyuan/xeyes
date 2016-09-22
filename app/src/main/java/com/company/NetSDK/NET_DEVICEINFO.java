@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Device information
  * \else
- * 设备信息
+ * Ih18PEO"
  * \endif
  */
 public class NET_DEVICEINFO implements Serializable {
@@ -19,7 +19,7 @@ public class NET_DEVICEINFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * SN
 	 * \else
-	 * 序列号
+	 * PrAP:E
 	 * \endif
 	 */
 	public byte				sSerialNumber[] = new byte[FinalVar.SDK_SERIALNO_LEN];
@@ -28,7 +28,7 @@ public class NET_DEVICEINFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * DVR alarm input amount
 	 * \else
-	 * DVR报警输入个数
+	 * DVR1(>/JdHk8vJ}
 	 * \endif
 	 */
 	public byte				byAlarmInPortNum;
@@ -37,7 +37,7 @@ public class NET_DEVICEINFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * DVR alarm output amount
 	 * \else
-	 * DVR报警输出个数
+	 * DVR1(>/Jd3v8vJ}
 	 * \endif
 	 */
 	public byte				byAlarmOutPortNum;
@@ -46,7 +46,7 @@ public class NET_DEVICEINFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * DVR HDD amount 
 	 * \else
-	 * DVR硬盘个数
+	 * DVRS2EL8vJ}
 	 * \endif
 	 */
 	public byte				byDiskNum;
@@ -55,7 +55,7 @@ public class NET_DEVICEINFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * DVR type.Please refer to NET_DEVICE_TYPE
 	 * \else
-	 * DVR类型, 见枚举NET_DEVICE_TYPE
+	 * DVR@`PM, <{C6>YNET_DEVICE_TYPE
 	 * \endif
 	 */
 	public byte				byDVRType;
@@ -64,7 +64,7 @@ public class NET_DEVICEINFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * DVR channel amount 
 	 * \else
-	 * DVR通道个数
+	 * DVRM(5@8vJ}
 	 * \endif
 	 */
 	public byte				byChanNum;

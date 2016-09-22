@@ -4,7 +4,7 @@ package com.company.NetSDK;
  * \if ENGLISH_LANG
  * Asynchronism search device call
  * \else
- * 搜索设备回调
+ * KQKwIh18;X5w
  * \endif
  */
 public interface CB_fSearchDevicesCB {
@@ -13,8 +13,8 @@ public interface CB_fSearchDevicesCB {
 	 * Asynchronism search device call
 	 * @param pDevNetInfo recall structure
 	 * \else
-	 * 网络断线回调函数
-	 * @param pDevNetInfo 回调结构体
+	 * MxBg6OO_;X5w:/J}
+	 * @param pDevNetInfo ;X5w=a99Le
 	 * \endif
 	 */
 	public void invoke(DEVICE_NET_INFO_EX pDevNetInfo);

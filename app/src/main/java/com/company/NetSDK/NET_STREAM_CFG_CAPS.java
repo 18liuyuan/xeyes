@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * stream config corresponding capacity
  * \else
- * 码流配置对应能力
+ * BkAwEdVC6TS&D\A&
  * \endif
  */
 public class NET_STREAM_CFG_CAPS implements Serializable {
@@ -17,9 +17,9 @@ public class NET_STREAM_CFG_CAPS implements Serializable {
 
 	/**
 	 * \if ENGLISH_LANG
-	 * supported audio encode type，see DH_TALK_CODING_TYPE
+	 * supported audio encode type#,see DH_TALK_CODING_TYPE
 	 * \else
-	 * 支持的音频编码类型，详见DH_TALK_CODING_TYPE
+	 * V'3V5DRtF51`Bk@`PM#,Oj<{DH_TALK_CODING_TYPE
 	 * \endif
 	 */
 	public int                 nAudioCompressionTypes[] = new int[FinalVar.SDK_MAX_AUDIO_ENCODE_TYPE];
@@ -28,16 +28,16 @@ public class NET_STREAM_CFG_CAPS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * audio compression quantity
 	 * \else
-	 * 音频压缩格式个数
+	 * RtF5Q9Ku8qJ=8vJ}
 	 * \endif
 	 */
 	public int                 nAudioCompressionTypeNum;
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * video encode mode mask，see "encode mode"
+	 * video encode mode mask#,see "encode mode"
 	 * \else
-	 * 视频编码模式掩码，详见"编码模式"
+	 * JSF51`BkD#J=QZBk#,Oj<{"1`BkD#J="
 	 * \endif
 	 */
 	public int                 dwEncodeModeMask;
@@ -46,7 +46,7 @@ public class NET_STREAM_CFG_CAPS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * supportedvideo resolution, discard
 	 * \else
-	 * 支持的视频分辨率
+	 * V'3V5DJSF57V1fBJ
 	 * \endif
 	 */
 	public SDK_RESOLUTION_INFO  stuResolutionTypes[] = new SDK_RESOLUTION_INFO[FinalVar.SDK_MAX_CAPTURE_SIZE_NUM];
@@ -55,7 +55,7 @@ public class NET_STREAM_CFG_CAPS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * different resolution max frame, subscript nResolutionTypescorresponding
 	 * \else
-	 * 不同分辨率下帧率最大值，下标与nResolutionTypes对应
+	 * 2;M,7V1fBJOBV!BJWn4sV5#,OB1jSknResolutionTypes6TS&
 	 * \endif
 	 */
 	public int                 nResolutionFPSMax[] = new int[FinalVar.SDK_MAX_CAPTURE_SIZE_NUM];
@@ -64,7 +64,7 @@ public class NET_STREAM_CFG_CAPS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * video resolution quantity
 	 * \else
-	 * 视频分辨率个数
+	 * JSF57V1fBJ8vJ}
 	 * \endif
 	 */
 	public int                 nResolutionTypeNum;
@@ -73,7 +73,7 @@ public class NET_STREAM_CFG_CAPS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * max video stream(kbps)
 	 * \else
-	 * 最大视频码流(kbps)
+	 * Wn4sJSF5BkAw(kbps)
 	 * \endif
 	 */
 	public int                 nMaxBitRateOptions; 
@@ -82,16 +82,16 @@ public class NET_STREAM_CFG_CAPS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * min video stream(kbps)
 	 * \else
-	 * 最小视频码流(kbps)
+	 * WnP!JSF5BkAw(kbps)
 	 * \endif
 	 */
 	public int                 nMinBitRateOptions;
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * supported的H.264 Profile level,refer to enumeration type EM_H264_PROFILE_RANK;
+	 * supported5DH.264 Profile level,refer to enumeration type EM_H264_PROFILE_RANK;
 	 * \else
-	 * 支持的H.264 Profile等级，参照枚举类型 EM_H264_PROFILE_RANK;
+	 * V'3V5DH.264 Profile5H<6#,2NUUC6>Y@`PM EM_H264_PROFILE_RANK;
 	 * \endif
 	 */
 	public byte                bH264ProfileRank[] = new byte[EM_H264_PROFILE_RANK.SDK_PROFILE_HIGH];
@@ -100,7 +100,7 @@ public class NET_STREAM_CFG_CAPS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * supported H.264 Profile level
 	 * \else
-	 * 支持的H.264 Profile等级个数
+	 * V'3V5DH.264 Profile5H<68vJ}
 	 * \endif
 	 */
 	public int                 nH264ProfileRankNum;
@@ -109,7 +109,7 @@ public class NET_STREAM_CFG_CAPS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * when resolution is  cif, max p frame(Kbps)
 	 * \else
-	 * 当分辨率为cif时最大p帧(Kbps)
+	 * 517V1fBJN*cifJ1Wn4spV!(Kbps)
 	 * \endif
 	 */
 	public int                 nCifPFrameMaxSize;
@@ -118,16 +118,16 @@ public class NET_STREAM_CFG_CAPS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * when currentresolution is cif, min p frame(Kbps)
 	 * \else
-	 * 当分辨率为cif时最小p帧(Kbps)
+	 * 517V1fBJN*cifJ1WnP!pV!(Kbps)
 	 * \endif
 	 */
 	public int                 nCifPFrameMinSize;
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * video max frame rate，as 0 ，make nResolutionFPSMax as standard
+	 * video max frame rate#,as 0 #,make nResolutionFPSMax as standard
 	 * \else
-	 * 视频帧率最大值，为0时，以nResolutionFPSMax为准
+	 * JSF5V!BJWn4sV5#,N*0J1#,RTnResolutionFPSMaxN*W<
 	 * \endif
 	 */
 	public int                 nFPSMax;
@@ -136,7 +136,7 @@ public class NET_STREAM_CFG_CAPS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * supportedvideo resolution
 	 * \else
-	 * 支持的视频分辨率
+	 * V'3V5DJSF57V1fBJ
 	 * \endif
 	 */
 	public SDK_RESOLUTION_INFO  stuIndivResolutionTypes[][] = new SDK_RESOLUTION_INFO[FinalVar.SDK_MAX_COMPRESSION_TYPES_NUM][FinalVar.SDK_MAX_CAPTURE_SIZE_NUM];
@@ -145,7 +145,7 @@ public class NET_STREAM_CFG_CAPS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0: stuResolutionTypes is valid 1: stuIndivResolutionTypes is valid
 	 * \else
-	 * 0: stuResolutionTypes,nResolutionTypeNum 有效
+	 * 0: stuResolutionTypes,nResolutionTypeNum SPP'
 	 * \endif
 	 */
 	public boolean             abIndivResolution;
@@ -154,7 +154,7 @@ public class NET_STREAM_CFG_CAPS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 
 	 * \else
-	 * 不同编码模式分别支持的视频分辨率个数
+	 * 2;M,1`BkD#J=7V1pV'3V5DJSF57V1fBJ8vJ}
 	 * \endif
 	 */
 	public int                 nIndivResolutionNums[] = new int[FinalVar.SDK_MAX_COMPRESSION_TYPES_NUM];

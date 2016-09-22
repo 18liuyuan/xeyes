@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * SDK_DEV_GPS_MODE_CFG configuration
  * \else
- * SDK_DEV_GPS_MODE_CFG 配置结构
+ * SDK_DEV_GPS_MODE_CFG EdVC=a99
  * \endif
  */
 public class SDKDEV_GPS_MODE_CFG implements Serializable {
@@ -20,7 +20,7 @@ public class SDKDEV_GPS_MODE_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * GPS mode
 	 * \else
-	 * GPS定位模式，见GPS_MODE
+	 * GPS6(N;D#J=#,<{GPS_MODE
 	 * \endif
 	 */
 	public byte                byGPSMode; 

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Corresponding structure of motion detect alarm status info
  * \else
- * 动态检测报警状态信息对应结构体
+ * 6/L,<l2b1(>/W4L,PEO"6TS&=a99Le
  * \endif
  */
 public class NET_CLIENT_MOTIONDETECT_STATE implements Serializable {
@@ -19,7 +19,7 @@ public class NET_CLIENT_MOTIONDETECT_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel amount
 	 * \else
-	 * 通道个数
+	 * M(5@8vJ}
 	 * \endif
 	 */
 	public int				channelcount;
@@ -28,7 +28,7 @@ public class NET_CLIENT_MOTIONDETECT_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * DWORD value is the state by bit of 32 channels,0-no alarm,1-alarm
 	 * \else
-	 * 每一个int按位表示32通道的报警状态, 0-表示无报警, 1-表示有报警
+	 * C?R;8vint04N;1mJ>32M(5@5D1(>/W4L,, 0-1mJ>N^1(>/, 1-1mJ>SP1(>/
 	 * \endif
 	 */
 	public int              dwAlarmState[] = new int[FinalVar.SDK_MAX_CHANMASK];

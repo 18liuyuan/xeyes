@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * decoder protocol rtsp url configuration
  * \else
- * 解码器rtsp url配置
+ * =bBkFwrtsp urlEdVC
  * \endif
  */
 public class SDKDEV_DECODER_URL_CFG implements Serializable {
@@ -20,7 +20,7 @@ public class SDKDEV_DECODER_URL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * main stream url
 	 * \else
-	 * 主码流url
+	 * VwBkAwurl
 	 * \endif
 	 */
 	public byte            szMainStreamUrl[] = new byte[FinalVar.MAX_PATH];
@@ -29,7 +29,7 @@ public class SDKDEV_DECODER_URL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * extra stream url
 	 * \else
-	 * 辅码流url
+	 * 8(BkAwurl
 	 * \endif
 	 */
 	public byte            szExtraStreamUrl[] = new byte[FinalVar.MAX_PATH];

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Year
  * \else
- * 设备保活配置
+ * Ih181#;nEdVC
  * \endif
  */
 public class CFG_DEVICEKEEPALIVE_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_DEVICEKEEPALIVE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Year
 	 * \else
-	 * 开启保活使能
+	 * ?*Ft1#;nJ9D\
 	 * \endif
 	 */
 	public boolean				bEnable;
@@ -28,7 +28,7 @@ public class CFG_DEVICEKEEPALIVE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Year
 	 * \else
-	 * 保活时间间隔，必须是>=10的值，单位：秒
+	 * 1#;nJ1<d<d8t#,1XPkJG>=105DV5#,5%N;#:Ck
 	 * \endif
 	 */
 	public int					nInterval;
@@ -37,7 +37,7 @@ public class CFG_DEVICEKEEPALIVE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Year
 	 * \else
-	 * 保活失败次数，保活失败次数到达该值认为设备断线
+	 * 1#;nJ'0\4NJ}#,1#;nJ'0\4NJ}5=4o8CV5HON*Ih186OO_
 	 * \endif
 	 */
 	public int					nFailTimes;
@@ -46,7 +46,7 @@ public class CFG_DEVICEKEEPALIVE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Year
 	 * \else
-	 * 等待外设加电后启动后检测保活心跳，单位：秒
+	 * 5H4}MbIh<S5g:sFt6/:s<l2b1#;nPDLx#,5%N;#:Ck
 	 * \endif
 	 */
 	public int					nWaitBootTime;

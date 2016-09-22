@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * INetSDK.QueryDevInfo , NET_QUERY_DEV_REMOTE_DEVICE_INFO inquire  the input parameters of remote device information 
  * \else
- * INetSDK.QueryDevInfo , NET_QUERY_DEV_REMOTE_DEVICE_INFO 查询远程设备信息输入参数
+ * INetSDK.QueryDevInfo , NET_QUERY_DEV_REMOTE_DEVICE_INFO 2iQ/T63LIh18PEO"JdHk2NJ}
  * \endif
  */
 public class NET_IN_GET_DEVICE_INFO implements Serializable {
@@ -20,7 +20,7 @@ public class NET_IN_GET_DEVICE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device ID
 	 * \else
-	 * 设备ID
+	 * Ih18ID
 	 * \endif
 	 */
 	public byte                        szDevice[] = new byte[FinalVar.SDK_DEV_ID_LEN_EX];
@@ -29,7 +29,7 @@ public class NET_IN_GET_DEVICE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * device address
 	 * \else
-	 * 设备地址
+	 * Ih185XV7
 	 * \endif
 	 */
 	public byte                        szAttributeIP[] = new byte[FinalVar.SDK_COMMON_STRING_32];
@@ -38,7 +38,7 @@ public class NET_IN_GET_DEVICE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * device port
 	 * \else
-	 * 设备端口
+	 * Ih186K?Z
 	 * \endif
 	 */
 	public int                         nAttributePort;
@@ -47,7 +47,7 @@ public class NET_IN_GET_DEVICE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * user name
 	 * \else
-	 * 用户名
+	 * SC;'C{
 	 * \endif
 	 */
 	public byte                        szAttributeUsername[] = new byte[FinalVar.SDK_COMMON_STRING_128];
@@ -56,7 +56,7 @@ public class NET_IN_GET_DEVICE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * password
 	 * \else
-	 * 密码
+	 * C\Bk
 	 * \endif
 	 */
 	public byte                        szAttributePassword[] = new byte[FinalVar.SDK_COMMON_STRING_128];
@@ -65,7 +65,7 @@ public class NET_IN_GET_DEVICE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * manufacturer protocl
 	 * \else
-	 * 厂商协议
+	 * 3'ILP-Ri
 	 * \endif
 	 */
 	public byte                        szAttributeManufacturer[] = new byte[FinalVar.SDK_COMMON_STRING_128];

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Picture Color Attribute
  * \else
- * 画面颜色属性
+ * ;-CfQUI+JtPT
  * \endif
  */
 public class SDK_COLOR_CFG implements Serializable {
@@ -20,7 +20,7 @@ public class SDK_COLOR_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Scehdule
 	 * \else
-	 * 时间表
+	 * J1<d1m
 	 * \endif
 	 */
 	public SDK_TSECT			stSect = new SDK_TSECT();
@@ -29,7 +29,7 @@ public class SDK_COLOR_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Brightness; 0-100 
 	 * \else
-	 * 亮度；0-100
+	 * AA6H#;0-100
 	 * \endif
 	 */
 	public byte				byBrightness;			
@@ -38,7 +38,7 @@ public class SDK_COLOR_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Contrast; 0-100 
 	 * \else
-	 * 对比度；0-100
+	 * 6T1H6H#;0-100
 	 * \endif
 	 */
 	public byte				byContrast;				
@@ -47,7 +47,7 @@ public class SDK_COLOR_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Saturation; 0-100 
 	 * \else
-	 * 饱和度；0-100
+	 * 1%:M6H#;0-100
 	 * \endif
 	 */
 	public byte				bySaturation;			
@@ -56,7 +56,7 @@ public class SDK_COLOR_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Hue 
 	 * \else
-	 * 色度；0-100
+	 * I+6H#;0-100
 	 * \endif
 	 */
 	public byte				byHue;					
@@ -65,7 +65,7 @@ public class SDK_COLOR_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * gain 
 	 * \else
-	 * 增益使能
+	 * TvRfJ9D\
 	 * \endif
 	 */
 	public byte				byGainEn;				
@@ -74,7 +74,7 @@ public class SDK_COLOR_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * gain:0-100 
 	 * \else
-	 * 增益；0-100
+	 * TvRf#;0-100
 	 * \endif
 	 */
 	public byte				byGain;					
@@ -83,7 +83,7 @@ public class SDK_COLOR_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * value 0-100 
 	 * \else
-	 * 伽马值 0-100
+	 * Y$BmV5 0-100
 	 * \endif
 	 */
 	public byte				byGamma;                

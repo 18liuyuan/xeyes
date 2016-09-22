@@ -13,7 +13,7 @@ public class CFG_DETECT_REGION implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Zone ID
 	 * \else
-	 * 区域ID
+	 * GxSrID
 	 * \endif
 	 */
 	public int				     nRegionID;
@@ -22,16 +22,16 @@ public class CFG_DETECT_REGION implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Motion window name
 	 * \else
-	 * 动态窗口名称
+	 * 6/L,40?ZC{3F
 	 * \endif
 	 */
 	public byte                 szRegionName[] = new byte[FinalVar.CFG_COMMON_STRING_64];
 
 	/**
 	 * \if ENGLISH_LANG
-	 * Area threshold￡?value[0, 100]
+	 * Area threshold!j?value[0, 100]
 	 * \else
-	 * 面积阀值，取值[0, 100]
+	 * Cf;}7'V5#,H!V5[0, 100]
 	 * \endif
 	 */
 	public int                  nThreshold;
@@ -40,7 +40,7 @@ public class CFG_DETECT_REGION implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Sensitivity 1??6
 	 * \else
-	 * 灵敏度1～6
+	 * AiCt6H1!+6
 	 * \endif
 	 */
 	public int					 nSenseLevel;
@@ -49,7 +49,7 @@ public class CFG_DETECT_REGION implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Motion zone row
 	 * \else
-	 * 动态检测区域的行数
+	 * 6/L,<l2bGxSr5DPPJ}
 	 * \endif
 	 */
 	public int					 nMotionRow;
@@ -58,16 +58,16 @@ public class CFG_DETECT_REGION implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Motion detection zone column
 	 * \else
-	 * 动态检测区域的列数
+	 * 6/L,<l2bGxSr5DAPJ}
 	 * \endif
 	 */
 	public int					 nMotionCol;
 
 	/**
 	 * \if ENGLISH_LANG
-	 * Detection zone￡?max 32*32 blocks
+	 * Detection zone!j?max 32*32 blocks
 	 * \else
-	 * 检测区域，最多32*32块区域
+	 * <l2bGxSr#,Wn6`32*32?iGxSr
 	 * \endif
 	 */
 	public byte				 byRegion[][] = new byte[FinalVar.MAX_MOTION_ROW][FinalVar.MAX_MOTION_COL];

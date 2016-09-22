@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * alarm of remote 
  * \else
- * 远程外部报警信息
+ * T63LMb2?1(>/PEO"
  * \endif
  */
 public class ALARM_REMOTE_ALARM_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_REMOTE_ALARM_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * channel ID,from 1
 	 * \else
-	 * 通道号，从1开始
+	 * M(5@:E#,4S1?*J<
 	 * \endif
 	 */
 	public int        nChannelID;
@@ -28,7 +28,7 @@ public class ALARM_REMOTE_ALARM_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * state,0-reset,1-setting
 	 * \else
-	 * 报警状态，0-报警复位，1-报警置位
+	 * 1(>/W4L,#,0-1(>/84N;#,1-1(>/VCN;
 	 * \endif
 	 */
 	public int        nState;

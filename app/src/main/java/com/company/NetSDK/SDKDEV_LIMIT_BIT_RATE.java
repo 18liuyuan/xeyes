@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * limit stream configuration
  * \else
- * 限码流配置
+ * O^BkAwEdVC
  * \endif
  */
 public class SDKDEV_LIMIT_BIT_RATE implements Serializable {
@@ -20,7 +20,7 @@ public class SDKDEV_LIMIT_BIT_RATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * limit stream (kps)
 	 * \else
-	 * 限制码流，单位kps
+	 * O^VFBkAw#,5%N;kps
 	 * \endif
 	 */
     public int                   nExpectCodeRate; 

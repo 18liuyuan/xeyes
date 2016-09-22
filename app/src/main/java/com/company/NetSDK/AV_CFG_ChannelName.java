@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Channel Name Structure
  * \else
- * 通道名称
+ * M(5@C{3F
  * \endif
  */
 public class AV_CFG_ChannelName implements Serializable {
@@ -19,7 +19,7 @@ public class AV_CFG_ChannelName implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Camera Unique Number 
 	 * \else
-	 * 摄像头唯一编号 
+	 * IcOqM7N(R;1`:E 
 	 * \endif
 	 */
 	public int				nSerial;
@@ -28,7 +28,7 @@ public class AV_CFG_ChannelName implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel
 	 * \else
-	 * 通道名
+	 * M(5@C{
 	 * \endif
 	 */
 	public byte				szName[] = new byte[FinalVar.AV_CFG_Channel_Name_Len];

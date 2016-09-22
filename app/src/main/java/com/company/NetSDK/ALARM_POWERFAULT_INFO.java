@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Power Failure Event
  * \else
- * 电源故障事件
+ * 5gT49JUOJB<~
  * \endif
  */
 public class ALARM_POWERFAULT_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_POWERFAULT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Power Type {@link com.company.NetSDK.EM_POWER_TYPE EM_POWER_TYPE}
 	 * \else
-	 * 电源类型 {@link com.company.NetSDK.EM_POWER_TYPE EM_POWER_TYPE}
+	 * 5gT4@`PM {@link com.company.NetSDK.EM_POWER_TYPE EM_POWER_TYPE}
 	 * \endif
 	 */
 	public int            emPowerType;
@@ -28,7 +28,7 @@ public class ALARM_POWERFAULT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Power Failure Event {@link com.company.NetSDK.EM_POWERFAULT_EVENT_TYPE EM_POWERFAULT_EVENT_TYPE}
 	 * \else
-	 * 电源故障事件 {@link com.company.NetSDK.EM_POWERFAULT_EVENT_TYPE EM_POWERFAULT_EVENT_TYPE}
+	 * 5gT49JUOJB<~ {@link com.company.NetSDK.EM_POWERFAULT_EVENT_TYPE EM_POWERFAULT_EVENT_TYPE}
 	 * \endif
 	 */
 	public int            emPowerFaultEvent;
@@ -37,7 +37,7 @@ public class ALARM_POWERFAULT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm Event Time
 	 * \else
-	 * 报警事件发生的时间
+	 * 1(>/JB<~7"Iz5DJ1<d
 	 * \endif
 	 */
 	public NET_TIME                 stuTime = new NET_TIME();
@@ -46,7 +46,7 @@ public class ALARM_POWERFAULT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:start 1: stop
 	 * \else
-	 * 0:开始 1:停止
+	 * 0:?*J< 1:M#V9
 	 * \endif
 	 */
 	public int                      nAction;

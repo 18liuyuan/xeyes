@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Camera masking alarm
  * \else
- * 图像遮挡报警
+ * M<OqUZ521(>/
  * \endif
  */
 public class SDK_BLIND_CFG_EX implements Serializable {
@@ -20,7 +20,7 @@ public class SDK_BLIND_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable
 	 * \else
-	 * 使能
+	 * J9D\
 	 * \endif
 	 */
 	public byte                byBlindEnable; 
@@ -29,7 +29,7 @@ public class SDK_BLIND_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Sensitivity 1-6
 	 * \else
-	 * 灵敏度1-6
+	 * AiCt6H1-6
 	 * \endif
 	 */
 	public byte                byBlindLevel; 
@@ -47,7 +47,7 @@ public class SDK_BLIND_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Handle method
 	 * \else
-	 * 处理方式
+	 * 4&@m7=J=
 	 * \endif
 	 */
 	public SDK_MSG_HANDLE_EX       struHandle = new SDK_MSG_HANDLE_EX();

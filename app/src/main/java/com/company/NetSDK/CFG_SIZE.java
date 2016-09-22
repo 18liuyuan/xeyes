@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Single Rule Configuration
  * \else
- * 单个规则配置
+ * 5%8v9fTrEdVC
  * \endif
  */
 public class CFG_SIZE implements Serializable {
@@ -22,7 +22,7 @@ public class CFG_SIZE implements Serializable {
 		 * \if ENGLISH_LANG
 		 * Width 
 		 * \else
-		 * 宽
+		 * ?m
 		 * \endif
 		 */
 		float				nWidth;			
@@ -31,7 +31,7 @@ public class CFG_SIZE implements Serializable {
 		 * \if ENGLISH_LANG
 		 * Area 
 		 * \else
-		 * 面积
+		 * Cf;}
 		 * \endif
 		 */
 		float				nArea;			
@@ -41,7 +41,7 @@ public class CFG_SIZE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Height 
 	 * \else
-	 * 高
+	 * 8_
 	 * \endif
 	 */
 	float					nHeight;		

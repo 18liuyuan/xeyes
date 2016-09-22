@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * snap upload DH_DEV_SNAP_UPLOAD_CFG configuration
  * \else
- * 图片上传配置信息 DH_DEV_SNAP_UPLOAD_CFG 配置结构
+ * M<F,IO4+EdVCPEO" DH_DEV_SNAP_UPLOAD_CFG EdVC=a99
  * \endif
  */
 public class SDKDEV_SNAP_UPLOAD_CFG implements Serializable {
@@ -20,7 +20,7 @@ public class SDKDEV_SNAP_UPLOAD_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * the interval time of upload picture(s)
 	 * \else
-	 * 定时抓图图片上传间隔，单位秒
+	 * 6(J1W%M<M<F,IO4+<d8t#,5%N;Ck
 	 * \endif
 	 */
 	public int                 nUploadInterval;

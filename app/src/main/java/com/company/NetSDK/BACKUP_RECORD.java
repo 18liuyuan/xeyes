@@ -19,7 +19,7 @@ public class BACKUP_RECORD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * name
 	 * \else
-	 * 备份设备名称
+	 * 187]Ih18C{3F
 	 * \endif
 	 */
 	public byte				szDeviceName[] = new byte[FinalVar.SDK_MAX_BACKUP_NAME];
@@ -28,7 +28,7 @@ public class BACKUP_RECORD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * number of records
 	 * \else
-	 * 备份记录数量
+	 * 187]<GB<J}A?
 	 * \endif
 	 */
 	public int				nRecordNum;
@@ -37,7 +37,7 @@ public class BACKUP_RECORD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * record information
 	 * \else
-	 * 备份记录信息
+	 * 187]<GB<PEO"
 	 * \endif
 	 */
 	public NET_RECORDFILE_INFO stuRecordInfo[] = new NET_RECORDFILE_INFO[FinalVar.SDK_MAX_BACKUPRECORD_NUM];

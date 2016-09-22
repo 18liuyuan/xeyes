@@ -4,7 +4,7 @@ package com.company.NetSDK;
  * \if ENGLISH_LANG
  * Audio data of audio talk callback function original shape 
  * \else
- * 发起语音回调
+ * 7"FpSoRt;X5w
  * \endif
  */
 public interface CB_pfAudioDataCallBack {
@@ -16,10 +16,10 @@ public interface CB_pfAudioDataCallBack {
 	 * @param byAudioFlag Audio data home sign, 0:means audio data collected by local audio recording list;
 	 * 1:means received audio data sent by devie
 	 * \else
-	 * 发起语音回调函数
-	 * @param lTalkHandle {@link com.company.NetSDK.INetSDK#StartTalkEx() StartTalkEx}的返回值
-	 * @param pDataBuf 回调出来的音频数据的内容 
-	 * @param byAudioFlag 音频数据归属标志,0:表示是本地录音库采集的音频数据;1:表示收到的设备发过来的音频数据
+	 * 7"FpSoRt;X5w:/J}
+	 * @param lTalkHandle {@link com.company.NetSDK.INetSDK#StartTalkEx() StartTalkEx}5D75;XV5
+	 * @param pDataBuf ;X5w3v@45DRtF5J}>]5DDZH] 
+	 * @param byAudioFlag RtF5J}>]9iJt1jV>,0:1mJ>JG1>5XB<Rt?b2I</5DRtF5J}>];1:1mJ>JU5=5DIh187"9}@45DRtF5J}>]
 	 * \endif
 	 */
 	public void invoke(long lTalkHandle, byte pDataBuf[], byte byAudioFlag);

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Time structure
  * \else
- * 时间段结构 
+ * J1<d6N=a99 
  * \endif
  */
 public class SDK_3G_TIMESECT implements Serializable {
@@ -19,7 +19,7 @@ public class SDK_3G_TIMESECT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Time period enable,1 shows this time period valid,0 shows invalid.
 	 * \else
-	 * 时间段使能，1表示该时间段有效，0表示该时间段无效。
+	 * J1<d6NJ9D\#,11mJ>8CJ1<d6NSPP'#,01mJ>8CJ1<d6NN^P'!#
 	 * \endif
 	 */
 	public byte                bEnable; 

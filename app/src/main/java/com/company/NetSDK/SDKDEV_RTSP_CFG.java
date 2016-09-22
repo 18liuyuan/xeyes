@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * RTSP configuration
  * \else
- * RTSP ÅäÖÃ
+ * RTSP EdVC
  * \endif
  */
 public class SDKDEV_RTSP_CFG implements Serializable {
@@ -20,7 +20,7 @@ public class SDKDEV_RTSP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * port number(can't be the same as tcp or udp's port number)
 	 * \else
-	 * ¶Ë¿ÚºÅ
+	 * 6K?Z:E
 	 * \endif
 	 */
     public short               wPort; 

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Alarm of netpackage loss
  * \else
- * 网络发送数据丢包事件报警
+ * MxBg7"KMJ}>]6*0|JB<~1(>/
  * \endif
  */
 public class ALARM_LOST_NETPACKET implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_LOST_NETPACKET implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0: Stop, 1: start
 	 * \else
-	 * 0：停止， 1：开始
+	 * 0#:M#V9#, 1#:?*J<
 	 * \endif
 	 */
 	public int      ActionType;
@@ -28,7 +28,7 @@ public class ALARM_LOST_NETPACKET implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel ID, start from 1
 	 * \else
-	 * 通道号，从1开始
+	 * M(5@:E#,4S1?*J<
 	 * \endif
 	 */
 	public int      nChannelID;
@@ -37,7 +37,7 @@ public class ALARM_LOST_NETPACKET implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Bit stream type, 0: main stream; 1: extra stream1; 2: extra stream2; 3: extra stream3; 4: snapshot stream
 	 * \else
-	 * 码流类型，0：主码流；1：辅码流1；2：辅码流2；3：辅码流3；4：抓图码流
+	 * BkAw@`PM#,0#:VwBkAw#;1#:8(BkAw1#;2#:8(BkAw2#;3#:8(BkAw3#;4#:W%M<BkAw
 	 * \endif
 	 */
 	public int      nStreamType;
@@ -46,7 +46,7 @@ public class ALARM_LOST_NETPACKET implements Serializable {
 	 * \if ENGLISH_LANG
 	 * IP address of sending
 	 * \else
-	 * 发送端IP地址
+	 * 7"KM6KIP5XV7
 	 * \endif
 	 */
 	public byte      szRemoteIP[] = new byte[FinalVar.SDK_MAX_IPADDR_LEN];
@@ -55,7 +55,7 @@ public class ALARM_LOST_NETPACKET implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port address of sending 
 	 * \else
-	 * 发送端的端口地址
+	 * 7"KM6K5D6K?Z5XV7
 	 * \endif
 	 */
 	public int     dwRemotePort;
@@ -64,7 +64,7 @@ public class ALARM_LOST_NETPACKET implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Event occurrence time
 	 * \else
-	 * 事件发生时间    
+	 * JB<~7"IzJ1<d    
 	 * \endif
 	 */
 	public NET_TIME  stuTime = new NET_TIME();

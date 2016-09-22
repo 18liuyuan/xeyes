@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Output Network Alarm Configuration
  * \else
- * 网络报警配置
+ * MxBg1(>/EdVC
  * \endif
  */
 public class CFG_NETALARMIN_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_NETALARMIN_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm Channel Id(from 0) 
 	 * \else
-	 * 报警通道号(0开始)
+	 * 1(>/M(5@:E(0?*J<)
 	 * \endif
 	 */
 	public int					nChannelID;
@@ -28,7 +28,7 @@ public class CFG_NETALARMIN_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable 
 	 * \else
-	 * 使能开关
+	 * J9D\?*9X
 	 * \endif
 	 */
 	public boolean				bEnable;
@@ -37,7 +37,7 @@ public class CFG_NETALARMIN_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm Channel Name 
 	 * \else
-	 * 报警通道名称
+	 * 1(>/M(5@C{3F
 	 * \endif
 	 */
 	public byte[]				szChnName = new byte[FinalVar.MAX_CHANNELNAME_LEN];
@@ -46,7 +46,7 @@ public class CFG_NETALARMIN_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm Type,1:"NO",0: "NC" 
 	 * \else
-	 * 报警器类型，0：常闭，1：常开
+	 * 1(>/Fw@`PM#,0#:3#1U#,1#:3#?*
 	 * \endif
 	 */
 	public int					nAlarmType;
@@ -55,7 +55,7 @@ public class CFG_NETALARMIN_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Event Handler
 	 * \else
-	 * 报警联动
+	 * 1(>/A*6/
 	 * \endif
 	 */
 	public CFG_ALARM_MSG_HANDLE stuEventHandler = new CFG_ALARM_MSG_HANDLE();
@@ -64,7 +64,7 @@ public class CFG_NETALARMIN_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Event Respind Time
 	 * \else
-	 * 事件响应时间段
+	 * JB<~OlS&J1<d6N
 	 * \endif
 	 */
 	public CFG_TIME_SECTION[][]		stuTimeSection = new CFG_TIME_SECTION[FinalVar.WEEK_DAY_NUM][FinalVar.MAX_REC_TSECT];

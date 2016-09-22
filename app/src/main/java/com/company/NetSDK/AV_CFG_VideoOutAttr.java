@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Video Out Attribute Structure
  * \else
- * 视频输出属性
+ * JSF5Jd3vJtPT
  * \endif
  */
 public class AV_CFG_VideoOutAttr implements Serializable {
@@ -20,7 +20,7 @@ public class AV_CFG_VideoOutAttr implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Margin Left, Ratio, 0~100 
 	 * \else
-	 * 左边距, 比率, 0~100
+	 * Ws1_>`, 1HBJ, 0~100
 	 * \endif
 	 */
 	public int				nMarginLeft;
@@ -29,7 +29,7 @@ public class AV_CFG_VideoOutAttr implements Serializable {
 	 * \if ENGLISH_LANG
 	 * MarginT op, Ratio, 0~100 
 	 * \else
-	 * 上边距, 比率, 0~100
+	 * IO1_>`, 1HBJ, 0~100
 	 * \endif
 	 */
 	public int				nMarginTop;
@@ -38,7 +38,7 @@ public class AV_CFG_VideoOutAttr implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Margin Right, Ratio, 0~100
 	 * \else
-	 * 右边距, 比率, 0~100
+	 * SR1_>`, 1HBJ, 0~100
 	 * \endif
 	 */
 	public int				nMarginRight;
@@ -47,7 +47,7 @@ public class AV_CFG_VideoOutAttr implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Margin Bottom, Ratio, 0~100 
 	 * \else
-	 * 下边距, 比率, 0~100
+	 * OB1_>`, 1HBJ, 0~100
 	 * \endif
 	 */
 	public int				nMarginBottom;
@@ -56,7 +56,7 @@ public class AV_CFG_VideoOutAttr implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Brightness, 0~100 
 	 * \else
-	 * 亮度, 0~100
+	 * AA6H, 0~100
 	 * \endif
 	 */
 	public int				nBrightness;
@@ -65,7 +65,7 @@ public class AV_CFG_VideoOutAttr implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Contrast, 0~100 
 	 * \else
-	 * 对比度, 0~100
+	 * 6T1H6H, 0~100
 	 * \endif
 	 */
 	public int				nContrast;
@@ -74,7 +74,7 @@ public class AV_CFG_VideoOutAttr implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Saturation, 0~100 
 	 * \else
-	 * 饱和度, 0~100
+	 * 1%:M6H, 0~100
 	 * \endif
 	 */
 	public int				nSaturation;
@@ -83,7 +83,7 @@ public class AV_CFG_VideoOutAttr implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Hue, 0~100 
 	 * \else
-	 * 色调, 0~100
+	 * I+5w, 0~100
 	 * \endif
 	 */
 	public int				nHue;
@@ -92,7 +92,7 @@ public class AV_CFG_VideoOutAttr implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Horizontal Resolution 
 	 * \else
-	 * 水平分辨率
+	 * K.F=7V1fBJ
 	 * \endif
 	 */
 	public int				nWidth;
@@ -101,7 +101,7 @@ public class AV_CFG_VideoOutAttr implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Vertical Resolution
 	 * \else
-	 * 垂直分辨率
+	 * 49V17V1fBJ
 	 * \endif
 	 */
 	public int				nHeight;
@@ -110,7 +110,7 @@ public class AV_CFG_VideoOutAttr implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Color Depth 
 	 * \else
-	 * 颜色深度
+	 * QUI+In6H
 	 * \endif
 	 */
 	public int				nBPP;
@@ -128,7 +128,7 @@ public class AV_CFG_VideoOutAttr implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Refresh Rate 
 	 * \else
-	 * 刷新频率
+	 * K"PBF5BJ
 	 * \endif
 	 */
 	public int				nRefreshRate;
@@ -137,7 +137,7 @@ public class AV_CFG_VideoOutAttr implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Picture Out Gain 
 	 * \else
-	 * 输出图像增强
+	 * Jd3vM<OqTvG?
 	 * \endif
 	 */
 	public boolean			bIQIMode;
@@ -146,7 +146,7 @@ public class AV_CFG_VideoOutAttr implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Scan mode, 0-progressive, 1-interlacing
 	 * \else
-	 * 扫描模式, 0-逐行, 1-隔行
+	 * I(ChD#J=, 0-VpPP, 1-8tPP
 	 * \endif
 	 */
 	public int				nScanFormat;

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * DSP capacity description. Correspondign to GetDevConfig
  * \else
- * DSP能力描述，对应 GetDevConfig 接口
+ * DSPD\A&ChJv#,6TS& GetDevConfig =S?Z
  * \endif
  */
 public class SDK_DSP_ENCODECAP implements Serializable {
@@ -19,26 +19,29 @@ public class SDK_DSP_ENCODECAP implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Video format mask. Bit stands for the video format device supported.
 	 * \else
-	 * 视频制式掩码，按位表示设备能够支持的视频制式
+	 * JSF5VFJ=QZBk#,04N;1mJ>Ih18D\9;V'3V5DJSF5VFJ=
 	 * \endif
 	 */
-	public int				dwVideoStandardMask;	
+	public int				dwVideoStandardMask;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Resolution mask bit. Bit stands for the resolution setup devices supported.
 	 * \else
-	 * 分辨率掩码，按位表示设备能够支持的分辨率设置
+	 * 7V1fBJQZBk#,04N;1mJ>Ih18D\9;V'3V5D7V1fBJIhVC
 	 * \endif
 	 */
-	public int				dwImageSizeMask;		
+	public int				dwImageSizeMask;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Encode mode mask bit. Bit stands for the encode mode devices supported.
 	 * \else
-	 * 编码模式掩码，按位表示设备能够支持的编码模式设置	
+	 * 1`BkD#J=QZBk#,04N;1mJ>Ih18D\9;V'3V5D1`BkD#J=IhVC	
 	 * \endif
 	 */
-	public int				dwEncodeModeMask;		
+	public int				dwEncodeModeMask;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * The multiple-media function the devices supported \n
@@ -47,48 +50,48 @@ public class SDK_DSP_ENCODECAP implements Serializable {
 	 * The third bit:extra stream 2 \n
 	 * The fifth bit: snapshot in .jpg format
 	 * \else
-	 * 按位表示设备支持的多媒体功能， \n
-	 * 第一位表示支持主码流 \n
-	 * 第二位表示支持辅码流1 \n
-	 * 第三位表示支持辅码流2 \n
-	 * 第五位表示支持jpg抓图
+	 * 04N;1mJ>Ih18V'3V5D6`C=Le9&D\#, \n
+	 * 5ZR;N;1mJ>V'3VVwBkAw \n
+	 * 5Z6~N;1mJ>V'3V8(BkAw1 \n
+	 * 5ZH}N;1mJ>V'3V8(BkAw2 \n
+	 * 5ZNeN;1mJ>V'3VjpgW%M<
 	 * \endif
 	 */
-	public int				dwStreamCap;			
-												
-												
-												
+	public int				dwStreamCap;
 												
 	/**
 	 * \if ENGLISH_LANG
 	 * When the main stream is the corresponding resolution, the supported extra stream resolution mask.
 	 * \else
-	 * 表示主码流为各分辨率时，支持的辅码流分辨率掩码。
+	 * 1mJ>VwBkAwN*8w7V1fBJJ1#,V'3V5D8(BkAw7V1fBJQZBk!#
 	 * \endif
 	 */
 	public int				dwImageSizeMask_Assi[] = new int[8];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * The highest encode capacity DSP supported
 	 * \else
-	 * DSP支持的最高编码能力 
+	 * DSPV'3V5DWn8_1`BkD\A& 
 	 * \endif
 	 */
-	public int				dwMaxEncodePower;		
+	public int				dwMaxEncodePower;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * The max video channel amount each DSP supported.
 	 * \else
-	 * 每块DSP支持最多输入视频通道数 
+	 * C??iDSPV'3VWn6`JdHkJSF5M(5@J} 
 	 * \endif
 	 */
-	public int				wMaxSupportChannel;		
+	public int				wMaxSupportChannel;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Max encode bit setup in each DSP channel  are synchronized or not ;0:does not synchronized,1:synchronized
 	 * \else
-	 * DSP每通道的最大编码设置是否同步；0：不同步，1：同步
+	 * DSPC?M(5@5DWn4s1`BkIhVCJG7qM,2=#;0#:2;M,2=#,1#:M,2=
 	 * \endif
 	 */
-	public int				wChannelMaxSetSync;		
+	public int				wChannelMaxSetSync;
 }

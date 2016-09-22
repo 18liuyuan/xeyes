@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Record Mode
  * \else
- * 录像模式
+ * B<OqD#J=
  * \endif
  */
 public class AV_CFG_RecordMode implements Serializable {
@@ -18,9 +18,9 @@ public class AV_CFG_RecordMode implements Serializable {
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * Record Mode, 0-Auto Record，1-Mannul Record，2-Shutdown Record 
+	 * Record Mode, 0-Auto Record#,1-Mannul Record#,2-Shutdown Record 
 	 * \else
-	 * 录像模式, 0-自动录像，1-手动录像，2-关闭录像 
+	 * B<OqD#J=, 0-WT6/B<Oq#,1-JV6/B<Oq#,2-9X1UB<Oq 
 	 * \endif
 	 */
 	public int					nMode;

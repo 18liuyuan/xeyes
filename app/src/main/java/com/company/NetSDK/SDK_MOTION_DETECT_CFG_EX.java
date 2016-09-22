@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Motion detection alarm
  * \else
- * 动态检测报警
+ * 6/L,<l2b1(>/
  * \endif
  */
 public class SDK_MOTION_DETECT_CFG_EX implements Serializable {
@@ -19,7 +19,7 @@ public class SDK_MOTION_DETECT_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Motion detection alarm enabling
 	 * \else
-	 * 动态检测报警使能
+	 * 6/L,<l2b1(>/J9D\
 	 * \endif
 	 */
 	public byte                byMotionEn;
@@ -28,7 +28,7 @@ public class SDK_MOTION_DETECT_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Sensitivity
 	 * \else
-	 * 灵敏度
+	 * AiCt6H
 	 * \endif
 	 */
 	public short                wSenseLevel;
@@ -37,7 +37,7 @@ public class SDK_MOTION_DETECT_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Motion detection area rows
 	 * \else
-	 * 动态检测区域的行数
+	 * 6/L,<l2bGxSr5DPPJ}
 	 * \endif
 	 */
 	public short                wMotionRow;
@@ -46,7 +46,7 @@ public class SDK_MOTION_DETECT_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Motion detection area lines
 	 * \else
-	 * 动态检测区域的列数
+	 * 6/L,<l2bGxSr5DAPJ}
 	 * \endif
 	 */
 	public short                wMotionCol;
@@ -55,7 +55,7 @@ public class SDK_MOTION_DETECT_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Motion detection area,most 32*32
 	 * \else
-	 * 检测区域，最多32*32块区域
+	 * <l2bGxSr#,Wn6`32*32?iGxSr
 	 * \endif
 	 */
     public byte                byDetected[][] = new byte[FinalVar.SDK_MOTION_ROW][FinalVar.SDK_MOTION_COL];
@@ -73,7 +73,7 @@ public class SDK_MOTION_DETECT_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Handle method
 	 * \else
-	 * 处理方式
+	 * 4&@m7=J=
 	 * \endif
 	 */
     public SDK_MSG_HANDLE_EX        struHandle = new SDK_MSG_HANDLE_EX();

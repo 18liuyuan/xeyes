@@ -13,7 +13,7 @@ public class SDKDEV_NETCARD_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * card number
 	 * \else
-	 * 有效卡号数
+	 * SPP'?(:EJ}
 	 * \endif
 	 */
     public int                nCardNum; 
@@ -22,7 +22,7 @@ public class SDKDEV_NETCARD_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * card info string
 	 * \else
-	 * 卡号信息字符串
+	 * ?(:EPEO"WV7{4.
 	 * \endif
 	 */
     public byte               cardInfo[][] = new byte[FinalVar.SDK_MAX_CARD_NUM][FinalVar.SDK_MAX_CARDINFO_LEN];  

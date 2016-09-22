@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * TV parameters
  * \else
- * TV参数信息
+ * TV2NJ}PEO"
  * \endif
  */
 public class DEV_DECODER_TV implements Serializable {
@@ -19,7 +19,7 @@ public class DEV_DECODER_TV implements Serializable {
 	 * \if ENGLISH_LANG
 	 * TV ID
 	 * \else
-	 * TV号
+	 * TV:E
 	 * \endif
 	 */
 	public int				nID;
@@ -28,7 +28,7 @@ public class DEV_DECODER_TV implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable, open or close
 	 * \else
-	 * 使能，开启或关闭
+	 * J9D\#,?*Ft;r9X1U
 	 * \endif
 	 */
 	public boolean			bEnable;
@@ -37,7 +37,7 @@ public class DEV_DECODER_TV implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Partition number
 	 * \else
-	 *  画面分割数
+	 *  ;-Cf7V8nJ}
 	 * \endif
 	 */
 	public int				nSplitType;
@@ -46,7 +46,7 @@ public class DEV_DECODER_TV implements Serializable {
 	 * \if ENGLISH_LANG
 	 * All encoder information
 	 * \else
-	 * 各画面编码器信息dwDisplayType=SDK_SPLIT_DISPLAY_TYPE_GENERAL时有效
+	 * 8w;-Cf1`BkFwPEO"dwDisplayType=SDK_SPLIT_DISPLAY_TYPE_GENERALJ1SPP'
 	 * \endif
 	 */
 	public DEV_ENCODER_INFO stuDevInfo[] = new DEV_ENCODER_INFO[16];
@@ -55,7 +55,7 @@ public class DEV_DECODER_TV implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Split mode supported
 	 * \else
-	 * 支持的分割模式
+	 * V'3V5D7V8nD#J=
 	 * \endif
 	 */
 	public byte			bySupportSplit[] = new byte[10];
@@ -64,7 +64,7 @@ public class DEV_DECODER_TV implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel input no. 
 	 * \else
-	 * 输入通道组号,dwDisplayType=SDK_SPLIT_DISPLAY_TYPE_PIP时表示画中画显示类型下有效；
+	 * JdHkM(5@Wi:E,dwDisplayType=SDK_SPLIT_DISPLAY_TYPE_PIPJ11mJ>;-VP;-OTJ>@`PMOBSPP'#;
 	 * \endif
 	 */
 	public byte            byGroupNo;
@@ -73,7 +73,7 @@ public class DEV_DECODER_TV implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Display Type, can look for DH_SPLIT_DISPLAY_TYPE
 	 * \else
-	 * 显示类型；具体见SDK_SPLIT_DISPLAY_TYPE（注释各模式下显示内容由"PicInPic"决定, 各模式下显示内容按NVD旧有规则决定（即DisChn字段决定）。兼容，没有这一个项时，默认为普通显示类型,即"General"）
+	 * OTJ>@`PM#;>_Le<{SDK_SPLIT_DISPLAY_TYPE#(W"JM8wD#J=OBOTJ>DZH]SI"PicInPic">v6(, 8wD#J=OBOTJ>DZH]04NVD>ISP9fTr>v6(#(<4DisChnWV6N>v6(#)!#<fH]#,C;SPUbR;8vOnJ1#,D,HON*FUM(OTJ>@`PM,<4"General"#)
 	 * \endif
 	 */
 	public int             dwDisplayType;

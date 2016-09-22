@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Port serial number
  * \else
- * 监听CAN总线数据
+ * <`L}CANW\O_J}>]
  * \endif
  */
 public class NET_CB_CANDATA implements Serializable {
@@ -19,7 +19,7 @@ public class NET_CB_CANDATA implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 普通数据长度
+	 * FUM(J}>]3$6H
 	 * \endif
 	 */
 	public int					nDataLength;
@@ -28,7 +28,7 @@ public class NET_CB_CANDATA implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 普通数据内容
+	 * FUM(J}>]DZH]
 	 * \endif
 	 */
 	public char[]				pDataContent;

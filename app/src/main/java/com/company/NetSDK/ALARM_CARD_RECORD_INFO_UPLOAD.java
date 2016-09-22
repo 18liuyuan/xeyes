@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Mobile Custom Info Uploading Structure
  * \else
- * 卡号录像信息上传
+ * ?(:EB<OqPEO"IO4+
  * \endif
  */
 public class ALARM_CARD_RECORD_INFO_UPLOAD implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_CARD_RECORD_INFO_UPLOAD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel No.
 	 * \else
-	 * 通道号
+	 * M(5@:E
 	 * \endif
 	 */
 	public int                    nChannel;
@@ -28,7 +28,7 @@ public class ALARM_CARD_RECORD_INFO_UPLOAD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Recording or not 
 	 * \else
-	 * 是否正在卡号录像
+	 * JG7qU}TZ?(:EB<Oq
 	 * \endif
 	 */
 	public boolean                bEnable;
@@ -37,7 +37,7 @@ public class ALARM_CARD_RECORD_INFO_UPLOAD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Card No. Info 
 	 * \else
-	 * 卡号信息
+	 * ?(:EPEO"
 	 * \endif
 	 */
 	public byte                   szCardInfo[] = new byte[FinalVar.SDK_MAX_CARD_INFO_LEN];
@@ -46,7 +46,7 @@ public class ALARM_CARD_RECORD_INFO_UPLOAD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The Card No. Effect of Starting Time 
 	 * \else
-	 * 该卡号生效起始时间
+	 * 8C?(:EIzP'FpJ<J1<d
 	 * \endif
 	 */
 	public NET_TIME               stuTime = new NET_TIME();
@@ -55,16 +55,16 @@ public class ALARM_CARD_RECORD_INFO_UPLOAD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Preview Overlay Enable 
 	 * \else
-	 * 预览叠加使能
+	 * T$@@5~<SJ9D\
 	 * \endif
 	 */
 	public boolean                bPreviewOverlayEn;
 	
  	/**
 	 * \if ENGLISH_LANG
-	 * Overlay Position,1-Upper Left，2-Lower Left，3-Upper Right，4-Lower Right 
+	 * Overlay Position,1-Upper Left#,2-Lower Left#,3-Upper Right#,4-Lower Right 
 	 * \else
-	 * 叠加位置,1-左上，2-左下，3-右上，4-右下
+	 * 5~<SN;VC,1-WsIO#,2-WsOB#,3-SRIO#,4-SROB
 	 * \endif
 	 */
 	public byte                   byOverlayPos;                       

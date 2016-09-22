@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * encrypt key info
  * \else
- * 具体密钥信息36个字节
+ * >_LeC\T?PEO"368vWV=Z
  * \endif
  */
 public class ENCRYPT_KEY_INFO implements Serializable {
@@ -20,7 +20,7 @@ public class ENCRYPT_KEY_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * encrypt enable, 0: not encrypt, 1:encrypt
 	 * \else
-	 * 是否加密0:不加密, 1:加密
+	 * JG7q<SC\0:2;<SC\, 1:<SC\
 	 * \endif
 	 */
     public byte        byEncryptEnable;
@@ -29,7 +29,7 @@ public class ENCRYPT_KEY_INFO implements Serializable {
      * \if ENGLISH_LANG
      * des key
      * \else
-     * des密钥
+     * desC\T?
      * \endif
      */
     public byte    byDesKey[] = new byte[8];
@@ -38,7 +38,7 @@ public class ENCRYPT_KEY_INFO implements Serializable {
      * \if ENGLISH_LANG
      * 3des key
      * \else
-     * 3des密钥
+     * 3desC\T?
      * \endif
      */
     public byte    by3DesKey[][] = new byte[3][8];
@@ -47,7 +47,7 @@ public class ENCRYPT_KEY_INFO implements Serializable {
      * \if ENGLISH_LANG
      * aes key
      * \else
-     * aes密钥
+     * aesC\T?
      * \endif
      */
     public byte    byAesKey[] = new byte[32];

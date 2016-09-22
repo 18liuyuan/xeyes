@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * 232/485 com card signal info configuration
  * \else
- * 232串口卡号信号、485串口卡号信号事件配置
+ * 2324.?Z?(:EPE:E!"4854.?Z?(:EPE:EJB<~EdVC
  * \endif
  */
 public class COM_CARD_SIGNAL_INFO implements Serializable {
@@ -20,7 +20,7 @@ public class COM_CARD_SIGNAL_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * card number start location
 	 * \else
-	 * 卡号起始位
+	 * ?(:EFpJ<N;
 	 * \endif
 	 */
 	public short                wCardStartPose; 
@@ -29,7 +29,7 @@ public class COM_CARD_SIGNAL_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * card number length
 	 * \else
-	 * 卡号长度
+	 * ?(:E3$6H
 	 * \endif
 	 */
 	public short                wCardLenth;
@@ -38,7 +38,7 @@ public class COM_CARD_SIGNAL_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * start string
 	 * \else
-	 * 开始符
+	 * ?*J<7{
 	 * \endif
 	 */
 	public byte                cStartCharacter[] = new byte[32];
@@ -47,7 +47,7 @@ public class COM_CARD_SIGNAL_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * end string
 	 * \else
-	 * 结束符
+	 * =aJx7{
 	 * \endif
 	 */
 	public byte                cEndCharacter[] = new byte[32];

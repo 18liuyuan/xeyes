@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Shield User, INetSDK.ControlDevice(SDK_SHIELD_USER)
  * \else
- * 屏蔽用户, INetSDK.ControlDevice(SDK_SHIELD_USER)
+ * FA1NSC;', INetSDK.ControlDevice(SDK_SHIELD_USER)
  * \endif
  */
 public class SDKDEV_SHIELD_USER implements Serializable {
@@ -19,7 +19,7 @@ public class SDKDEV_SHIELD_USER implements Serializable {
 	 * \if ENGLISH_LANG
 	 * User Account
 	 * \else
-	 * 用户数量
+	 * SC;'J}A?
 	 * \endif
 	 */
 	public int                       nUserCount;

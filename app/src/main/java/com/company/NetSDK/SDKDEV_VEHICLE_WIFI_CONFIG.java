@@ -28,7 +28,7 @@ public class SDKDEV_VEHICLE_WIFI_CONFIG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Priority,(1-32)
 	 * \else
-	 * 优先级,(1-32)
+	 * SEOH<6,(1-32)
 	 * \endif
 	 */
 	public int	nPriority;
@@ -44,7 +44,7 @@ public class SDKDEV_VEHICLE_WIFI_CONFIG implements Serializable {
 	 * 5:WPA-PSK
 	 * 6:WPA2-PSK
 	 * \else
-	 * 校验类型
+	 * P#Qi@`PM
 	 * 0:OPEN 
 	 * 1:RESTRICTE
 	 * 2:WEP
@@ -67,12 +67,12 @@ public class SDKDEV_VEHICLE_WIFI_CONFIG implements Serializable {
 	 * 5:AUTO
 	 * 6:SHARED
 	 * \else
-	 * 加密方式
+	 * <SC\7=J=
 	 * 0:OPEN
 	 * 1:TKIP
 	 * 2:WEP
 	 * 3:AES
-	 * 4:NONE(不校验)
+	 * 4:NONE(2;P#Qi)
 	 * 5:AUTO
 	 * 6:SHARED
 	 * \endif
@@ -83,7 +83,7 @@ public class SDKDEV_VEHICLE_WIFI_CONFIG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Connection key
 	 * \else
-	 * 连接密钥
+	 * A,=SC\T?
 	 * \endif
 	 */
 	public byte	szKey[] = new byte[128];
@@ -92,7 +92,7 @@ public class SDKDEV_VEHICLE_WIFI_CONFIG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Host address
 	 * \else
-	 * 主机地址
+	 * Vw;z5XV7
 	 * \endif
 	 */
 	public byte	szHostIP[] = new byte[128];
@@ -101,7 +101,7 @@ public class SDKDEV_VEHICLE_WIFI_CONFIG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Host mask
 	 * \else
-	 * 主机掩码
+	 * Vw;zQZBk
 	 * \endif
 	 */
 	public byte	szHostNetmask[] = new byte[128];
@@ -110,7 +110,7 @@ public class SDKDEV_VEHICLE_WIFI_CONFIG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Host gateway
 	 * \else
-	 * 主机网关
+	 * Vw;zMx9X
 	 * \endif
 	 */
 	public byte	szHostGateway[] = new byte[128];
@@ -119,7 +119,7 @@ public class SDKDEV_VEHICLE_WIFI_CONFIG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:disable 1:enable(default value is 1)
 	 * \else
-	 * 0：不使能	1：使能(扫描到的dhcp默认使能打开)
+	 * 0#:2;J9D\	1#:J9D\(I(Ch5=5DdhcpD,HOJ9D\4r?*)
 	 * \endif
 	 */
 	public int  nEnDHCP;
@@ -128,7 +128,7 @@ public class SDKDEV_VEHICLE_WIFI_CONFIG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Verify index of WEP,0:no support,1-4 is index
 	 * \else
-	 * WEP校验类型下的密钥索引,0：不支持密钥索引 >0:密钥索引值，范围1-4
+	 * WEPP#Qi@`PMOB5DC\T?KwR},0#:2;V'3VC\T?KwR} >0:C\T?KwR}V5#,76N'1-4
 	 * \endif
 	 */
 	public byte byKeyIndex;

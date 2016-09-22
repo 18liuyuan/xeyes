@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * BUS configuration info
  * \else
- * 总线配置信息
+ * W\O_EdVCPEO"
  * \endif
  */
 public class CFG_CANFILTER_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_CANFILTER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Wait for the reply timeout (unit: ms), after sending data, wait for after 3000 milliseconds, end the Reuters 
 	 * \else
-	 * 等待应答超时(单位:毫秒)， 发送数据后，等待3000毫秒后，结束该路透传
+	 * 5H4}S&4p3,J1(5%N;::ACk)#, 7"KMJ}>]:s#,5H4}3000:ACk:s#,=aJx8CB7M84+
 	 * \endif
 	 */
 	public int						nResponseTimeout;			
@@ -28,7 +28,7 @@ public class CFG_CANFILTER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Receives the request response timeout (unit: ms), more than a specified time not yet received data, think end of the request 
 	 * \else
-	 * 接收请求应答超时(单位:毫秒)， 超过指定时间未收到数据，认为请求结束
+	 * =SJUGkGsS&4p3,J1(5%N;::ACk)#, 3,9}V86(J1<dN4JU5=J}>]#,HON*GkGs=aJx
 	 * \endif
 	 */
 	public int						nRequestTimeout;
@@ -37,7 +37,7 @@ public class CFG_CANFILTER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Number of data, 
 	 * \else
-	 * 数据号个数
+	 * J}>]:E8vJ}
 	 * \endif
 	 */
 	public int						nFilterPIDCount;
@@ -46,7 +46,7 @@ public class CFG_CANFILTER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Returns the number of data number
 	 * \else
-	 * 返回数据号个数
+	 * 75;XJ}>]:E8vJ}
 	 * \endif
 	 */
 	public int						nRetFiterPIDCount;
@@ -55,7 +55,7 @@ public class CFG_CANFILTER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Filter the number of data, 
 	 * \else
-	 * 过滤数据号
+	 * 9}BKJ}>]:E
 	 * \endif
 	 */
 	public int[]					pnFilterPID;
@@ -67,11 +67,11 @@ public class CFG_CANFILTER_INFO implements Serializable {
 	 * If it is a blacklist, report does not contain the data of PID 
 	 * All data reported if no filter
 	 * \else
-	 * 过滤策略
-	 * 0 = 未知策略
-	 * 1 = 无过滤 ,所有数据都上报
-	 * 2 = 白名单，上报包含PID的数据
-	 * 3 = 黑名单，上报不含PID的数据
+	 * 9}BK2_BT
+	 * 0 = N4V*2_BT
+	 * 1 = N^9}BK ,KySPJ}>]6<IO1(
+	 * 2 = 0WC{5%#,IO1(0|:,PID5DJ}>]
+	 * 3 = :ZC{5%#,IO1(2;:,PID5DJ}>]
 	 * \endif
 	 */
 	public int						nPolicy;

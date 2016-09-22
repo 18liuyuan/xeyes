@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * traffic light fault alarm
  * \else
- * 交通灯故障报警	
+ * =;M(5F9JUO1(>/	
  * \endif
  */
 public class ALARM_TRAFFIC_LIGHT_FAULT implements Serializable {
@@ -19,16 +19,16 @@ public class ALARM_TRAFFIC_LIGHT_FAULT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * alarm time
 	 * \else
-	 * 报警发生时间
+	 * 1(>/7"IzJ1<d
 	 * \endif
 	 */
-	public NET_TIME           stTime;
+	public NET_TIME           stTime = new NET_TIME();
 	
  	/**
 	 * \if ENGLISH_LANG
 	 * info number
 	 * \else
-	 * 故障信息数
+	 * 9JUOPEO"J}
 	 * \endif
 	 */
 	public int                nInfoNumber;
@@ -37,7 +37,7 @@ public class ALARM_TRAFFIC_LIGHT_FAULT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * info
 	 * \else
-	 * 交通灯故障信息
+	 * =;M(5F9JUOPEO"
 	 * \endif
 	 */
 	public LIGHT_INFO         stLightInfo[] = new LIGHT_INFO[8];

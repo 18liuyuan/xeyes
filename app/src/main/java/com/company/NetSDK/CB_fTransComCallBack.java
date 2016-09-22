@@ -4,7 +4,7 @@ package com.company.NetSDK;
  * \if ENGLISH_LANG
  * Transparent COM callback function original shape
  * \else
- * 透明串口回调 
+ * M8Cw4.?Z;X5w 
  * \endif
  */
 public interface CB_fTransComCallBack {
@@ -16,11 +16,11 @@ public interface CB_fTransComCallBack {
 	 * @param pBuffer Transparent data buffer 
 	 * @param dwBufSize Transparent data buffer length 
 	 * \else
-	 * 透明串口回调函数
-	 * @param lLoginID 登录句柄, {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx}或者{@link com.company.NetSDK.INetSDK#Login() Login}的返回值
-	 * @param lTransComChannel {@link com.company.NetSDK.INetSDK#CreateTransComChannel() CreateTransComChannel}的返回值 
-	 * @param pBuffer 透明数据缓冲 
-	 * @param dwBufSize 透明数据缓冲长度
+	 * M8Cw4.?Z;X5w:/J}
+	 * @param lLoginID 5GB<>d1z, {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx};rU_{@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5
+	 * @param lTransComChannel {@link com.company.NetSDK.INetSDK#CreateTransComChannel() CreateTransComChannel}5D75;XV5 
+	 * @param pBuffer M8CwJ}>];:3e 
+	 * @param dwBufSize M8CwJ}>];:3e3$6H
 	 * \endif
 	 */
 	public void invoke(long lLoginID, long lTransComChannel, byte pBuffer[], int dwBufSize);

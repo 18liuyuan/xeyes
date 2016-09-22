@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Network Anomaly alarm
  * \else
- * 网络异常报警
+ * MxBgRl3#1(>/
  * \endif
  */
 public class SDK_NETBROKEN_ALARM_CFG implements Serializable {
@@ -19,7 +19,7 @@ public class SDK_NETBROKEN_ALARM_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable
 	 * \else
-	 * 使能
+	 * J9D\
 	 * \endif
 	 */
 	public byte               byEnable;
@@ -28,7 +28,7 @@ public class SDK_NETBROKEN_ALARM_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Message
 	 * \else
-	 * 消息
+	 * O{O"
 	 * \endif
 	 */
 	public SDK_MSG_HANDLE       struHandle = new SDK_MSG_HANDLE();

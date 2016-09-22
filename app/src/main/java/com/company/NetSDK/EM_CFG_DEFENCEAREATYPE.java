@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * DefenceArea Type
  * \else
- * 防区类型
+ * 7@Gx@`PM
  * \endif
  */
 public class EM_CFG_DEFENCEAREATYPE implements Serializable {
@@ -19,7 +19,7 @@ public class EM_CFG_DEFENCEAREATYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Unkown
 	 * \else
-	 * 未知
+	 * N4V*
 	 * \endif
 	 */
 	public final static int EM_CFG_DefenceAreaType_Unknown = 0;
@@ -28,7 +28,7 @@ public class EM_CFG_DEFENCEAREATYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Real-time DefenceArea 
 	 * \else
-	 * 即时防区 
+	 * <4J17@Gx 
 	 * \endif
 	 */
 	public final static int EM_CFG_DefenceAreaType_InTime = 1;
@@ -37,7 +37,7 @@ public class EM_CFG_DEFENCEAREATYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Delay DefenceArea
 	 * \else
-	 * 延时防区
+	 * QSJ17@Gx
 	 * \endif
 	 */
 	public final static int EM_CFG_DefenceAreaType_Delay = 2;
@@ -46,7 +46,7 @@ public class EM_CFG_DEFENCEAREATYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Fullday DefenceArea
 	 * \else
-	 * 24小时防区
+	 * 24P!J17@Gx
 	 * \endif
 	 */
 	public final static int EM_CFG_DefenceAreaType_FullDay = 3;
@@ -55,7 +55,7 @@ public class EM_CFG_DEFENCEAREATYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 
 	 * \else
-	 * 火警防区
+	 * ;p>/7@Gx
 	 * \endif
 	 */
 	public final static int EM_CFG_DefenceAreaType_Fire = 4;
@@ -64,7 +64,7 @@ public class EM_CFG_DEFENCEAREATYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 
 	 * \else
-	 * 24小时有声防区
+	 * 24P!J1SPIy7@Gx
 	 * \endif
 	 */
 	public final static int EM_CFG_DefenceAreaType_FullDaySound = 5;
@@ -73,7 +73,7 @@ public class EM_CFG_DEFENCEAREATYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 
 	 * \else
-	 * 24小时无声防区
+	 * 24P!J1N^Iy7@Gx
 	 * \endif
 	 */
 	public final static int EM_CFG_DefenceAreaType_FullDaySlient = 6;
@@ -82,7 +82,7 @@ public class EM_CFG_DEFENCEAREATYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 
 	 * \else
-	 * 出入防区1
+	 * 3vHk7@Gx1
 	 * \endif
 	 */
 	public final static int EM_CFG_DefenceAreaType_Entrance1 = 7;
@@ -91,7 +91,7 @@ public class EM_CFG_DEFENCEAREATYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 
 	 * \else
-	 * 出入防区2
+	 * 3vHk7@Gx2
 	 * \endif
 	 */
 	public final static int EM_CFG_DefenceAreaType_Entrance2 = 8;
@@ -100,7 +100,7 @@ public class EM_CFG_DEFENCEAREATYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 
 	 * \else
-	 * 内部防区
+	 * DZ2?7@Gx
 	 * \endif
 	 */
 	public final static int EM_CFG_DefenceAreaType_InSide = 9;
@@ -109,7 +109,7 @@ public class EM_CFG_DEFENCEAREATYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 
 	 * \else
-	 * 外部防区
+	 * Mb2?7@Gx
 	 * \endif
 	 */
 	public final static int EM_CFG_DefenceAreaType_OutSide = 10;

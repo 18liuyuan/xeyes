@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Record New Operation (Insert)Parameter 
  * \else
- * 记录集新增操作(insert)参数
+ * <GB<</PBTv2YWw(insert)2NJ}
  * \endif
  */
 public class NET_CTRL_RECORDSET_INSERT_PARAM implements Serializable {
@@ -19,7 +19,7 @@ public class NET_CTRL_RECORDSET_INSERT_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Record Information(User Write)
 	 * \else
-	 * 记录集信息(用户填写)
+	 * <GB<</PEO"(SC;'LnP4)
 	 * \endif
 	 */
 	public NET_CTRL_RECORDSET_INSERT_IN		stuCtrlRecordSetInfo;
@@ -28,7 +28,7 @@ public class NET_CTRL_RECORDSET_INSERT_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Record Information(the Device Come Back)
 	 * \else
-	 * 记录集信息(设备返回)
+	 * <GB<</PEO"(Ih1875;X)
 	 * \endif
 	 */
 	public NET_CTRL_RECORDSET_INSERT_OUT	stuCtrlRecordSetResult;

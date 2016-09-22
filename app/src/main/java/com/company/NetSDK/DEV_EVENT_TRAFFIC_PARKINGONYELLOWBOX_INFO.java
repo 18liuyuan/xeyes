@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Event type  EVENT_IVS_TRAFFIC_PARKINGONYELLOWBOX(parking on yellow)corresponding data block description info
  * \else
- * 事件类型 EVENT_IVS_TRAFFIC_PARKINGONYELLOWBOX(黄网格线抓拍事件)对应的数据块描述信息
+ * JB<~@`PM EVENT_IVS_TRAFFIC_PARKINGONYELLOWBOX(;FMx8qO_W%EDJB<~)6TS&5DJ}>]?iChJvPEO"
  * \endif
  */
 public class DEV_EVENT_TRAFFIC_PARKINGONYELLOWBOX_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class DEV_EVENT_TRAFFIC_PARKINGONYELLOWBOX_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * channel ID
 	 * \else
-	 * 通道号
+	 * M(5@:E
 	 * \endif
 	 */
 	public int                 nChannelID;
@@ -28,7 +28,7 @@ public class DEV_EVENT_TRAFFIC_PARKINGONYELLOWBOX_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * event name
 	 * \else
-	 * 事件名称
+	 * JB<~C{3F
 	 * \endif
 	 */
 	public byte                szName[] = new byte[128];
@@ -37,7 +37,7 @@ public class DEV_EVENT_TRAFFIC_PARKINGONYELLOWBOX_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Time stamp(ms)
 	 * \else
-	 * 时间戳(单位是毫秒)
+	 * J1<d4A(5%N;JG:ACk)
 	 * \endif
 	 */
 	public int               PTS;
@@ -46,7 +46,7 @@ public class DEV_EVENT_TRAFFIC_PARKINGONYELLOWBOX_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Event occurred time
 	 * \else
-	 * 事件发生的时间
+	 * JB<~7"Iz5DJ1<d
 	 * \endif
 	 */
 	public NET_TIME_EX         UTC = new NET_TIME_EX();
@@ -55,7 +55,7 @@ public class DEV_EVENT_TRAFFIC_PARKINGONYELLOWBOX_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Event ID
 	 * \else
-	 * 事件ID
+	 * JB<~ID
 	 * \endif
 	 */
 	public int                 nEventID;
@@ -64,7 +64,7 @@ public class DEV_EVENT_TRAFFIC_PARKINGONYELLOWBOX_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Corresponding lane No.
 	 * \else
-	 * 对应车道号
+	 * 6TS&355@:E
 	 * \endif
 	 */
 	public int                 nLane;
@@ -73,7 +73,7 @@ public class DEV_EVENT_TRAFFIC_PARKINGONYELLOWBOX_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Detected object
 	 * \else
-	 * 检测到的物体
+	 * <l2b5=5DNoLe
 	 * \endif
 	 */
 	public SDK_MSG_OBJECT       stuObject = new SDK_MSG_OBJECT();
@@ -82,7 +82,7 @@ public class DEV_EVENT_TRAFFIC_PARKINGONYELLOWBOX_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Vehicle body info
 	 * \else
-	 * 车身信息
+	 * 35ImPEO"
 	 * \endif
 	 */
 	public SDK_MSG_OBJECT       stuVehicle = new SDK_MSG_OBJECT();
@@ -91,7 +91,7 @@ public class DEV_EVENT_TRAFFIC_PARKINGONYELLOWBOX_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The corresponding file info of the event
 	 * \else
-	 * 事件对应文件信息
+	 * JB<~6TS&ND<~PEO"
 	 * \endif
 	 */
 	public SDK_EVENT_FILE_INFO  stuFileInfo = new SDK_EVENT_FILE_INFO();
@@ -100,7 +100,7 @@ public class DEV_EVENT_TRAFFIC_PARKINGONYELLOWBOX_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * the first and second time interval(s)
 	 * \else
-	 * 第二张和第一张的延时时间，单位秒
+	 * 5Z6~UE:M5ZR;UE5DQSJ1J1<d#,5%N;Ck
 	 * \endif
 	 */
 	public int                 nInterval1;
@@ -109,7 +109,7 @@ public class DEV_EVENT_TRAFFIC_PARKINGONYELLOWBOX_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 3rd and 2nd delay time, unit is second
 	 * \else
-	 * 第三张和第二张的延时时间，单位秒
+	 * 5ZH}UE:M5Z6~UE5DQSJ1J1<d#,5%N;Ck
 	 * \endif
 	 */
 	public int                 nInterval2;
@@ -118,7 +118,7 @@ public class DEV_EVENT_TRAFFIC_PARKINGONYELLOWBOX_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * follow time,if a car and a car before entering the pornographic websites,is less than this value,just as with car to enter, to enter the case if the parkingis not illegal
 	 * \else
-	 * 跟随时间，如果一辆车与前一辆车进入黄网格的时间差小于此值，就认为是跟车进入，跟车进入情况下如果停车则不算违章
+	 * 8zKfJ1<d#,Hg9{R;A>35SkG0R;A>35=xHk;FMx8q5DJ1<d2nP!SZ4KV5#,>MHON*JG8z35=xHk#,8z35=xHkGi?vOBHg9{M#35Tr2;KcN%UB
 	 * \endif
 	 */
 	public int                 nFollowTime;
@@ -127,7 +127,7 @@ public class DEV_EVENT_TRAFFIC_PARKINGONYELLOWBOX_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Event operation.0=pulse event,1=begin of the durative event,2=end of the durative event;
 	 * \else
-	 * 事件动作，0表示脉冲事件,1表示持续性事件开始,2表示持续性事件结束;
+	 * JB<~6/Ww#,01mJ>Bv3eJB<~,11mJ>3VPxPTJB<~?*J<,21mJ>3VPxPTJB<~=aJx;
 	 * \endif
 	 */
 	public byte                bEventAction;
@@ -136,7 +136,7 @@ public class DEV_EVENT_TRAFFIC_PARKINGONYELLOWBOX_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Serial number of the picture, in the same time (accurate to seconds) may have multiple images, starting from 0
 	 * \else
-	 * 图片的序号, 同一时间内(精确到秒)可能有多张图片, 从0开始
+	 * M<F,5DPr:E, M,R;J1<dDZ(>+H75=Ck)?ID\SP6`UEM<F,, 4S0?*J<
 	 * \endif
 	 */
 	public byte                byImageIndex;
@@ -145,7 +145,7 @@ public class DEV_EVENT_TRAFFIC_PARKINGONYELLOWBOX_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Snap flag(by bit),please refer to NET_RESERVED_COMMON
 	 * \else
-	 * 抓图标志(按位)，具体见NET_RESERVED_COMMON
+	 * W%M<1jV>(04N;)#,>_Le<{NET_RESERVED_COMMON
 	 * \endif
 	 */
 	public int               dwSnapFlagMask;
@@ -154,7 +154,7 @@ public class DEV_EVENT_TRAFFIC_PARKINGONYELLOWBOX_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * picture resolution
 	 * \else
-	 * 对应图片的分辨率
+	 * 6TS&M<F,5D7V1fBJ
 	 * \endif
 	 */
 	public SDK_RESOLUTION_INFO  stuResolution = new SDK_RESOLUTION_INFO();
@@ -163,7 +163,7 @@ public class DEV_EVENT_TRAFFIC_PARKINGONYELLOWBOX_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Traffic vehicle info
 	 * \else
-	 * 交通车辆信息
+	 * =;M(35A>PEO"
 	 * \endif
 	 */
 	public DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO stTrafficCar = new DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO();
@@ -172,7 +172,7 @@ public class DEV_EVENT_TRAFFIC_PARKINGONYELLOWBOX_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * public info
 	 * \else
-	 * 公共信息
+	 * 9+92PEO"
 	 * \endif
 	 */
 	public EVENT_COMM_INFO     stCommInfo = new EVENT_COMM_INFO();

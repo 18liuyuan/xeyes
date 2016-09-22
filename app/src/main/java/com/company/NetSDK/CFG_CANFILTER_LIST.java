@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * CAN list
  * \else
- * CAN列表
+ * CANAP1m
  * \endif
  */
 public class CFG_CANFILTER_LIST implements Serializable {
@@ -20,7 +20,7 @@ public class CFG_CANFILTER_LIST implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The number of CAN
 	 * \else
-	 * CAN个数
+	 * CAN8vJ}
 	 * \endif
 	 */
 	public int						nCANCount;			 
@@ -29,7 +29,7 @@ public class CFG_CANFILTER_LIST implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Equipment Return CAN Count 
 	 * \else
-	 * 设备返回CAN个数
+	 * Ih1875;XCAN8vJ}
 	 * \endif
 	 */
 	public int						nRetCANCount;		 
@@ -38,7 +38,7 @@ public class CFG_CANFILTER_LIST implements Serializable {
 	 * \if ENGLISH_LANG
 	 * CAN info
 	 * \else
-	 * CAN信息
+	 * CANPEO"
 	 * \endif
 	 */
 	public CFG_CANFILTER_INFO		stuCANFilter[]  = new CFG_CANFILTER_INFO[FinalVar.MAX_CAN_COUNT];

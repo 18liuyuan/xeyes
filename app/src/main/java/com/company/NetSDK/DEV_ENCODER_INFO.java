@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Encoder information
  * \else
- * 连接的编码器信息
+ * A,=S5D1`BkFwPEO"
  * \endif
  */
 public class DEV_ENCODER_INFO implements Serializable {
@@ -20,7 +20,7 @@ public class DEV_ENCODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * IP address of Front-end DVR 
 	 * \else
-	 * 前端DVR的IP地址
+	 * G06KDVR5DIP5XV7
 	 * \endif
 	 */
 	public byte			szDevIp[] = new byte[FinalVar.SDK_MAX_IPADDR_LEN];
@@ -29,7 +29,7 @@ public class DEV_ENCODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port of Front-end DVR
 	 * \else
-	 * 前端DVR的端口号
+	 * G06KDVR5D6K?Z:E
 	 * \endif
 	 */
 	public int				wDevPort;
@@ -38,7 +38,7 @@ public class DEV_ENCODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Decoder channel enable
 	 * \else
-	 * 解码通道使能
+	 * =bBkM(5@J9D\
 	 * \endif
 	 */
 	public byte			bDevChnEnable;
@@ -47,7 +47,7 @@ public class DEV_ENCODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The corresponding channel number decoder
 	 * \else
-	 * 对应解码通道号
+	 * 6TS&=bBkM(5@:E
 	 * \endif
 	 */
 	public byte			byDecoderID;
@@ -56,7 +56,7 @@ public class DEV_ENCODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * User Name
 	 * \else
-	 * 用户名
+	 * SC;'C{
 	 * \endif
 	 */
 	public byte			szDevUser[] = new byte[FinalVar.SDK_USER_NAME_LENGTH_EX];
@@ -65,7 +65,7 @@ public class DEV_ENCODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Password
 	 * \else
-	 * 密码
+	 * C\Bk
 	 * \endif
 	 */
 	public byte			szDevPwd[]	= new byte[FinalVar.SDK_USER_PSW_LENGTH_EX];
@@ -74,7 +74,7 @@ public class DEV_ENCODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel Number
 	 * \else
-	 * 通道号
+	 * M(5@:E
 	 * \endif
 	 */
 	public int				nDevChannel;
@@ -83,7 +83,7 @@ public class DEV_ENCODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Stream type; 0:Main Stream, 1:Sub-stream
 	 * \else
-	 * 码流类型，0：主码流；1：辅码流1; 2:snap; 3: 辅码流2
+	 * BkAw@`PM#,0#:VwBkAw#;1#:8(BkAw1; 2:snap; 3: 8(BkAw2
 	 * \endif
 	 */
 	public int				nStreamType;
@@ -92,7 +92,7 @@ public class DEV_ENCODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * -1: auto, 0:TCP, 1:UDP, 2:Multicast
 	 * \else
-	 * -1: auto, 0：TCP；1：UDP；2：组播
+	 * -1: auto, 0#:TCP#;1#:UDP#;2#:Wi2%
 	 * \endif
 	 */	
 	public byte			byConnType;
@@ -101,7 +101,7 @@ public class DEV_ENCODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:Direct Connect, 1:transmit
 	 * \else
-	 * 0：直连；1：转发
+	 * 0#:V1A,#;1#:W*7"
 	 * \endif
 	 */
 	public byte			byWorkMode;
@@ -110,7 +110,7 @@ public class DEV_ENCODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Listening port services, for transmit
 	 * \else
-	 * 指示侦听服务的端口，转发时有效
+	 * V8J>UlL}7~Nq5D6K?Z#,W*7"J1SPP'
 	 * \endif
 	 */
 	public int				wListenPort;
@@ -124,12 +124,12 @@ public class DEV_ENCODER_INFO implements Serializable {
 	 * 3:private DSS protocol
 	 * 4:private rtsp protocol
 	 * \else
-	 * 协议类型
-	 * 0:兼容以前
-	 * 1:大华二代协议
-	 * 2:大华系统集成协议
-	 * 3:大华DSS协议
-	 * 4:大华rtsp协议
+	 * P-Ri@`PM
+	 * 0:<fH]RTG0
+	 * 1:4s;*6~4zP-Ri
+	 * 2:4s;*O5M3</3IP-Ri
+	 * 3:4s;*DSSP-Ri
+	 * 4:4s;*rtspP-Ri
 	 * \endif
 	 */
 	public int				dwProtoType;
@@ -138,7 +138,7 @@ public class DEV_ENCODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Front device name
 	 * \else
-	 * 前端设备名称
+	 * G06KIh18C{3F
 	 * \endif
 	 */
 	public byte			szDevName[] = new byte[64];
@@ -147,7 +147,7 @@ public class DEV_ENCODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * video source type:0-SD,1-HD	
 	 * \else
-	 * 该解码通道当前视频源类型:0-标清(SD),1-高清(HD),注:设备支持高清通道才有效		
+	 * 8C=bBkM(5@51G0JSF5T4@`PM:0-1jGe(SD),1-8_Ge(HD),W":Ih18V'3V8_GeM(5@2ESPP'		
 	 * \endif
 	 */
 	public byte            byVideoInType;
@@ -156,7 +156,7 @@ public class DEV_ENCODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * szDevIp extended, IP or domain name
 	 * \else
-	 * szDevIp扩展，前端DVR的IP地址(可以输入域名)
+	 * szDevIp@)U9#,G06KDVR5DIP5XV7(?IRTJdHkSrC{)
 	 * \endif
 	 */
 	public byte			szDevIpEx[] = new byte[FinalVar.SDK_MAX_IPADDR_OR_DOMAIN_LEN];
@@ -165,7 +165,7 @@ public class DEV_ENCODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * snap mode(when nStreamType==2 effective) 0:That request a frame,1:Time to send a request
 	 * \else
-	 * 抓图模式(nStreamType==2时有效) 0：表示请求一帧,1：表示定时发送请求
+	 * W%M<D#J=(nStreamType==2J1SPP') 0#:1mJ>GkGsR;V!,1#:1mJ>6(J17"KMGkGs
 	 * \endif
 	 */
 	public byte            bySnapMode;
@@ -174,7 +174,7 @@ public class DEV_ENCODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The target device manufacturers,See the enum struct EM_IPC_TYPE
 	 * \else
-	 * 目标设备的生产厂商,具体参考EM_IPC_TYPE类
+	 * D?1jIh185DIz2z3'IL,>_Le2N?<EM_IPC_TYPE@`
 	 * \endif
 	 */
 	public byte            byManuFactory;
@@ -183,7 +183,7 @@ public class DEV_ENCODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The target device's device type,0:IPC
 	 * \else
-	 * 目标设备的设备类型,0:IPC
+	 * D?1jIh185DIh18@`PM,0:IPC
 	 * \endif
 	 */
 	public byte            byDeviceType;
@@ -196,15 +196,15 @@ public class DEV_ENCODER_INFO implements Serializable {
 	 * 4:FluencyLevel3 5:FluencyLevel2
 	 * 6:FluencyLevel1
 	 * \else
-	 * 目标设备的解码策略
-	 * 0:兼容以前
-	 * 1:实时等级高 
-	 * 2:实时等级中
-	 * 3:实时等级低
-	 *  4:默认等级
-	 *  5:流畅等级高 
-	 *  6:流畅等级中
-	 *  7:流畅等级低
+	 * D?1jIh185D=bBk2_BT
+	 * 0:<fH]RTG0
+	 * 1:J5J15H<68_ 
+	 * 2:J5J15H<6VP
+	 * 3:J5J15H<65M
+	 *  4:D,HO5H<6
+	 *  5:Aw3)5H<68_ 
+	 *  6:Aw3)5H<6VP
+	 *  7:Aw3)5H<65M
 	 * \endif
 	 */
 	public byte            byDecodePolicy;
@@ -213,7 +213,7 @@ public class DEV_ENCODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * http port 0-65535
 	 * \else
-	 * Http端口号,0-65535
+	 * Http6K?Z:E,0-65535
 	 * \endif
 	 */
 	public int             dwHttpPort;
@@ -222,7 +222,7 @@ public class DEV_ENCODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * RTSP port 0-65535
 	 * \else
-	 * Rtsp端口号,0-65535
+	 * Rtsp6K?Z:E,0-65535
 	 * \endif
 	 */
 	public int             dwRtspPort;
@@ -231,7 +231,7 @@ public class DEV_ENCODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * remote channel name
 	 * \else
-	 * 远程通道名称, 只有读取到的名称不为空时才可以修改该通道的名称
+	 * T63LM(5@C{3F, V;SP6AH!5=5DC{3F2;N*?UJ12E?IRTP^8D8CM(5@5DC{3F
 	 * \endif
 	 */
 	public byte			szChnName[] = new byte[32];

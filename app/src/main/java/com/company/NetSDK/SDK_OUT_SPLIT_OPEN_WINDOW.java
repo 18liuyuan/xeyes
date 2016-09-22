@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * OpenSplitWindow's interface output param(open window)
  * \else
- * OpenSplitWindow接口输出参数(开窗)
+ * OpenSplitWindow=S?ZJd3v2NJ}(?*40)
  * \endif
  */
 public class SDK_OUT_SPLIT_OPEN_WINDOW implements Serializable {
@@ -19,16 +19,17 @@ public class SDK_OUT_SPLIT_OPEN_WINDOW implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Window ID
 	 * \else
-	 * 窗口序号
+	 * 40?ZPr:E
 	 * \endif
 	 */
-	public int			nWindowID;					
+	public int			nWindowID;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Wndow order	
 	 * \else
-	 * 窗口次序
+	 * 40?Z4NPr
 	 * \endif
 	 */
-	public int			nZOrder;					
+	public int			nZOrder;
 }

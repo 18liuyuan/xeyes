@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Serial Port Configuration
  * \else
- * 串口配置
+ * 4.?ZEdVC
  * \endif
  */
 public class CFG_COMMGROUP_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_COMMGROUP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Serial Ports Numk
 	 * \else
-	 * 串口个数
+	 * 4.?Z8vJ}
 	 * \endif
 	 */
 	public int    nCommNum;
@@ -28,7 +28,7 @@ public class CFG_COMMGROUP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Serial Port Array 
 	 * \else
-	 * 串口信息
+	 * 4.?ZPEO"
 	 * \endif
 	 */
 	public CFG_COMM_INFO    stuComms[] = new CFG_COMM_INFO[FinalVar.MAX_COMM_NUM];

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Log information. Corresponding to QueryLog
  * \else
- * 日志信息
+ * HUV>PEO"
  * \endif
  */
 public class SDK_LOG_ITEM implements Serializable {
@@ -19,40 +19,35 @@ public class SDK_LOG_ITEM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Date
 	 * \else
-	 * 日期
+	 * HUFZ
 	 * \endif
 	 */
-	public SDKDEVTIME			time;									
+	public SDKDEVTIME			time = new SDKDEVTIME();
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Type
 	 * \else
-	 * 类型
+	 * @`PM
 	 * \endif
 	 */
-	public short				type;									
-	/**
-	 * \if ENGLISH_LANG
-	 * Reserved
-	 * \else
-	 * 保留
-	 * \endif
-	 */
-	public char				reserved;								
+	public short				type;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Data
 	 * \else
-	 * 数据
+	 * J}>]
 	 * \endif
 	 */
-	public char				data;									
+	public byte				data;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Content
 	 * \else
-	 * 内容
+	 * DZH]
 	 * \endif
 	 */
-	public char				context[] = new char[8];				
+	public byte				context[] = new byte[8];
 }

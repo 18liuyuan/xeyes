@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Battery Voltage Overlow Alarm
  * \else
- * 电池电压过低报警
+ * 5g3X5gQ99}5M1(>/
  * \endif
  */
 public class ALARM_BATTERYLOWPOWER_INFO implements Serializable {
@@ -19,16 +19,16 @@ public class ALARM_BATTERYLOWPOWER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:Start 1:Stop 
 	 * \else
-	 * 0:开始 1:停止
+	 * 0:?*J< 1:M#V9
 	 * \endif
 	 */
 	public int               nAction;
 	
  	/**
 	 * \if ENGLISH_LANG
-	 * Surplus Power %，Unit%
+	 * Surplus Power %#,Unit%
 	 * \else
-	 * 剩余电量百分比，单位%
+	 * J#S`5gA?0Y7V1H#,5%N;%
 	 * \endif
 	 */
 	public int               nBatteryLeft;
@@ -37,7 +37,7 @@ public class ALARM_BATTERYLOWPOWER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Event Time 
 	 * \else
-	 * 事件发生时间
+	 * JB<~7"IzJ1<d
 	 * \endif
 	 */
 	public NET_TIME          stTime = new NET_TIME();                            

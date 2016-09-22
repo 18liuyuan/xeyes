@@ -2,12 +2,11 @@ package com.company.NetSDK;
 
 import java.io.Serializable;
 
-
 /**
  * \if ENGLISH_LANG
  * Privacy mask info
  * \else
- * 遮挡信息
+ * UZ52PEO"
  * \endif
  */
 public class VIDEO_COVER_ATTR implements Serializable {
@@ -20,7 +19,7 @@ public class VIDEO_COVER_ATTR implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Privacy mask area coordinates
 	 * \else
-	 * 覆盖的区域坐标
+	 * 828G5DGxSrWx1j
 	 * \endif
 	 */
 	public SDK_RECT             rcBlock = new SDK_RECT();
@@ -29,34 +28,34 @@ public class VIDEO_COVER_ATTR implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Privacy mask color
 	 * \else
-	 * 覆盖的颜色
+	 * 828G5DQUI+
 	 * \endif
 	 */
 	public int                 nColor;
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * Privacy mask mode；0: black block,1: Mosaic
+	 * Privacy mask mode#;0: black block,1: Mosaic
 	 * \else
-	 * 覆盖方式；0：黑块，1：马赛克
+	 * 828G7=J=#;0#::Z?i#,1#:BmH|?K
 	 * \endif
 	 */
 	public byte                bBlockType;
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * Privacy mask when encode；1：Enable,0：Disable
+	 * Privacy mask when encode#;1#:Enable,0#:Disable
 	 * \else
-	 * 编码级遮挡；1：生效，0：不生效
+	 * 1`Bk<6UZ52#;1#:IzP'#,0#:2;IzP'
 	 * \endif
 	 */
 	public byte                bEncode;
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * Privacy mask when preview； 1：Enable,0：Disable
+	 * Privacy mask when preview#; 1#:Enable,0#:Disable
 	 * \else
-	 * 预览遮挡； 1：生效，0：不生效
+	 * T$@@UZ52#; 1#:IzP'#,0#:2;IzP'
 	 * \endif
 	 */
 	public byte                bPriview;

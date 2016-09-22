@@ -13,7 +13,7 @@ public class NET_OUT_DELETECFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The error code device returns
 	 * \else
-	 * 设备返回的错误码
+	 * Ih1875;X5D4mNsBk
 	 * \endif
 	 */
 	public int           nError;
@@ -22,7 +22,7 @@ public class NET_OUT_DELETECFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device reboot or not
 	 * \else
-	 * 设备是否重启
+	 * Ih18JG7qVXFt
 	 * \endif
 	 */
 	public int           nRestart;
@@ -31,7 +31,7 @@ public class NET_OUT_DELETECFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Option. Please refer to enumeration NET_EM_CONFIGOPTION
 	 * \else
-	 * 选项 具体见枚举NET_EM_CONFIGOPTION
+	 * Q!On >_Le<{C6>YNET_EM_CONFIGOPTION
 	 * \endif
 	 */
 	public int         dwOptionMask;

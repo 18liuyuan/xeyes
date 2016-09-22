@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * (Message triggers wireless connection configuration)
  * \else
- * (短信激活无线连接配置)
+ * (6LPE<$;nN^O_A,=SEdVC)
  * \endif
  */
 public class SDKDEV_SMSACTIVATION_CFG implements Serializable {
@@ -19,7 +19,7 @@ public class SDKDEV_SMSACTIVATION_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable
 	 * \else
-	 * 使能
+	 * J9D\
 	 * \endif
 	 */
 	public int               dwEnable;
@@ -28,7 +28,7 @@ public class SDKDEV_SMSACTIVATION_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Sender amount
 	 * \else
-	 * 短信发送者个数
+	 * 6LPE7"KMU_8vJ}
 	 * \endif
 	 */
 	public int               dwSenderNum;
@@ -37,7 +37,7 @@ public class SDKDEV_SMSACTIVATION_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Sender, normally the cellphone number
 	 * \else
-	 * 短信发送者，一般为手机号码
+	 * 6LPE7"KMU_#,R;0cN*JV;z:EBk
 	 * \endif
 	 */
 	public byte              SZSender[][] = new byte[FinalVar.SDK_MMS_SMSACTIVATION_NUM][32];

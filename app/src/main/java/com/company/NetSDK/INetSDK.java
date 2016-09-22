@@ -5,28 +5,30 @@ public class INetSDK
 	static {
 		LoadLibrarys();
 	}
-	
 	public static void LoadLibrarys() {
-		try {/*
-			System.loadLibrary("json");
-			System.loadLibrary("Infra");
-			System.loadLibrary("Stream");
-			System.loadLibrary("NetFramework");
-			System.loadLibrary("StreamSvr");
-			System.loadLibrary("avnetsdk");*/
+		try {
 			String strOSType =  System.getProperty("os.name");
-			if( strOSType.contains("Window"))
-			{
+			if (strOSType.contains("Window")) {
 				System.loadLibrary("dhconfigsdk");
 				System.loadLibrary("dhnetsdk");
-				System.loadLibrary("netsdk");
-			}
-			else
-			{
-				System.loadLibrary("dvr");
-				System.loadLibrary("configsdk");
-				System.loadLibrary("netsdk");
-				System.loadLibrary("sdk");
+				System.loadLibrary("jninetsdk");
+			} else {
+				String strVendor =  System.getProperty("java.vm.specification.vendor");
+				if (strVendor.contains("Android")) {
+					/*System.loadLibrary("json");
+		    		System.loadLibrary("Infra");
+		    		System.loadLibrary("Stream");
+		    		System.loadLibrary("NetFramework");
+		    		System.loadLibrary("StreamSvr");
+		    		System.loadLibrary("avnetsdk");*/
+		    		System.loadLibrary("netsdk");
+		    		System.loadLibrary("configsdk");
+		    		System.loadLibrary("jninetsdk");
+				} else {
+					System.loadLibrary("dhconfigsdk");
+					System.loadLibrary("dhnetsdk");
+					System.loadLibrary("jninetsdk");
+				}
 			}
 		} catch(UnsatisfiedLinkError ulink) {    
 	        ulink.printStackTrace();   
@@ -39,46 +41,48 @@ public class INetSDK
 	 * @param cbDisConnect object of interface CB_fDisConnect
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ʼ��SDK, �����е�SDK����֮ǰ����
-	 * @param cbDisConnect ����ʵ�ֽӿ�CB_fDisConnect
-	 * @return true:�ɹ�, false:ʧ��
+	 * 3uJ<;/SDK, TZKySP5DSDK:/J}V.G05wSC
+	 * @param cbDisConnect 6TOsJ5OV=S?ZCB_fDisConnect
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see Cleanup
 	 */
 	public static native boolean 		Init(CB_fDisConnect cbDisConnect);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * empty SDK, release occupied resource,call after all SDK functions
 	 * @return 
 	 * \else
-	 * ���SDK, �ͷ�ռ�õ���Դ,�����е�SDK����֮�����
+	 * Ge?USDK, JM7EU<SC5DWJT4,TZKySP5DSDK:/J}V.:s5wSC
 	 * @return 
 	 * \endif
 	 * @see Init
 	 */
-
 	public static native void 			Cleanup();
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Set re-connection callback function after disconnection. Internal SDK  auto connect again after disconnection 
 	 * @param cbAutoConnect disconnet reconnected recall function CB_fHaveReConnect
 	 * \else
-	 * ���ö��������ɹ��ص�����,���ú�SDK�ڲ������Զ�����
-	 * @param cbAutoConnect ���������ɹ��Ļص����� CB_fHaveReConnect
+	 * IhVC6OO_VXA,3I9&;X5w:/J},IhVC:sSDKDZ2?6OO_WT6/VXA,
+	 * @param cbAutoConnect 6OO_VXA,3I9&5D;X5w:/J} CB_fHaveReConnect
 	 * \endif
 	 */ 
 	public static native void 			SetAutoReconnect(CB_fHaveReConnect cbAutoConnect);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Dynamic sub-set link disconnected callback function, the current monitoring and playback equipment SVR is a short connection
 	 * @param cbSubDisConnect sub disconnection recall function CB_fSubDisConnect
 	 * \else
-	 * ���ö�̬�����Ӷ��߻ص�����,ĿǰSVR�豸�ļ��Ӻͻط��Ƕ����ӵ�
-	 * @param cbSubDisConnect ����ʵ�ֽӿ� CB_fSubDisConnect
+	 * IhVC6/L,WSA,=S6OO_;X5w:/J},D?G0SVRIh185D<`JS:M;X7EJG6LA,=S5D
+	 * @param cbSubDisConnect 6TOsJ5OV=S?Z CB_fSubDisConnect
 	 * \endif
 	 */
-	
 	public static native void 			SetSubconnCallBack(CB_fSubDisConnect cbSubDisConnect);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Return the function execution failure code
@@ -298,263 +302,263 @@ public class INetSDK
 	 * <tr><td>NET_ERROR_NOT_SUPPORT_F6</td><td>_EC(407)</td><td>device no F6</td></tr>
 	 * </table>
 	 * \else
-	 * ���غ���ִ��ʧ�ܴ���,�ڽӿڵ���ʧ��ʱʹ��,���ݻ�õ�ֵ��ȷ�����ó���ԭ��
-	 * @return ���ش������,��ʽΪ��0x80000000|x
+	 * 75;X:/J}V4PPJ'0\4zBk,TZ=S?Z5wSCJ'0\J1J9SC,8y>];q5C5DV5@4H76(5wSC3v4mT-Rr
+	 * @return 75;X4mNs4zBk,8qJ=N*#:0x80000000|x
 	 * <table>
-	 * <tr><td>����</td><td>��ֵ </td><td>������ </td></tr>
-	 * <tr><td>NET_NOERROR</td><td>0</td><td>û�д���</td></tr> 
-	 * <tr><td>NET_ERROR</td><td>-1</td><td>δ֪����</td></tr> 
-	 * <tr><td>NET_SYSTEM_ERROR</td><td>_EC(1)</td><td>Windowsϵͳ����</td></tr> 
-	 * <tr><td>NET_NETWORK_ERROR</td><td>_EC(2)</td><td>�������</td></tr> 
-	 * <tr><td>NET_DEV_VER_NOMATCH</td><td>_EC(3)</td><td>�豸Э�鲻ƥ�� </td></tr>
-	 * <tr><td>NET_INVALID_HANDLE</td><td>_EC(4)</td><td>�����Ч </td></tr>
-	 * <tr><td>NET_OPEN_CHANNEL_ERROR</td><td>_EC(5)</td><td>��ͨ��ʧ��</td></tr> 
-	 * <tr><td>NET_CLOSE_CHANNEL_ERROR</td><td>_EC(6)</td><td>�ر�ͨ��ʧ��</td></tr> 
-	 * <tr><td>NET_ILLEGAL_PARAM</td><td>_EC(7)</td><td>�û��������Ϸ� </td></tr>
-	 * <tr><td>NET_SDK_INIT_ERROR</td><td>_EC(8)</td><td>SDK��ʼ������</td></tr> 
-	 * <tr><td>NET_SDK_UNINIT_ERROR</td><td>_EC(9)</td><td>SDK�������</td></tr> 
-	 * <tr><td>NET_RENDER_OPEN_ERROR</td><td>_EC(10)</td><td>����render��Դ����</td></tr> 
-	 * <tr><td>NET_DEC_OPEN_ERROR</td><td>_EC(11)</td><td>�򿪽�������</td></tr> 
-	 * <tr><td>NET_DEC_CLOSE_ERROR</td><td>_EC(12)</td><td>�رս�������</td></tr> 
-	 * <tr><td>NET_MULTIPLAY_NOCHANNEL</td><td>_EC(13)</td><td>�໭��Ԥ���м�⵽ͨ����Ϊ0</td></tr> 
-	 * <tr><td>NET_TALK_INIT_ERROR</td><td>_EC(14)</td><td>¼�����ʼ��ʧ��</td></tr> 
-	 * <tr><td>NET_TALK_NOT_INIT</td><td>_EC(15)</td><td>¼����δ����ʼ�� </td></tr>
-	 * <tr><td>NET_TALK_SENDDATA_ERROR</td><td>_EC(16)</td><td>������Ƶ���ݳ���</td></tr> 
-	 * <tr><td>NET_REAL_ALREADY_SAVING</td><td>_EC(17)</td><td>ʵʱ�����Ѿ����ڱ���״̬ </td></tr>
-	 * <tr><td>NET_NOT_SAVING</td><td>_EC(18)</td><td>δ����ʵʱ����</td></tr> 
-	 * <tr><td>NET_OPEN_FILE_ERROR</td><td>_EC(19)</td><td>���ļ�����</td></tr> 
-	 * <tr><td>NET_PTZ_SET_TIMER_ERROR</td><td>_EC(20)</td><td>������̨���ƶ�ʱ��ʧ��</td></tr> 
-	 * <tr><td>NET_RETURN_DATA_ERROR</td><td>_EC(21)</td><td>�Է������ݵ�У�����</td></tr> 
-	 * <tr><td>NET_INSUFFICIENT_BUFFER</td><td>_EC(22)</td><td>û���㹻�Ļ��� </td></tr>
-	 * <tr><td>NET_NOT_SUPPORTED</td><td>_EC(23)</td><td>��ǰSDKδ֧�ָù��� </td></tr>
-	 * <tr><td>NET_NO_RECORD_FOUND</td><td>_EC(24)</td><td>��ѯ����¼�� </td></tr>
-	 * <tr><td>NET_NOT_AUTHORIZED</td><td>_EC(25)</td><td>�޲���Ȩ�� </td></tr>
-	 * <tr><td>NET_NOT_NOW</td><td>_EC(26)</td><td>��ʱ�޷�ִ�� </td></tr>
-	 * <tr><td>NET_NO_TALK_CHANNEL</td><td>_EC(27)</td><td>δ���ֶԽ�ͨ�� </td></tr>
-	 * <tr><td>NET_NO_AUDIO</td><td>_EC(28)</td><td>δ������Ƶ </td></tr>
-	 * <tr><td>NET_NO_INIT</td><td>_EC(29)</td><td>����SDKδ����ʼ�� </td></tr>
-	 * <tr><td>NET_DOWNLOAD_END</td><td>_EC(30)</td><td>�����ѽ��� </td></tr>
-	 * <tr><td>NET_EMPTY_LIST</td><td>_EC(31)</td><td>��ѯ���Ϊ�� </td></tr>
-	 * <tr><td>NET_ERROR_GETCFG_SYSATTR</td><td>_EC(32)</td><td>��ȡϵͳ��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_SERIAL</td><td>_EC(33)</td><td>��ȡ���к�ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_GENERAL</td><td>_EC(34)</td><td>��ȡ��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_DSPCAP</td><td>_EC(35)</td><td>��ȡDSP��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_NETCFG</td><td>_EC(36)</td><td>��ȡ��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_CHANNAME</td><td>_EC(37)</td><td>��ȡͨ������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_VIDEO</td><td>_EC(38)</td><td>��ȡ��Ƶ����ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_RECORD</td><td>_EC(39)</td><td>��ȡ¼������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_PRONAME</td><td>_EC(40)</td><td>��ȡ������Э������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_FUNCNAME</td><td>_EC(41)</td><td>��ȡ232���ڹ�������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_485DECODER</td><td>_EC(42)</td><td>��ȡ����������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_232COM</td><td>_EC(43)</td><td>��ȡ232��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_ALARMIN</td><td>_EC(44)</td><td>��ȡ�ⲿ������������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_ALARMDET</td><td>_EC(45)</td><td>��ȡ��̬��ⱨ��ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_SYSTIME</td><td>_EC(46)</td><td>��ȡ�豸ʱ��ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_PREVIEW</td><td>_EC(47)</td><td>��ȡԤ������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_AUTOMT</td><td>_EC(48)</td><td>��ȡ�Զ�ά������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_VIDEOMTRX</td><td>_EC(49)</td><td>��ȡ��Ƶ��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_COVER</td><td>_EC(50)</td><td>��ȡ�����ڵ�����ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_WATERMAKE</td><td>_EC(51)</td><td>��ȡͼ��ˮӡ����ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_GENERAL</td><td>_EC(55)</td><td>�޸ĳ�������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_NETCFG</td><td>_EC(56)</td><td>�޸���������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_CHANNAME</td><td>_EC(57)</td><td>�޸�ͨ������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_VIDEO</td><td>_EC(58)</td><td>�޸���Ƶ����ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_RECORD</td><td>_EC(59)</td><td>�޸�¼������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_485DECODER</td><td>_EC(60)</td><td>�޸Ľ���������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_232COM</td><td>_EC(61)</td><td>�޸�232��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_ALARMIN</td><td>_EC(62)</td><td>�޸��ⲿ���뱨������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_ALARMDET</td><td>_EC(63)</td><td>�޸Ķ�̬��ⱨ������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_SYSTIME</td><td>_EC(64)</td><td>�޸��豸ʱ��ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_PREVIEW</td><td>_EC(65)</td><td>�޸�Ԥ������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_AUTOMT</td><td>_EC(66)</td><td>�޸��Զ�ά������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_VIDEOMTRX</td><td>_EC(67)</td><td>�޸���Ƶ��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_COVER</td><td>_EC(68)</td><td>�޸������ڵ�����ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_WATERMAKE</td><td>_EC(69)</td><td>�޸�ͼ��ˮӡ����ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_WLAN</td><td>_EC(70)</td><td>�޸�����������Ϣʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_WLANDEV</td><td>_EC(71)</td><td>ѡ�����������豸ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_REGISTER</td><td>_EC(72)</td><td>�޸�����ע���������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_CAMERA</td><td>_EC(73)</td><td>�޸�����ͷ��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_INFRARED</td><td>_EC(74)</td><td>�޸ĺ��ⱨ������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_SOUNDALARM</td><td>_EC(75)</td><td>�޸���Ƶ��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_STORAGE</td><td>_EC(76)</td><td>�޸Ĵ洢λ������ʧ��</td></tr> 
-	 * <tr><td>NET_AUDIOENCODE_NOTINIT</td><td>_EC(77)</td><td>��Ƶ����ӿ�û�гɹ���ʼ�� </td></tr>
-	 * <tr><td>NET_DATA_TOOLONGH</td><td>_EC(78)</td><td>���ݹ��� </td></tr>
-	 * <tr><td>NET_UNSUPPORTED</td><td>_EC(79)</td><td>�豸��֧�ָò��� </td></tr>
-	 * <tr><td>NET_DEVICE_BUSY</td><td>_EC(80)</td><td>�豸��Դ���� </td></tr>
-	 * <tr><td>NET_SERVER_STARTED</td><td>_EC(81)</td><td>�������Ѿ����� </td></tr>
-	 * <tr><td>NET_SERVER_STOPPED </td><td>_EC(82)</td><td>��������δ�ɹ����� </td></tr>
-	 * <tr><td>NET_LISTER_INCORRECT_SERIAL</td><td>_EC(83)</td><td>�������к����� </td></tr>
-	 * <tr><td>NET_QUERY_DISKINFO_FAILED</td><td>_EC(84)</td><td>��ȡӲ����Ϣʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_SESSION</td><td>_EC(85)</td><td>��ȡ����Session��Ϣ 
-	 * <tr><td>NET_USER_FLASEPWD_TRYTIME</td><td>_EC(86)</td><td>����������󳬹����ƴ��� </td></tr>
-	 * <tr><td>NET_LOGIN_ERROR_PASSWORD</td><td>_EC(100)</td><td>���벻��ȷ </td></tr>
-	 * <tr><td>NET_LOGIN_ERROR_USER</td><td>_EC(101)</td><td>�ʻ������� </td></tr>
-	 * <tr><td>NET_LOGIN_ERROR_TIMEOUT</td><td>_EC(102)</td><td>�ȴ���¼���س�ʱ </td></tr>
-	 * <tr><td>NET_LOGIN_ERROR_RELOGGIN</td><td>_EC(103)</td><td>�ʺ��ѵ�¼ </td></tr>
-	 * <tr><td>NET_LOGIN_ERROR_LOCKED</td><td>_EC(104)</td><td>�ʺ��ѱ����� </td></tr>
-	 * <tr><td>NET_LOGIN_ERROR_BLACKLIST</td><td>_EC(105)</td><td>�ʺ��ѱ���Ϊ������ </td></tr>
-	 * <tr><td>NET_LOGIN_ERROR_BUSY</td><td>_EC(106)</td><td>��Դ����,ϵͳæ </td></tr>
-	 * <tr><td>NET_LOGIN_ERROR_CONNECT</td><td>_EC(107)</td><td>��������ʧ��</td></tr> 
-	 * <tr><td>NET_LOGIN_ERROR_NETWORK</td><td>_EC(108)</td><td>��������ʧ��</td></tr> 
-	 * <tr><td>NET_LOGIN_ERROR_SUBCONNECT</td><td>_EC(109)</td><td>��¼�豸�ɹ�,���޷�������Ƶͨ��,��������״�� </td></tr>
-	 * <tr><td>NET_LOGIN_ERROR_MAXCONNECT</td><td>_EC(110)</td><td>�������������  </td></tr>
-	 * <tr><td>NET_RENDER_SOUND_ON_ERROR</td><td>_EC(120)</td><td>Render�����Ƶ����</td></tr> 
-	 * <tr><td>NET_RENDER_SOUND_OFF_ERROR</td><td>_EC(121)</td><td>Render��ر���Ƶ����</td></tr> 
-	 * <tr><td>NET_RENDER_SET_VOLUME_ERROR</td><td>_EC(122)</td><td>Render�������������</td></tr> 
-	 * <tr><td>NET_RENDER_ADJUST_ERROR</td><td>_EC(123)</td><td>Render�����û����������</td></tr> 
-	 * <tr><td>NET_RENDER_PAUSE_ERROR</td><td>_EC(124)</td><td>Render����ͣ���ų���</td></tr> 
-	 * <tr><td>NET_RENDER_SNAP_ERROR</td><td>_EC(125)</td><td>Render��ץͼ����</td></tr> 
-	 * <tr><td>NET_RENDER_STEP_ERROR</td><td>_EC(126)</td><td>Render�ⲽ������</td></tr> 
-	 * <tr><td>NET_RENDER_FRAMERATE_ERROR</td><td>_EC(127)</td><td>Render������֡�ʳ���</td></tr> 
-	 * <tr><td>NET_GROUP_EXIST</td><td>_EC(140)</td><td>�����Ѵ��� </td></tr>
-	 * <tr><td>NET_GROUP_NOEXIST</td><td>_EC(141)</td><td>���������� </td></tr>
-	 * <tr><td>NET_GROUP_RIGHTOVER</td><td>_EC(142)</td><td>���Ȩ�޳���Ȩ���б�Χ </td></tr>
-	 * <tr><td>NET_GROUP_HAVEUSER</td><td>_EC(143)</td><td>�������û�,����ɾ�� </td></tr>
-	 * <tr><td>NET_GROUP_RIGHTUSE</td><td>_EC(144)</td><td>���ĳ��Ȩ�ޱ��û�ʹ��,���ܳ��� </td></tr>
-	 * <tr><td>NET_GROUP_SAMENAME</td><td>_EC(145)</td><td>������ͬ���������ظ� </td></tr>
-	 * <tr><td>NET_USER_EXIST</td><td>_EC(146)</td><td>�û��Ѵ��� </td></tr>
-	 * <tr><td>NET_USER_NOEXIST</td><td>_EC(147)</td><td>�û������� </td></tr>
-	 * <tr><td>NET_USER_RIGHTOVER</td><td>_EC(148)</td><td>�û�Ȩ�޳�����Ȩ�� </td></tr>
-	 * <tr><td>NET_USER_PWD</td><td>_EC(149)</td><td>�����ʺ�,�������޸����� </td></tr>
-	 * <tr><td>NET_USER_FLASEPWD</td><td>_EC(150)</td><td>���벻��ȷ </td></tr>
-	 * <tr><td>NET_USER_NOMATCHING</td><td>_EC(151)</td><td>���벻ƥ�� </td></tr>
-	 * <tr><td>NET_ERROR_GETCFG_ETHERNET</td><td>_EC(300)</td><td>��ȡ��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_WLAN</td><td>_EC(301)</td><td>��ȡ����������Ϣʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_WLANDEV</td><td>_EC(302)</td><td>��ȡ���������豸ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_REGISTER</td><td>_EC(303)</td><td>��ȡ����ע�����ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_CAMERA</td><td>_EC(304)</td><td>��ȡ����ͷ����ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_INFRARED</td><td>_EC(305)</td><td>��ȡ���ⱨ������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_SOUNDALARM</td><td>_EC(306)</td><td>��ȡ��Ƶ��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_STORAGE</td><td>_EC(307)</td><td>��ȡ�洢λ������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_MAIL</td><td>_EC(308)</td><td>��ȡ�ʼ�����ʧ��</td></tr> 
-	 * <tr><td>NET_CONFIG_DEVBUSY</td><td>_EC(309)</td><td>��ʱ�޷����� </td></tr>
-	 * <tr><td>NET_CONFIG_DATAILLEGAL</td><td>_EC(310)</td><td>�������ݲ��Ϸ� </td></tr>
-	 * <tr><td>NET_ERROR_GETCFG_DST</td><td>_EC(311)</td><td>��ȡ����ʱ����ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_DST</td><td>_EC(312)</td><td>��������ʱ����ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_VIDEO_OSD</td><td>_EC(313)</td><td>��ȡ��ƵOSD��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_VIDEO_OSD</td><td>_EC(314)</td><td>������ƵOSD��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_GPRSCDMA</td><td>_EC(315)</td><td>��ȡCDMA��GPRS��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_GPRSCDMA</td><td>_EC(316)</td><td>����CDMA��GPRS��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_IPFILTER</td><td>_EC(317)</td><td>��ȡIP��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_IPFILTER</td><td>_EC(318)</td><td>����IP��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_TALKENCODE</td><td>_EC(319)</td><td>��ȡ�����Խ���������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_TALKENCODE</td><td>_EC(320)</td><td>���������Խ���������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_RECORDLEN</td><td>_EC(321)</td><td>��ȡ¼������������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_RECORDLEN</td><td>_EC(322)</td><td>����¼������������ʧ��</td></tr> 
-	 * <tr><td>NET_DONT_SUPPORT_SUBAREA</td><td>_EC(323)</td><td>��֧������Ӳ�̷��� </td></tr>
-	 * <tr><td>NET_ERROR_GET_AUTOREGSERVER</td><td>_EC(324)</td><td>��ȡ�豸������ע���������Ϣʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_CONTROL_AUTOREGISTER</td><td>_EC(325)</td><td>����ע���ض���ע�����</td></tr> 
-	 * <tr><td>NET_ERROR_DISCONNECT_AUTOREGISTER</td><td>_EC(326)</td><td>�Ͽ�����ע�����������</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_MMS</td><td>_EC(327)</td><td>��ȡmms����ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_MMS</td><td>_EC(328)</td><td>����mms����ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_SMSACTIVATION</td><td>_EC(329)</td><td>��ȡ���ż���������������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_SMSACTIVATION</td><td>_EC(330)</td><td>���ö��ż���������������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_DIALINACTIVATION</td><td>_EC(331)</td><td>��ȡ���ż���������������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_DIALINACTIVATION</td><td>_EC(332)</td><td>���ò��ż���������������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_VIDEOOUT</td><td>_EC(333)</td><td>��ѯ��Ƶ�����������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_VIDEOOUT</td><td>_EC(334)</td><td>������Ƶ�����������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_OSDENABLE</td><td>_EC(335)</td><td>��ȡosd����ʹ������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_OSDENABLE</td><td>_EC(336)</td><td>����osd����ʹ������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_ENCODERINFO</td><td>_EC(337)</td><td>��������ͨ��ǰ�˱����������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_TVADJUST</td><td>_EC(338)</td><td>��ȡTV��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_TVADJUST</td><td>_EC(339)</td><td>����TV��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_CONNECT_FAILED</td><td>_EC(340)</td><td>����������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_BURNFILE</td><td>_EC(341)</td><td>�����¼�ļ��ϴ�ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SNIFFER_GETCFG</td><td>_EC(342)</td><td>��ȡץ��������Ϣʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SNIFFER_SETCFG</td><td>_EC(343)</td><td>����ץ��������Ϣʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_DOWNLOADRATE_GETCFG</td><td>_EC(344)</td><td>��ѯ����������Ϣʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_DOWNLOADRATE_SETCFG</td><td>_EC(345)</td><td>��������������Ϣʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SEARCH_TRANSCOM</td><td>_EC(346)</td><td>��ѯ���ڲ���ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_POINT</td><td>_EC(347)</td><td>��ȡԤ�Ƶ���Ϣ����</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_POINT</td><td>_EC(348)</td><td>����Ԥ�Ƶ���Ϣ����</td></tr> 
-	 * <tr><td>NET_SDK_LOGOUT_ERROR</td><td>_EC(349)</td><td>SDKû�������ǳ��豸 </td></tr>
-	 * <tr><td>NET_ERROR_GET_VEHICLE_CFG</td><td>_EC(350)</td><td>��ȡ��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SET_VEHICLE_CFG</td><td>_EC(351)</td><td>���ó�������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GET_ATM_OVERLAY_CFG</td><td>_EC(352)</td><td>��ȡatm��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SET_ATM_OVERLAY_CFG</td><td>_EC(353)</td><td>����atm��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GET_ATM_OVERLAY_ABILITY</td><td>_EC(354)</td><td>��ȡatm��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GET_DECODER_TOUR_CFG</td><td>_EC(355)</td><td>��ȡ������������Ѳ����ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SET_DECODER_TOUR_CFG</td><td>_EC(356)</td><td>���ý�����������Ѳ����ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_CTRL_DECODER_TOUR</td><td>_EC(357)</td><td>���ƽ�����������Ѳʧ��</td></tr> 
-	 * <tr><td>NET_GROUP_OVERSUPPORTNUM</td><td>_EC(358)</td><td>�����豸֧������û�����Ŀ </td></tr>
-	 * <tr><td>NET_USER_OVERSUPPORTNUM</td><td>_EC(359)</td><td>�����豸֧������û���Ŀ </td></tr>
-	 * <tr><td>NET_ERROR_GET_SIP_CFG</td><td>_EC(368)</td><td>��ȡSIP����ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SET_SIP_CFG</td><td>_EC(369)</td><td>����SIP����ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GET_SIP_ABILITY</td><td>_EC(370)</td><td>��ȡSIP����ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GET_WIFI_AP_CFG</td><td>_EC(371)</td><td>��ȡWIFI ap����ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SET_WIFI_AP_CFG</td><td>_EC(372)</td><td>����WIFI ap����ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GET_DECODE_POLICY</td><td>_EC(373)</td><td>��ȡ�����������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SET_DECODE_POLICY</td><td>_EC(374)</td><td>���ý����������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_TALK_REJECT</td><td>_EC(375)</td><td>�ܾ��Խ� </td></tr>
-	 * <tr><td>NET_ERROR_TALK_OPENED</td><td>_EC(376)</td><td>�Խ��������ͻ��˴� </td></tr>
-	 * <tr><td>NET_ERROR_TALK_RESOURCE_CONFLICIT</td><td>_EC(377)</td><td>��Դ��ͻ </td></tr>
-	 * <tr><td>NET_ERROR_TALK_UNSUPPORTED_ENCODE</td><td>_EC(378)</td><td>��֧�ֵ����������ʽ </td></tr>
-	 * <tr><td>NET_ERROR_TALK_RIGHTLESS</td><td>_EC(379)</td><td>��Ȩ�� </td></tr>
-	 * <tr><td>NET_ERROR_TALK_FAILED</td><td>_EC(380)</td><td>����Խ�ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GET_MACHINE_CFG</td><td>_EC(381)</td><td>��ȡ�����������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SET_MACHINE_CFG</td><td>_EC(382)</td><td>���û����������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GET_DATA_FAILED</td><td>_EC(383)</td><td>�豸�޷���ȡ��ǰ�������� </td></tr>
-	 * <tr><td>NET_ERROR_MAC_VALIDATE_FAILED</td><td>_EC(384)</td><td>MAC��ַ��֤ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GET_INSTANCE</td><td>_EC(385)</td><td>��ȡ������ʵ��ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_JSON_REQUEST</td><td>_EC(386)</td><td>���ɵ�jason�ַ�������</td></tr> 
-	 * <tr><td>NET_ERROR_JSON_RESPONSE</td><td>_EC(387)</td><td>��Ӧ��jason�ַ�������</td></tr> 
-	 * <tr><td>NET_ERROR_VERSION_HIGHER</td><td>_EC(388)</td><td>Э��汾���ڵ�ǰʹ�õİ汾 </td></tr>
-	 * <tr><td>NET_SPARE_NO_CAPACITY</td><td>_EC(389)</td><td>�ȱ�����ʧ��, ��������</td></tr> 
-	 * <tr><td>NET_ERROR_SOURCE_IN_USE</td><td>_EC(390)</td><td>��ʾԴ���������ռ�� </td></tr>
-	 * <tr><td>NET_ERROR_REAVE</td><td>_EC(391)</td><td>�߼��û���ռ�ͼ��û���Դ </td></tr>
-	 * <tr><td>NET_ERROR_NETFORBID</td><td>_EC(392)</td><td>��ֹ���� </td></tr>
-	 * <tr><td>NET_ERROR_GETCFG_MACFILTER</td><td>_EC(393)</td><td>��ȡMAC��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_MACFILTER</td><td>_EC(394)</td><td>����MAC��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_GETCFG_IPMACFILTER</td><td>_EC(395)</td><td>��ȡIP/MAC��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_SETCFG_IPMACFILTER</td><td>_EC(396)</td><td>����IP/MAC��������ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_OPERATION_OVERTIME</td><td>_EC(397)</td><td>��ǰ������ʱ </td></tr>
-	 * <tr><td>NET_ERROR_SENIOR_VALIDATE_FAILED</td><td>_EC(398)</td><td>�߼�У��ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_DEVICE_ID_NOT_EXIST</td><td>_EC(399)</td><td>�豸ID������ </td></tr>
-	 * <tr><td>NET_ERROR_UNSUPPORTED</td><td>_EC(400)</td><td>��֧�ֵ�ǰ���� </td></tr>
-	 * <tr><td>NET_ERROR_SPEAK_FAILED</td><td>_EC(406)</td><td>���󺰻�ʧ��</td></tr> 
-	 * <tr><td>NET_ERROR_NOT_SUPPORT_F6</td><td>_EC(407)</td><td>�豸��֧�ִ�F6�ӿڵ��� </td></tr>
+	 * <tr><td>@`PM</td><td>J}V5 </td><td>4z1m:,Re </td></tr>
+	 * <tr><td>NET_NOERROR</td><td>0</td><td>C;SP4mNs</td></tr> 
+	 * <tr><td>NET_ERROR</td><td>-1</td><td>N4V*4mNs</td></tr> 
+	 * <tr><td>NET_SYSTEM_ERROR</td><td>_EC(1)</td><td>WindowsO5M33v4m</td></tr> 
+	 * <tr><td>NET_NETWORK_ERROR</td><td>_EC(2)</td><td>MxBg4mNs</td></tr> 
+	 * <tr><td>NET_DEV_VER_NOMATCH</td><td>_EC(3)</td><td>Ih18P-Ri2;F%Ed </td></tr>
+	 * <tr><td>NET_INVALID_HANDLE</td><td>_EC(4)</td><td>>d1zN^P' </td></tr>
+	 * <tr><td>NET_OPEN_CHANNEL_ERROR</td><td>_EC(5)</td><td>4r?*M(5@J'0\</td></tr> 
+	 * <tr><td>NET_CLOSE_CHANNEL_ERROR</td><td>_EC(6)</td><td>9X1UM(5@J'0\</td></tr> 
+	 * <tr><td>NET_ILLEGAL_PARAM</td><td>_EC(7)</td><td>SC;'2NJ}2;:O7( </td></tr>
+	 * <tr><td>NET_SDK_INIT_ERROR</td><td>_EC(8)</td><td>SDK3uJ<;/3v4m</td></tr> 
+	 * <tr><td>NET_SDK_UNINIT_ERROR</td><td>_EC(9)</td><td>SDKGe@m3v4m</td></tr> 
+	 * <tr><td>NET_RENDER_OPEN_ERROR</td><td>_EC(10)</td><td>IjGkrenderWJT43v4m</td></tr> 
+	 * <tr><td>NET_DEC_OPEN_ERROR</td><td>_EC(11)</td><td>4r?*=bBk?b3v4m</td></tr> 
+	 * <tr><td>NET_DEC_CLOSE_ERROR</td><td>_EC(12)</td><td>9X1U=bBk?b3v4m</td></tr> 
+	 * <tr><td>NET_MULTIPLAY_NOCHANNEL</td><td>_EC(13)</td><td>6`;-CfT$@@VP<l2b5=M(5@J}N*0</td></tr> 
+	 * <tr><td>NET_TALK_INIT_ERROR</td><td>_EC(14)</td><td>B<Rt?b3uJ<;/J'0\</td></tr> 
+	 * <tr><td>NET_TALK_NOT_INIT</td><td>_EC(15)</td><td>B<Rt?bN4>-3uJ<;/ </td></tr>
+	 * <tr><td>NET_TALK_SENDDATA_ERROR</td><td>_EC(16)</td><td>7"KMRtF5J}>]3v4m</td></tr> 
+	 * <tr><td>NET_REAL_ALREADY_SAVING</td><td>_EC(17)</td><td>J5J1J}>]RQ>-4&SZ1#4fW4L, </td></tr>
+	 * <tr><td>NET_NOT_SAVING</td><td>_EC(18)</td><td>N41#4fJ5J1J}>]</td></tr> 
+	 * <tr><td>NET_OPEN_FILE_ERROR</td><td>_EC(19)</td><td>4r?*ND<~3v4m</td></tr> 
+	 * <tr><td>NET_PTZ_SET_TIMER_ERROR</td><td>_EC(20)</td><td>Ft6/TFL(?XVF6(J1FwJ'0\</td></tr> 
+	 * <tr><td>NET_RETURN_DATA_ERROR</td><td>_EC(21)</td><td>6T75;XJ}>]5DP#Qi3v4m</td></tr> 
+	 * <tr><td>NET_INSUFFICIENT_BUFFER</td><td>_EC(22)</td><td>C;SPWc9;5D;:4f </td></tr>
+	 * <tr><td>NET_NOT_SUPPORTED</td><td>_EC(23)</td><td>51G0SDKN4V'3V8C9&D\ </td></tr>
+	 * <tr><td>NET_NO_RECORD_FOUND</td><td>_EC(24)</td><td>2iQ/2;5=B<Os </td></tr>
+	 * <tr><td>NET_NOT_AUTHORIZED</td><td>_EC(25)</td><td>N^2YWwH(O^ </td></tr>
+	 * <tr><td>NET_NOT_NOW</td><td>_EC(26)</td><td>T]J1N^7(V4PP </td></tr>
+	 * <tr><td>NET_NO_TALK_CHANNEL</td><td>_EC(27)</td><td>N47"OV6T=2M(5@ </td></tr>
+	 * <tr><td>NET_NO_AUDIO</td><td>_EC(28)</td><td>N47"OVRtF5 </td></tr>
+	 * <tr><td>NET_NO_INIT</td><td>_EC(29)</td><td>MxBgSDKN4>-3uJ<;/ </td></tr>
+	 * <tr><td>NET_DOWNLOAD_END</td><td>_EC(30)</td><td>OBTXRQ=aJx </td></tr>
+	 * <tr><td>NET_EMPTY_LIST</td><td>_EC(31)</td><td>2iQ/=a9{N*?U </td></tr>
+	 * <tr><td>NET_ERROR_GETCFG_SYSATTR</td><td>_EC(32)</td><td>;qH!O5M3JtPTEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_SERIAL</td><td>_EC(33)</td><td>;qH!PrAP:EJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_GENERAL</td><td>_EC(34)</td><td>;qH!3#9fJtPTJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_DSPCAP</td><td>_EC(35)</td><td>;qH!DSPD\A&ChJvJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_NETCFG</td><td>_EC(36)</td><td>;qH!MxBgEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_CHANNAME</td><td>_EC(37)</td><td>;qH!M(5@C{3FJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_VIDEO</td><td>_EC(38)</td><td>;qH!JSF5JtPTJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_RECORD</td><td>_EC(39)</td><td>;qH!B<OsEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_PRONAME</td><td>_EC(40)</td><td>;qH!=bBkFwP-RiC{3FJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_FUNCNAME</td><td>_EC(41)</td><td>;qH!2324.?Z9&D\C{3FJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_485DECODER</td><td>_EC(42)</td><td>;qH!=bBkFwJtPTJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_232COM</td><td>_EC(43)</td><td>;qH!2324.?ZEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_ALARMIN</td><td>_EC(44)</td><td>;qH!Mb2?1(>/JdHkEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_ALARMDET</td><td>_EC(45)</td><td>;qH!6/L,<l2b1(>/J'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_SYSTIME</td><td>_EC(46)</td><td>;qH!Ih18J1<dJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_PREVIEW</td><td>_EC(47)</td><td>;qH!T$@@2NJ}J'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_AUTOMT</td><td>_EC(48)</td><td>;qH!WT6/N,;$EdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_VIDEOMTRX</td><td>_EC(49)</td><td>;qH!JSF5>XUsEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_COVER</td><td>_EC(50)</td><td>;qH!GxSrUZ52EdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_WATERMAKE</td><td>_EC(51)</td><td>;qH!M<OsK.S!EdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_GENERAL</td><td>_EC(55)</td><td>P^8D3#9fJtPTJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_NETCFG</td><td>_EC(56)</td><td>P^8DMxBgEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_CHANNAME</td><td>_EC(57)</td><td>P^8DM(5@C{3FJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_VIDEO</td><td>_EC(58)</td><td>P^8DJSF5JtPTJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_RECORD</td><td>_EC(59)</td><td>P^8DB<OsEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_485DECODER</td><td>_EC(60)</td><td>P^8D=bBkFwJtPTJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_232COM</td><td>_EC(61)</td><td>P^8D2324.?ZEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_ALARMIN</td><td>_EC(62)</td><td>P^8DMb2?JdHk1(>/EdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_ALARMDET</td><td>_EC(63)</td><td>P^8D6/L,<l2b1(>/EdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_SYSTIME</td><td>_EC(64)</td><td>P^8DIh18J1<dJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_PREVIEW</td><td>_EC(65)</td><td>P^8DT$@@2NJ}J'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_AUTOMT</td><td>_EC(66)</td><td>P^8DWT6/N,;$EdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_VIDEOMTRX</td><td>_EC(67)</td><td>P^8DJSF5>XUsEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_COVER</td><td>_EC(68)</td><td>P^8DGxSrUZ52EdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_WATERMAKE</td><td>_EC(69)</td><td>P^8DM<OsK.S!EdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_WLAN</td><td>_EC(70)</td><td>P^8DN^O_MxBgPEO"J'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_WLANDEV</td><td>_EC(71)</td><td>Q!TqN^O_MxBgIh18J'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_REGISTER</td><td>_EC(72)</td><td>P^8DVw6/W"2a2NJ}EdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_CAMERA</td><td>_EC(73)</td><td>P^8DIcOqM7JtPTEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_INFRARED</td><td>_EC(74)</td><td>P^8D:lMb1(>/EdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_SOUNDALARM</td><td>_EC(75)</td><td>P^8DRtF51(>/EdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_STORAGE</td><td>_EC(76)</td><td>P^8D4f4"N;VCEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_AUDIOENCODE_NOTINIT</td><td>_EC(77)</td><td>RtF51`Bk=S?ZC;SP3I9&3uJ<;/ </td></tr>
+	 * <tr><td>NET_DATA_TOOLONGH</td><td>_EC(78)</td><td>J}>]9}3$ </td></tr>
+	 * <tr><td>NET_UNSUPPORTED</td><td>_EC(79)</td><td>Ih182;V'3V8C2YWw </td></tr>
+	 * <tr><td>NET_DEVICE_BUSY</td><td>_EC(80)</td><td>Ih18WJT42;Wc </td></tr>
+	 * <tr><td>NET_SERVER_STARTED</td><td>_EC(81)</td><td>7~NqFwRQ>-Ft6/ </td></tr>
+	 * <tr><td>NET_SERVER_STOPPED </td><td>_EC(82)</td><td>7~NqFwIPN43I9&Ft6/ </td></tr>
+	 * <tr><td>NET_LISTER_INCORRECT_SERIAL</td><td>_EC(83)</td><td>JdHkPrAP:ESPNs </td></tr>
+	 * <tr><td>NET_QUERY_DISKINFO_FAILED</td><td>_EC(84)</td><td>;qH!S2ELPEO"J'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_SESSION</td><td>_EC(85)</td><td>;qH!A,=SSessionPEO" 
+	 * <tr><td>NET_USER_FLASEPWD_TRYTIME</td><td>_EC(86)</td><td>JdHkC\Bk4mNs3,9}O^VF4NJ} </td></tr>
+	 * <tr><td>NET_LOGIN_ERROR_PASSWORD</td><td>_EC(100)</td><td>C\Bk2;U}H7 </td></tr>
+	 * <tr><td>NET_LOGIN_ERROR_USER</td><td>_EC(101)</td><td>UJ;'2;4fTZ </td></tr>
+	 * <tr><td>NET_LOGIN_ERROR_TIMEOUT</td><td>_EC(102)</td><td>5H4}5GB<75;X3,J1 </td></tr>
+	 * <tr><td>NET_LOGIN_ERROR_RELOGGIN</td><td>_EC(103)</td><td>UJ:ERQ5GB< </td></tr>
+	 * <tr><td>NET_LOGIN_ERROR_LOCKED</td><td>_EC(104)</td><td>UJ:ERQ1;Kx6( </td></tr>
+	 * <tr><td>NET_LOGIN_ERROR_BLACKLIST</td><td>_EC(105)</td><td>UJ:ERQ1;APN*:ZC{5% </td></tr>
+	 * <tr><td>NET_LOGIN_ERROR_BUSY</td><td>_EC(106)</td><td>WJT42;Wc,O5M3C& </td></tr>
+	 * <tr><td>NET_LOGIN_ERROR_CONNECT</td><td>_EC(107)</td><td>A,=SVw;zJ'0\</td></tr> 
+	 * <tr><td>NET_LOGIN_ERROR_NETWORK</td><td>_EC(108)</td><td>MxBgA,=SJ'0\</td></tr> 
+	 * <tr><td>NET_LOGIN_ERROR_SUBCONNECT</td><td>_EC(109)</td><td>5GB<Ih183I9&,5+N^7(44=(JSF5M(5@,Gk<l2iMxBgW4?v </td></tr>
+	 * <tr><td>NET_LOGIN_ERROR_MAXCONNECT</td><td>_EC(110)</td><td>3,9}Wn4sA,=SJ}  </td></tr>
+	 * <tr><td>NET_RENDER_SOUND_ON_ERROR</td><td>_EC(120)</td><td>Render?b4r?*RtF53v4m</td></tr> 
+	 * <tr><td>NET_RENDER_SOUND_OFF_ERROR</td><td>_EC(121)</td><td>Render?b9X1URtF53v4m</td></tr> 
+	 * <tr><td>NET_RENDER_SET_VOLUME_ERROR</td><td>_EC(122)</td><td>Render?b?XVFRtA?3v4m</td></tr> 
+	 * <tr><td>NET_RENDER_ADJUST_ERROR</td><td>_EC(123)</td><td>Render?bIhVC;-Cf2NJ}3v4m</td></tr> 
+	 * <tr><td>NET_RENDER_PAUSE_ERROR</td><td>_EC(124)</td><td>Render?bT]M#2%7E3v4m</td></tr> 
+	 * <tr><td>NET_RENDER_SNAP_ERROR</td><td>_EC(125)</td><td>Render?bW%M<3v4m</td></tr> 
+	 * <tr><td>NET_RENDER_STEP_ERROR</td><td>_EC(126)</td><td>Render?b2==x3v4m</td></tr> 
+	 * <tr><td>NET_RENDER_FRAMERATE_ERROR</td><td>_EC(127)</td><td>Render?bIhVCV!BJ3v4m</td></tr> 
+	 * <tr><td>NET_GROUP_EXIST</td><td>_EC(140)</td><td>WiC{RQ4fTZ </td></tr>
+	 * <tr><td>NET_GROUP_NOEXIST</td><td>_EC(141)</td><td>WiC{2;4fTZ </td></tr>
+	 * <tr><td>NET_GROUP_RIGHTOVER</td><td>_EC(142)</td><td>Wi5DH(O^3,3vH(O^AP1m76N' </td></tr>
+	 * <tr><td>NET_GROUP_HAVEUSER</td><td>_EC(143)</td><td>WiOBSPSC;',2;D\I>3} </td></tr>
+	 * <tr><td>NET_GROUP_RIGHTUSE</td><td>_EC(144)</td><td>Wi5DD38vH(O^1;SC;'J9SC,2;D\3v3} </td></tr>
+	 * <tr><td>NET_GROUP_SAMENAME</td><td>_EC(145)</td><td>PBWiC{M,RQSPWiC{VX84 </td></tr>
+	 * <tr><td>NET_USER_EXIST</td><td>_EC(146)</td><td>SC;'RQ4fTZ </td></tr>
+	 * <tr><td>NET_USER_NOEXIST</td><td>_EC(147)</td><td>SC;'2;4fTZ </td></tr>
+	 * <tr><td>NET_USER_RIGHTOVER</td><td>_EC(148)</td><td>SC;'H(O^3,3vWiH(O^ </td></tr>
+	 * <tr><td>NET_USER_PWD</td><td>_EC(149)</td><td>1#AtUJ:E,2;H]PmP^8DC\Bk </td></tr>
+	 * <tr><td>NET_USER_FLASEPWD</td><td>_EC(150)</td><td>C\Bk2;U}H7 </td></tr>
+	 * <tr><td>NET_USER_NOMATCHING</td><td>_EC(151)</td><td>C\Bk2;F%Ed </td></tr>
+	 * <tr><td>NET_ERROR_GETCFG_ETHERNET</td><td>_EC(300)</td><td>;qH!Mx?(EdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_WLAN</td><td>_EC(301)</td><td>;qH!N^O_MxBgPEO"J'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_WLANDEV</td><td>_EC(302)</td><td>;qH!N^O_MxBgIh18J'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_REGISTER</td><td>_EC(303)</td><td>;qH!Vw6/W"2a2NJ}J'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_CAMERA</td><td>_EC(304)</td><td>;qH!IcOqM7JtPTJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_INFRARED</td><td>_EC(305)</td><td>;qH!:lMb1(>/EdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_SOUNDALARM</td><td>_EC(306)</td><td>;qH!RtF51(>/EdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_STORAGE</td><td>_EC(307)</td><td>;qH!4f4"N;VCEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_MAIL</td><td>_EC(308)</td><td>;qH!SJ<~EdVCJ'0\</td></tr> 
+	 * <tr><td>NET_CONFIG_DEVBUSY</td><td>_EC(309)</td><td>T]J1N^7(IhVC </td></tr>
+	 * <tr><td>NET_CONFIG_DATAILLEGAL</td><td>_EC(310)</td><td>EdVCJ}>]2;:O7( </td></tr>
+	 * <tr><td>NET_ERROR_GETCFG_DST</td><td>_EC(311)</td><td>;qH!ODAnJ1EdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_DST</td><td>_EC(312)</td><td>IhVCODAnJ1EdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_VIDEO_OSD</td><td>_EC(313)</td><td>;qH!JSF5OSD5~<SEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_VIDEO_OSD</td><td>_EC(314)</td><td>IhVCJSF5OSD5~<SEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_GPRSCDMA</td><td>_EC(315)</td><td>;qH!CDMA!"GPRSMxBgEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_GPRSCDMA</td><td>_EC(316)</td><td>IhVCCDMA!"GPRSMxBgEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_IPFILTER</td><td>_EC(317)</td><td>;qH!IP9}BKEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_IPFILTER</td><td>_EC(318)</td><td>IhVCIP9}BKEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_TALKENCODE</td><td>_EC(319)</td><td>;qH!SoRt6T=21`BkEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_TALKENCODE</td><td>_EC(320)</td><td>IhVCSoRt6T=21`BkEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_RECORDLEN</td><td>_EC(321)</td><td>;qH!B<Oq4r0|3$6HEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_RECORDLEN</td><td>_EC(322)</td><td>IhVCB<Oq4r0|3$6HEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_DONT_SUPPORT_SUBAREA</td><td>_EC(323)</td><td>2;V'3VMxBgS2EL7VGx </td></tr>
+	 * <tr><td>NET_ERROR_GET_AUTOREGSERVER</td><td>_EC(324)</td><td>;qH!Ih18IOVw6/W"2a7~NqFwPEO"J'0\</td></tr> 
+	 * <tr><td>NET_ERROR_CONTROL_AUTOREGISTER</td><td>_EC(325)</td><td>Vw6/W"2aVX6(OrW"2a4mNs</td></tr> 
+	 * <tr><td>NET_ERROR_DISCONNECT_AUTOREGISTER</td><td>_EC(326)</td><td>6O?*Vw6/W"2a7~NqFw4mNs</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_MMS</td><td>_EC(327)</td><td>;qH!mmsEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_MMS</td><td>_EC(328)</td><td>IhVCmmsEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_SMSACTIVATION</td><td>_EC(329)</td><td>;qH!6LPE<$;nN^O_A,=SEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_SMSACTIVATION</td><td>_EC(330)</td><td>IhVC6LPE<$;nN^O_A,=SEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_DIALINACTIVATION</td><td>_EC(331)</td><td>;qH!2&:E<$;nN^O_A,=SEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_DIALINACTIVATION</td><td>_EC(332)</td><td>IhVC2&:E<$;nN^O_A,=SEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_VIDEOOUT</td><td>_EC(333)</td><td>2iQ/JSF5Jd3v2NJ}EdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_VIDEOOUT</td><td>_EC(334)</td><td>IhVCJSF5Jd3v2NJ}EdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_OSDENABLE</td><td>_EC(335)</td><td>;qH!osd5~<SJ9D\EdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_OSDENABLE</td><td>_EC(336)</td><td>IhVCosd5~<SJ9D\EdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_ENCODERINFO</td><td>_EC(337)</td><td>IhVCJ}WVM(5@G06K1`Bk=SHkEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_TVADJUST</td><td>_EC(338)</td><td>;qH!TV5w=ZEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_TVADJUST</td><td>_EC(339)</td><td>IhVCTV5w=ZEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_CONNECT_FAILED</td><td>_EC(340)</td><td>GkGs=(A"A,=SJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_BURNFILE</td><td>_EC(341)</td><td>GkGs?LB<ND<~IO4+J'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SNIFFER_GETCFG</td><td>_EC(342)</td><td>;qH!W%0|EdVCPEO"J'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SNIFFER_SETCFG</td><td>_EC(343)</td><td>IhVCW%0|EdVCPEO"J'0\</td></tr> 
+	 * <tr><td>NET_ERROR_DOWNLOADRATE_GETCFG</td><td>_EC(344)</td><td>2iQ/OBTXO^VFPEO"J'0\</td></tr> 
+	 * <tr><td>NET_ERROR_DOWNLOADRATE_SETCFG</td><td>_EC(345)</td><td>IhVCOBTXO^VFPEO"J'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SEARCH_TRANSCOM</td><td>_EC(346)</td><td>2iQ/4.?Z2NJ}J'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_POINT</td><td>_EC(347)</td><td>;qH!T$VF5cPEO"4mNs</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_POINT</td><td>_EC(348)</td><td>IhVCT$VF5cPEO"4mNs</td></tr> 
+	 * <tr><td>NET_SDK_LOGOUT_ERROR</td><td>_EC(349)</td><td>SDKC;SPU}3#5G3vIh18 </td></tr>
+	 * <tr><td>NET_ERROR_GET_VEHICLE_CFG</td><td>_EC(350)</td><td>;qH!35TXEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SET_VEHICLE_CFG</td><td>_EC(351)</td><td>IhVC35TXEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GET_ATM_OVERLAY_CFG</td><td>_EC(352)</td><td>;qH!atm5~<SEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SET_ATM_OVERLAY_CFG</td><td>_EC(353)</td><td>IhVCatm5~<SEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GET_ATM_OVERLAY_ABILITY</td><td>_EC(354)</td><td>;qH!atm5~<SD\A&J'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GET_DECODER_TOUR_CFG</td><td>_EC(355)</td><td>;qH!=bBkFw=bBkBVQ2EdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SET_DECODER_TOUR_CFG</td><td>_EC(356)</td><td>IhVC=bBkFw=bBkBVQ2EdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_CTRL_DECODER_TOUR</td><td>_EC(357)</td><td>?XVF=bBkFw=bBkBVQ2J'0\</td></tr> 
+	 * <tr><td>NET_GROUP_OVERSUPPORTNUM</td><td>_EC(358)</td><td>3,3vIh18V'3VWn4sSC;'WiJ}D? </td></tr>
+	 * <tr><td>NET_USER_OVERSUPPORTNUM</td><td>_EC(359)</td><td>3,3vIh18V'3VWn4sSC;'J}D? </td></tr>
+	 * <tr><td>NET_ERROR_GET_SIP_CFG</td><td>_EC(368)</td><td>;qH!SIPEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SET_SIP_CFG</td><td>_EC(369)</td><td>IhVCSIPEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GET_SIP_ABILITY</td><td>_EC(370)</td><td>;qH!SIPD\A&J'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GET_WIFI_AP_CFG</td><td>_EC(371)</td><td>;qH!WIFI apEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SET_WIFI_AP_CFG</td><td>_EC(372)</td><td>IhVCWIFI apEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GET_DECODE_POLICY</td><td>_EC(373)</td><td>;qH!=bBk2_BTEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SET_DECODE_POLICY</td><td>_EC(374)</td><td>IhVC=bBk2_BTEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_TALK_REJECT</td><td>_EC(375)</td><td>>\>x6T=2 </td></tr>
+	 * <tr><td>NET_ERROR_TALK_OPENED</td><td>_EC(376)</td><td>6T=21;FdK{?M;'6K4r?* </td></tr>
+	 * <tr><td>NET_ERROR_TALK_RESOURCE_CONFLICIT</td><td>_EC(377)</td><td>WJT43eM; </td></tr>
+	 * <tr><td>NET_ERROR_TALK_UNSUPPORTED_ENCODE</td><td>_EC(378)</td><td>2;V'3V5DSoRt1`Bk8qJ= </td></tr>
+	 * <tr><td>NET_ERROR_TALK_RIGHTLESS</td><td>_EC(379)</td><td>N^H(O^ </td></tr>
+	 * <tr><td>NET_ERROR_TALK_FAILED</td><td>_EC(380)</td><td>GkGs6T=2J'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GET_MACHINE_CFG</td><td>_EC(381)</td><td>;qH!;zFwO`9XEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SET_MACHINE_CFG</td><td>_EC(382)</td><td>IhVC;zFwO`9XEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GET_DATA_FAILED</td><td>_EC(383)</td><td>Ih18N^7(;qH!51G0GkGsJ}>] </td></tr>
+	 * <tr><td>NET_ERROR_MAC_VALIDATE_FAILED</td><td>_EC(384)</td><td>MAC5XV7QiV$J'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GET_INSTANCE</td><td>_EC(385)</td><td>;qH!7~NqFwJ5@}J'0\</td></tr> 
+	 * <tr><td>NET_ERROR_JSON_REQUEST</td><td>_EC(386)</td><td>Iz3I5DjasonWV7{4.4mNs</td></tr> 
+	 * <tr><td>NET_ERROR_JSON_RESPONSE</td><td>_EC(387)</td><td>OlS&5DjasonWV7{4.4mNs</td></tr> 
+	 * <tr><td>NET_ERROR_VERSION_HIGHER</td><td>_EC(388)</td><td>P-Ri0f1>5MSZ51G0J9SC5D0f1> </td></tr>
+	 * <tr><td>NET_SPARE_NO_CAPACITY</td><td>_EC(389)</td><td>HH182YWwJ'0\, H]A?2;Wc</td></tr> 
+	 * <tr><td>NET_ERROR_SOURCE_IN_USE</td><td>_EC(390)</td><td>OTJ>T41;FdK{Jd3vU<SC </td></tr>
+	 * <tr><td>NET_ERROR_REAVE</td><td>_EC(391)</td><td>8_<6SC;'G@U<5M<6SC;'WJT4 </td></tr>
+	 * <tr><td>NET_ERROR_NETFORBID</td><td>_EC(392)</td><td>={V9HkMx </td></tr>
+	 * <tr><td>NET_ERROR_GETCFG_MACFILTER</td><td>_EC(393)</td><td>;qH!MAC9}BKEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_MACFILTER</td><td>_EC(394)</td><td>IhVCMAC9}BKEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_GETCFG_IPMACFILTER</td><td>_EC(395)</td><td>;qH!IP/MAC9}BKEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_SETCFG_IPMACFILTER</td><td>_EC(396)</td><td>IhVCIP/MAC9}BKEdVCJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_OPERATION_OVERTIME</td><td>_EC(397)</td><td>51G02YWw3,J1 </td></tr>
+	 * <tr><td>NET_ERROR_SENIOR_VALIDATE_FAILED</td><td>_EC(398)</td><td>8_<6P#QiJ'0\</td></tr> 
+	 * <tr><td>NET_ERROR_DEVICE_ID_NOT_EXIST</td><td>_EC(399)</td><td>Ih18ID2;4fTZ </td></tr>
+	 * <tr><td>NET_ERROR_UNSUPPORTED</td><td>_EC(400)</td><td>2;V'3V51G02YWw </td></tr>
+	 * <tr><td>NET_ERROR_SPEAK_FAILED</td><td>_EC(406)</td><td>GkGs:0;0J'0\</td></tr> 
+	 * <tr><td>NET_ERROR_NOT_SUPPORT_F6</td><td>_EC(407)</td><td>Ih182;V'3V4KF6=S?Z5wSC </td></tr>
 	 * </table>
 	 * \endif
 	 * @see 
 	 */
-	
 	public static native  int  			GetLastError();
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Set device connection timeout value and trial times 
 	 * @param nWaitTime client and device connection waiting time,ms 
 	 * @param nTryTimes connection times
 	 * \else
-	 * ���������豸��ʱʱ��ͳ��Դ���
-	 * @param nWaitTime �ͻ������豸�����ӵȴ�ʱ��,���뼶 
-	 * @param nTryTimes ���Ӵ��� 
+	 * IhVCA,=SIh183,J1J1<d:M3"JT4NJ}
+	 * @param nWaitTime ?M;'6KSkIh185DA,=S5H4}J1<d,:ACk<6 
+	 * @param nTryTimes A,=S4NJ} 
 	 * \endif
 	 */
-	
 	public static native  void  		SetConnectTime(int nWaitTime, int nTryTimes);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Set log in network environment
 	 * @param pNetParam net parameter structure pointer. as NET_PARAM 
 	 * @return true:success, false:failed
 	 * \else
-	 * ���õ�½���绷��
-	 * @param pNetParam ��������ṹ��ָ��,��� NET_PARAM
+	 * IhVC5GB=MxBg;7>3
+	 * @param pNetParam MxBg2NJ}=a99LeV8Uk,Oj<{ NET_PARAM
 	 * \endif
 	 */
-	
 	public static native  void  		SetNetworkParam(NET_PARAM pNetParam);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Get SDK version information 
 	 * @return version NO. 
 	 * \else
-	 * ��ȡSDK�İ汾��Ϣ
-	 * @return �汾��
+	 * ;qH!SDK5D0f1>PEO"
+	 * @return 0f1>:E
 	 * \endif
 	 */
-	
 	public static native  int  			GetSDKVersion();
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Register to the device 
@@ -579,32 +583,32 @@ public class INetSDK
 	 * </table>
 	 * @return failed return to 0,successful return to device ID,after successfully login operation on device may correspond to designated device via this value (device handle). 
 	 * \else
-	 * ���豸ע��
-	 * @param pchDVRIP �豸IP 
-	 * @param wDVRPort �豸�˿� 
-	 * @param pchUserName �û���
-	 * @param pchPassword �û�����
-	 * @param lpDeviceInfo �豸��Ϣ,�����������
-	 * @param nError ���ص�¼������
+	 * OrIh18W"2a
+	 * @param pchDVRIP Ih18IP 
+	 * @param wDVRPort Ih186K?Z 
+	 * @param pchUserName SC;'C{
+	 * @param pchPassword SC;'C\Bk
+	 * @param lpDeviceInfo Ih18PEO",JtSZJd3v2NJ}
+	 * @param nError 75;X5GB<4mNsBk
 	 * <table>
-	 * <tr><td>������</td><td>������ </td></tr>
-	 * <tr><td>1</td><td>���벻��ȷ </td></tr>
-	 * <tr><td>2</td><td>�û��������� </td></tr>
-	 * <tr><td>3</td><td>��¼��ʱ </td></tr>
-	 * <tr><td>4</td><td>�ʺ��ѵ�¼ </td></tr>
-	 * <tr><td>5</td><td>�ʺ��ѱ�����  </td></tr>
-	 * <tr><td>6</td><td>�ʺű���Ϊ������  </td></tr>
-	 * <tr><td>7</td><td> ��Դ����,ϵͳæ </td></tr>
-	 * <tr><td>8</td><td>������ʧ�� </td></tr>
-	 * <tr><td>9</td><td>������ʧ�� </td></tr>
-	 * <tr><td>10</td><td> ��������û������� </td></tr>
+	 * <tr><td>4mNsBk</td><td>4z1m:,Re </td></tr>
+	 * <tr><td>1</td><td>C\Bk2;U}H7 </td></tr>
+	 * <tr><td>2</td><td>SC;'C{2;4fTZ </td></tr>
+	 * <tr><td>3</td><td>5GB<3,J1 </td></tr>
+	 * <tr><td>4</td><td>UJ:ERQ5GB< </td></tr>
+	 * <tr><td>5</td><td>UJ:ERQ1;Kx6(  </td></tr>
+	 * <tr><td>6</td><td>UJ:E1;APN*:ZC{5%  </td></tr>
+	 * <tr><td>7</td><td> WJT42;Wc,O5M3C& </td></tr>
+	 * <tr><td>8</td><td>WSA,=SJ'0\ </td></tr>
+	 * <tr><td>9</td><td>VwA,=SJ'0\ </td></tr>
+	 * <tr><td>10</td><td> 3,9}Wn4sSC;'A,=SJ} </td></tr>
 	 * </table>
-	 * @return ʧ�ܷ���0,�ɹ������豸ID,��¼�ɹ�֮����豸�Ĳ���������ͨ����ֵ(�豸���)��Ӧ����Ӧ���豸 
+	 * @return J'0\75;X0,3I9&75;XIh18ID,5GB<3I9&V.:s6TIh185D2YWw6<?IRTM(9}4KV5(Ih18>d1z)6TS&5=O`S&5DIh18 
 	 * \endif
 	 * @see Logout
 	 */
-	
 	public static native  long  		Login(String pchDVRIP, int wDVRPort, String pchUserName, String pchPassword, NET_DEVICEINFO lpDeviceInfo, Integer nError);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * register user ro device's extension interface, support one user to appoint capacity supported by the device
@@ -612,7 +616,7 @@ public class INetSDK
 	 * @param wDVRPort device port
 	 * @param pchUserName username
 	 * @param pchPassword userpassword
-	 * @param nSpecCap �豸֧�ֵ�����
+	 * @param nSpecCap Ih18V'3V5DD\A&
 	 * @param pCapParam for nSpecCap complementary parameter,when nSpecCap = 2,pCapParam fill in device serial number character string(mobile dvrlogin) 
 	 * @param lpDeviceInfo device info,as output parameter
 	 * @param nError (when function returns successfully, its value is meanless),return to login wrong code,as follows:
@@ -631,45 +635,45 @@ public class INetSDK
 	 * </table>
 	 * @return failed return to 0,successful return to device ID,after login successfully operations on device may be corresponded to corresponding devices via this value (device handle). 
 	 * \else
-	 * ���豸ע��--��չ
-	 * @param pchDVRIP �豸IP 
-	 * @param wDVRPort �豸�˿� 
-	 * @param pchUserName �û���
-	 * @param pchPassword �û�����
-	 * @param nSpecCap �豸֧�ֵ�����
-	 * @param pCapParam ��nSpecCap �Ĳ������
-	 * @param lpDeviceInfo �豸��Ϣ,�����������
-	 * @param nError ���ص�¼������
+	 * OrIh18W"2a--@)U9
+	 * @param pchDVRIP Ih18IP 
+	 * @param wDVRPort Ih186K?Z 
+	 * @param pchUserName SC;'C{
+	 * @param pchPassword SC;'C\Bk
+	 * @param nSpecCap Ih18V'3V5DD\A&
+	 * @param pCapParam 6TnSpecCap 5D293d2NJ}
+	 * @param lpDeviceInfo Ih18PEO",JtSZJd3v2NJ}
+	 * @param nError 75;X5GB<4mNsBk
 	 * <table>
-	 * <tr><td>������</td><td>������</td></tr> 
-	 * <tr><td>1</td><td>���벻��ȷ </td></tr>
-	 * <tr><td>2</td><td>�û��������� </td></tr>
-	 * <tr><td>3</td><td>��¼��ʱ</td></tr>
-	 * <tr><td>4</td><td>�ʺ��ѵ�¼</td></tr>
-	 * <tr><td>5</td><td>�ʺ��ѱ����� </td></tr>
-	 * <tr><td>6</td><td>�ʺű���Ϊ������ </td></tr> 
-	 * <tr><td>7</td><td>��Դ����,ϵͳæ</td></tr> 
-	 * <tr><td>8</td><td>������ʧ�� </td></tr>
-	 * <tr><td>9</td><td>������ʧ�� </td></tr>
-	 * <tr><td>10</td><td> ��������û������� </td></tr>
+	 * <tr><td>4mNsBk</td><td>4z1m:,Re</td></tr> 
+	 * <tr><td>1</td><td>C\Bk2;U}H7 </td></tr>
+	 * <tr><td>2</td><td>SC;'C{2;4fTZ </td></tr>
+	 * <tr><td>3</td><td>5GB<3,J1</td></tr>
+	 * <tr><td>4</td><td>UJ:ERQ5GB<</td></tr>
+	 * <tr><td>5</td><td>UJ:ERQ1;Kx6( </td></tr>
+	 * <tr><td>6</td><td>UJ:E1;APN*:ZC{5% </td></tr> 
+	 * <tr><td>7</td><td>WJT42;Wc,O5M3C&</td></tr> 
+	 * <tr><td>8</td><td>WSA,=SJ'0\ </td></tr>
+	 * <tr><td>9</td><td>VwA,=SJ'0\ </td></tr>
+	 * <tr><td>10</td><td> 3,9}Wn4sSC;'A,=SJ} </td></tr>
 	 * </table>
-	 * @return ʧ�ܷ���0,�ɹ������豸ID,��¼�ɹ�֮����豸�Ĳ���������ͨ����ֵ(�豸���)��Ӧ����Ӧ���豸 
+	 * @return J'0\75;X0,3I9&75;XIh18ID,5GB<3I9&V.:s6TIh185D2YWw6<?IRTM(9}4KV5(Ih18>d1z)6TS&5=O`S&5DIh18 
 	 * \endif
 	 * @see Logout Login
 	 */
-	
 	public static native long 			LoginEx(String pchDVRIP, int wDVRPort, String pchUserName, String pchPassword, int nSpecCap, Object pCapParam, NET_DEVICEINFO lpDeviceInfo, Integer nError);
 	
 	public static native long 			LoginEx2(String pchDVRIP, int wDVRPort, String pchUserName, String pchPassword, int/*EM_LOGIN_SPAC_CAP_TYPE*/ emSpecCap, Object pCapParam, NET_DEVICEINFO_Ex lpDeviceInfo, Integer nError);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Log out the device 
 	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
 	 * @return successful return to TRUE,failed return to FALSE
 	 * \else
-	 * �˳��豸
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ
-	 * @return true:�ɹ�, false:ʧ��
+	 * MK3vIh18
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see Login
 	 */
@@ -694,27 +698,27 @@ public class INetSDK
 	 * @param waittime overtime of wailing
 	 * @return true:success, false:failed
 	 * \else
-	 * �����ýӿ�,��ѯ������Ϣ(��Json��ʽ)
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ   {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param szCommand �������,��� ParseData 
-	 * @param nChannelID ͨ���� 
-	 * @param szOutBuffer ������� 
-	 * @param dwOutBufferSize ��������С 
-	 * @param error ������ 
+	 * PBEdVC=S?Z,2iQ/EdVCPEO"(RTJson8qJ=)
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5   {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param szCommand C|An2NJ},Oj<{ ParseData 
+	 * @param nChannelID M(5@:E 
+	 * @param szOutBuffer Jd3v;:3e 
+	 * @param dwOutBufferSize Jd3v;:3e4sP! 
+	 * @param error 4mNsBk 
 	 * <table>
-	 * <tr><td>0</td><td>�ɹ�</td></tr> 
-	 * <tr><td>1</td><td>ʧ�� </td></tr>
-	 * <tr><td>2</td><td>���ݲ��Ϸ� </td></tr>
-	 * <tr><td>3</td><td>��ʱ�޷�����</td></tr> 
-	 * <tr><td>4</td><td>û��Ȩ�� </td></tr>
+	 * <tr><td>0</td><td>3I9&</td></tr> 
+	 * <tr><td>1</td><td>J'0\ </td></tr>
+	 * <tr><td>2</td><td>J}>]2;:O7( </td></tr>
+	 * <tr><td>3</td><td>T]J1N^7(IhVC</td></tr> 
+	 * <tr><td>4</td><td>C;SPH(O^ </td></tr>
 	 * </table>
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see ParseData
 	 */
-	
 	public static native  boolean  	GetNewDevConfig(long lLoginID, String szCommand, int nChannelID, char[] szOutBuffer, int dwOutBufferSize, Integer error, int waittime);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * New configuration interface, Set configuration information(using Json protocol, see configuration SDK)
@@ -735,27 +739,26 @@ public class INetSDK
 	 * @param waittime overtime of waiting  
 	 * @return true:success, false:failed
 	 * \else
-	 * �����ýӿ�,����������Ϣ(��Json��ʽ)
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ
-	 * @param szCommand  ������� ��� ParseData
-	 * @param nChannelID ͨ���� 
-	 * @param szInBuffer ���뻺�� 
-	 * @param dwInBufferSize ���뻺���С 
-	 * @param error ������
+	 * PBEdVC=S?Z,IhVCEdVCPEO"(RTJson8qJ=)
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5
+	 * @param szCommand  C|An2NJ} Oj<{ ParseData
+	 * @param nChannelID M(5@:E 
+	 * @param szInBuffer JdHk;:3e 
+	 * @param dwInBufferSize JdHk;:3e4sP! 
+	 * @param error 4mNsBk
 	 * <table>
-	 * <tr><td>0</td><td>�ɹ� </td></tr>
-	 * <tr><td>1</td><td>ʧ�� </td></tr>
-	 * <tr><td>2</td><td> ���ݲ��Ϸ� </td></tr>
-	 * <tr><td>3</td><td> ��ʱ�޷����� </td></tr>
-	 * <tr><td>4</td><td> û��Ȩ�� </td></tr>
+	 * <tr><td>0</td><td>3I9& </td></tr>
+	 * <tr><td>1</td><td>J'0\ </td></tr>
+	 * <tr><td>2</td><td> J}>]2;:O7( </td></tr>
+	 * <tr><td>3</td><td> T]J1N^7(IhVC </td></tr>
+	 * <tr><td>4</td><td> C;SPH(O^ </td></tr>
 	 * </table>
-	 * @param restart �������ú��Ƿ���Ҫ�����豸,1��ʾ��Ҫ����,0��ʾ����Ҫ���� 
-	 * @param waittime �ȴ�ʱ��  
-	 * @return true:�ɹ�, false:ʧ��
+	 * @param restart EdVCIhVC:sJG7qPhR*VXFtIh18,11mJ>PhR*VXFt,01mJ>2;PhR*VXFt 
+	 * @param waittime 5H4}J1<d  
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see PacketData  ParseData
 	 */
-	
 	public static native  boolean  	SetNewDevConfig(long lLoginID, String szCommand, int nChannelID, char[] szInBuffer, long dwInBufferSize, Integer error, Integer restart, int waittime);
 	
 	public static native  boolean  	DeleteDevConfig(long lLoginID, NET_IN_DELETECFG pInParam, NET_OUT_DELETECFG pOutParam, int nWaittime);
@@ -764,7 +767,7 @@ public class INetSDK
 	 * \if ENGLISH_LANG
 	 * analyze to receive character string config info
 	 * @param szCommand command parameter, as follows
-	 * GetNewDevConfig �� SetNewDevConfig �ӿ�����
+	 * GetNewDevConfig :M SetNewDevConfig =S?ZC|An
 	 * <table>
 	 * <tr><td>CFG_CMD_ENCODE</td><td>"Encode"</td><td>image channel property config,structure CFG_ENCODE_INFO</td></tr> 
 	 * <tr><td>CFG_CMD_RECORD</td><td>"Record"</td><td>timed recordconfig,structure CFG_RECORD_INFO</td></tr> 
@@ -858,6 +861,7 @@ public class INetSDK
 	 * <tr><td>CFG_CMD_PSTN_ALARM_SERVER</td><td>"PSTNAlarmServer"</td><td>phone alarm center config CFG_PSTN_ALARM_CENTER_INFO</td></tr>  
 	 * <tr><td>CFG_CMD_ACCESS_GENERAL</td><td>"AccessControlGeneral"</td><td>access control general config CFG_ACCESS_GENERAL_INFO</td></tr>  
 	 * <tr><td>CFG_CMD_ACCESS_EVENT</td><td>"AccessControl"</td><td>access event config CFG_ACCESS_EVENT_INFO</td></tr>  
+	 * <tr><td>CFG_CMD_AUDIO_SPIRIT</td><td>"AudioSpirit"</td><td>Voice Incentive(Corresponding CFG_AUDIO_SPIRIT)</td></tr>
 	 * </table>
 	 * <table>
 	 * <tr><td>QueryNewSystemInfo interface command
@@ -883,131 +887,132 @@ public class INetSDK
 	 * @param pReserved reserve parameter
 	 * @return true:success, false:failed
 	 * \else
-	 * ������ѯ����������Ϣ
-	 * @param szCommand �������
-	 * GetNewDevConfig �� SetNewDevConfig �ӿ�����
+	 * =bNv2iQ/5=5DEdVCPEO"
+	 * @param szCommand C|An2NJ}
+	 * GetNewDevConfig :M SetNewDevConfig =S?ZC|An
 	 * <table>
-	 * <tr><td>CFG_CMD_ENCODE</td><td>"Encode"</td><td>ͼ��ͨ����������,�ṹ��  CFG_ENCODE_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_RECORD</td><td>"Record"</td><td>��ʱ¼������,�ṹ��  CFG_RECORD_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_ALARMINPUT</td><td>"Alarm"</td><td>�ⲿ���뱨������,�ṹ��  CFG_ALARMIN_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_NETALARMINPUT</td><td>"NetAlarm"</td><td>���籨������,�ṹ��  CFG_NETALARMIN_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_MOTIONDETECT</td><td>"MotionDetect"</td><td>��̬��ⱨ������,�ṹ��  CFG_MOTION_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_VIDEOLOST</td><td>"LossDetect"</td><td>��Ƶ��ʧ��������,�ṹ��  CFG_VIDEOLOST_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_VIDEOBLIND</td><td>"BlindDetect"</td><td>��Ƶ�ڵ���������,�ṹ��  CFG_SHELTER_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_STORAGENOEXIST</td><td>"StorageNotExist"</td><td>û�д洢�豸����,�ṹ��  CFG_STORAGENOEXIST_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_STORAGEFAILURE</td><td>"StorageFailure"</td><td>�洢�豸���ʳ�������,�ṹ��  CFG_STORAGEFAILURE_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_STORAGELOWSAPCE</td><td>"StorageLowSpace"</td><td>�洢�豸����������,�ṹ��  CFG_STORAGELOWSAPCE_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_NETABORT</td><td>"NetAbort"</td><td>����Ͽ�����,�ṹ��  CFG_NETABORT_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_IPCONFLICT</td><td>"IPConflict"</td><td>IP��ͻ����,�ṹ��  CFG_IPCONFLICT_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_SNAPCAPINFO</td><td>"SnapInfo"</td><td>ץͼ����,�ṹ��  CFG_SNAPCAPINFO_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_NAS</td><td>"NAS"</td><td>����洢����������,�ṹ��  CFG_NAS_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_PTZ</td><td>"Ptz"</td><td>��̨����,�ṹ��  CFG_PTZ_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_WATERMARK</td><td>"WaterMark"</td><td>��Ƶˮӡ����,�ṹ�� CFG_WATERMARK_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_ANALYSEGLOBAL</td><td>"VideoAnalyseGlobal"</td><td>��Ƶ����ȫ������,�ṹ��  CFG_ANALYSEGLOBAL_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_ANALYSEMODULE</td><td>"VideoAnalyseModule"</td><td>����ļ��ģ������,�ṹ��  CFG_ANALYSEMODULES_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_ANALYSERULE</td><td>"VideoAnalyseRule"</td><td>��Ƶ������������,�ṹ��  CFG_ANALYSERULES_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_ANALYSESOURCE</td><td>"VideoAnalyseSource"</td><td>��Ƶ������Դ����,�ṹ��  CFG_ANALYSESOURCE_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_RAINBRUSH</td><td>"RainBrush"</td><td>��ˢ����  CFG_RAINBRUSH_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_TRAFFICGLOBAL</td><td>"TrafficGlobal"</td><td>���ܽ�ͨȫ������ CFG_TRAFFICGLOBAL_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_DEV_GENERRAL</td><td>"General"</td><td>��ͨ����  CFG_DEV_DISPOSITION_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_ATMMOTION</td><td>"FetchMoneyOverTime"</td><td>ATMȡ�ʱ����  CFG_ATMMOTION_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_SNAPSOURCE</td><td>"SnapSource"</td><td>ץͼԴ����,�ṹ��  CFG_SNAPSOURCE_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_DEVICESTATUS</td><td>"DeviceStatus"</td><td>�豸״̬��Ϣ  CFG_DEVICESTATUS_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_HARDDISKTANK</td><td>"HardDiskTank"</td><td>��չ����Ϣ,�ṹ��  CFG_HARDISKTANKGROUP_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_RAIDGROUP</td><td>"RaidGroup"</td><td>Raid����Ϣ,�ṹ��  CFG_RAIDGROUP_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_STORAGEPOOLGROUP</td><td>"StoragePoolGroup"</td><td>�洢������Ϣ,�ṹ��  CFG_STORAGEPOOLGROUP_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_STORAGEPOSITIONGROUP</td><td>"StoragePositionGroup"</td><td>�ļ�ϵͳ����Ϣ,�ṹ��  CFG_STORAGEPOSITIONGROUP_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_VIDEOINDEVGROUP</td><td>"VideoInDevGroup"</td><td>ǰ���豸����Ϣ  CFG_VIDEOINDEVGROUP_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_DEVRECORDGROUP</td><td>"DevRecordGroup"</td><td>ͨ��¼����״̬,�ṹ��  CFG_DEVRECORDGROUP_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_IPSSERVER</td><td>"IpsServer"</td><td>����״̬,�ṹ��  CFG_IPSERVER_STATUS</td></tr> 
-	 * <tr><td>CFG_CMD_MATRIX_SPOT</td><td>"SpotMatrix"</td><td>Spot��������,�ṹ��  CFG_VIDEO_MATRIX </td></tr>
-	 * <tr><td>CFG_CMD_HDVR_DSP</td><td>"DspEncodeCap"</td><td>ÿ������ͨ����dsp��Ϣ,�ṹ��  CFG_DSPENCODECAP_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_HDVR_DSP</td><td>"DspEncodeCap"</td><td>ÿ������ͨ����dsp��Ϣ,�ṹ��  CFG_DSPENCODECAP_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_SPLITTOUR</td><td>"SplitTour"</td><td>��Ƶ�ָ���Ѳ����,�ṹ��  CFG_VIDEO_MATRIX </td></tr>
-	 * <tr><td>CFG_CMD_VIDEOENCODEROI</td><td>"VideoEncodeROI"</td><td>��Ƶ����ROI(Region of Intrest)����,�ṹ��  CFG_VIDEOENCODEROI_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_VIDEO_INMETERING</td><td>"VideoInMetering"</td><td>�������,�ṹ��  CFG_VIDEO_INMETERING_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_TRAFFIC_FLOWSTAT</td><td>"TrafficFlowStat"</td><td>��ͨ����ͳ������,�ṹ��  CFG_TRAFFIC_FLOWSTAT_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_VIDEOINOPTIONS</td><td>"VideoInOptions"</td><td>��Ƶ����ǰ��ѡ��,�ṹ��  CFG_VIDEO_IN_OPTIONS </td></tr>
-	 * <tr><td>CFG_CMD_RTSP</td><td>"RTSP"</td><td>RTSP������,�ṹ��  CFG_RTSP_INFO_IN , CFG_RTSP_INFO_OUT</td></tr> 
-	 * <tr><td>CFG_CMD_TRAFFICSNAPSHOT_MULTI</td><td>"TrafficSnapshotNew"</td><td>���ܽ�ͨץ�� CFG_TRAFFICSNAPSHOT_NEW_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_MULTICAST</td><td>"Multicast"</td><td>�鲥���������,�ṹ��  CFG_MULTICASTS_INFO_IN , CFG_MULTICASTS_INFO_OUT</td></tr> 
-	 * <tr><td>CFG_CMD_VIDEODIAGNOSIS_PROFILE</td><td>"VideoDiagnosisProfile"</td><td>��Ƶ��ϲ�����,�ṹ��  CFG_VIDEODIAGNOSIS_PROFILE </td></tr>
-	 * <tr><td>CFG_CMD_VIDEODIAGNOSIS_TASK</td><td>"VideoDiagnosisTask"</td><td>��Ƶ��������,�ṹ��  CFG_VIDEODIAGNOSIS_TASK</td></tr> 
-	 * <tr><td>CFG_CMD_VIDEODIAGNOSIS_PROJECT</td><td>"VideoDiagnosisProject"</td><td>��Ƶ��ϼƻ���  CFG_VIDEODIAGNOSIS_PROJECT</td></tr> 
-	 * <tr><td>CFG_CMD_VIDEODIAGNOSIS_GLOBAL</td><td>"VideoDiagnosisGlobal"</td><td>��Ƶ���ȫ�ֱ�  CFG_VIDEODIAGNOSIS_GLOBAL </td></tr>
-	 * <tr><td>CFG_CMD_VIDEODIAGNOSIS_TASK_ONE</td><td>"VideoDiagnosisTask.x"</td><td>��Ƶ��������  CFG_VIDEODIAGNOSIS_TASK </td></tr>
-	 * <tr><td>CFG_CMD_TRAFFIC_WORKSTATE</td><td>"WorkState"</td><td>�豸����״̬�������,�ṹ��  CFG_TRAFFIC_WORKSTATE_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_STORAGEDEVGROUP</td><td>"StorageDevGroup"</td><td>���̴洢������,�ṹ��  CFG_STORAGEGROUP_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_RECORDTOGROUP</td><td>"RecordToGroup"</td><td>¼���ŵĴ洢������,�ṹ��  CFG_RECORDTOGROUP_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_INTELLITRACKSCENE</td><td>"IntelliTrackScene"</td><td>���ܸ��ٳ�������,�ṹ��  CFG_INTELLITRACKSCENE_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_IVSFRAM_RULE</td><td>"IVSFramRule"</td><td>����֡��������,�ṹ��  CFG_ANALYSERULES_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_RECORD_STORAGEPOINT</td><td>"RecordStoragePoint"</td><td>¼��洢��ӳ������,�ṹ��  CFG_RECORDTOSTORAGEPOINT_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_MD_SERVER</td><td>"MetaDataServer"</td><td>Ԫ���ݷ���������,�ṹ��  CFG_METADATA_SERVER </td></tr>
-	 * <tr><td>CFG_CMD_CHANNELTITLE</td><td>"ChannelTitle"</td><td>ͨ������  AV_CFG_ChannelName </td></tr>
-	 * <tr><td>CFG_CMD_RECORDMODE</td><td>"RecordMode"</td><td>¼��ģʽ  AV_CFG_RecordMode </td></tr>
-	 * <tr><td>CFG_CMD_VIDEOOUT</td><td>"VideoOut"</td><td>��Ƶ�������  AV_CFG_VideoOutAttr </td></tr>
-	 * <tr><td>CFG_CMD_REMOTEDEVICE</td><td>"RemoteDevice"</td><td>Զ���豸��Ϣ  AV_CFG_RemoteDevice </td></tr>
-	 * <tr><td>CFG_CMD_REMOTECHANNEL</td><td>"RemoteChannel"</td><td>Զ��ͨ��  AV_CFG_RemoteChannel </td></tr>
-	 * <tr><td>CFG_CMD_MONITORTOUR</td><td>"MonitorTour"</td><td>������ѵ����  AV_CFG_MonitorTour </td></tr>
-	 * <tr><td>CFG_CMD_MONITORCOLLECTION</td><td>"MonitorCollection"</td><td>�����ղ�����  AV_CFG_MonitorCollection </td></tr>
-	 * <tr><td>CFG_CMD_DISPLAYSOURCE</td><td>"DisplaySource"</td><td>����ָ���ʾԴ����  AV_CFG_ChannelDisplaySource </td></tr>
-	 * <tr><td>CFG_CMD_RAID</td><td>"Raid"</td><td>�洢��������  AV_CFG_Raid </td></tr>
-	 * <tr><td>CFG_CMD_RECORDSOURCE</td><td>"RecordSource"</td><td>¼��Դ����  AV_CFG_RecordSource </td></tr>
-	 * <tr><td>CFG_CMD_VIDEOCOLOR</td><td>"VideoColor"</td><td>��Ƶ������ɫ����  AV_CFG_ChannelVideoColor</td></tr> 
-	 * <tr><td>CFG_CMD_VIDEOWIDGET</td><td>"VideoWidget"</td><td>��Ƶ�����������  AV_CFG_VideoWidget </td></tr>
-	 * <tr><td>CFG_CMD_STORAGEGROUP</td><td>"StorageGroup"</td><td>�洢����Ϣ  AV_CFG_StorageGroup </td></tr>
-	 * <tr><td>CFG_CMD_LOCALS</td><td>"Locales"</td><td>��������  AV_CFG_Locales </td></tr>
-	 * <tr><td>CFG_CMD_LANGUAGE</td><td>"Language"</td><td>����ѡ��  AV_CFG_Language </td></tr>
-	 * <tr><td>CFG_CMD_ACCESSFILTER</td><td>"AccessFilter"</td><td>���ʵ�ַ����  AV_CFG_AccessFilter </td></tr>
-	 * <tr><td>CFG_CMD_AUTOMAINTAIN</td><td>"AutoMaintain"</td><td>�Զ�ά��  AV_CFG_AutoMaintain </td></tr>
-	 * <tr><td>CFG_CMD_REMOTEEVENT</td><td>"RemoteEvent"</td><td>Զ���豸�¼�����   AV_CFG_RemoteEvent </td></tr>
-	 * <tr><td>CFG_CMD_MONITORWALL</td><td>"MonitorWall"</td><td>����ǽ����  AV_CFG_MonitorWall </td></tr>
-	 * <tr><td>CFG_CMD_SPLICESCREEN</td><td>"VideoOutputComposite"</td><td>�ں�������  AV_CFG_SpliceScreen </td></tr>
-	 * <tr><td>CFG_CMD_TEMPERATUREALARM</td><td>"TemperatureAlarm"</td><td>�¶ȱ�������  AV_CFG_TemperatureAlarm </td></tr>
-	 * <tr><td>CFG_CMD_FANSPEEDALARM</td><td>"FanSpeedAlarm"</td><td>����ת�ٱ�������  AV_CFG_FanSpeedAlarm</td></tr>
-	 * <tr><td>CFG_CMD_RECORDBACKUP</td><td>"RecordBackupRestore.BitrateLimit"</td><td>¼��ش�����  AV_CFG_RecordBackup </td></tr>
-	 * <tr><td>CFG_CMD_RECORDBACKUPDEVICE</td><td>"RecordBackupRestore.BackupDevices"</td><td>¼��ش������豸����  AV_CFG_RemoteDevice </td></tr>
-	 * <tr><td>CFG_CMD_COMM</td><td>"Comm"</td><td>��������  CFG_COMMGROUP_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_NETWORK</td><td>"Network"</td><td>��������  CFG_NETWORK_INFO</td></tr> 
-	 * <tr><td>CFG_CMD_NASEX</td><td>"NAS"</td><td>����洢����������, �������  CFG_NAS_GROUP_INFO_EX </td></tr>
-	 * <tr><td>CFG_CMD_ALARMOUT</td><td>"AlarmOut"</td><td>�������ͨ������  CFG_ALARMOUT_INFO</td></tr>  
-	 * <tr><td>CFG_CMD_COMMGLOBAL</td><td>"CommGlobal"</td><td>����ȫ������  CFG_COMMGLOBAL_INFO</td></tr>  
-	 * <tr><td>CFG_CMD_MOBILE</td><td>"Mobile"</td><td>�ƶ����ҵ������  CFG_MOBILE_INFO</td></tr>  
-	 * <tr><td>CFG_CMD_NTP</td><td>"NTP"</td><td>ʱ��ͬ��������  CFG_NTP_INFO</td></tr>  
-	 * <tr><td>CFG_CMD_PHONEEVENTNOTIFY</td><td>"PhoneEventNotify"</td><td>�绰����֪ͨ����  CFG_PHONEEVENTNOTIFY_INFO</td></tr>  
-	 * <tr><td>CFG_CMD_WIRELESS</td><td>"Wireless"</td><td>����������������  CFG_WIRELESS_INFO</td></tr>  
-	 * <tr><td>CFG_CMD_PSTN_ALARM_SERVER</td><td>"PSTNAlarmServer"</td><td>�绰������������  CFG_PSTN_ALARM_CENTER_INFO</td></tr>  
-	 * <tr><td>CFG_CMD_ACCESS_GENERAL</td><td>"AccessControlGeneral"</td><td>�Ž���������  CFG_ACCESS_GENERAL_INFO</td></tr>  
-	 * <tr><td>CFG_CMD_ACCESS_EVENT</td><td>"AccessControl"</td><td>�Ž��¼�����  CFG_ACCESS_EVENT_INFO</td></tr>  
+	 * <tr><td>CFG_CMD_ENCODE</td><td>"Encode"</td><td>M<OqM(5@JtPTEdVC,=a99Le  CFG_ENCODE_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_RECORD</td><td>"Record"</td><td>6(J1B<OqEdVC,=a99Le  CFG_RECORD_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_ALARMINPUT</td><td>"Alarm"</td><td>Mb2?JdHk1(>/EdVC,=a99Le  CFG_ALARMIN_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_NETALARMINPUT</td><td>"NetAlarm"</td><td>MxBg1(>/EdVC,=a99Le  CFG_NETALARMIN_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_MOTIONDETECT</td><td>"MotionDetect"</td><td>6/L,<l2b1(>/EdVC,=a99Le  CFG_MOTION_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_VIDEOLOST</td><td>"LossDetect"</td><td>JSF56*J'1(>/EdVC,=a99Le  CFG_VIDEOLOST_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_VIDEOBLIND</td><td>"BlindDetect"</td><td>JSF5UZ521(>/EdVC,=a99Le  CFG_SHELTER_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_STORAGENOEXIST</td><td>"StorageNotExist"</td><td>C;SP4f4"Ih18EdVC,=a99Le  CFG_STORAGENOEXIST_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_STORAGEFAILURE</td><td>"StorageFailure"</td><td>4f4"Ih187CNJ3v4mEdVC,=a99Le  CFG_STORAGEFAILURE_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_STORAGELOWSAPCE</td><td>"StorageLowSpace"</td><td>4f4"Ih18H]A?5MEdVC,=a99Le  CFG_STORAGELOWSAPCE_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_NETABORT</td><td>"NetAbort"</td><td>MxBg6O?*EdVC,=a99Le  CFG_NETABORT_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_IPCONFLICT</td><td>"IPConflict"</td><td>IP3eM;IhVC,=a99Le  CFG_IPCONFLICT_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_SNAPCAPINFO</td><td>"SnapInfo"</td><td>W%M<D\A&,=a99Le  CFG_SNAPCAPINFO_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_NAS</td><td>"NAS"</td><td>MxBg4f4"7~NqFwEdVC,=a99Le  CFG_NAS_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_PTZ</td><td>"Ptz"</td><td>TFL(EdVC,=a99Le  CFG_PTZ_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_WATERMARK</td><td>"WaterMark"</td><td>JSF5K.S!EdVC,=a99Le CFG_WATERMARK_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_ANALYSEGLOBAL</td><td>"VideoAnalyseGlobal"</td><td>JSF57VNvH+>VEdVC,=a99Le  CFG_ANALYSEGLOBAL_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_ANALYSEMODULE</td><td>"VideoAnalyseModule"</td><td>NoLe5D<l2bD#?iEdVC,=a99Le  CFG_ANALYSEMODULES_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_ANALYSERULE</td><td>"VideoAnalyseRule"</td><td>JSF57VNv9fTrEdVC,=a99Le  CFG_ANALYSERULES_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_ANALYSESOURCE</td><td>"VideoAnalyseSource"</td><td>JSF57VNvWJT4EdVC,=a99Le  CFG_ANALYSESOURCE_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_RAINBRUSH</td><td>"RainBrush"</td><td>SjK"EdVC  CFG_RAINBRUSH_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_TRAFFICGLOBAL</td><td>"TrafficGlobal"</td><td>VGD\=;M(H+>VEdVC CFG_TRAFFICGLOBAL_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_DEV_GENERRAL</td><td>"General"</td><td>FUM(EdVC  CFG_DEV_DISPOSITION_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_ATMMOTION</td><td>"FetchMoneyOverTime"</td><td>ATMH!?n3,J1EdVC  CFG_ATMMOTION_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_SNAPSOURCE</td><td>"SnapSource"</td><td>W%M<T4EdVC,=a99Le  CFG_SNAPSOURCE_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_DEVICESTATUS</td><td>"DeviceStatus"</td><td>Ih18W4L,PEO"  CFG_DEVICESTATUS_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_HARDDISKTANK</td><td>"HardDiskTank"</td><td>@)U99qPEO",=a99Le  CFG_HARDISKTANKGROUP_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_RAIDGROUP</td><td>"RaidGroup"</td><td>RaidWiPEO",=a99Le  CFG_RAIDGROUP_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_STORAGEPOOLGROUP</td><td>"StoragePoolGroup"</td><td>4f4"3XWiPEO",=a99Le  CFG_STORAGEPOOLGROUP_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_STORAGEPOSITIONGROUP</td><td>"StoragePositionGroup"</td><td>ND<~O5M3WiPEO",=a99Le  CFG_STORAGEPOSITIONGROUP_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_VIDEOINDEVGROUP</td><td>"VideoInDevGroup"</td><td>G06KIh18WiPEO"  CFG_VIDEOINDEVGROUP_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_DEVRECORDGROUP</td><td>"DevRecordGroup"</td><td>M(5@B<OqWiW4L,,=a99Le  CFG_DEVRECORDGROUP_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_IPSSERVER</td><td>"IpsServer"</td><td>7~NqW4L,,=a99Le  CFG_IPSERVER_STATUS</td></tr> 
+	 * <tr><td>CFG_CMD_MATRIX_SPOT</td><td>"SpotMatrix"</td><td>SpotJSFA>XUs,=a99Le  CFG_VIDEO_MATRIX </td></tr>
+	 * <tr><td>CFG_CMD_HDVR_DSP</td><td>"DspEncodeCap"</td><td>C?8vJ}WVM(5@5DdspPEO",=a99Le  CFG_DSPENCODECAP_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_HDVR_DSP</td><td>"DspEncodeCap"</td><td>C?8vJ}WVM(5@5DdspPEO",=a99Le  CFG_DSPENCODECAP_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_SPLITTOUR</td><td>"SplitTour"</td><td>JSF57V8nBVQ2EdVC,=a99Le  CFG_VIDEO_MATRIX </td></tr>
+	 * <tr><td>CFG_CMD_VIDEOENCODEROI</td><td>"VideoEncodeROI"</td><td>JSF51`BkROI(Region of Intrest)EdVC,=a99Le  CFG_VIDEOENCODEROI_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_VIDEO_INMETERING</td><td>"VideoInMetering"</td><td>2b9bEdVC,=a99Le  CFG_VIDEO_INMETERING_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_TRAFFIC_FLOWSTAT</td><td>"TrafficFlowStat"</td><td>=;M(AwA?M3<FEdVC,=a99Le  CFG_TRAFFIC_FLOWSTAT_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_VIDEOINOPTIONS</td><td>"VideoInOptions"</td><td>JSF5JdHkG06KQ!On,=a99Le  CFG_VIDEO_IN_OPTIONS </td></tr>
+	 * <tr><td>CFG_CMD_RTSP</td><td>"RTSP"</td><td>RTSP5DEdVC,=a99Le  CFG_RTSP_INFO_IN , CFG_RTSP_INFO_OUT</td></tr> 
+	 * <tr><td>CFG_CMD_TRAFFICSNAPSHOT_MULTI</td><td>"TrafficSnapshotNew"</td><td>VGD\=;M(W%ED CFG_TRAFFICSNAPSHOT_NEW_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_MULTICAST</td><td>"Multicast"</td><td>Wi2%5DO`9XEdVC,=a99Le  CFG_MULTICASTS_INFO_IN , CFG_MULTICASTS_INFO_OUT</td></tr> 
+	 * <tr><td>CFG_CMD_VIDEODIAGNOSIS_PROFILE</td><td>"VideoDiagnosisProfile"</td><td>JSF5Uo6O2NJ}1m,=a99Le  CFG_VIDEODIAGNOSIS_PROFILE </td></tr>
+	 * <tr><td>CFG_CMD_VIDEODIAGNOSIS_TASK</td><td>"VideoDiagnosisTask"</td><td>JSF5Uo6OHNNq1m,=a99Le  CFG_VIDEODIAGNOSIS_TASK</td></tr> 
+	 * <tr><td>CFG_CMD_VIDEODIAGNOSIS_PROJECT</td><td>"VideoDiagnosisProject"</td><td>JSF5Uo6O<F;.1m  CFG_VIDEODIAGNOSIS_PROJECT</td></tr> 
+	 * <tr><td>CFG_CMD_VIDEODIAGNOSIS_GLOBAL</td><td>"VideoDiagnosisGlobal"</td><td>JSF5Uo6OH+>V1m  CFG_VIDEODIAGNOSIS_GLOBAL </td></tr>
+	 * <tr><td>CFG_CMD_VIDEODIAGNOSIS_TASK_ONE</td><td>"VideoDiagnosisTask.x"</td><td>JSF5Uo6OHNNq1m  CFG_VIDEODIAGNOSIS_TASK </td></tr>
+	 * <tr><td>CFG_CMD_TRAFFIC_WORKSTATE</td><td>"WorkState"</td><td>Ih189$WwW4L,O`9XEdVC,=a99Le  CFG_TRAFFIC_WORKSTATE_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_STORAGEDEVGROUP</td><td>"StorageDevGroup"</td><td>4EEL4f4"WiEdVC,=a99Le  CFG_STORAGEGROUP_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_RECORDTOGROUP</td><td>"RecordToGroup"</td><td>B<Oq4f7E5D4f4"WiEdVC,=a99Le  CFG_RECORDTOGROUP_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_INTELLITRACKSCENE</td><td>"IntelliTrackScene"</td><td>VGD\8zWY3!>0EdVC,=a99Le  CFG_INTELLITRACKSCENE_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_IVSFRAM_RULE</td><td>"IVSFramRule"</td><td>VGD\V!9fTrEdVC,=a99Le  CFG_ANALYSERULES_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_RECORD_STORAGEPOINT</td><td>"RecordStoragePoint"</td><td>B<Oq4f4"5cS3IdEdVC,=a99Le  CFG_RECORDTOSTORAGEPOINT_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_MD_SERVER</td><td>"MetaDataServer"</td><td>T*J}>]7~NqFwEdVC,=a99Le  CFG_METADATA_SERVER </td></tr>
+	 * <tr><td>CFG_CMD_CHANNELTITLE</td><td>"ChannelTitle"</td><td>M(5@C{3F  AV_CFG_ChannelName </td></tr>
+	 * <tr><td>CFG_CMD_RECORDMODE</td><td>"RecordMode"</td><td>B<OqD#J=  AV_CFG_RecordMode </td></tr>
+	 * <tr><td>CFG_CMD_VIDEOOUT</td><td>"VideoOut"</td><td>JSF5Jd3vJtPT  AV_CFG_VideoOutAttr </td></tr>
+	 * <tr><td>CFG_CMD_REMOTEDEVICE</td><td>"RemoteDevice"</td><td>T63LIh18PEO"  AV_CFG_RemoteDevice </td></tr>
+	 * <tr><td>CFG_CMD_REMOTECHANNEL</td><td>"RemoteChannel"</td><td>T63LM(5@  AV_CFG_RemoteChannel </td></tr>
+	 * <tr><td>CFG_CMD_MONITORTOUR</td><td>"MonitorTour"</td><td>;-CfBVQ5EdVC  AV_CFG_MonitorTour </td></tr>
+	 * <tr><td>CFG_CMD_MONITORCOLLECTION</td><td>"MonitorCollection"</td><td>;-CfJU2XEdVC  AV_CFG_MonitorCollection </td></tr>
+	 * <tr><td>CFG_CMD_DISPLAYSOURCE</td><td>"DisplaySource"</td><td>;-Cf7V8nOTJ>T4EdVC  AV_CFG_ChannelDisplaySource </td></tr>
+	 * <tr><td>CFG_CMD_RAID</td><td>"Raid"</td><td>4f4">mWiEdVC  AV_CFG_Raid </td></tr>
+	 * <tr><td>CFG_CMD_RECORDSOURCE</td><td>"RecordSource"</td><td>B<OqT4EdVC  AV_CFG_RecordSource </td></tr>
+	 * <tr><td>CFG_CMD_VIDEOCOLOR</td><td>"VideoColor"</td><td>JSF5JdHkQUI+EdVC  AV_CFG_ChannelVideoColor</td></tr> 
+	 * <tr><td>CFG_CMD_VIDEOWIDGET</td><td>"VideoWidget"</td><td>JSF51`BkNo<~EdVC  AV_CFG_VideoWidget </td></tr>
+	 * <tr><td>CFG_CMD_STORAGEGROUP</td><td>"StorageGroup"</td><td>4f4"WiPEO"  AV_CFG_StorageGroup </td></tr>
+	 * <tr><td>CFG_CMD_LOCALS</td><td>"Locales"</td><td>GxSrEdVC  AV_CFG_Locales </td></tr>
+	 * <tr><td>CFG_CMD_LANGUAGE</td><td>"Language"</td><td>SoQTQ!Tq  AV_CFG_Language </td></tr>
+	 * <tr><td>CFG_CMD_ACCESSFILTER</td><td>"AccessFilter"</td><td>7CNJ5XV79}BK  AV_CFG_AccessFilter </td></tr>
+	 * <tr><td>CFG_CMD_AUTOMAINTAIN</td><td>"AutoMaintain"</td><td>WT6/N,;$  AV_CFG_AutoMaintain </td></tr>
+	 * <tr><td>CFG_CMD_REMOTEEVENT</td><td>"RemoteEvent"</td><td>T63LIh18JB<~4&@m   AV_CFG_RemoteEvent </td></tr>
+	 * <tr><td>CFG_CMD_MONITORWALL</td><td>"MonitorWall"</td><td>5gJSG=EdVC  AV_CFG_MonitorWall </td></tr>
+	 * <tr><td>CFG_CMD_SPLICESCREEN</td><td>"VideoOutputComposite"</td><td>HZ:OFAEdVC  AV_CFG_SpliceScreen </td></tr>
+	 * <tr><td>CFG_CMD_TEMPERATUREALARM</td><td>"TemperatureAlarm"</td><td>NB6H1(>/EdVC  AV_CFG_TemperatureAlarm </td></tr>
+	 * <tr><td>CFG_CMD_FANSPEEDALARM</td><td>"FanSpeedAlarm"</td><td>7gIHW*KY1(>/EdVC  AV_CFG_FanSpeedAlarm</td></tr>
+	 * <tr><td>CFG_CMD_RECORDBACKUP</td><td>"RecordBackupRestore.BitrateLimit"</td><td>B<Oq;X4+EdVC  AV_CFG_RecordBackup </td></tr>
+	 * <tr><td>CFG_CMD_RECORDBACKUPDEVICE</td><td>"RecordBackupRestore.BackupDevices"</td><td>B<Oq;X4+18SCIh18EdVC  AV_CFG_RemoteDevice </td></tr>
+	 * <tr><td>CFG_CMD_COMM</td><td>"Comm"</td><td>4.?ZEdVC  CFG_COMMGROUP_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_NETWORK</td><td>"Network"</td><td>MxBgEdVC  CFG_NETWORK_INFO</td></tr> 
+	 * <tr><td>CFG_CMD_NASEX</td><td>"NAS"</td><td>MxBg4f4"7~NqFwEdVC, 6`7~NqFw  CFG_NAS_GROUP_INFO_EX </td></tr>
+	 * <tr><td>CFG_CMD_ALARMOUT</td><td>"AlarmOut"</td><td>1(>/Jd3vM(5@EdVC  CFG_ALARMOUT_INFO</td></tr>  
+	 * <tr><td>CFG_CMD_COMMGLOBAL</td><td>"CommGlobal"</td><td>1(>/H+>VEdVC  CFG_COMMGLOBAL_INFO</td></tr>  
+	 * <tr><td>CFG_CMD_MOBILE</td><td>"Mobile"</td><td>RF6/O`9XR5NqEdVC  CFG_MOBILE_INFO</td></tr>  
+	 * <tr><td>CFG_CMD_NTP</td><td>"NTP"</td><td>J1<dM,2=7~NqFw  CFG_NTP_INFO</td></tr>  
+	 * <tr><td>CFG_CMD_PHONEEVENTNOTIFY</td><td>"PhoneEventNotify"</td><td>5g;0VPPDM(V*EdVC  CFG_PHONEEVENTNOTIFY_INFO</td></tr>  
+	 * <tr><td>CFG_CMD_WIRELESS</td><td>"Wireless"</td><td>N^O_MxBgA,=SIhVC  CFG_WIRELESS_INFO</td></tr>  
+	 * <tr><td>CFG_CMD_PSTN_ALARM_SERVER</td><td>"PSTNAlarmServer"</td><td>5g;01(>/VPPDEdVC  CFG_PSTN_ALARM_CENTER_INFO</td></tr>  
+	 * <tr><td>CFG_CMD_ACCESS_GENERAL</td><td>"AccessControlGeneral"</td><td>CE={;y1>EdVC  CFG_ACCESS_GENERAL_INFO</td></tr>  
+	 * <tr><td>CFG_CMD_ACCESS_EVENT</td><td>"AccessControl"</td><td>CE={JB<~EdVC  CFG_ACCESS_EVENT_INFO</td></tr>  
+	 * <tr><td>CFG_CMD_AUDIO_SPIRIT</td><td>"AudioSpirit"</td><td>SoRt<$@x(6TS& CFG_AUDIO_SPIRIT)</td></tr>
 	 * </table>
-	 * QueryNewSystemInfo�ӿ�����
+	 * QueryNewSystemInfo=S?ZC|An
 	 * <table>
-	 * <tr><td>CFG_CAP_CMD_VIDEOANALYSE</td><td>"devVideoAnalyse.getCaps"</td><td>��Ƶ����������,�ṹ�� CFG_CAP_ANALYSE_INFO</td></tr> 
-	 * <tr><td>CFG_NETAPP_REMOTEDEVICE</td><td>"netApp.getRemoteDeviceStatus"</td><td>��ȡ����豸�ĵ�����״̬,�ṹ��  CFG_REMOTE_DEVICE_STATUS</td></tr> 
-	 * <tr><td>CFG_DEVICE_CAP_NEW_CMD_VIDEOANALYSE</td><td>"devVideoAnalyse.factory.getCollect"</td><td>�豸���ܷ�������,�ṹ��  CFG_CAP_DEVICE_ANALYSE_INFO</td></tr> 
-	 * <tr><td>CFG_CAP_CMD_DEVICE_STATE</td><td>"trafficSnap.getDeviceStatus"</td><td>��ȡ����豸״̬��Ϣ,�ṹ��  CFG_CAP_TRAFFIC_DEVICE_STATUS</td></tr> 
-	 * <tr><td>CFG_CAP_CMD_VIDEOINPUT</td><td>"devVideoInput.getCaps"</td><td>��Ƶ����������,�ṹ��  CFG_CAP_VIDEOINPUT_INFO </td></tr>
-	 * <tr><td>CFG_USERMANAGER_ACTIVEUSER</td><td>"userManager.getActiveUserInfoAll"</td><td>�õ����л���û���Ϣ,�ṹ��  CFG_ACTIVEUSER_INFO</td></tr> 
-	 * <tr><td>CFG_CAP_VIDEOSTAT_SUMMARY</td><td>"videoStatServer.getSummary"</td><td>��ȡ��Ƶͳ��ժҪ��Ϣ,�ṹ��  CFG_VIDEOSATA_SUMMARY_INFO </td></tr>
-	 * <tr><td>CFG_CMD_VIDEODIAGNOSIS_GETCOLLECT</td><td>"videoDiagnosisServer.factory.getCollect"</td><td>��ȡ��Ƶ���ͨ����Ŀ,�ṹ��  CFG_VIDEODIAGNOSIS_GETCOLLECT_INFO </td></tr>
-	 * <tr><td>CFG_CMD_VIDEODIAGNOSIS_GETSTATE</td><td>"videoDiagnosisServer.getState"</td><td>��ȡ��Ƶ��Ͻ���״̬,�ṹ��  CFG_VIDEODIAGNOSIS_STATE_INFO </td></tr>
-	 * <tr><td>CFG_CAP_CMD_VIDEODIAGNOSIS_SERVER</td><td>"videoDiagnosisServer.getCaps"</td><td>��ȡ��Ƶ��Ϸ�������,�ṹ��  CFG_VIDEODIAGNOSIS_CAPS_INFO </td></tr>
-	 * <tr><td>CFG_CAP_CMD_EVENTMANAGER</td><td>"eventManager.getCaps"</td><td>��ȡ�豸������������,��Э���ѷϳ�,�¿�����ʹ�ø��ֶ�  CFG_CAP_EVENTMANAGER_INFO </td></tr>
-	 * <tr><td>CFG_CAP_CMD_EXALARMBOX</td><td>"alarm.getExAlarmBoxCaps"</td><td>��ȡ��չ������������  CFG_CAP_EXALARMBOX_INFO </td></tr>
-	 * <tr><td>CFG_CAP_CMD_EXALARM</td><td>"alarm.getExAlarmCaps"</td><td>��ȡ��չ����������  CFG_CAP_EXALARM_INFO </td></tr>
-	 * <tr><td>CFG_CAP_CMD_ACCESSCONTROLMANAGER</td><td>"accessControlManager.getCaps"</td><td>�Ž�����  CFG_CAP_ACCESSCONTROL </td></tr>
-	 * <tr><td>CFG_CAP_CMD_FILEMANAGER</td><td>"FileManager.getCaps"</td><td>��ȡ�ļ�����  CFG_CAP_FILEMANAGER </td></tr>
-	 * <tr><td>CFG_CAP_CMD_RECORDFINDER</td><td>"RecordFinder.getCaps"</td><td>��ȡ��ѯ��¼������  CFG_CAP_RECORDFINDER_INFO </td></tr>
+	 * <tr><td>CFG_CAP_CMD_VIDEOANALYSE</td><td>"devVideoAnalyse.getCaps"</td><td>JSF57VNvD\A&</,=a99Le CFG_CAP_ANALYSE_INFO</td></tr> 
+	 * <tr><td>CFG_NETAPP_REMOTEDEVICE</td><td>"netApp.getRemoteDeviceStatus"</td><td>;qH!:s6KIh185D5DTZO_W4L,,=a99Le  CFG_REMOTE_DEVICE_STATUS</td></tr> 
+	 * <tr><td>CFG_DEVICE_CAP_NEW_CMD_VIDEOANALYSE</td><td>"devVideoAnalyse.factory.getCollect"</td><td>Ih18VGD\7VNvD\A&,=a99Le  CFG_CAP_DEVICE_ANALYSE_INFO</td></tr> 
+	 * <tr><td>CFG_CAP_CMD_DEVICE_STATE</td><td>"trafficSnap.getDeviceStatus"</td><td>;qH!Mb=SIh18W4L,PEO",=a99Le  CFG_CAP_TRAFFIC_DEVICE_STATUS</td></tr> 
+	 * <tr><td>CFG_CAP_CMD_VIDEOINPUT</td><td>"devVideoInput.getCaps"</td><td>JSF5JdHkD\A&</,=a99Le  CFG_CAP_VIDEOINPUT_INFO </td></tr>
+	 * <tr><td>CFG_USERMANAGER_ACTIVEUSER</td><td>"userManager.getActiveUserInfoAll"</td><td>5C5=KySP;n6/5DSC;'PEO",=a99Le  CFG_ACTIVEUSER_INFO</td></tr> 
+	 * <tr><td>CFG_CAP_VIDEOSTAT_SUMMARY</td><td>"videoStatServer.getSummary"</td><td>;qH!JSF5M3<FU*R*PEO",=a99Le  CFG_VIDEOSATA_SUMMARY_INFO </td></tr>
+	 * <tr><td>CFG_CMD_VIDEODIAGNOSIS_GETCOLLECT</td><td>"videoDiagnosisServer.factory.getCollect"</td><td>;qH!JSF5Uo6OM(5@J}D?,=a99Le  CFG_VIDEODIAGNOSIS_GETCOLLECT_INFO </td></tr>
+	 * <tr><td>CFG_CMD_VIDEODIAGNOSIS_GETSTATE</td><td>"videoDiagnosisServer.getState"</td><td>;qH!JSF5Uo6O=xPPW4L,,=a99Le  CFG_VIDEODIAGNOSIS_STATE_INFO </td></tr>
+	 * <tr><td>CFG_CAP_CMD_VIDEODIAGNOSIS_SERVER</td><td>"videoDiagnosisServer.getCaps"</td><td>;qH!JSF5Uo6O7~NqD\A&,=a99Le  CFG_VIDEODIAGNOSIS_CAPS_INFO </td></tr>
+	 * <tr><td>CFG_CAP_CMD_EVENTMANAGER</td><td>"eventManager.getCaps"</td><td>;qH!Ih181(>/A*6/D\A&,@OP-RiRQ7O3},PB?*7"GkJ9SC8CWV6N  CFG_CAP_EVENTMANAGER_INFO </td></tr>
+	 * <tr><td>CFG_CAP_CMD_EXALARMBOX</td><td>"alarm.getExAlarmBoxCaps"</td><td>;qH!@)U91(>/:PD\A&</  CFG_CAP_EXALARMBOX_INFO </td></tr>
+	 * <tr><td>CFG_CAP_CMD_EXALARM</td><td>"alarm.getExAlarmCaps"</td><td>;qH!@)U91(>/D\A&</  CFG_CAP_EXALARM_INFO </td></tr>
+	 * <tr><td>CFG_CAP_CMD_ACCESSCONTROLMANAGER</td><td>"accessControlManager.getCaps"</td><td>CE={D\A&  CFG_CAP_ACCESSCONTROL </td></tr>
+	 * <tr><td>CFG_CAP_CMD_FILEMANAGER</td><td>"FileManager.getCaps"</td><td>;qH!ND<~D\A&  CFG_CAP_FILEMANAGER </td></tr>
+	 * <tr><td>CFG_CAP_CMD_RECORDFINDER</td><td>"RecordFinder.getCaps"</td><td>;qH!2iQ/<GB<D\A&</  CFG_CAP_RECORDFINDER_INFO </td></tr>
 	 * </table>
-	 * @param szInBuffer ���뻺��,�ַ����û��� 
-	 * @param stParseData ������Ľṹ�� 
-	 * @param pReserved �������� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * @param szInBuffer JdHk;:3e,WV7{EdVC;:3e 
+	 * @param stParseData =bNv:s5D=a99Le 
+	 * @param pReserved 1#At2NJ} 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see GetNewDevConfig  QueryNewSystemInfo 
 	 */
-	
 	public static native  boolean  	ParseData(String szCommand, char[] szInBuffer, Object stParseData, Object pReserved);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * package config info into character string
@@ -1017,17 +1022,17 @@ public class INetSDK
 	 * @param dwOutBufferSize output buffering size 
 	 * @return true:success, false:failed
 	 * \else
-	 * ���Ҫ���õ�������Ϣ
-	 * @param szCommand �������,��� ParseData
-	 * @param stPacketData �������ṹ��
-	 * @param szOutBuffer ������� 
-	 * @param dwOutBufferSize ��������С 
-	 * @return true:�ɹ�, false:ʧ��
+	 * Wi3IR*IhVC5DEdVCPEO"
+	 * @param szCommand C|An2NJ},Oj<{ ParseData
+	 * @param stPacketData 4x=bNv=a99Le
+	 * @param szOutBuffer Jd3v;:3e 
+	 * @param dwOutBufferSize Jd3v;:3e4sP! 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see SetNewDevConfig
-	 */
-	
+	 * */
 	public static native  boolean  	PacketData(String szCommand, Object stPacketData, char szOutBuffer[], int dwOutBufferSize);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Search device status
@@ -1119,97 +1124,98 @@ public class INetSDK
 	 * @param waittime search status waiting time 
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯ�豸״̬
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ   {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nType ��ѯ��Ϣ����
+	 * 2iQ/Ih18W4L,
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5   {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nType 2iQ/PEO"@`PM
 	 * <table>
-	 * <tr><td>nType</td><td>��ѯ����</td><td>��Ӧ�Ľṹ��</td></tr>
-	 * <tr><td>SDK_DEVSTATE_COMM_ALARM</td><td>��ͨ����״̬(�����ⲿ����,��̬���,��Ƶ��ʧ)</td><td>NET_SDK_STATE ֧��16·����  NET_SDK_STATE_EX ֧��32����</td></tr>
-	 * <tr><td>SDK_DEVSTATE_SHELTER_ALARM</td><td>�ڵ�����״̬</td><td>6�ֽ� </td></tr>
-	 * <tr><td>SDK_DEVSTATE_RECORDING¼��״̬ </td><td>16�ֽ� 
-	 * <tr><td>SDK_DEVSTATE_RESOURCE</td><td>��ѯϵͳ��Դ״̬</td><td>3��DWORD,��һ��dword 0 ��ʾС��CPU����50% 1 ��ʾ����50%,�ڶ�����ʾTV,��������ʾVGA </td></tr>
-	 * <tr><td>SDK_DEVSTATE_BITRATE</td><td>��ѯͨ������ </td><td> ͨ��������DWORD </td></tr>
-	 * <tr><td>SDK_DEVSTATE_DISK</td><td>Ӳ��״̬</td><td> SDK_HARDDISK_STATE </td></tr>
-	 * <tr><td>SDK_DEVSTATE_PROTOCAL_VER</td><td>����Э��汾�� </td><td>int </td></tr>
-	 * <tr><td>SDK_DEVSTATE_TALK_ECTYPE	</td><td>��ѯ�豸֧�ֵ������Խ���ʽ </td><td>  SDKDEV_TALKFORMAT_LIST </td></tr>
-	 * <tr><td>SDK_DEVSTATE_SD_CARD</td><td>��ѯsd����Ϣ</td><td>SDK_SDCARD_STATE ͬ SDK_HARDDISK_STATE �ṹ��һ�� </td></tr>
-	 * <tr><td>SDK_DEVSTATE_BURNING_DEV	</td><td>��ѯ��¼����Ϣ</td><td>SDK_BURNING_DEVINFO </td></tr>
-	 * <tr><td>SDK_DEVSTATE_BURNING_PROGRESS</td><td>��ѯ��¼����</td><td>SDK_BURNING_PROGRESS </td></tr>
-	 * <tr><td>SDK_DEVSTATE_CAMERA</td><td>��ѯ����ͷ������Ϣ</td><td>SDKDEV_CAMERA_INFO </td></tr>
-	 * <tr><td>SDK_DEVSTATE_SOFTWARE</td><td>�豸�����Ϣ </td><td> SDKDEV_VERSION_INFO </td></tr>
-	 * <tr><td>SDK_DEVSTATE_LANGUAGE</td><td>�豸����֧����Ϣ</td><td> SDK_DEV_LANGUAGE_INFO </td></tr>
-	 * <tr><td>SDK_DEVSTATE_DSP</td><td>��ѯdsp�������� </td><td> SDKDEV_DSP_ENCODECAP </td></tr>
-	 * <tr><td>SDK_DEVSTATE_OEM</td><td>��ѯoem��Ϣ</td><td>SDKDEV_OEM_INFO</td></tr>
-	 * <tr><td>SDK_DEVSTATE_NET</td><td>��ѯ��������״̬��Ϣ</td><td>SDKDEV_TOTAL_NET_STATE </td></tr>
-	 * <tr><td>SDK_DEVSTATE_TYPE</td><td>��ѯ�豸����</td><td>�ַ��� </td></tr>
-	 * <tr><td>SDK_DEVSTATE_SNAP</td><td>��ѯץͼ��������(IPC���Ʒ)</td><td>SDK_SNAP_ATTR_EN </td></tr>
-	 * <tr><td>SDK_DEVSTATE_RECORD_TIME</td><td>��ѯ����¼��ʱ������¼��ʱ��</td><td>DEV_DISK_RECORD_INFO </td></tr>
-	 * <tr><td>SDK_DEVSTATE_NET_RSSI</td><td>��ѯ���������ź�ǿ��</td><td>SDKDEV_WIRELESS_RSS_INFO </td></tr>
-	 * <tr><td>SDK_DEVSTATE_BURNING_ATTACH</td><td>��ѯ������¼ѡ��  </td><td>BOOL </td></tr>
-	 * <tr><td>SDK_DEVSTATE_BACKUP_DEV</td><td>��ѯ�����豸��ϸ��Ϣ </td><td> SDKDEV_BACKUP_LIST </td></tr>
-	 * <tr><td>SDK_DEVSTATE_BACKUP_FEEDBACK</td><td>���ݽ��ȷ���</td><td>SDKDEV_BACKUP_FEEDBACK </td></tr>
-	 * <tr><td>SDK_DEVSTATE_ATM_QUERY_TRADE</td><td>��ѯATM�������� </td><td>SDK_ATM_QUERY_TRADE </td></tr>
-	 * <tr><td>SDK_DEVSTATE_SIP</td><td>��ѯsip״̬</td><td>SDKDEV_SIP_STATE </td></tr>
-	 * <tr><td>SDK_DEVSTATE_VICHILE_STATE</td><td>��ѯ����wifi״̬ </td><td>SDKDEV_VEHICLE_WIFI_STATE </td></tr>
-	 * <tr><td>SDK_DEVSTATE_TEST_EMAIL</td><td>��ѯ�ʼ������Ƿ�ɹ� </td><td>SDKDEV_FUNC_TEST </td></tr>
-	 * <tr><td>SDK_DEVSTATE_SMART_HARD_DISK	</td><td>��ѯӲ��smart��Ϣ</td><td>SDKDEV_SMART_HARDDISK </td></tr>
-	 * <tr><td>SDK_DEVSTATE_TEST_SNAPPICTURE</td><td>��ѯץͼ�����Ƿ�ɹ�</td><td>SDKDEV_FUNC_TEST </td></tr>
-	 * <tr><td>SDK_DEVSTATE_STATIC_ALARM</td><td>��ѯ��̬����״̬ </td><td>DWORD,ÿһλ��ʾһ������ͨ�� </td></tr>
-	 * <tr><td>SDK_DEVSTATE_SUBMODULE_INFO</td><td>��ѯ�豸��ģ����Ϣ </td><td>SDKDEV_SUBMODULE_INFO </td></tr>
-	 * <tr><td>SDK_DEVSTATE_DISKDAMAGE</td><td>��ѯӲ�̻�������</td><td>SDKDEV_DISKDAMAGE_INFO </td></tr>
-	 * <tr><td>SDK_DEVSTATE_IPC</td><td>��ѯ�豸֧�ֵ�IPC����</td><td>SDK_DEV_IPC_INFO </td></tr>
-	 * <tr><td>SDK_DEVSTATE_ALARM_ARM_DISARM</td><td>��ѯ����������״̬ </td><td>ALARM_ARM_DISARM_STATE_INFO </td></tr>
-	 * <tr><td>SDK_DEVSTATE_ACC_POWEROFF_ALARM</td><td>��ѯACC�ϵ籨��״̬ </td><td>����һ��DWORD, 1��ʾ�ϵ�,0��ʾͨ�� </td></tr>
-	 * <tr><td>SDK_DEVSTATE_TEST_FTP_SERVER	</td><td>����FTP����������</td><td>SDKDEV_FTP_SERVER_TEST </td></tr>
-	 * <tr><td>SDK_DEVSTATE_3GFLOW_EXCEED</td><td>��ѯ3G����������ֵ״̬</td><td>SDKDEV_3GFLOW_EXCEED_STATE_INFO </td></tr>
-	 * <tr><td>SDK_DEVSTATE_3GFLOW_INFO	</td><td>��ѯ3G����������Ϣ</td><td>SDK_DEV_3GFLOW_INFO </td></tr>
-	 * <tr><td>SDK_DEVSTATE_VIHICLE_INFO_UPLOAD</td><td>�����Զ�����Ϣ�ϴ�</td><td>ALARM_VEHICLE_INFO_UPLOAD </td></tr>
-	 * <tr><td>SDK_DEVSTATE_SPEED_LIMIT</td><td>��ѯ���ٱ���״̬</td><td> ALARM_SPEED_LIMIT </td></tr>
-	 * <tr><td>SDK_DEVSTATE_DSP_EX</td><td>��ѯDSP��չ��������</td><td>SDKDEV_DSP_ENCODECAP_EX </td></tr>
-	 * <tr><td>SDK_DEVSTATE_3GMODULE_INFO</td><td>��ѯ3Gģ����Ϣ</td><td>SDK_DEV_3GMODULE_INFO </td></tr>
-	 * <tr><td>SDK_DEVSTATE_MULTI_DDNS</td><td>��ѯ��DDNS״̬��Ϣ</td><td>SDK_DEV_MULTI_DDNS_INFO </td></tr>
-	 * <tr><td>SDK_DEVSTATE_CONFIG_URL</td><td>��ѯ�豸����URL��Ϣ</td><td>SDK_DEV_URL_INFO </td></tr>
-	 * <tr><td>SDK_DEVSTATE_HARDKEY</td><td>��ѯHardKey</td><td>SDKDEV_HARDKEY_STATE </td></tr>
-	 * <tr><td>SDK_DEVSTATE_ISCSI_PATH</td><td>��ѯISCSI·���б� </td><td>SDKDEV_ISCSI_PATHLIST </td></tr>
-	 * <tr><td>SDK_DEVSTATE_DLPREVIEW_SLIPT_CAP</td><td>��ѯ�豸����Ԥ��֧�ֵķָ�ģʽ	</td><td>DEVICE_LOCALPREVIEW_SLIPT_CAP </td></tr>
-	 * <tr><td>SDK_DEVSTATE_WIFI_ROUTE_CAP</td><td>��ѯ����·��������Ϣ </td><td>SDKDEV_WIFI_ROUTE_CAP </td></tr>
-	 * <tr><td>SDK_DEVSTATE_ONLINE</td><td>��ѯ�豸������״̬</td><td> ����һ��DWORD, 1��ʾ����, 0��ʾ���� </td></tr>
-	 * <tr><td>SDK_DEVSTATE_PTZ_LOCATION</td><td>��ѯ��̨״̬��Ϣ </td><td>SDK_PTZ_LOCATION_INFO </td></tr>
-	 * <tr><td>SDK_DEVSTATE_MONITOR_INFO</td><td>�����ظ�����Ϣ</td><td>SDKDEV_MONITOR_INFO </td></tr>
-	 * <tr><td>SDK_DEVSTATE_SUBDEVICE</td><td>��ѯ���豸</td><td>CFG_DEVICESTATUS_INFO </td></tr>
-	 * <tr><td>SDK_DEVSTATE_RAID_INFO</td><td>��ѯRAID״̬</td><td>ALARM_RAID_INFO </td></tr>
-	 * <tr><td>SDK_DEVSTATE_TEST_DDNSDOMAIN</td><td>����DDNS�����Ƿ����  </td></tr>
-	 * <tr><td>SDK_DEVSTATE_VIRTUALCAMERA</td><td>��ѯ��������ͷ״̬ </td><td>SDKDEV_VIRTUALCAMERA_STATE_INFO </td></tr>
-	 * <tr><td>SDK_DEVSTATE_TRAFFICWORKSTATE</td><td>��ȡ�豸������Ƶ/��Ȧģʽ״̬��</td><td>SDKDEV_TRAFFICWORKSTATE_INFO </td></tr>
-	 * <tr><td>SDK_DEVSTATE_ALARM_CAMERA_MOVE</td><td>��ȡ�������λ�����¼�״̬ </td><td>ALARM_CAMERA_MOVE_INFO </td></tr>
-	 * <tr><td>SDK_DEVSTATE_ALARM</td><td>��ȡ�ⲿ����״̬</td><td>NET_SDK_ALARM_STATE </td></tr>
-	 * <tr><td>SDK_DEVSTATE_VIDEOLOST</td><td>��ȡ��Ƶ��ʧ����״̬ N</td><td>ET_SDK_VIDEOLOST_STATE </td></tr>
-	 * <tr><td>SDK_DEVSTATE_MOTIONDETECT</td><td>��ȡ��̬��ⱨ��״̬</td><td> NET_SDK_MOTIONDETECT_STATE </td></tr>
-	 * <tr><td>SDK_DEVSTATE_DETAILEDMOTION</td><td>��ȡ��ϸ�Ķ�̬��ⱨ��״̬	</td><td>NET_SDK_DETAILEDMOTION_STATE </td></tr>
-	 * <tr><td>SDK_DEVSTATE_VEHICLE_INFO</td><td>��ȡ�����������Ӳ����Ϣ </td><td>SDKDEV_VEHICLE_INFO </td></tr>
-	 * <tr><td>SDK_DEVSTATE_VIDEOBLIND</td><td>��ȡ��Ƶ�ڵ�����״̬</td><td>NET_SDK_VIDEOBLIND_STATE </td></tr>
-	 * <tr><td>SDK_DEVSTATE_3GSTATE_INFO</td><td>��ѯ3Gģ�������Ϣ</td><td>SDKDEV_VEHICLE_3GMODULE </td></tr>
-	 * <tr><td>SDK_DEVSTATE_NETINTERFACE</td><td>��ѯ����ӿ���Ϣ</td><td> SDKDEV_NETINTERFACE_INFO </td></tr>
-	 * <tr><td>SDK_DEVSTATE_PICINPIC_CHN</td><td>��ѯ���л�ͨ���� </td><td>DWORD����  </td></tr>
-	 * <tr><td>SDK_DEVSTATE_COMPOSITE_CHN</td><td>��ѯ�ں���ͨ����Ϣ</td><td>SDK_COMPOSITE_CHANNEL���� </td></tr>
-	 * <tr><td>SDK_DEVSTATE_WHOLE_RECORDING	</td><td>��ѯ�豸����¼��״̬ </td><td>BOOL </td></tr>
-	 * <tr><td>SDK_DEVSTATE_WHOLE_ENCODING</td><td>��ѯ�豸�������״̬ </td><td>BOOL </td></tr>
-	 * <tr><td>SDK_DEVSTATE_DISK_RECORDE_TIME</td><td>��ѯ�豸Ӳ��¼��ʱ����Ϣ	</td><td>DEV_DISK_RECORD_TIME���� </td></tr>
-	 * <tr><td>SDK_DEVSTATE_BURNER_DOOR</td><td>�Ƿ��ѵ�����¼������</td><td>NET_DEVSTATE_BURNERDOOR</td></tr>
-	 * <tr><td>SDK_DEVSTATE_GET_DATA_CHECK</td><td>��ѯ��������У����� </td><td>NET_DEVSTATE_DATA_CHECK </td></tr>
-	 * <tr><td>SDK_DEVSTATE_ALL_ALARM_CHANNELS_STATE</td><td>��ѯ����ͨ��״̬</td><td>NET_SDK_ALARM_CHANNELS_STATE</td></tr>
-	 * <tr><td>SDK_DEVSTATE_GET_BYPASS</td><td>��ѯͨ����·״̬ </td><td>NET_DEVSTATE_GET_BYPASS</td></tr>
-	 * <tr><td>SDK_DEVSTATE_ALARMKEYBOARD_COUNT</td><td>��ѯ���������ӵı���������</td><td>NET_ALARMKEYBOARD_COUNT</td></tr>
-	 * <tr><td>SDK_DEVSTATE_ACTIVATEDDEFENCEAREA</td><td>��ȡ����ķ�����Ϣ </td><td>NET_ACTIVATEDDEFENCEAREA</td></tr>
-	 * <tr><td>SDK_DEVSTATE_DEV_RECORDSET</td><td>��ѯ�豸��¼����Ϣ </td><td>NET_CTRL_RECORDSET_PARAM</td></tr>
-	 * <tr><td>SDK_DEVSTATE_DOOR_STATE</td><td>��ѯ�Ž�״̬ </td><td>NET_DOOR_STATUS_INFO</td></tr>
+	 * <tr><td>nType</td><td>2iQ/@`PM</td><td>6TS&5D=a99Le</td></tr>
+	 * <tr><td>SDK_DEVSTATE_COMM_ALARM</td><td>FUM(1(>/W4L,(0|@(Mb2?1(>/,6/L,<l2b,JSF56*J')</td><td>NET_SDK_STATE V'3V16B7RTOB  NET_SDK_STATE_EX V'3V32RTOB</td></tr>
+	 * <tr><td>SDK_DEVSTATE_SHELTER_ALARM</td><td>UZ521(>/W4L,</td><td>6WV=Z </td></tr>
+	 * <tr><td>SDK_DEVSTATE_RECORDINGB<OsW4L, </td><td>16WV=Z 
+	 * <tr><td>SDK_DEVSTATE_RESOURCE</td><td>2iQ/O5M3WJT4W4L,</td><td>38vDWORD,5ZR;8vdword 0 1mJ>P!SZCPU3,9}50% 1 1mJ>4sSZ50%,5Z6~8v1mJ>TV,5ZH}8v1mJ>VGA </td></tr>
+	 * <tr><td>SDK_DEVSTATE_BITRATE</td><td>2iQ/M(5@BkAw </td><td> M(5@J}3KRTDWORD </td></tr>
+	 * <tr><td>SDK_DEVSTATE_DISK</td><td>S2ELW4L,</td><td> SDK_HARDDISK_STATE </td></tr>
+	 * <tr><td>SDK_DEVSTATE_PROTOCAL_VER</td><td>MxBgP-Ri0f1>:E </td><td>int </td></tr>
+	 * <tr><td>SDK_DEVSTATE_TALK_ECTYPE	</td><td>2iQ/Ih18V'3V5DSoRt6T=28qJ= </td><td>  SDKDEV_TALKFORMAT_LIST </td></tr>
+	 * <tr><td>SDK_DEVSTATE_SD_CARD</td><td>2iQ/sd?(PEO"</td><td>SDK_SDCARD_STATE M, SDK_HARDDISK_STATE =a99LeR;Qy </td></tr>
+	 * <tr><td>SDK_DEVSTATE_BURNING_DEV	</td><td>2iQ/?LB<;zPEO"</td><td>SDK_BURNING_DEVINFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_BURNING_PROGRESS</td><td>2iQ/?LB<=x6H</td><td>SDK_BURNING_PROGRESS </td></tr>
+	 * <tr><td>SDK_DEVSTATE_CAMERA</td><td>2iQ/IcOqM7JtPTPEO"</td><td>SDKDEV_CAMERA_INFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_SOFTWARE</td><td>Ih18Hm<~PEO" </td><td> SDKDEV_VERSION_INFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_LANGUAGE</td><td>Ih18SoQTV'3VPEO"</td><td> SDK_DEV_LANGUAGE_INFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_DSP</td><td>2iQ/dspD\A&ChJv </td><td> SDKDEV_DSP_ENCODECAP </td></tr>
+	 * <tr><td>SDK_DEVSTATE_OEM</td><td>2iQ/oemPEO"</td><td>SDKDEV_OEM_INFO</td></tr>
+	 * <tr><td>SDK_DEVSTATE_NET</td><td>2iQ/MxBgTKPPW4L,PEO"</td><td>SDKDEV_TOTAL_NET_STATE </td></tr>
+	 * <tr><td>SDK_DEVSTATE_TYPE</td><td>2iQ/Ih18@`PM</td><td>WV7{4. </td></tr>
+	 * <tr><td>SDK_DEVSTATE_SNAP</td><td>2iQ/W%M<9&D\JtPT(IPC@`2zF7)</td><td>SDK_SNAP_ATTR_EN </td></tr>
+	 * <tr><td>SDK_DEVSTATE_RECORD_TIME</td><td>2iQ/WnTgB<OqJ1<d:MWn=|B<OqJ1<d</td><td>DEV_DISK_RECORD_INFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_NET_RSSI</td><td>2iQ/N^O_MxBgPE:EG?6H</td><td>SDKDEV_WIRELESS_RSS_INFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_BURNING_ATTACH</td><td>2iQ/8=<~?LB<Q!On  </td><td>BOOL </td></tr>
+	 * <tr><td>SDK_DEVSTATE_BACKUP_DEV</td><td>2iQ/187]Ih18AP1m </td><td> SDKDEV_BACKUP_LIST </td></tr>
+	 * <tr><td>SDK_DEVSTATE_BACKUP_DEV_INFO</td><td>2iQ/187]Ih18OjO8PEO" </td><td> SDKDEV_BACKUP_INFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_BACKUP_FEEDBACK</td><td>187]=x6H74@!</td><td>SDKDEV_BACKUP_FEEDBACK </td></tr>
+	 * <tr><td>SDK_DEVSTATE_ATM_QUERY_TRADE</td><td>2iQ/ATM=;RW@`PM </td><td>SDK_ATM_QUERY_TRADE </td></tr>
+	 * <tr><td>SDK_DEVSTATE_SIP</td><td>2iQ/sipW4L,</td><td>SDKDEV_SIP_STATE </td></tr>
+	 * <tr><td>SDK_DEVSTATE_VICHILE_STATE</td><td>2iQ/35TXwifiW4L, </td><td>SDKDEV_VEHICLE_WIFI_STATE </td></tr>
+	 * <tr><td>SDK_DEVSTATE_TEST_EMAIL</td><td>2iQ/SJ<~EdVCJG7q3I9& </td><td>SDKDEV_FUNC_TEST </td></tr>
+	 * <tr><td>SDK_DEVSTATE_SMART_HARD_DISK	</td><td>2iQ/S2ELsmartPEO"</td><td>SDKDEV_SMART_HARDDISK </td></tr>
+	 * <tr><td>SDK_DEVSTATE_TEST_SNAPPICTURE</td><td>2iQ/W%M<IhVCJG7q3I9&</td><td>SDKDEV_FUNC_TEST </td></tr>
+	 * <tr><td>SDK_DEVSTATE_STATIC_ALARM</td><td>2iQ/>2L,1(>/W4L, </td><td>DWORD,C?R;N;1mJ>R;8v1(>/M(5@ </td></tr>
+	 * <tr><td>SDK_DEVSTATE_SUBMODULE_INFO</td><td>2iQ/Ih18WSD#?iPEO" </td><td>SDKDEV_SUBMODULE_INFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_DISKDAMAGE</td><td>2iQ/S2EL;55@D\A&</td><td>SDKDEV_DISKDAMAGE_INFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_IPC</td><td>2iQ/Ih18V'3V5DIPCD\A&</td><td>SDK_DEV_IPC_INFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_ALARM_ARM_DISARM</td><td>2iQ/1(>/2<377@W4L, </td><td>ALARM_ARM_DISARM_STATE_INFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_ACC_POWEROFF_ALARM</td><td>2iQ/ACC6O5g1(>/W4L, </td><td>75;XR;8vDWORD, 11mJ>6O5g,01mJ>M(5g </td></tr>
+	 * <tr><td>SDK_DEVSTATE_TEST_FTP_SERVER	</td><td>2bJTFTP7~NqFwA,=S</td><td>SDKDEV_FTP_SERVER_TEST </td></tr>
+	 * <tr><td>SDK_DEVSTATE_3GFLOW_EXCEED</td><td>2iQ/3GAwA?3,3vcPV5W4L,</td><td>SDKDEV_3GFLOW_EXCEED_STATE_INFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_3GFLOW_INFO	</td><td>2iQ/3GMxBgAwA?PEO"</td><td>SDK_DEV_3GFLOW_INFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_VIHICLE_INFO_UPLOAD</td><td>35TXWT6(RePEO"IO4+</td><td>ALARM_VEHICLE_INFO_UPLOAD </td></tr>
+	 * <tr><td>SDK_DEVSTATE_SPEED_LIMIT</td><td>2iQ/O^KY1(>/W4L,</td><td> ALARM_SPEED_LIMIT </td></tr>
+	 * <tr><td>SDK_DEVSTATE_DSP_EX</td><td>2iQ/DSP@)U9D\A&ChJv</td><td>SDKDEV_DSP_ENCODECAP_EX </td></tr>
+	 * <tr><td>SDK_DEVSTATE_3GMODULE_INFO</td><td>2iQ/3GD#?iPEO"</td><td>SDK_DEV_3GMODULE_INFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_MULTI_DDNS</td><td>2iQ/6`DDNSW4L,PEO"</td><td>SDK_DEV_MULTI_DDNS_INFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_CONFIG_URL</td><td>2iQ/Ih18EdVCURLPEO"</td><td>SDK_DEV_URL_INFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_HARDKEY</td><td>2iQ/HardKey</td><td>SDKDEV_HARDKEY_STATE </td></tr>
+	 * <tr><td>SDK_DEVSTATE_ISCSI_PATH</td><td>2iQ/ISCSIB7>6AP1m </td><td>SDKDEV_ISCSI_PATHLIST </td></tr>
+	 * <tr><td>SDK_DEVSTATE_DLPREVIEW_SLIPT_CAP</td><td>2iQ/Ih181>5XT$@@V'3V5D7V8nD#J=	</td><td>DEVICE_LOCALPREVIEW_SLIPT_CAP </td></tr>
+	 * <tr><td>SDK_DEVSTATE_WIFI_ROUTE_CAP</td><td>2iQ/N^O_B7SID\A&PEO" </td><td>SDKDEV_WIFI_ROUTE_CAP </td></tr>
+	 * <tr><td>SDK_DEVSTATE_ONLINE</td><td>2iQ/Ih185DTZO_W4L,</td><td> 75;XR;8vDWORD, 11mJ>TZO_, 01mJ>6OO_ </td></tr>
+	 * <tr><td>SDK_DEVSTATE_PTZ_LOCATION</td><td>2iQ/TFL(W4L,PEO" </td><td>SDK_PTZ_LOCATION_INFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_MONITOR_INFO</td><td>;-Cf<`?X8(VzPEO"</td><td>SDKDEV_MONITOR_INFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_SUBDEVICE</td><td>2iQ/WSIh18</td><td>CFG_DEVICESTATUS_INFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_RAID_INFO</td><td>2iQ/RAIDW4L,</td><td>ALARM_RAID_INFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_TEST_DDNSDOMAIN</td><td>2bJTDDNSSrC{JG7q?ISC  </td></tr>
+	 * <tr><td>SDK_DEVSTATE_VIRTUALCAMERA</td><td>2iQ/PiDbIcOqM7W4L, </td><td>SDKDEV_VIRTUALCAMERA_STATE_INFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_TRAFFICWORKSTATE</td><td>;qH!Ih189$WwJSF5/O_H&D#J=W4L,5H</td><td>SDKDEV_TRAFFICWORKSTATE_INFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_ALARM_CAMERA_MOVE</td><td>;qH!IcOq;zRFN;1(>/JB<~W4L, </td><td>ALARM_CAMERA_MOVE_INFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_ALARM</td><td>;qH!Mb2?1(>/W4L,</td><td>NET_SDK_ALARM_STATE </td></tr>
+	 * <tr><td>SDK_DEVSTATE_VIDEOLOST</td><td>;qH!JSF56*J'1(>/W4L, N</td><td>ET_SDK_VIDEOLOST_STATE </td></tr>
+	 * <tr><td>SDK_DEVSTATE_MOTIONDETECT</td><td>;qH!6/L,<`2b1(>/W4L,</td><td> NET_SDK_MOTIONDETECT_STATE </td></tr>
+	 * <tr><td>SDK_DEVSTATE_DETAILEDMOTION</td><td>;qH!OjO85D6/L,<`2b1(>/W4L,	</td><td>NET_SDK_DETAILEDMOTION_STATE </td></tr>
+	 * <tr><td>SDK_DEVSTATE_VEHICLE_INFO</td><td>;qH!35TXWTIm8wVVS2<~PEO" </td><td>SDKDEV_VEHICLE_INFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_VIDEOBLIND</td><td>;qH!JSF5UZ521(>/W4L,</td><td>NET_SDK_VIDEOBLIND_STATE </td></tr>
+	 * <tr><td>SDK_DEVSTATE_3GSTATE_INFO</td><td>2iQ/3GD#?iO`9XPEO"</td><td>SDKDEV_VEHICLE_3GMODULE </td></tr>
+	 * <tr><td>SDK_DEVSTATE_NETINTERFACE</td><td>2iQ/MxBg=S?ZPEO"</td><td> SDKDEV_NETINTERFACE_INFO </td></tr>
+	 * <tr><td>SDK_DEVSTATE_PICINPIC_CHN</td><td>2iQ/;-VP;-M(5@:E </td><td>DWORDJ}Wi  </td></tr>
+	 * <tr><td>SDK_DEVSTATE_COMPOSITE_CHN</td><td>2iQ/HZ:OFAM(5@PEO"</td><td>SDK_COMPOSITE_CHANNELJ}Wi </td></tr>
+	 * <tr><td>SDK_DEVSTATE_WHOLE_RECORDING	</td><td>2iQ/Ih18U{LeB<OqW4L, </td><td>BOOL </td></tr>
+	 * <tr><td>SDK_DEVSTATE_WHOLE_ENCODING</td><td>2iQ/Ih18U{Le1`BkW4L, </td><td>BOOL </td></tr>
+	 * <tr><td>SDK_DEVSTATE_DISK_RECORDE_TIME</td><td>2iQ/Ih18S2ELB<OqJ1<dPEO"	</td><td>DEV_DISK_RECORD_TIMEJ}Wi </td></tr>
+	 * <tr><td>SDK_DEVSTATE_BURNER_DOOR</td><td>JG7qRQ5/3v?LB<;z9bG}</td><td>NET_DEVSTATE_BURNERDOOR</td></tr>
+	 * <tr><td>SDK_DEVSTATE_GET_DATA_CHECK</td><td>2iQ/9bELJ}>]P#Qi=x6H </td><td>NET_DEVSTATE_DATA_CHECK </td></tr>
+	 * <tr><td>SDK_DEVSTATE_ALL_ALARM_CHANNELS_STATE</td><td>2iQ/1(>/M(5@W4L,</td><td>NET_SDK_ALARM_CHANNELS_STATE</td></tr>
+	 * <tr><td>SDK_DEVSTATE_GET_BYPASS</td><td>2iQ/M(5@ETB7W4L, </td><td>NET_DEVSTATE_GET_BYPASS</td></tr>
+	 * <tr><td>SDK_DEVSTATE_ALARMKEYBOARD_COUNT</td><td>2iQ/4.?ZIOA,=S5D1(>/<|ELJ}</td><td>NET_ALARMKEYBOARD_COUNT</td></tr>
+	 * <tr><td>SDK_DEVSTATE_ACTIVATEDDEFENCEAREA</td><td>;qH!<$;n5D7@GxPEO" </td><td>NET_ACTIVATEDDEFENCEAREA</td></tr>
+	 * <tr><td>SDK_DEVSTATE_DEV_RECORDSET</td><td>2iQ/Ih18<GB<</PEO" </td><td>NET_CTRL_RECORDSET_PARAM</td></tr>
+	 * <tr><td>SDK_DEVSTATE_DOOR_STATE</td><td>2iQ/CE={W4L, </td><td>NET_DOOR_STATUS_INFO</td></tr>
+	 * <tr><td>SDK_DEVSTATE_GET_UPGRADE_STATE</td><td>;qH!Ih18I}<6W4L, </td><td>SDKDEV_UPGRADE_STATE_INFO</td></tr>
 	 * </table> 
-	 * @param pDevState ���ڽ��ղ�ѯ���ص����ݵĻ���
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * @param pDevState SCSZ=SJU2iQ/75;X5DJ}>]5D;:4f
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
-	
 	public static native  boolean  	QueryDevState(long lLoginID, int nType, Object pDevState, int waittime);
 	
 	/**
@@ -1219,16 +1225,16 @@ public class INetSDK
 	 * @param nChannelID real time monitor channel NO.(from 0)
 	 * @return failed return to 0,successful return to real time monitoring ID(real time mnitoring handle),as parameter of related function
 	 * \else 
-	 * ��ʼʵʱ����
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ
-	 * @param nChannelID ʵʱ����ͨ����(ͨ���Ŵ�0��ʼ) 
-	 * @return ʧ�ܷ���0,�ɹ�����ʵʱ����ID(ʵʱ���Ӿ��),����Ϊ��غ����Ĳ��� 
+	 * ?*J<J5J1<`JS
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5
+	 * @param nChannelID J5J1<`JSM(5@:E(M(5@:E4S0?*J<) 
+	 * @return J'0\75;X0,3I9&75;XJ5J1<`JSID(J5J1<`JS>d1z),=+WwN*O`9X:/J}5D2NJ} 
 	 * \endif
 	 * @see StopRealPlay SaveRealData StopSaveRealData ClientSetVideoEffect GetVideoEffect OpenSound
 	 * CloseSound SetVolume SetRealDataCallBack SetRealDataCallBackEx CapturePicture StartTalkEx
 	 */	
-	
 	public static native long          RealPlay(long lLoginID, int nChannelID);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * start real time monitoring or multi-image preview.for device support dual-stream, may select main tream or extra stream to monitor via setting RealPlayType parameter
@@ -1238,19 +1244,19 @@ public class INetSDK
 	 * @param rType enumeration type,refer to SDK_RealPlayType
 	 * @return failed return to 0,successful return to real time monitor ID(real time monitor handle),as parameter of related function. 
 	 * \else
-	 * ʼʵʱ����--��չ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ
-	 * @param nChannelID ʵʱ����ͨ����,\n
-	 * ���rTypeΪRType_Multiplay�ò�������\n
-	 * ��rTypeΪRType_Multiplay_1~RType_Multiplay_16ʱ,nChannelID������Ԥ���Ļ���,\n
-	 * �統RType_Multiplay_4ʱ,nChannelIDΪ4��5��6��7����һ��ֵ��ʾԤ����5����7ͨ�����Ļ���Ԥ�� 
-	 * @param rType ö������ ���  SDK_RealPlayType
-	 * @return ʧ�ܷ���0,�ɹ�����ʵʱ����ID(ʵʱ���Ӿ��),����Ϊ��غ����Ĳ��� 
+	 * J<J5J1<`JS--@)U9
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5
+	 * @param nChannelID J5J1<`JSM(5@:E,\n
+	 * Hg9{rTypeN*RType_Multiplay8C2NJ}1#At\n
+	 * 51rTypeN*RType_Multiplay_1~RType_Multiplay_16J1,nChannelID>v6(AKT$@@5D;-Cf,\n
+	 * Hg51RType_Multiplay_4J1,nChannelIDN*4!"5!"6!"7FdVPR;8vV51mJ>T$@@5Z55=5Z7M(5@5DKD;-CfT$@@ 
+	 * @param rType C6>Y@`PM Oj<{  SDK_RealPlayType
+	 * @return J'0\75;X0,3I9&75;XJ5J1<`JSID(J5J1<`JS>d1z),=+WwN*O`9X:/J}5D2NJ} 
 	 * \endif
 	 * @see StopRealPlayEx SaveRealData StopSaveRealData ClientSetVideoEffect ClientGetVideoEffect OpenSound CloseSound SetVolume SetRealDataCallBack SetRealDataCallBackEx CapturePicture StartTalkEx
 	 */
-	
 	public static native long          RealPlayEx(long lLoginID, int nChannelID, int rType);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * set real time monitor data recall,provide user with device data,when cbRealData is NULL, end recalling data
@@ -1258,14 +1264,15 @@ public class INetSDK
 	 * @param cbRealData recall function,for sending real time data from device
 	 * @return true:success, false:failed
 	 * \else
-	 * ����ʵʱ�������ݻص�,���û��ṩ�豸����������,��cbRealDataΪNULLʱ�����ص�����
-	 * @param lRealHandle {@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}�ķ���ֵ 
-	 * @param cbRealData �ص�����,���ڴ����豸������ʵʱ���� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * IhVCJ5J1<`JSJ}>];X5w,8xSC;'La9)Ih18Aw3v5DJ}>],51cbRealDataN*NULLJ1=aJx;X5wJ}>]
+	 * @param lRealHandle {@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}5D75;XV5 
+	 * @param cbRealData ;X5w:/J},SCSZ4+3vIh18Aw3v5DJ5J1J}>] 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see RealPlay RealPlayEx StopRealPlay
 	 */
 	public static native boolean       SetRealDataCallBack(long lRealHandle, CB_fRealDataCallBack cbRealData);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * set real time data recall extension interface,as complementary to previous interface,add one recall data type label dwFlag,may select data to recall, do not recal unrecalled data,when seting is 0x1f, same with previoud interface,but also extend recall function
@@ -1282,39 +1289,39 @@ public class INetSDK
 	 * <tr><td>0x0000001f</td><td>above fime data type</td></tr>
 	 * </table>
 	 * \else
-	 * ����ʵʱ�������ݻص�--��չ
-	 * @param lRealHandle {@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}�ķ���ֵ 
-	 * @param cbRealData �ص�����,���ڴ����豸������ʵʱ���� 
-	 * @param dwFlag ��������,�ǰ�λ����,�������,Ϊ0x1fʱ�����������Ͷ��ص�
+	 * IhVCJ5J1<`JSJ}>];X5w--@)U9
+	 * @param lRealHandle {@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}5D75;XV5 
+	 * @param cbRealData ;X5w:/J},SCSZ4+3vIh18Aw3v5DJ5J1J}>] 
+	 * @param dwFlag J}>]@`PM,JG04N;@45D,?IRTWi:O,N*0x1fJ1NeVVJ}>]@`PM6<;X5w
 	 * <table>
-	 * <tr><td>dwFlag</td><td>�������� </td></tr>
-	 * <tr><td>0x00000001</td><td>��ͬԭ����ԭʼ���� </td></tr>
-	 * <tr><td>0x00000002</td><td>��MPEG4/H264��׼���� </td></tr>
-	 * <tr><td>0x00000004</td><td>YUV���� </td></tr>
-	 * <tr><td>0x00000008</td><td>PCM���� </td></tr>
-	 * <tr><td>0x00000010</td><td>ԭʼ��Ƶ���� </td></tr>
-	 * <tr><td>0x0000001f</td><td>���������������� </td></tr>
+	 * <tr><td>dwFlag</td><td>J}>]@`PM </td></tr>
+	 * <tr><td>0x00000001</td><td>5HM,T-@45DT-J<J}>] </td></tr>
+	 * <tr><td>0x00000002</td><td>JGMPEG4/H2641jW<J}>] </td></tr>
+	 * <tr><td>0x00000004</td><td>YUVJ}>] </td></tr>
+	 * <tr><td>0x00000008</td><td>PCMJ}>] </td></tr>
+	 * <tr><td>0x00000010</td><td>T-J<RtF5J}>] </td></tr>
+	 * <tr><td>0x0000001f</td><td>RTIONeVVJ}>]@`PM </td></tr>
 	 * </table>
-	 * @return true:�ɹ�, false:ʧ��
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see SetRealDataCallBack RealPlay RealPlayEx StopRealPlay
 	 */
-	
 	public static native boolean       SetRealDataCallBackEx(long lRealHandle, CB_fRealDataCallBackEx cbRealData, int dwFlag);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * set device info recall function, to receive current device status info,not related with call sequence,SDK default not recall,this recall function must be subscribed by alarm info interface SDK_StartListen or CLENT_StartListenEx to be valid
 	 * @param user info recall function,may recall device status,such as alarm status may be received via recall; when set to 0 means recall prohibit 
 	 * @return 
 	 * \else
-	 * ������Ϣ�ص�����
-	 * @param user ��Ϣ�ص�����,���Իص��豸��״̬,�籨��״̬����ͨ���˻ص���ȡ; ������Ϊ0ʱ��ʾ��ֹ�ص� 
-	 * @return ��
+	 * IhVCO{O";X5w:/J}
+	 * @param user O{O";X5w:/J},?IRT;X5wIh185DW4L,,Hg1(>/W4L,?IRTM(9}4K;X5w;qH!; 51IhVCN*0J11mJ>={V9;X5w 
+	 * @return N^
 	 * \endif
 	 * @see StartListen StopListen 
 	 */
-	
 	public static native void          SetDVRMessCallBack(CB_fMessageCallBack user);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * function meaning:network playback, indeed, user login one device, each channel may play one video at the same time, may not play multiple records of the channel.
@@ -1323,15 +1330,15 @@ public class INetSDK
 	 * @param posUser progress recall function 
 	 * @return successful return to network playback ID,ailed return to 0.
 	 * \else
-	 * ���ļ���ʽ�ط�
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ
-	 * @param recordFile ¼���ļ���Ϣ,����ʱ�䲥��ʱֻ�������ʼʱ��ͽ���ʱ��,��������0 
-	 * @param posUser ���Ȼص�����
-	 * @return �ɹ���������ط�ID,ʧ�ܷ���0
+	 * 04ND<~7=J=;X7E
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5
+	 * @param recordFile B<OqND<~PEO",5104J1<d2%7EJ1V;PhLn3dFpJ<J1<d:M=aJxJ1<d,FdK{OnLn0 
+	 * @param posUser =x6H;X5w:/J}
+	 * @return 3I9&75;XMxBg;X7EID,J'0\75;X0
 	 * \endif
 	 */
-	
 	public static native long          PlayBackByRecordFile(long lLoginID, NET_RECORDFILE_INFO recordFile, CB_fDownLoadPosCallBack posUser);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * interface with file play extension and data recall, each channel may play one record at the same time, maynot play multiple records of the channel meantime.
@@ -1341,17 +1348,17 @@ public class INetSDK
 	 * @param dataUser data recall function 
 	 * @return successful return to network playback ID,failed return to 0. 
 	 * \else
-	 * ���ļ���ʽ�ط�-��չ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ
-	 * @param recordFile ¼���ļ���Ϣ 
-	 * @param posUser ���Ȼص�����
-	 * @param dataUser ���ݻص����� 
-	 * @return �ɹ���������ط�ID,ʧ�ܷ���0 
+	 * 04ND<~7=J=;X7E-@)U9
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5
+	 * @param recordFile B<OqND<~PEO" 
+	 * @param posUser =x6H;X5w:/J}
+	 * @param dataUser J}>];X5w:/J} 
+	 * @return 3I9&75;XMxBg;X7EID,J'0\75;X0 
 	 * \endif
 	 * @see Login PausePlayBack SeekPlayBac StopPlayBack GetPlayBackOsdTime StepPlayBack GetFramePlayBack SetFramePlayBack SlowPlayBack FastPlayBack 
 	 */
-	
 	public static native long          PlayBackByRecordFileEx(long lLoginID, NET_RECORDFILE_INFO recordFile, CB_fDownLoadPosCallBack posUser, CB_fDataCallBack dataUser);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * network playback by time,each channel may play one record at the same time, maynot play multiple records of the channel meantime.
@@ -1362,42 +1369,42 @@ public class INetSDK
 	 * @param posUser progess recall function, as SDK_PlayBackByRecordFile 
 	 * @return successful return to network playback ID,failed return to 0. 
 	 * \else
-	 * ��ʱ�䷽ʽ�ط� 
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ
-	 * @param nChannelID ͼ��ͨ����,��0��ʼ,����ָ�� 
-	 * @param startTime ��ʼʱ�� 
-	 * @param stopTime ����ʱ��
-	 * @param posUser ���Ȼص�����
-	 * @return �ɹ���������ط�ID,ʧ�ܷ���0 
+	 * 04J1<d7=J=;X7E 
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5
+	 * @param nChannelID M<OqM(5@:E,4S0?*J<,1XPkV86( 
+	 * @param startTime ?*J<J1<d 
+	 * @param stopTime =aJxJ1<d
+	 * @param posUser =x6H;X5w:/J}
+	 * @return 3I9&75;XMxBg;X7EID,J'0\75;X0 
 	 * \endif
 	 * @see Login PausePlayBack SeekPlayBack StopPlayBack GetPlayBackOsdTime StepPlayBack GetFramePlayBack SetFramePlayBack SlowPlayBack FastPlayBack 
 	 */
-	//
 	public static native long          PlayBackByTime(long lLoginID, int nChannelID, NET_TIME startTime, NET_TIME stopTime, CB_fDownLoadPosCallBack posUser);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * extension interface with data recall and playback by time.
 	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
 	 * @param nChannelID image channel number, must be assigned
 	 * @param startTime start time 
-	 * @param stopTime ��end time 
+	 * @param stopTime =aend time 
 	 * @param posUser progess recall function, as: SDK_PlayBackByRecordFile 
 	 * @param dataUser data recall function, as: SDK_PlayBackByRecordFileEx 
 	 * @return successful return to network playback ID,failed return to 0.
 	 * \else
-	 * ��ʱ�䷽ʽ�ط�-��չ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ
-	 * @param nChannelID ͼ��ͨ����,��0��ʼ,����ָ�� 
-	 * @param startTime ��ʼʱ�� 
-	 * @param stopTime ����ʱ��
-	 * @param posUser ���Ȼص�����
-	 * @param dataUser ���ݻص�����
-	 * @return �ɹ���������ط�ID,ʧ�ܷ���0 
+	 * 04J1<d7=J=;X7E-@)U9
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5
+	 * @param nChannelID M<OqM(5@:E,4S0?*J<,1XPkV86( 
+	 * @param startTime ?*J<J1<d 
+	 * @param stopTime =aJxJ1<d
+	 * @param posUser =x6H;X5w:/J}
+	 * @param dataUser J}>];X5w:/J}
+	 * @return 3I9&75;XMxBg;X7EID,J'0\75;X0 
 	 * \endif
 	 * @see Login PausePlayBack SeekPlayBack StopPlayBack GetPlayBackOsdTime StepPlayBack GetFramePlayBack SetFramePlayBack SlowPlayBack FastPlayBack 
 	 */
-	
 	public static native long          PlayBackByTimeEx(long lLoginID, int nChannelID, NET_TIME startTime, NET_TIME stopTime, CB_fDownLoadPosCallBack posUser, CB_fDataCallBack dataUser);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * download video file by file, download via searched file info
@@ -1407,17 +1414,17 @@ public class INetSDK
 	 * @param posUser download progress recall function.download progress recall function parameter explanation: refer SDK_PlayBackByRecordFile 
 	 * @return successful return to download ID,failed return to 0. 
 	 * \else
-	 * ���ļ���ʽ����
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ
-	 * @param recordFile ¼���ļ���Ϣָ��
-	 * @param sSavedFileName Ҫ�����¼���ļ���,ȫ·��
-	 * @param posUser ���ؽ��Ȼص�����
-	 * @return �ɹ���������ID,ʧ�ܷ���0
+	 * 04ND<~7=J=OBTX
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5
+	 * @param recordFile B<OqND<~PEO"V8Uk
+	 * @param sSavedFileName R*1#4f5DB<OqND<~C{,H+B7>6
+	 * @param posUser OBTX=x6H;X5w:/J}
+	 * @return 3I9&75;XOBTXID,J'0\75;X0
 	 * \endif
 	 * @see QueryRecordFile StopDownload GetDownloadPos 
 	 */
-	
 	public static native long          DownloadByRecordFile(long lLoginID, NET_RECORDFILE_INFO recordFile, String sSavedFileName, CB_fDownLoadPosCallBack posUser);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * download by time, directly input designated channel start time and ending time to play downloaded video
@@ -1430,20 +1437,24 @@ public class INetSDK
 	 * @param userData download progress recall functiondownload progress recall function parameter explanation refer to SDK_PlayBackByRecordFile 
 	 * @return successful return to download ID,failed return to 0. 
 	 * \else
-	 * ��ʱ������
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nChannelId ͼ��ͨ����,��0��ʼ 
-	 * @param nRecordFileType ¼���ļ�����, QueryRecordFile �ӿ��й��� nRecordFileType ��˵�� 
-	 * @param startTime ��ʼʱ�� 
-	 * @param stopTime ����ʱ��
-	 * @param sSavedFileName Ҫ�����¼���ļ���,ȫ·��
-	 * @param userData ���ؽ��Ȼص��������ؽ��Ȼص�����
-	 * @return �ɹ���������ID,ʧ�ܷ���0
+	 * 04J1<dOBTX
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nChannelId M<OqM(5@:E,4S0?*J< 
+	 * @param nRecordFileType B<OqND<~@`PM, QueryRecordFile =S?ZVP9XSZ nRecordFileType 5DK5Cw 
+	 * @param startTime ?*J<J1<d 
+	 * @param stopTime =aJxJ1<d
+	 * @param sSavedFileName R*1#4f5DB<OqND<~C{,H+B7>6
+	 * @param userData OBTX=x6H;X5w:/J}OBTX=x6H;X5w:/J}
+	 * @return 3I9&75;XOBTXID,J'0\75;X0
 	 * \endif
 	 * @see StopDownload GetDownloadPos 
 	 */
-	
 	public static native long          DownloadByTime(long lLoginID, int nChannelId, int nRecordFileType, NET_TIME startTime, NET_TIME stopTime, String sSavedFileName, CB_fTimeDownLoadPosCallBack userData);
+	
+	public static native long          DownloadByTimeEx2(long lLoginID, int nChannelId, int nRecordFileType, NET_TIME tmStart, NET_TIME tmEnd, String sSavedFileName, CB_fTimeDownLoadPosCallBack cbTimeDownLoadPos, CB_fDataCallBack fDownLoadDataCallBack, int scType, Object pReserved);
+	
+	public static native long          DownloadByTimeEx(long lLoginID, int nChannelId, int nRecordFileType, NET_TIME tmStart, NET_TIME tmEnd, String sSavedFileName, CB_fTimeDownLoadPosCallBack cbTimeDownLoadPos, CB_fDataCallBack fDownLoadDataCallBack, Object pReserved);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * log search,support by page search (this interface is rarely supported by device)
@@ -1454,71 +1465,71 @@ public class INetSDK
 	 * @param waittime overtime of waiting
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯ�豸��־,�Է�ҳ��ʽ��ѯ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param queryParam  ��ѯ��־�Ĳ���������־������,���ص���־��һ���� SDK_DEVICE_LOG_ITEM �� SDK_DEVICE_LOG_ITEM_EX �ṹ�� 
-	 * @param logBuffer pLogBuffer�������Ĵ�С
-	 * @param recLogNum ���ؽ��յ�����־����
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2iQ/Ih18HUV>,RT7VR37=J=2iQ/
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param queryParam  2iQ/HUV>5D2NJ}75;XHUV>;:3eGx,75;X5DHUV>JGR;8v8v SDK_DEVICE_LOG_ITEM ;r SDK_DEVICE_LOG_ITEM_EX =a99Le 
+	 * @param logBuffer pLogBuffer;:3eGx5D4sP!
+	 * @param recLogNum 75;X=SJU5=5DHUV>LuJ}
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
-	
 	public static native boolean       QueryDeviceLog(long lLoginID, QUERY_DEVICE_LOG_PARAM queryParam, Object logBuffer[], Integer recLogNum, int waittime);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * stop real time monitoring
 	 * @param lRealHandle return from {@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}
 	 * @return true:success, false:failed
 	 * \else
-	 * ֹͣʵʱ����
-	 * @param lRealHandle {@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}�ķ���ֵ  
-	 * @return true:�ɹ�, false:ʧ��
+	 * M#V9J5J1<`JS
+	 * @param lRealHandle {@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}5D75;XV5  
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see RealPlay
 	 */
-	//
 	public static native boolean       StopRealPlay(long lRealHandle);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * stop real time monitring or multi-image preview
 	 * @param lRealHandle return from {@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}
 	 * @return true:success, false:failed
 	 * \else
-	 * ֹͣʵʱ����--��չ
-	 * @param lRealHandle  {@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}�ķ���ֵ   
-	 * @return true:�ɹ�, false:ʧ��
+	 * M#V9J5J1<`JS--@)U9
+	 * @param lRealHandle  {@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}5D75;XV5   
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see RealPlay
 	 */
-	//
-	public static native boolean 	    StopRealPlayEx(long lRealHandle);  
+	public static native boolean 	    StopRealPlayEx(long lRealHandle);
+	
 	/**
 	 * \if ENGLISH_LANG
-	 * open audio, currently only support self-occupied method/ If before calling this function, audio has been turned on and hPlayHandle is different, then turn off original audio and open new audio��function is effective only when hWnd is effective.
+	 * open audio, currently only support self-occupied method/ If before calling this function, audio has been turned on and hPlayHandle is different, then turn off original audio and open new audio#;function is effective only when hWnd is effective.
 	 * @param lRealHandle return from {@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}
 	 * @return true:success, false:failed
 	 * \else
-	 * ������
-	 * @param lRealHandle  {@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}�ķ���ֵ   
-	 * @return true:�ɹ�, false:ʧ��
+	 * 4r?*IyRt
+	 * @param lRealHandle  {@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}5D75;XV5   
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see RealPlay
 	 */
-	
 	public static native boolean 		OpenSound(long lRealHandle);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * audio off
 	 * @return true:success, false:failed
 	 * \else
-	 * �ر�����
-	 * @return true:�ɹ�, false:ʧ��
+	 * 9X1UIyRt
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see RealPlay
 	 */
-	
 	public static native boolean		CloseSound();
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * set volume,Function is effective only when function's parameter hWnd which open hPlayHandle is effective
@@ -1526,42 +1537,42 @@ public class INetSDK
 	 * @param nVolume volume,range 0~100,0 min
 	 * @return true:success, false:failed
 	 * \else
-	 * ��������
-	 * @param lRealHandle  {@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}�ķ���ֵ   
-	 * @param nVolume ����ֵ,��Χ0~100,0������С
-	 * @return true:�ɹ�, false:ʧ��
+	 * IhVCRtA?
+	 * @param lRealHandle  {@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}5D75;XV5   
+	 * @param nVolume RtA?V5,76N'0~100,0RtA?WnP!
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see OpenSound CloseSound RealPlay RealPlayEx PlayBackByRecordFile PlayBackByRecordFileEx PlayBackByTime PlayBackByTimeEx 
 	 */
-	
 	public static native boolean       SetVolume(long lRealHandle , int nVolume);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * stop downloading record file
 	 * @param lFileHandle  DownloadByRecordFile return value
 	 * @return true:success, false:failed
 	 * \else
-	 * ֹͣ¼������
-	 * @param lFileHandle  DownloadByRecordFile�ķ���ֵ 
-	 * @return true:�ɹ�, false:ʧ��
+	 * M#V9B<OqOBTX
+	 * @param lFileHandle  DownloadByRecordFile5D75;XV5 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see DownloadByRecordFile GetDownloadPos DownloadByTime 
 	 */
-	
 	public static native boolean 		StopDownload(long lFileHandle);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * stop playback
 	 * @param lPlayHandle  playback handle, as PlayBackByRecordFile return value 
 	 * @return true:success, false:failed
 	 * \else
-	 * ֹͣ¼��ط�
-	 * @param lPlayHandle  �طž��,�� PlayBackByRecordFile �ķ���ֵ 
+	 * M#V9B<Oq;X7E
+	 * @param lPlayHandle  ;X7E>d1z,Hg PlayBackByRecordFile 5D75;XV5 
 	 * \endif
 	 * @see PlayBackByRecordFile PlayBackByRecordFileEx PlayBackByTime PlayBackByTimeEx
 	 */
-	
 	public static native boolean 		StopPlayBack(long lPlayHandle);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * save image, snapshot displaying image. Parameter received by the function is valid only when function parameter hWnd to open image is valid. Otherwise, invalid.
@@ -1569,15 +1580,15 @@ public class INetSDK
 	 * @param strPicFileName bitmap name, currently only support BMP
 	 * @return true:success, false:failed
 	 * \else
-	 * ����ץͼ
-	 * @param lPlayHandle  �г������нӿڵķ���ֵ 
+	 * =bBkW%M<
+	 * @param lPlayHandle  AP3v5DKySP=S?Z5D75;XV5 
 	 * @param strPicFileName
-	 * @return true:�ɹ�, false:ʧ��
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see RealPlay RealPlayEx PlayBackByRecordFile PlayBackByRecordFileEx PlayBackByTime PlayBackByTimeEx
 	 */
-	
 	public static native boolean		CapturePicture(long lPlayHandle , String strPicFileName);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * receive download video current position,may use for non-real-time display interface of downloading progress, similar to download recall function
@@ -1586,16 +1597,16 @@ public class INetSDK
 	 * @param nDownLoadSize  downloaded length,unit:KB 
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯ¼�����ؽ���
-	 * @param lFileHandle DownloadByRecordFile�ķ���ֵ 
-	 * @param nTotalSize  ���ص��ܳ���,��λ:KB 
-	 * @param nDownLoadSize  �����صĳ���,��λ:KB 
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2iQ/B<OqOBTX=x6H
+	 * @param lFileHandle DownloadByRecordFile5D75;XV5 
+	 * @param nTotalSize  OBTX5DW\3$6H,5%N;:KB 
+	 * @param nDownLoadSize  RQOBTX5D3$6H,5%N;:KB 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see DownloadByRecordFile StopDownload DownloadByTime 
 	 */
-	//
 	public static native boolean		GetDownloadPos(long lFileHandle , Integer nTotalSize , Integer nDownLoadSize);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * search record file
@@ -1626,38 +1637,38 @@ public class INetSDK
 	 * @param bTime  search by time or not(not availbe now)
 	 * @return true:success, false:failed
 	 * \else
-	 * ����¼���ļ�
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nChannelId ͨ��ID,��0��ʼ 
-	 * @param nRecordFileType  ¼���ļ�����
+	 * 2iURB<OqND<~
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nChannelId M(5@ID,4S0?*J< 
+	 * @param nRecordFileType  B<OqND<~@`PM
 	 * <table>
-	 * <tr><td>��ֵ</td><td>¼���ļ����� </td></tr>
-	 * <tr><td>0</td><td>����¼���ļ�  </td></tr>
-	 * <tr><td>1</td><td>�ⲿ���� </td></tr>
-	 * <tr><td>2</td><td>��̬��ⱨ�� </td></tr>
-	 * <tr><td>3</td><td>���б��� </td></tr>
-	 * <tr><td>4</td><td>���Ų�ѯ  </td></tr>
-	 * <tr><td>5</td><td>���������ѯ </td></tr>
-	 * <tr><td>6</td><td>¼��λ����ƫ�������� </td></tr>
-	 * <tr><td>8</td><td>�����Ų�ѯͼƬ(Ŀǰ��HB-U��NVS�����ͺŵ��豸֧��) </td></tr>
-	 * <tr><td>9</td><td>��ѯͼƬ(Ŀǰ��HB-U��NVS�����ͺŵ��豸֧��)  </td></tr>
-	 * <tr><td>10</td><td>���ֶβ�ѯ </td></tr>
-	 * <tr><td>15</td><td>�����������ݽṹ(��������) </td></tr>
-	 * <tr><td>16</td><td>��ѯ����͸��������¼���ļ� </td></tr>
+	 * <tr><td>J}V5</td><td>B<OsND<~@`PM </td></tr>
+	 * <tr><td>0</td><td>KySPB<OqND<~  </td></tr>
+	 * <tr><td>1</td><td>Mb2?1(>/ </td></tr>
+	 * <tr><td>2</td><td>6/L,<l2b1(>/ </td></tr>
+	 * <tr><td>3</td><td>KySP1(>/ </td></tr>
+	 * <tr><td>4</td><td>?(:E2iQ/  </td></tr>
+	 * <tr><td>5</td><td>Wi:OLu<~2iQ/ </td></tr>
+	 * <tr><td>6</td><td>B<OqN;VCSkF+RFA?3$6H </td></tr>
+	 * <tr><td>8</td><td>04?(:E2iQ/M<F,(D?G0=vHB-U:MNVSLXJbPM:E5DIh18V'3V) </td></tr>
+	 * <tr><td>9</td><td>2iQ/M<F,(D?G0=vHB-U:MNVSLXJbPM:E5DIh18V'3V)  </td></tr>
+	 * <tr><td>10</td><td>04WV6N2iQ/ </td></tr>
+	 * <tr><td>15</td><td>75;XMxBgJ}>]=a99(=pGEMx0I) </td></tr>
+	 * <tr><td>16</td><td>2iQ/KySPM8Cw4.J}>]B<OqND<~ </td></tr>
 	 * </table>
-	 * @param stTimeStart  ¼��ʼʱ�� 
-	 * @param stTimeEnd  ¼�����ʱ��
-	 * @param cardID ����
-	 * @param stFileInfo ���ص�¼���ļ���Ϣ
-	 * @param nFileCount  nriFileinfo�������󳤶�(��λ�ֽ�,������(100~200)*sizeof(NET_RECORDFILE_INFO)֮��)
-	 * @param nWaitTime  �ȴ�ʱ�� 
-	 * @param bTime  �Ƿ�ʱ���(Ŀǰ��Ч) 
-	 * @return true:�ɹ�, false:ʧ��
+	 * @param stTimeStart  B<Oq?*J<J1<d 
+	 * @param stTimeEnd  B<Oq=aJxJ1<d
+	 * @param cardID ?(:E
+	 * @param stFileInfo 75;X5DB<OqND<~PEO"
+	 * @param nFileCount  nriFileinfo;:3e5DWn4s3$6H(5%N;WV=Z,=(RiTZ(100~200)*sizeof(NET_RECORDFILE_INFO)V.<d)
+	 * @param nWaitTime  5H4}J1<d 
+	 * @param bTime  JG7q04J1<d2i(D?G0N^P') 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see Login PlayBackByRecordFile PlayBackByRecordFileEx PausePlayBack SeekPlayBack StopPlayBack GetPlayBackOsdTime StepPlayBack GetFramePlayBack SetFramePlayBack SlowPlayBack FastPlayBack 
 	 */
-	//
 	public static native boolean		QueryRecordFile(long lLoginID , int nChannelId , int nRecordFileType, NET_TIME stTimeStart , NET_TIME stTimeEnd , String cardID ,  NET_RECORDFILE_INFO stFileInfo[], Integer nFileCount , int nWaitTime , boolean bTime);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * start to save real time monitoring data,save data for frong end device's monitored image,forming record file,this data is original video data sent from device terminal
@@ -1665,77 +1676,75 @@ public class INetSDK
 	 * @param strFileName  real time monitor and save file name 
 	 * @return true:success, false:failed
 	 * \else
-	 * ��������Ϊ�ļ�
-	 * @param lRealHandle  {@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}�ķ���ֵ 
-	 * @param strFileName  ʵʱ���ӱ����ļ��� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * 1#4fJ}>]N*ND<~
+	 * @param lRealHandle  {@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}5D75;XV5 
+	 * @param strFileName  J5J1<`JS1#4fND<~C{ 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see StopSaveRealData RealPlay RealPlayEx
 	 */
-	
 	public static native boolean 		SaveRealData(long lRealHandle, String strFileName);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * stop saving real time monitoring data,close saved file
 	 * @param lRealHandle  {@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}return value
 	 * @return true:success, false:failed
 	 * \else
-	 * ������������Ϊ�ļ�
-	 * @param lRealHandle  {@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}�ķ���ֵ   
-	 * @return true:�ɹ�, false:ʧ��
+	 * =aJx1#4fJ}>]N*ND<~
+	 * @param lRealHandle  {@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}5D75;XV5   
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see SaveRealData RealPlay RealPlayEx
 	 */
-	//
 	public static native boolean 		StopSaveRealData(long lRealHandle);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * start to update device program
 	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
 	 * @param pchFileName uodate file name 
 	 * @param cbUpgrade progress recall fcuntion
-	 * @param dwUser  user data
 	 * @return successful return to update handle ID,failed return to 0
 	 * \else
-	 * ��ʼ�����豸����
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pchFileName �����ļ��� 
-	 * @param cbUpgrade ���Ȼص�����
-	 * @param dwUser  �û�����
-	 * @return �ɹ������������ID,ʧ�ܷ���0
+	 * ?*J<I}<6Ih183LPr
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pchFileName I}<6ND<~C{ 
+	 * @param cbUpgrade =x6H;X5w:/J}
+	 * @return 3I9&75;XI}<6>d1zID,J'0\75;X0
 	 * \endif
 	 * @see SendUpgrade StopUpgrade
 	 */
-	
 	public static native long 			StartUpgrade(long lLoginID, String pchFileName, CB_fUpgradeCallBack cbUpgrade);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * start to sent update file
 	 * @param lUpgradeID  update handle ID 
 	 * @return true:success, false:failed
 	 * \else
-	 * ��������
-	 * @param lUpgradeID  �������ID 
-	 * @return true:�ɹ�, false:ʧ��
+	 * 7"KMJ}>]
+	 * @param lUpgradeID  I}<6>d1zID 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see StartUpgrade StopUpgrade 
 	 */
-	
 	public static native boolean 		SendUpgrade(long lUpgradeID);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * stop epdating
 	 * @param lUpgradeID update handle ID
 	 * @return true:success, false:failed
 	 * \else
-	 * ���������豸����
-	 * @param lUpgradeID �������ID 
-	 * @return true:�ɹ�, false:ʧ��
+	 * =aJxI}<6Ih183LPr
+	 * @param lUpgradeID I}<6>d1zID 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see StartUpgrade SendUpgrade 
 	 */
-	
 	public static native boolean 		StopUpgrade(long lUpgradeID);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * receive config member name interface
@@ -1745,16 +1754,16 @@ public class INetSDK
 	 * @param waittime waiting time 
 	 * @return successful return to TRUE,failed return to FALSE,if insufficient input buffering area length return to FALSE.
 	 * \else
-	 * ��ȡ���ó�Ա���ƽӿ�
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pInParam ������� 
-	 * @param pOutParam ������� 
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return �ɹ�����TRUE,ʧ�ܷ���FALSE,���뻺�������Ȳ���Ҳ����FALSE
+	 * ;qH!EdVC3IT1C{3F=S?Z
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pInParam JdHk2NJ} 
+	 * @param pOutParam Jd3v2NJ} 
+	 * @param waittime 5H4}J1<d 
+	 * @return 3I9&75;XTRUE,J'0\75;XFALSE,JdHk;:3eGx3$6H2;9;R275;XFALSE
 	 * \endif
 	 */
-
 	public static native boolean 		GetMemberNames(long lLoginID, NET_IN_MEMBERNAME pInParam, NET_OUT_MEMBERNAME pOutParam, int waittime);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * set asynchronous recall function
@@ -1762,15 +1771,15 @@ public class INetSDK
 	 * @param cbMessData asynchronous recall function
 	 * @return true:success, false:failed
 	 * \else
-	 * �����첽�ص�����
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
+	 * IhVCRl2=;X5w:/J}
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
 	 * @param cbMessData asynchronous recall function
-	 * @return true:�ɹ�, false:ʧ��
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see NET_CALLBACK_DATA
 	 */
-	
 	public static native boolean 		SetOperateCallBack(long lLoginID, CB_fMessDataCallBack cbMessData);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * control decoder TV display splicing
@@ -1780,20 +1789,20 @@ public class INetSDK
 	 * @param nSplitType  splicing method
 	 * @param pEncoderChannel  encoder channel 
 	 * @param nBufLen  pEncoderChannel length
-	 * @return return value��0 means failed,others are handle.
+	 * @return return value#:0 means failed,others are handle.
 	 * \else
-	 * ���ƽ�����TV����ָ�,�ӿ�Ϊ�첽��ʽ nSplitType=-1ʱ,pEncoderChannelΪ SDK_CTRL_DECTV_SCREEN ����,nBufLen��Ч,����Ϊbyte����,nBufLen���鳤��
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nMonitorID TV��ID 
-	 * @param bEnable ʹ��
-	 * @param nSplitType  �иʽ
-	 * @param pEncoderChannel  ������ͨ��
-	 * @param nBufLen  pEncoderChannel�ĳ���
-	 * @return ����ֵ��0��ʾʧ��,����Ϊ���
+	 * ?XVF=bBkFwTV;-Cf7V8n,=S?ZN*Rl2=7=J= nSplitType=-1J1,pEncoderChannelN* SDK_CTRL_DECTV_SCREEN @`PM,nBufLenN^P',7qTrN*byteJ}Wi,nBufLenJ}Wi3$6H
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nMonitorID TV5DID 
+	 * @param bEnable J9D\
+	 * @param nSplitType  GP8n7=J=
+	 * @param pEncoderChannel  1`BkFwM(5@
+	 * @param nBufLen  pEncoderChannel5D3$6H
+	 * @return 75;XV5#:01mJ>J'0\,FdK|N*>d1z
 	 * \endif
 	 */
-	
 	public static native long 			CtrlDecTVScreen(long lLoginID, int nMonitorID, boolean bEnable, int nSplitType, Object pEncoderChannel, int nBufLen);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * control decoder TV display splicing switch
@@ -1802,15 +1811,15 @@ public class INetSDK
 	 * @param lpEncoderInfo  connected decoder info
 	 * @return 0 means failed,other values not equal to are successful,return one handle
 	 * \else
-	 * ������TV�����л�,�ӿ�Ϊ�첽��ʽ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nDecoderID ������ID  
-	 * @param lpEncoderInfo  ���ӵı�������Ϣ
-	 * @return 0��ʾʧ��,����������0��ֵΪ�ɹ�,����һ�����
+	 * =bBkFwTV;-CfGP;;,=S?ZN*Rl2=7=J=
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nDecoderID =bBkFwID  
+	 * @param lpEncoderInfo  A,=S5D1`BkFwPEO"
+	 * @return 01mJ>J'0\,FdK|2;5HSZ05DV5N*3I9&,75;XR;8v>d1z
 	 * \endif
 	 */
-	
 	public static native long 			SwitchDecTVEncoder(long lLoginID, int nDecoderID, DEV_ENCODER_INFO lpEncoderInfo);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * search decoder info
@@ -1819,15 +1828,15 @@ public class INetSDK
 	 * @param waittime search overtime
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯ��������Ϣ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param lpDecInfo ��������Ϣ
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2iQ/=bBkFwPEO"
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param lpDecInfo =bBkFwPEO"
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
-	
 	public static native boolean 		QueryDecoderInfo(long lLoginID, DEV_DECODER_INFO lpDecInfo, int waittime);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * search decoder current TV info
@@ -1837,16 +1846,16 @@ public class INetSDK
 	 * @param waittime search overtime 
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯ��������ǰTV��Ϣ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nMonitorID TV��ID 
-	 * @param lpMonitorInfo ���ӵı�������Ϣ
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2iQ/=bBkFw51G0TVPEO"
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nMonitorID TV5DID 
+	 * @param lpMonitorInfo A,=S5D1`BkFwPEO"
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
-	
 	public static native boolean 		QueryDecoderTVInfo(long lLoginID, int nMonitorID, DEV_DECODER_TV lpMonitorInfo, int waittime);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * search decode channel info
@@ -1856,16 +1865,16 @@ public class INetSDK
 	 * @param waittime overtime of waiting
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯ����ͨ����Ϣ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nDecoderID ������id 
-	 * @param lpEncoderInfo ��������Ϣ
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2iQ/=bBkM(5@PEO"
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nDecoderID 1`BkFwid 
+	 * @param lpEncoderInfo 1`BkFwPEO"
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
-	
 	public static native boolean 		QueryDecEncoderInfo(long lLoginID, int nDecoderID, DEV_ENCODER_INFO lpEncoderInfo, int waittime);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * set decoder TV output enable
@@ -1875,17 +1884,17 @@ public class INetSDK
 	 * @param waittime set ovetime
 	 * @return true:success, false:failed
 	 * \else
-	 * ���ý�����TV���ʹ��
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pDecTVOutEnable ʹ������
-	 * @param nBufLen pDecTVOutEnable�ĳ��� 
-	 * @param waittime ���ó�ʱʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * IhVC=bBkFwTVJd3vJ9D\
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pDecTVOutEnable J9D\J}Wi
+	 * @param nBufLen pDecTVOutEnable5D3$6H 
+	 * @param waittime IhVC3,J1J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see LoginEx Login
 	 */
-	
 	public static native boolean 		SetDecTVOutEnable(long lLoginID, byte pDecTVOutEnable[], int nBufLen, int waittime);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Add display grouping
@@ -1897,18 +1906,18 @@ public class INetSDK
 	 * @param waittime overtime 
 	 * @return back to display grouping,successful return to one of 0~32,failed return to -1.
 	 * \else
-	 * ���ӻ������
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nMonitorID TV��ID 
-	 * @param nSplitType �иʽ,1,4,9,16 ��һֵ
-	 * @param pEncoderChannnel ������ͨ��,���ӵ���ѯ�е�ͨ��
-	 * @param nBufLen pEncoderChannnel�ĳ���
-	 * @param waittime �ȴ�ʱ��
-	 * @return ������ϻ����,�ɹ���ʱ�򷵻�0~32֮���һ����Ϻ�,ʧ�ܷ���-1
+	 * Tv<S;-CfWi:O
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nMonitorID TV5DID 
+	 * @param nSplitType GP8n7=J=,1,4,9,16 VPR;V5
+	 * @param pEncoderChannnel 1`BkFwM(5@,Tv<S5=BVQ/VP5DM(5@
+	 * @param nBufLen pEncoderChannnel5D3$6H
+	 * @param waittime 5H4}J1<d
+	 * @return 75;XWi:O;-Cf:E,3I9&5DJ1:r75;X0~32V.<d5DR;8vWi:O:E,J'0\75;X-1
 	 * \endif
 	 */
-	
 	public static native int     		AddTourCombin(long lLoginID, int nMonitorID, int nSplitType, byte pEncoderChannnel[], int nBufLen, int waittime);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * delete display group
@@ -1918,16 +1927,16 @@ public class INetSDK
 	 * @param waittime overtime 
 	 * @return true:success, false:failed
 	 * \else
-	 * ɾ���������
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nMonitorID TV��ID
-	 * @param nCombinID ���id 
-	 * @param waittime �ȴ�ʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * I>3};-CfWi:O
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nMonitorID TV5DID
+	 * @param nCombinID Wi:Oid 
+	 * @param waittime 5H4}J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
-	
 	public static native boolean 		DelTourCombin(long lLoginID, int nMonitorID, int nCombinID, int waittime);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * change image group
@@ -1940,19 +1949,19 @@ public class INetSDK
 	 * @param waittime overtime
 	 * @return true:success, false:failed
 	 * \else
-	 * �޸Ļ������
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nMonitorID TV��ID 
-	 * @param nCombinID ���ID 
-	 * @param nSplitType �иʽ
-	 * @param pEncoderChannel ������ͨ��,��ѯ���������ͨ�� 
-	 * @param nBufLen  pEncoderChannnel�ĳ���
-	 * @param waittime �ȴ�ʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * P^8D;-CfWi:O
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nMonitorID TV5DID 
+	 * @param nCombinID Wi:OID 
+	 * @param nSplitType GP8n7=J=
+	 * @param pEncoderChannel 1`BkFwM(5@,BVQ/;-Cf5DKySPM(5@ 
+	 * @param nBufLen  pEncoderChannnel5D3$6H
+	 * @param waittime 5H4}J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif	
 	 */
-	
 	public static native boolean 		SetTourCombin(long lLoginID, int nMonitorID, int nCombinID, int nSplitType, byte pEncoderChannel[], int nBufLen, int waittime);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * search window group
@@ -1963,16 +1972,15 @@ public class INetSDK
 	 * @param waittime overtime
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯ�������,nCombinID��Χ0��32
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nMonitorID  TV��ID
-	 * @param nCombinID ���ID 
-	 * @param lpDecCombinInfo  ���������������Ϣ
-	 * @param waittime �ȴ�ʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2iQ/;-CfWi:O,nCombinID76N'0!+32
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nMonitorID  TV5DID
+	 * @param nCombinID Wi:OID 
+	 * @param lpDecCombinInfo  =bBkFw;-CfWi:OPEO"
+	 * @param waittime 5H4}J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
-	
 	public static native boolean 		QueryTourCombin(long lLoginID, int nMonitorID, int nCombinID, DEC_COMBIN_INFO lpDecCombinInfo, int waittime);
 
 	/**
@@ -1984,12 +1992,12 @@ public class INetSDK
 	 * @param waittime overtime
 	 * @return true:success, false:failed
 	 * \else
-	 * ������Ѳ����
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nMonitorID TV��ID
-	 * @param lpDecTourInfo  ��������Ѳ��Ϣ
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * IhVCBVQ22YWw
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nMonitorID TV5DID
+	 * @param lpDecTourInfo  =bBkFwBVQ2PEO"
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean 		SetDecoderTour(long lLoginID, int nMonitorID, DEC_TOUR_COMBIN lpDecTourInfo, int waittime);
@@ -2003,12 +2011,12 @@ public class INetSDK
 	 * @param waittime overtime
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯ��Ѳ����
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nMonitorID TV��ID
-	 * @param lpDecTourInfo  ��������Ѳ��Ϣ
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2iQ/BVQ22YWw
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nMonitorID TV5DID
+	 * @param lpDecTourInfo  =bBkFwBVQ2PEO"
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean 		QueryDecoderTour(long lLoginID, int nMonitorID, DEC_TOUR_COMBIN lpDecTourInfo, int waittime);
@@ -2022,12 +2030,12 @@ public class INetSDK
 	 * @param waittime overtime
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯ��ǰ����ͨ������Ϣ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nDecoderID ������id 
-	 * @param lpChannelStateInfo ����ͨ������Ϣ
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2iQ/51G0=bBkM(5@AwPEO"
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nDecoderID 1`BkFwid 
+	 * @param lpChannelStateInfo =bBkM(5@AwPEO"
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean 		QueryDecChannelFlux(long lLoginID, int nDecoderID, DEV_DECCHANNEL_STATE lpChannelStateInfo, int waittime);
@@ -2047,18 +2055,18 @@ public class INetSDK
 	 * @param waittime overtime
 	 * @return true:success, false:failed
 	 * \else
-	 * ������������Ѳ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nMonitorID  TV��ID
-	 * @param nActionParam �������طſ�������
+	 * =bBkFw?XVFBVQ2
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nMonitorID  TV5DID
+	 * @param nActionParam =bBkFw;X7E?XVF@`PM
 	 * <table>
-	 * <tr><td>Dec_Tour_Stop</td><td>ֹͣ </td></tr>
-	 * <tr><td>Dec_Tour_Start</td><td>��ʼ </td></tr>
-	 * <tr><td>Dec_Tour_Pause</td><td>��ͣ </td></tr>
-	 * <tr><td>Dec_Tour_Resume</td><td>�ָ�</td></tr>
+	 * <tr><td>Dec_Tour_Stop</td><td>M#V9 </td></tr>
+	 * <tr><td>Dec_Tour_Start</td><td>?*J< </td></tr>
+	 * <tr><td>Dec_Tour_Pause</td><td>T]M# </td></tr>
+	 * <tr><td>Dec_Tour_Resume</td><td>;V84</td></tr>
 	 * </table>
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean 		CtrlDecoderTour(long lLoginID, int nMonitorID, int nActionParam, int waittime );
@@ -2070,10 +2078,10 @@ public class INetSDK
 	 * @param cbPlaybackPos  playback progress recall function
 	 * @return true:success, false:failed
 	 * \else
-	 * ���ûطŽ��Ȼص�����
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param cbPlaybackPos  �طŽ��Ȼص�����
-	 * @return true:�ɹ�, false:ʧ��
+	 * IhVC;X7E=x6H;X5w:/J}
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param cbPlaybackPos  ;X7E=x6H;X5w:/J}
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean 		SetDecPlaybackPos(long lLoginID, CB_fDecPlayBackPosCallBack cbPlaybackPos );
@@ -2082,26 +2090,25 @@ public class INetSDK
 	 * \if ENGLISH_LANG
 	 * decoder TV playback
 	 * nPlaybackMode
-	 * 0 = front-end device��by file method   DEC_PLAYBACK_FILE_PARAM  
-	 * 1 = front-end device��by time method  DEC_PLAYBACK_TIME_PARAM
+	 * 0 = front-end device#-by file method   DEC_PLAYBACK_FILE_PARAM  
+	 * 1 = front-end device#-by time method  DEC_PLAYBACK_TIME_PARAM
 	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
 	 * @param nDecoderID TV ID
 	 * @param nPlaybackMode decoder playback type 
 	 * @param objPlayBack playback parameter.by file method is DEC_PLAYBACK_FILE_PARAM , playback by time is  DEC_PLAYBACK_TIME_PARAM
 	 * @return true:success, false:failed
 	 * \else
-	 * ������TV����ط�,�ӿ�Ϊ�첽��ʽ
+	 * =bBkFwTV;-Cf;X7E,=S?ZN*Rl2=7=J=
 	 * nPlaybackMode
-	 * 0 = ǰ���豸�����ļ���ʽ   DEC_PLAYBACK_FILE_PARAM  
-	 * 1 = ǰ���豸����ʱ�䷽ʽ  DEC_PLAYBACK_TIME_PARAM
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nDecoderID TV��ID
-	 * @param nPlaybackMode �������ط�����
-	 * @param objPlayBack �طŲ���,���ļ���ʽʱΪ DEC_PLAYBACK_FILE_PARAM ,��ʱ��ط�ʱΪ DEC_PLAYBACK_TIME_PARAM
-	 * @return true:�ɹ�, false:ʧ��
+	 * 0 = G06KIh18#-04ND<~7=J=   DEC_PLAYBACK_FILE_PARAM  
+	 * 1 = G06KIh18#-04J1<d7=J=  DEC_PLAYBACK_TIME_PARAM
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nDecoderID TV5DID
+	 * @param nPlaybackMode =bBkFw;X7E@`PM
+	 * @param objPlayBack ;X7E2NJ},04ND<~7=J=J1N* DEC_PLAYBACK_FILE_PARAM ,04J1<d;X7EJ1N* DEC_PLAYBACK_TIME_PARAM
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
-	
 	public static native long 			DecTVPlayback(long lLoginID, int nDecoderID, int nPlaybackMode, Object objPlayBack);
 
 	/**
@@ -2119,18 +2126,18 @@ public class INetSDK
 	 * @param waittime overtime  
 	 * @return true:success, false:failed
 	 * \else
-	 * ������TV����طſ���
+	 * =bBkFwTV;-Cf;X7E?XVF
 	 * nCtrlType\n
-	 * 0 = �϶�\n
-	 * 1 = ����\n
-	 * 2 = ��ͣ\n
-	 * 3 = ֹͣ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nDecoderID TV��ID
-	 * @param nCtrlType �������طſ�������,��� DEC_CTRL_PLAYBACK_TYPE
-	 * @param nValue ����ֵ
-	 * @param waittime �ȴ�ʱ��  
-	 * @return true:�ɹ�, false:ʧ��
+	 * 0 = MO6/\n
+	 * 1 = 2%7E\n
+	 * 2 = T]M#\n
+	 * 3 = M#V9
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nDecoderID TV5DID
+	 * @param nCtrlType =bBkFw;X7E?XVF@`PM,Oj<{ DEC_CTRL_PLAYBACK_TYPE
+	 * @param nValue ?XVFV5
+	 * @param waittime 5H4}J1<d  
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean 		CtrlDecPlayback(long lLoginID, int nDecoderID, int nCtrlType, int nValue, int waittime);
@@ -2141,12 +2148,11 @@ public class INetSDK
 	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
 	 * @return true:success, false:failed
 	 * \else
-	 * ֹͣ���豸ע��
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @return true:�ɹ�, false:ʧ��
+	 * M#V9OrIh18W"2a
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
-	
 	public static native boolean 		StopLogin(long lLoginID);
 	
 	/**
@@ -2156,14 +2162,13 @@ public class INetSDK
 	 * @param hWnd multi-window preview,may set as 0. for non-displaying
 	 * @return successful return to multi-window preview ID,failed return to 0.
 	 * \else
-	 * �໭��ʵʱԤ��
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param hWnd �໭��Ԥ������,��������Ϊ0,Ϊ����ʾ
-	 * @return �ɹ����ض໭��Ԥ��ID,ʧ�ܷ���0
+	 * 6`;-CfJ5J1T$@@
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param hWnd 6`;-CfT$@@40?Z,?IRTIhVCN*0,N*2;OTJ>
+	 * @return 3I9&75;X6`;-CfT$@@ID,J'0\75;X0
 	 * \endif
 	 * @see StopMultiPlay
 	 */
-	
 	public static native long 			MultiPlay(long lLoginID, Object hWnd);
 	
 	/**
@@ -2172,9 +2177,9 @@ public class INetSDK
 	 * @param lMultiHandle
 	 * @return true:success, false:failed
 	 * \else
-	 * ֹͣ�໭��ʵʱԤ��
+	 * M#V96`;-CfJ5J1T$@@
 	 * @param lMultiHandle
-	 * @return true:�ɹ�, false:ʧ��
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see MultiPlay 
 	 */
@@ -2202,25 +2207,25 @@ public class INetSDK
 	 * @param waittime search overtime
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯʱ������Ƿ���¼���ļ�
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nChannelId  ͨ����
-	 * @param nRecordFileType ¼���ļ�����
+	 * 2iQ/J1<d6NDZJG7qSPB<OqND<~
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nChannelId  M(5@:E
+	 * @param nRecordFileType B<OqND<~@`PM
 	 * <table>
-	 * <tr><td>��ֵ </td><td>¼���ļ�����</td></tr>  
-	 * <tr><td>0</td><td>����¼���ļ�</td></tr>  
-	 * <tr><td>1</td><td>�ⲿ���� </td></tr>
-	 * <tr><td>2</td><td>��̬��ⱨ�� </td></tr>
-	 * <tr><td>3</td><td>���б��� </td></tr>
-	 * <tr><td>4</td><td> ���Ų�ѯ  </td></tr>
-	 * <tr><td>5</td><td>���������ѯ </td></tr>
+	 * <tr><td>J}V5 </td><td>B<OsND<~@`PM</td></tr>  
+	 * <tr><td>0</td><td>KySPB<OqND<~</td></tr>  
+	 * <tr><td>1</td><td>Mb2?1(>/ </td></tr>
+	 * <tr><td>2</td><td>6/L,<l2b1(>/ </td></tr>
+	 * <tr><td>3</td><td>KySP1(>/ </td></tr>
+	 * <tr><td>4</td><td> ?(:E2iQ/  </td></tr>
+	 * <tr><td>5</td><td>Wi:OLu<~2iQ/ </td></tr>
 	 * </table>
-	 * @param tmStart ��ʼʱ��
-	 * @param tmEnd ����ʱ��
-	 * @param pchCardid ����(��ѯ����Ϊ���Ų�ѯʱ��Ч,���������NULL) 
-	 * @param bResult �������,true��ʾ��¼��,false��ʾû��¼�� 
-	 * @param waittime �ȴ�ʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * @param tmStart FpJ<J1<d
+	 * @param tmEnd =aJxJ1<d
+	 * @param pchCardid ?(:E(2iQ/@`PMN*?(:E2iQ/J1SPP',FdK{Gi?vLnNULL) 
+	 * @param bResult Jd3v2NJ},true1mJ>SPB<Oq,false1mJ>C;SPB<Oq 
+	 * @param waittime 5H4}J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see Login 
 	 */
@@ -2233,10 +2238,10 @@ public class INetSDK
 	 * @param bBackward back play or not,when bBackward = TRUE back play,when bBackward = FALSE forward play 
 	 * @return true:success, false:failed
 	 * \else
-	 * ���Ʋ��ŷ���--���Ż��ߵ���
-	 * @param lPlayHandle �طž��,�� PlayBackByRecordFile �ķ���ֵ 
-	 * @param bBackward �Ƿ񵹷�,�� bBackward = TRUE ʱ����,�� bBackward = FALSE ʱ���� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * ?XVF2%7E7=Or--U}7E;rU_597E
+	 * @param lPlayHandle ;X7E>d1z,Hg PlayBackByRecordFile 5D75;XV5 
+	 * @param bBackward JG7q597E,TZ bBackward = TRUE J1597E,TZ bBackward = FALSE J1U}7E 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see PlayBackByRecordFile PlayBackByRecordFileEx PlayBackByTime PlayBackByTimeEx  
 	 */
@@ -2253,14 +2258,14 @@ public class INetSDK
 	 * @param Reserved reserve perameter 
 	 * @return subscribe alarm event info and event solution image info from device,these info are sent to users via interface parameter's recall function cbAnalyzerData. 
 	 * \else
-	 * ʵʱ�ϴ����ܷ������ݣ�ͼƬ(��չ�ӿ�,bNeedPicFile��ʾ�Ƿ���ͼƬ�ļ�,Reserved����Ϊ  RESERVED_PARA ) 
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nChannelID ͨ����
-	 * @param dwAlarmType ��������,�μ� CB_fAnalyzerDataCallBack
-	 * @param bNeedPicFile �Ƿ���ͼƬ�ļ�,1-����ͼƬ�ļ�,�ڻص������л᷵������ͼƬ��Ϣ,0-������ͼƬ�ļ�,�ڻص������в��᷵������ͼƬ��Ϣ(�ڲ���ҪͼƬ��Ϣʱ,�ɼ�����������) 
-	 * @param cbAnalyzerData �������ݷ����ص�����
-	 * @param Reserved ��������
-	 * @return ʧ�ܷ���0,�ɹ�����ʵʱ���,����Ϊ��غ����Ĳ���
+	 * J5J1IO4+VGD\7VNvJ}>]#-M<F,(@)U9=S?Z,bNeedPicFile1mJ>JG7q6)TDM<F,ND<~,Reserved@`PMN*  RESERVED_PARA ) 
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nChannelID M(5@:E
+	 * @param dwAlarmType 1(>/@`PM,2N<{ CB_fAnalyzerDataCallBack
+	 * @param bNeedPicFile JG7q6)TDM<F,ND<~,1-6)TDM<F,ND<~,TZ;X5w:/J}VP;a75;XVGD\M<F,PEO",0-2;6)TDM<F,ND<~,TZ;X5w:/J}VP2;;a75;XVGD\M<F,PEO"(TZ2;PhR*M<F,PEO"J1,?I<uIYMxBgAwA?) 
+	 * @param cbAnalyzerData VGD\J}>]7VNv;X5w:/J}
+	 * @param Reserved 1#At2NJ}
+	 * @return J'0\75;X0,3I9&75;XJ5J1>d1z,=+WwN*O`9X:/J}5D2NJ}
 	 * \endif
 	 * @see StopLoadPic
 	 */
@@ -2277,14 +2282,14 @@ public class INetSDK
 	 * @param cbAnalyzerData  intelligent data analysis recall function,refer to RealLoadPicture 
 	 * @return return to download handle
 	 * \else
-	 * �����������ܷ������ݣ�ͼƬ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nChannelID  ͨ����
-	 * @param dwAlarmType  ��������,�����{@link com.company.NetSDK.FinalVar#EVENT_IVS_ALL EVENT_IVS_ALL}�Ⱥ궨��
-	 * @param lpStartTime  ��ʼʱ�� 
-	 * @param lpEndTime  ����ʱ��
-	 * @param cbAnalyzerData  �������ݷ����ص�����
-	 * @return �������ؾ��
+	 * OBTX@kO_VGD\7VNvJ}>]#-M<F,
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nChannelID  M(5@:E
+	 * @param dwAlarmType  1(>/@`PM,Oj<{:j{@link com.company.NetSDK.FinalVar#EVENT_IVS_ALL EVENT_IVS_ALL}5H:j6(Re
+	 * @param lpStartTime  ?*J<J1<d 
+	 * @param lpEndTime  =aJxJ1<d
+	 * @param cbAnalyzerData  VGD\J}>]7VNv;X5w:/J}
+	 * @return 75;XOBTX>d1z
 	 * \endif
 	 * @see StopLoadPic
 	 */
@@ -2292,13 +2297,13 @@ public class INetSDK
 
 	/**
 	 * \if ENGLISH_LANG
-	 * stop uploading intelligent analysis data��image
+	 * stop uploading intelligent analysis data#-image
 	 * @param lAnalyzerHandle  RealLoadPicture return value  
 	 * @return true:success, false:failed
 	 * \else
-	 * ֹͣ�ϴ����ܷ������ݣ�ͼƬ
-	 * @param lAnalyzerHandle  RealLoadPicture ����ֵ 
-	 * @return true:�ɹ�, false:ʧ��
+	 * M#V9IO4+VGD\7VNvJ}>]#-M<F,
+	 * @param lAnalyzerHandle  RealLoadPicture 75;XV5 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see RealLoadPicture
 	 */
@@ -2314,13 +2319,13 @@ public class INetSDK
 	 * @param nWaitTime Wait time
 	 * @return true:success, false:failed
 	 * \else
-	 * ������λ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param dwAlarmType ��չ��������
-	 * @param nChannel ͨ����
-	 * @param pReserved ����
-	 * @param nWaitTime ��ʱʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * 1(>/84N;
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param dwAlarmType @)U91(>/@`PM
+	 * @param nChannel M(5@:E
+	 * @param pReserved 1#At
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see StartListenEx
 	 */
@@ -2336,12 +2341,12 @@ public class INetSDK
 	 * @param pReserved reserve parameter 
 	 * @return true:success, false:failed
 	 * \else
-	 * ����ͨ��������¼��״̬
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pRSBuffer ¼��״̬������,�ܳ���Ϊͨ������,0:��¼��;1:�ֶ�¼��;2:�Զ�¼��
-	 * @param nRSBufferlen ¼��״̬����,ÿһ��ͨ��Ϊ1���ֽ�
-	 * @param pReserved �������� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * IhVCM(5@8(BkAwB<OqW4L,
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pRSBuffer B<OqW4L,;:3eGx,W\3$6HN*M(5@8vJ},0:2;B<Oq;1:JV6/B<Oq;2:WT6/B<Oq
+	 * @param nRSBufferlen B<OqW4L,8vJ},C?R;8vM(5@N*18vWV=Z
+	 * @param pReserved 1#At2NJ} 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see QueryExtraRecordState
 	 */
@@ -2359,15 +2364,15 @@ public class INetSDK
 	 * @param waittime Waiting time 
 	 * @return true:successful, false:failed
 	 * \else
-	 * ��ͷ�۽�����
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nChannelID ͨ����
-	 * @param dwFocusCommand 0Ϊ�۽�����   1Ϊ�����۽�����  2Ϊ�Զ��۽�����,���ڽ��������λ��nFocus��nZoom��Ч
-	 * @param dFocus ��Ծ۽��仯���� ��ֵΪ-1~1,0��ʾֹͣ
-	 * @param dZoom ��Ա䱶���� ��ֵΪ-1~1,0��ʾֹͣ
-	 * @param reserved ����
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * >5M7>[=9?XVF
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nChannelID M(5@:E
+	 * @param dwFocusCommand 0N*>[=95w=Z   1N*A,Px>[=95w=Z  2N*WT6/>[=95w=Z,5w=Z=95cVAWn<QN;VCnFocus:MnZoomN^P'
+	 * @param dFocus O`6T>[=91d;/KYBJ FdV5N*-1~1,01mJ>M#V9
+	 * @param dZoom O`6T1d16KYBJ FdV5N*-1~1,01mJ>M#V9
+	 * @param reserved 1#At
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean 		FocusControl(long lLoginID, int nChannelID, long dwFocusCommand, double dFocus, double dZoom, int reserved , int waittime);
@@ -2379,22 +2384,23 @@ public class INetSDK
 	 * @param lFindHandle FindFileEx return value 
 	 * @return true:success, false:failed
 	 * \else
-	 * ����¼���ļ�����
-	 * @param lFindHandle FindFileEx�ķ���ֵ 
-	 * @return true:�ɹ�, false:ʧ��
+	 * =aJxB<OqND<~2iUR
+	 * @param lFindHandle FindFileEx5D75;XV5 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see FindFileEx
 	 */
 	public static native boolean		FindCloseEx(long  lFindHandle);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * stop downloading data
 	 * @param lFileHandle  {@link com.company.NetSDK.INetSDK#DownloadMediaFile() DownloadMediaFile} return value
 	 * @return true:success, false:failed
 	 * \else
-	 * ֹͣ��������
-	 * @param lFileHandle  {@link com.company.NetSDK.INetSDK#DownloadMediaFile() DownloadMediaFile}�ķ���ֵ 
-	 * @return true:�ɹ�, false:ʧ��
+	 * M#V9OBTXJ}>]
+	 * @param lFileHandle  {@link com.company.NetSDK.INetSDK#DownloadMediaFile() DownloadMediaFile}5D75;XV5 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see DownloadMediaFile
 	 */
@@ -2407,35 +2413,29 @@ public class INetSDK
 	 * @param bPause  pause downloading or not, TRUE means pause, FALSE means resume
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ͣ���ܷ�����������
-	 * @param lLoadHadle  ������ , DownloadMediaFile
-	 * @param bPause  �Ƿ���ͣ����, TRUE��ʾ��ͣ����, FALSE��ʾ�ָ�����
-	 * @return true:�ɹ�, false:ʧ��
+	 * T]M#VGD\7VNvJ}>]OBTX
+	 * @param lLoadHadle  TXHk>d1z , DownloadMediaFile
+	 * @param bPause  JG7qT]M#OBTX, TRUE1mJ>T]M#OBTX, FALSE1mJ>;V84OBTX
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
-	
 	public static native boolean 		PauseLoadPic(long lLoadHadle, boolean bPause);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * special interface,used to send web info
 	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
 	 * @param szInBuffer  data sent to device 
-	 * @param dwInBufferSize size of data sent to device 
 	 * @param szOutBuffer size of data sent to device 
-	 * @param dwOutBufferSize returned data size 
-	 * @param pReserved reserve parameter 
 	 * @param waittime overtime of waiting 
 	 * @return true:success, false:failed
 	 * \else
-	 * web͸���ӿ�
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param szInBuffer  ���͸��豸������
-	 * @param dwInBufferSize ���͸��豸�����ݴ�С
-	 * @param szOutBuffer �豸���ظ�web������
-	 * @param dwOutBufferSize �������ݴ�С
-	 * @param pReserved ��������
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * webM84+=S?Z
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param szInBuffer  4+KM8xIh185DJ}>]
+	 * @param szOutBuffer Ih1875;X8xweb5DJ}>]
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean 		TransmitInfoForWeb(long lLoginID, byte szInBuffer[], byte szOutBuffer[], int waittime);
@@ -2468,31 +2468,31 @@ public class INetSDK
 	 * @param dwStop stop or not, effective to PTZ direction control, for other operations, this parameter should be filled with FALSE. 
 	 * @return true:success, false:failed
 	 * \else
-	 * ͨ����̨����
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nChannelID  ͨ����
-	 * @param dwPTZCommand ��̨�������� 
+	 * M(SCTFL(?XVF
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nChannelID  M(5@:E
+	 * @param dwPTZCommand TFL(?XVFC|An 
 	 * <table>
-	 * <tr><td>��������</td><td>���� </td></tr>
-	 * <tr><td>PTZ_UP_CONTROL</td><td>�� </td></tr>
-	 * <tr><td>PTZ_DOWN_CONTROL</td><td>�� </td></tr>
-	 * <tr><td>PTZ_LEFT_CONTROL	</td><td>�� </td></tr>
-	 * <tr><td>PTZ_RIGHT_CONTROL</td><td>�� </td></tr>
-	 * <tr><td>PTZ_ZOOM_ADD_CONTROL	</td><td>�䱶+</td></tr>
-	 * <tr><td>PTZ_ZOOM_DEC_CONTROL</td><td>�䱶-</td></tr>
-	 * <tr><td>PTZ_FOCUS_ADD_CONTROL</td><td>����+ </td></tr>
-	 * <tr><td>PTZ_FOCUS_DEC_CONTROL</td><td>����-</td></tr> 
-	 * <tr><td>PTZ_APERTURE_ADD_CONTROL</td><td>��Ȧ+</td></tr>
-	 * <tr><td>PTZ_APERTURE_DEC_CONTROL</td><td>��Ȧ-</td></tr>
-	 * <tr><td>PTZ_POINT_MOVE_CONTROL</td><td>ת��Ԥ�õ� </td></tr>
-	 * <tr><td>PTZ_POINT_SET_CONTROL</td><td>���� </td></tr>
-	 * <tr><td>PTZ_POINT_DEL_CONTROL</td><td>ɾ�� </td></tr>
-	 * <tr><td>PTZ_POINT_LOOP_CONTROL</td><td>�����ѭ </td></tr>
-	 * <tr><td>PTZ_LAMP_CONTROL</td><td>�ƹ���ˢ </td></tr>
+	 * <tr><td>2YWw@`PM</td><td>9&D\ </td></tr>
+	 * <tr><td>PTZ_UP_CONTROL</td><td>IO </td></tr>
+	 * <tr><td>PTZ_DOWN_CONTROL</td><td>OB </td></tr>
+	 * <tr><td>PTZ_LEFT_CONTROL	</td><td>Ws </td></tr>
+	 * <tr><td>PTZ_RIGHT_CONTROL</td><td>SR </td></tr>
+	 * <tr><td>PTZ_ZOOM_ADD_CONTROL	</td><td>1d16+</td></tr>
+	 * <tr><td>PTZ_ZOOM_DEC_CONTROL</td><td>1d16-</td></tr>
+	 * <tr><td>PTZ_FOCUS_ADD_CONTROL</td><td>5w=9+ </td></tr>
+	 * <tr><td>PTZ_FOCUS_DEC_CONTROL</td><td>5w=9-</td></tr> 
+	 * <tr><td>PTZ_APERTURE_ADD_CONTROL</td><td>9bH&+</td></tr>
+	 * <tr><td>PTZ_APERTURE_DEC_CONTROL</td><td>9bH&-</td></tr>
+	 * <tr><td>PTZ_POINT_MOVE_CONTROL</td><td>W*VAT$VC5c </td></tr>
+	 * <tr><td>PTZ_POINT_SET_CONTROL</td><td>IhVC </td></tr>
+	 * <tr><td>PTZ_POINT_DEL_CONTROL</td><td>I>3} </td></tr>
+	 * <tr><td>PTZ_POINT_LOOP_CONTROL</td><td>5c<dBVQ- </td></tr>
+	 * <tr><td>PTZ_LAMP_CONTROL</td><td>5F9bSjK" </td></tr>
 	 * </table>
-	 * @param dwStep ����/�ٶ�,��Χ1~8,8����Ч��������,����Ԥ�õ�ʱdwStepΪԤ�õ�ֵ
-	 * @param dwStop �Ƿ�ֹͣ,TRUE,��ʾֹͣ����̨�˷����������ͷ����������Ч,������������ʱ,������Ӧ���FALSE
-	 * @return true:�ɹ�, false:ʧ��
+	 * @param dwStep 2==x/KY6H,76N'1~8,8?XVFP'9{WnCwOT,2YWwT$VC5cJ1dwStepN*T$VC5cV5
+	 * @param dwStop JG7qM#V9,TRUE,1mJ>M#V96TTFL(0K7=Or2YWw<0>5M72YWwC|AnSPP',=xPPFdK{2YWwJ1,1>2NJ}S&Ln3dFALSE
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see Login
 	 */
@@ -2595,10 +2595,10 @@ public class INetSDK
 	 * <tr><td>SDK_PTZ_POINT_DEL_CONTROL</td><td>delete	</td><td> </td><td>	preset point value</td><td> </td></tr>
 	 * <tr><td>SDK_PTZ_POINT_LOOP_CONTROL</td><td>tour among points</td><td> </td><td> </td><td>76:start,99:auto,96:stop</td></tr>
 	 * <tr><td>SDK_PTZ_LAMP_CONTROL</td><td>light wiper</td><td>0x01on,x00off</td><td> </td><td> </td></tr>
-	 * <tr><td>SDK_EXTPTZ_LEFTTOP</td><td>leftup</td><td>vertical speed(1��8)	</td><td>horizontal speed(1��8)</td><td> </td></tr>
-	 * <tr><td>SDK_EXTPTZ_RIGHTTOP</td><td>	rightup</td><td>vertical speed(1��8)</td><td>horizontal speed(1��8)</td><td> </td></tr>
-	 * <tr><td>SDK_EXTPTZ_LEFTDOWN</td><td>leftdown</td><td>vertical speed(1��8)</td><td>horizontal speed(1��8)</td><td> </td></tr>
-	 * <tr><td>SDK_EXTPTZ_RIGHTDOWN</td><td>rightdown</td><td>vertical speed(1��8)</td><td>horizontal speed(1��8)</td><td> </td></tr>
+	 * <tr><td>SDK_EXTPTZ_LEFTTOP</td><td>leftup</td><td>vertical speed(1#-8)	</td><td>horizontal speed(1#-8)</td><td> </td></tr>
+	 * <tr><td>SDK_EXTPTZ_RIGHTTOP</td><td>	rightup</td><td>vertical speed(1#-8)</td><td>horizontal speed(1#-8)</td><td> </td></tr>
+	 * <tr><td>SDK_EXTPTZ_LEFTDOWN</td><td>leftdown</td><td>vertical speed(1#-8)</td><td>horizontal speed(1#-8)</td><td> </td></tr>
+	 * <tr><td>SDK_EXTPTZ_RIGHTDOWN</td><td>rightdown</td><td>vertical speed(1#-8)</td><td>horizontal speed(1#-8)</td><td> </td></tr>
 	 * <tr><td>SDK_EXTPTZ_ADDTOLOOP</td><td>add preset point into tour</td><td>tour path</td><td>preset point value</td><td> </td></tr>
 	 * <tr><td>SDK_EXTPTZ_DELFROMLOOP</td><td>delete preset point in tour</td><td>tour path</td><td>preset point value</td><td> </td></tr>
 	 * <tr><td>SDK_EXTPTZ_CLOSELOOP</td><td>delete tour</td><td>tour path</td><td> </td><td> </td></tr>
@@ -2654,147 +2654,147 @@ public class INetSDK
 	 * @param dwStop  stop or not, effective to PTZ eight-directions operation and lens operation. During other operation, this parameter should fill in FALSE 
 	 * @return successful return to TRUE,failed return to FALSE
 	 * \else
-	 * ����̨����
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nChannelID ͨ����
-	 * @param dwPTZCommand  �����������,���  SDK_EXTPTZ_ControlType SDK_PTZ_ControlType SDK_EXTPTZ_ControlType ���� PTZControl �ӿ�,param2�൱�ڲ���dwStep,ͬʱ��չ֧�����¹��� 
+	 * 4s;*TFL(?XVF
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nChannelID M(5@:E
+	 * @param dwPTZCommand  Gr;z?XVFC|An,Oj<{  SDK_EXTPTZ_ControlType SDK_PTZ_ControlType SDK_EXTPTZ_ControlType <fH] PTZControl =S?Z,param2O`51SZ2NJ}dwStep,M,J1@)U9V'3VRTOB9&D\ 
 	 * <table>
-	 * <tr><td>dwPTZCommand</td><td>����</td></tr> 
-	 * <tr><td>SDK_EXTPTZ_LEFTTOP</td><td>���� p1ˮƽ�ٶ�, p2��ֱ�ٶ� </td></tr>
-	 * <tr><td>SDK_EXTPTZ_RIGHTTOP</td><td>���� p1ˮƽ�ٶ�, p2��ֱ�ٶ� </td></tr>
-	 * <tr><td>SDK_EXTPTZ_LEFTDOWN</td><td>����p1ˮƽ�ٶ�, p2��ֱ�ٶ� </td></tr>
-	 * <tr><td>SDK_EXTPTZ_RIGHTDOWN</td><td>����p1ˮƽ�ٶ�, p2��ֱ�ٶ� </td></tr>
-	 * <tr><td>SDK_EXTPTZ_ADDTOLOOP</td><td>����Ԥ�õ㵽Ѳ�� p1Ѳ����· p2Ԥ�õ�ֵ </td></tr>
-	 * <tr><td>SDK_EXTPTZ_DELFROMLOOP</td><td>ɾ��Ѳ����Ԥ�õ� p1Ѳ����· p2Ԥ�õ�ֵ </td></tr>
-	 * <tr><td>SDK_EXTPTZ_CLOSELOOP</td><td>���Ѳ�� p1Ѳ����·</td></tr> 
-	 * <tr><td>SDK_EXTPTZ_STARTPANCRUISE</td><td>��ʼˮƽ��ת </td></tr>
-	 * <tr><td>SDK_EXTPTZ_STOPPANCRUISE</td><td>ֹͣˮƽ��ת </td></tr>
-	 * <tr><td>SDK_EXTPTZ_SETLEFTBORDER</td><td>������߽� </td></tr>
-	 * <tr><td>SDK_EXTPTZ_SETRIGHTBORDER</td><td>�����ұ߽� </td></tr>
-	 * <tr><td>SDK_EXTPTZ_STARTLINESCAN</td><td>��ʼ��ɨ </td></tr>
-	 * <tr><td>SDK_EXTPTZ_CLOSELINESCAN</td><td>ֹͣ��ɨ </td></tr>
-	 * <tr><td>SDK_EXTPTZ_SETMODESTART</td><td>����ģʽ��ʼ ģʽ��· </td></tr>
-	 * <tr><td>SDK_EXTPTZ_SETMODESTOP</td><td>����ģʽ���� ģʽ��· </td></tr>
-	 * <tr><td>SDK_EXTPTZ_RUNMODE</td><td>����ģʽ p1ģʽ��· </td></tr>
-	 * <tr><td>SDK_EXTPTZ_STOPMODE</td><td>ֹͣģʽ p1ģʽ��·  </td></tr>
-	 * <tr><td>SDK_EXTPTZ_DELETEMODE</td><td>���ģʽ p1ģʽ��· </td></tr>
-	 * <tr><td>SDK_EXTPTZ_REVERSECOMM</td><td>��ת���� </td></tr>
-	 * <tr><td>SDK_EXTPTZ_FASTGOTO</td><td>���ٶ�λ,p1ˮƽ����,p2��ֱ����,p3�䱶 </td></tr>
-	 * <tr><td>SDK_EXTPTZ_AUXIOPEN</td><td>�������ؿ�,p1������;������ 23, �����ⲹ��;������ 24, �����ֱ䱶��;������ 27, ��ҹ�ӹ���;������ 41, �����������;������ 43, ��Ԥ������ʾ</td></tr>
-	 * <tr><td>SDK_EXTPTZ_AUXICLOSE</td><td>�������ع� ,p1������;������ 23, �ر��ⲹ��;������ 24, �����ֱ䱶��;������ 27, ��ҹ�ӹ���;������ 41, ��������ȼ�;������ 43, ��Ԥ�ñ�����ʾ</td></tr>
-	 * <tr><td>SDK_EXTPTZ_OPENMENU</td><td>������˵� </td></tr>
-	 * <tr><td>SDK_EXTPTZ_CLOSEMENU</td><td>�رղ˵� </td></tr>
-	 * <tr><td>SDK_EXTPTZ_MENUOK</td><td>�˵�ȷ�� </td></tr>
-	 * <tr><td>SDK_EXTPTZ_MENUCANCEL</td><td>�˵�ȡ�� </td></tr>
-	 * <tr><td>SDK_EXTPTZ_MENUUP</td><td>�˵��� </td></tr>
-	 * <tr><td>SDK_EXTPTZ_MENUDOWN</td><td>�˵��� </td></tr>
-	 * <tr><td>SDK_EXTPTZ_MENULEFT</td><td>�˵��� </td></tr>
-	 * <tr><td>SDK_EXTPTZ_MENURIGHT</td><td>�˵��� </td></tr>
-	 * <tr><td>SDK_EXTPTZ_ALARMHANDLE</td><td>����������̨ </td></tr>
-	 * <tr><td>SDK_EXTPTZ_MATRIXSWITCH</td><td>�����л� </td></tr>
-	 * <tr><td>SDK_EXTPTZ_LIGHTCONTROL</td><td>�ƹ������ </td></tr>
-	 * <tr><td>SDK_EXTPTZ_EXACTGOTO</td><td>��ά��ȷ��λ </td></tr>
-	 * <tr><td>SDK_EXTPTZ_RESETZERO</td><td>��ά��λ������λ </td></tr>
-	 * <tr><td>SDK_EXTPTZ_UP_TELE</td><td>�� + TELE</td></tr>
-	 * <tr><td>SDK_EXTPTZ_DOWN_TELE</td><td>�� + TELE</td></tr>
-	 * <tr><td>SDK_EXTPTZ_LEFT_TELE</td><td>�� + TELE</td></tr>
-	 * <tr><td>SDK_EXTPTZ_RIGHT_TELE</td><td>�� + TELE</td></tr>
-	 * <tr><td>SDK_EXTPTZ_LEFTUP_TELE</td><td>���� + TELE</td></tr>
-	 * <tr><td>SDK_EXTPTZ_LEFTDOWN_TELE</td><td>���� + TELE</td></tr>
-	 * <tr><td>SDK_EXTPTZ_TIGHTUP_TELE</td><td>���� + TELE</td></tr>
-	 * <tr><td>SDK_EXTPTZ_RIGHTDOWN_TELE</td><td>���� + TELE</td></tr>
-	 * <tr><td>SDK_EXTPTZ_UP_WIDE</td><td>�� + WIDE</td></tr>
-	 * <tr><td>SDK_EXTPTZ_DOWN_WIDE</td><td>�� + WIDE</td></tr>
-	 * <tr><td>SDK_EXTPTZ_LEFT_WIDE</td><td>�� + WIDE</td></tr>
-	 * <tr><td>SDK_EXTPTZ_RIGHT_WIDE</td><td>�� + WIDE</td></tr>
-	 * <tr><td>SDK_EXTPTZ_LEFTUP_WIDE</td><td>���� + WIDE</td></tr>
-	 * <tr><td>SDK_EXTPTZ_LEFTDOWN_WIDE</td><td>���� + WIDE</td></tr>
-	 * <tr><td>SDK_EXTPTZ_TIGHTUP_WIDE</td><td>���� + WIDE</td></tr>
-	 * <tr><td>SDK_EXTPTZ_RIGHTDOWN_WIDE</td><td>���� + WIDE</td></tr>
-	 * <tr><td>SDK_EXTPTZ_TOTAL</td><td>�������ֵ </td></tr>
+	 * <tr><td>dwPTZCommand</td><td>9&D\</td></tr> 
+	 * <tr><td>SDK_EXTPTZ_LEFTTOP</td><td>WsIO p1K.F=KY6H, p249V1KY6H </td></tr>
+	 * <tr><td>SDK_EXTPTZ_RIGHTTOP</td><td>SRIO p1K.F=KY6H, p249V1KY6H </td></tr>
+	 * <tr><td>SDK_EXTPTZ_LEFTDOWN</td><td>WsOBp1K.F=KY6H, p249V1KY6H </td></tr>
+	 * <tr><td>SDK_EXTPTZ_RIGHTDOWN</td><td>SROBp1K.F=KY6H, p249V1KY6H </td></tr>
+	 * <tr><td>SDK_EXTPTZ_ADDTOLOOP</td><td><SHkT$VC5c5=Q2:= p1Q2:=O_B7 p2T$VC5cV5 </td></tr>
+	 * <tr><td>SDK_EXTPTZ_DELFROMLOOP</td><td>I>3}Q2:=VPT$VC5c p1Q2:=O_B7 p2T$VC5cV5 </td></tr>
+	 * <tr><td>SDK_EXTPTZ_CLOSELOOP</td><td>Ge3}Q2:= p1Q2:=O_B7</td></tr> 
+	 * <tr><td>SDK_EXTPTZ_STARTPANCRUISE</td><td>?*J<K.F=P}W* </td></tr>
+	 * <tr><td>SDK_EXTPTZ_STOPPANCRUISE</td><td>M#V9K.F=P}W* </td></tr>
+	 * <tr><td>SDK_EXTPTZ_SETLEFTBORDER</td><td>IhVCWs1_=g </td></tr>
+	 * <tr><td>SDK_EXTPTZ_SETRIGHTBORDER</td><td>IhVCSR1_=g </td></tr>
+	 * <tr><td>SDK_EXTPTZ_STARTLINESCAN</td><td>?*J<O_I( </td></tr>
+	 * <tr><td>SDK_EXTPTZ_CLOSELINESCAN</td><td>M#V9O_I( </td></tr>
+	 * <tr><td>SDK_EXTPTZ_SETMODESTART</td><td>IhVCD#J=?*J< D#J=O_B7 </td></tr>
+	 * <tr><td>SDK_EXTPTZ_SETMODESTOP</td><td>IhVCD#J==aJx D#J=O_B7 </td></tr>
+	 * <tr><td>SDK_EXTPTZ_RUNMODE</td><td>TKPPD#J= p1D#J=O_B7 </td></tr>
+	 * <tr><td>SDK_EXTPTZ_STOPMODE</td><td>M#V9D#J= p1D#J=O_B7  </td></tr>
+	 * <tr><td>SDK_EXTPTZ_DELETEMODE</td><td>Ge3}D#J= p1D#J=O_B7 </td></tr>
+	 * <tr><td>SDK_EXTPTZ_REVERSECOMM</td><td>7-W*C|An </td></tr>
+	 * <tr><td>SDK_EXTPTZ_FASTGOTO</td><td>?lKY6(N;,p1K.F=Wx1j,p249V1Wx1j,p31d16 </td></tr>
+	 * <tr><td>SDK_EXTPTZ_AUXIOPEN</td><td>8(Vz?*9X?*,p18(Vz5c;8(Vz5c 23, ?*139b293%;8(Vz5c 24, ?*J}WV1d16D\;8(Vz5c 27, ?*R9JS9&D\;8(Vz5c 41, IcOq;zAA6HTv;8(Vz5c 43, ?*T$VCLbOTJ></td></tr>
+	 * <tr><td>SDK_EXTPTZ_AUXICLOSE</td><td>8(Vz?*9X9X ,p18(Vz5c;8(Vz5c 23, 9X139b293%;8(Vz5c 24, 9XJ}WV1d16D\;8(Vz5c 27, 9XR9JS9&D\;8(Vz5c 41, IcOq;zAA6H<u;8(Vz5c 43, 9XT$VC1jLbOTJ></td></tr>
+	 * <tr><td>SDK_EXTPTZ_OPENMENU</td><td>4r?*Gr;z2K5% </td></tr>
+	 * <tr><td>SDK_EXTPTZ_CLOSEMENU</td><td>9X1U2K5% </td></tr>
+	 * <tr><td>SDK_EXTPTZ_MENUOK</td><td>2K5%H76( </td></tr>
+	 * <tr><td>SDK_EXTPTZ_MENUCANCEL</td><td>2K5%H!O{ </td></tr>
+	 * <tr><td>SDK_EXTPTZ_MENUUP</td><td>2K5%IO </td></tr>
+	 * <tr><td>SDK_EXTPTZ_MENUDOWN</td><td>2K5%OB </td></tr>
+	 * <tr><td>SDK_EXTPTZ_MENULEFT</td><td>2K5%Ws </td></tr>
+	 * <tr><td>SDK_EXTPTZ_MENURIGHT</td><td>2K5%SR </td></tr>
+	 * <tr><td>SDK_EXTPTZ_ALARMHANDLE</td><td>1(>/A*6/TFL( </td></tr>
+	 * <tr><td>SDK_EXTPTZ_MATRIXSWITCH</td><td>>XUsGP;; </td></tr>
+	 * <tr><td>SDK_EXTPTZ_LIGHTCONTROL</td><td>5F9b?XVFFw </td></tr>
+	 * <tr><td>SDK_EXTPTZ_EXACTGOTO</td><td>H}N,>+H76(N; </td></tr>
+	 * <tr><td>SDK_EXTPTZ_RESETZERO</td><td>H}N,6(N;VXIhAcN; </td></tr>
+	 * <tr><td>SDK_EXTPTZ_UP_TELE</td><td>IO + TELE</td></tr>
+	 * <tr><td>SDK_EXTPTZ_DOWN_TELE</td><td>OB + TELE</td></tr>
+	 * <tr><td>SDK_EXTPTZ_LEFT_TELE</td><td>Ws + TELE</td></tr>
+	 * <tr><td>SDK_EXTPTZ_RIGHT_TELE</td><td>SR + TELE</td></tr>
+	 * <tr><td>SDK_EXTPTZ_LEFTUP_TELE</td><td>WsIO + TELE</td></tr>
+	 * <tr><td>SDK_EXTPTZ_LEFTDOWN_TELE</td><td>WsOB + TELE</td></tr>
+	 * <tr><td>SDK_EXTPTZ_TIGHTUP_TELE</td><td>SRIO + TELE</td></tr>
+	 * <tr><td>SDK_EXTPTZ_RIGHTDOWN_TELE</td><td>SROB + TELE</td></tr>
+	 * <tr><td>SDK_EXTPTZ_UP_WIDE</td><td>IO + WIDE</td></tr>
+	 * <tr><td>SDK_EXTPTZ_DOWN_WIDE</td><td>OB + WIDE</td></tr>
+	 * <tr><td>SDK_EXTPTZ_LEFT_WIDE</td><td>Ws + WIDE</td></tr>
+	 * <tr><td>SDK_EXTPTZ_RIGHT_WIDE</td><td>SR + WIDE</td></tr>
+	 * <tr><td>SDK_EXTPTZ_LEFTUP_WIDE</td><td>WsIO + WIDE</td></tr>
+	 * <tr><td>SDK_EXTPTZ_LEFTDOWN_WIDE</td><td>WsOB + WIDE</td></tr>
+	 * <tr><td>SDK_EXTPTZ_TIGHTUP_WIDE</td><td>SRIO + WIDE</td></tr>
+	 * <tr><td>SDK_EXTPTZ_RIGHTDOWN_WIDE</td><td>SROB + WIDE</td></tr>
+	 * <tr><td>SDK_EXTPTZ_TOTAL</td><td>Wn4sC|AnV5 </td></tr>
 	 * </table>
 	 * <table>
-	 * ��̨����dwPTZCommand�Ͳ���(param1,param2,param3)֮��Ĺ�ϵ��
-	 * <tr><td>dwPTZCommand						��������				param1							param2								param3 </td></tr>
-	 * <tr><td>SDK_PTZ_UP_CONTROL</td><td>��</td><td> </td><td>��ֱ�ٶ�(1-8)</td><td> </td><td>  
-	 * <tr><td>SDK_PTZ_DOWN_CONTROL</td><td>�� </td><td> </td><td>��ֱ�ٶ�(1-8)</td><td> </td><td>
-	 * <tr><td>SDK_PTZ_LEFT_CONTROL</td><td>��</td><td> </td><td> ˮƽ�ٶ�(1-8) </td><td> </td><td> 
-	 * <tr><td>SDK_PTZ_RIGHT_CONTROL</td><td>��	</td><td> </td><td>ˮƽ�ٶ�(1-8)</td><td> </td><td>  
-	 * <tr><td>SDK_PTZ_ZOOM_ADD_CONTROL</td><td>�䱶+	</td><td> </td><td>���� </td><td> </td><td> 
-	 * <tr><td>SDK_PTZ_ZOOM_DEC_CONTROL</td><td>�䱶-	</td><td> </td><td>����  </td><td> </td><td>
-	 * <tr><td>SDK_PTZ_FOCUS_ADD_CONTROL</td><td>����+</td><td> </td><td>����</td><td> </td><td>  
-	 * <tr><td>SDK_PTZ_FOCUS_DEC_CONTROL</td><td>����-</td><td> </td><td>����</td><td> </td><td>  
-	 * <tr><td>SDK_PTZ_APERTURE_ADD_CONTROL</td><td>��Ȧ+</td><td> </td><td>���� </td><td> </td><td> 
-	 * <tr><td>SDK_PTZ_POINT_MOVE_CONTROL</td><td>ת��Ԥ�õ�</td><td> </td><td>Ԥ�õ�ֵ</td><td> </td><td> 
-	 * <tr><td>SDK_PTZ_POINT_SET_CONTROL</td><td>����	</td><td> </td><td>Ԥ�õ�ֵ</td><td> </td><td>  
-	 * <tr><td>SDK_PTZ_POINT_DEL_CONTROL</td><td>ɾ��	</td><td> </td><td>Ԥ�õ�ֵ</td><td> </td><td>  
-	 * <tr><td>SDK_PTZ_POINT_LOOP_CONTROL</td><td>�����ѭ</td><td> </td><td> </td><td>76:��ʼ,99:�Զ�,96:ֹͣ</td><td> 
-	 * <tr><td>SDK_PTZ_LAMP_CONTROL	</td><td>�ƹ���ˢ</td><td>0x01����,x00�ر�</td><td> </td><td> </td><td>
-	 * <tr><td>SDK_EXTPTZ_LEFTTOP</td><td>����</td><td>��ֱ�ٶ�(1��8)	</td><td>ˮƽ�ٶ�(1��8)</td><td> </td><td>
-	 * <tr><td>SDK_EXTPTZ_RIGHTTOP</td><td>����</td><td>��ֱ�ٶ�(1��8)</td><td>ˮƽ�ٶ�(1��8)</td><td> </td><td>
-	 * <tr><td>SDK_EXTPTZ_LEFTDOWN</td><td>���� </td><td>��ֱ�ٶ�(1��8)</td><td>ˮƽ�ٶ�(1��8)</td><td> </td><td>  
-	 * <tr><td>SDK_EXTPTZ_RIGHTDOWN</td><td>����</td><td>��ֱ�ٶ�(1��8)</td><td>ˮƽ�ٶ�(1��8)</td><td> </td><td>  
-	 * <tr><td>SDK_EXTPTZ_ADDTOLOOP</td><td>����Ԥ�õ㵽Ѳ��</td><td>Ѳ����· </td><td>Ԥ�õ�ֵ </td><td> </td><td> 
-	 * <tr><td>SDK_EXTPTZ_DELFROMLOOP</td><td>ɾ��Ѳ����Ԥ�õ�</td><td> Ѳ����·	</td><td>Ԥ�õ�ֵ</td><td> </td><td>  
-	 * <tr><td>SDK_EXTPTZ_CLOSELOOP	</td><td>���Ѳ��</td><td> Ѳ����·  </td><td> </td><td> </td><td> 
-	 * <tr><td>SDK_EXTPTZ_STARTPANCRUISE</td><td>��ʼˮƽ��ת </td><td> </td><td> </td><td> </td><td>
-	 * <tr><td>SDK_EXTPTZ_STOPPANCRUISE</td><td>ֹͣˮƽ��ת</td><td> </td><td> </td><td> </td><td>
-	 * <tr><td>SDK_EXTPTZ_SETLEFTBORDER</td><td>������߽�  </td><td> </td><td> </td><td> </td><td>  
-	 * <tr><td>SDK_EXTPTZ_RIGHTBORDER</td><td>�����ұ߽� </td><td> </td><td> </td><td> </td><td>   
-	 * <tr><td>SDK_EXTPTZ_STARTLINESCAN	</td><td>��ʼ��ɨ  </td><td> </td><td> </td><td> </td><td>  
-	 * <tr><td>SDK_EXTPTZ_CLOSELINESCAN	</td><td>ֹͣ��ɨ</td><td> </td><td> </td><td> </td><td>     
-	 * <tr><td>SDK_EXTPTZ_SETMODESTART</td><td>����ģʽ��ʼ</td><td>ģʽ��·   </td><td> </td><td> </td><td>
-	 * <tr><td>SDK_EXTPTZ_SETMODESTOP</td><td>����ģʽ����</td><td>ģʽ��·</td><td> </td><td> </td><td>   
-	 * <tr><td>SDK_EXTPTZ_RUNMODE</td><td>����ģʽ	</td><td>ģʽ��· </td><td> </td><td> </td><td>
-	 * <tr><td>SDK_EXTPTZ_STOPMODE</td><td>ֹͣģʽ</td><td>ģʽ��· </td><td> </td><td> </td><td>  
-	 * <tr><td>SDK_EXTPTZ_DELETEMODE</td><td>���ģʽ</td><td>ģʽ��·</td><td> </td><td> </td><td>   
-	 * <tr><td>SDK_EXTPTZ_REVERSECOMM</td><td>��ת���� </td><td> </td><td> </td><td> </td><td>   
-	 * <tr><td>SDK_EXTPTZ_FASTGOTO</td><td>���ٶ�λ</td><td>ˮƽ����</td><td>��ֱ���� </td><td>�䱶 
-	 * <tr><td>SDK_EXTPTZ_AUXIOPEN</td><td>�������ؿ�</td><td> ������</td><td> </td><td> </td><td>
-	 * <tr><td>SDK_EXTPTZ_AUXICLOSE</td><td>�������ع�</td><td>������</td><td> </td><td> </td><td>   
-	 * <tr><td>SDK_EXTPTZ_OPENMENU</td><td>������˵�</td><td> </td><td> </td><td> </td><td>    
-	 * <tr><td>SDK_EXTPTZ_CLOSEMENU</td><td>�رղ˵�</td><td> </td><td> </td><td> </td><td>    
-	 * <tr><td>SDK_EXTPTZ_MENUOK</td><td>�˵�ȷ��</td><td> </td><td> </td><td> </td><td>    
-	 * <tr><td>SDK_EXTPTZ_MENUCANCEL</td><td>�˵�ȡ��</td><td> </td><td> </td><td> </td><td>    
-	 * <tr><td>SDK_EXTPTZ_MENUUP</td><td>�˵���  </td><td> </td><td> </td><td> </td><td>  
-	 * <tr><td>SDK_EXTPTZ_MENUDOWN</td><td>�˵��� </td><td> </td><td> </td><td> </td><td>   
-	 * <tr><td>SDK_EXTPTZ_MENULEFT</td><td>�˵��� </td><td> </td><td> </td><td> </td><td>   
-	 * <tr><td>SDK_EXTPTZ_MENURIGHT</td><td>�˵���</td><td> </td><td> </td><td> </td><td>    
-	 * <tr><td>SDK_EXTPTZ_ALARMHANDLE</td><td>����������̨ </td><td>��������ͨ�� </td><td>������������1-Ԥ�õ�2-��ɨ3-Ѳ��</td><td>����ֵ,��Ԥ�õ�� 
-	 * <tr><td>SDK_EXTPTZ_MATRIXSWITCH</td><td>�����л�</td><td>��������(��Ƶ�����)</td><td>��Ƶ�����</td><td>����� 
-	 * <tr><td>SDK_EXTPTZ_LIGHTCONTROL</td><td>�ƹ������</td><td> </td><td> </td><td> </td><td>    
-	 * <tr><td>SDK_EXTPTZ_EXACTGOTO</td><td>��ά��ȷ��λ</td><td>ˮƽ�Ƕ�(0~3600)</td><td>��ֱ����(0~900)</td><td>�䱶(1~128) 
-	 * <tr><td>SDK_EXTPTZ_RESETZERO</td><td>��ά��λ������λ  </td><td> </td><td> </td><td> </td><td>  
-	 * <tr><td>SDK_EXTPTZ_UP_TELE</td><td>�� + TELE</td><td>�ٶ�(1-8)</td><td> </td><td> </td><td>   
-	 * <tr><td>SDK_EXTPTZ_DOWN_TELE</td><td>�� + TELE</td><td>�ٶ�(1-8)</td><td> </td><td> </td><td>   
-	 * <tr><td>SDK_EXTPTZ_LEFT_TELE</td><td>�� + TELE	</td><td>�ٶ�(1-8)</td><td> </td><td> </td><td>      
-	 * <tr><td>SDK_EXTPTZ_RIGHT_TELE</td><td>�� + TELE</td><td>�ٶ�(1-8)</td><td> </td><td> </td><td>      
-	 * <tr><td>SDK_EXTPTZ_LEFTUP_TELE</td><td>���� + TELE</td><td>�ٶ�(1-8) </td><td> </td><td> </td><td>     
-	 * <tr><td>SDK_EXTPTZ_LEFTDOWN_TELE</td><td>���� + TELE</td><td> �ٶ�(1-8)</td><td> </td><td> </td><td>      
-	 * <tr><td>SDK_EXTPTZ_TIGHTUP_TELE</td><td>���� + TELE	</td><td>�ٶ�(1-8)</td><td> </td><td> </td><td>      
-	 * <tr><td>SDK_EXTPTZ_RIGHTDOWN_TELE</td><td>���� + TELE</td><td>�ٶ�(1-8)</td><td> </td><td> </td><td>      
-	 * <tr><td>SDK_EXTPTZ_UP_WIDE</td><td>�� + WIDE</td><td> �ٶ�(1-8)</td><td> </td><td> </td><td>      
-	 * <tr><td>SDK_EXTPTZ_DOWN_WIDE</td><td>�� + WIDE</td><td> �ٶ�(1-8)</td><td> </td><td> </td><td>      
-	 * <tr><td>SDK_EXTPTZ_LEFT_WIDE</td><td>�� + WIDE</td><td>�ٶ�(1-8) </td><td> </td><td> </td><td>     
-	 * <tr><td>SDK_EXTPTZ_RIGHT_WIDE</td><td>�� + WIDE</td><td>�ٶ�(1-8) </td><td> </td><td> </td><td>     
-	 * <tr><td>SDK_EXTPTZ_LEFTUP_WIDE</td><td>���� + WIDE</td><td>�ٶ�(1-8) </td><td> </td><td> </td><td>     
-	 * <tr><td>SDK_EXTPTZ_LEFTDOWN_WIDE</td><td>���� + WIDE</td><td> �ٶ�(1-8)</td><td> </td><td> </td><td>      
-	 * <tr><td>SDK_EXTPTZ_TIGHTUP_WIDE</td><td>���� + WIDE</td><td>�ٶ�(1-8) </td><td> </td><td> </td><td>     
-	 * <tr><td>SDK_EXTPTZ_RIGHTDOWN_WIDE</td><td>���� + WIDE</td><td>�ٶ�(1-8)</td><td> </td><td> </td><td>      
-	 * <tr><td>SDK_EXTPTZ_TOTAL</td><td>�������ֵ </td><td> </td><td> </td><td> </td><td>   
+	 * TFL(C|AndwPTZCommand:M2NJ}(param1,param2,param3)V.<d5D9XO51m
+	 * <tr><td>dwPTZCommand						9&D\ChJv				param1							param2								param3 </td></tr>
+	 * <tr><td>SDK_PTZ_UP_CONTROL</td><td>IO</td><td> </td><td>49V1KY6H(1-8)</td><td> </td><td>  
+	 * <tr><td>SDK_PTZ_DOWN_CONTROL</td><td>OB </td><td> </td><td>49V1KY6H(1-8)</td><td> </td><td>
+	 * <tr><td>SDK_PTZ_LEFT_CONTROL</td><td>Ws</td><td> </td><td> K.F=KY6H(1-8) </td><td> </td><td> 
+	 * <tr><td>SDK_PTZ_RIGHT_CONTROL</td><td>SR	</td><td> </td><td>K.F=KY6H(1-8)</td><td> </td><td>  
+	 * <tr><td>SDK_PTZ_ZOOM_ADD_CONTROL</td><td>1d16+	</td><td> </td><td>16KY </td><td> </td><td> 
+	 * <tr><td>SDK_PTZ_ZOOM_DEC_CONTROL</td><td>1d16-	</td><td> </td><td>16KY  </td><td> </td><td>
+	 * <tr><td>SDK_PTZ_FOCUS_ADD_CONTROL</td><td>5w=9+</td><td> </td><td>16KY</td><td> </td><td>  
+	 * <tr><td>SDK_PTZ_FOCUS_DEC_CONTROL</td><td>5w=9-</td><td> </td><td>16KY</td><td> </td><td>  
+	 * <tr><td>SDK_PTZ_APERTURE_ADD_CONTROL</td><td>9bH&+</td><td> </td><td>16KY </td><td> </td><td> 
+	 * <tr><td>SDK_PTZ_POINT_MOVE_CONTROL</td><td>W*VAT$VC5c</td><td> </td><td>T$VC5cV5</td><td> </td><td> 
+	 * <tr><td>SDK_PTZ_POINT_SET_CONTROL</td><td>IhVC	</td><td> </td><td>T$VC5cV5</td><td> </td><td>  
+	 * <tr><td>SDK_PTZ_POINT_DEL_CONTROL</td><td>I>3}	</td><td> </td><td>T$VC5cV5</td><td> </td><td>  
+	 * <tr><td>SDK_PTZ_POINT_LOOP_CONTROL</td><td>5c<dBVQ-</td><td> </td><td> </td><td>76:?*J<,99:WT6/,96:M#V9</td><td> 
+	 * <tr><td>SDK_PTZ_LAMP_CONTROL	</td><td>5F9bSjK"</td><td>0x01?*Ft,x009X1U</td><td> </td><td> </td><td>
+	 * <tr><td>SDK_EXTPTZ_LEFTTOP</td><td>WsIO</td><td>49V1KY6H(1#-8)	</td><td>K.F=KY6H(1#-8)</td><td> </td><td>
+	 * <tr><td>SDK_EXTPTZ_RIGHTTOP</td><td>SRIO</td><td>49V1KY6H(1#-8)</td><td>K.F=KY6H(1#-8)</td><td> </td><td>
+	 * <tr><td>SDK_EXTPTZ_LEFTDOWN</td><td>WsOB </td><td>49V1KY6H(1#-8)</td><td>K.F=KY6H(1#-8)</td><td> </td><td>  
+	 * <tr><td>SDK_EXTPTZ_RIGHTDOWN</td><td>SROB</td><td>49V1KY6H(1#-8)</td><td>K.F=KY6H(1#-8)</td><td> </td><td>  
+	 * <tr><td>SDK_EXTPTZ_ADDTOLOOP</td><td><SHkT$VC5c5=Q2:=</td><td>Q2:=O_B7 </td><td>T$VC5cV5 </td><td> </td><td> 
+	 * <tr><td>SDK_EXTPTZ_DELFROMLOOP</td><td>I>3}Q2:=VPT$VC5c</td><td> Q2:=O_B7	</td><td>T$VC5cV5</td><td> </td><td>  
+	 * <tr><td>SDK_EXTPTZ_CLOSELOOP	</td><td>Ge3}Q2:=</td><td> Q2:=O_B7  </td><td> </td><td> </td><td> 
+	 * <tr><td>SDK_EXTPTZ_STARTPANCRUISE</td><td>?*J<K.F=P}W* </td><td> </td><td> </td><td> </td><td>
+	 * <tr><td>SDK_EXTPTZ_STOPPANCRUISE</td><td>M#V9K.F=P}W*</td><td> </td><td> </td><td> </td><td>
+	 * <tr><td>SDK_EXTPTZ_SETLEFTBORDER</td><td>IhVCWs1_=g  </td><td> </td><td> </td><td> </td><td>  
+	 * <tr><td>SDK_EXTPTZ_RIGHTBORDER</td><td>IhVCSR1_=g </td><td> </td><td> </td><td> </td><td>   
+	 * <tr><td>SDK_EXTPTZ_STARTLINESCAN	</td><td>?*J<O_I(  </td><td> </td><td> </td><td> </td><td>  
+	 * <tr><td>SDK_EXTPTZ_CLOSELINESCAN	</td><td>M#V9O_I(</td><td> </td><td> </td><td> </td><td>     
+	 * <tr><td>SDK_EXTPTZ_SETMODESTART</td><td>IhVCD#J=?*J<</td><td>D#J=O_B7   </td><td> </td><td> </td><td>
+	 * <tr><td>SDK_EXTPTZ_SETMODESTOP</td><td>IhVCD#J==aJx</td><td>D#J=O_B7</td><td> </td><td> </td><td>   
+	 * <tr><td>SDK_EXTPTZ_RUNMODE</td><td>TKPPD#J=	</td><td>D#J=O_B7 </td><td> </td><td> </td><td>
+	 * <tr><td>SDK_EXTPTZ_STOPMODE</td><td>M#V9D#J=</td><td>D#J=O_B7 </td><td> </td><td> </td><td>  
+	 * <tr><td>SDK_EXTPTZ_DELETEMODE</td><td>Ge3}D#J=</td><td>D#J=O_B7</td><td> </td><td> </td><td>   
+	 * <tr><td>SDK_EXTPTZ_REVERSECOMM</td><td>7-W*C|An </td><td> </td><td> </td><td> </td><td>   
+	 * <tr><td>SDK_EXTPTZ_FASTGOTO</td><td>?lKY6(N;</td><td>K.F=Wx1j</td><td>49V1Wx1j </td><td>1d16 
+	 * <tr><td>SDK_EXTPTZ_AUXIOPEN</td><td>8(Vz?*9X?*</td><td> 8(Vz5c</td><td> </td><td> </td><td>
+	 * <tr><td>SDK_EXTPTZ_AUXICLOSE</td><td>8(Vz?*9X9X</td><td>8(Vz5c</td><td> </td><td> </td><td>   
+	 * <tr><td>SDK_EXTPTZ_OPENMENU</td><td>4r?*Gr;z2K5%</td><td> </td><td> </td><td> </td><td>    
+	 * <tr><td>SDK_EXTPTZ_CLOSEMENU</td><td>9X1U2K5%</td><td> </td><td> </td><td> </td><td>    
+	 * <tr><td>SDK_EXTPTZ_MENUOK</td><td>2K5%H76(</td><td> </td><td> </td><td> </td><td>    
+	 * <tr><td>SDK_EXTPTZ_MENUCANCEL</td><td>2K5%H!O{</td><td> </td><td> </td><td> </td><td>    
+	 * <tr><td>SDK_EXTPTZ_MENUUP</td><td>2K5%IO  </td><td> </td><td> </td><td> </td><td>  
+	 * <tr><td>SDK_EXTPTZ_MENUDOWN</td><td>2K5%OB </td><td> </td><td> </td><td> </td><td>   
+	 * <tr><td>SDK_EXTPTZ_MENULEFT</td><td>2K5%Ws </td><td> </td><td> </td><td> </td><td>   
+	 * <tr><td>SDK_EXTPTZ_MENURIGHT</td><td>2K5%SR</td><td> </td><td> </td><td> </td><td>    
+	 * <tr><td>SDK_EXTPTZ_ALARMHANDLE</td><td>1(>/A*6/TFL( </td><td>1(>/JdHkM(5@ </td><td>1(>/A*6/@`PM1-T$VC5c2-O_I(3-Q2:=</td><td>A*6/V5,HgT$VC5c:E 
+	 * <tr><td>SDK_EXTPTZ_MATRIXSWITCH</td><td>>XUsGP;;</td><td><`JSFw:E(JSF5Jd3v:E)</td><td>JSF5JdHk:E</td><td>>XUs:E 
+	 * <tr><td>SDK_EXTPTZ_LIGHTCONTROL</td><td>5F9b?XVFFw</td><td> </td><td> </td><td> </td><td>    
+	 * <tr><td>SDK_EXTPTZ_EXACTGOTO</td><td>H}N,>+H76(N;</td><td>K.F==G6H(0~3600)</td><td>49V1Wx1j(0~900)</td><td>1d16(1~128) 
+	 * <tr><td>SDK_EXTPTZ_RESETZERO</td><td>H}N,6(N;VXIhAcN;  </td><td> </td><td> </td><td> </td><td>  
+	 * <tr><td>SDK_EXTPTZ_UP_TELE</td><td>IO + TELE</td><td>KY6H(1-8)</td><td> </td><td> </td><td>   
+	 * <tr><td>SDK_EXTPTZ_DOWN_TELE</td><td>OB + TELE</td><td>KY6H(1-8)</td><td> </td><td> </td><td>   
+	 * <tr><td>SDK_EXTPTZ_LEFT_TELE</td><td>Ws + TELE	</td><td>KY6H(1-8)</td><td> </td><td> </td><td>      
+	 * <tr><td>SDK_EXTPTZ_RIGHT_TELE</td><td>SR + TELE</td><td>KY6H(1-8)</td><td> </td><td> </td><td>      
+	 * <tr><td>SDK_EXTPTZ_LEFTUP_TELE</td><td>WsIO + TELE</td><td>KY6H(1-8) </td><td> </td><td> </td><td>     
+	 * <tr><td>SDK_EXTPTZ_LEFTDOWN_TELE</td><td>WsOB + TELE</td><td> KY6H(1-8)</td><td> </td><td> </td><td>      
+	 * <tr><td>SDK_EXTPTZ_TIGHTUP_TELE</td><td>SRIO + TELE	</td><td>KY6H(1-8)</td><td> </td><td> </td><td>      
+	 * <tr><td>SDK_EXTPTZ_RIGHTDOWN_TELE</td><td>SROB + TELE</td><td>KY6H(1-8)</td><td> </td><td> </td><td>      
+	 * <tr><td>SDK_EXTPTZ_UP_WIDE</td><td>IO + WIDE</td><td> KY6H(1-8)</td><td> </td><td> </td><td>      
+	 * <tr><td>SDK_EXTPTZ_DOWN_WIDE</td><td>OB + WIDE</td><td> KY6H(1-8)</td><td> </td><td> </td><td>      
+	 * <tr><td>SDK_EXTPTZ_LEFT_WIDE</td><td>Ws + WIDE</td><td>KY6H(1-8) </td><td> </td><td> </td><td>     
+	 * <tr><td>SDK_EXTPTZ_RIGHT_WIDE</td><td>SR + WIDE</td><td>KY6H(1-8) </td><td> </td><td> </td><td>     
+	 * <tr><td>SDK_EXTPTZ_LEFTUP_WIDE</td><td>WsIO + WIDE</td><td>KY6H(1-8) </td><td> </td><td> </td><td>     
+	 * <tr><td>SDK_EXTPTZ_LEFTDOWN_WIDE</td><td>WsOB + WIDE</td><td> KY6H(1-8)</td><td> </td><td> </td><td>      
+	 * <tr><td>SDK_EXTPTZ_TIGHTUP_WIDE</td><td>SRIO + WIDE</td><td>KY6H(1-8) </td><td> </td><td> </td><td>     
+	 * <tr><td>SDK_EXTPTZ_RIGHTDOWN_WIDE</td><td>SROB + WIDE</td><td>KY6H(1-8)</td><td> </td><td> </td><td>      
+	 * <tr><td>SDK_EXTPTZ_TOTAL</td><td>Wn4sC|AnV5 </td><td> </td><td> </td><td> </td><td>   
 	 * </table>
-	 * @param param1 ����1
-	 * @param param2 ����2
-	 * @param param3 ����3
-	 * @param dwStop  �Ƿ�ֹͣ,����̨�˷����������ͷ����������Ч,������������ʱ,������Ӧ���FALSE 
-	 * @return true:�ɹ�, false:ʧ��
+	 * @param param1 2NJ}1
+	 * @param param2 2NJ}2
+	 * @param param3 2NJ}3
+	 * @param dwStop  JG7qM#V9,6TTFL(0K7=Or2YWw<0>5M72YWwC|AnSPP',=xPPFdK{2YWwJ1,1>2NJ}S&Ln3dFALSE 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see PTZControl
 	 */
 	public static native boolean 		SDKPTZControl(long lLoginID, int nChannelID, int dwPTZCommand, byte param1, byte param2, byte param3, boolean dwStop);
 	
 	public static native boolean 		SDKPTZControlEx(long lLoginID, int nChannelID, int dwPTZCommand, int lParam1, int lParam2, int lParam3, boolean dwStop);
-
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * open video search handle
@@ -2823,35 +2823,34 @@ public class INetSDK
 	 * @param waittime search overtime duration 
 	 * @return successful return to search handle, failed return to 0.
 	 * \else
-	 * ��ʼ����¼���ļ�
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nChannelID ͨ����,��0��ʼ
-	 * @param nRecordFileType  ¼���ļ�����
+	 * ?*J<2iURB<OqND<~
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nChannelID M(5@:E,4S0?*J<
+	 * @param nRecordFileType  B<OqND<~@`PM
 	 * <table>
-	 * <tr><td>ֵ</td><td>����¼���ļ����� </td></tr>
-	 * <tr><td><tr><td>0</td><td>����¼���ļ� </td></tr>
-	 * <tr><td>1</td><td>�ⲿ����  </td></tr>
-	 * <tr><td>2</td><td>��̬��ⱨ�� </td></tr>
-	 * <tr><td>3</td><td>���б��� </td></tr>
-	 * <tr><td>4</td><td>���Ų�ѯ </td></tr>
-	 * <tr><td>5</td><td>���������ѯ </td></tr>
-	 * <tr><td>6</td><td>¼��λ����ƫ�������� </td></tr>
-	 * <tr><td>8</td><td>�����Ų�ѯͼƬ(Ŀǰ��HB-U��NVS�����ͺŵ��豸֧��) </td></tr>
-	 * <tr><td>9</td><td>��ѯͼƬ(Ŀǰ��HB-U��NVS�����ͺŵ��豸֧��)  </td></tr>
-	 * <tr><td>10</td><td>���ֶβ�ѯ </td></tr>
-	 * <tr><td>15</td><td>�����������ݽṹ(��������)</td></tr> 
-	 * <tr><td>16</td><td>��ѯ����͸��������¼���ļ� </td></tr>
+	 * <tr><td>V5</td><td>4z1mB<OsND<~@`PM </td></tr>
+	 * <tr><td><tr><td>0</td><td>KySPB<OqND<~ </td></tr>
+	 * <tr><td>1</td><td>Mb2?1(>/  </td></tr>
+	 * <tr><td>2</td><td>6/L,<l2b1(>/ </td></tr>
+	 * <tr><td>3</td><td>KySP1(>/ </td></tr>
+	 * <tr><td>4</td><td>?(:E2iQ/ </td></tr>
+	 * <tr><td>5</td><td>Wi:OLu<~2iQ/ </td></tr>
+	 * <tr><td>6</td><td>B<OqN;VCSkF+RFA?3$6H </td></tr>
+	 * <tr><td>8</td><td>04?(:E2iQ/M<F,(D?G0=vHB-U:MNVSLXJbPM:E5DIh18V'3V) </td></tr>
+	 * <tr><td>9</td><td>2iQ/M<F,(D?G0=vHB-U:MNVSLXJbPM:E5DIh18V'3V)  </td></tr>
+	 * <tr><td>10</td><td>04WV6N2iQ/ </td></tr>
+	 * <tr><td>15</td><td>75;XMxBgJ}>]=a99(=pGEMx0I)</td></tr> 
+	 * <tr><td>16</td><td>2iQ/KySPM8Cw4.J}>]B<OqND<~ </td></tr>
 	 * </table>
-	 * @param cardid ����,ֻ��Կ��Ų�ѯ��Ч,�����������NULL 
-	 * @param time_start ��ѯ¼��ʼʱ��
-	 * @param time_end ��ѯ¼�����ʱ��
-	 * @param bTime �Ƿ�ʱ���ѯ(Ŀǰ��Ч,��false)
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return �ɹ����ز�ѯ���,ʧ�ܷ���0
+	 * @param cardid ?(:E,V;Uk6T?(:E2iQ/SPP',FdK{5DGi?vLnNULL 
+	 * @param time_start 2iQ/B<Oq?*J<J1<d
+	 * @param time_end 2iQ/B<Oq=aJxJ1<d
+	 * @param bTime JG7q04J1<d2iQ/(D?G0N^P',Lnfalse)
+	 * @param waittime 5H4}J1<d 
+	 * @return 3I9&75;X2iQ/>d1z,J'0\75;X0
 	 * \endif
 	 * @see Login FindNextFile FindClose
 	 */
-
 	public static native long          FindFile(long lLoginID, int nChannelID, int nRecordFileType, String cardid, NET_TIME time_start, NET_TIME time_end, boolean bTime, int waittime);
 	
 	/**
@@ -2859,12 +2858,12 @@ public class INetSDK
 	 * search next video file record
 	 * @param lFindHandle {@link com.company.NetSDK.INetSDK#FindFile() FindFile}return value 
 	 * @param lpFindData video file record buffering, for exporting searched video file records 
-	 * @return 1��successfully teke back one video record,0:video record exporting completes,-1:wrong parameter. 
+	 * @return 1#:successfully teke back one video record,0:video record exporting completes,-1:wrong parameter. 
 	 * \else
-	 * ����¼���ļ�
-	 * @param lFindHandle {@link com.company.NetSDK.INetSDK#FindFile() FindFile}�ķ���ֵ 
-	 * @param lpFindData ¼���ļ���¼����,���������ѯ����¼���ļ���¼
-	 * @return 1���ɹ�ȡ��һ��¼���¼,0��¼���¼��ȡ��,-1����������
+	 * 2iURB<OqND<~
+	 * @param lFindHandle {@link com.company.NetSDK.INetSDK#FindFile() FindFile}5D75;XV5 
+	 * @param lpFindData B<OqND<~<GB<;:3e,SCSZJd3v2iQ/5=5DB<OqND<~<GB<
+	 * @return 1#:3I9&H!;XR;LuB<Oq<GB<,0#:B<Oq<GB<RQH!Mj,-1#:2NJ}3v4m
 	 * \endif
 	 * @see FindFile
 	 */
@@ -2876,28 +2875,27 @@ public class INetSDK
 	 * @param lFindHandle FindFile return value 
 	 * @return successful return to TRUE,failed return to FALSE. 
 	 * \else
-	 * ����¼���ļ�����
-	 * @param lFindHandle FindFile�ķ���ֵ 
-	 * @return true:�ɹ�, false:ʧ��
+	 * =aJxB<OqND<~2iUR
+	 * @param lFindHandle FindFile5D75;XV5 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see FindFile
 	 */
-	
 	public static native boolean       FindClose(long lFindHandle);
 	
 	/**
 	 * \if ENGLISH_LANG
 	 * change play location, as drag to play
 	 * @param lPlayHandle  playback handle,as PlayBackByRecordFilereturn value 
-	 * @param offsettime relative start shift time, unit second, its value is 0xffffffffʱ,invlia.
-	 * @param offsetbyte relative start shift size, unit k, its value is 0xffffffffʱ,invlia.when offsettime valid,parameter invalid. offsetbyte=progress ratio*progress recall total file size 
+	 * @param offsettime relative start shift time, unit second, its value is 0xffffffffJ1,invlia.
+	 * @param offsetbyte relative start shift size, unit k, its value is 0xffffffffJ1,invlia.when offsettime valid,parameter invalid. offsetbyte=progress ratio*progress recall total file size 
 	 * @return true:success, false:failed
 	 * \else
-	 * ��λ¼��ط���ʼ��
-	 * @param lPlayHandle  �طž��,��PlayBackByRecordFile�ķ���ֵ 
-	 * @param offsettime ��Կ�ʼ��ƫ��ʱ��,��λΪ��,����ֵΪ0xffffffffʱ,�ò�����Ч
-	 * @param offsetbyte ����ļ���ʼ��ƫ�ƴ�С,��λΪK,����ֵΪ0xffffffffʱ,�ò�����Ч����offsettime��Ч��ʱ��,�˲���������offsetbyte=����������*���Ȼص������ļ���С
-	 * @return true:�ɹ�, false:ʧ��
+	 * 6(N;B<Oq;X7EFpJ<5c
+	 * @param lPlayHandle  ;X7E>d1z,HgPlayBackByRecordFile5D75;XV5 
+	 * @param offsettime O`6T?*J<4&F+RFJ1<d,5%N;N*Ck,51FdV5N*0xffffffffJ1,8C2NJ}N^P'
+	 * @param offsetbyte O`6TND<~?*J<4&F+RF4sP!,5%N;N*K,51FdV5N*0xffffffffJ1,8C2NJ}N^P'#;51offsettimeSPP'5DJ1:r,4K2NJ}N^RbReoffsetbyte==x6HLu1H@}*=x6H;X5w5DW\ND<~4sP!
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see PlayBackByRecordFile PlayBackByRecordFileEx PlayBackByTime PlayBackByTimeEx StopPlayBack
 	 */
@@ -2910,14 +2908,13 @@ public class INetSDK
 	 * @param bPause network playback pause and resume playing parameter 1:pause,0:resume 
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ͣ��ָ�¼��ط�
-	 * @param lPlayHandle �طž��,��PlayBackByRecordFile�ķ���ֵ 
-	 * @param bPause ����ط���ͣ��ָ����Ų��� 1:��ͣ,0:�ָ� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * T]M#;r;V84B<Oq;X7E
+	 * @param lPlayHandle ;X7E>d1z,HgPlayBackByRecordFile5D75;XV5 
+	 * @param bPause MxBg;X7ET]M#Sk;V842%7E2NJ} 1:T]M#,0:;V84 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see PlayBackByRecordFile PlayBackByRecordFileEx PlayBackByTime PlayBackByTimeEx SeekPlayBack StopPlayBack
 	 */
-	
 	public static native boolean       PausePlayBack(long lPlayHandle, boolean bPause);
 	
 	/**
@@ -2926,9 +2923,9 @@ public class INetSDK
 	 * @param lPlayHandle playback handle,such as PlayBackByRecordFilereturn value 
 	 * @return true:success, false:failed
 	 * \else
-	 * ���¼��ط�
-	 * @param lPlayHandle �طž��,��PlayBackByRecordFile�ķ���ֵ 
-	 * @return true:�ɹ�, false:ʧ��
+	 * ?l=xB<Oq;X7E
+	 * @param lPlayHandle ;X7E>d1z,HgPlayBackByRecordFile5D75;XV5 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see SlowPlayBack PlayBackByRecordFile PlayBackByRecordFileEx PlayBackByTime PlayBackByTimeEx
 	 */
@@ -2940,9 +2937,9 @@ public class INetSDK
 	 * @param lPlayHandle playback handle,as PlayBackByRecordFile return value 
 	 * @return true:success, false:failed
 	 * \else
-	 * ����¼��ط� 
-	 * @param lPlayHandle �طž��,��PlayBackByRecordFile�ķ���ֵ 
-	 * @return true:�ɹ�, false:ʧ��
+	 * B}=xB<Oq;X7E 
+	 * @param lPlayHandle ;X7E>d1z,HgPlayBackByRecordFile5D75;XV5 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see SlowPlayBack PlayBackByRecordFile PlayBackByRecordFileEx PlayBackByTime PlayBackByTimeEx
 	 */
@@ -2954,9 +2951,9 @@ public class INetSDK
 	 * @param lPlayHandle playback handle 
 	 * @return true:success, false:failed
 	 * \else
-	 * �ָ������ط��ٶ� 
-	 * @param lPlayHandle �طž��,��PlayBackByRecordFile�ķ���ֵ 
-	 * @return true:�ɹ�, false:ʧ��
+	 * ;V84U}3#;X7EKY6H 
+	 * @param lPlayHandle ;X7E>d1z,HgPlayBackByRecordFile5D75;XV5 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see SlowPlayBack PlayBackByRecordFile PlayBackByRecordFileEx PlayBackByTime PlayBackByTimeEx
 	 */
@@ -2968,9 +2965,9 @@ public class INetSDK
 	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ʼ��������
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @return true:�ɹ�, false:ʧ��
+	 * ?*J<<`L}1(>/
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see SetDVRMessCallBack StopListen 
 	 */
@@ -2982,9 +2979,9 @@ public class INetSDK
 	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
 	 * @return true:success, false:failed
 	 * \else
-	 * ���豸���ı���
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @return true:�ɹ�, false:ʧ��
+	 * OrIh186)TD1(>/
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see SetDVRMessCallBack StopListen
 	 */
@@ -2996,9 +2993,9 @@ public class INetSDK
 	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
 	 * @return true:success, false:failed
 	 * \else
-	 * ֹͣ��ĳ���豸������Ϣ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @return true:�ɹ�, false:ʧ��
+	 * M#V96TD38vIh18UlL}O{O"
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see StartListen StartListenEx
 	 */
@@ -3013,12 +3010,12 @@ public class INetSDK
 	 * @param cbListen service recall, if there is device connect normally and initiate registration, inform users via the recall 
 	 * @return not 0 means successful,0 means failed,may call CLIENT_GetLastError to receive detailed reason for the mistake. 
 	 * \else
-	 * ��������
-	 * @param ip �����������ip,���ֻ��һ������,����0,��ʾ�Ա���ip��������
-	 * @param port  ����������Ķ˿ں�
-	 * @param timeOut  �˲�������Ч,Ϊ����ֵ
-	 * @param cbListen ����ص�,�����豸�������Ӳ�����ע��,��ͨ���ûص�֪ͨ�û�
-	 * @return ��0�ɹ�,0ʧ��,��ȡ�������ԭ��ɵ���GetLastError
+	 * ?*Ft<`L}
+	 * @param ip DbFt6/7~Nq5Dip,Hg9{V;SPR;8vMx?(,TrLn0,1mJ>6T1>;zip=xPPUlL}
+	 * @param port  DbFt6/7~Nq5D6K?Z:E
+	 * @param timeOut  4K2NJ}RQN^P',N*HNRbV5
+	 * @param cbListen 7~Nq;X5w,HgSPIh18U}3#A,=S2"7"FpW"2a,TrM(9}8C;X5wM(V*SC;'
+	 * @return 7G03I9&,0J'0\,;qH!>_Le4mNsT-Rr?I5wSCGetLastError
 	 * \endif
 	 * @see GetLastError
 	 */
@@ -3030,9 +3027,9 @@ public class INetSDK
 	 * @param lServerHandle  ListenServer return value
 	 * @return true:success, false:failed
 	 * \else
-	 * ֹͣ����
-	 * @param lServerHandle  ListenServer�ķ���ֵ 
-	 * @return true:�ɹ�, false:ʧ��
+	 * M#V9<`L}
+	 * @param lServerHandle  ListenServer5D75;XV5 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see ListenServer
 	 */
@@ -3047,16 +3044,15 @@ public class INetSDK
 	 * @param pfscb server info recall interface 
 	 * @return successful return to server handle,failed return to 0. 
 	 * \else
-	 * �����ϴ�����,��������
-	 * @param port  ���������Ķ˿�
-	 * @param ip �󶨵�IP,ΪNULLʱ�󶨱������кϷ�IP 
-	 * @param timeOut ������ά�����ӵĳ�ʱʱ��
-	 * @param pfscb ����������Ϣ�ص��ӿ� 
-	 * @return �ɹ����ط��������,ʧ�ܷ���0
+	 * 1(>/IO4+9&D\,Ft6/7~Nq
+	 * @param port  Ft6/<`L}5D6K?Z
+	 * @param ip 0s6(5DIP,N*NULLJ10s6(1>;zKySP:O7(IP 
+	 * @param timeOut 7~NqFwN,;$A,=S5D3,J1J1<d
+	 * @param pfscb 7~NqFw5DO{O";X5w=S?Z 
+	 * @return 3I9&75;X7~NqFw>d1z,J'0\75;X0
 	 * \endif
 	 * @see StopService 
 	 */
-	
 	public static native long          StartService(short port, String ip, int timeOut, CB_fServiceCallBack pfscb);
 	
 	/**
@@ -3065,9 +3061,9 @@ public class INetSDK
 	 * @param lHandle  turn off server handle, {@link com.company.NetSDK.INetSDK#StartService() StartService} return value
 	 * @return true:success, false:failed
 	 * \else
-	 * ֹͣ���� 
-	 * @param lHandle  Ҫ�رյķ������ľ��,{@link com.company.NetSDK.INetSDK#StartService() StartService}�ķ���ֵ 
-	 * @return true:�ɹ�, false:ʧ��
+	 * M#V97~Nq 
+	 * @param lHandle  R*9X1U5D7~NqFw5D>d1z,{@link com.company.NetSDK.INetSDK#StartService() StartService}5D75;XV5 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see StartService
 	 */
@@ -3075,7 +3071,7 @@ public class INetSDK
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * Set work pattern about talk mode��playback��power and so on
+	 * Set work pattern about talk mode!"playback!"power and so on
 	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
 	 * @param emType  enumeration value,as EM_USEDEV_MODE
 	 * @param pValue when type is SDK_TALK_ENCODE_TYPE,this value is structure SDKDEV_TALKDECODE_INFOdata \n
@@ -3084,14 +3080,14 @@ public class INetSDK
 	 * when type is SDK_TALK_MODE3,this value is structure NET_TALK_EXdata \n
 	 * @return true:success, false:failed
 	 * \else
-	 * ���������Խ�ģʽ,�ͻ��˷�ʽ���Ƿ�������ʽ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param emType  ö��ֵ,��� EM_USEDEV_MODE
-	 * @param pValue ������Ϊ SDK_TALK_ENCODE_TYPE ʱ,��ֵΪ�ṹ�� SDKDEV_TALKDECODE_INFO ���� \n
-	 * ������Ϊ SDK_TALK_SPEAK_PARAM ʱ,��ֵΪ�ṹ�� NET_SPEAK_PARAM ���� \n
-	 * ������Ϊ SDK_RECORD_TYPE ʱ,��ֵΪ�ṹ�� NET_RECORD_TYPE ����\n
-	 * ������ SDK_TALK_MODE3 ʱ,��ֵΪ�ṹ�� NET_TALK_EX ����\n
-	 * @return true:�ɹ�, false:ʧ��
+	 * IhVCSoRt6T=2D#J=,?M;'6K7=J=;9JG7~NqFw7=J=
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param emType  C6>YV5,Oj<{ EM_USEDEV_MODE
+	 * @param pValue 51@`PMN* SDK_TALK_ENCODE_TYPE J1,4KV5N*=a99Le SDKDEV_TALKDECODE_INFO J}>] \n
+	 * 51@`PMN* SDK_TALK_SPEAK_PARAM J1,4KV5N*=a99Le NET_SPEAK_PARAM J}>] \n
+	 * 51@`PMN* SDK_RECORD_TYPE J1,4KV5N*=a99Le NET_RECORD_TYPE J}>]\n
+	 * 51@`PM SDK_TALK_MODE3 J1,4KV5N*=a99Le NET_TALK_EX J}>]\n
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see QueryDevState
 	 */
@@ -3104,10 +3100,10 @@ public class INetSDK
 	 * @param pfcb user customized data recall interface
 	 * @return successful return to device bidiractional talk handle,failed return to 0
 	 * \else
-	 * �������Խ�
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pfcb �û��Զ�������ݻص��ӿ�
-	 * @return �ɹ����غ��豸�Խ��ľ��,ʧ�ܷ���0
+	 * 4r?*SoRt6T=2
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pfcb SC;'WT6(Re5DJ}>];X5w=S?Z
+	 * @return 3I9&75;X:MIh186T=25D>d1z,J'0\75;X0
 	 * \endif
 	 */
 	public static native long          StartTalkEx(long lLoginID, CB_pfAudioDataCallBack pfcb);
@@ -3119,10 +3115,10 @@ public class INetSDK
 	 * @param pSendBuf audio data to be sent 
 	 * @return successful return to data length sent actually to device, failed return to -1
 	 * \else
-	 * �����������ݵ��豸
-	 * @param lTalkHandle {@link com.company.NetSDK.INetSDK#StartTalkEx() StartTalkEx}�ķ���ֵ 
-	 * @param pSendBuf Ҫ���͵���Ƶ����
-	 * @return �ɹ�ʱ����ʵ�ʴ�����豸�����ݳ���,ʧ�ܷ���-1
+	 * 7"KMSoRtJ}>]5=Ih18
+	 * @param lTalkHandle {@link com.company.NetSDK.INetSDK#StartTalkEx() StartTalkEx}5D75;XV5 
+	 * @param pSendBuf R*7"KM5DRtF5J}>]
+	 * @return 3I9&J175;XJ5<J4+Jd8xIh185DJ}>]3$6H,J'0\75;X-1
 	 * \endif
 	 */
 	public static native int           TalkSendData(long lTalkHandle, byte pSendBuf[]);
@@ -3133,33 +3129,13 @@ public class INetSDK
 	 * @param lTalkHandle  bidirectional talk handle {@link com.company.NetSDK.INetSDK#StartTalkEx() StartTalkEx} return value
 	 * @return true:success, false:failed
 	 * \else
-	 * ֹͣ�����Խ�
-	 * @param lTalkHandle  �����Խ����,{@link com.company.NetSDK.INetSDK#StartTalkEx() StartTalkEx}�ķ���ֵ 
-	 * @return true:�ɹ�, false:ʧ��
+	 * M#V9SoRt6T=2
+	 * @param lTalkHandle  SoRt6T=2>d1z,{@link com.company.NetSDK.INetSDK#StartTalkEx() StartTalkEx}5D75;XV5 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see StartTalkEx
 	 */
 	public static native boolean       StopTalkEx(long lTalkHandle);
-	
-	/**
-	 * \if ENGLISH_LANG
-	 * search log,synchronization method,search our log record once
-	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
-	 * @param pLogBuffer log buffering area,structure SDK_LOG_QUERY_TYPE 
-	 * @param nLogBufferlen returned log length(unit byte) 
-	 * @param waittime waiting time 
-	 * @return true:success, false:failed
-	 * \else
-	 * ��ѯ�豸��־
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pLogBuffer ��־������,�ṹ��( SDK_LOG_ITEM ) 
-	 * @param nLogBufferlen ���ص���־����(��λ�ֽ�)
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ�� 
-	 * \endif
-	 */
-	
-	public static native boolean       QueryLog(long lLoginID, SDK_LOG_ITEM pLogBuffer[], Integer nLogBufferlen, int waittime);
 	
 	/**
 	 * \if ENGLISH_LANG
@@ -3172,14 +3148,14 @@ public class INetSDK
 	 * @param waittime waiting time 
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯ�豸��־, ��չ�ӿ�,��ѡ����־����
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param logType ��־����,��ö�� SDK_LOG_QUERY_TYPE
-	 * @param pLogBuffer  ��־������,��� reserved Ϊ��,�ṹ�� SDK_LOG_ITEM ,reserved ��Ϊ��,���� SDK_NEWLOG_ITEM 
-	 * @param nLogBufferlen ���ص���־����(��λ�ֽ�) 
-	 * @param reserved ��DWORD dwType = 1, reserved = &dwTypeʱ,��XML��ʽ��ѯ��־��Ϣ(Ŀǰ��LB-U�е��豸�ͺ�֧��) 
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2iQ/Ih18HUV>, @)U9=S?Z,?IQ!TqHUV>@`PM
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param logType HUV>@`PM,<{C6>Y SDK_LOG_QUERY_TYPE
+	 * @param pLogBuffer  HUV>;:3eGx,Hg9{ reserved N*?U,=a99Le SDK_LOG_ITEM ,reserved 2;N*?U,75;X SDK_NEWLOG_ITEM 
+	 * @param nLogBufferlen 75;X5DHUV>3$6H(5%N;WV=Z) 
+	 * @param reserved 51DWORD dwType = 1, reserved = &dwTypeJ1,RTXML8qJ=2iQ/HUV>PEO"(D?G0=vLB-UVP5DIh18PM:EV'3V) 
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see QueryLogCallback
 	 */
@@ -3194,12 +3170,12 @@ public class INetSDK
 	 * @param waittime waiting time
 	 * @return true:success, false:failed
 	 * \else
-	 * ���ͨ��¼��״̬
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pRSBuffer ¼��״̬������,�ܳ��Ȳ���С��ͨ����, 0����¼��1���ֶ�¼��2���Զ�¼��
-	 * @param nRSBufferlen ����¼��״̬��Ϣ����,ÿһ��ͨ��Ϊ1���ֽ�
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2i5@M(5@B<OqW4L,
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pRSBuffer B<OqW4L,;:3eGx,W\3$6H2;D\P!SZM(5@J}, 0#:2;B<Oq#;1#:JV6/B<Oq#;2#:WT6/B<Oq
+	 * @param nRSBufferlen 75;XB<OqW4L,PEO"3$6H,C?R;8vM(5@N*18vWV=Z
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see SetupRecordState
 	 */
@@ -3212,10 +3188,10 @@ public class INetSDK
 	 * @param lPlayHandle paly ID,may be real time playing IDID,preview ID or network playback ID,when it is 0, recieve total flow of device 
 	 * @return successful return to flow value,failed return to -1. 
 	 * \else
-	 * ��ȡͨ������
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param lPlayHandle  ����ID,������ʵʱ����ID,Ԥ��ID����������ط�ID,��Ϊ0ʱ�õ��豸�������� 
-	 * @return �ɹ���������ֵ,ʧ�ܷ���-1
+	 * ;qH!M(5@BkAw
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param lPlayHandle  2%7EID,?IRTJGJ5J12%7EID,T$@@ID;rU_JGMxBg;X7EID,51N*0J15C5=Ih185DW\AwA? 
+	 * @return 3I9&75;XAwA?V5,J'0\75;X-1
 	 * \endif
 	 * @see Login
 	 */
@@ -3226,8 +3202,8 @@ public class INetSDK
 	 * reboot front end device
 	 * @return true:success, false:failed
 	 * \else
-	 * �����豸
-	 * @return true:�ɹ�, false:ʧ��
+	 * VXFtIh18
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       RebootDev(long lLoginID);
@@ -3238,9 +3214,9 @@ public class INetSDK
 	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
 	 * @return true:success, false:failed
 	 * \else
-	 * �ر��豸
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @return true:�ɹ�, false:ʧ��
+	 * 9X1UIh18
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see Login
 	 */
@@ -3318,79 +3294,80 @@ public class INetSDK
 	 * @param waittime overtime of waiting device back 
 	 * @return true:success, false:failed
 	 * \else
-	 * �豸����
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param type ��������\n
-	 * ���Ʋ���,����type��ͬ����ͬ:
+	 * Ih18?XVF
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param type ?XVF@`PM\n
+	 * ?XVF2NJ},8y>]type2;M,6x2;M,:
 	 * <table>
-	 * <tr><td>type</td><td>����  </td><td>�ṹ��         </td></tr>
-	 * <tr><td>SDK_CTRL_REBOOT</td><td>�����豸</td><td>  ��</td></tr>
-	 * <tr><td>SDK_CTRL_SHUTDOWN</td><td>�ر��豸 </td><td> ��</td></tr>
-	 * <tr><td>SDK_CTRL_DISK</td><td>Ӳ�̹��� </td><td>DISKCTRL_PARAM</td></tr>
-	 * <tr><td>SDK_KEYBOARD_POWER<-->SDK_KEYBOARD_JMPUP</td><td>�������</td><td>��</td></tr>
-	 * <tr><td>SDK_TRIGGER_ALARM_IN</td><td>������������</td><td> ALARMCTRL_PARAM</td></tr>
-	 * <tr><td>SDK_TRIGGER_ALARM_OUT</td><td>����������� </td><td>ALARMCTRL_PARAM</td></tr>
-	 * <tr><td>SDK_CTRL_MATRIX</td><td>������� </td><td>MATRIXCTRL_PARAM</td></tr>
-	 * <tr><td>SDK_CTRL_SDCARD</td><td>SD������(IPC��Ʒ)����ͬӲ�̿���</td><td>DISKCTRL_PARAM</td></tr>
-	 * <tr><td>SDK_BURNING_START</td><td>��¼������,��ʼ��¼ </td><td>BURNNG_PARM</td></tr>
-	 * <tr><td>SDK_BURNING_STOP</td><td>��¼������,������¼</td><td> BURNNG_PARM</td></tr>
-	 * <tr><td>SDK_BURNING_ADDPWD</td><td>��¼������,��������(��'\0'Ϊ��β���ַ���,��󳤶�8λ)</td><td>char*</td></tr>
-	 * <tr><td>SDK_BURNING_ADDHEAD</td><td>��¼������,����Ƭͷ(��'\0'Ϊ��β���ַ���,��󳤶�1023�ֽ�,֧�ַ���,�зָ���)</td><td>char*</td></tr>
-	 * <tr><td>SDK_BURNING_ADDSIGN</td><td>��¼������,���Ӵ�㵽��¼��Ϣ </td><td>��   </td></tr>
-	 * <tr><td>SDK_BURNING_ADDCURSTOMINFO</td><td>��¼������,�Զ������(��'\0'Ϊ��β���ַ���,��󳤶�1023�ֽ�,֧�ַ���,�зָ���)</td><td>char*</td></tr>
-	 * <tr><td>SDK_BURNING_ATTACH</td><td>��¼������,������¼</td><td> BURNING_PARM_ATTACH</td></tr>
-	 * <tr><td>SDK_BURNING_PAUSE</td><td>¼��ͣ</td><td> BURNNG_PARM</td></tr>
-	 * <tr><td>SDK_BURNING_CONTINUE</td><td>��¼����  </td><td>BURNNG_PARM</td></tr>
-	 * <tr><td>SDK_BURNING_POSTPONE</td><td>��¼˳�� </td><td> BURNNG_PARM</td></tr>
-	 * <tr><td>SDK_CTRL_OEMCTRL</td><td>��ͣ����</td><td>BOOL*</td></tr>
-	 * <tr><td>SDK_CTRL_RESTOREDEFAULT</td><td>�ָ��豸��Ĭ������ </td><td>DWORD*</td></tr>
-	 * <tr><td>SDK_CTRL_CAPTURE_START</td><td>�����豸ץͼ</td><td> NET_SNAP_COMMANDINFO</td></tr>
-	 * <tr><td>SDK_CTRL_CLEARLOG</td><td>�����־</td><td>SDK_LOG_QUERY_TYPE</td></tr>
-	 * <tr><td>SDK_TRIGGER_ALARM_WIRELESS</td><td>�������߱���(IPC��Ʒ)</td><td> ALARMCTRL_PARAM</td></tr>
-	 * <tr><td>SDK_MARK_IMPORTANT_RECORD</td><td>��ʶ��Ҫ¼���ļ�</td><td>NET_RECORDFILE_INFO</td></tr>
-	 * <tr><td>SDK_CTRL_DISK_SUBAREA</td><td>����Ӳ�̷���</td><td>DISKCTRL_SUBAREA</td></tr>
-	 * <tr><td>SDK_BACKUP_START</td><td> �豸���ݿ�ʼ</td><td>BACKUP_RECORD</td></tr>
-	 * <tr><td>SDK_BACKUP_STOP</td><td> �豸����ֹͣ</td><td>char*</td></tr>
-	 * <tr><td>SDK_VIHICLE_WIFI_ADD</td><td>�����ֶ�����WIFI���� </td><td>SDKDEV_VEHICLE_WIFI_CONFIG</td></tr>
-	 * <tr><td>SDK_VIHICLE_WIFI_DEC </td><td> �����ֶ�ɾ��WIFI����  </td><td>SDKDEV_VEHICLE_WIFI_CONFIG</td></tr>
-	 * <tr><td>SDK_BUZZER_START</td><td> ���������ƿ�ʼ  </td><td> ��</td></tr>
-	 * <tr><td>SDK_BUZZER_STOP</td><td>���������ƽ��� </td><td>  ��</td></tr>
-	 * <tr><td>SDK_REJECT_USER</td><td>�޳��û�</td><td>SDKDEV_REJECT_USER</td></tr>
-	 * <tr><td>SDK_SHIELD_USER</td><td> �����û�</td><td>SDKDEV_SHIELD_USER</td></tr>
-	 * <tr><td>SDK_RAINBRUSH</td><td>���ܽ�ͨ, ��ˢ����</td><td>��</td></tr>
-	 * <tr><td>SDK_MANUAL_SNAP</td><td>���ܽ�ͨ, �ֶ�ץ�� </td><td> MANUAL_SNAP_PARAMETER</td></tr>
-	 * <tr><td>SDK_MANUAL_NTP_TIMEADJUST</td><td>�ֶ�NTPУʱ</td><td> �� </td></tr>     
-	 * <tr><td>SDK_NAVIGATION_SMS</td><td> ������Ϣ�Ͷ���Ϣ</td><td>SDKDEV_NAVIGATION_SMSS</td></tr>
-	 * <tr><td>SDK_CTRL_ROUTE_CROSSING</td><td>·�ߵ�λ��Ϣ</td><td> ROUTE_CROSSING_INFO</td></tr>
-	 * <tr><td>SDK_BACKUP_FORMAT</td><td>��ʽ�������豸,�����豸�����ַ��� </td><td>char*</td></tr>
-	 * <tr><td>SDK_DEVICE_LOCALPREVIEW_SLIPT</td><td>�����豸�˱���Ԥ���ָ�</td><td>  DEVICE_LOCALPREVIEW_SLIPT_PARAMETER</td></tr>
-	 * <tr><td>SDK_CTRL_INIT_RAID</td><td>RAID��ʼ��,Raid�����ַ��� </td><td>char*</td></tr>
-	 * <tr><td>SDK_CTRL_RAID RAID</td><td>����</td><td>CTRL_RAID_INFO</td></tr>
-	 * <tr><td>SDK_CTRL_SAPREDISK</td><td>�ȱ��̲���  </td><td> CTRL_SPARE_DISK_INFO_A</td></tr>
-	 * <tr><td>SDK_WIFI_CONNECT</td><td>�ֶ�����WIFI���� </td><td> WIFI_CONNECT</td></tr>
-	 * <tr><td>SDK_WIFI_DISCONNECT</td><td>�ֶ��Ͽ�WIFI���� </td><td>WIFI_CONNECT</td></tr>
-	 * <tr><td>SDK_CTRL_ACCESS_OPEN </td><td>�Ž�����-���� </td><td> NET_CTRL_ACCESS_OPEN</td></tr>
-	 * <tr><td>SDK_CTRL_RECORDSET_INSERT</td><td>��Ӽ�¼,��ü�¼�����</td><td>  NET_CTRL_RECORDSET_INSERT_PARAM</td></tr>
-	 * <tr><td>SDK_CTRL_RECORDSET_UPDATE</td><td>����ĳ��¼����ŵļ�¼  </td><td>NET_CTRL_RECORDSET_PARAM</td></tr>
-	 * <tr><td>SDK_CTRL_RECORDSET_REMOVE</td><td>���ݼ�¼�����ɾ��ĳ��¼</td><td> NET_CTRL_RECORDSET_PARAM</td></tr>
-	 * <tr><td>SDK_CTRL_RECORDSET_CLEAR</td><td>������м�¼����Ϣ</td><td> NET_CTRL_RECORDSET_PARAM</td></tr>
-	 * <tr><td>SDK_CTRL_ACCESS_CLOSE</td><td>�Ž�����-����</td><td>NET_CTRL_ACCESS_CLOSE</td></tr>
-	 * <tr><td>SDK_CTRL_STOP_ALARMBELL</td><td>�ֶ��رվ���</td><td> NET_CTRL_ALARMBELL</td></tr>
-	 * <tr><td>SDK_CTRL_START_ALARMBELL</td><td>�ֶ���������</td><td> NET_CTRL_ALARMBELL</td></tr>
-	 * <tr><td>SDK_CTRL_START_ALARMBELL</td><td>��ʼ������Ƶ�ļ�  </td><td>NET_CTRL_START_PLAYAUDIO</td></tr>
-	 * <tr><td>SDK_CTRL_STOP_PLAYAUDIO</td><td>ֹͣ������Ƶ�ļ� </td><td>NET_CTRL_START_PLAYAUDIO</td></tr>
-	 * <tr><td>SDK_CTRL_ACCESS_OPEN</td><td>�Ž�����-ǿ�ƿ��� </td><td>NET_CTRL_ACCESS_OPEN</td></tr>
-	 * <tr><td>SDK_CTRL_CLEAR_ALARM </td><td>���� </td><td>NET_CTRL_CLEAR_ALARM</td></tr>
-	 * <tr><td>SDK_CTRL_ARMED</td><td>��������</td><td>CTRL_ARM_DISARM_PARAM</td></tr>
-	 * <tr><td>SDK_CTRL_SET_BYPASS</td><td>������· </td><td>NET_CTRL_SET_BYPASS</td></tr>
+	 * <tr><td>type</td><td>ChJv  </td><td>=a99Le         </td></tr>
+	 * <tr><td>SDK_CTRL_REBOOT</td><td>VXFtIh18</td><td>  N^</td></tr>
+	 * <tr><td>SDK_CTRL_SHUTDOWN</td><td>9X1UIh18 </td><td> N^</td></tr>
+	 * <tr><td>SDK_CTRL_DISK</td><td>S2EL9\@m </td><td>DISKCTRL_PARAM</td></tr>
+	 * <tr><td>SDK_KEYBOARD_POWER<-->SDK_KEYBOARD_JMPUP</td><td>MxBg<|EL</td><td>N^</td></tr>
+	 * <tr><td>SDK_TRIGGER_ALARM_IN</td><td>4%7"1(>/JdHk</td><td> ALARMCTRL_PARAM</td></tr>
+	 * <tr><td>SDK_TRIGGER_ALARM_OUT</td><td>4%7"1(>/Jd3v </td><td>ALARMCTRL_PARAM</td></tr>
+	 * <tr><td>SDK_CTRL_MATRIX</td><td>>XUs?XVF </td><td>MATRIXCTRL_PARAM</td></tr>
+	 * <tr><td>SDK_CTRL_SDCARD</td><td>SD?(?XVF(IPC2zF7)2NJ}M,S2EL?XVF</td><td>DISKCTRL_PARAM</td></tr>
+	 * <tr><td>SDK_BURNING_START</td><td>?LB<;z?XVF,?*J<?LB< </td><td>BURNNG_PARM</td></tr>
+	 * <tr><td>SDK_BURNING_STOP</td><td>?LB<;z?XVF,=aJx?LB<</td><td> BURNNG_PARM</td></tr>
+	 * <tr><td>SDK_BURNING_ADDPWD</td><td>?LB<;z?XVF,5~<SC\Bk(RT'\0'N*=aN25DWV7{4.,Wn4s3$6H8N;)</td><td>char*</td></tr>
+	 * <tr><td>SDK_BURNING_ADDHEAD</td><td>?LB<;z?XVF,5~<SF,M7(RT'\0'N*=aN25DWV7{4.,Wn4s3$6H1023WV=Z,V'3V7VPP,PP7V8t7{)</td><td>char*</td></tr>
+	 * <tr><td>SDK_BURNING_ADDSIGN</td><td>?LB<;z?XVF,5~<S4r5c5=?LB<PEO" </td><td>N^   </td></tr>
+	 * <tr><td>SDK_BURNING_ADDCURSTOMINFO</td><td>?LB<;z?XVF,WT6(Re5~<S(RT'\0'N*=aN25DWV7{4.,Wn4s3$6H1023WV=Z,V'3V7VPP,PP7V8t7{)</td><td>char*</td></tr>
+	 * <tr><td>SDK_BURNING_ATTACH</td><td>?LB<;z?XVF,8=<~?LB<</td><td> BURNING_PARM_ATTACH</td></tr>
+	 * <tr><td>SDK_BURNING_PAUSE</td><td>B<T]M#</td><td> BURNNG_PARM</td></tr>
+	 * <tr><td>SDK_BURNING_CONTINUE</td><td>?LB<<LPx  </td><td>BURNNG_PARM</td></tr>
+	 * <tr><td>SDK_BURNING_POSTPONE</td><td>?LB<K3QS </td><td> BURNNG_PARM</td></tr>
+	 * <tr><td>SDK_CTRL_OEMCTRL</td><td>1(M#?XVF</td><td>BOOL*</td></tr>
+	 * <tr><td>SDK_CTRL_RESTOREDEFAULT</td><td>;V84Ih185DD,HOIhVC </td><td>DWORD*</td></tr>
+	 * <tr><td>SDK_CTRL_CAPTURE_START</td><td>4%7"Ih18W%M<</td><td> NET_SNAP_COMMANDINFO</td></tr>
+	 * <tr><td>SDK_CTRL_CLEARLOG</td><td>Ge3}HUV></td><td>SDK_LOG_QUERY_TYPE</td></tr>
+	 * <tr><td>SDK_TRIGGER_ALARM_WIRELESS</td><td>4%7"N^O_1(>/(IPC2zF7)</td><td> ALARMCTRL_PARAM</td></tr>
+	 * <tr><td>SDK_MARK_IMPORTANT_RECORD</td><td>1jJ6VXR*B<OqND<~</td><td>NET_RECORDFILE_INFO</td></tr>
+	 * <tr><td>SDK_CTRL_DISK_SUBAREA</td><td>MxBgS2EL7VGx</td><td>DISKCTRL_SUBAREA</td></tr>
+	 * <tr><td>SDK_BACKUP_START</td><td> Ih18187]?*J<</td><td>BACKUP_RECORD</td></tr>
+	 * <tr><td>SDK_BACKUP_STOP</td><td> Ih18187]M#V9</td><td>char*</td></tr>
+	 * <tr><td>SDK_VIHICLE_WIFI_ADD</td><td>35TXJV6/Tv<SWIFIEdVC </td><td>SDKDEV_VEHICLE_WIFI_CONFIG</td></tr>
+	 * <tr><td>SDK_VIHICLE_WIFI_DEC </td><td> 35TXJV6/I>3}WIFIEdVC  </td><td>SDKDEV_VEHICLE_WIFI_CONFIG</td></tr>
+	 * <tr><td>SDK_BUZZER_START</td><td> 7dCyFw?XVF?*J<  </td><td> N^</td></tr>
+	 * <tr><td>SDK_BUZZER_STOP</td><td>7dCyFw?XVF=aJx </td><td>  N^</td></tr>
+	 * <tr><td>SDK_REJECT_USER</td><td>L^3}SC;'</td><td>SDKDEV_REJECT_USER</td></tr>
+	 * <tr><td>SDK_SHIELD_USER</td><td> FA1NSC;'</td><td>SDKDEV_SHIELD_USER</td></tr>
+	 * <tr><td>SDK_RAINBRUSH</td><td>VGD\=;M(, SjK"?XVF</td><td>N^</td></tr>
+	 * <tr><td>SDK_MANUAL_SNAP</td><td>VGD\=;M(, JV6/W%ED </td><td> MANUAL_SNAP_PARAMETER</td></tr>
+	 * <tr><td>SDK_MANUAL_NTP_TIMEADJUST</td><td>JV6/NTPP#J1</td><td> N^ </td></tr>     
+	 * <tr><td>SDK_NAVIGATION_SMS</td><td> 5<:=PEO":M6LO{O"</td><td>SDKDEV_NAVIGATION_SMSS</td></tr>
+	 * <tr><td>SDK_CTRL_ROUTE_CROSSING</td><td>B7O_5cN;PEO"</td><td> ROUTE_CROSSING_INFO</td></tr>
+	 * <tr><td>SDK_BACKUP_FORMAT</td><td>8qJ=;/187]Ih18,187]Ih18C{3FWV7{4. </td><td>char*</td></tr>
+	 * <tr><td>SDK_DEVICE_LOCALPREVIEW_SLIPT</td><td>?XVFIh186K1>5XT$@@7V8n</td><td>  DEVICE_LOCALPREVIEW_SLIPT_PARAMETER</td></tr>
+	 * <tr><td>SDK_CTRL_INIT_RAID</td><td>RAID3uJ<;/,RaidC{3FWV7{4. </td><td>char*</td></tr>
+	 * <tr><td>SDK_CTRL_RAID RAID</td><td>2YWw</td><td>CTRL_RAID_INFO</td></tr>
+	 * <tr><td>SDK_CTRL_SAPREDISK</td><td>HH18EL2YWw  </td><td> CTRL_SPARE_DISK_INFO_A</td></tr>
+	 * <tr><td>SDK_WIFI_CONNECT</td><td>JV6/7"FpWIFIA,=S </td><td> WIFI_CONNECT</td></tr>
+	 * <tr><td>SDK_WIFI_DISCONNECT</td><td>JV6/6O?*WIFIA,=S </td><td>WIFI_CONNECT</td></tr>
+	 * <tr><td>SDK_CTRL_ACCESS_OPEN </td><td>CE={?XVF-?*CE </td><td> NET_CTRL_ACCESS_OPEN</td></tr>
+	 * <tr><td>SDK_CTRL_RECORDSET_INSERT</td><td>Lm<S<GB<,;q5C<GB<</1`:E</td><td>  NET_CTRL_RECORDSET_INSERT_PARAM</td></tr>
+	 * <tr><td>SDK_CTRL_RECORDSET_UPDATE</td><td>8|PBD3<GB<</1`:E5D<GB<  </td><td>NET_CTRL_RECORDSET_PARAM</td></tr>
+	 * <tr><td>SDK_CTRL_RECORDSET_REMOVE</td><td>8y>]<GB<</1`:EI>3}D3<GB<</td><td> NET_CTRL_RECORDSET_PARAM</td></tr>
+	 * <tr><td>SDK_CTRL_RECORDSET_CLEAR</td><td>Ge3}KySP<GB<</PEO"</td><td> NET_CTRL_RECORDSET_PARAM</td></tr>
+	 * <tr><td>SDK_CTRL_ACCESS_CLOSE</td><td>CE={?XVF-9XCE</td><td>NET_CTRL_ACCESS_CLOSE</td></tr>
+	 * <tr><td>SDK_CTRL_STOP_ALARMBELL</td><td>JV6/9X1U>/:E</td><td> NET_CTRL_ALARMBELL</td></tr>
+	 * <tr><td>SDK_CTRL_START_ALARMBELL</td><td>JV6/?*Ft>/:E</td><td> NET_CTRL_ALARMBELL</td></tr>
+	 * <tr><td>SDK_CTRL_START_ALARMBELL</td><td>?*J<2%7ERtF5ND<~  </td><td>NET_CTRL_START_PLAYAUDIO</td></tr>
+	 * <tr><td>SDK_CTRL_STOP_PLAYAUDIO</td><td>M#V92%7ERtF5ND<~ </td><td>NET_CTRL_START_PLAYAUDIO</td></tr>
+	 * <tr><td>SDK_CTRL_ACCESS_OPEN</td><td>CE={?XVF-G?VF?*CE </td><td>NET_CTRL_ACCESS_OPEN</td></tr>
+	 * <tr><td>SDK_CTRL_CLEAR_ALARM </td><td>O{>/ </td><td>NET_CTRL_CLEAR_ALARM</td></tr>
+	 * <tr><td>SDK_CTRL_ARMED</td><td>2<7@377@</td><td>CTRL_ARM_DISARM_PARAM</td></tr>
+	 * <tr><td>SDK_CTRL_SET_BYPASS</td><td>IhVCETB7 </td><td>NET_CTRL_SET_BYPASS</td></tr>
 	 * </table>
 	 * @param param
-	 * @param waittime �ȴ�ʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * @param waittime 5H4}J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
-
 	public static native boolean       ControlDevice(long lLoginID, int type, Object param, int waittime);
+	
+	public static native boolean       ControlDeviceEx(long lLoginID, int emType, Object pInBuf, Object pOutBuf, int nWaitTime);
 	
 	/**
 	 * \if ENGLISH_LANG
@@ -3402,10 +3379,10 @@ public class INetSDK
 	 * 2 auto record \n
 	 * @return true:success, false:failed
 	 * \else
-	 * ����ͨ��¼��״̬
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pRSBuffer ¼��״̬������,�ܳ���Ϊͨ������,  0����¼��1���ֶ�¼��2���Զ�¼��
-	 * @return true:�ɹ�, false:ʧ��
+	 * IhVCM(5@B<OqW4L,
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pRSBuffer B<OqW4L,;:3eGx,W\3$6HN*M(5@8vJ},  0#:2;B<Oq#;1#:JV6/B<Oq#;2#:WT6/B<Oq
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see QueryRecordState 
 	 */
@@ -3421,13 +3398,13 @@ public class INetSDK
 	 * @param waittime waiting time 
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯIO״̬
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param emType IO����,�μ� IOControl
-	 * @param objArr ״̬������,���ݲ�ͬ��IO���Ϳ����ǲ�ͬ�����ݽṹ����
-	 * @param nIOCount �������,ȡ��״̬��IO����
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2iQ/IOW4L,
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param emType IO@`PM,2N<{ IOControl
+	 * @param objArr W4L,;:3eGx,8y>]2;M,5DIO@`PM?IRTJG2;M,5DJ}>]=a99J}Wi
+	 * @param nIOCount Jd3v2NJ},H!5CW4L,5DIOJ}A?
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see Login IOControl
 	 */
@@ -3448,22 +3425,21 @@ public class INetSDK
 	 * @param objArr status buffering area,group various among different IO types
 	 * @return true:success, false:failed
 	 * \else
-	 * IO����
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param emType IO����
+	 * IO?XVF
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param emType IO@`PM
 	 * <table>
-	 * <tr><td>emType</td><td>��ѯ����</td><td>  ��Ӧ�ṹ�� </td></tr>
-	 * <tr><td>SDK_ALARMINPUT</td><td>��ѯ���������Ƿ��Ѿ���</td><td>ALARM_CONTROL</td></tr> 
-	 * <tr><td>SDK_ALARMOUTPUT</td><td>��ѯ��������Ƿ��Ѿ���</td><td>ALARM_CONTROL </td></tr>
-	 * <tr><td>SDK_DECODER_ALARMOUT</td><td>���Ʊ������������	</td><td>DECODER_ALARM_CONTROL</td></tr> 
-	 * <tr><td>SDK_ALARM_TRIGGER_MODE</td><td>ѯ����������ʽ </td><td>RIGGER_MODE_CONTROL </td></tr>
+	 * <tr><td>emType</td><td>2iQ/@`PM</td><td>  6TS&=a99Le </td></tr>
+	 * <tr><td>SDK_ALARMINPUT</td><td>2iQ/1(>/JdHkJG7qRQ>-4r?*</td><td>ALARM_CONTROL</td></tr> 
+	 * <tr><td>SDK_ALARMOUTPUT</td><td>2iQ/1(>/Jd3vJG7qRQ>-4r?*</td><td>ALARM_CONTROL </td></tr>
+	 * <tr><td>SDK_DECODER_ALARMOUT</td><td>?XVF1(>/=bBkFwJd3v	</td><td>DECODER_ALARM_CONTROL</td></tr> 
+	 * <tr><td>SDK_ALARM_TRIGGER_MODE</td><td>Q/1(>/4%7"7=J= </td><td>RIGGER_MODE_CONTROL </td></tr>
 	 * </table>
-	 * @param objArr ״̬������,���ݲ�ͬ��IO���Ϳ����ǲ�ͬ�����ݽṹ����
-	 * @return true:�ɹ�, false:ʧ��
+	 * @param objArr W4L,;:3eGx,8y>]2;M,5DIO@`PM?IRTJG2;M,5DJ}>]=a99J}Wi
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see Login
 	 */
-	
 	public static native boolean       IOControl(long lLoginID, int emType, Object[] objArr);
 	
 	/**
@@ -3471,14 +3447,14 @@ public class INetSDK
 	 * forced I frame interface
 	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
 	 * @param nChannelID channel id
-	 * @param nSubChannel stream type,0-main stream 1-1 2-extra stream2 3 �Cextra stream 3
+	 * @param nSubChannel stream type,0-main stream 1-1 2-extra stream2 3 (Cextra stream 3
 	 * @return true:success, false:failed
 	 * \else
-	 * ǿ��I֡
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nChannelID ͨ��id 
-	 * @param nSubChannel ��������,0-������ 1-������1 2-������2 3 �C������3
-	 * @return true:�ɹ�, false:ʧ��
+	 * G?VFIV!
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nChannelID M(5@id 
+	 * @param nSubChannel BkAw@`PM,0-VwBkAw 1-8(BkAw1 2-8(BkAw2 3 (C8(BkAw3
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       MakeKeyFrame(long lLoginID, int nChannelID, int nSubChannel);
@@ -3487,34 +3463,32 @@ public class INetSDK
 	 * \if ENGLISH_LANG
 	 * search user info
 	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
-	 * @param info user info buffering,should be sent into one USER_MANAGE_INFO structure pointer with allocated memory��return each user info USER_INFO password text is encrypted 
+	 * @param info user info buffering,should be sent into one USER_MANAGE_INFO structure pointer with allocated memory#;return each user info USER_INFO password text is encrypted 
 	 * @param waittime waiting time  
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯ�û���Ϣ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param info �û���Ϣ����,Ӧ����һ���ѷ�����ڴ��USER_MANAGE_INFO�ṹָ�룻���ظ��û���ϢUSER_INFO�е�password�ֶ��Ǽӹ��ܵ�
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2iQ/SC;'PEO"
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param info SC;'PEO";:4f,S&4+=xR;8vRQ7VEd:CDZ4f5DUSER_MANAGE_INFO=a99V8Uk#;75;X8wSC;'PEO"USER_INFOVP5DpasswordWV6NJG<S9}C\5D
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
-
 	 */
-	
 	public static native boolean 		QueryUserInfo(long lLoginID, USER_MANAGE_INFO info, int waittime);
 		
 	/**
 	 * \if ENGLISH_LANG
-	 * search user info, extension interface, support 16 bit password length��as well as 8 bit username and 8 bit password length
+	 * search user info, extension interface, support 16 bit password length#;as well as 8 bit username and 8 bit password length
 	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
 	 * @param info user info buffering,should send into an allocated memory USER_MANAGE_INFO_EX structure pointer, return to user info USER_INFO_EX password text is encrypted 
 	 * @param waittime waiting time
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯ�û���Ϣ--��չ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param info �û���Ϣ����,Ӧ����һ���ѷ�����ڴ�� USER_MANAGE_INFO_EX �ṹָ��, ���ظ��û���Ϣ USER_INFO_EX �е�password�ֶ��Ǽӹ��ܵ� 
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2iQ/SC;'PEO"--@)U9
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param info SC;'PEO";:4f,S&4+=xR;8vRQ7VEd:CDZ4f5D USER_MANAGE_INFO_EX =a99V8Uk, 75;X8wSC;'PEO" USER_INFO_EX VP5DpasswordWV6NJG<S9}C\5D 
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see OperateUserInfoEx
 	 */
@@ -3528,11 +3502,11 @@ public class INetSDK
 	 * @param waittime waiting time
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯ�û���Ϣ--���֧��64ͨ���豸
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param info �û���Ϣ����,Ӧ����һ���ѷ�����ڴ�� USER_MANAGE_INFO_NEW �ṹָ��, ���ظ��û���Ϣ USER_MANAGE_INFO_NEW �е�password�ֶ��Ǽӹ��ܵ� 
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2iQ/SC;'PEO"--Wn4sV'3V64M(5@Ih18
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param info SC;'PEO";:4f,S&4+=xR;8vRQ7VEd:CDZ4f5D USER_MANAGE_INFO_NEW =a99V8Uk, 75;X8wSC;'PEO" USER_MANAGE_INFO_NEW VP5DpasswordWV6NJG<S9}C\5D 
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see OperateUserInfoNew
 	 */
@@ -3553,28 +3527,28 @@ public class INetSDK
 	 * <tr><td>5</td><td>edit user</td><td>USER_INFO</td><td>USER_INFO </td></tr>
 	 * <tr><td>6</td><td>edit user password</td><td>USER_INFO</td><td>USER_INFO </td></tr>
 	 * </table>
-	 * @param opParam set user info's input buffering,��detaield as above nOperateType 
+	 * @param opParam set user info's input buffering,>_detaield as above nOperateType 
 	 * @param subParam set user info's assist input buffering,when setting type is editing info, here should send original user info,details as above nOperateType 
 	 * @param waittime waiting time 
 	 * @return true:success, false:failed
 	 * \else
-	 * �����豸�û�
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nOperateType ��������
+	 * 2YWwIh18SC;'
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nOperateType 2YWw@`PM
 	 * <table>
-	 * <tr><td>��ֵ </td><td>�������� </td><td>opParam��Ӧ�ṹ������</td><td>subParam��Ӧ�ṹ������ </td></tr>
-	 * <tr><td>0</td><td>�����û���</td><td>USER_GROUP_INFO</td><td>   </td></tr>
-	 * <tr><td>1</td><td>ɾ���û���</td><td>USER_GROUP_INFO</td><td>  </td></tr>
-	 * <tr><td>2</td><td>�޸��û���</td><td>USER_GROUP_INFO</td><td>USER_GROUP_INFO </td></tr>
-	 * <tr><td>3</td><td>�����û�</td><td>USER_INFO</td><td>   </td></tr>
-	 * <tr><td>4</td><td>ɾ���û�</td><td>USER_INFO</td><td>   </td></tr>
-	 * <tr><td>5</td><td>�޸��û�</td><td>USER_INFO</td><td>USER_INFO </td></tr>
-	 * <tr><td>6</td><td>�޸��û�����</td><td> USER_INFO	</td><td>USER_INFO </td></tr>
+	 * <tr><td>J}V5 </td><td>2YWw@`PM </td><td>opParam6TS&=a99Le@`PM</td><td>subParam6TS&=a99Le@`PM </td></tr>
+	 * <tr><td>0</td><td>Tv<SSC;'Wi</td><td>USER_GROUP_INFO</td><td>   </td></tr>
+	 * <tr><td>1</td><td>I>3}SC;'Wi</td><td>USER_GROUP_INFO</td><td>  </td></tr>
+	 * <tr><td>2</td><td>P^8DSC;'Wi</td><td>USER_GROUP_INFO</td><td>USER_GROUP_INFO </td></tr>
+	 * <tr><td>3</td><td>Tv<SSC;'</td><td>USER_INFO</td><td>   </td></tr>
+	 * <tr><td>4</td><td>I>3}SC;'</td><td>USER_INFO</td><td>   </td></tr>
+	 * <tr><td>5</td><td>P^8DSC;'</td><td>USER_INFO</td><td>USER_INFO </td></tr>
+	 * <tr><td>6</td><td>P^8DSC;'C\Bk</td><td> USER_INFO	</td><td>USER_INFO </td></tr>
 	 * </table>
-	 * @param opParam �����û���Ϣ�����뻺��
-	 * @param subParam �����û���Ϣ�ĸ������뻺��,����������Ϊ�޸���Ϣ��ʱ��,�˴�Ӧ����������ԭʼ�û���Ϣ
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * @param opParam IhVCSC;'PEO"5DJdHk;:3e
+	 * @param subParam IhVCSC;'PEO"5D8(VzJdHk;:3e,51IhVC@`PMN*P^8DPEO"5DJ1:r,4K4&S&4+=x@42?7VT-J<SC;'PEO"
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see QueryUserInfo
 	 */
@@ -3590,13 +3564,13 @@ public class INetSDK
 	 * @param waittime waiting time 
 	 * @return true:success, false:failed
 	 * \else
-	 * �����豸�û�--��չ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nOperateType ��������,ͬ OperateUserInfo
-	 * @param opParam ���û���Ϣ�����뻺��
-	 * @param subParam �����û���Ϣ�ĸ������뻺��,����������Ϊ�޸���Ϣ��ʱ��,�˴�Ӧ����������ԭʼ�û���Ϣ
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2YWwIh18SC;'--@)U9
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nOperateType 2YWw@`PM,M, OperateUserInfo
+	 * @param opParam VCSC;'PEO"5DJdHk;:3e
+	 * @param subParam IhVCSC;'PEO"5D8(VzJdHk;:3e,51IhVC@`PMN*P^8DPEO"5DJ1:r,4K4&S&4+=x@42?7VT-J<SC;'PEO"
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see QueryUserInfoEx
 	 */
@@ -3612,13 +3586,13 @@ public class INetSDK
 	 * @param waittime waiting time 
 	 * @return true:success, false:failed
 	 * \else
-	 * �����豸�û�--���֧��64ͨ���豸
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nOperateType ��������,ͬ OperateUserInfo
-	 * @param opParam ���û���Ϣ�����뻺��
-	 * @param subParam �����û���Ϣ�ĸ������뻺��,����������Ϊ�޸���Ϣ��ʱ��,�˴�Ӧ����������ԭʼ�û���Ϣ
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2YWwIh18SC;'--Wn4sV'3V64M(5@Ih18
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nOperateType 2YWw@`PM,M, OperateUserInfo
+	 * @param opParam VCSC;'PEO"5DJdHk;:3e
+	 * @param subParam IhVCSC;'PEO"5D8(VzJdHk;:3e,51IhVC@`PMN*P^8DPEO"5DJ1:r,4K4&S&4+=x@42?7VT-J<SC;'PEO"
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see QueryUserInfoNew
 	 */
@@ -3636,15 +3610,15 @@ public class INetSDK
 	 * @param cbTransCom serial data recall, recall info sent from front-end device 
 	 * @return true:success, false:failed
 	 * \else
-	 * ����͸������ͨ��
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param TransComType �������� 0:����1:485�� 
-	 * @param baudrate ���ڵĲ�����,1~8�ֱ��ʾ1200,2400,4800,9600,19200,38400,57600,115200
-	 * @param databits  ���ڵ�����λ4~8��ʾ4λ~8λ 
-	 * @param stopbits ���ڵ�ֹͣλ1��ʾ1λ,2��ʾ1.5λ,3��ʾ2λ
-	 * @param parity ���ڵ�ֹͣλ1��ʾ1λ,2��ʾ1.5λ,3��ʾ2λ
-	 * @param cbTransCom �������ݻص�,�ص���ǰ���豸����������Ϣ
-	 * @return true:�ɹ�, false:ʧ��
+	 * 44=(M8Cw4.?ZM(5@
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param TransComType 4.?Z@`PM 0:4.?Z1:485?Z 
+	 * @param baudrate 4.?Z5D2(LXBJ,1~87V1p1mJ>1200,2400,4800,9600,19200,38400,57600,115200
+	 * @param databits  4.?Z5DJ}>]N;4~81mJ>4N;~8N; 
+	 * @param stopbits 4.?Z5DM#V9N;11mJ>1N;,21mJ>1.5N;,31mJ>2N;
+	 * @param parity 4.?Z5DM#V9N;11mJ>1N;,21mJ>1.5N;,31mJ>2N;
+	 * @param cbTransCom 4.?ZJ}>];X5w,;X5w3vG06KIh187"9}@45DPEO"
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see DestroyTransComChannel SendTransComData
 	 */
@@ -3658,15 +3632,14 @@ public class INetSDK
 	 * @param dwBufSize transparent serial data length to send(unit:byte)
 	 * @return true:success, false:failed
 	 * \else
-	 * ͸�����ڷ�������
-	 * @param lTransComChannel ͸������ID,�ӿ� CreateTransComChannel ����ֵ
-	 * @param pBuffer Ҫ���͵�͸����������ָ�� 
-	 * @param dwBufSize Ҫ���͵�͸ʱ�������ݳ���(��λ:�ֽ�)
-	 * @return true:�ɹ�, false:ʧ��
+	 * M8Cw4.?Z7"KMJ}>]
+	 * @param lTransComChannel M8Cw4.?ZID,=S?Z CreateTransComChannel 75;XV5
+	 * @param pBuffer R*7"KM5DM8Cw4.?ZJ}>]V8Uk 
+	 * @param dwBufSize R*7"KM5DM8J14.?ZJ}>]3$6H(5%N;:WV=Z)
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see CreateTransComChannel DestroyTransComChannel
 	 */
-	
 	public static native boolean       SendTransComData(long lTransComChannel, byte pBuffer[], int dwBufSize);
 	
 	/**
@@ -3675,9 +3648,9 @@ public class INetSDK
 	 * @param lTransComChannel transparent serial ID, interface CreateTransComChannel return value 
 	 * @return true:success, false:failed
 	 * \else
-	 * �ͷ�ͨ������ͨ��
-	 * @param lTransComChannel ͸������ID,�ӿ�CreateTransComChannel����ֵ 
-	 * @return true:�ɹ�, false:ʧ��
+	 * JM7EM(Cw4.?ZM(5@
+	 * @param lTransComChannel M8Cw4.?ZID,=S?ZCreateTransComChannel75;XV5 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see CreateTransComChannel SendTransComData
 	 */
@@ -3692,12 +3665,12 @@ public class INetSDK
 	 * @param nWaitTime overtime of waiting
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯ͸������״̬
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param TransComType ��������0:232;485
-	 * @param pCommState ����״̬�ӿ���
-	 * @param nWaitTime �ȴ���ʱʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2iQ/M8Cw4.?ZW4L,
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param TransComType 4.?Z@`PM0:232;485
+	 * @param pCommState 4.?ZW4L,=S?ZLe
+	 * @param nWaitTime 5H4}3,J1J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       QueryTransComParams(long lLoginID, int TransComType, SDK_COMM_STATE pCommState, int nWaitTime);
@@ -3819,7 +3792,6 @@ public class INetSDK
 	 * <tr><td>SDK_DEV_TOUR_ENABLE_CFG</td><td>tour </td><td>SDKDEV_TOUR_ENABLE_CFG </td></tr>
 	 * <tr><td>SDK_DEV_VICHILE_WIFI_AP_CFG_EX</td><td>wifi ap extension</td><td>SDKDEV_VEHICLE_WIFI_AP_CFG_EX </td></tr>
 	 * <tr><td>SDK_DEV_ENCODER_CFG_EX</td><td>digital channel</td><td>EV_ENCODER_CFG_EX </td></tr>
-
 	 * </table>
 	 * @param lChannel channel NO.,if receive all channel data as 0xFFFFFFFF,if command do not need channel NO., this parameter is invalid 
 	 * @param lpOutBuffer receiving data buffering pointer 
@@ -3827,127 +3799,127 @@ public class INetSDK
 	 * @param waittime overtime of waiting
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯ������Ϣ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param dwCommand �豸��������,��ͬdwCommand,lpOutBuffer��Ӧ�Ľṹ�彫�᲻ͬ,��������
+	 * 2iQ/EdVCPEO"
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param dwCommand Ih18EdVCC|An,2;M,dwCommand,lpOutBuffer6TS&5D=a99Le=+;a2;M,,>_LeHgOB
 	 * <table>
- 	 * <tr><td>dwCommand</td><td>dwCommand���� </td><td>��Ӧ�ṹ�� </td></tr>
- 	 * <tr><td>SDK_DEV_DEVICECFG</td><td>��ȡ�豸����</td><td>SDKDEV_SYSTEM_ATTR_CFG </td></tr>
-	 * <tr><td>SDK_DEV_NETCFG</td><td>��ȡ������� </td><td>SDKDEV_NET_CFG </td></tr>
-	 * <tr><td>SDK_DEV_CHANNELCFG</td><td>��ȡͼ��ͨ������</td><td>���lChannelΪ-1,��ʾ��ȡȫ��ͨ��,����SDKDEV_CHANNEL_CFG[channel_num] ���lChannelΪ0�����ͨ��֮��,����<SDKDEV_CHANNEL_CFG 
-	 * <tr><td>SDK_DEV_RECORDCFG</td><td>��ȡ��ʱ¼�����	���lChannelΪ-1,��ʾ��ȡȫ��ͨ��,����SDKDEV_RECORD_CFG[channel_num] �� ��lChannelΪ0�����ͨ��֮��,����SDKDEV_RECORD_CFG 
-	 * <tr><td>SDK_DEV_COMMCFG</td><td>��ȡ���ڲ���	</td><td>SDKDEV_COMM_CFG </td></tr>
-	 * <tr><td>SDK_DEV_ALARMCFG</td><td>��ȡ������������</td><td>SDKDEV_ALARM_SCHEDULE </td></tr>
-	 * <tr><td>SDK_DEV_TIMECFG</td><td>��ȡDVRʱ��</td><td>NET_TIME </td></tr>
-	 * <tr><td>SDK_DEV_PREVIEWCFG</td><td>��ȡԤ������</td><td>SDKDEV_PREVIEW_CFG </td></tr>
-	 * <tr><td>SDK_DEV_AUTOMTCFG</td><td>��ȡ�Զ�ά������	</td><td>SDKDEV_AUTOMT_CFG </td></tr>
-	 * <tr><td>SDK_DEV_VEDIO_MARTIX</td><td>��ȡ���������������</td><td>SDKDEV_VIDEO_MATRIX_CFG </td></tr>
-	 * <tr><td>SDK_DEV_MULTI_DDNS</td><td>��ȡ��ddns����������</td><td>SDKDEV_MULTI_DDNS_CFG </td></tr>
-	 * <tr><td>SDK_DEV_SNAP_CFG</td><td>��ȡץͼ�������	</td><td>SDKDEV_SNAP_CFG </td></tr>
-	 * <tr><td>SDK_DEV_WEB_URL_CFG</td><td>��ȡhttp·������	</td><td>SDKDEV_URL_CFG </td></tr>
-	 * <tr><td>SDK_DEV_FTP_PROTO_CFG</td><td>ftp�ϴ�����</td><td>SDKDEV_FTP_PROTO_CFG </td></tr>
-	 * <tr><td>SDK_DEV_INTERVIDEO_CFG</td><td>ƽ̨��������,lchannel����ƽ̨��������</td><td>lchannel=4,��ʾ����ƽ̨,SDKDEV_INTERVIDEO_BELL_CFG��lchannel=10,��ʾ������άƽ̨,SDKDEV_INTERVIDEO_NSS_CFG lchannel=11,��ʾu��ͨ,SDKDEV_INTERVIDEO_UCOM_CFG��</td></tr> 
-	 * <tr><td>SDK_DEV_VIDEO_COVER</td><td>�����ڵ�����	</td><td>���lChannelΪ-1,��ʾ��ȡȫ��ͨ��,����</td><td>SDKDEV_VIDEOCOVER_CFG[channel_num]�� �� ��lChannelΪ0�����ͨ��֮��,����SDKDEV_VIDEOCOVER_CFG�� </td></tr>
-	 * <tr><td>SDK_DEV_TRANS_STRATEGY</td><td>�����������</td><td>SDKDEV_TRANSFER_STRATEGY_CFG </td></tr>
-	 * <tr><td>SDK_DEV_DOWNLOAD_STRATEGY</td><td>¼�����ز�������	</td><td>SDKDEV_DOWNLOAD_STRATEGY_CFG </td></tr>
-	 * <tr><td>SDK_DEV_WATERMAKE_CFG</td><td>ͼ��ˮӡ����</td><td>���lChannelΪ-1,��ʾ��ȡȫ��ͨ��,����SDKDEV_WATERMAKE_CFG[channel_num]�� �� ��lChannelΪ0�����ͨ��֮��,����SDKDEV_WATERMAKE_CFG�� </td></tr>
-	 * <tr><td>SDK_DEV_WLAN_CFG</td><td>��������������Ϣ</td><td>SDKDEV_WLAN_INFO </td></tr>
-	 * <tr><td>SDK_DEV_WLAN_DEVICE_CFG</td><td>���������豸</td><td>SDKDEV_WLAN_DEVICE_LIST </td></tr>
-	 * <tr><td>SDK_DEV_REGISTER_CFG</td><td>����ע���������</td><td>SDKDEV_REGISTER_SERVER </td></tr>
-	 * <tr><td>SDK_DEV_CAMERA_CFG</td><td>����ͷ��������</td><td>���lChannelΪ-1,��ʾ��ȡȫ��ͨ��,����SDKDEV_CAMERA_CFG[channel_num]�� �� ��lChannelΪ0�����ͨ��֮��,����SDKDEV_CAMERA_CFG�� </td></tr>
-	 * <tr><td>SDK_DEV_INFRARED_CFG</td><td>���ⱨ������</td><td>SDK_INFRARED_CFG </td></tr>
-	 * <tr><td>SDK_DEV_MAIL_CFG</td><td>�ʼ�����	</td><td>SDKDEV_MAIL_CFG </td></tr>
-	 * <tr><td>SDK_DEV_DNS_CFG</td><td>DNS����������</td><td>SDKDEV_DNS_CFG </td></tr>
-	 * <tr><td>SDK_DEV_NTP_CFG</td><td>NTP����</td><td>SDKDEV_NTP_CFG </td></tr>
-	 * <tr><td>SDK_DEV_SNIFFER_CFG</td><td>Snifferץ������</td><td>SDKDEV_SNIFFER_CFG </td></tr>
-	 * <tr><td>SDK_DEV_AUDIO_DETECT_CFG</td><td>��Ƶ��ⱨ������</td><td>SDK_AUDIO_DETECT_CFG </td></tr>
-	 * <tr><td>SDK_DEV_STORAGE_STATION_CFG</td><td>�洢λ������</td><td>���lChannelΪ-1,��ʾ��ȡȫ��ͨ��,���� SDK_STORAGE_STATION_CFG[channel_num]�� �� ��lChannelΪ0�����ͨ��֮��,���� SDK_STORAGE_STATION_CFG��</td></tr> 
-	 * <tr><td>SDK_DEV_DST_CFG</td><td>����ʱ���� </td><td>SDKDEV_DST_CFG </td></tr>
-	 * <tr><td>SDK_DEV_VIDEO_OSD_CFG</td><td>��ƵOSD�������� </td><td>���lChannelΪ-1,��ʾ��ȡȫ��ͨ��,���� SDK_DVR_VIDEOOSD_CFG[channel_num]�� �� ��lChannelΪ0�����ͨ��֮��,���� SDK_DVR_VIDEOOSD_CFG�� </td></tr>
-	 * <tr><td>SDK_DEV_ALARM_CENTER_CFG</td><td>������������ </td><td>ALARMCENTER_UP_CFG </td></tr>
-	 * <tr><td>SDK_DEV_CDMAGPRS_CFG</td><td>CDMA��GPRS��������</td><td>SDKDEV_CDMAGPRS_CFG </td></tr>
-	 * <tr><td>SDK_DEV_IPFILTER_CFGIP</td><td>��������	</td><td>SDKDEV_IPIFILTER_CFG </td></tr>
-	 * <tr><td>SDK_DEV_TALK_ENCODE_CFG</td><td>�����Խ���������</td><td>SDKDEV_TALK_ENCODE_CFG </td></tr>
-	 * <tr><td>SDK_DEV_RECORD_PACKET_CFG</td><td>¼������������</td><td>SDKDEV_RECORD_PACKET_CFG </td></tr>
-	 * <tr><td>SDK_DEV_MMS_CFG</td><td>����MMS����	</td><td>SDKDEV_MMS_CFG </td></tr>
-	 * <tr><td>SDK_DEV_SMSACTIVATION_CFG</td><td>���ż���������������</td><td>SDKDEV_SMSACTIVATION_CFG </td></tr>
-	 * <tr><td>SDK_DEV_DIALINACTIVATION_CFG	</td><td>���ż���������������</td><td>SDKDEV_DIALINACTIVATION_CFG </td></tr>
-	 * <tr><td>SDK_DEV_SNIFFER_CFG_EX</td><td>����ץ������</td><td>SDK_ATM_SNIFFER_CFG_EX </td></tr>
-	 * <tr><td>SDK_DEV_DOWNLOAD_RATE_CFG</td><td>�����ٶ�����</td><td>int </td></tr>
-	 * <tr><td>SDK_DEV_PANORAMA_SWITCH_CFG</td><td>ȫ���л���������ALARM_PANORAMA_SWITCH_CFG </td></tr>
-	 * <tr><td>SDK_DEV_LOST_FOCUS_CFG</td><td>ʧȥ���㱨������ALARM_LOST_FOCUS_CFG </td></tr>
-	 * <tr><td>SDK_DEV_ALARM_DECODE_CFG</td><td>��������������</td><td>SDK_ALARMDEC_CFG </td></tr>
-	 * <tr><td>SDK_DEV_VIDEOOUT_CFG</td><td>��Ƶ�����������	</td><td>DEV_VIDEOOUT_INFO </td></tr>
-	 * <tr><td>SDK_DEV_POINT_CFG</td><td>Ԥ�Ƶ�ʹ������ </td><td>SDKDEV_POINT_CFG </td></tr>
-	 * <tr><td>SDK_DEV_IP_COLLISION_CFG</td><td>Ip��ͻ��ⱨ������</td><td>ALARM_IP_COLLISION_CFG</td></tr> 
-	 * <tr><td>SDK_DEV_OSD_ENABLE_CFGOSD</td><td>����ʹ������</td><td>SDKDEV_OSD_ENABLE_CFG </td></tr>
-	 * <tr><td>SDK_DEV_LOCALALARM_CFG</td><td>���ر�������</td><td>SDK_ALARMIN_CFG_EX </td></tr>
-	 * <tr><td>SDK_DEV_NETALARM_CFG</td><td>���籨������	</td><td>SDK_ALARMIN_CFG_EX </td></tr>
-	 * <tr><td>SDK_DEV_MOTIONALARM_CFG</td><td>���챨������</td><td>SDK_MOTION_DETECT_CFG_EX </td></tr>
-	 * <tr><td>SDK_DEV_VIDEOLOSTALARM_CFG</td><td>��Ƶ��ʧ�������� </td><td>SDK_VIDEO_LOST_CFG_EX </td></tr>
-	 * <tr><td>SDK_DEV_BLINDALARM_CFG</td><td>��Ƶ�ڵ��������� </td><td>SDK_BLIND_CFG_EX </td></tr>
-	 * <tr><td>SDK_DEV_DISKALARM_CFG</td><td>Ӳ�̱������� </td><td>SDK_DISK_ALARM_CFG_EX </td></tr>
-	 * <tr><td>SDK_DEV_NETBROKENALARM_CFG</td><td>�����жϱ�������</td><td>SDK_NETBROKEN_ALARM_CFG_EX </td></tr>
-	 * <tr><td>SDK_DEV_ENCODER_CFG</td><td>����ͨ����ǰ�˱�������Ϣ</td><td>DEV_ENCODER_CFG </td></tr>
-	 * <tr><td>SDK_DEV_TV_ADJUST_CFGTV</td><td>�������� </td><td>SDKDEV_TVADJUST_CFG </td></tr>
-	 * <tr><td>SDK_DEV_ABOUT_VEHICLE_CFG</td><td>�����������,��������ʹ��	</td><td>SDKDEV_ABOUT_VEHICLE_CFG </td></tr>
-	 * <tr><td>SDK_DEV_ATM_OVERLAY_ABILITY</td><td>��ȡatm����֧��������Ϣ</td><td>SDKDEV_ATM_OVERLAY_GENERAL </td></tr>
-	 * <tr><td>SDK_DEV_ATM_OVERLAY_CFG</td><td>atm��������,��atm����	</td><td>SDKDEV_ATM_OVERLAY_CONFIG </td></tr>
-	 * <tr><td>SDK_DEV_DECODER_TOUR_CFG</td><td>������������Ѳ���� 	</td><td>SDKDEV_DECODER_TOUR_CFG </td></tr>
-	 * <tr><td>SDK_DEV_SIP_CFG</td><td>SIP����	</td><td>SDKDEV_SIP_CFG </td></tr>
-	 * <tr><td>SDK_DEV_VICHILE_WIFI_AP_CFG</td><td>WIFI AP����</td><td>SDKDEV_VEHICLE_SINGLE_WIFI_AP_CFG </td></tr>
-	 * <tr><td>SDK_DEV_STATICALARM_CFG</td><td>��̬��������</td><td>SDK_STATIC_DETECT_CFG_EX </td></tr>
-	 * <tr><td>SDK_DEV_DECODE_POLICY_CFG</td><td>�豸�Ľ����������</td><td>SDKDEV_DECODEPOLICY_CFG </td></tr>
-	 * <tr><td>SDK_DEV_MACHINE_CFG</td><td>������ص�����</td><td>SDKDEV_MACHINE_CFG </td></tr>
-	 * <tr><td>SDK_DEV_MAC_COLLISION_CFG</td><td>MAC��ͻ�������	</td><td>ALARM_MAC_COLLISION_CFG </td></tr>
-	 * <tr><td>SDK_DEV_RTSP_CFG	RTSP</td><td>����	</td><td>SDKDEV_RTSP_CFG </td></tr>
-	 * <tr><td>SDK_DEV_232_COM_CARD_CFG</td><td>232���ڿ����ź��¼�����</td><td>COM_CARD_SIGNAL_LINK_CFG </td></tr>
-	 * <tr><td>SDK_DEV_485_COM_CARD_CFG</td><td>485���ڿ����ź��¼�����	</td><td>COM_CARD_SIGNAL_LINK_CFG </td></tr>
-	 * <tr><td>SDK_DEV_FTP_PROTO_CFG_EX</td><td>FTP�ϴ���չ����	</td><td>SDKDEV_FTP_PROTO_CFG_EX </td></tr>
-	 * <tr><td>SDK_DEV_SYSLOG_REMOTE_SERVER</td><td>YSLOG Զ�̷���������</td><td>SDKDEV_SYSLOG_REMOTE_SERVER </td></tr>
-	 * <tr><td>SDK_DEV_COMMCFG_EX</td><td>��չ������������</td><td>SDKDEV_COMM_CFG_EX </td></tr>
-	 * <tr><td>SDK_DEV_NETCARD_CFG</td><td>������Ϣ����	</td><td>SDKDEV_NETCARD_CFG </td></tr>
-	 * <tr><td>SDK_DEV_BACKUP_VIDEO_FORMAT</td><td>��Ƶ���ݸ�ʽ����</td><td>SDKDEV_BACKUP_VIDEO_FORMAT </td></tr>
-	 * <tr><td>SDK_DEV_STREAM_ENCRYPT_CFG</td><td>������������	SDKEDV_STREAM_ENCRYPT </td></tr>
-	 * <tr><td>SDK_DEV_IPFILTER_CFG_EXIP</td><td>����������չ</td><td>SDKDEV_IPIFILTER_CFG_EX </td></tr>
-	 * <tr><td>SDK_DEV_CUSTOM_CFG</td><td>�û��Զ�������</td><td>SDKDEV_CUSTOM_CFG </td></tr>
-	 * <tr><td>SDK_DEV_WLAN_DEVICE_CFG_EX</td><td>���������豸��չ����</td><td>SDKDEV_WLAN_DEVICE_LIST_EX </td></tr>
-	 * <tr><td>SDK_DEV_ACC_POWEROFF_CFG</td><td>ACC�����¼�����	</td><td>SDKDEV_ACC_POWEROFF_CFG </td></tr>
-	 * <tr><td>SDK_DEV_EXPLOSION_PROOF_CFG</td><td>�����б����¼�����</td><td>SDKDEV_EXPLOSION_PROOF_CFG </td></tr>
-	 * <tr><td>SDK_DEV_NETCFG_EX</td><td>������չ����</td><td>SDKDEV_NET_CFG_EX </td></tr>
-	 * <tr><td>SDK_DEV_LIGHTCONTROL_CFG</td><td>�ƹ��������	</td><td>SDKDEV_LIGHTCONTROL_CFG </td></tr>
-	 * <tr><td>SDK_DEV_3GFLOW_CFG</td><td>3G������Ϣ����	</td><td>SDKDEV_3GFLOW_INFO_CFG</td></tr> 
-	 * <tr><td>SDK_DEV_IPV6_CFG</td><td>IPv6����	</td><td>SDKDEV_IPV6_CFG </td></tr>
-	 * <tr><td>SDK_DEV_SNMP_CFG</td><td>Snmp����	</td><td>SDKDEV_NET_SNMP_CFG </td></tr>
-	 * <tr><td>SDK_DEV_SNAP_CONTROL_CFG</td><td>ץͼ�������� </td><td>SDKDEV_SNAP_CONTROL_CFG </td></tr>
-	 * <tr><td>SDK_DEV_GPS_MODE_CFGGPS</td><td>��λģʽ����</td><td>SDKDEV_GPS_MODE_CFG </td></tr>
-	 * <tr><td>SDK_DEV_SNAP_UPLOAD_CFG</td><td>ͼƬ�ϴ�������Ϣ </td><td>SDKDEV_SNAP_UPLOAD_CFG </td></tr>
-	 * <tr><td>SDK_DEV_SPEED_LIMIT_CFG</td><td>����������Ϣ </td><td>SDKDEV_SPEED_LIMIT_CFG </td></tr>
-	 * <tr><td>SDK_DEV_ISCSI_CFG</td><td>iSCSI���� </td><td>SDKDEV_ISCSI_CFG </td></tr>
-	 * <tr><td>SDK_DEV_WIRELESS_ROUTING_CFG</td><td>����·������ </td><td>SDKDEV_WIRELESS_ROUTING_CFG </td></tr>
-	 * <tr><td>SDK_DEV_ENCLOSURE_CFG</td><td>����Χ������ </td><td>SDKDEV_ENCLOSURE_CFG </td></tr>
-	 * <tr><td>SDK_DEV_ENCLOSURE_VERSION_CFG</td><td>����Χ���汾������ </td><td>SDKDEV_ENCLOSURE_VERSION_CFG </td></tr>
-	 * <tr><td>SDK_DEV_RIAD_EVENT_CFG</td><td>Raid�¼����� </td><td>SDKDEV_RAID_EVENT_CFG </td></tr>
-	 * <tr><td>SDK_DEV_FIRE_ALARM_CFG</td><td>�𾯱������� </td><td>SDKDEV_FIRE_ALARM_CFG </td></tr>
-	 * <tr><td>SDK_DEV_LOCALALARM_NAME_CFG</td><td>�������Ʊ������� </td><td>Name1&&name2&&name3...��ʽ�ַ��� </td></tr>
-	 * <tr><td>SDK_DEV_URGENCY_RECORD_CFG</td><td>�����洢���� </td><td>SDKDEV_URGENCY_RECORD_CFG </td></tr>
-	 * <tr><td>SDK_DEV_ELEVATOR_ATTRI_CFG</td><td>�������в�������</td><td>SDKDEV_ELEVATOR_ATTRI_CFG</td></tr>
-	 * <tr><td>SDK_DEV_ATM_OVERLAY_CFG_EX</td><td>atm�������� </td><td>SDKDEV_ATM_OVERLAY_CONFIG_EX</td></tr>
-	 * <tr><td>SDK_DEV_MACFILTER_CFGMAC</td><td>�������� </td><td>SDKDEV_MACFILTER_CFG</td></tr>
-	 * <tr><td>SDK_DEV_MACIPFILTER_CFG</td><td>MAC,IP����	</td><td>SDKDEV_MACIPFILTER_CFG</td></tr>
-	 * <tr><td>SDK_DEV_STREAM_ENCRYPT_TIME_CFG</td><td>��������(���ܼƻ�)���� DHEDV_STREAM_ENCRYPT</td></tr>
-	 * <tr><td>SDK_DEV_LIMIT_BIT_RATE_CFG</td><td>���������� </td><td>SDKDEV_LIMIT_BIT_RATE</td></tr>
-	 * <tr><td>SDK_DEV_SNAP_CFG_EX</td><td>ץͼ���������չ </td><td>SDKDEV_SNAP_CFG_EX</td></tr>
-	 * <tr><td>SDK_DEV_DECODER_URL_CFG</td><td>������url���� </td><td>SDKDEV_DECODER_URL_CFG</td></tr>
-	 * <tr><td>SDK_DEV_TOUR_ENABLE_CFG</td><td>��Ѳʹ������ </td><td>SDKDEV_TOUR_ENABLE_CFG</td></tr>
-	 * <tr><td>SDK_DEV_VICHILE_WIFI_AP_CFG_EX</td><td>wifi ap������չ </td><td>SDKDEV_VEHICLE_WIFI_AP_CFG_EX</td></tr>
-	 * <tr><td>SDK_DEV_ENCODER_CFG_EX</td><td>����ͨ����ǰ�˱�������Ϣ��չ </td><td>DEV_ENCODER_CFG_EX</td></tr>
+ 	 * <tr><td>dwCommand</td><td>dwCommand:,Re </td><td>6TS&=a99Le </td></tr>
+ 	 * <tr><td>SDK_DEV_DEVICECFG</td><td>;qH!Ih182NJ}</td><td>SDKDEV_SYSTEM_ATTR_CFG </td></tr>
+	 * <tr><td>SDK_DEV_NETCFG</td><td>;qH!MxBg2NJ} </td><td>SDKDEV_NET_CFG </td></tr>
+	 * <tr><td>SDK_DEV_CHANNELCFG</td><td>;qH!M<OsM(5@2NJ}</td><td>Hg9{lChannelN*-1,1mJ>;qH!H+2?M(5@,75;XSDKDEV_CHANNEL_CFG[channel_num] Hg9{lChannelN*05=Wn4sM(5@V.<d,75;X<SDKDEV_CHANNEL_CFG 
+	 * <tr><td>SDK_DEV_RECORDCFG</td><td>;qH!6(J1B<Oq2NJ}	Hg9{lChannelN*-1,1mJ>;qH!H+2?M(5@,75;XSDKDEV_RECORD_CFG[channel_num] Hg 9{lChannelN*05=Wn4sM(5@V.<d,75;XSDKDEV_RECORD_CFG 
+	 * <tr><td>SDK_DEV_COMMCFG</td><td>;qH!4.?Z2NJ}	</td><td>SDKDEV_COMM_CFG </td></tr>
+	 * <tr><td>SDK_DEV_ALARMCFG</td><td>;qH!1(>/2<7@2NJ}</td><td>SDKDEV_ALARM_SCHEDULE </td></tr>
+	 * <tr><td>SDK_DEV_TIMECFG</td><td>;qH!DVRJ1<d</td><td>NET_TIME </td></tr>
+	 * <tr><td>SDK_DEV_PREVIEWCFG</td><td>;qH!T$@@2NJ}</td><td>SDKDEV_PREVIEW_CFG </td></tr>
+	 * <tr><td>SDK_DEV_AUTOMTCFG</td><td>;qH!WT6/N,;$EdVC	</td><td>SDKDEV_AUTOMT_CFG </td></tr>
+	 * <tr><td>SDK_DEV_VEDIO_MARTIX</td><td>;qH!1>;z>XUs2_BTEdVC</td><td>SDKDEV_VIDEO_MATRIX_CFG </td></tr>
+	 * <tr><td>SDK_DEV_MULTI_DDNS</td><td>;qH!6`ddns7~NqFwEdVC</td><td>SDKDEV_MULTI_DDNS_CFG </td></tr>
+	 * <tr><td>SDK_DEV_SNAP_CFG</td><td>;qH!W%M<O`9XEdVC	</td><td>SDKDEV_SNAP_CFG </td></tr>
+	 * <tr><td>SDK_DEV_WEB_URL_CFG</td><td>;qH!httpB7>6EdVC	</td><td>SDKDEV_URL_CFG </td></tr>
+	 * <tr><td>SDK_DEV_FTP_PROTO_CFG</td><td>ftpIO4+EdVC</td><td>SDKDEV_FTP_PROTO_CFG </td></tr>
+	 * <tr><td>SDK_DEV_INTERVIDEO_CFG</td><td>F=L(=iHkEdVC,lchannel4z1mF=L(=iHk@`PM</td><td>lchannel=4,1mJ>146{F=L(,SDKDEV_INTERVIDEO_BELL_CFG!#lchannel=10,1mJ>VPPKA&N,F=L(,SDKDEV_INTERVIDEO_NSS_CFG lchannel=11,1mJ>uMxM(,SDKDEV_INTERVIDEO_UCOM_CFG!#</td></tr> 
+	 * <tr><td>SDK_DEV_VIDEO_COVER</td><td>GxSrUZ52EdVC	</td><td>Hg9{lChannelN*-1,1mJ>;qH!H+2?M(5@,75;X</td><td>SDKDEV_VIDEOCOVER_CFG[channel_num]!# Hg 9{lChannelN*05=Wn4sM(5@V.<d,75;XSDKDEV_VIDEOCOVER_CFG!# </td></tr>
+	 * <tr><td>SDK_DEV_TRANS_STRATEGY</td><td>4+Jd2_BTEdVC</td><td>SDKDEV_TRANSFER_STRATEGY_CFG </td></tr>
+	 * <tr><td>SDK_DEV_DOWNLOAD_STRATEGY</td><td>B<OsOBTX2_BTEdVC	</td><td>SDKDEV_DOWNLOAD_STRATEGY_CFG </td></tr>
+	 * <tr><td>SDK_DEV_WATERMAKE_CFG</td><td>M<OsK.S!EdVC</td><td>Hg9{lChannelN*-1,1mJ>;qH!H+2?M(5@,75;XSDKDEV_WATERMAKE_CFG[channel_num]!# Hg 9{lChannelN*05=Wn4sM(5@V.<d,75;XSDKDEV_WATERMAKE_CFG!# </td></tr>
+	 * <tr><td>SDK_DEV_WLAN_CFG</td><td>EdVCN^O_MxBgPEO"</td><td>SDKDEV_WLAN_INFO </td></tr>
+	 * <tr><td>SDK_DEV_WLAN_DEVICE_CFG</td><td>KQKwN^O_Ih18</td><td>SDKDEV_WLAN_DEVICE_LIST </td></tr>
+	 * <tr><td>SDK_DEV_REGISTER_CFG</td><td>Vw6/W"2a2NJ}EdVC</td><td>SDKDEV_REGISTER_SERVER </td></tr>
+	 * <tr><td>SDK_DEV_CAMERA_CFG</td><td>IcOqM7JtPTEdVC</td><td>Hg9{lChannelN*-1,1mJ>;qH!H+2?M(5@,75;XSDKDEV_CAMERA_CFG[channel_num]!# Hg 9{lChannelN*05=Wn4sM(5@V.<d,75;XSDKDEV_CAMERA_CFG!# </td></tr>
+	 * <tr><td>SDK_DEV_INFRARED_CFG</td><td>:lMb1(>/2NJ}</td><td>SDK_INFRARED_CFG </td></tr>
+	 * <tr><td>SDK_DEV_MAIL_CFG</td><td>SJ<~EdVC	</td><td>SDKDEV_MAIL_CFG </td></tr>
+	 * <tr><td>SDK_DEV_DNS_CFG</td><td>DNS7~NqFwEdVC</td><td>SDKDEV_DNS_CFG </td></tr>
+	 * <tr><td>SDK_DEV_NTP_CFG</td><td>NTPEdVC</td><td>SDKDEV_NTP_CFG </td></tr>
+	 * <tr><td>SDK_DEV_SNIFFER_CFG</td><td>SnifferW%0|EdVC</td><td>SDKDEV_SNIFFER_CFG </td></tr>
+	 * <tr><td>SDK_DEV_AUDIO_DETECT_CFG</td><td>RtF5<l2b1(>/2NJ}</td><td>SDK_AUDIO_DETECT_CFG </td></tr>
+	 * <tr><td>SDK_DEV_STORAGE_STATION_CFG</td><td>4f4"N;VCEdVC</td><td>Hg9{lChannelN*-1,1mJ>;qH!H+2?M(5@,75;X SDK_STORAGE_STATION_CFG[channel_num]!# Hg 9{lChannelN*05=Wn4sM(5@V.<d,75;X SDK_STORAGE_STATION_CFG!#</td></tr> 
+	 * <tr><td>SDK_DEV_DST_CFG</td><td>ODAnJ1EdVC </td><td>SDKDEV_DST_CFG </td></tr>
+	 * <tr><td>SDK_DEV_VIDEO_OSD_CFG</td><td>JSF5OSD5~<SEdVC </td><td>Hg9{lChannelN*-1,1mJ>;qH!H+2?M(5@,75;X SDK_DVR_VIDEOOSD_CFG[channel_num]!# Hg 9{lChannelN*05=Wn4sM(5@V.<d,75;X SDK_DVR_VIDEOOSD_CFG!# </td></tr>
+	 * <tr><td>SDK_DEV_ALARM_CENTER_CFG</td><td>1(>/VPPDEdVC </td><td>ALARMCENTER_UP_CFG </td></tr>
+	 * <tr><td>SDK_DEV_CDMAGPRS_CFG</td><td>CDMA!"GPRSMxBgEdVC</td><td>SDKDEV_CDMAGPRS_CFG </td></tr>
+	 * <tr><td>SDK_DEV_IPFILTER_CFGIP</td><td>9}BKEdVC	</td><td>SDKDEV_IPIFILTER_CFG </td></tr>
+	 * <tr><td>SDK_DEV_TALK_ENCODE_CFG</td><td>SoRt6T=21`BkEdVC</td><td>SDKDEV_TALK_ENCODE_CFG </td></tr>
+	 * <tr><td>SDK_DEV_RECORD_PACKET_CFG</td><td>B<Oq4r0|3$6HEdVC</td><td>SDKDEV_RECORD_PACKET_CFG </td></tr>
+	 * <tr><td>SDK_DEV_MMS_CFG</td><td>6LPEMMSEdVC	</td><td>SDKDEV_MMS_CFG </td></tr>
+	 * <tr><td>SDK_DEV_SMSACTIVATION_CFG</td><td>6LPE<$;nN^O_A,=SEdVC</td><td>SDKDEV_SMSACTIVATION_CFG </td></tr>
+	 * <tr><td>SDK_DEV_DIALINACTIVATION_CFG	</td><td>2&:E<$;nN^O_A,=SEdVC</td><td>SDKDEV_DIALINACTIVATION_CFG </td></tr>
+	 * <tr><td>SDK_DEV_SNIFFER_CFG_EX</td><td>MxBgW%0|EdVC</td><td>SDK_ATM_SNIFFER_CFG_EX </td></tr>
+	 * <tr><td>SDK_DEV_DOWNLOAD_RATE_CFG</td><td>OBTXKY6HO^VF</td><td>int </td></tr>
+	 * <tr><td>SDK_DEV_PANORAMA_SWITCH_CFG</td><td>H+>0GP;;1(>/EdVCALARM_PANORAMA_SWITCH_CFG </td></tr>
+	 * <tr><td>SDK_DEV_LOST_FOCUS_CFG</td><td>J'H%=95c1(>/EdVCALARM_LOST_FOCUS_CFG </td></tr>
+	 * <tr><td>SDK_DEV_ALARM_DECODE_CFG</td><td>1(>/=bBkFwEdVC</td><td>SDK_ALARMDEC_CFG </td></tr>
+	 * <tr><td>SDK_DEV_VIDEOOUT_CFG</td><td>JSF5Jd3v2NJ}EdVC	</td><td>DEV_VIDEOOUT_INFO </td></tr>
+	 * <tr><td>SDK_DEV_POINT_CFG</td><td>T$VF5cJ9D\EdVC </td><td>SDKDEV_POINT_CFG </td></tr>
+	 * <tr><td>SDK_DEV_IP_COLLISION_CFG</td><td>Ip3eM;<l2b1(>/EdVC</td><td>ALARM_IP_COLLISION_CFG</td></tr> 
+	 * <tr><td>SDK_DEV_OSD_ENABLE_CFGOSD</td><td>5~<SJ9D\EdVC</td><td>SDKDEV_OSD_ENABLE_CFG </td></tr>
+	 * <tr><td>SDK_DEV_LOCALALARM_CFG</td><td>1>5X1(>/EdVC</td><td>SDK_ALARMIN_CFG_EX </td></tr>
+	 * <tr><td>SDK_DEV_NETALARM_CFG</td><td>MxBg1(>/EdVC	</td><td>SDK_ALARMIN_CFG_EX </td></tr>
+	 * <tr><td>SDK_DEV_MOTIONALARM_CFG</td><td>6/<l1(>/EdVC</td><td>SDK_MOTION_DETECT_CFG_EX </td></tr>
+	 * <tr><td>SDK_DEV_VIDEOLOSTALARM_CFG</td><td>JSF56*J'1(>/EdVC </td><td>SDK_VIDEO_LOST_CFG_EX </td></tr>
+	 * <tr><td>SDK_DEV_BLINDALARM_CFG</td><td>JSF5UZ521(>/EdVC </td><td>SDK_BLIND_CFG_EX </td></tr>
+	 * <tr><td>SDK_DEV_DISKALARM_CFG</td><td>S2EL1(>/EdVC </td><td>SDK_DISK_ALARM_CFG_EX </td></tr>
+	 * <tr><td>SDK_DEV_NETBROKENALARM_CFG</td><td>MxBgVP6O1(>/EdVC</td><td>SDK_NETBROKEN_ALARM_CFG_EX </td></tr>
+	 * <tr><td>SDK_DEV_ENCODER_CFG</td><td>J}WVM(5@5DG06K1`BkFwPEO"</td><td>DEV_ENCODER_CFG </td></tr>
+	 * <tr><td>SDK_DEV_TV_ADJUST_CFGTV</td><td>5w=ZEdVC </td><td>SDKDEV_TVADJUST_CFG </td></tr>
+	 * <tr><td>SDK_DEV_ABOUT_VEHICLE_CFG</td><td>35TXO`9XEdVC,11>)9+=;J9SC	</td><td>SDKDEV_ABOUT_VEHICLE_CFG </td></tr>
+	 * <tr><td>SDK_DEV_ATM_OVERLAY_ABILITY</td><td>;qH!atm5~<SV'3VD\A&PEO"</td><td>SDKDEV_ATM_OVERLAY_GENERAL </td></tr>
+	 * <tr><td>SDK_DEV_ATM_OVERLAY_CFG</td><td>atm5~<SEdVC,PBatmLXSP	</td><td>SDKDEV_ATM_OVERLAY_CONFIG </td></tr>
+	 * <tr><td>SDK_DEV_DECODER_TOUR_CFG</td><td>=bBkFw=bBkBVQ2EdVC 	</td><td>SDKDEV_DECODER_TOUR_CFG </td></tr>
+	 * <tr><td>SDK_DEV_SIP_CFG</td><td>SIPEdVC	</td><td>SDKDEV_SIP_CFG </td></tr>
+	 * <tr><td>SDK_DEV_VICHILE_WIFI_AP_CFG</td><td>WIFI APEdVC</td><td>SDKDEV_VEHICLE_SINGLE_WIFI_AP_CFG </td></tr>
+	 * <tr><td>SDK_DEV_STATICALARM_CFG</td><td>>2L,1(>/EdVC</td><td>SDK_STATIC_DETECT_CFG_EX </td></tr>
+	 * <tr><td>SDK_DEV_DECODE_POLICY_CFG</td><td>Ih185D=bBk2_BTEdVC</td><td>SDKDEV_DECODEPOLICY_CFG </td></tr>
+	 * <tr><td>SDK_DEV_MACHINE_CFG</td><td>;zFwO`9X5DEdVC</td><td>SDKDEV_MACHINE_CFG </td></tr>
+	 * <tr><td>SDK_DEV_MAC_COLLISION_CFG</td><td>MAC3eM;<l2bEdVC	</td><td>ALARM_MAC_COLLISION_CFG </td></tr>
+	 * <tr><td>SDK_DEV_RTSP_CFG	RTSP</td><td>EdVC	</td><td>SDKDEV_RTSP_CFG </td></tr>
+	 * <tr><td>SDK_DEV_232_COM_CARD_CFG</td><td>2324.?Z?(:EPE:EJB<~EdVC</td><td>COM_CARD_SIGNAL_LINK_CFG </td></tr>
+	 * <tr><td>SDK_DEV_485_COM_CARD_CFG</td><td>4854.?Z?(:EPE:EJB<~EdVC	</td><td>COM_CARD_SIGNAL_LINK_CFG </td></tr>
+	 * <tr><td>SDK_DEV_FTP_PROTO_CFG_EX</td><td>FTPIO4+@)U9EdVC	</td><td>SDKDEV_FTP_PROTO_CFG_EX </td></tr>
+	 * <tr><td>SDK_DEV_SYSLOG_REMOTE_SERVER</td><td>YSLOG T63L7~NqFwEdVC</td><td>SDKDEV_SYSLOG_REMOTE_SERVER </td></tr>
+	 * <tr><td>SDK_DEV_COMMCFG_EX</td><td>@)U94.?ZJtPTEdVC</td><td>SDKDEV_COMM_CFG_EX </td></tr>
+	 * <tr><td>SDK_DEV_NETCARD_CFG</td><td>?(?ZPEO"EdVC	</td><td>SDKDEV_NETCARD_CFG </td></tr>
+	 * <tr><td>SDK_DEV_BACKUP_VIDEO_FORMAT</td><td>JSF5187]8qJ=EdVC</td><td>SDKDEV_BACKUP_VIDEO_FORMAT </td></tr>
+	 * <tr><td>SDK_DEV_STREAM_ENCRYPT_CFG</td><td>BkAw<SC\EdVC	SDKEDV_STREAM_ENCRYPT </td></tr>
+	 * <tr><td>SDK_DEV_IPFILTER_CFG_EXIP</td><td>9}BKEdVC@)U9</td><td>SDKDEV_IPIFILTER_CFG_EX </td></tr>
+	 * <tr><td>SDK_DEV_CUSTOM_CFG</td><td>SC;'WT6(ReEdVC</td><td>SDKDEV_CUSTOM_CFG </td></tr>
+	 * <tr><td>SDK_DEV_WLAN_DEVICE_CFG_EX</td><td>KQKwN^O_Ih18@)U9EdVC</td><td>SDKDEV_WLAN_DEVICE_LIST_EX </td></tr>
+	 * <tr><td>SDK_DEV_ACC_POWEROFF_CFG</td><td>ACC6OO_JB<~EdVC	</td><td>SDKDEV_ACC_POWEROFF_CFG </td></tr>
+	 * <tr><td>SDK_DEV_EXPLOSION_PROOF_CFG</td><td>7@1,:P1(>/JB<~EdVC</td><td>SDKDEV_EXPLOSION_PROOF_CFG </td></tr>
+	 * <tr><td>SDK_DEV_NETCFG_EX</td><td>MxBg@)U9EdVC</td><td>SDKDEV_NET_CFG_EX </td></tr>
+	 * <tr><td>SDK_DEV_LIGHTCONTROL_CFG</td><td>5F9b?XVFEdVC	</td><td>SDKDEV_LIGHTCONTROL_CFG </td></tr>
+	 * <tr><td>SDK_DEV_3GFLOW_CFG</td><td>3GAwA?PEO"EdVC	</td><td>SDKDEV_3GFLOW_INFO_CFG</td></tr> 
+	 * <tr><td>SDK_DEV_IPV6_CFG</td><td>IPv6EdVC	</td><td>SDKDEV_IPV6_CFG </td></tr>
+	 * <tr><td>SDK_DEV_SNMP_CFG</td><td>SnmpEdVC	</td><td>SDKDEV_NET_SNMP_CFG </td></tr>
+	 * <tr><td>SDK_DEV_SNAP_CONTROL_CFG</td><td>W%M<?*9XEdVC </td><td>SDKDEV_SNAP_CONTROL_CFG </td></tr>
+	 * <tr><td>SDK_DEV_GPS_MODE_CFGGPS</td><td>6(N;D#J=EdVC</td><td>SDKDEV_GPS_MODE_CFG </td></tr>
+	 * <tr><td>SDK_DEV_SNAP_UPLOAD_CFG</td><td>M<F,IO4+EdVCPEO" </td><td>SDKDEV_SNAP_UPLOAD_CFG </td></tr>
+	 * <tr><td>SDK_DEV_SPEED_LIMIT_CFG</td><td>O^KYEdVCPEO" </td><td>SDKDEV_SPEED_LIMIT_CFG </td></tr>
+	 * <tr><td>SDK_DEV_ISCSI_CFG</td><td>iSCSIEdVC </td><td>SDKDEV_ISCSI_CFG </td></tr>
+	 * <tr><td>SDK_DEV_WIRELESS_ROUTING_CFG</td><td>N^O_B7SIEdVC </td><td>SDKDEV_WIRELESS_ROUTING_CFG </td></tr>
+	 * <tr><td>SDK_DEV_ENCLOSURE_CFG</td><td>5gWSN'@8EdVC </td><td>SDKDEV_ENCLOSURE_CFG </td></tr>
+	 * <tr><td>SDK_DEV_ENCLOSURE_VERSION_CFG</td><td>5gWSN'@80f1>:EEdVC </td><td>SDKDEV_ENCLOSURE_VERSION_CFG </td></tr>
+	 * <tr><td>SDK_DEV_RIAD_EVENT_CFG</td><td>RaidJB<~EdVC </td><td>SDKDEV_RAID_EVENT_CFG </td></tr>
+	 * <tr><td>SDK_DEV_FIRE_ALARM_CFG</td><td>;p>/1(>/EdVC </td><td>SDKDEV_FIRE_ALARM_CFG </td></tr>
+	 * <tr><td>SDK_DEV_LOCALALARM_NAME_CFG</td><td>1>5XC{3F1(>/EdVC </td><td>Name1&&name2&&name3...8qJ=WV7{4. </td></tr>
+	 * <tr><td>SDK_DEV_URGENCY_RECORD_CFG</td><td>=t<14f4"EdVC </td><td>SDKDEV_URGENCY_RECORD_CFG </td></tr>
+	 * <tr><td>SDK_DEV_ELEVATOR_ATTRI_CFG</td><td>5gL]TKPP2NJ}EdVC</td><td>SDKDEV_ELEVATOR_ATTRI_CFG</td></tr>
+	 * <tr><td>SDK_DEV_ATM_OVERLAY_CFG_EX</td><td>atm5~<SEdVC </td><td>SDKDEV_ATM_OVERLAY_CONFIG_EX</td></tr>
+	 * <tr><td>SDK_DEV_MACFILTER_CFGMAC</td><td>9}BKEdVC </td><td>SDKDEV_MACFILTER_CFG</td></tr>
+	 * <tr><td>SDK_DEV_MACIPFILTER_CFG</td><td>MAC,IP9}BK	</td><td>SDKDEV_MACIPFILTER_CFG</td></tr>
+	 * <tr><td>SDK_DEV_STREAM_ENCRYPT_TIME_CFG</td><td>BkAw<SC\(<SC\<F;.)EdVC DHEDV_STREAM_ENCRYPT</td></tr>
+	 * <tr><td>SDK_DEV_LIMIT_BIT_RATE_CFG</td><td>O^BkAwEdVC </td><td>SDKDEV_LIMIT_BIT_RATE</td></tr>
+	 * <tr><td>SDK_DEV_SNAP_CFG_EX</td><td>W%M<O`9XEdVC@)U9 </td><td>SDKDEV_SNAP_CFG_EX</td></tr>
+	 * <tr><td>SDK_DEV_DECODER_URL_CFG</td><td>=bBkFwurlEdVC </td><td>SDKDEV_DECODER_URL_CFG</td></tr>
+	 * <tr><td>SDK_DEV_TOUR_ENABLE_CFG</td><td>BVQ2J9D\EdVC </td><td>SDKDEV_TOUR_ENABLE_CFG</td></tr>
+	 * <tr><td>SDK_DEV_VICHILE_WIFI_AP_CFG_EX</td><td>wifi apEdVC@)U9 </td><td>SDKDEV_VEHICLE_WIFI_AP_CFG_EX</td></tr>
+	 * <tr><td>SDK_DEV_ENCODER_CFG_EX</td><td>J}WVM(5@5DG06K1`BkFwPEO"@)U9 </td><td>DEV_ENCODER_CFG_EX</td></tr>
 	 * </table>
-	 * @param lChannel ͨ����,�����ȡȫ��ͨ������Ϊ0xFFFFFFFF,��������Ҫͨ����,�ò�����Ч 
-	 * @param lpOutBuffer �������ݻ���ָ��
-	 * @param lpBytesReturned ʵ���յ����ݵĳ��� 
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * @param lChannel M(5@:E,Hg9{;qH!H+2?M(5@J}>]N*0xFFFFFFFF,Hg9{C|An2;PhR*M(5@:E,8C2NJ}N^P' 
+	 * @param lpOutBuffer =SJ\J}>];:3eV8Uk
+	 * @param lpBytesReturned J5<JJU5=J}>]5D3$6H 
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see GetLastError SetDevConfig
 	 */
@@ -3963,13 +3935,13 @@ public class INetSDK
 	 * @param waittime waiting time 
 	 * @return true:success, false:failed
 	 * \else
-	 * ����������Ϣ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param dwCommand �豸������,��� GetDevConfig
-	 * @param lChannel ͨ����,�����ȡȫ��ͨ������Ϊ0xFFFFFFFF,��������Ҫͨ����,�ò�����Ч 
-	 * @param lpInBuffer ���ݻ���ָ�� 
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * IhVCEdVCPEO"
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param dwCommand Ih18EdVCC|,Oj<{ GetDevConfig
+	 * @param lChannel M(5@:E,Hg9{;qH!H+2?M(5@J}>]N*0xFFFFFFFF,Hg9{C|An2;PhR*M(5@:E,8C2NJ}N^P' 
+	 * @param lpInBuffer J}>];:3eV8Uk 
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see GetLastError GetDevConfig
 	 */
@@ -3984,12 +3956,12 @@ public class INetSDK
 	 * @param waittime waiting time 
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯ�豸ͨ������
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pChannelName  ͨ����������(һ��ÿ��ͨ������32�ֽڳ�,���������>=16*32�ֽڳ��ȵĻ���) 
-	 * @param nChannelCount ����������,(��λ�ֽ�)
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2iQ/Ih18M(5@C{3F
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pChannelName  M(5@C{;:3eGx(R;0cC?8vM(5@C{JG32WV=Z3$,Ub@oPh7VEd>=16*32WV=Z3$6H5D;:3e) 
+	 * @param nChannelCount ;:3eGx3$6H,(5%N;WV=Z)
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see SetupChannelName
 	 */
@@ -4002,10 +3974,10 @@ public class INetSDK
 	 * @param pbuf  channel name buffering 
 	 * @return true:success, false:failed
 	 * \else
-	 * �����豸ͨ������
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pbuf  ͨ�����ƵĻ���
-	 * @return true:�ɹ�, false:ʧ��
+	 * IhVCIh18M(5@C{3F
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pbuf  M(5@C{3F5D;:3e
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see  Login QueryChannelName
 	 */
@@ -4019,11 +3991,11 @@ public class INetSDK
 	 * @param struOsdString subtitles content 
 	 * @return true:success, false:failed
 	 * \else
-	 * �����豸ͨ���ַ�����
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nChannelNo  ͼ��ͨ����
-	 * @param struOsdString ��Ļ����
-	 * @return true:�ɹ�, false:ʧ��
+	 * IhVCIh18M(5@WV7{5~<S
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nChannelNo  M<OqM(5@:E
+	 * @param struOsdString WVD;DZH]
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see Login
 	 */
@@ -4037,11 +4009,11 @@ public class INetSDK
 	 * @param waittime waiting time
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯ�豸��ǰʱ��
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pDeviceTime  ���յ��豸ʱ��ָ��
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2iQ/Ih1851G0J1<d
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pDeviceTime  =SJU5DIh18J1<dV8Uk
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see SetupDeviceTime
 	 */
@@ -4054,10 +4026,10 @@ public class INetSDK
 	 * @param pDeviceTime set device time pointer
 	 * @return true:success, false:failed
 	 * \else
-	 * �����豸��ǰʱ��
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pDeviceTime ���õ��豸ʱ��ָ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * IhVCIh1851G0J1<d
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pDeviceTime IhVC5DIh18J1<dV8Uk
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see QueryDeviceTime 
 	 */
@@ -4070,10 +4042,10 @@ public class INetSDK
 	 * @param wFlux limit stram to set
 	 * @return true:success, false:failed
 	 * \else
-	 * �����豸��������
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param wFlux Ҫ���õ���������
-	 * @return true:�ɹ�, false:ʧ��
+	 * IhVCIh18O^VFBkAw
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param wFlux R*IhVC5DO^VFBkAw
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       SetMaxFlux(long lLoginID, short wFlux);
@@ -4088,16 +4060,15 @@ public class INetSDK
 	 * @param sGetIP storage IP address pointer(allocation in application,32 byte long) 
 	 * @return true:success, false:failed
 	 * \else
-	 * ͨ���豸���ֻ����豸���к���DDNS��������ѯ�豸IP
-	 * @param pchDVRIP DDNS��������IP 
-	 * @param wDVRPort DDNS�������Ķ˿ں�
-	 * @param sDVRName ����ѯ���豸��
-	 * @param sDVRSerialNumber  �豸���ĳ���,(��λ�ֽ�)
-	 * @param sGetIP ����IP��ַ��ָ��( Ӧ�ó����з���,32�ֽڳ�) 
-	 * @return true:�ɹ�, false:ʧ��
+	 * M(9}Ih18C{WV;rU_Ih18PrAP:EOrDDNS7~NqFw2iQ/Ih18IP
+	 * @param pchDVRIP DDNS7~NqFw5DIP 
+	 * @param wDVRPort DDNS7~NqFw5D6K?Z:E
+	 * @param sDVRName Ky2iQ/5DIh18C{
+	 * @param sDVRSerialNumber  Ih18C{5D3$6H,(5%N;WV=Z)
+	 * @param sGetIP 4"4fIP5XV75DV8Uk( S&SC3LPrVP7VEd,32WV=Z3$) 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
-	
 	public static native boolean       GetDVRIPByResolveSvr(String pchDVRIP, short wDVRPort, byte sDVRName[], byte sDVRSerialNumber[], char sGetIP[]);
 	
 	/**
@@ -4106,22 +4077,23 @@ public class INetSDK
 	 * @param cbSearchDevices recall function
 	 * @return successful return to handle,failed return to 0
 	 * \else
-	 * �첽������������IPC��NVS���豸
-	 * @param cbSearchDevices �ص�����
-	 * @return �ɹ����ؾ��,ʧ�ܷ���0
+	 * Rl2=KQKw>VSrMxDZIPC!"NVS5HIh18
+	 * @param cbSearchDevices ;X5w:/J}
+	 * @return 3I9&75;X>d1z,J'0\75;X0
 	 * \endif
 	 * @see StopSearchDevices 
 	 */
 	public static native long          StartSearchDevices(CB_fSearchDevicesCB cbSearchDevices);
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * stop asynchronously searching LAN internal IPC,NVS and etc.
 	 * @param lSearchHandle {@link com.company.NetSDK.INetSDK#StartSearchDevices() StartSearchDevices}return value 
 	 * @return true:success, false:failed
 	 * \else
-	 * ֹͣ�첽������������IPC��NVS���豸
-	 * @param lSearchHandle {@link com.company.NetSDK.INetSDK#StartSearchDevices() StartSearchDevices}�ķ���ֵ 
-	 * @return true:�ɹ�, false:ʧ��
+	 * M#V9Rl2=KQKw>VSrMxDZIPC!"NVS5HIh18
+	 * @param lSearchHandle {@link com.company.NetSDK.INetSDK#StartSearchDevices() StartSearchDevices}5D75;XV5 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see StartSearchDevices
 	 */
@@ -4134,10 +4106,10 @@ public class INetSDK
 	 * @param dwWaitTime waiting time
 	 * @return true:success, false:failed
 	 * \else
-	 * �޸��豸IP 
-	 * @param pDevNetInfo �޸��豸������ṹ����Ϣ 
-	 * @param dwWaitTime �ȴ�ʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * P^8DIh18IP 
+	 * @param pDevNetInfo P^8DIh185DJdHk=a99LePEO" 
+	 * @param dwWaitTime 5H4}J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see StartSearchDevices StopSearchDevices 
 	 */
@@ -4151,11 +4123,11 @@ public class INetSDK
 	 * @param dwWaitTime waiting time
 	 * @return true:success, false:failed
 	 * \else
-	 * ͨ��IP�����豸
-	 * @param pIpSearchInfo �豸������Ϣ
-	 * @param cbSearchDevices �ص�����
-	 * @param dwWaitTime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * M(9}IP2iURIh18
+	 * @param pIpSearchInfo Ih18KQKwPEO"
+	 * @param cbSearchDevices ;X5w:/J}
+	 * @param dwWaitTime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       SearchDevicesByIPs(DEVICE_IP_SEARCH_INFO pIpSearchInfo, CB_fSearchDevicesCB cbSearchDevices, int dwWaitTime);
@@ -4166,9 +4138,9 @@ public class INetSDK
 	 * @param OnSnapRevMessage snapshot data recall function
 	 * @return true:success, false:failed
 	 * \else
-	 * ����ץͼ�ص� 
-	 * @param OnSnapRevMessage ץͼ���ݻص�����
-	 * @return ��
+	 * IhVCW%M<;X5w 
+	 * @param OnSnapRevMessage W%M<J}>];X5w:/J}
+	 * @return N^
 	 * \endif
 	 */
 	public static native void          SetSnapRevCallBack(CB_fSnapRev OnSnapRevMessage);
@@ -4180,10 +4152,10 @@ public class INetSDK
 	 * @param par snapshot parameter structure 
 	 * @return true:success, false:failed
 	 * \else
-	 * ץͼ����
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param par ץͼ�ṹ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * W%M<GkGs
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param par W%M<=a99Le
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       SnapPicture(long lLoginID, SNAP_PARAMS par);
@@ -4197,12 +4169,12 @@ public class INetSDK
 	 * @param nWaitTime overtime
 	 * @return true:successful, false: failed
 	 * \else
-	 * ��¼�ϴ���ʼ ���ش˴��ϴ��������, ע�ⲻ���� fAttachBurnStateCB �ص������������
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pstInParam �������,���  NET_IN_FILEBURNED_START
-	 * @param pstOutParam �������,��� NET_OUT_FILEBURNED_START
-	 * @param nWaitTime ��ʱʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * ?LB<IO4+?*J< 75;X4K4NIO4+2YWw>d1z, W"Rb2;D\TZ fAttachBurnStateCB ;X5w:/J}@oCf5wSC
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pstInParam JdHk2NJ},Oj<{  NET_IN_FILEBURNED_START
+	 * @param pstOutParam Jd3v2NJ},Oj<{ NET_OUT_FILEBURNED_START
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native long          StartUploadFileBurned(long lLoginID, NET_IN_FILEBURNED_START pstInParam, NET_OUT_FILEBURNED_START pstOutParam, int nWaitTime);
@@ -4213,9 +4185,9 @@ public class INetSDK
 	 * @param lUploadHandle {@link com.company.NetSDK.INetSDK#StartUploadFileBurned() StartUploadFileBurned} return value  
 	 * @return true:successful, false: failed 
 	 * \else
-	 * ��¼�ϴ��ļ�,ע�ⲻ���� fAttachBurnStateCB �ص������������
-	 * @param lUploadHandle {@link com.company.NetSDK.INetSDK#StartUploadFileBurned() StartUploadFileBurned}�ķ���ֵ 
-	 * @return true:�ɹ�, false:ʧ��
+	 * ?LB<IO4+ND<~,W"Rb2;D\TZ fAttachBurnStateCB ;X5w:/J}@oCf5wSC
+	 * @param lUploadHandle {@link com.company.NetSDK.INetSDK#StartUploadFileBurned() StartUploadFileBurned}5D75;XV5 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see StartUploadFileBurned
 	 */
@@ -4227,28 +4199,15 @@ public class INetSDK
 	 * @param lUploadHandle {@link com.company.NetSDK.INetSDK#StartUploadFileBurned() StartUploadFileBurned} return value  
 	 * @return true:successful, false: failed 
 	 * \else
-	 * ��¼�ϴ�ֹͣ,�˽ӿڲ����� fBurnFileCallBack �ص������е���
-	 * @param lUploadHandle {@link com.company.NetSDK.INetSDK#StartUploadFileBurned() StartUploadFileBurned}�ķ���ֵ 
-	 * @return true:�ɹ�, false:ʧ��
+	 * ?LB<IO4+M#V9,4K=S?Z2;D\TZ fBurnFileCallBack ;X5w:/J}VP5wSC
+	 * @param lUploadHandle {@link com.company.NetSDK.INetSDK#StartUploadFileBurned() StartUploadFileBurned}5D75;XV5 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see StartUploadFileBurned
 	 */
 	public static native boolean       StopUploadFileBurned(long lUploadHandle);
 	
-	/**
-	 * \if ENGLISH_LANG
-	 * Get writing status
-	 * @param lAttachHandle {@link com.company.NetSDK.INetSDK#AttachBurnState() AttachBurnState} return value  
-	 * @return true:successful, false: failed
-	 * \else
-	 * ��ȡ��¼״̬
-	 * @param lAttachHandle {@link com.company.NetSDK.INetSDK#AttachBurnState() AttachBurnState}�ķ���ֵ 
-	 * @return true:�ɹ�, false:ʧ��
-	 * \endif
-	 * @see AttachBurnState
-	 */
-	public static native boolean       DetachBurnState(long lAttachHandle);
-	
+
 	/**
 	 * \if ENGLISH_LANG
 	 * Listen writing calibration status
@@ -4258,12 +4217,12 @@ public class INetSDK
 	 * @param nWaitTime overtime
 	 * @return true:successful, false: failed
 	 * \else
-	 * ������¼У��״̬
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pstInParam �������,��� NET_IN_ATTACH_BURN_CHECK
-	 * @param pstOutParam �������,��� NET_OUT_ATTACH_BURN_CHECK
-	 * @param nWaitTime ��ʱʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * <`L}?LB<P#QiW4L,
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pstInParam JdHk2NJ},Oj<{ NET_IN_ATTACH_BURN_CHECK
+	 * @param pstOutParam Jd3v2NJ},Oj<{ NET_OUT_ATTACH_BURN_CHECK
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see DetachBurnCheckState
 	 */
@@ -4275,9 +4234,9 @@ public class INetSDK
 	 * @param lAttachHandle {@link com.company.NetSDK.INetSDK#AttachBurnCheckState() AttachBurnCheckState} return value  
 	 * @return true:successful, false: failed 
 	 * \else
-	 * ȡ��������¼У��״̬,
-	 * @param lAttachHandle {@link com.company.NetSDK.INetSDK#AttachBurnCheckState() AttachBurnCheckState}�ķ���ֵ 
-	 * @return true:�ɹ�, false:ʧ��
+	 * H!O{<`L}?LB<P#QiW4L,,
+	 * @param lAttachHandle {@link com.company.NetSDK.INetSDK#AttachBurnCheckState() AttachBurnCheckState}5D75;XV5 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see AttachBurnCheckState
 	 */
@@ -4291,11 +4250,11 @@ public class INetSDK
 	 * @param nWaitTime waiting time
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯ��Ʒ����
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pstuProdDef �豸��Ʒ����
-	 * @param nWaitTime �ȴ�ʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2iQ/2zF76(Re
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pstuProdDef Ih182zF76(Re
+	 * @param nWaitTime 5H4}J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       QueryProductionDefinition(long lLoginID, SDK_PRODUCTION_DEFNITION pstuProdDef, int nWaitTime);
@@ -4308,11 +4267,11 @@ public class INetSDK
 	 * @param nWaitTime waiting time
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯ�����ӿ���Ϣ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pstuCardInfo �������
-	 * @param nWaitTime �ȴ�ʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2iQ/>XUsWS?(PEO"
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pstuCardInfo JdHk2NJ}
+	 * @param nWaitTime 5H4}J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       QueryMatrixCardInfo(long lLoginID, SDK_MATRIX_CARD_LIST pstuCardInfo, int nWaitTime);
@@ -4326,12 +4285,12 @@ public class INetSDK
 	 * @param nWaitTime waiting time 
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯ�ָ�����
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nChannel ���ͨ���� 
-	 * @param pstuCaps ͨ���ָ�����
-	 * @param nWaitTime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2iQ/7V8nD\A&
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nChannel Jd3vM(5@:E 
+	 * @param pstuCaps M(5@7V8nD\A&
+	 * @param nWaitTime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       GetSplitCaps(long lLoginID, int nChannel, SDK_SPLIT_CAPS pstuCaps, int nWaitTime);
@@ -4347,14 +4306,14 @@ public class INetSDK
 	 * @param nWaitTime  waiting time
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯ��ʾԴ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nChannel ���ͨ����
-	 * @param nWindow ���ں� 
-	 * @param pstuSplitSrc ��ʾԴ����,�û������ڴ� 
-	 * @param pnRetCount ���ص���ʾԴ����
-	 * @param nWaitTime  �ȴ�ʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2iQ/OTJ>T4
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nChannel Jd3vM(5@:E
+	 * @param nWindow 40?Z:E 
+	 * @param pstuSplitSrc OTJ>T4J}Wi,SC;'IjGkDZ4f 
+	 * @param pnRetCount 75;X5DOTJ>T4J}A?
+	 * @param nWaitTime  5H4}J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       GetSplitSource(long lLoginID, int nChannel, int nWindow, SDK_SPLIT_SOURCE pstuSplitSrc[], Integer pnRetCount, int nWaitTime);
@@ -4370,14 +4329,14 @@ public class INetSDK
 	 * @param nWaitTime  waiting time
 	 * @return true:success, false:failed
 	 * \else
-	 * ������ʾԴ, ֧���������
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nChannel ���ͨ����
-	 * @param nWindow ���ں�
-	 * @param pstuSplitSrc ��ʾԴ����
-	 * @param nSrcCount ���õ���ʾԴ���� 
-	 * @param nWaitTime  �ȴ�ʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * IhVCOTJ>T4, V'3VJd3v2NJ}
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nChannel Jd3vM(5@:E
+	 * @param nWindow 40?Z:E
+	 * @param pstuSplitSrc OTJ>T4J}Wi
+	 * @param nSrcCount IhVC5DOTJ>T4J}A? 
+	 * @param nWaitTime  5H4}J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       SetSplitSource(long lLoginID, int nChannel, int nWindow, SDK_SPLIT_SOURCE pstuSplitSrc[], int nSrcCount, int nWaitTime);
@@ -4391,12 +4350,12 @@ public class INetSDK
 	 * @param nWaitTime waiting time
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯ�ָ�ģʽ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nChannel ���ͨ����
-	 * @param pstuSplitSrc �ָ�ģʽ��Ϣ,�û������ڴ�
-	 * @param nWaitTime �ȴ�ʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2iQ/7V8nD#J=
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nChannel Jd3vM(5@:E
+	 * @param pstuSplitSrc 7V8nD#J=PEO",SC;'7VEdDZ4f
+	 * @param nWaitTime 5H4}J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       GetSplitMode(long lLoginID, int nChannel, SDK_SPLIT_MODE_INFO pstuSplitSrc, int nWaitTime);
@@ -4410,12 +4369,12 @@ public class INetSDK
 	 * @param nWaitTime waiting time
 	 * @return true:success, false:failed
 	 * \else
-	 * ���÷ָ�ģʽ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nChannel ���ͨ����
-	 * @param pstuSplitSrc  �ָ�ģʽ��Ϣ
-	 * @param nWaitTime �ȴ�ʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * IhVC7V8nD#J=
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nChannel Jd3vM(5@:E
+	 * @param pstuSplitSrc  7V8nD#J=PEO"
+	 * @param nWaitTime 5H4}J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       SetSplitMode(long lLoginID, int nChannel, SDK_SPLIT_MODE_INFO pstuSplitSrc, int nWaitTime);
@@ -4429,31 +4388,50 @@ public class INetSDK
 	 * @param nWaitTime wait 
 	 * @return true:success, false:failed
 	 * \else
-	 * ���ô���λ��
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pInParam ���ô���λ��������� 
-	 * @param pOutParam ���ô���λ���������
-	 * @param nWaitTime �ȴ�ʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * IhVC40?ZN;VC
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pInParam IhVC40?ZN;VCJdHk2NJ} 
+	 * @param pOutParam IhVC40?ZN;VCJd3v2NJ}
+	 * @param nWaitTime 5H4}J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       SetSplitWindowRect(long lLoginID, SDK_IN_SPLIT_SET_RECT pInParam, SDK_OUT_SPLIT_SET_RECT pOutParam, int nWaitTime);
 	
 	/**
 	 * \if ENGLISH_LANG
+	 * get window position
+	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInParam get window input 
+	 * @param pOutParam get window output 
+	 * @param nWaitTime wait 
+	 * @return true:success, false:failed
+	 * \else
+	 * ;qH!40?ZN;VC
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pInParam ;qH!40?ZN;VCJdHk2NJ} 
+	 * @param pOutParam ;qH!40?ZN;VCJd3v2NJ}
+	 * @param nWaitTime 5H4}J1<d
+	 * @return true:3I9&, false:J'0\
+	 * \endif
+	 */
+	public static native boolean       GetSplitWindowRect(long lLoginID, SDK_IN_SPLIT_GET_RECT pInParam, SDK_OUT_SPLIT_GET_RECT pOutParam, int nWaitTime);
+	
+	/**
+	 * \if ENGLISH_LANG
 	 * open
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
 	 * @param pInParam open input
 	 * @param pOutParam open output
 	 * @param nWaitTime wait
 	 * @return true:success, false:failed
 	 * \else
-	 * ����
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pInParam �����������
-	 * @param pOutParam �����������
-	 * @param nWaitTime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * ?*40
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pInParam ?*40JdHk2NJ}
+	 * @param pOutParam ?*40Jd3v2NJ}
+	 * @param nWaitTime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see CloseSplitWindow 
 	 */
@@ -4468,12 +4446,12 @@ public class INetSDK
 	 * @param waittime waiting time
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ȡ��̨��Ϣ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param dwProtocolIndex ��̨Э���
-	 * @param lpOutBuffer ������̨���Խṹ��( PTZ_OPT_ATTR )�Ļ����� 
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * ;qH!TFL(PEO"
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param dwProtocolIndex TFL(P-Ri:E
+	 * @param lpOutBuffer 75;XTFL(JtPT=a99Le( PTZ_OPT_ATTR )5D;:4fGx 
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see Login
 	 */
@@ -4488,12 +4466,12 @@ public class INetSDK
 	 * @param nWaitTime wait time
 	 * @return true:success, false:failed
 	 * \else
-	 * �ش�
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pInParam �ش��������
-	 * @param pOutParam �ش��������
-	 * @param nWaitTime �ȴ�ʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * 9X40
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pInParam 9X40JdHk2NJ}
+	 * @param pOutParam 9X40Jd3v2NJ}
+	 * @param nWaitTime 5H4}J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see OpenSplitWindow 
 	 */
@@ -4508,12 +4486,12 @@ public class INetSDK
 	 * @param nWaitTime wait time
 	 * @return true:success, false:failed
 	 * \else
-	 * ���ô��ڴ���
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pInParam ���ͨ����
-	 * @param pOutParam ���ں� 
-	 * @param nWaitTime �ȴ�ʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * IhVC40?Z4NPr
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pInParam Jd3vM(5@:E
+	 * @param pOutParam 40?Z:E 
+	 * @param nWaitTime 5H4}J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       SetSplitTopWindow(long lLoginID, SDK_IN_SPLIT_SET_TOP_WINDOW pInParam, SDK_OUT_SPLIT_SET_TOP_WINDOW pOutParam, int nWaitTime);
@@ -4527,12 +4505,12 @@ public class INetSDK
 	 * @param nWaitTime wait time
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ȡ��ǰ��ʾ�Ĵ�����Ϣ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pInParam ��ȡ��ǰ��ʾ�Ĵ�����Ϣ�������
-	 * @param pOutParam ��ȡ��ǰ��ʾ�Ĵ�����Ϣ�������
-	 * @param nWaitTime �ȴ�ʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * ;qH!51G0OTJ>5D40?ZPEO"
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pInParam ;qH!51G0OTJ>5D40?ZPEO"JdHk2NJ}
+	 * @param pOutParam ;qH!51G0OTJ>5D40?ZPEO"Jd3v2NJ}
+	 * @param nWaitTime 5H4}J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       GetSplitWindowsInfo(long lLoginID, SDK_IN_SPLIT_GET_WINDOWS pInParam, SDK_OUT_SPLIT_GET_WINDOWS pOutParam, int nWaitTime);
@@ -4546,12 +4524,12 @@ public class INetSDK
 	 * @param nWaitTime overtime
 	 * @return true:successful, false: failed 
 	 * \else
-	 * ��Դ����
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pInParam �������,��� SDK_IN_WM_POWER_CTRL
-	 * @param pOutParam �������,��� SDK_OUT_WM_POWER_CTRL
-	 * @param nWaitTime ��ʱʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * 5gT4?XVF
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pInParam JdHk2NJ},Oj<{ SDK_IN_WM_POWER_CTRL
+	 * @param pOutParam Jd3v2NJ},Oj<{ SDK_OUT_WM_POWER_CTRL
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       PowerControl(long lLoginID, SDK_IN_WM_POWER_CTRL pInParam, SDK_OUT_WM_POWER_CTRL pOutParam, int nWaitTime);
@@ -4565,12 +4543,12 @@ public class INetSDK
 	 * @param nWaitTime overtime
 	 * @return true:successful, false: failed 
 	 * \else
-	 * ����Ԥ��
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pInParam �������,��� SDK_IN_WM_LOAD_COLLECTION
-	 * @param pOutParam �������,��� SDK_OUT_WM_LOAD_COLLECTION
-	 * @param nWaitTime ��ʱʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * TXHkT$08
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pInParam JdHk2NJ},Oj<{ SDK_IN_WM_LOAD_COLLECTION
+	 * @param pOutParam Jd3v2NJ},Oj<{ SDK_OUT_WM_LOAD_COLLECTION
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see SaveMonitorWallCollection
 	 */
@@ -4585,12 +4563,12 @@ public class INetSDK
 	 * @param nWaitTime overtime
 	 * @return true:successful, false: failed 
 	 * \else
-	 * ����Ԥ��
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pInParam �������,��� SDK_IN_WM_SAVE_COLLECTION
-	 * @param pOutParam �������,��� SDK_OUT_WM_SAVE_COLLECTION
-	 * @param nWaitTime ��ʱʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * 1#4fT$08
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pInParam JdHk2NJ},Oj<{ SDK_IN_WM_SAVE_COLLECTION
+	 * @param pOutParam Jd3v2NJ},Oj<{ SDK_OUT_WM_SAVE_COLLECTION
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see LoadMonitorWallCollection
 	 */
@@ -4605,12 +4583,12 @@ public class INetSDK
 	 * @param nWaitTime overtime
 	 * @return true:successful, false: failed 
 	 * \else
-	 * ��ȡ����ǽԤ��
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pInParam �������,��� SDK_IN_WM_GET_COLLECTIONS
-	 * @param pOutParam �������,��� SDK_OUT_WM_GET_COLLECTIONS
-	 * @param nWaitTime ��ʱʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * ;qH!5gJSG=T$08
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pInParam JdHk2NJ},Oj<{ SDK_IN_WM_GET_COLLECTIONS
+	 * @param pOutParam Jd3v2NJ},Oj<{ SDK_OUT_WM_GET_COLLECTIONS
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       GetMonitorWallCollections(long lLoginID, SDK_IN_WM_GET_COLLECTIONS pInParam, SDK_OUT_WM_GET_COLLECTIONS pOutParam, int nWaitTime);
@@ -4624,12 +4602,12 @@ public class INetSDK
 	 * @param nWaitTime overtime
 	 * @return true:successful, false: failed 
 	 * \else
-	 * ����ǽԤ��������
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pInParam �������,��� SDK_IN_WM_RENAME_COLLECTION
-	 * @param pOutParam �������,��� SDK_OUT_WM_RENAME_COLLECTION
-	 * @param nWaitTime ��ʱʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * 5gJSG=T$08VXC|C{
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pInParam JdHk2NJ},Oj<{ SDK_IN_WM_RENAME_COLLECTION
+	 * @param pOutParam Jd3v2NJ},Oj<{ SDK_OUT_WM_RENAME_COLLECTION
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       RenameMonitorWallCollection(long lLoginID, SDK_IN_WM_RENAME_COLLECTION pInParam, SDK_OUT_WM_RENAME_COLLECTION pOutParam, int nWaitTime);
@@ -4641,7 +4619,7 @@ public class INetSDK
 	 * @param nTransType type as follows: 
 	 * <table>
 	 * <tr><td>enumeration type</td><td>meaning </td></tr>
-	 * <tr><td>SDK_DEV_UPGRADEFILETRANS_START </td><td>0x0000 ��start update file uploading(corresponding structure SDKDEV_UPGRADE_FILE_INFO ) </td></tr>
+	 * <tr><td>SDK_DEV_UPGRADEFILETRANS_START </td><td>0x0000 ?*start update file uploading(corresponding structure SDKDEV_UPGRADE_FILE_INFO ) </td></tr>
 	 * <tr><td>SDK_DEV_UPGRADEFILETRANS_SEND </td><td>0x0001send update file</td></tr>
 	 * <tr><td>SDK_DEV_UPGRADEFILETRANS_STOP </td><td>0x0002 stop sending update file</td></tr>
 	 * <tr><td>SDK_DEV_FILETRANS_STOP</td><td>0x002B stop file uploading</td></tr>
@@ -4657,26 +4635,26 @@ public class INetSDK
 	 * @param nWaitTime	overtime of waiting 
 	 * @return true:success, false:failed
 	 * \else
-	 * �ļ��ϴ��ӿ�
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nTransType �ӿڴ����ļ�����
+	 * ND<~IO4+=S?Z
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nTransType =S?Z4+JdND<~@`PM
 	 * <table>
-	 * <tr><td>ö������</td><td>���� </td></tr>
-	 * <tr><td>SDK_DEV_UPGRADEFILETRANS_START</td><td>0x0000 ��ʼ�����ļ��ϴ�(��Ӧ�ṹ�� SDKDEV_UPGRADE_FILE_INFO ) </td></tr>
-	 * <tr><td>SDK_DEV_UPGRADEFILETRANS_SEND</td><td>0x0001 ���������ļ� </td></tr>
-	 * <tr><td>SDK_DEV_UPGRADEFILETRANS_STOP</td><td>0x0002 ֹͣ���������ļ� </td></tr>
-	 * <tr><td>SDK_DEV_FILETRANS_STOP 0x002B</td><td>ֹͣ�ļ��ϴ� </td></tr>
-	 * <tr><td>SDK_DEV_FILETRANS_BURN 0x002C</td><td>��¼�ļ��ϴ� </td></tr>
+	 * <tr><td>C6>Y@`PM</td><td>RbRe </td></tr>
+	 * <tr><td>SDK_DEV_UPGRADEFILETRANS_START</td><td>0x0000 ?*J<I}<6ND<~IO4+(6TS&=a99Le SDKDEV_UPGRADE_FILE_INFO ) </td></tr>
+	 * <tr><td>SDK_DEV_UPGRADEFILETRANS_SEND</td><td>0x0001 7"KMI}<6ND<~ </td></tr>
+	 * <tr><td>SDK_DEV_UPGRADEFILETRANS_STOP</td><td>0x0002 M#V97"KMI}<6ND<~ </td></tr>
+	 * <tr><td>SDK_DEV_FILETRANS_STOP 0x002B</td><td>M#V9ND<~IO4+ </td></tr>
+	 * <tr><td>SDK_DEV_FILETRANS_BURN 0x002C</td><td>?LB<ND<~IO4+ </td></tr>
 	 * </table>
-	 * @param szInBuf nInBufLen���ڵ���szInBuf�ṹ��Ĵ�С
+	 * @param szInBuf nInBufLen4sSZ5HSZszInBuf=a99Le5D4sP!
 	 * <table>
-	 * <tr><td>ö������</td><td>��ʾ����</td><td>szInBuf </td></tr>
-	 * <tr><td>SDK_DEV_FILETRANS_BURN</td><td>������¼�ļ��ϴ� </td><td>SDKDEV_BURNFILE_TRANS_CFG </td></tr>
-	 * <tr><td>SDK_DEV_FILETRANS_STO</td><td>ֹͣ�ļ��ϴ�</td><td>LONG,����Ϊ��ʼ�ļ��ϴ��󷵻صľ�� </td></tr>
+	 * <tr><td>C6>Y@`PM</td><td>1mJ>:,Re</td><td>szInBuf </td></tr>
+	 * <tr><td>SDK_DEV_FILETRANS_BURN</td><td>8=<~?LB<ND<~IO4+ </td><td>SDKDEV_BURNFILE_TRANS_CFG </td></tr>
+	 * <tr><td>SDK_DEV_FILETRANS_STO</td><td>M#V9ND<~IO4+</td><td>LONG,>_LeN*?*J<ND<~IO4+:s75;X5D>d1z </td></tr>
 	 * </table>
-	 * @param dwUserData �ص�����
-	 * @param nWaitTime �ȴ���ʱʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * @param dwUserData ;X5w:/J}
+	 * @param nWaitTime 5H4}3,J1J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native long          FileTransmit(long lLoginID, int nTransType, char szInBuf[], CB_fTransFileCallBack dwUserData, int nWaitTime);
@@ -4690,12 +4668,12 @@ public class INetSDK
 	 * @param nWaitTime overtime
 	 * @return true:successful, false: failed 
 	 * \else
-	 * ������ʾԴ, ֧���������
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pInParam �������,��� NET_IN_SET_SPLIT_SOURCE
-	 * @param pOutParam �������,��� NET_OUT_SET_SPLIT_SOURCE
-	 * @param nWaitTime ��ʱʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * IhVCOTJ>T4, V'3VJd3v2NJ}
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pInParam JdHk2NJ},Oj<{ NET_IN_SET_SPLIT_SOURCE
+	 * @param pOutParam Jd3v2NJ},Oj<{ NET_OUT_SET_SPLIT_SOURCE
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       SetSplitSourceEx(long lLoginID, NET_IN_SET_SPLIT_SOURCE pInParam, NET_OUT_SET_SPLIT_SOURCE pOutParam, int nWaitTime);
@@ -4712,19 +4690,18 @@ public class INetSDK
 	 * @param cbLogin async registration device call function
 	 * @return true:successful, false: failed
 	 * \else
-	 * �첽���豸ע�� , nSpecCap = 0ΪTCP��ʽ�µĵ���,nSpecCap = 6Ϊֻ���������µĵ���
-	 * @param pchDVRIP �豸IP 
-	 * @param wDVRPort �豸�˿�
-	 * @param pchUserName �û���
-	 * @param pchPassword �û�����
-	 * @param nSpecCap �豸֧�ֵ�����
-	 * @param pCapParam ��nSpecCap �Ĳ������,nSpecCap = 2ʱ,pCapParam����豸���к��ִ�(����dvr��¼) 
-	 * @param cbLogin �첽ע���豸�ص�����
-	 * @return true:�ɹ�, false:ʧ��
+	 * Rl2=OrIh18W"2a , nSpecCap = 0N*TCP7=J=OB5D5GHk,nSpecCap = 6N*V;=(VwA,=SOB5D5GHk
+	 * @param pchDVRIP Ih18IP 
+	 * @param wDVRPort Ih186K?Z
+	 * @param pchUserName SC;'C{
+	 * @param pchPassword SC;'C\Bk
+	 * @param nSpecCap Ih18V'3V5DD\A&
+	 * @param pCapParam 6TnSpecCap 5D293d2NJ},nSpecCap = 2J1,pCapParamLn3dIh18PrAP:EWV4.(35TXdvr5GB<) 
+	 * @param cbLogin Rl2=W"2aIh18;X5w:/J}
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see StopLogin
 	 */
-	
 	public static native long          StartLogin(String pchDVRIP, int wDVRPort, String pchUserName, String pchPassword, int nSpecCap, String pCapParam, CB_fHaveLogin cbLogin);
 	
 	/**
@@ -4740,13 +4717,13 @@ public class INetSDK
 	 * @param dwWaitTime waiting time
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ʵʱ����--ͬ���ӿ�, ��dwUser��Ҫͬʱʵ��fRealDataCallBackEx��fRealPlayDisConnect
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nChannelID ʵʱ����ͨ����,���rTypeΪRType_Multiplay�ò���������rTypeΪRType_Multiplay_1~RType_Multiplay_16ʱ,nChannelID������Ԥ���Ļ���,�統RType_Multiplay_4ʱ,nChannelIDΪ4��5��6��7����һ��ֵ��ʾԤ����5����7ͨ�����Ļ���Ԥ��
-	 * @param rType ö������,���  SDK_RealPlayType
-	 * @param dwUser ʵʱ�������ݻص�����
-	 * @param dwWaitTime ��ʱʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * 4r?*J5J1<`JS--M,2==S?Z, 8CdwUserPhR*M,J1J5OVfRealDataCallBackEx:MfRealPlayDisConnect
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nChannelID J5J1<`JSM(5@:E,Hg9{rTypeN*RType_Multiplay8C2NJ}1#At51rTypeN*RType_Multiplay_1~RType_Multiplay_16J1,nChannelID>v6(AKT$@@5D;-Cf,Hg51RType_Multiplay_4J1,nChannelIDN*4!"5!"6!"7FdVPR;8vV51mJ>T$@@5Z55=5Z7M(5@5DKD;-CfT$@@
+	 * @param rType C6>Y@`PM,Oj<{  SDK_RealPlayType
+	 * @param dwUser J5J1<`JSJ}>];X5w:/J}
+	 * @param dwWaitTime 3,J1J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native long          StartRealPlay(long lLoginID, int nChannelID, int rType, Object dwUser, int dwWaitTime);
@@ -4771,23 +4748,23 @@ public class INetSDK
 	 * @param waittime search overtime length 
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯĳ�µĸ����Ƿ����¼���ļ�
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nChannelId ͨ����
-	 * @param nRecordFileType ¼���ļ�����
+	 * 2iQ/D3TB5D8wLlJG7q4fTZB<OqND<~
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nChannelId M(5@:E
+	 * @param nRecordFileType B<OqND<~@`PM
 	 * <table>
-	 * <tr><td>0 </td><td>����¼���ļ�  </td></tr>
-	 * <tr><td>1</td><td> �ⲿ���� </td></tr>
-	 * <tr><td>2</td><td> ��̬��ⱨ�� </td></tr>
-	 * <tr><td>3 </td><td>���б��� </td></tr>
-	 * <tr><td>4</td><td> ���Ų�ѯ  </td></tr>
-	 * <tr><td>5</td><td> ���������ѯ</td></tr>
+	 * <tr><td>0 </td><td>KySPB<OqND<~  </td></tr>
+	 * <tr><td>1</td><td> Mb2?1(>/ </td></tr>
+	 * <tr><td>2</td><td> 6/L,<l2b1(>/ </td></tr>
+	 * <tr><td>3 </td><td>KySP1(>/ </td></tr>
+	 * <tr><td>4</td><td> ?(:E2iQ/  </td></tr>
+	 * <tr><td>5</td><td> Wi:OLu<~2iQ/</td></tr>
 	 * </table> 
-	 * @param tmMonth �·� 
-	 * @param pchCardid ����(��ѯ����Ϊ���Ų�ѯʱ��Ч,���������NULL) 
-	 * @param pRecordStatus ĳ�µĸ����Ƿ����¼���״̬��Ϣ 
-	 * @param waittime ��ʱʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * @param tmMonth TB7] 
+	 * @param pchCardid ?(:E(2iQ/@`PMN*?(:E2iQ/J1SPP',FdK{Gi?vLnNULL) 
+	 * @param pRecordStatus D3TB5D8wLlJG7q4fTZB<Oq5DW4L,PEO" 
+	 * @param waittime 3,J1J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       QueryRecordStatus(long lLoginID, int nChannelId, int nRecordFileType, NET_TIME tmMonth, String pchCardid, NET_RECORD_STATUS pRecordStatus, int waittime);
@@ -4819,30 +4796,30 @@ public class INetSDK
 	 * @param bTime search by time or not(invlid now)
 	 * @return true:success, false:failed
 	 * \else
-	 * ���ٲ�ѯʱ����ڵ�¼���ļ�,���ʱ�����¼�񳬹�16��ʱ,ֻ����ʱ�������16��¼��
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nChannelId ͨ��ID,��0��ʼ
-	 * @param nRecordFileType ¼���ļ�����\n
-	 * 0 ����¼���ļ�  \n
-	 * 1 �ⲿ���� \n
-	 * 2 ��̬��ⱨ�� \n
-	 * 3 ���б��� \n
-	 * 4 ���Ų�ѯ  \n
-	 * 5 ���������ѯ\n
-	 * 6 ¼��λ����ƫ��������\n
-	 * 8 �����Ų�ѯͼƬ(Ŀǰ��HB-U��NVS�����ͺŵ��豸֧��)\n
-	 * 9 ��ѯͼƬ(Ŀǰ��HB-U��NVS�����ͺŵ��豸֧��)\n
-	 * 10 ���ֶβ�ѯ \n
-	 * 15 �����������ݽṹ(��������) \n
-	 * 16 ��ѯ����͸��������¼���ļ� 
-	 * @param time_start ¼��ʼʱ��
-	 * @param time_end ¼�����ʱ��
-	 * @param cardid ����,ֻ��Կ��Ų�ѯ��Ч,��������¿�����NULL 
-	 * @param fileinfo ���ص�¼���ļ���Ϣ,��һ��LPNET_RECORDFILE_INFO�ṹ����
-	 * @param filecount ���ص��ļ�����,��������������ֻ�ܲ鵽������Ϊֹ��¼���¼
-	 * @param waittime �ȴ�ʱ��  
-	 * @param bTime �Ƿ�ʱ���(Ŀǰ��Ч)
-	 * @return true:�ɹ�, false:ʧ��
+	 * ?lKY2iQ/J1<d6NDZ5DB<OqND<~,Hg9{J1<d6NDZB<Oq3,9}16LuJ1,V;75;XJ1<dWnTg5D166NB<Oq
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nChannelId M(5@ID,4S0?*J<
+	 * @param nRecordFileType B<OqND<~@`PM\n
+	 * 0 KySPB<OqND<~  \n
+	 * 1 Mb2?1(>/ \n
+	 * 2 6/L,<l2b1(>/ \n
+	 * 3 KySP1(>/ \n
+	 * 4 ?(:E2iQ/  \n
+	 * 5 Wi:OLu<~2iQ/\n
+	 * 6 B<OqN;VCSkF+RFA?3$6H\n
+	 * 8 04?(:E2iQ/M<F,(D?G0=vHB-U:MNVSLXJbPM:E5DIh18V'3V)\n
+	 * 9 2iQ/M<F,(D?G0=vHB-U:MNVSLXJbPM:E5DIh18V'3V)\n
+	 * 10 04WV6N2iQ/ \n
+	 * 15 75;XMxBgJ}>]=a99(=pGEMx0I) \n
+	 * 16 2iQ/KySPM8Cw4.J}>]B<OqND<~ 
+	 * @param time_start B<Oq?*J<J1<d
+	 * @param time_end B<Oq=aJxJ1<d
+	 * @param cardid ?(:E,V;Uk6T?(:E2iQ/SPP',FdK{Gi?vOB?IRTLnNULL 
+	 * @param fileinfo 75;X5DB<OqND<~PEO",JGR;8vLPNET_RECORDFILE_INFO=a99J}Wi
+	 * @param filecount 75;X5DND<~8vJ},JtSZJd3v2NJ}Wn4sV;D\2i5=;:3eBzN*V95DB<Oq<GB<
+	 * @param waittime 5H4}J1<d  
+	 * @param bTime JG7q04J1<d2i(D?G0N^P')
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see Login PlayBackByRecordFile PlayBackByRecordFileEx PausePlayBack SeekPlayBack StopPlayBack GetPlayBackOsdTime StepPlayBack GetFramePlayBack SetFramePlayBack SlowPlayBack FastPlayBack
 	 */
@@ -4859,13 +4836,13 @@ public class INetSDK
 	 * @param nWaitTime overtime of waiting 
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯ����¼��ʱ��
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nRecordFileType ¼������,��� QueryRecordFile
-	 * @param pchCardid ����,ֻ��Կ��Ų�ѯ��Ч,��������¿�����NULL 
-	 * @param pFurthrestTime ��������¼����Ϣ�ṹ�� 
-	 * @param nWaitTime ��ʱʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2iQ/WnTgB<OqJ1<d
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nRecordFileType B<Oq@`PM,Oj<{ QueryRecordFile
+	 * @param pchCardid ?(:E,V;Uk6T?(:E2iQ/SPP',FdK{Gi?vOB?IRTLnNULL 
+	 * @param pFurthrestTime 75;XWnTgB<OqPEO"=a99Le 
+	 * @param nWaitTime 3,J1J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see QueryRecordFile
 	 */
@@ -4882,14 +4859,14 @@ public class INetSDK
 	 * @param dwWaitTime waiting time 
 	 * @return successful return to net playback ID,failed return to 0
 	 * \else
-	 * ���ļ���ʽ�ط�--�ص��ط��ж��¼�
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param lpRecordFile ¼���ļ���Ϣ
-	 * @param cbDownLoadPos ���Ȼص�����
-	 * @param fDownLoadDataCallBack  ���ݻص�����
-	 * @param fDisConnectCallBack ��Ƶ���ӶϿ��ص�����
-	 * @param dwWaitTime �ȴ�ʱ�� 
-	 * @return �ɹ���������ط�ID,ʧ�ܷ���0
+	 * 04ND<~7=J=;X7E--;X5w;X7EVP6OJB<~
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param lpRecordFile B<OqND<~PEO"
+	 * @param cbDownLoadPos =x6H;X5w:/J}
+	 * @param fDownLoadDataCallBack  J}>];X5w:/J}
+	 * @param fDisConnectCallBack JSF5<`JS6O?*;X5w:/J}
+	 * @param dwWaitTime 5H4}J1<d 
+	 * @return 3I9&75;XMxBg;X7EID,J'0\75;X0
 	 * \endif
 	 * @see Login PausePlayBack SeekPlayBack StopPlayBack GetPlayBackOsdTime StepPlayBack GetFramePlayBack SetFramePlayBack SlowPlayBack FastPlayBack 
 	 */
@@ -4908,16 +4885,16 @@ public class INetSDK
 	 * @param dwWaitTime waiting time 
 	 * @return successful return to net playback ID, failed return to 0
 	 * \else
-	 * ��ʱ�䷽ʽ�ط�--�ص��ط��ж��¼�
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nChannelID ͼ��ͨ����,����ָ��
-	 * @param lpStartTime ��ʼʱ��
-	 * @param lpStopTime ����ʱ��
-	 * @param cbDownLoadPos ���Ȼص��û�����
-	 * @param fDownLoadDataCallBack  ���ݻص�����
-	 * @param fDisConnectCallBack  ��Ƶ���ӶϿ��ص�����
-	 * @param dwWaitTime �ȴ�ʱ��
-	 * @return �ɹ���������ط�ID,ʧ�ܷ���0
+	 * 04J1<d7=J=;X7E--;X5w;X7EVP6OJB<~
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nChannelID M<OqM(5@:E,1XPkV86(
+	 * @param lpStartTime ?*J<J1<d
+	 * @param lpStopTime =aJxJ1<d
+	 * @param cbDownLoadPos =x6H;X5wSC;'2NJ}
+	 * @param fDownLoadDataCallBack  J}>];X5w:/J}
+	 * @param fDisConnectCallBack  JSF5<`JS6O?*;X5w:/J}
+	 * @param dwWaitTime 5H4}J1<d
+	 * @return 3I9&75;XMxBg;X7EID,J'0\75;X0
 	 * \endif
 	 * @see Login PausePlayBack SeekPlayBack StopPlayBack GetPlayBackOsdTime StepPlayBack GetFramePlayBack SetFramePlayBack SlowPlayBack FastPlayBack FramCotrolPlayBackByTime
 	 */
@@ -4934,13 +4911,13 @@ public class INetSDK
 	 * @param dwUser user info
 	 * @return true:successful, false: failed 
 	 * \else
-	 * ��ƵŨ���ļ��ط� 
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param lpRecordFile �������,��� NET_SYNOPSISFILE_INFO
-	 * @param cbDownLoadPos �طŽ��Ȼص�����
-	 * @param fDownLoadDataCallBack �ط����ݻص�����
-	 * @param dwUser �û���Ϣ
-	 * @return true:�ɹ�, false:ʧ��
+	 * JSF5E(KuND<~;X7E 
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param lpRecordFile JdHk2NJ},Oj<{ NET_SYNOPSISFILE_INFO
+	 * @param cbDownLoadPos ;X7E=x6H;X5w:/J}
+	 * @param fDownLoadDataCallBack ;X7EJ}>];X5w:/J}
+	 * @param dwUser SC;'PEO"
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native long          PlayBackBySynopsisFile(long lLoginID, NET_SYNOPSISFILE_INFO lpRecordFile, CB_fDownLoadPosCallBack cbDownLoadPos, CB_fDataCallBack fDownLoadDataCallBack, Object dwUser);
@@ -4960,18 +4937,18 @@ public class INetSDK
 	 * @param waittime waiting time 
 	 * @return true:success, false:failed
 	 * \else
-	 * ���������ͨ��¼��״̬
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param pRSBuffer ¼��״̬������,�ܳ��Ȳ���С��ͨ����
+	 * 2i5@8(BkAwM(5@B<OqW4L,
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param pRSBuffer B<OqW4L,;:3eGx,W\3$6H2;D\P!SZM(5@J}
 	 * <table>
-	 * <tr><td>��ֵ</td><td>���� </td></tr>
-	 * <tr><td>0</td><td>Ϊ��¼�� </td></tr>
-	 * <tr><td>1</td><td>�ֶ�¼�� </td></tr>
-	 * <tr><td>2</td><td>Ϊ�Զ�¼�� </td></tr>
+	 * <tr><td>J}V5</td><td>RbRe </td></tr>
+	 * <tr><td>0</td><td>N*2;B<Oq </td></tr>
+	 * <tr><td>1</td><td>JV6/B<Oq </td></tr>
+	 * <tr><td>2</td><td>N*WT6/B<Oq </td></tr>
 	 * </table>
-	 * @param nRSBufferlen ����pRSBuffer������¼��״̬��Ϣ����,ÿһ��ͨ��Ϊ1���ֽ� 
-	 * @param waittime �ȴ�ʱ��  
-	 * @return true:�ɹ�, false:ʧ��
+	 * @param nRSBufferlen 75;XpRSBuffer;:3eVPB<OqW4L,PEO"3$6H,C?R;8vM(5@N*18vWV=Z 
+	 * @param waittime 5H4}J1<d  
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       QueryExtraRecordState(long lLoginID, byte pRSBuffer[], Integer nRSBufferlen, int waittime);
@@ -4996,23 +4973,23 @@ public class INetSDK
 	 * @param waittime  waiting time 
 	 * @return true:successful, false: failed 
 	 * \else
-	 * ��ѯԶ���豸״̬
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nType ��ѯ����
+	 * 2iQ/T63LIh18W4L,
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nType 2iQ/@`PM
 	 * <table>
-	 * <tr><td>��ֵ</td><td>¼���ļ����� </td></tr>
-	 * <tr><td>0</td><td>����¼���ļ�  </td></tr>
-	 * <tr><td>1</td><td>�ⲿ���� </td></tr>
-	 * <tr><td>2</td><td>��̬��ⱨ�� </td></tr>
-	 * <tr><td>3</td><td>���б��� </td></tr>
-	 * <tr><td>4</td><td>���Ų�ѯ  </td></tr>
-	 * <tr><td>5</td><td>���������ѯ </td></tr>
+	 * <tr><td>J}V5</td><td>B<OsND<~@`PM </td></tr>
+	 * <tr><td>0</td><td>KySPB<OqND<~  </td></tr>
+	 * <tr><td>1</td><td>Mb2?1(>/ </td></tr>
+	 * <tr><td>2</td><td>6/L,<l2b1(>/ </td></tr>
+	 * <tr><td>3</td><td>KySP1(>/ </td></tr>
+	 * <tr><td>4</td><td>?(:E2iQ/  </td></tr>
+	 * <tr><td>5</td><td>Wi:OLu<~2iQ/ </td></tr>
 	 * </table>
-	 * @param nChannelID ͨ����
-	 * @param pRSBuffer �������,���ѯ���Ͷ�Ӧ
-	 * @param pRetLen ������ݳ���
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * @param nChannelID M(5@:E
+	 * @param pRSBuffer Jd3v2NJ},Sk2iQ/@`PM6TS&
+	 * @param pRetLen Jd3vDZH]3$6H
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       QueryRemotDevState(long lLoginID, int nType, int nChannelID, Object pRSBuffer, Integer pRetLen, int waittime);
@@ -5042,32 +5019,31 @@ public class INetSDK
 	 * @param waittime waiting time
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯϵͳ������Ϣ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nSystemType ��ѯ��������
+	 * 2iQ/O5M3D\A&PEO"
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nSystemType 2iQ/D\A&@`PM
 	 * <table>
-	 * <tr><td>����</td><td>��������	</td><td>pSysInfoBuffer��Ӧ�ṹ�� </td></tr>
-	 * <tr><td>ABILITY_DYNAMIC_CONNECT</td><td>��ѯ��̬����������</td><td>����һ��BOOL����,TRUE��ʾ֧��,FALSE��ʾ��֧�� </td></tr>
-	 * <tr><td>ABILITY_WATERMARK_CFG</td><td>ˮӡ��������</td><td>SDK_WATERMAKE_EN </td></tr>
-	 * <tr><td>ABILITY_WIRELESS_CFG</td><td>wireless��������</td><td>SDK_WIRELESS_EN </td></tr>
-	 * <tr><td>ABILITY_DEVALL_INFO</td><td>�豸�������б� </td><td>SDK_DEV_ENABLE_INFO </td></tr>
-	 * <tr><td>ABILITY_CARD_QUERY</td><td>���Ų�ѯ����</td><td>SDK_CARD_QUERY_EN </td></tr>
-	 * <tr><td>ABILITY_MULTIPLAY</td><td>�໭��Ԥ������ </td><td>SDK_MULTIPLAY_EN </td></tr>
-	 * <tr><td>ABILITY_QUICK_QUERY_CFG</td><td>���ٲ�ѯ��������  </td><td>SDK_QUICK_QUERY_CFG_EN </td></tr>
-	 * <tr><td>ABILITY_INFRARED</td><td>���߱�������</td><td>SDK_WIRELESS_ALARM_INFO </td></tr>
-	 * <tr><td>ABILITY_TRIGGER_MODE</td><td>�������������ʽ���� </td><td>����һ��int����,0��ʾ֧��,<0��ʾ��֧�� </td></tr>
-	 * <tr><td>ABILITY_DISK_SUBAREA</td><td>����Ӳ�̷�������</td><td>SDK_DISK_SUBAREA_EN </td></tr>
-	 * <tr><td>ABILITY_DSP_CFG</td><td>����DSP���� </td><td>SDK_DSP_CFG </td></tr>
-	 * <tr><td>ABILITY_STREAM_MEDIA</td><td>��ѯSIP,RTSP����  </td><td>SDK_STREAM_MEDIA_EN </td></tr>
-	 * <tr><td>ABILITY_INTELLI_TRACKER</td><td>��ѯ���ܸ�������</td><td>SDK_INTELLI_TRACKER_EN </td></tr>
+	 * <tr><td>6(Re</td><td>D\A&@`PM	</td><td>pSysInfoBuffer6TS&=a99Le </td></tr>
+	 * <tr><td>ABILITY_DYNAMIC_CONNECT</td><td>2iQ/6/L,6`A,=SD\A&</td><td>75;XR;8vBOOL@`PM,TRUE1mJ>V'3V,FALSE1mJ>2;V'3V </td></tr>
+	 * <tr><td>ABILITY_WATERMARK_CFG</td><td>K.S!EdVCD\A&</td><td>SDK_WATERMAKE_EN </td></tr>
+	 * <tr><td>ABILITY_WIRELESS_CFG</td><td>wirelessEdVCD\A&</td><td>SDK_WIRELESS_EN </td></tr>
+	 * <tr><td>ABILITY_DEVALL_INFO</td><td>Ih185DD\A&AP1m </td><td>SDK_DEV_ENABLE_INFO </td></tr>
+	 * <tr><td>ABILITY_CARD_QUERY</td><td>?(:E2iQ/D\A&</td><td>SDK_CARD_QUERY_EN </td></tr>
+	 * <tr><td>ABILITY_MULTIPLAY</td><td>6`;-CfT$@@D\A& </td><td>SDK_MULTIPLAY_EN </td></tr>
+	 * <tr><td>ABILITY_QUICK_QUERY_CFG</td><td>?lKY2iQ/EdVCD\A&  </td><td>SDK_QUICK_QUERY_CFG_EN </td></tr>
+	 * <tr><td>ABILITY_INFRARED</td><td>N^O_1(>/D\A&</td><td>SDK_WIRELESS_ALARM_INFO </td></tr>
+	 * <tr><td>ABILITY_TRIGGER_MODE</td><td>1(>/Jd3v4%7"7=J=D\A& </td><td>75;XR;8vint@`PM,01mJ>V'3V,<01mJ>2;V'3V </td></tr>
+	 * <tr><td>ABILITY_DISK_SUBAREA</td><td>MxBgS2EL7VGxD\A&</td><td>SDK_DISK_SUBAREA_EN </td></tr>
+	 * <tr><td>ABILITY_DSP_CFG</td><td>MxBgDSPD\A& </td><td>SDK_DSP_CFG </td></tr>
+	 * <tr><td>ABILITY_STREAM_MEDIA</td><td>2iQ/SIP,RTSPD\A&  </td><td>SDK_STREAM_MEDIA_EN </td></tr>
+	 * <tr><td>ABILITY_INTELLI_TRACKER</td><td>2iQ/VGD\8zWYD\A&</td><td>SDK_INTELLI_TRACKER_EN </td></tr>
 	 * </table>
-	 * @param pSysInfoBuffer ���յ�Э�黺����
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * @param pSysInfoBuffer =SJU5DP-Ri;:3eGx
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see Login
 	 */
-	
 	public static native boolean       QuerySystemInfo(long lLoginID, int nSystemType, Object pSysInfoBuffer, int waittime);
 	
 	/**
@@ -5086,19 +5062,19 @@ public class INetSDK
 	 * @param waittime waiting time
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ϵͳ������ѯ�ӿ�,��ѯϵͳ������Ϣ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param szCommand �������,��� ParseData
-	 * @param nChannelID ͨ����
-	 * @param szOutBuffer ���յ�Э�黺����
-	 * @param error �����\n
-	 * 0 �ɹ� \n
-	 * 1 ʧ�� \n
-	 * 2 ���ݲ��Ϸ� \n
-	 * 3 ��ʱ�޷����� \n
-	 * 4 û��Ȩ�� 
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * PBO5M3D\A&2iQ/=S?Z,2iQ/O5M3D\A&PEO"
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param szCommand C|An2NJ},Oj<{ ParseData
+	 * @param nChannelID M(5@:E
+	 * @param szOutBuffer =SJU5DP-Ri;:3eGx
+	 * @param error 4mNs:E\n
+	 * 0 3I9& \n
+	 * 1 J'0\ \n
+	 * 2 J}>]2;:O7( \n
+	 * 3 T]J1N^7(IhVC \n
+	 * 4 C;SPH(O^ 
+	 * @param waittime 5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see ParseData 
 	 */
@@ -5113,12 +5089,12 @@ public class INetSDK
 	 * @param cbUpgrade update progress recall function
 	 * @return successful return to update handle ID,failed return to 0
 	 * \else
-	 * ��ʼ�����豸����--��չ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param emType ö��ֵ,���  EM_UPGRADE_TYPE
-	 * @param pchFileName Ҫ�������ļ��� 	
-	 * @param cbUpgrade �������Ȼص�����
-	 * @return �ɹ������������ID,ʧ�ܷ���0
+	 * ?*J<I}<6Ih183LPr--@)U9
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param emType C6>YV5,Oj<{  EM_UPGRADE_TYPE
+	 * @param pchFileName R*I}<65DND<~C{ 	
+	 * @param cbUpgrade I}<6=x6H;X5w:/J}
+	 * @return 3I9&75;XI}<6>d1zID,J'0\75;X0
 	 * \endif
 	 * @see SendUpgrade StopUpgrade
 	 */
@@ -5132,11 +5108,11 @@ public class INetSDK
 	 * @param dwSearchTime search waiting time 
 	 * @return true:success, false:failed
 	 * \else
-	 * ������������IPC��NVS���豸
-	 * @param szBuf �û����ٻ���,��������DEVICE_NET_INFO�ṹ��,��ѯ�������豸,�ͷ��ؼ��������Ľṹ�� 
-	 * @param nRetNum szBuf���泤��
-	 * @param dwSearchTime ��ѯ�ȴ�ʱ��
-	 * @return true:�ɹ�, false:ʧ��
+	 * KQKw>VSrMxDZIPC!"NVS5HIh18
+	 * @param szBuf SC;'?*1Y;:4f,SC@4=SJUDEVICE_NET_INFO=a99Le,2iQ/5=<88vIh18,>M75;X<88vUbQy5D=a99Le 
+	 * @param nRetNum szBuf;:4f3$6H
+	 * @param dwSearchTime 2iQ/5H4}J1<d
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       SearchDevices(DEVICE_NET_INFO szBuf[], Integer nRetNum, int dwSearchTime);
@@ -5148,29 +5124,29 @@ public class INetSDK
 	 * @param par
 	 * @return true:success, false:failed
 	 * \else
-	 * ץͼ����
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
+	 * W%M<GkGs
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
 	 * @param par
-	 * @return true:�ɹ�, false:ʧ��
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean       SnapPictureEx(long lLoginID, SNAP_PARAMS par);
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * real time upload intelligent analyasis data��image
+	 * real time upload intelligent analyasis data#-image
 	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
 	 * @param nChannelID channel NO. 
 	 * @param dwAlarmType alarm type, CB_fAnalyzerDataCallBack
 	 * @param cbAnalyzerData  intelligent data analysis recall function
 	 * @return intelligent data analysis recall function 
 	 * \else
-	 * ʵʱ�ϴ����ܷ������ݣ�ͼƬ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nChannelID ͨ����
-	 * @param dwAlarmType ��������, �μ� CB_fAnalyzerDataCallBack
-	 * @param cbAnalyzerData  �������ݷ����ص�����
-	 * @return ʧ�ܷ���0,�ɹ������ϴ����,����Ϊ��غ����Ĳ���
+	 * J5J1IO4+VGD\7VNvJ}>]#-M<F,
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nChannelID M(5@:E
+	 * @param dwAlarmType 1(>/@`PM, 2N<{ CB_fAnalyzerDataCallBack
+	 * @param cbAnalyzerData  VGD\J}>]7VNv;X5w:/J}
+	 * @return J'0\75;X0,3I9&75;XIO4+>d1z,=+WwN*O`9X:/J}5D2NJ}
 	 * \endif
 	 * @see StopLoadPic
 	 */
@@ -5185,12 +5161,12 @@ public class INetSDK
 	 * @param waittime waiting time 
 	 * @return successful return to search handle,failed return to 0. 
 	 * \else
-	 * ��ʼ����¼���ļ�������ֵ 0 ʧ��, >0 ���Ҿ��
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param emType media�ļ���ѯ����
-	 * @param pQueryCondition ��ѯ����
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return �ɹ����ز�ѯ���,ʧ�ܷ���0
+	 * ?*J<2iURB<OqND<~#:75;XV5 0 J'0\, >0 2iUR>d1z
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param emType mediaND<~2iQ/Lu<~
+	 * @param pQueryCondition 2iQ/Lu<~
+	 * @param waittime 5H4}J1<d 
+	 * @return 3I9&75;X2iQ/>d1z,J'0\75;X0
 	 * \endif
 	 * @see Login FindNextFileEx FindCloseEx
 	 */
@@ -5205,12 +5181,12 @@ public class INetSDK
 	 * @param waittime waiting time 
 	 * @return return value as info items of searched media file return value lower than nFilecount as completion of file search in corresponding time interval. 
 	 * \else
-	 * ����¼���ļ�������ֵ :�ļ����� < nFilecount ��ѯ����
-	 * @param lFindHandle {@link com.company.NetSDK.INetSDK#FindFileEx() FindFileEx}�ķ���ֵ 
-	 * @param emType ��Ҫ��ѯ������
-	 * @param pMediaFileInfo �ļ���¼����,���������ѯ����ý���ļ���¼
-	 * @param waittime �ȴ�ʱ�� 
-	 * @return ����ֵΪ��ѯ����ý���ļ���Ϣ���� ����ֵС��nFilecount����Ӧʱ����ڵ��ļ���ѯ���
+	 * 2iURB<OqND<~#:75;XV5 :ND<~LuJ} < nFilecount 2iQ/=aJx
+	 * @param lFindHandle {@link com.company.NetSDK.INetSDK#FindFileEx() FindFileEx}5D75;XV5 
+	 * @param emType PhR*2iQ/5DLuJ}
+	 * @param pMediaFileInfo ND<~<GB<;:3e,SCSZJd3v2iQ/5=5DC=LeND<~<GB<
+	 * @param waittime 5H4}J1<d 
+	 * @return 75;XV5N*2iQ/5=5DC=LeND<~PEO"LuJ} 75;XV5P!SZnFilecountTrO`S&J1<d6NDZ5DND<~2iQ/Mj1O
 	 * \endif
 	 * @see FindFileEx
 	 */
@@ -5226,13 +5202,13 @@ public class INetSDK
 	 * @param cbDownLoadPos download recall function
 	 * @return download function handle
 	 * \else
-	 * ����ָ�������ܷ������� - ͼƬ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param emType  ��ѯ����
-	 * @param lpMediaFileInfo  ý���ļ���Ϣ,�����ǽṹ��  MEDIAFILE_TRAFFICCAR_INFO 
-	 * @param sSavedFileName  �ļ��������� 
-	 * @param cbDownLoadPos ���ػص����� 
-	 * @return ���غ������
+	 * OBTXV86(5DVGD\7VNvJ}>] - M<F,
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param emType  2iQ/Lu<~
+	 * @param lpMediaFileInfo  C=LeND<~PEO",4+5DJG=a99Le  MEDIAFILE_TRAFFICCAR_INFO 
+	 * @param sSavedFileName  ND<~1#4fC{3F 
+	 * @param cbDownLoadPos OBTX;X5w:/J} 
+	 * @return OBTX:/J}>d1z
 	 * \endif
 	 * @see StopDownloadMediaFile
 	 */
@@ -5247,12 +5223,12 @@ public class INetSDK
 	 * @param pstOutParam snapshot return value
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ͨץ��--���紥����ʽ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nChannelID ͨ����
-	 * @param pstInParam ץ�Ĳ���
-	 * @param pstOutParam ץ�ķ���ֵ 
-	 * @return true:�ɹ�, false:ʧ��
+	 * =;M(W%ED--MxBg4%7"7=J=
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nChannelID M(5@:E
+	 * @param pstInParam W%ED2NJ}
+	 * @param pstOutParam W%ED75;XV5 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean 		TrafficSnapByNetwork(long lLoginID, int nChannelID, NET_IN_SNAPSHOT pstInParam, NET_OUT_SNAPSHOT pstOutParam);
@@ -5265,15 +5241,17 @@ public class INetSDK
 	 * @param InObject 			Query In Param
 	 * @param OutObject  		Query Out Param
 	 * @param ReservedObject    Query Reserved Param
+	 * @param nWaitTime         waiting time
 	 * @return true:success, false:failed
 	 * \else
-	 * ��ѯ�豸��Ϣ
-	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ���� {@link com.company.NetSDK.INetSDK#Login() Login}�ķ���ֵ 
-	 * @param nQueryType 		��ѯ����
-	 * @param InObject 			��ѯ�������
-	 * @param OutObject  		��ѯ�������
-	 * @param ReservedObject	��������
-	 * @return true:�ɹ�, false:ʧ��
+	 * 2iQ/Ih18PEO"
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5 
+	 * @param nQueryType 		2iQ/@`PM
+	 * @param InObject 			2iQ/JdHk2NJ}
+	 * @param OutObject  		2iQ/Jd3v2NJ}
+	 * @param ReservedObject	1#At2NJ}
+	 * @param nWaitTime         5H4}J1<d 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
 	public static native boolean 		 	QueryDevInfo(long lLoginID, int nQueryType, Object InObject , Object OutObject, Object ReservedObject  , int nWaitTime );
@@ -5283,72 +5261,69 @@ public class INetSDK
 	 * start local recording function,recording collected audio data via CLIENT_StartTalkEx recall user,corresponding operation is RecordStop
 	 * @return true:success, false:failed
 	 * \else
-	 * ��������¼������,¼���ɼ���������Ƶ����ͨ�� StartTalkEx �Ļص������ص����û�,��Ӧ������ RecordStop
-	 * @return true:�ɹ�, false:ʧ��
+	 * Ft6/1>5XB<Rt9&D\,B<Rt2I</3v@45DRtF5J}>]M(9} StartTalkEx 5D;X5w:/J};X5w8xSC;',6TS&2YWwJG RecordStop
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see StartTalkEx RecordStop
 	 */
-	
 	public static native boolean		RecordStart();
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * stop local recording,corresponding operation is RecordStart
 	 * @return true:success, false:failed
 	 * \else
-	 * ֹͣ����¼��,��Ӧ������RecordStart
-	 * @return true:�ɹ�, false:ʧ��
+	 * M#V91>5XB<Rt,6TS&2YWwJGRecordStart
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 * @see RecordStart
 	 */
-	
 	public static native boolean 		RecordStop();
 	
-	public static native boolean        GetDevCaps(long lLoginID, int nType, NET_IN_ENCODE_CFG_CAPS pInBuf, NET_OUT_ENCODE_CFG_CAPS pOutBuf, int nWaitTime);
+	public static native boolean        GetDevCaps(long lLoginID, int nType, Object pInBuf, Object pOutBuf, int nWaitTime);
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * @param pAudioDataBuf Ҫ��������Ƶ��������
+	 * @param pAudioDataBuf R*Gs=bBk5DRtF5J}>]DZH]
 	 * @return true:success, false:failed
 	 * \else
-	 * ���������Ƶ���ݽ��н���
-	 * @param pAudioDataBuf Ҫ��������Ƶ��������
-	 * @return ��
+	 * 6TJdHk5DRtF5J}>]=xPP=bBk
+	 * @param pAudioDataBuf R*Gs=bBk5DRtF5J}>]DZH]
+	 * @return N^
 	 * \endif
 	 */
-	
 	public static native void 			AudioDec(byte[] pAudioDataBuf);
+	
 	/**
 	 * \if ENGLISH_LANG
-	 * @param src ��������
-	 * @param dest ����������
-	 * @param srclen �������ݳ��� 
+	 * @param src SoRtJ}>]
+	 * @param dest 1`Bk:s5DJ}>]
+	 * @param srclen SoRtJ}>]3$6H 
 	 * @return true:success, false:failed
 	 * \else
-	 * �����ɼ�����б���
-	 * @param src ��������
-	 * @param dest ����������
-	 * @param srclen �������ݳ��� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * SoRt2I</:s=xPP1`Bk
+	 * @param src SoRtJ}>]
+	 * @param dest 1`Bk:s5DJ}>]
+	 * @param srclen SoRtJ}>]3$6H 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
-	
 	public static native int           g711aEncode(byte src[], byte dest[], int srclen);
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * @param src ��������
-	 * @param dest ����������
-	 * @param srclen �������ݳ��� 
+	 * @param src SoRtJ}>]
+	 * @param dest 1`Bk:s5DJ}>]
+	 * @param srclen SoRtJ}>]3$6H 
 	 * @return true:success, false:failed
 	 * \else
-	 * �����ɼ�����б���
-	 * @param src ��������
-	 * @param dest ����������
-	 * @param srclen �������ݳ��� 
-	 * @return true:�ɹ�, false:ʧ��
+	 * SoRt2I</:s=xPP1`Bk
+	 * @param src SoRtJ}>]
+	 * @param dest 1`Bk:s5DJ}>]
+	 * @param srclen SoRtJ}>]3$6H 
+	 * @return true:3I9&, false:J'0\
 	 * \endif
 	 */
-
 	public static native int           g711uEncode(byte src[], byte dest[], int srclen);
 	
 	public static native long          AttachVTPCallState(long lLoginID, NET_IN_VTP_CALL_STATE_ATTACH pInParam, CB_fVTPCallStateCallBack dwAttachCb, NET_OUT_VTP_CALL_STATE_ATTACH pOutParam, int nWaitTime);
@@ -5364,8 +5339,779 @@ public class INetSDK
 	public static native boolean       SetMobilePushNotify(long lLoginID, NET_MOBILE_PUSH_NOTIFY pstuCfg, Integer nError, Integer nRestart, int nWaitTime);
 	
 	public static native boolean       DelMobilePushNotify(long lLoginID, NET_MOBILE_PUSH_NOTIFY_DEL pstuIn, NET_OUT_DELETECFG pstuOut, int nWaitTime);
+	/**
+	 * \if ENGLISH_LANG
+	 * set mobile push notification config, use RegisterID+AppID to identify the info, AppID can't contain '.', use '_' instead
+	 * @param login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pstuCfg  configuration object
+	 * @param nError   error code
+	 * @param nRestart is need to restart device
+	 * @param nWaitTime waiting time
+	 * @return true:success, false:failed
+	 * \else
+	 * JV;z6)TDMFKMPEO", J9SCRegisterID+AppID1jJ6EdVCOn#,AppIDDZH]2;D\4x5c:E#,5c:E?IRTSCOB;.O_4zLf
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5
+	 * @param pstuCfg  EdVCHk2N6TOs
+	 * @param nError   4mNsBk
+	 * @param nRestart JG7qPhR*VXFtIh18IzP'
+	 * @param nWaitTime 5H4}3,J1J1<d
+	 * @return true:3I9&, false:J'0\
+	 * \endif
+	 */
+	public static native boolean       SetMobileSubscribeCfg(long lLoginID, NET_MOBILE_PUSH_NOTIFY_CFG pstuCfg, Integer nError, Integer nRestart, int nWaitTime);
 	
+	/**   
+	 * \if ENGLISH_LANG
+	 * set mobile push notification config, use RegisterID+AppID to identify the info, AppID can't contain '.', use '_' instead
+	 * @deprecated deprecated
+	 * @param login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pstuCfg  configuration object
+	 * @param nError   error code
+	 * @param nRestart is need to restart device
+	 * @param nWaitTime waiting time
+	 * @return true:success, false:failed
+	 * \else
+	 * JV;z6)TDMFKMPEO", J9SCRegisterID+AppID1jJ6EdVCOn#,AppIDDZH]2;D\4x5c:E#,5c:E?IRTSCOB;.O_4zLf
+	 * @deprecated 7OFz,SI SetMobileSubscribeCfg Lf4z
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5
+	 * @param pstuCfg  EdVCHk2N6TOs
+	 * @param nError   4mNsBk
+	 * @param nRestart JG7qPhR*VXFtIh18IzP'
+	 * @param nWaitTime 5H4}3,J1J1<d
+	 * @return true:3I9&, false:J'0\
+	 * \endif
+	 */
 	public static native boolean       SetMobilePushNotifyCfg(long lLoginID, NET_MOBILE_PUSH_NOTIFY_CFG pstuCfg, Integer nError, Integer nRestart, int nWaitTime);
 	
+	/**
+	 * \if ENGLISH_LANG
+	 * delete mobile push notification config, use RegisterID+AppID to identify the info, AppID can't contain '.', use '_' instead
+	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pstuIn registerid and appid
+	 * @param pstuOut error code and restart flag
+	 * @param nWaitTime waiting time
+	 * @returntrue:success, false:failed
+	 * \else
+	 * I>3}JV;z6)TDMFKMPEO", J9SCRegisterID+AppID1jJ6EdVCOn#,AppIDDZH]2;D\4x5c:E#,5c:E?IRTSCOB;.O_4zLf
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5
+	 * @param pstuIn registerid :M  appid
+	 * @param pstuOut 4mNsBk:MVXFt1jJ6
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false:J'0\
+	 * \endif
+	 */
 	public static native boolean       DelMobilePushNotifyCfg(long lLoginID, NET_MOBILE_PUSH_NOTIFY_CFG_DEL pstuIn, NET_OUT_DELETECFG pstuOut, int nWaitTime);
+	
+	public static native boolean       SetOptimizeMode(int emType, Object pParam);
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * Set GPS subscription callback function 
+	 * @param cbGPSCallBack function#,  for callBack gps info
+
+	 * \else
+	 * IhVCGPS;X5w:/J}
+	 * @param cbGPSCallBack ;X5w:/J}, ;X5wGPSPEO"
+	 * \endif
+	 */
+	public static native void		  SetSubcribeGPSCallBack(CB_fSubcribeGPSCallBack cbGPSCallBack);
+
+	/**
+	 * \if ENGLISH_LANG
+	 * GPS message subscription 
+	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param bStart start or stop
+	 * @param keepTime 
+	 * @param interTime
+	 * @returntrue:success, false:failed
+	 * \else
+	 * GPSPEO"6)TD
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5
+	 * @param bStart ?*Ft;rU_M#V9
+	 * @param keepTime
+	 * @param interTime
+	 * @return true:3I9&, false:J'0\
+	 * \endif
+	 */
+	public static native boolean 	 	SubcribeGPS(long lLoginID, boolean bStart, int keepTime, int interTime);
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * Set Device Position
+	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pstuIn position info
+	 * @param pstuOut
+	 * @param nWaitTime elapse time
+	 * @return true:success, false:failed
+	 * \else
+	 * IhVCIh185XV7PEO"
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5
+	 * @param pstuIn R*IhVC5DN;VCPEO"
+	 * @param pstuOut
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false:J'0\
+	 * \endif
+	 */
+	public static native boolean        SetDevicePosition(long lLoginID, NET_IN_SET_DEVICE_POSITION pstuIn, NET_OUT_SET_DEVICE_POSITION pstuOut, int nWaitTime);
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * Get Device Position
+	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pstuIn 
+	 * @param pstuOut position info
+	 * @param nWaitTime elapse time
+	 * @return true:success, false:failed
+	 * \else
+	 * IhVCIh185XV7PEO"
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5
+	 * @param pstuIn
+	 * @param pstuOut R*IhVC5DN;VCPEO"
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false:J'0\
+	 * \endif
+	 */
+	public static native boolean        GetDevicePosition(long lLoginID, NET_IN_GET_DEVICE_POSITION pstuIn, NET_OUT_GET_DEVICE_POSITION pstuOut, int nWaitTime);
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * Snap picture by event, cooperate with RealLoadPictureEx when start with "Manaul"
+	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pstuIn event info
+	 * @param pstuOut 
+	 * @param nWaitTime elapse time
+	 * @return true:success, false:failed
+	 * \else
+	 * IhVCIh185XV7PEO"
+	 * @param lLoginID {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5
+	 * @param pstuIn JB<~5DM(5@!"@`PM5HPEO"
+	 * @param pstuOut
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false:J'0\
+	 * \endif
+	 */
+	public static native boolean        SnapPictureByEvent(long lLoginID, NET_IN_SNAP_BY_EVENT pstuIn, NET_OUT_SNAP_BY_EVENT pstuOut, int nWaitTime);
+	
+	//
+	/**
+	 * \if ENGLISH_LANG
+	 * attach camera state
+	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pstInParam input param
+	 * @param pstOutParam outpur param
+	 * @param nWaitTime elapse time
+	 * @return > 0 success, else failed
+	 * \else
+	 * 6)TDIcOqM7W4L,
+	 * @param lLoginID return value of {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pstInParam JdHk2NJ}
+	 * @param pstOutParam Jd3v2NJ}
+	 * @param nWaitTime 3,J1J1<d
+	 * @return > 03I9&#,7qTrJ'0\
+	 * \endif
+	 */
+	public static native long           AttachCameraState(long lLoginID, NET_IN_CAMERASTATE pstInParam, NET_OUT_CAMERASTATE pstOutParam, int nWaitTime);
+	
+
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * stop detach camera state
+	 * @param lAttachHandle, return from {AttachCameraState}
+	 * @return true:success, false:failed
+	 * \else
+	 * M#V96)TDIcOqM7W4L,
+	 * @param lAttachHandle  JGAttachCameraState5D75;XV5
+	 * @return true:3I9&, false:J'0\
+	 * \endif
+	 */
+	public static native boolean        DetachCameraState(long lAttachHandle);
+	 
+	/**
+	 * \if ENGLISH_LANG
+	 * get operator name
+	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInParam input param
+	 * @param pOutParam outpur param
+	 * @param nWaitTime elapse time
+	 * @return true:success, false:failed
+	 * \else
+	 * ;qH!2YWwT1SC;'C{
+	 * @param lLoginID return value of{@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInParam JdHk2NJ}
+	 * @param pOutParam Jd3v2NJ}
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false:J'0\
+	 * \endif
+	 */
+	public static native boolean 		GetOperatorName(long lLoginID,  NET_IN_GET_OPERATOR_NAME pInParam, NET_OUT_GET_OPERATOR_NAME pOutParam, int nWaitTime);
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * open burning session, return to burning session handle
+	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pstInParam input param
+	 * @param pstOutParam outpur param
+	 * @param nWaitTime elapse time
+	 * @return burning session handle, > 0 success, else failed
+	 * \else
+	 * 4r?*?LB<;a;0
+	 * @param lLoginID return value of {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pstInParam JdHk2NJ}
+	 * @param pstOutParam Jd3v2NJ}
+	 * @param nWaitTime 3,J1J1<d
+	 * @return ?LB<;a;0>d1z > 03I9&#,7qTrJ'0\
+	 * \endif
+	 */
+	
+	public static native long  			StartBurnSession(long lLoginID, NET_IN_START_BURN_SESSION pstInParam, NET_OUT_START_BURN_SESSION pstOutParam, int nWaitTime);
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * close burning session
+	 * @param lBurnSession, return from {StartBurnSession}
+	 * @return true:success, false:failed
+	 * \else
+	 * 9X1U?LB<;a;0
+	 * @param lBurnSession  JGStartBurnSession5D75;XV5
+	 * @return true:3I9&, false:J'0\
+	 * \endif
+	 */
+	public static native boolean 		StopBurnSession(long lBurnSession);
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * start burning
+	 * @param lBurnSession, return from {StartBurnSession}
+	 * @param pstInParam, 	input param
+	 * @param pstOutParam,	output param
+	 * @param nWaitTime,    elapse time
+	 * @return true:success, false:failed
+	 * \else
+	 * // ?*J<?LB<
+	 * @param lBurnSession  JGStartBurnSession5D75;XV5
+	 * @param pstInParam,	JdHk2NJ}
+	 * @param pstOutParam,	Jd3v2NJ}
+	 * @param nWaitTime,	3,J1J1<d
+	 * @return true:3I9&, false:J'0\
+	 * \endif
+	 */
+	public static native boolean 	 StartBurn(long lBurnSession, NET_IN_START_BURN pstInParam, NET_OUT_START_BURN pstOutParam, int nWaitTime);
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * stop burning
+	 * @param lBurnSession, return from {StartBurnSession}
+	 * @return true:success, false:failed
+	 * \else
+	 * M#V9?LB<
+	 * @param lBurnSession  JGStartBurnSession5D75;XV5
+	 * @return true:3I9&, false:J'0\
+	 * \endif
+	 */
+	public static native boolean   StopBurn(long lBurnSession);
+
+	/**
+	 * \if ENGLISH_LANG
+	 * pause/recover burning
+	 * @param lBurnSession, return from {StartBurnSession}
+	 * @param bPause,		true-pause, false-restore
+	 * @return true:success, false:failed
+	 * \else
+	 * T]M#/;V84?LB<
+	 * @param lBurnSession  JGStartBurnSession5D75;XV5
+	 * @param bPause,		true-T]M#, false-;V84
+	 * @return true:3I9&, false:J'0\
+	 * \endif
+	 */
+	public static native boolean	   PauseBurn(long lBurnSession, boolean bpause);
+	
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * key mark
+	 * @param lBurnSession, return from {StartBurnSession}
+	 * @param pstInParam, 	input param
+	 * @param pstOutParam,	output param
+	 * @param nWaitTime,    elapse time
+	 * @return true:success, false:failed
+	 * \else
+	 * VX5c1j<G
+	 * @param lBurnSession  JGStartBurnSession5D75;XV5
+	  * @param pstInParam,	JdHk2NJ}
+	 * @param pstOutParam,	Jd3v2NJ}
+	 * @param nWaitTime,	3,J1J1<d
+	 * @return true:3I9&, false:J'0\
+	 * \endif
+	 */
+	public static native boolean	  BurnMarkTag(long lBurnSession, NET_IN_BURN_MARK_TAG pstInParam, 
+												  NET_OUT_BURN_MARK_TAG pstOutParam, int nWaitTime);
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * get burning status
+	 * @param lBurnSession, return from {StartBurnSession}
+	 * @param pstInParam, 	input param
+	 * @param pstOutParam,	output param
+	 * @param nWaitTime,    elapse time
+	 * @return true:success, false:failed
+	 * \else
+	 * ;qH!?LB<W4L,
+	 * @param lBurnSession  JGStartBurnSession5D75;XV5
+	  * @param pstInParam,	JdHk2NJ}
+	 * @param pstOutParam,	Jd3v2NJ}
+	 * @param nWaitTime,	3,J1J1<d
+	 * @return true:3I9&, false:J'0\
+	 * \endif
+	 */
+	public static native boolean	BurnGetState(long lBurnSession, NET_IN_BURN_GET_STATE pstInParam, NET_OUT_BURN_GET_STATE pstOutParam, int nWaitTime);
+	
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * a attach burn state
+	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pstInParam input param
+	 * @param pstOutParam outpur param
+	 * @param nWaitTime elapse time
+	 * @return > 0 success, else failed
+	 * \else
+	 * <`L}?LB<W4L,
+	 * @param lLoginID return value of {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pstInParam JdHk2NJ}
+	 * @param pstOutParam Jd3v2NJ}
+	 * @param nWaitTime 3,J1J1<d
+	 * @return > 03I9&#,7qTrJ'0\
+	 * \endif
+	 */
+	public static native long		AttachBurnState(long lLoginID, NET_IN_ATTACH_STATE pstInParam, NET_OUT_ATTACH_STATE pstOutParam, int nWaitTime);
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * cancel listening burning status lAttachHandle is AttachBurnState return value
+	 * @param lAttachHandle, return from {AttachBurnState}
+	 * @return true:success, false:failed
+	 * \else
+	 * H!O{<`L}?LB<W4L,#,lAttachHandleJGAttachBurnState75;XV5
+	 * @param lAttachHandle  JGAttachBurnState5D75;XV5
+	 * @return true:3I9&, false:J'0\
+	 * \endif
+	 */
+	public static native boolean    DetachBurnState(long lAttachHandle);
+
+
+	/**
+	 * \if ENGLISH_LANG
+	 * serial data switch port,async get data
+	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInParam input param
+	 * @param pOutParam outpur param
+	 * @param nWaittime elapse time
+	 * @return > 0 success, else failed
+	 * \else
+	 * 4.?ZJ}>]=;;%=S?Z,Rl2=;qH!J}>]
+	 * @param lLoginID return value of {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInParam JdHk2NJ}
+	 * @param pOutParam Jd3v2NJ}
+	 * @param nWaittime 3,J1J1<d
+	 * @return > 03I9&#,7qTrJ'0\
+	 * \endif
+	 */
+	public static native  long  	    ExChangeData(long lLoginId, NET_IN_EXCHANGEDATA pInParam,  NET_OUT_EXCHANGEDATA pOutParam, int nWaittime); 
+
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * a attach burn state
+	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pstInParam input param
+	 * @param cbAttachCAN callback param
+	 * @param pstOutParam outpur param
+	 * @param nWaitTime elapse time
+	 * @return > 0 success, else failed
+	 * \else
+	 * <`L}CANW\O_J}>]
+	 * @param lLoginID return value of {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pstInParam JdHk2NJ}
+	 * @param cbAttachCAN ;X5w2NJ}
+	 * @param pstOutParam Jd3v2NJ}
+	 * @param nWaitTime 3,J1J1<d
+	 * @return > 03I9&#,7qTrJ'0\
+	 * \endif
+	 */
+    public static native  long  		AttachCAN(long lLoginID, NET_IN_ATTACH_CAN pstInParam, CB_fAttachCANCB cbAttachCAN, NET_OUT_ATTACH_CAN pstOutParam, int nWaitTime);
+    
+    
+	/**
+	 * \if ENGLISH_LANG
+	 * cancel listen CAN bus data#, lAttachHandle is AttachCAN return value
+	 * @param lAttachHandle, return from {AttachCAN}
+	 * @return true:success, false:failed
+	 * \else
+	 * H!O{<`L}CANW\O_J}>]#,lAttachHandleJGAttachCAN75;XV5
+	 * @param lAttachHandle  JGAttachCAN5D75;XV5
+	 * @return true:3I9&, false:J'0\
+	 * \endif
+	 */
+	public static native  boolean  		DetachCAN(long lAttachHandle);
+	
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * listen transparent serial data
+	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pstInParam input param
+	 * @param jfAttachCOMCB callback param
+	 * @param pstOutParam outpur param
+	 * @param nWaitTime elapse time
+	 * @return > 0 success, else failed
+	 * \else
+	 * <`L}M8Cw4.?ZJ}>]
+	 * @param lLoginID return value of {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pstInParam JdHk2NJ}
+	 * @param jfAttachCOMCB ;X5w2NJ}
+	 * @param pstOutParam Jd3v2NJ}
+	 * @param nWaitTime 3,J1J1<d
+	 * @return > 03I9&#,7qTrJ'0\
+	 * \endif
+	 */
+	public static native long           AttachDevComm(long lLoginID, NET_IN_ATTACH_DEVCOMM pstInParam, CB_fAttachDevCommCB jfAttachCOMCB, NET_OUT_ATTACH_DEVCOMM pstOutParam, int nWaitTime);
+	
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * cancel listen transparent serial data#, lAttachHandle is AttachDevComm return value
+	 * @param lAttachHandle, return from {AttachDevComm}
+	 * @return true:success, false:failed
+	 * \else
+	 * H!O{<`L}M8Cw4.?ZJ}>]#,lAttachHandleJGAttachDevComm75;XV5
+	 * @param lAttachHandle  JGAttachDevComm5D75;XV5
+	 * @return true:3I9&, false:J'0\
+	 * \endif
+	 */
+	public static native boolean        DetachDevComm(long lAttachHandle);
+	
+	/**
+	 * \if ENGLISH_LANG
+	 *  set display source, support multiple window at same time
+	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInParam input param
+	 * @param pOutParam outpur param
+	 * @param nWaitTime elapse time
+	 * @return true: success, false: failed
+	 * \else
+	 *  IhVCOTJ>T4, V'3VM,J1IhVC6`8v40?Z
+	 * @param lLoginID return value of {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInParam JdHk2NJ}
+	 * @param pOutParam Jd3v2NJ}
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false: J'0\
+	 * \endif
+	 */
+	public static native boolean 	   SplitSetMultiSource(long lLoginID, NET_IN_SPLIT_SET_MULTI_SOURCE pInParam, NET_OUT_SPLIT_SET_MULTI_SOURCE pOutParam, int nWaitTime);
+	
+	/**
+	 * \if ENGLISH_LANG
+	 *  low matrix switch
+	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInParam input param
+	 * @param pOutParam outpur param
+	 * @param nWaitTime elapse time
+	 * @return true: success, false: failed
+	 * \else
+	 *  OBN;>XUsGP;;
+	 * @param lLoginID return value of {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInParam JdHk2NJ}
+	 * @param pOutParam Jd3v2NJ}
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false: J'0\
+	 * \endif
+	 */
+	public static native boolean       MatrixSwitch(long lLoginID, NET_IN_MATRIX_SWITCH pInParam, NET_OUT_MATRIX_SWITCH pOutParam, int nWaitTime);
+
+	public static native boolean       ControlSpecialDevice(long lLoginID, int emType, Object pInBuf, Object pOutBuf, int nWaitTime);
+	
+	public static native boolean       GetSelfCheckInfo(long lLoginID, NET_IN_GET_SELTCHECK_INFO pInParam, NET_SELFCHECK_INFO pOutParam, int nWaitTime);
+	
+	public static native long          AttachBusState(long lLoginID, NET_IN_BUS_ATTACH pstuInBus, CB_fBusStateCallBack cbBusState, NET_OUT_BUS_ATTACH pstuOutBus, int nWaitTime);
+	
+	public static native boolean       DetachBusState(long lAttachHandle);
+	
+	public static native boolean       BusConfirmEvent(long lLoginID, NET_IN_BUS_CONFIRM_EVENT pInParam, NET_OUT_BUS_CONFIRM_EVENT pOutParam, int nWaitTime);
+	
+	public static native boolean       AttachMission(long lLoginID, NET_IN_ATTACH_MISSION_PARAM pInParam, CB_fMissionInfoCallBack cbMissionInfofunc, NET_OUT_ATTACH_MISSION_PARAM pOutParam, int nWaitTime);
+	
+	public static native boolean       DetachMission(long lAttachHandle);
+	
+	public static native boolean       AttachVideoAnalyseState(long lLoginID, NET_IN_ATTACH_VIDEOANALYSE_STATE pstInParam, CB_fVideoAnalyseState cbVideoAnalyseState, NET_OUT_ATTACH_VIDEOANALYSE_STATE pstOutParam, int nWaitTime);
+	
+	public static native boolean       DetachVideoAnalyseState(long lAttachHandle);
+	
+	public static native long          StartFindNumberStat(long lLoginID, NET_IN_FINDNUMBERSTAT pstInParam, NET_OUT_FINDNUMBERSTAT pstOutParam);
+	
+	public static native int           DoFindNumberStat(long lFindHandle, NET_IN_DOFINDNUMBERSTAT pstInParam, NET_OUT_DOFINDNUMBERSTAT pstOutParam);
+	
+	public static native boolean       StopFindNumberStat(long lFindHandle);
+	
+	public static native boolean       SnapPictureToFile(long lLoginID, NET_IN_SNAP_PIC_TO_FILE_PARAM pInParam, NET_OUT_SNAP_PIC_TO_FILE_PARAM pOutParam, int nWaitTime);
+
+	/**
+	 * \if ENGLISH_LANG
+	 *  Set Mode of Course Record
+	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInBuf input param
+	 * @param pOutBuf outpur param
+	 * @param nWaitTime elapse time
+	 * @return true: success, false: failed
+	 * \else
+	 *  IhVC?N3LB<OqD#J=
+	 * @param lLoginID return value of {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInBuf JdHk2NJ}
+	 * @param pOutBuf Jd3v2NJ}
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false: J'0\
+	 * \endif
+	 */
+	public static native boolean 	   SetCourseRecordMode(long lLoginID, NET_IN_SET_COURSE_RECORD_MODE pInBuf, NET_OUT_SET_COURSE_RECORD_MODE pOutBuf, int nWaitTime);
+
+	/**
+	 * \if ENGLISH_LANG
+	 *  Get Mode of Course Record
+	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInBuf input param
+	 * @param pOutBuf outpur param
+	 * @param nWaitTime elapse time
+	 * @return true: success, false: failed
+	 * \else
+	 *  ;qH!?N3LB<OqD#J=
+	 * @param lLoginID return value of {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInBuf JdHk2NJ}
+	 * @param pOutBuf Jd3v2NJ}
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false: J'0\
+	 * \endif
+	 */
+	public static native boolean 	   GetCourseRecordMode(long lLoginID, NET_IN_GET_COURSE_RECORD_MODE pInBuf, NET_OUT_GET_COURSE_RECORD_MODE pOutBuf, int nWaitTime);
+
+	/**
+	 * \if ENGLISH_LANG
+	 *  Get chanel of Composite Preview
+	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInBuf input param
+	 * @param pOutBuf outpur param
+	 * @param nWaitTime elapse time
+	 * @return true: success, false: failed
+	 * \else
+	 *  ;qH!5<2%T$@@M(5@:E
+	 * @param lLoginID return value of {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInBuf JdHk2NJ}
+	 * @param pOutBuf Jd3v2NJ}
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false: J'0\
+	 * \endif
+	 */
+	public static native boolean 	   GetCompositePreviewChannel(long lLoginID, NET_IN_GET_COMPOSITE_PREVIEW_CHANNEL pInBuf, NET_OUT_GET_COMPOSITE_PREVIEW_CHANNEL pOutBuf, int nWaitTime);
+
+	/**
+	 * \if ENGLISH_LANG
+	 *  start or stop record
+	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInBuf input param
+	 * @param pOutBuf outpur param
+	 * @param nWaitTime elapse time
+	 * @return true: success, false: failed
+	 * \else
+	 *  ?*Ft/9X1UV86(M(5@B<Oq
+	 * @param lLoginID return value of {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInBuf JdHk2NJ}
+	 * @param pOutBuf Jd3v2NJ}
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false: J'0\
+	 * \endif
+	 */
+	public static native boolean 	   SetCourseRecordState(long lLoginID, NET_IN_SET_COURSE_RECORD_STATE pInBuf, NET_OUT_SET_COURSE_RECORD_STATE pOutBuf, int nWaitTime);
+
+	/**
+	 * \if ENGLISH_LANG
+	 *  open find coursemedia record 
+	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInBuf input param
+	 * @param pOutBuf outpur param
+	 * @param nWaitTime elapse time
+	 * @return true: success, false: failed
+	 * \else
+	 *  ?*J<2iQ/?N3LJSF5PEO"
+	 * @param lLoginID return value of {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInBuf JdHk2NJ}
+	 * @param pOutBuf Jd3v2NJ}
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false: J'0\
+	 * \endif
+	 */
+	public static native boolean 	   OpenQueryCourseMediaFile(long lLoginID, NET_IN_QUERY_COURSEMEDIA_FILEOPEN pInBuf, NET_OUT_QUERY_COURSEMEDIA_FILEOPEN pOutBuf, int nWaitTime);
+
+	/**
+	 * \if ENGLISH_LANG
+	 *  find coursemedia record 
+	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInBuf input param
+	 * @param pOutBuf outpur param
+	 * @param nWaitTime elapse time
+	 * @return true: success, false: failed
+	 * \else
+	 *  2iQ/?N3LJSF5PEO"
+	 * @param lLoginID return value of {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInBuf JdHk2NJ}
+	 * @param pOutBuf Jd3v2NJ}
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false: J'0\
+	 * \endif
+	 */
+	public static native boolean 	   DoQueryCourseMediaFile(long lLoginID, NET_IN_QUERY_COURSEMEDIA_FILE pInBuf, NET_OUT_QUERY_COURSEMEDIA_FILE pOutBuf, int nWaitTime);
+
+	/**
+	 * \if ENGLISH_LANG
+	 * close find coursemedia record
+	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInBuf input param
+	 * @param pOutBuf outpur param
+	 * @param nWaitTime elapse time
+	 * @return true: success, false: failed
+	 * \else
+	 *  9X1U?N3LJSF52iQ/
+	 * @param lLoginID return value of {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInBuf JdHk2NJ}
+	 * @param pOutBuf Jd3v2NJ}
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false: J'0\
+	 * \endif
+	 */
+	public static native boolean 	   CloseQueryCourseMediaFile(long lLoginID, NET_IN_QUERY_COURSEMEDIA_FILECLOSE pInBuf, NET_OUT_QUERY_COURSEMEDIA_FILECLOSE pOutBuf, int nWaitTime);
+
+	/**
+	 * \if ENGLISH_LANG
+	 * order tour status
+	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInParam input param
+	 * @param pOutParam outpur param
+	 * @param nWaitTime elapse time
+	 * @return true: success, false: failed
+	 * \else
+	 *  6)TDBVQ2W4L,
+	 * @param lLoginID return value of {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInParam JdHk2NJ}
+	 * @param pOutParam Jd3v2NJ}
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false: J'0\
+	 * \endif
+	 */
+	public static native long			AttachSplitTour(long lLoginID, NET_IN_ATTACH_SPLIT_TOUR pInParam, NET_OUT_ATTACH_SPLIT_TOUR pOutParam, int nWaitTime);
+
+	/**
+	 * \if ENGLISH_LANG
+	 * stop detach tour status
+	 * @param lAttachHandle, return from {AttachSplitTour}
+	 * @return true:success, false:failed
+	 * \else
+	 * M#V96)TDBVQ2W4L,
+	 * @param lAttachHandle  JGAttachSplitTour5D75;XV5
+	 * @return true:3I9&, false:J'0\
+	 * \endif
+	 */
+	public static native boolean		DetachSplitTour(long lAttachHandle);
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * attach scheme tour status 
+	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} or {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInParam input param
+	 * @param pOutParam outpur param
+	 * @param nWaitTime elapse time
+	 * @return true: success, false: failed
+	 * \else
+	 *  6)TDT$08BVQ2W4L,
+	 * @param lLoginID return value of {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx} ;rU_ {@link com.company.NetSDK.INetSDK#Login() Login}
+	 * @param pInParam JdHk2NJ}
+	 * @param pOutParam Jd3v2NJ}
+	 * @param nWaitTime 3,J1J1<d
+	 * @return true:3I9&, false: J'0\
+	 * \endif
+	 */
+	public static native long			MonitorWallAttachTour(long lLoginID, NET_IN_WM_ATTACH_TOUR pInParam, NET_OUT_WM_ATTACH_TOUR pOutParam, int nWaitTime);
+		
+	/**
+	 * \if ENGLISH_LANG
+	 * stop detach scheme tour status 
+	 * @param lAttachHandle, return from {MonitorWallAttachTour}
+	 * @return true:success, false:failed
+	 * \else
+	 * M#V96)TDT$08BVQ2W4L,
+	 * @param lAttachHandle  JGMonitorWallAttachTour5D75;XV5
+	 * @return true:3I9&, false:J'0\
+	 * \endif
+	 */
+	public static native boolean		MonitorWallDetachTour(long lAttachHandle);
+	
+	public static native boolean 		MonitorWallGetScene(long lLoginID, SDK_IN_MONITORWALL_GET_SCENE pInParam, SDK_OUT_MONITORWALL_GET_SCENE pOutParam, int nWaitTime);
+	public static native boolean 		MonitorWallSetScene(long lLoginID, SDK_IN_MONITORWALL_SET_SCENE pInParam, SDK_OUT_MONITORWALL_SET_SCENE pOutParam, int nWaitTime);
+
+	/**
+	 * 
+	 * @param lLoginID
+	 * @param emType
+	 * @return
+	 * @see NET_MONITORWALL_OPERATE_TYPE
+	 */
+	public static native boolean		OperateMonitorWall(long lLoginID, int emType, Object pInParam, Object pOutParam, int nWaitTime);
+
+	/**
+	 * 
+	 * @param lLoginID
+	 * @return
+	 * @see NET_SPLIT_OPERATE_TYPE
+	 */
+	public static native boolean		OperateSplit(long lLoginID,  int emType, Object pInParam, Object pOutParam, int nWaitTime);
+	
+
+	public static native boolean 		GetTourSource(long lLoginID, NET_IN_GET_TOUR_SOURCE pInParam, NET_OUT_GET_TOUR_SOURCE pOutParam, int nWaitTime);
+
+	public static native boolean 		SetTourSource(long lLoginID, NET_IN_SET_TOUR_SOURCE pInParam, NET_OUT_SET_TOUR_SOURCE pOutParam, int nWaitTime);
+
+	public static native boolean		GetSplitAudioOuput(long lLoginID, SDK_IN_GET_AUDIO_OUTPUT pInParam, SDK_OUT_GET_AUDIO_OUTPUT pOutParam, int nWaitTime);
+
+	public static native boolean		SetSplitAudioOuput(long lLoginID, SDK_IN_SET_AUDIO_OUTPUT pInParam, SDK_OUT_SET_AUDIO_OUTPUT pOutParam, int nWaitTime);
+
+	/**
+	 * 
+	 * @param lLoginID
+	 * @param emType : NET_FIND
+	 * @param pInBuf
+	 * @param pOutBuf
+	 * @param nWaitTime
+	 * @return
+	 */
+	public static native boolean		StartFind(long lLoginID, int emType, Object pInParam, Object pOutParam, int nWaitTime);
+	
+	/**
+	 * 
+	 * @param lLoginID
+	 * @param emType : NET_FIND
+	 * @param pInBuf
+	 * @param pOutBuf
+	 * @param nWaitTime
+	 * @return
+	 */
+	public static native boolean		DoFind(long lLoginID, int emType, Object pInParam, Object pOutParam, int nWaitTime);
+	
+	/**
+	 * 
+	 * @param lLoginID
+	 * @param emType : NET_FIND
+	 * @param pInBuf
+	 * @param pOutBuf
+	 * @param nWaitTime
+	 * @return
+	 */
+	public static native boolean		StopFind(long lLoginID, int emType, Object pInParam, Object pOutParam, int nWaitTime);	
+
 }

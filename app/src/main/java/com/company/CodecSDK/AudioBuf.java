@@ -1,11 +1,11 @@
 package com.company.CodecSDK;
 
-/* ÒôÆµ´¦ÀíÊı¾İ½á¹¹                     */
+/* éŸ³é¢‘å¤„ç†æ•°æ®ç»“æ„                     */
 public class AudioBuf {
-	public byte			pData[];   /* ÒôÆµÊı¾İÆğÊ¼µØÖ·                     */
-	public int			frequency;/* ²ÉÑùÆµÂÊ£¬µ¥Î»£»Hz                   */
-	public int			dataLen;  /* Êı¾İ³¤¶È£¬µ¥Î»£º×Ö½Ú                 */
-	public int			depth;    /* ²ÉÑùÉî¶È(¾«¶È)£¬µ¥Î»£ºbit            */
-	public int			offset;   /* Á½¸öÒôÆµ²ÉÑùµãÖ®¼äµÄ¼ä¸ô£¬µ¥Î»£º×Ö½Ú */
-	public int			channels;   /* Í¨µÀÊı                               */
+	public byte			pData[];   /* éŸ³é¢‘æ•°æ®èµ·å§‹åœ°å€                     */
+	public int			frequency;/* é‡‡æ ·é¢‘ç‡ï¼Œå•ä½ï¼›Hz                   */
+	public int			dataLen;  /* æ•°æ®é•¿åº¦ï¼Œå•ä½ï¼šå­—èŠ‚                 */
+	public int			depth;    /* é‡‡æ ·æ·±åº¦(ç²¾åº¦)ï¼Œå•ä½ï¼šbit            */
+	public int			offset;   /* ä¸¤ä¸ªéŸ³é¢‘é‡‡æ ·ç‚¹ä¹‹é—´çš„é—´éš”ï¼Œå•ä½ï¼šå­—èŠ‚ */
+	public int			channels;   /* é€šé“æ•°                               */
 }

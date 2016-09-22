@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * User info
  * \else
- * 用户信息
+ * SC;'PEO"
  * \endif
  */
 public class USER_INFO implements Serializable {
@@ -19,64 +19,71 @@ public class USER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * User ID 
 	 * \else
-	 * 用户Id
+	 * SC;'Id
 	 * \endif
 	 */
 	public int					dwID;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Group ID 
 	 * \else
-	 * 组ID
+	 * WiID
 	 * \endif
 	 */
 	public int					dwGroupID;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * User name 
 	 * \else
-	 * 用户名
+	 * SC;'C{
 	 * \endif
 	 */
 	public char				name[] = new char[FinalVar.SDK_USER_NAME_LENGTH];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Password
 	 * \else
-	 * 密码
+	 * C\Bk
 	 * \endif
 	 */
 	public char				passWord[] = new char[FinalVar.SDK_USER_PSW_LENGTH];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Right list amount
 	 * \else
-	 * 权限列表长度
+	 * H(O^AP1m3$6H
 	 * \endif
 	 */
 	public int					dwRightNum;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Right
 	 * \else
-	 * 权限列表
+	 * H(O^AP1m
 	 * \endif
 	 */
 	public int					rights[] = new int[FinalVar.SDK_MAX_RIGHT_NUM];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Note: One Chinese character stands for 3-bit. One English character stands for 1-bit. The total length shall be less than 31. Add end symbol at the end.
 	 * \else
-	 * 备注
+	 * 18W"
 	 * \endif
 	 */
 	public char				memo[] = new char[FinalVar.SDK_MEMO_LENGTH];
+	
 	/**
 	 * \if ENGLISH_LANG
-	 * reusable.1：Reusable，0：do not reuse. 
+	 * reusable.1#:Reusable#,0#:do not reuse. 
 	 * \else
-	 * 是否复用；1：复用，0：不复用
+	 * JG7q84SC#;1#:84SC#,0#:2;84SC
 	 * \endif
 	 */
-	public int					dwReusable;				
+	public int					dwReusable;
 }

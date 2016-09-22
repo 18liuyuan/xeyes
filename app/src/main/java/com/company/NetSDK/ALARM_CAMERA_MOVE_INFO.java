@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Camera Displacement Alarm Event Struction
  * \else
- * 摄像机移位报警事件
+ * IcOq;zRFN;1(>/JB<~
  * \endif
  */
 public class ALARM_CAMERA_MOVE_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_CAMERA_MOVE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarming Channel Numbers 
 	 * \else
-	 * 报警发生通道数
+	 * 1(>/7"IzM(5@J}
 	 * \endif
 	 */
 	public int                         nChannelNum;
@@ -28,7 +28,7 @@ public class ALARM_CAMERA_MOVE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarming Channel Info 
 	 * \else
-	 * 发生报警通道号信息
+	 * 7"Iz1(>/M(5@:EPEO"
 	 * \endif
 	 */
 	public byte               alarmChannels[] = new byte[FinalVar.SDK_MAX_CHANNUM_EX];

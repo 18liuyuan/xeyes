@@ -14,7 +14,7 @@ public class SDK_SNIFFER_FRAMEID implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Symbol position bit Offset
 	 * \else
-	 * 标志位的位偏移
+	 * 1jV>N;5DN;F+RF
 	 * \endif
 	 */
 	public int           Offset;
@@ -23,7 +23,7 @@ public class SDK_SNIFFER_FRAMEID implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Symbol position length
 	 * \else
-	 * 标志位的长度
+	 * 1jV>N;5D3$6H
 	 * \endif
 	 */
 	public int           Length;
@@ -32,7 +32,7 @@ public class SDK_SNIFFER_FRAMEID implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Symbol position value
 	 * \else
-	 * 标志位的值
+	 * 1jV>N;5DV5
 	 * \endif
 	 */
 	public byte          Key[] = new byte[16];

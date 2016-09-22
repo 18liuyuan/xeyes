@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Push the server configuration
  * \else
- * 推送服务器配置
+ * MFKM7~NqFwEdVC
  * \endif
  */
 public class NET_PUSH_SERVER_INFO implements Serializable {
@@ -20,7 +20,7 @@ public class NET_PUSH_SERVER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Address
 	 * \else
-	 * 地址
+	 * 5XV7
 	 * \endif
 	 */
 	public byte                           szAddress[] = new byte[FinalVar.MAX_URL_LEN];
@@ -29,7 +29,7 @@ public class NET_PUSH_SERVER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port
 	 * \else
-	 * 端口
+	 * 6K?Z
 	 * \endif
 	 */
     public int                             nPort;

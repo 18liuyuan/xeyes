@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 /**
  * \if ENGLISH_LANG
- * Local Alarm Event(对SDK_ALARM_ALARM_EX upgrade)
+ * Local Alarm Event(6TSDK_ALARM_ALARM_EX upgrade)
  * \else
- * 本地报警事件(对SDK_ALARM_ALARM_EX升级)
+ * 1>5X1(>/JB<~(6TSDK_ALARM_ALARM_EXI}<6)
  * \endif
  */
 public class ALARM_ALARM_INFO_EX2 implements Serializable {
@@ -20,7 +20,7 @@ public class ALARM_ALARM_INFO_EX2 implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel No.
 	 * \else
-	 * 通道号
+	 * M(5@:E
 	 * \endif
 	 */
 	public int                 nChannelID;
@@ -29,7 +29,7 @@ public class ALARM_ALARM_INFO_EX2 implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0: start 1: stop
 	 * \else
-	 * 0:开始 1:停止
+	 * 0:?*J< 1:M#V9
 	 * \endif
 	 */
 	public int                 nAction;
@@ -38,7 +38,7 @@ public class ALARM_ALARM_INFO_EX2 implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm Event Time
 	 * \else
-	 * 报警事件发生的时间
+	 * 1(>/JB<~7"Iz5DJ1<d
 	 * \endif
 	 */
 	public NET_TIME            stuTime = new NET_TIME();
@@ -47,7 +47,7 @@ public class ALARM_ALARM_INFO_EX2 implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Sensor Type {@link com.company.NetSDK.NET_SENSE_METHOD NET_SENSE_METHOD}
 	 * \else
-	 * 传感器类型 {@link com.company.NetSDK.NET_SENSE_METHOD NET_SENSE_METHOD}
+	 * 4+8PFw@`PM {@link com.company.NetSDK.NET_SENSE_METHOD NET_SENSE_METHOD}
 	 * \endif
 	 */
 	public int                 emSenseType;

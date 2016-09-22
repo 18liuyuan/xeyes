@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Request monitoring or playback's return information
  * \else
- * 请求监视或回放错误的返回信息
+ * GkGs<`JS;r;X7E4mNs5D75;XPEO"
  * \endif
  */
 public class DEV_PLAY_RESULT implements Serializable {
@@ -27,14 +27,14 @@ public class DEV_PLAY_RESULT implements Serializable {
 	 * <tr><td>12</td><td>Prohibit access</td></tr>
 	 * </table>
 	 * \else
-	 * 错误返回码:
+	 * 4mNs75;XBk:
 	 * <table>
-	 * <tr><td>1</td><td>无权限</td></tr>
-	 * <tr><td>2</td><td>设备不支持此操作</td></tr>
-	 * <tr><td>3</td><td>资源不足</td></tr>
-	 * <tr><td>4</td><td>设备无法获取当前请求数据</td></tr>
-	 * <tr><td>11</td><td>表示高级用户抢占低级用户资源</td></tr>
-	 * <tr><td>12</td><td>禁止入网</td></tr>
+	 * <tr><td>1</td><td>N^H(O^</td></tr>
+	 * <tr><td>2</td><td>Ih182;V'3V4K2YWw</td></tr>
+	 * <tr><td>3</td><td>WJT42;Wc</td></tr>
+	 * <tr><td>4</td><td>Ih18N^7(;qH!51G0GkGsJ}>]</td></tr>
+	 * <tr><td>11</td><td>1mJ>8_<6SC;'G@U<5M<6SC;'WJT4</td></tr>
+	 * <tr><td>12</td><td>={V9HkMx</td></tr>
 	 * </table>
 	 * \endif
 	 */
@@ -44,7 +44,7 @@ public class DEV_PLAY_RESULT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Handle value returned from Monitoring or playback monitor or playback handle
 	 * \else
-	 * 监视或回放接口返回的句柄值
+	 * <`JS;r;X7E=S?Z75;X5D>d1zV5
 	 * \endif
 	 */
 	public long              lPlayHandle;

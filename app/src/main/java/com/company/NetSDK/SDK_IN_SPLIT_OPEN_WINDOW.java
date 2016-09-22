@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * OpenSplitWindow's interface input param(open window)
  * \else
- * OpenSplitWindow接口输入参数(开窗)
+ * OpenSplitWindow=S?ZJdHk2NJ}(?*40)
  * \endif
  */
 public class SDK_IN_SPLIT_OPEN_WINDOW implements Serializable {
@@ -19,24 +19,26 @@ public class SDK_IN_SPLIT_OPEN_WINDOW implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel no.
 	 * \else
-	 * 通道号(屏号)
+	 * M(5@:E(FA:E)
 	 * \endif
 	 */
-	public int					nChannel;					
+	public int					nChannel;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Windon position, 0~8192
 	 * \else
-	 * 窗口位置, 0~8192
+	 * 40?ZN;VC, 0~8192
 	 * \endif
 	 */
-	public SDK_RECT				stuRect;					
+	public SDK_RECT				stuRect = new SDK_RECT();
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Coordinate whether meet the confitions
 	 * \else
-	 * 坐标是否满足直通条件, 直通是指拼接屏方式下，此窗口区域正好为物理屏区域
+	 * Wx1jJG7qBzWcV1M(Lu<~, V1M(JGV8F4=SFA7=J=OB#,4K40?ZGxSrU}:CN*No@mFAGxSr
 	 * \endif
 	 */
-	public boolean				bDirectable;				
+	public boolean				bDirectable;
 }

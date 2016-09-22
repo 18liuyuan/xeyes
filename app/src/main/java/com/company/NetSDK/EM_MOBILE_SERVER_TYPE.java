@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Platform Type 
  * \else
- * 平台类型
+ * F=L(@`PM
  * \endif
  */
 public class EM_MOBILE_SERVER_TYPE implements Serializable {
@@ -20,7 +20,7 @@ public class EM_MOBILE_SERVER_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Unknown
 	 * \else
-	 * 未知
+	 * N4V*
 	 * \endif
 	 */
 	public static final int EM_MOBILE_SERVER_TYPE_UNKNOWN = 0; 

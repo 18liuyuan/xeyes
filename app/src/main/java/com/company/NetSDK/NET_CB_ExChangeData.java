@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Port serial number
  * \else
- * ¶Ë¿ÚÐòºÅ
+ * 6K?ZPr:E
  * \endif
  */
 public class NET_CB_ExChangeData implements Serializable {
@@ -19,7 +19,7 @@ public class NET_CB_ExChangeData implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * ¶Ë¿ÚÐòºÅ
+	 * 6K?ZPr:E
 	 * \endif
 	 */
 	public int					nDataLength;
@@ -28,7 +28,7 @@ public class NET_CB_ExChangeData implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * ¶Ë¿ÚÐòºÅ
+	 * 6K?ZPr:E
 	 * \endif
 	 */
 	public String				pRevData;

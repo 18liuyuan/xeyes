@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Three generations of equipment parameters of voice intercom, corresponding to the INetSDK.SetDeviceMode SDK_TALK_MODE3 command
  * \else
- * 三代设备的语音对讲参数，对应INetSDK.SetDeviceMode()的SDK_TALK_MODE3命令
+ * H}4zIh185DSoRt6T=22NJ}#,6TS&INetSDK.SetDeviceMode()5DSDK_TALK_MODE3C|An
  * \endif
  */
 public class NET_TALK_EX implements Serializable {
@@ -19,7 +19,7 @@ public class NET_TALK_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * channel number 
 	 * \else
-	 * 通道号
+	 * M(5@:E
 	 * \endif
 	 */
 	public int					nChannel; 
@@ -28,7 +28,7 @@ public class NET_TALK_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Audio transmission listener ports
 	 * \else
-	 * 音频传输侦听端口
+	 * RtF54+JdUlL}6K?Z
 	 * \endif
 	 */
 	public int                 	nAudioPort; 
@@ -37,7 +37,7 @@ public class NET_TALK_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Ms wait time, unit, use the default value is 0
 	 * \else
-	 * 等待时间, 单位ms,为0则使用默认值
+	 * 5H4}J1<d, 5%N;ms,N*0TrJ9SCD,HOV5
 	 * \endif
 	 */
 	public int					nWaitTime; 

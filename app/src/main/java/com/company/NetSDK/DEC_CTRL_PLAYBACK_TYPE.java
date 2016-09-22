@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Year
  * \else
- * 解码器回放控制类型
+ * =bBkFw;X7E?XVF@`PM
  * \endif
  */
 public class DEC_CTRL_PLAYBACK_TYPE implements Serializable {
@@ -19,7 +19,7 @@ public class DEC_CTRL_PLAYBACK_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Drag
 	 * \else
-	 * 拖动
+	 * MO6/
 	 * \endif
 	 */
 	public static final int     Dec_Playback_Seek = 0;
@@ -28,7 +28,7 @@ public class DEC_CTRL_PLAYBACK_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Play
 	 * \else
-	 * 播放
+	 * 2%7E
 	 * \endif
 	 */
 	public static final int     Dec_Playback_Play = 1;
@@ -37,7 +37,7 @@ public class DEC_CTRL_PLAYBACK_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Pause
 	 * \else
-	 * 暂停
+	 * T]M#
 	 * \endif
 	 */
 	public static final int     Dec_Playback_Pause = 2;
@@ -46,7 +46,7 @@ public class DEC_CTRL_PLAYBACK_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Stop
 	 * \else
-	 * 停止
+	 * M#V9
 	 * \endif
 	 */
 	public static final int     Dec_Playback_Stop = 3;

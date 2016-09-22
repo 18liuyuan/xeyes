@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Network Storage Server Configuration
  * \else
- * ÍøÂç´æ´¢·þÎñÆ÷ÅäÖÃ
+ * MxBg4f4"7~NqFwEdVC
  * \endif
  */
 public class CFG_CHANNEL_TIME_SECTION implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_CHANNEL_TIME_SECTION implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Storage Time Section 
 	 * \else
-	 * ´æ´¢Ê±¼ä¶Î
+	 * 4f4"J1<d6N
 	 * \endif
 	 */
 	public CFG_TIME_SECTION[][]			stuTimeSection = new CFG_TIME_SECTION[FinalVar.WEEK_DAY_NUM][FinalVar.MAX_NAS_TIME_SECTION];

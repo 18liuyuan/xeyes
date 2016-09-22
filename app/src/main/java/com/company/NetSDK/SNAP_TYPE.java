@@ -2,7 +2,6 @@ package com.company.NetSDK;
 
 import java.io.Serializable;
 
-
 public class SNAP_TYPE implements Serializable {
 	/**
 	 *

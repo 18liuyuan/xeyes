@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * IPv6 config
  * \else
- * IPv6配置
+ * IPv6EdVC
  * \endif
  */
 public class SDKDEV_IPV6_CFG implements Serializable {
@@ -20,7 +20,7 @@ public class SDKDEV_IPV6_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * link address: string length = 44;(every host has an exclusive link address, read only)
 	 * \else
-	 * 链路地址: 字符串, 长度为44;(局域网内每台主机拥有唯一的链路地址，只读)
+	 * A4B75XV7: WV7{4., 3$6HN*44;(>VSrMxDZC?L(Vw;zS5SPN(R;5DA4B75XV7#,V;6A)
 	 * \endif
 	 */
 	public byte               szLinkAddr[] = new byte[44];
@@ -29,7 +29,7 @@ public class SDKDEV_IPV6_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * host IP
 	 * \else
-	 * 主机IP
+	 * Vw;zIP
 	 * \endif
 	 */
 	public byte               szHostIP[] = new byte[40];
@@ -38,7 +38,7 @@ public class SDKDEV_IPV6_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * net prefix, 1-128
 	 * \else
-	 * 网络前缀（范围：1-128，可读可写）
+	 * MxBgG0W:#(76N'#:1-128#,?I6A?IP4#)
 	 * \endif
 	 */
 	public int              dwPreFix;
@@ -47,7 +47,7 @@ public class SDKDEV_IPV6_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * gateway
 	 * \else
-	 * 默认网关
+	 * D,HOMx9X
 	 * \endif
 	 */
 	public byte               szGateWay[] = new byte[40];
@@ -56,7 +56,7 @@ public class SDKDEV_IPV6_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * enable of auto get ip
 	 * \else
-	 * 自动获取使能
+	 * WT6/;qH!J9D\
 	 * \endif
 	 */
 	public boolean               bAutoGet;
@@ -65,7 +65,7 @@ public class SDKDEV_IPV6_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * primary DNS
 	 * \else
-	 * 首选DNS
+	 * JWQ!DNS
 	 * \endif
 	 */
 	public byte               szPrimaryDns[] = new byte[40];
@@ -74,7 +74,7 @@ public class SDKDEV_IPV6_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * second DNS
 	 * \else
-	 * 备选DNS
+	 * 18Q!DNS
 	 * \endif
 	 */
 	public byte               szSecondDns[] = new byte[40];

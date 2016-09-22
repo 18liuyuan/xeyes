@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Entrance Guard Record  Information
  * \else
- * 门禁密码记录集信息
+ * CE={C\Bk<GB<</PEO"
  * \endif
  */
 public class NET_RECORDSET_ACCESS_CTL_PWD implements Serializable {
@@ -19,7 +19,7 @@ public class NET_RECORDSET_ACCESS_CTL_PWD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Record Number,Read-Only
 	 * \else
-	 * 记录集编号，只读
+	 * <GB<</1`:E#,V;6A
 	 * \endif
 	 */
 	public int			nRecNo; 
@@ -28,7 +28,7 @@ public class NET_RECORDSET_ACCESS_CTL_PWD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Creat Time
 	 * \else
-	 * 创建时间
+	 * 44=(J1<d
 	 * \endif
 	 */
 	public NET_TIME		stuCreateTime; 
@@ -37,7 +37,7 @@ public class NET_RECORDSET_ACCESS_CTL_PWD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * User's ID
 	 * \else
-	 * 用户ID
+	 * SC;'ID
 	 * \endif
 	 */
 	public char        	szUserID[] 		= new char[FinalVar.SDK_MAX_USERID_LEN];
@@ -46,7 +46,7 @@ public class NET_RECORDSET_ACCESS_CTL_PWD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Open Password
 	 * \else
-	 * 开门密码
+	 * ?*CEC\Bk
 	 * \endif
 	 */
 	public char			szDoorOpenPwd[] = new char[FinalVar.SDK_MAX_CARDPWD_LEN];
@@ -55,7 +55,7 @@ public class NET_RECORDSET_ACCESS_CTL_PWD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm Password
 	 * \else
-	 * 报警密码
+	 * 1(>/C\Bk
 	 * \endif
 	 */
 	public char			szAlarmPwd[] 	= new char[FinalVar.SDK_MAX_CARDPWD_LEN];
@@ -64,7 +64,7 @@ public class NET_RECORDSET_ACCESS_CTL_PWD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Valid Door Number
 	 * \else
-	 * 有效的的门数目
+	 * SPP'5D5DCEJ}D?
 	 * \endif
 	 */
 	public int			nDoorNum; 
@@ -73,7 +73,7 @@ public class NET_RECORDSET_ACCESS_CTL_PWD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Privileged Door Number,That is CFG_CMD_ACCESS_EVENT Configure Array Subscript
 	 * \else
-	 * 有权限的门序号，即CFG_CMD_ACCESS_EVENT配置CFG_ACCESS_EVENT_INFO的数组下标
+	 * SPH(O^5DCEPr:E#,<4CFG_CMD_ACCESS_EVENTEdVCCFG_ACCESS_EVENT_INFO5DJ}WiOB1j
 	 * \endif
 	 */
 	public int		    sznDoors[] 		= new int[FinalVar.SDK_MAX_DOOR_NUM]; 

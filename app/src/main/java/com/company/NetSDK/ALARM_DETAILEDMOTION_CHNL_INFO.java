@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Detailed Motion Detection Alarm Info
  * \else
- * 详细动检报警信息
+ * OjO86/<l1(>/PEO"
  * \endif
  */
 
@@ -20,7 +20,7 @@ public class ALARM_DETAILEDMOTION_CHNL_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel No. 
 	 * \else
-	 * 通道号
+	 * M(5@:E
 	 * \endif
 	 */
 	public int                nChannelID;
@@ -29,7 +29,7 @@ public class ALARM_DETAILEDMOTION_CHNL_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * If Alarm TRUE/FALSE 
 	 * \else
-	 * 是否报警 TRUE/FALSE
+	 * JG7q1(>/ TRUE/FALSE
 	 * \endif
 	 */
 	public boolean               bAlarm;
@@ -38,7 +38,7 @@ public class ALARM_DETAILEDMOTION_CHNL_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm Level,Unit ,Calculate By the Small Grid Numbers of Motion Detect Divide Total Numbers of Small Grid
 	 * \else
-	 * 报警级别，单位千分之，以动检发生小格数除以总小格数计算
+	 * 1(>/<61p#,5%N;G'7VV.#,RT6/<l7"IzP!8qJ}3}RTW\P!8qJ}<FKc
 	 * \endif
 	 */
 	public int                nLevel;        

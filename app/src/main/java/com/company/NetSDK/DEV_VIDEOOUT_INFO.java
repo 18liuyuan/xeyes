@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Device TV display info
  * \else
- * 设备TV输出参数信息
+ * Ih18TVJd3v2NJ}PEO"
  * \endif
  */
 public class DEV_VIDEOOUT_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class DEV_VIDEOOUT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * NSP,video standard mask,according to the bit which shows video format(not support now)
 	 * \else
-	 * NSP,视频制式掩码，按位表示设备能够支持的视频制式(暂不支持)
+	 * NSP,JSF5VFJ=QZBk#,04N;1mJ>Ih18D\9;V'3V5DJSF5VFJ=(T]2;V'3V)
 	 * \endif
 	 */
 	public int           dwVideoStandardMask;
@@ -28,7 +28,7 @@ public class DEV_VIDEOOUT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * NSP,current format(not support now,please use DHDEV_SYSTEM_ATTR_CFG by VideoStandard to read and config the video format)
 	 * \else
-	 * NSP,当前的制式(暂不支持，请使用DHDEV_SYSTEM_ATTR_CFG的byVideoStandard对制式读取和配置)
+	 * NSP,51G05DVFJ=(T]2;V'3V#,GkJ9SCDHDEV_SYSTEM_ATTR_CFG5DbyVideoStandard6TVFJ=6AH!:MEdVC)
 	 * \endif
 	 */
 	public int             nVideoStandard;
@@ -37,7 +37,7 @@ public class DEV_VIDEOOUT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Resolution mask,according the bit which shows video resolution
 	 * \else
-	 * 分辨率掩码，按位表示设备能够支持的分辨率
+	 * 7V1fBJQZBk#,04N;1mJ>Ih18D\9;V'3V5D7V1fBJ
 	 * \endif
 	 */
 	public int           dwImageSizeMask;
@@ -46,7 +46,7 @@ public class DEV_VIDEOOUT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Current resolution
 	 * \else
-	 * 当前的分辨率
+	 * 51G05D7V1fBJ
 	 * \endif
 	 */
 	public int             nImageSize;

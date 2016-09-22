@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * class of time
  * \else
- * 时间类
+ * J1<d@`
  * \endif
  */
 public class NET_TIME_EX implements Serializable {
@@ -19,56 +19,62 @@ public class NET_TIME_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Year
 	 * \else
-	 * 年
+	 * Dj
 	 * \endif
 	 */
-	public long				dwYear;					 
+	public long				dwYear;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Month
 	 * \else
-	 * 月
+	 * TB
 	 * \endif
 	 */
-	public long				dwMonth;				 
+	public long				dwMonth;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Day
 	 * \else
-	 * 日
+	 * HU
 	 * \endif
 	 */
-	public long				dwDay;					 
+	public long				dwDay;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Hour
 	 * \else
-	 * 时
+	 * J1
 	 * \endif
 	 */
-	public long				dwHour;					 
+	public long				dwHour;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Minute
 	 * \else
-	 *  分
+	 *  7V
 	 * \endif
 	 */
-	public long				dwMinute;				 
+	public long				dwMinute;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Second
 	 * \else
-	 * 秒
+	 * Ck
 	 * \endif
 	 */
-	public long				dwSecond;				 
+	public long				dwSecond;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Millisecond
 	 * \else
-	 * 毫秒
+	 * :ACk
 	 * \endif
 	 */
-	public long             dwMillisecond;           
+	public long             dwMillisecond;
 }

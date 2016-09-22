@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Blind Alarm
  * \else
- * 图像遮挡报警
+ * M<OqUZ521(>/
  * \endif
  */
 public class SDK_BLIND_CFG implements Serializable {
@@ -19,7 +19,7 @@ public class SDK_BLIND_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable
 	 * \else
-	 * 使能
+	 * J9D\
 	 * \endif
 	 */
 	public byte                byBlindEnable;
@@ -28,7 +28,7 @@ public class SDK_BLIND_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Sensitivity 1~6,1 lowest,6 highest
 	 * \else
-	 * 灵敏度1~6，1是最低，6是最高
+	 * AiCt6H1~6#,1JGWn5M#,6JGWn8_
 	 * \endif
 	 */
 	public byte                byBlindLevel;
@@ -46,7 +46,7 @@ public class SDK_BLIND_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Process Mode
 	 * \else
-	 * 处理方式
+	 * 4&@m7=J=
 	 * \endif
 	 */
 	public SDK_MSG_HANDLE       struHandle = new SDK_MSG_HANDLE(); 

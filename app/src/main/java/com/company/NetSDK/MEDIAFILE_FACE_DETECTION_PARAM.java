@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * SDK_FILE_QUERY_FACE_DETECTION corresponding face recognition service search parameter
  * \else
- * SDK_FILE_QUERY_FACE_DETECTION 对应的人脸识别服务查询参数
+ * SDK_FILE_QUERY_FACE_DETECTION 6TS&5DHKA3J61p7~Nq2iQ/2NJ}
  * \endif
  */
 public class MEDIAFILE_FACE_DETECTION_PARAM implements Serializable {
@@ -20,7 +20,7 @@ public class MEDIAFILE_FACE_DETECTION_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * channel no.
 	 * \else
-	 * 通道号
+	 * M(5@:E
 	 * \endif
 	 */
 	public int                 nChannelID;
@@ -29,7 +29,7 @@ public class MEDIAFILE_FACE_DETECTION_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * start time
 	 * \else
-	 * 起始时间
+	 * FpJ<J1<d
 	 * \endif
 	 */
 	public NET_TIME            stuStartTime = new NET_TIME();
@@ -38,16 +38,16 @@ public class MEDIAFILE_FACE_DETECTION_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * end time
 	 * \else
-	 * 结束时间
+	 * =aJxJ1<d
 	 * \endif
 	 */
 	public NET_TIME            stuEndTime = new NET_TIME();
 
 	/**
 	 * \if ENGLISH_LANG
-	 * picture type，see  EM_FACEPIC_TYPE
+	 * picture type#,see  EM_FACEPIC_TYPE
 	 * \else
-	 * 图片类型，详见 EM_FACEPIC_TYPE
+	 * M<F,@`PM#,Oj<{ EM_FACEPIC_TYPE
 	 * \endif
 	 */
 	public int     emPicType;
@@ -56,7 +56,7 @@ public class MEDIAFILE_FACE_DETECTION_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * if has detailed info
 	 * \else
-	 * 是否有详细信息
+	 * JG7qSPOjO8PEO"
 	 * \endif
 	 */
 	public boolean                bDetailEnable;
@@ -65,7 +65,7 @@ public class MEDIAFILE_FACE_DETECTION_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * parameter detailed info
 	 * \else
-	 * 参数详细信息
+	 * 2NJ}OjO8PEO"
 	 * \endif
 	 */
 	public MEDIAFILE_FACE_DETECTION_DETAIL_PARAM stuDetail = new MEDIAFILE_FACE_DETECTION_DETAIL_PARAM();

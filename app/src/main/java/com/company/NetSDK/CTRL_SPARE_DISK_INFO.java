@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * spake disk info
  * \else
- * 热备操作
+ * HH182YWw
  * \endif
  */
 public class CTRL_SPARE_DISK_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class CTRL_SPARE_DISK_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable
 	 * \else
-	 * Enable，使能，Disable，不使能
+	 * Enable#,J9D\#,Disable#,2;J9D\
 	 * \endif
 	 */
 	public byte		szAction[] = new byte[16]; 
@@ -28,7 +28,7 @@ public class CTRL_SPARE_DISK_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Global,Local
 	 * \else
-	 * Global，全局热备，Local，非全局热备
+	 * Global#,H+>VHH18#,Local#,7GH+>VHH18
 	 * \endif
 	 */
 	public byte		szScope[] = new byte[16]; 
@@ -37,7 +37,7 @@ public class CTRL_SPARE_DISK_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * name
 	 * \else
-	 * 热备名字，若Scope为Global，则为热备池的名称，否则表示Raid组的名称
+	 * HH18C{WV#,HtScopeN*Global#,TrN*HH183X5DC{3F#,7qTr1mJ>RaidWi5DC{3F
 	 * \endif
 	 */
 	public byte		szName[] = new byte[16]; 
@@ -46,7 +46,7 @@ public class CTRL_SPARE_DISK_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * disk index
 	 * \else
-	 * 磁盘序号
+	 * 4EELPr:E
 	 * \endif
 	 */
 	public int      nIndex;

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Infomation window areas
  * \else
- * 区块窗口信息
+ * Gx?i40?ZPEO"
  * \endif
  */
 public class SDK_WINDOW_COLLECTION implements Serializable {
@@ -19,96 +19,107 @@ public class SDK_WINDOW_COLLECTION implements Serializable {
 	 * \if ENGLISH_LANG
 	 * window ID
 	 * \else
-	 * 窗口ID
+	 * 40?ZID
 	 * \endif
 	 */
-	public int					nWindowID;					
+	public int					nWindowID;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Enable
 	 * \else
-	 * 窗口是否有效
+	 * 40?ZJG7qSPP'
 	 * \endif
 	 */
-	public boolean				bWndEnable;					
+	public boolean				bWndEnable;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Rect, effect when free split mode
 	 * \else
-	 * 窗口区域, 自由分割模式下有效
+	 * 40?ZGxSr, WTSI7V8nD#J=OBSPP'
 	 * \endif
 	 */
-	public SDK_RECT				stuRect = new SDK_RECT();					
+	public SDK_RECT				stuRect = new SDK_RECT();
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Coordinate whether meet the conditions
 	 * \else
-	 * 坐标是否满足直通条件
+	 * Wx1jJG7qBzWcV1M(Lu<~
 	 * \endif
 	 */
-	public boolean				bDirectable;				
+	public boolean				bDirectable;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Z order
 	 * \else
-	 * 窗口Z次序
+	 * 40?ZZ4NPr
 	 * \endif
 	 */
-	public int					nZOrder;					
+	public int					nZOrder;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Source enable
 	 * \else
-	 * 显示源是否有效
+	 * OTJ>T4JG7qSPP'
 	 * \endif
 	 */
-	public boolean				bSrcEnable;					
+	public boolean				bSrcEnable;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Device ID
 	 * \else
-	 * 设备ID
+	 * Ih18ID
 	 * \endif
 	 */
-	public char				szDeviceID[] = new char[FinalVar.SDK_DEV_ID_LEN_EX]; 
+	public byte				szDeviceID[] = new byte[FinalVar.SDK_DEV_ID_LEN_EX];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Video channel
 	 * \else
-	 * 视频通道号
+	 * JSF5M(5@:E
 	 * \endif
 	 */
-	public int					nVideoChannel;				
+	public int					nVideoChannel;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Video stream type
 	 * \else
-	 * 视频码流类型
+	 * JSF5BkAw@`PM
 	 * \endif
 	 */
-	public int					nVideoStream;				
+	public int					nVideoStream;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Audio channel
 	 * \else
-	 * 音频通道
+	 * RtF5M(5@
 	 * \endif
 	 */
-	public int					nAudioChannel;				
+	public int					nAudioChannel;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Audio stream type
 	 * \else
-	 * 音频码流类型
+	 * RtF5BkAw@`PM
 	 * \endif
 	 */
-	public int					nAudioStream;				
+	public int					nAudioStream;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Unique channel
 	 * \else
-	 * 设备内统一编号的唯一通道号
+	 * Ih18DZM3R;1`:E5DN(R;M(5@:E
 	 * \endif
 	 */
-	public int					nUniqueChannel;				
+	public int					nUniqueChannel;
 }

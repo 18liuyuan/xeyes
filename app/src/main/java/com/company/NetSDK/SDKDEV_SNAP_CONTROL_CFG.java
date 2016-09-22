@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * snap control configuration
  * \else
- * 抓图控制配置
+ * W%M<?XVFEdVC
  * \endif
  */
 public class SDKDEV_SNAP_CONTROL_CFG implements Serializable {
@@ -20,7 +20,7 @@ public class SDKDEV_SNAP_CONTROL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * every channel's snap on-off: 0 Autumn(other configuration and event will control whether snap picture ); 1: turn on snap; 2: turn off snap
 	 * \else
-	 * 每个通道对应抓图开关 0:自动(则表示是否抓图，由其他配置和事件控制); 1:抓图开启; 2:抓图关闭
+	 * C?8vM(5@6TS&W%M<?*9X 0:WT6/(Tr1mJ>JG7qW%M<#,SIFdK{EdVC:MJB<~?XVF); 1:W%M<?*Ft; 2:W%M<9X1U
 	 * \endif
 	 */
 	public byte                bySnapState[] = new byte[32]; 

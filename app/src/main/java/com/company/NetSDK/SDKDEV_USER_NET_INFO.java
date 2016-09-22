@@ -2,13 +2,11 @@ package com.company.NetSDK;
 
 import java.io.Serializable;
 
-
-import com.company.NetSDK.SDKDEV_USE_CHANNEL_STATE;
 /**
  * \if ENGLISH_LANG
  * User network use status info 
  * \else
- * 用户网络使用状态信息
+ * SC;'MxBgJ9SCW4L,PEO"
  * \endif
  */
 public class SDKDEV_USER_NET_INFO implements Serializable {
@@ -21,51 +19,55 @@ public class SDKDEV_USER_NET_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * User name 
 	 * \else
-	 * 用户名
+	 * SC;'C{
 	 * \endif
 	 */
-	public char				szUserName[] = new char[32];			// 
+	public byte				szUserName[] = new byte[32];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Group 
 	 * \else
-	 * 用户组
+	 * SC;'Wi
 	 * \endif
 	 */
-	public char				szUserGroup[] = new char[32];		// 
+	public byte				szUserGroup[] = new byte[32];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Login time 
 	 * \else
-	 * 登入时间
+	 * 5GHkJ1<d
 	 * \endif
 	 */
-	public NET_TIME			time;					// 
+	public NET_TIME			time = new NET_TIME();
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Enabled channel amount 
 	 * \else
-	 * 开启的通道个数
+	 * ?*Ft5DM(5@8vJ}
 	 * \endif
 	 */
-	public int					nOpenedChannelNum;		// 
+	public int					nOpenedChannelNum;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Channel network status 
 	 * \else
-	 * 通道网络状态
+	 * M(5@MxBgW4L,
 	 * \endif
 	 */
 	public SDKDEV_USE_CHANNEL_STATE	channelInfo[] = new SDKDEV_USE_CHANNEL_STATE[FinalVar.SDK_MAX_CHANNUM];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Ip address 
 	 * \else
-	 * ip地址
+	 * ip5XV7
 	 * \endif
 	 */
-	
-	// public char                szIpAddress[] = new char[FinalVar.SDK_MAX_IPADDR_LEN_EX];  // 
+	public byte                szIpAddress[] = new byte[FinalVar.SDK_MAX_IPADDR_LEN_EX];
 	
 	public SDKDEV_USER_NET_INFO() {
 		for (int i = 0; i < FinalVar.SDK_MAX_CHANNUM; i++) {

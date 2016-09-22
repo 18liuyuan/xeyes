@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Type of video phone call
  * \else
- * 视频电话呼叫状态类型
+ * JSF55g;0:t=PW4L,@`PM
  * \endif
  */
 public class EM_NET_VTP_CALL_STATE_TYPE implements Serializable {
@@ -19,7 +19,7 @@ public class EM_NET_VTP_CALL_STATE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Unknown
 	 * \else
-	 * 未知
+	 * N4V*
 	 * \endif
 	 */
 	public final static int EM_NET_VTP_CALL_STATE_UNKNOWN = 0;
@@ -28,7 +28,7 @@ public class EM_NET_VTP_CALL_STATE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Initial State
 	 * \else
-	 * 初始状态
+	 * 3uJ<W4L,
 	 * \endif
 	 */
 	public final static int EM_NET_VTP_CALL_STATE_IDLE = 1; 
@@ -37,7 +37,7 @@ public class EM_NET_VTP_CALL_STATE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * State of calling(the opposite side not response)
 	 * \else
-	 * 主叫呼叫状态(对方未回应)
+	 * Vw=P:t=PW4L,(6T7=N4;XS&)
 	 * \endif
 	 */
 	public final static int EM_NET_VTP_CALL_STATE_CALLING = 2; 
@@ -46,7 +46,7 @@ public class EM_NET_VTP_CALL_STATE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * State of called
 	 * \else
-	 * 被叫呼叫状态
+	 * 1;=P:t=PW4L,
 	 * \endif
 	 */
 	public final static int EM_NET_VTP_CALL_STATE_CALLED = 3; 
@@ -55,7 +55,7 @@ public class EM_NET_VTP_CALL_STATE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * State of calling back (the opposite side responsed but no answer)
 	 * \else
-	 * 主叫回铃状态(对方回应, 但没有接听)
+	 * Vw=P;XAeW4L,(6T7=;XS&, 5+C;SP=SL})
 	 * \endif
 	 */
 	public final static int EM_NET_VTP_CALL_STATE_RINGING = 4; 
@@ -64,7 +64,7 @@ public class EM_NET_VTP_CALL_STATE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * State of answering 
 	 * \else
-	 * 通话中状态
+	 * M(;0VPW4L,
 	 * \endif
 	 */
 	public final static int EM_NET_VTP_CALL_STATE_CONNECTING = 5; 
@@ -73,7 +73,7 @@ public class EM_NET_VTP_CALL_STATE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 2 states in the call 
 	 * \else
-	 * 通话中2状态(通话媒体变更后的通话中状态)
+	 * M(;0VP2W4L,(M(;0C=Le1d8|:s5DM(;0VPW4L,)
 	 * \endif
 	 */
 	public final static int EM_NET_VTP_CALL_STATE_CONNECTING2 = 6; 
@@ -82,7 +82,7 @@ public class EM_NET_VTP_CALL_STATE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * State of call off
 	 * \else
-	 * 通话挂断状态
+	 * M(;09R6OW4L,
 	 * \endif
 	 */
 	public final static int EM_NET_VTP_CALL_STATE_DISCONNECT = 7; 

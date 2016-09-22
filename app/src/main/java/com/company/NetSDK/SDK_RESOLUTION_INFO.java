@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Pic resolution 
  * \else
- * Í¼Æ¬·Ö±æÂÊ
+ * M<F,7V1fBJ
  * \endif
  */
 public class SDK_RESOLUTION_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class SDK_RESOLUTION_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Width
 	 * \else
-	 * ¿í
+	 * ?m
 	 * \endif
 	 */
 	public short   snWidth;
@@ -28,7 +28,7 @@ public class SDK_RESOLUTION_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Hight
 	 * \else
-	 * ¸ß
+	 * 8_
 	 * \endif
 	 */
 	public short   snHight;

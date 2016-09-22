@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Failure Type
  * \else
- * 故障类型
+ * 9JUO@`PM
  * \endif
  */
 public class EM_ALARM_FAULT_STATE_TYPE implements Serializable {
@@ -19,62 +19,62 @@ public class EM_ALARM_FAULT_STATE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * All Types
 	 * \else
-	 * 所有类型
+	 * KySP@`PM
 	 * \endif
 	 */
-    public final static int EM_ALARM_FAULT_STATE_ALL = 0;
+    public static final int EM_ALARM_FAULT_STATE_ALL = 0;
     
     /**
      * \if ENGLISH_LANG
      * Connection Failure
      * \else
-     * 连接故障
+     * A,=S9JUO
      * \endif
      */
-    public final static int EM_ALARM_FAULT_STATE_CONNECTFAULT = 1; 
+    public static final int EM_ALARM_FAULT_STATE_CONNECTFAULT = 1; 
     
     /**
      * \if ENGLISH_LANG
      * Bell Failure
      * \else
-     * 警号故障
+     * >/:E9JUO
      * \endif
      */
-    public final static int EM_ALARM_FAULT_STATE_BELLFAULT = 2; 
+    public static final int EM_ALARM_FAULT_STATE_BELLFAULT = 2; 
     
     /**
      * \if ENGLISH_LANG
      * Keyboard Failure
      * \else
-     * 键盘故障
+     * <|EL9JUO
      * \endif
      */
-    public final static int EM_ALARM_FAULT_STATE_KBFAULT = 3; 
+    public static final int EM_ALARM_FAULT_STATE_KBFAULT = 3; 
     
     /**
      * \if ENGLISH_LANG
      * Keyboard Vandal-proof
      * \else
-     * 键盘防拆
+     * <|EL7@2p
      * \endif
      */
-    public final static int EM_ALARM_FAULT_STATE_KBTAMPER = 4; 
+    public static final int EM_ALARM_FAULT_STATE_KBTAMPER = 4; 
     
     /**
      * \if ENGLISH_LANG
      * Sensor Short circuit
      * \else
-     * 传感器短路
+     * 4+8PFw6LB7
      * \endif
      */
-    public final static int EM_ALARM_FAULT_STATE_SENSORSHORTOUT = 5; 
+    public static final int EM_ALARM_FAULT_STATE_SENSORSHORTOUT = 5; 
     
     /**
      * \if ENGLISH_LANG
      * Sensor Vandal-proof
      * \else
-     * 传感器防拆
+     * 4+8PFw7@2p
      * \endif
      */
-    public final static int EM_ALARM_FAULT_STATE_SENSORTAMPER = 6;
+    public static final int EM_ALARM_FAULT_STATE_SENSORTAMPER = 6;
 }

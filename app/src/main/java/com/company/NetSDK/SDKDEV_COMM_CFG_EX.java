@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Extended COM configuration structure 
  * \else
- * 扩展串口配置结构体
+ * @)U94.?ZEdVC=a99Le
  * \endif
  */
 public class SDKDEV_COMM_CFG_EX implements Serializable {
@@ -20,7 +20,7 @@ public class SDKDEV_COMM_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Decoder protocol amount
 	 * \else
-	 * 解码器协议个数
+	 * =bBkFwP-Ri8vJ}
 	 * \endif
 	 */
 	public int               dwDecProListNum;
@@ -29,7 +29,7 @@ public class SDKDEV_COMM_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Protocol name list
 	 * \else
-	 * 协议名列表
+	 * P-RiC{AP1m
 	 * \endif
 	 */
     public byte                DecProName[][] = new byte[FinalVar.SDK_MAX_DECPRO_LIST_SIZE][FinalVar.SDK_MAX_NAME_LEN];
@@ -38,7 +38,7 @@ public class SDKDEV_COMM_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Each decoder current property
 	 * \else
-	 * 各解码器当前属性
+	 * 8w=bBkFw51G0JtPT
 	 * \endif
 	 */
 	public SDK_485_CFG          stDecoder[] = new SDK_485_CFG[FinalVar.SDK_MAX_DECODER_NUM];
@@ -47,7 +47,7 @@ public class SDKDEV_COMM_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 232 function amount
 	 * \else
-	 * 232功能个数
+	 * 2329&D\8vJ}
 	 * \endif
 	 */
 	public int               dw232FuncNameNum;
@@ -56,7 +56,7 @@ public class SDKDEV_COMM_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Function name list
 	 * \else
-	 * 功能名列表
+	 * 9&D\C{AP1m
 	 * \endif
 	 */
     public byte                s232FuncName[][] = new byte[FinalVar.SDK_MAX_232FUNCS][FinalVar.SDK_MAX_NAME_LEN];
@@ -65,7 +65,7 @@ public class SDKDEV_COMM_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 232 com amount
 	 * \else
-	 * 232串口个数
+	 * 2324.?Z8vJ}
 	 * \endif
 	 */
 	public int               dw232ComNum;
@@ -74,7 +74,7 @@ public class SDKDEV_COMM_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Current 232 COM property
 	 * \else
-	 * 各232串口当前属性
+	 * 8w2324.?Z51G0JtPT
 	 * \endif
 	 */
 	public SDK_RS232_CFG        st232[] = new SDK_RS232_CFG[FinalVar.SDK_MAX_232_NUM_EX];

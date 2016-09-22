@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * The describe of EVENT_IVS_TRAFFICGATE's data
  * \else
- * 事件类型EVENT_IVS_TRAFFICGATE(交通卡口事件)对应的数据块描述信息
+ * JB<~@`PMEVENT_IVS_TRAFFICGATE(=;M(?(?ZJB<~)6TS&5DJ}>]?iChJvPEO"
  * \endif
  */
 public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * ChannelId
 	 * \else
-	 * 通道号
+	 * M(5@:E
 	 * \endif
 	 */
 	public int					nChannelID;
@@ -28,7 +28,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Event name
 	 * \else
-	 * 事件名称
+	 * JB<~C{3F
 	 * \endif
 	 */
 	public byte					szName[] = new byte[128];
@@ -37,7 +37,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * PTS(ms)
 	 * \else
-	 * 时间戳(单位是毫秒)
+	 * J1<d4A(5%N;JG:ACk)
 	 * \endif
 	 */
 	public double				PTS;
@@ -46,7 +46,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The event happen time
 	 * \else
-	 * 事件发生的时间
+	 * JB<~7"Iz5DJ1<d
 	 * \endif
 	 */
 	public NET_TIME_EX			UTC = new NET_TIME_EX();
@@ -55,7 +55,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Event ID
 	 * \else
-	 * 事件ID
+	 * JB<~ID
 	 * \endif
 	 */
 	public int					nEventID;
@@ -64,7 +64,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Have being detected object
 	 * \else
-	 * 检测到的物体
+	 * <l2b5=5DNoLe
 	 * \endif
 	 */
 	public SDK_MSG_OBJECT		stuObject = new SDK_MSG_OBJECT();
@@ -73,7 +73,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Road number
 	 * \else
-	 * 对应车道号
+	 * 6TS&355@:E
 	 * \endif
 	 */
 	public int					nLane;
@@ -82,7 +82,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The car's actual rate(Km/h)
 	 * \else
-	 * 车辆实际速度Km/h
+	 * 35A>J5<JKY6HKm/h
 	 * \endif
 	 */
 	public int					nSpeed;
@@ -91,7 +91,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Rate upper limit(km/h)
 	 * \else
-	 * 速度上限 单位：km/h
+	 * KY6HIOO^ 5%N;#:km/h
 	 * \endif
 	 */
 	public int					nSpeedUpperLimit;
@@ -100,7 +100,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Rate lower limit(km/h) 
 	 * \else
-	 * 速度下限 单位：km/h 
+	 * KY6HOBO^ 5%N;#:km/h 
 	 * \endif
 	 */
 	public int					nSpeedLowerLimit;
@@ -115,10 +115,10 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * </pre>
 	 * \else
 	 * <pre>
-	 * 违反规则掩码,第一位:逆行; 
-	 * 第二位:压线行驶; 第三位:超速行驶; 
-	 * 第四位：欠速行驶; 第五位:闯红灯;第六位:穿过路口(卡口事件)
-	 * 第七位: 压黄线; 第八位: 有车占道; 第九位: 黄牌占道;否则默认为:交通卡口事件
+	 * N%749fTrQZBk,5ZR;N;:DfPP; 
+	 * 5Z6~N;:Q9O_PPJ;; 5ZH}N;:3,KYPPJ;; 
+	 * 5ZKDN;#:G7KYPPJ;; 5ZNeN;:43:l5F;5ZAyN;:4)9}B7?Z(?(?ZJB<~)
+	 * 5ZF_N;: Q9;FO_; 5Z0KN;: SP35U<5@; 5Z>EN;: ;FEFU<5@;7qTrD,HON*:=;M(?(?ZJB<~
 	 * </pre>
 	 * \endif
 	 */
@@ -128,7 +128,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Event file info
 	 * \else
-	 * 事件对应文件信息   
+	 * JB<~6TS&ND<~PEO"   
 	 * \endif
 	 */
 	public SDK_EVENT_FILE_INFO  stuFileInfo = new SDK_EVENT_FILE_INFO();
@@ -137,7 +137,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Vehicle info
 	 * \else
-	 * 车身信息
+	 * 35ImPEO"
 	 * \endif
 	 */
 	public SDK_MSG_OBJECT       stuVehicle = new SDK_MSG_OBJECT();
@@ -146,7 +146,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Manual snap sequence string  
 	 * \else
-	 * 手动抓拍序号            
+	 * JV6/W%EDPr:E            
 	 * \endif
 	 */
 	public byte                szManualSnapNo[] = new byte[64];
@@ -155,7 +155,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Snap index,such as 3,2,1,1 means the last one,0 means there has some exception and snap stop
 	 * \else
-	 * 表示抓拍序号，如3,2,1,1表示抓拍结束,0表示异常结束
+	 * 1mJ>W%EDPr:E#,Hg3,2,1,11mJ>W%ED=aJx,01mJ>Rl3#=aJx
 	 * \endif
 	 */
 	public int                 nSequence;
@@ -164,7 +164,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Event action,0 means pulse event,1 means continuous event's begin,2means continuous event's end;
 	 * \else
-	 * 事件动作，0表示脉冲事件,1表示持续性事件开始,2表示持续性事件结束; 
+	 * JB<~6/Ww#,01mJ>Bv3eJB<~,11mJ>3VPxPTJB<~?*J<,21mJ>3VPxPTJB<~=aJx; 
 	 * \endif
 	 */
 	public byte                bEventAction;
@@ -173,7 +173,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Snap flag from device
 	 * \else
-	 * 设备产生的抓拍标识
+	 * Ih182zIz5DW%ED1jJ6
 	 * \endif
 	 */
 	public byte                bSnapFlag[] = new byte[16];
@@ -182,7 +182,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Snap mode,0-normal 1-globle 2-near 4-snap on the same side 8-snap on the reverse side 16-plant picture
 	 * \else
-	 * 抓拍方式，0-未分类 1-全景 2-近景 4-同向抓拍 8-反向抓拍 16-号牌图像
+	 * W%ED7=J=#,0-N47V@` 1-H+>0 2-=|>0 4-M,OrW%ED 8-74OrW%ED 16-:EEFM<Oq
 	 * \endif
 	 */
 	public byte                bySnapMode;
@@ -191,7 +191,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Over speed percentage
 	 * \else
-	 * 超速百分比
+	 * 3,KY0Y7V1H
 	 * \endif
 	 */
 	public byte                byOverSpeedPercentage;
@@ -200,7 +200,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Under speed percentage
 	 * \else
-	 * 欠速百分比
+	 * G7KY0Y7V1H
 	 * \endif
 	 */
 	public byte                byUnderSpeedingPercentage;
@@ -209,7 +209,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Red light margin, sr
 	 * \else
-	 * 红灯容许间隔时间,单位：秒
+	 * :l5FH]Pm<d8tJ1<d,5%N;#:Ck
 	 * \endif
 	 */
 	public byte                byRedLightMargin;
@@ -218,7 +218,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Drive direction,0-"Approach",where the car is more near,1-"Leave",means where if mor far to the car
 	 * \else
-	 * 行驶方向，0-上行(即车辆离设备部署点越来越近)，1-下行(即车辆离设备部署点越来越远)
+	 * PPJ;7=Or#,0-IOPP(<435A>@kIh182?Jp5cT=@4T==|)#,1-OBPP(<435A>@kIh182?Jp5cT=@4T=T6)
 	 * \endif
 	 */
 	public byte                byDriveDirection;
@@ -227,7 +227,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Road way number
 	 * \else
-	 * 道路编号
+	 * 5@B71`:E
 	 * \endif
 	 */
 	public byte                szRoadwayNo[] = new byte[32];
@@ -236,7 +236,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Violation code
 	 * \else
-	 * 违章代码
+	 * N%UB4zBk
 	 * \endif
 	 */
 	public byte                szViolationCode[] = new byte[16];
@@ -245,7 +245,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Violation desc
 	 * \else
-	 * 违章描述
+	 * N%UBChJv
 	 * \endif
 	 */
 	public byte                szViolationDesc[] = new byte[128];
@@ -254,7 +254,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Picture resolution
 	 * \else
-	 * 对应图片的分辨率
+	 * 6TS&M<F,5D7V1fBJ
 	 * \endif
 	 */
 	public SDK_RESOLUTION_INFO  stuResolution = new SDK_RESOLUTION_INFO();
@@ -263,7 +263,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Car type,"Motor", "Light-duty", "Medium", "Oversize", "Huge", "Other" 
 	 * \else
-	 * 车辆大小类型，"Motor" 摩托车车 "Light-duty" 小型车 "Medium" 中型车 "Oversize" 大型车 "Huge" 超大车 "Other" 其他类型
+	 * 35A>4sP!@`PM#,"Motor" D&MP3535 "Light-duty" P!PM35 "Medium" VPPM35 "Oversize" 4sPM35 "Huge" 3,4s35 "Other" FdK{@`PM
 	 * \endif
 	 */
 	public byte                szVehicleType[] = new byte[32];
@@ -272,7 +272,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Car length, m
 	 * \else
-	 * 车辆长度, 单位米
+	 * 35A>3$6H, 5%N;CW
 	 * \endif
 	 */
 	public byte                byVehicleLenth;
@@ -281,7 +281,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Picture no.,  within same time(second)may have multiple pictures, from 0 to
 	 * \else
-	 * 图片的序号, 同一时间内(精确到秒)可能有多张图片, 从0开始
+	 * M<F,5DPr:E, M,R;J1<dDZ(>+H75=Ck)?ID\SP6`UEM<F,, 4S0?*J<
 	 * \endif
 	 */
 	public byte				byImageIndex;
@@ -290,7 +290,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Over speed margin, km/h 
 	 * \else
-	 * 限高速宽限值	单位：km/h 
+	 * O^8_KY?mO^V5	5%N;#:km/h 
 	 * \endif
 	 */
 	public int                 nOverSpeedMargin;
@@ -299,7 +299,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Under speed margin, km/h 
 	 * \else
-	 * 限低速宽限值	单位：km/h 
+	 * O^5MKY?mO^V5	5%N;#:km/h 
 	 * \endif
 	 */
 	public int                 nUnderSpeedMargin;
@@ -313,10 +313,10 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * </pre>
 	 * \else
 	 * <pre>
-	 * "DrivingDirection" : ["Approach", "上海", "杭州"],行驶方向
-	 * "Approach"-上行，即车辆离设备部署点越来越近；"Leave"-下行，
-	 * 即车辆离设备部署点越来越远，第二和第三个参数分别代表上行和
-	 * 下行的两个地点，UTF-8编码
+	 * "DrivingDirection" : ["Approach", "IO:#", ":<V]"],PPJ;7=Or
+	 * "Approach"-IOPP#,<435A>@kIh182?Jp5cT=@4T==|#;"Leave"-OBPP#,
+	 * <435A>@kIh182?Jp5cT=@4T=T6#,5Z6~:M5ZH}8v2NJ}7V1p4z1mIOPP:M
+	 * OBPP5DA=8v5X5c#,UTF-81`Bk
 	 * </pre>
 	 * \endif
 	 */
@@ -326,7 +326,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Machine name
 	 * \else
-	 * 本地或远程设备名称
+	 * 1>5X;rT63LIh18C{3F
 	 * \endif
 	 */
 	public byte                szMachineName[] = new byte[256];
@@ -335,7 +335,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Machine address
 	 * \else
-	 * 机器部署地点、道路编码
+	 * ;zFw2?Jp5X5c!"5@B71`Bk
 	 * \endif
 	 */
 	public byte                szMachineAddress[] = new byte[256];
@@ -344,7 +344,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Machine group
 	 * \else
-	 * 机器分组、设备所属单位
+	 * ;zFw7VWi!"Ih18KyJt5%N;
 	 * \endif
 	 */
 	public byte                szMachineGroup[] = new byte[256];
@@ -353,7 +353,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Flag(by bit),see NET_RESERVED_COMMON
 	 * \else
-	 * 抓图标志(按位)，具体见NET_RESERVED_COMMON
+	 * W%M<1jV>(04N;)#,>_Le<{NET_RESERVED_COMMON
 	 * \endif
 	 */
 	public int               	dwSnapFlagMask;
@@ -362,7 +362,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The vehicle detector generates the snap signal redundancy info
 	 * \else
-	 * 由车检器产生抓拍信号冗余信息
+	 * SI35<lFw2zIzW%EDPE:EH_S`PEO"
 	 * \endif
 	 */
 	public SDK_SIG_CARWAY_INFO_EX stuSigInfo = new SDK_SIG_CARWAY_INFO_EX();
@@ -371,7 +371,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * File path
 	 * \else
-	 * 文件路径
+	 * ND<~B7>6
 	 * \endif
 	 */
 	public byte                szFilePath[] = new byte[FinalVar.MAX_PATH];
@@ -380,7 +380,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The begin time of red light
 	 * \else
-	 * 红灯开始UTC时间
+	 * :l5F?*J<UTCJ1<d
 	 * \endif
 	 */
 	public NET_TIME_EX			RedLightUTC = new NET_TIME_EX();
@@ -389,25 +389,25 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device address,OSD superimposed onto the image,from TrafficSnapshot.DeviceAddress,'\0'means end.
 	 * \else
-	 * 设备地址,OSD叠加到图片上的,来源于配置TrafficSnapshot.DeviceAddress,'\0'结束
+	 * Ih185XV7,OSD5~<S5=M<F,IO5D,@4T4SZEdVCTrafficSnapshot.DeviceAddress,'\0'=aJx
 	 * \endif
 	 */
 	public byte[]              szDeviceAddress;
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * Current picture exposure time，unit is ms
+	 * Current picture exposure time#,unit is ms
 	 * \else
-	 * 当前图片曝光时间，单位为毫秒
+	 * 51G0M<F,FX9bJ1<d#,5%N;N*:ACk
 	 * \endif
 	 */
 	public float               fActualShutter;
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * Current picture gain，range 0~100
+	 * Current picture gain#,range 0~100
 	 * \else
-	 * 当前图片增益，范围为0~100
+	 * 51G0M<F,TvRf#,76N'N*0~100
 	 * \endif
 	 */
 	public byte                byActualGain;
@@ -416,7 +416,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Card quantity
 	 * \else
-	 * 卡片个数
+	 * ?(F,8vJ}
 	 * \endif
 	 */
 	public byte                bRetCardNumber;
@@ -425,7 +425,7 @@ public class DEV_EVENT_TRAFFICGATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Card Info
 	 * \else
-	 * 卡片信息
+	 * ?(F,PEO"
 	 * \endif
 	 */
 	public EVENT_CARD_INFO     stuCardInfo[] = new EVENT_CARD_INFO[FinalVar.SDK_EVENT_MAX_CARD_NUM];   

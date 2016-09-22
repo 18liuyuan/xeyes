@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Video diagnosis global list(CFG_CMD_VIDEODIAGNOSIS_GLOBAL), each channel supports one diagnosis config 
  * \else
- * 视频诊断全局表(CFG_CMD_VIDEODIAGNOSIS_GLOBAL),每个通道支持一个诊断配置 
+ * JSF5Uo6OH+>V1m(CFG_CMD_VIDEODIAGNOSIS_GLOBAL),C?8vM(5@V'3VR;8vUo6OEdVC 
  * \endif
  */
 public class CFG_VIDEODIAGNOSIS_GLOBAL_CHNNL implements Serializable {
@@ -19,16 +19,16 @@ public class CFG_VIDEODIAGNOSIS_GLOBAL_CHNNL implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Plan name is valid or not 
 	 * \else
-	 * 计划名称是否有效 
+	 * <F;.C{3FJG7qSPP' 
 	 * \endif
 	 */
 	public boolean					abProjectName;
 	
  	/**
 	 * \if ENGLISH_LANG
-	 * Plan name，Ansi code
+	 * Plan name#,Ansi code
 	 * \else
-	 * 计划名称，Ansi编码
+	 * <F;.C{3F#,Ansi1`Bk
 	 * \endif
 	 */
 	public byte[]					szProjectName = new byte[FinalVar.MAX_PATH];
@@ -37,16 +37,16 @@ public class CFG_VIDEODIAGNOSIS_GLOBAL_CHNNL implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Real time plan name is valid or not
 	 * \else
-	 * 实时计划名称是否有效
+	 * J5J1<F;.C{3FJG7qSPP'
 	 * \endif
 	 */
 	public boolean					abRealProjectName;
 	
  	/**
 	 * \if ENGLISH_LANG
-	 * Real time plan name，Ansi code
+	 * Real time plan name#,Ansi code
 	 * \else
-	 * 实时计划名称，Ansi编码
+	 * J5J1<F;.C{3F#,Ansi1`Bk
 	 * \endif
 	 */
 	public byte[]					szRealProjectName = new byte[FinalVar.MAX_PATH];

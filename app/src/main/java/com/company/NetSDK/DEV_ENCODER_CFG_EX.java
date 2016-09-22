@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * front end access configuratiion parameter expansion
  * \else
- * 前端接入配置参数信息扩展
+ * G06K=SHkEdVC2NJ}PEO"@)U9
  * \endif
  */
 public class DEV_ENCODER_CFG_EX implements Serializable {
@@ -20,7 +20,7 @@ public class DEV_ENCODER_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * number of channel
 	 * \else
-	 * 数字通道个数
+	 * J}WVM(5@8vJ}
 	 * \endif
 	 */
 	public int                 nChannels;
@@ -29,7 +29,7 @@ public class DEV_ENCODER_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * the front end of the every digital channel encoder information
 	 * \else
-	 * 各数字通道的前端编码器信息
+	 * 8wJ}WVM(5@5DG06K1`BkFwPEO"
 	 * \endif
 	 */
 	public DEV_ENCODER_INFO    stuDevInfo[] = new DEV_ENCODER_INFO[128];
@@ -38,8 +38,8 @@ public class DEV_ENCODER_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * maximum number of hd video(0 means not support)
 	 * \else
-	 * 数字通道中最多可支持高清视频个数(为0表示不支持高清设置)
-	 * 注：如果支持高清设置，高清通道为0~N-1，若将N之后的数字通道设置为高清，有可能保存不成功
+	 * J}WVM(5@VPWn6`?IV'3V8_GeJSF58vJ}(N*01mJ>2;V'3V8_GeIhVC)
+	 * W"#:Hg9{V'3V8_GeIhVC#,8_GeM(5@N*0~N-1#,Ht=+NV.:s5DJ}WVM(5@IhVCN*8_Ge#,SP?ID\1#4f2;3I9&
 	 * \endif
 	 */
 	public byte                byHDAbility;
@@ -48,7 +48,7 @@ public class DEV_ENCODER_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * support TV adjust,0:not support,1:support.
 	 * \else
-	 * 设备是否支持TV调节, 0:不支持 1:支持.
+	 * Ih18JG7qV'3VTV5w=Z, 0:2;V'3V 1:V'3V.
 	 * \endif
 	 */
 	public byte                bTVAdjust;
@@ -57,7 +57,7 @@ public class DEV_ENCODER_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * support tour or not, 0:not support, >0:the current number of device support
 	 * \else
-	 * 设备是否支持解码轮巡, 0:不支持 大于0:表示前端支持轮巡最大设备数.
+	 * Ih18JG7qV'3V=bBkBVQ2, 0:2;V'3V 4sSZ0:1mJ>G06KV'3VBVQ2Wn4sIh18J}.
 	 * \endif
 	 */
 	public byte                bDecodeTour;
@@ -66,7 +66,7 @@ public class DEV_ENCODER_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * support remote PTZ control
 	 * \else
-	 * 指示是否支持远程云台控制。
+	 * V8J>JG7qV'3VT63LTFL(?XVF!#
 	 * \endif
 	 */
 	public byte                bRemotePTZCtl;

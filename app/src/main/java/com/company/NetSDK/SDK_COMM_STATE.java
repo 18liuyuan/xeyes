@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Serial port status
  * \else
- * 串口基本属性
+ * 4.?Z;y1>JtPT
  * \endif
  */
 public class SDK_COMM_STATE implements Serializable {
@@ -19,48 +19,44 @@ public class SDK_COMM_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port serial number 
 	 * \else
-	 * 是否开启
+	 * JG7q?*Ft
 	 * \endif
 	 */
 	public int					uBeOpened;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 波特率
+	 * 2(LXBJ
 	 * \endif
 	 */
 	public int					uBaudRate;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 数据位
+	 * J}>]N;
 	 * \endif
 	 */
 	public int					uDataBites;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 停止位
+	 * M#V9N;
 	 * \endif
 	 */
 	public int					uStopBits;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 校验位
+	 * P#QiN;
 	 * \endif
 	 */
 	public int					uParity;
-	/**
-	 * \if ENGLISH_LANG
-	 * Port serial number
-	 * \else
-	 * 保留
-	 * \endif
-	 */
-	public byte				bReserved[] = new byte[32];
 }

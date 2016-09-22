@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Remote Device Structure
  * \else
- * 远程设备
+ * T63LIh18
  * \endif
  */
 public class AV_CFG_RemoteDevice implements Serializable { 	
@@ -20,7 +20,7 @@ public class AV_CFG_RemoteDevice implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable 
 	 * \else
-	 * 使能
+	 * J9D\
 	 * \endif
 	 */
 	public boolean			bEnable;
@@ -29,7 +29,7 @@ public class AV_CFG_RemoteDevice implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device ID 
 	 * \else
-	 * 设备ID
+	 * Ih18ID
 	 * \endif
 	 */
 	public byte[]			szID = new byte[FinalVar.AV_CFG_Device_ID_Len];
@@ -38,7 +38,7 @@ public class AV_CFG_RemoteDevice implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device IP 
 	 * \else
-	 * 设备IP
+	 * Ih18IP
 	 * \endif
 	 */
 	public byte[]			szIP = new byte[FinalVar.AV_CFG_IP_Address_Len];
@@ -47,7 +47,7 @@ public class AV_CFG_RemoteDevice implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port 
 	 * \else
-	 * 端口
+	 * 6K?Z
 	 * \endif
 	 */
 	public int				nPort;
@@ -56,7 +56,7 @@ public class AV_CFG_RemoteDevice implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Protoco
 	 * \else
-	 * 协议类型
+	 * P-Ri@`PM
 	 * \endif
 	 */
 	public byte[]			szProtocol = new byte[FinalVar.AV_CFG_Protocol_Len];
@@ -65,7 +65,7 @@ public class AV_CFG_RemoteDevice implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Username 
 	 * \else
-	 * 用户名
+	 * SC;'C{
 	 * \endif
 	 */
 	public byte[]			szUser = new byte[FinalVar.AV_CFG_User_Name_Len];
@@ -74,7 +74,7 @@ public class AV_CFG_RemoteDevice implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Password 
 	 * \else
-	 * 密码
+	 * C\Bk
 	 * \endif
 	 */
 	public byte[]			szPassword = new byte[FinalVar.AV_CFG_Password_Len];
@@ -83,7 +83,7 @@ public class AV_CFG_RemoteDevice implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device Serial No.
 	 * \else
-	 * 设备序列号
+	 * Ih18PrAP:E
 	 * \endif
 	 */
 	public byte[]			szSerial = new byte[FinalVar.AV_CFG_Serial_Len];
@@ -92,7 +92,7 @@ public class AV_CFG_RemoteDevice implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device Class 
 	 * \else
-	 * 设备类型
+	 * Ih18@`PM
 	 * \endif
 	 */
 	public byte[]			szDevClass = new byte[FinalVar.AV_CFG_Device_Class_Len];
@@ -101,7 +101,7 @@ public class AV_CFG_RemoteDevice implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device Type 
 	 * \else
-	 * 设备型号
+	 * Ih18PM:E
 	 * \endif
 	 */
 	public byte[]			szDevType = new byte[FinalVar.AV_CFG_Device_Type_Len];
@@ -110,7 +110,7 @@ public class AV_CFG_RemoteDevice implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device Name 
 	 * \else
-	 * 机器名称
+	 * ;zFwC{3F
 	 * \endif
 	 */
 	public byte[]			szName = new byte[FinalVar.AV_CFG_Device_Name_Len];
@@ -119,7 +119,7 @@ public class AV_CFG_RemoteDevice implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device Address 
 	 * \else
-	 * 机器部署地点
+	 * ;zFw2?Jp5X5c
 	 * \endif
 	 */
 	public byte[]			szAddress = new byte[FinalVar.AV_CFG_Address_Len];
@@ -128,7 +128,7 @@ public class AV_CFG_RemoteDevice implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device Group 
 	 * \else
-	 * 机器分组
+	 * ;zFw7VWi
 	 * \endif
 	 */
 	public byte[]			szGroup = new byte[FinalVar.AV_CFG_Group_Name_Len];
@@ -137,7 +137,7 @@ public class AV_CFG_RemoteDevice implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Definition, 0-Standard Definition, 1-High Definition 
 	 * \else
-	 * 清晰度, 0-标清, 1-高清
+	 * GeNz6H, 0-1jGe, 1-8_Ge
 	 * \endif
 	 */
 	public int				nDefinition;
@@ -146,7 +146,7 @@ public class AV_CFG_RemoteDevice implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Video Channel Input Number 
 	 * \else
-	 * 视频输入通道数
+	 * JSF5JdHkM(5@J}
 	 * \endif
 	 */
 	public int				nVideoChannel;
@@ -155,7 +155,7 @@ public class AV_CFG_RemoteDevice implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Audio Channel Input Number 
 	 * \else
-	 * 音频输入通道数
+	 * RtF5JdHkM(5@J}
 	 * \endif
 	 */
 	public int				nAudioChannel;
@@ -164,7 +164,7 @@ public class AV_CFG_RemoteDevice implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Rtsp port no. 
 	 * \else
-	 * Rtsp端口号
+	 * Rtsp6K?Z:E
 	 * \endif
 	 */
 	public int				nRtspPort;
@@ -173,16 +173,16 @@ public class AV_CFG_RemoteDevice implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device input type 
 	 * \else
-	 * 设备接入类型
+	 * Ih18=SHk@`PM
 	 * \endif
 	 */
 	public byte[]			szVendor = new byte[FinalVar.MAX_PATH];
 	
  	/**
 	 * \if ENGLISH_LANG
-	 * Video input channel，user apply for nMaxVideoInputs CFG_RemoteDeviceVideoInputSpace 
+	 * Video input channel#,user apply for nMaxVideoInputs CFG_RemoteDeviceVideoInputSpace 
 	 * \else
-	 * 视频输入通道，用户申请nMaxVideoInputs个CFG_RemoteDeviceVideoInput空间
+	 * JSF5JdHkM(5@#,SC;'IjGknMaxVideoInputs8vCFG_RemoteDeviceVideoInput?U<d
 	 * \endif
 	 */
 	public CFG_RemoteDeviceVideoInput[]			pVideoInput;
@@ -195,7 +195,7 @@ public class AV_CFG_RemoteDevice implements Serializable {
 	 * \if ENGLISH_LANG
 	 * http port
 	 * \else
-	 * http端口号
+	 * http6K?Z:E
 	 * \endif
 	 */
 	public int				nHttpPort;						

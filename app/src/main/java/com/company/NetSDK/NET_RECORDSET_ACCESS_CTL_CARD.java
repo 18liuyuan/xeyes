@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Entrance Guard Record Information
  * \else
- * 门禁卡记录集信息
+ * CE={?(<GB<</PEO"
  * \endif
  */
 public class NET_RECORDSET_ACCESS_CTL_CARD implements Serializable {
@@ -19,7 +19,7 @@ public class NET_RECORDSET_ACCESS_CTL_CARD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Record Number,Read-Only
 	 * \else
-	 * 记录集编号，只读
+	 * <GB<</1`:E#,V;6A
 	 * \endif
 	 */
 	public int		nRecNo; 
@@ -28,7 +28,7 @@ public class NET_RECORDSET_ACCESS_CTL_CARD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Creat Time
 	 * \else
-	 * 创建时间
+	 * 44=(J1<d
 	 * \endif
 	 */
 	public NET_TIME	stuCreateTime 		= new NET_TIME(); 
@@ -37,7 +37,7 @@ public class NET_RECORDSET_ACCESS_CTL_CARD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Card number
 	 * \else
-	 * 卡号
+	 * ?(:E
 	 * \endif
 	 */
 	public char     szCardNo[] 			= new char[FinalVar.SDK_MAX_CARDNO_LEN]; 
@@ -46,7 +46,7 @@ public class NET_RECORDSET_ACCESS_CTL_CARD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * User's ID
 	 * \else
-	 * 用户ID
+	 * SC;'ID
 	 * \endif
 	 */
 	public char     szUserID[]			= new char[FinalVar.SDK_MAX_USERID_LEN]; 
@@ -55,7 +55,7 @@ public class NET_RECORDSET_ACCESS_CTL_CARD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Card Stetue
 	 * \else
-	 * 卡状态.0:正常.1:挂失.2:注销.4:冻结
+	 * ?(W4L,.0:U}3#.1:9RJ'.2:W"Oz.4:63=a
 	 * \endif
 	 */
 	public int		nStatus; 
@@ -64,7 +64,7 @@ public class NET_RECORDSET_ACCESS_CTL_CARD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Card Type
 	 * \else
-	 * 卡类型.1:一般卡.2:VIP卡.3:来宾卡.4:巡逻卡.5:黑名单卡.6:胁迫卡.0xff:母卡
+	 * ?(@`PM.1:R;0c?(.2:VIP?(.3:@41v?(.4:Q2B_?(.5::ZC{5%?(.6:P2FH?(.0xff:D8?(
 	 * \endif
 	 */
 	public int		nType; 
@@ -73,7 +73,7 @@ public class NET_RECORDSET_ACCESS_CTL_CARD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Card Password
 	 * \else
-	 * 卡密码
+	 * ?(C\Bk
 	 * \endif
 	 */
 	public char		szPsw[]				= new char[FinalVar.SDK_MAX_CARDPWD_LEN];
@@ -82,7 +82,7 @@ public class NET_RECORDSET_ACCESS_CTL_CARD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Valid Door Number
 	 * \else
-	 * 有效的门数目
+	 * SPP'5DCEJ}D?
 	 * \endif
 	 */
 	public int		nDoorNum;
@@ -91,7 +91,7 @@ public class NET_RECORDSET_ACCESS_CTL_CARD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Privileged Door Number,That is CFG_CMD_ACCESS_EVENT Configure Array Subscript
 	 * \else
-	 * 有权限的门序号，即CFG_CMD_ACCESS_EVENT配置的数组下标
+	 * SPH(O^5DCEPr:E#,<4CFG_CMD_ACCESS_EVENTEdVC5DJ}WiOB1j
 	 * \endif
 	 */
 	public int		sznDoors[] 			= new int[FinalVar.SDK_MAX_DOOR_NUM]; 
@@ -100,7 +100,7 @@ public class NET_RECORDSET_ACCESS_CTL_CARD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * the Number of Effective Open Time
 	 * \else
-	 * 有效的的开门时间段数目
+	 * SPP'5D5D?*CEJ1<d6NJ}D?
 	 * \endif
 	 */
 	public int		nTimeSectionNum; 
@@ -109,7 +109,7 @@ public class NET_RECORDSET_ACCESS_CTL_CARD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Open Time Segment Index,That is CFG_ACCESS_TIMESCHEDULE_INFO Array subscript
 	 * \else
-	 * 开门时间段索引，即CFG_ACCESS_TIMESCHEDULE_INFO的数组下标
+	 * ?*CEJ1<d6NKwR}#,<4CFG_ACCESS_TIMESCHEDULE_INFO5DJ}WiOB1j
 	 * \endif
 	 */
 	public int	 	sznTimeSectionNo[] 	= new int[FinalVar.SDK_MAX_TIMESECTION_NUM]; 
@@ -118,7 +118,7 @@ public class NET_RECORDSET_ACCESS_CTL_CARD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Frequency of Use
 	 * \else
-	 * 使用次数
+	 * J9SC4NJ}
 	 * \endif
 	 */
 	public int		nUserTime; 
@@ -127,7 +127,7 @@ public class NET_RECORDSET_ACCESS_CTL_CARD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Valid Start Time 
 	 * \else
-	 * 开始有效期
+	 * ?*J<SPP'FZ
 	 * \endif
 	 */
 	public NET_TIME	stuValidStartTime 	= new NET_TIME(); 
@@ -136,7 +136,7 @@ public class NET_RECORDSET_ACCESS_CTL_CARD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Valid End Time
 	 * \else
-	 * 结束有效期
+	 * =aJxSPP'FZ
 	 * \endif
 	 */
 	public NET_TIME	stuValidEndTime 	= new NET_TIME(); 
@@ -145,9 +145,8 @@ public class NET_RECORDSET_ACCESS_CTL_CARD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Wether Valid,True =Valid,False=Invalid
 	 * \else
-	 * 是否有效,true有效;false无效
+	 * JG7qSPP',trueSPP';falseN^P'
 	 * \endif
 	 */
-	public boolean	bIsValid; 
-
+	public boolean	bIsValid;
 }

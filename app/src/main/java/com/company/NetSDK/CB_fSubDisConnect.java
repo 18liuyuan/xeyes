@@ -4,7 +4,7 @@ package com.company.NetSDK;
  * \if ENGLISH_LANG
  * The prototype of dynamic sub connection offline call function 
  * \else
- * 动态子连接断开回调函数原形
+ * 6/L,WSA,=S6O?*;X5w:/J}T-PN
  * \endif
  */
 public interface CB_fSubDisConnect {
@@ -25,20 +25,20 @@ public interface CB_fSubDisConnect {
 	 * @param lOperateHandle interface returned operation handle,{@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}
 	 * @param lLoginID login handle, return from{@link com.company.NetSDK.INetSDK#LoginEx() LoginEx}or{@link com.company.NetSDK.INetSDK#Login() Login}
 	 * \else
-	 * 动态子连接断开回调函数原形
-	 * @param emInterfaceType 接口类型
+	 * 6/L,WSA,=S6O?*;X5w:/J}T-PN
+	 * @param emInterfaceType =S?Z@`PM
 	 * <table>
-	 * <tr><td>枚举值 </td><td>含义 </td></tr>
-	 * <tr><td>SDK_INTERFACE_OTHER</td><td>未知接口 </td></tr>
-	 * <tr><td>SDK_INTERFACE_REALPLAY</td><td>实时监视接口 </td></tr>
-	 * <tr><td>SDK_INTERFACE_PREVIEW</td><td>多画面预览接口 </td></tr>
-	 * <tr><td>SDK_INTERFACE_PLAYBACK</td><td>回放接口 </td></tr>
-	 * <tr><td>SDK_INTERFACE_DOWNLOAD</td><td>下载接口 </td></tr>
-	 * <tr><td>SDK_INTERFACE_REALLOADPIC</td><td>下载智能图片接口 </td></tr>
+	 * <tr><td>C6>YV5 </td><td>:,Re </td></tr>
+	 * <tr><td>SDK_INTERFACE_OTHER</td><td>N4V*=S?Z </td></tr>
+	 * <tr><td>SDK_INTERFACE_REALPLAY</td><td>J5J1<`JS=S?Z </td></tr>
+	 * <tr><td>SDK_INTERFACE_PREVIEW</td><td>6`;-CfT$@@=S?Z </td></tr>
+	 * <tr><td>SDK_INTERFACE_PLAYBACK</td><td>;X7E=S?Z </td></tr>
+	 * <tr><td>SDK_INTERFACE_DOWNLOAD</td><td>OBTX=S?Z </td></tr>
+	 * <tr><td>SDK_INTERFACE_REALLOADPIC</td><td>OBTXVGD\M<F,=S?Z </td></tr>
 	 * </table>
-	 * @param bOnline 是否在线 
-	 * @param lOperateHandle 接口返回的操作句柄,{@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}
-	 * @param lLoginID 登陆句柄, {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx}or{@link com.company.NetSDK.INetSDK#Login() Login}返回值
+	 * @param bOnline JG7qTZO_ 
+	 * @param lOperateHandle =S?Z75;X5D2YWw>d1z,{@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}
+	 * @param lLoginID 5GB=>d1z, {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx}or{@link com.company.NetSDK.INetSDK#Login() Login}75;XV5
 	 * \endif
 	 */
 	public void invoke(int emInterfaceType, boolean bOnline, long lOperateHandle, long lLoginID);

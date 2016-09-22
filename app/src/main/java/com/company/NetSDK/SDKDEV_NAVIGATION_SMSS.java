@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * NAVIGATION OR SMS, INetSDK.ControlDevice(SDK_NAVIGATION_SMS)
  * \else
- * 导航信息和短消息, INetSDK.ControlDevice(SDK_NAVIGATION_SMS)
+ * 5<:=PEO":M6LO{O", INetSDK.ControlDevice(SDK_NAVIGATION_SMS)
  * \endif
  */
 public class SDKDEV_NAVIGATION_SMSS implements Serializable {
@@ -19,7 +19,7 @@ public class SDKDEV_NAVIGATION_SMSS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * phone no
 	 * \else
-	 * 电话号码
+	 * 5g;0:EBk
 	 * \endif
 	 */
 	public byte                szPhoneNum[] = new byte[FinalVar.SDK_MAX_PHONE_NO_LEN];
@@ -28,7 +28,7 @@ public class SDKDEV_NAVIGATION_SMSS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * time of sending message
 	 * \else
-	 * 信息发送时间
+	 * PEO"7"KMJ1<d
 	 * \endif
 	 */
 	public NET_TIME            stMsgTime = new NET_TIME();
@@ -37,7 +37,7 @@ public class SDKDEV_NAVIGATION_SMSS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * type:Navigation message-Navigation,short message--SMS
 	 * \else
-	 * 信息类型（导航信息-Navigation； 短消息--SMS）
+	 * PEO"@`PM#(5<:=PEO"-Navigation#; 6LO{O"--SMS#)
 	 * \endif
 	 */
 	public byte                szMsgType[] = new byte[FinalVar.SDK_MAX_MSGTYPE_LEN];
@@ -46,7 +46,7 @@ public class SDKDEV_NAVIGATION_SMSS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * message to send
 	 * \else
-	 * 发送的信息内容
+	 * 7"KM5DPEO"DZH]
 	 * \endif
 	 */
 	public byte                szSmsContext[] = new byte[FinalVar.SDK_MAX_MSG_LEN];
@@ -55,7 +55,7 @@ public class SDKDEV_NAVIGATION_SMSS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * longitude
 	 * \else
-	 * 起始经纬度
+	 * FpJ<>-N36H
 	 * \endif
 	 */
 	public SDKDEV_LONGI_LATI    stLogiLati = new SDKDEV_LONGI_LATI();
@@ -64,7 +64,7 @@ public class SDKDEV_NAVIGATION_SMSS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 01:marking true longitude
 	 * \else
-	 * 01：标志发来的是真实经纬度
+	 * 01#:1jV>7"@45DJGUfJ5>-N36H
 	 * \endif
 	 */
 	public int        uFlag;
@@ -73,7 +73,7 @@ public class SDKDEV_NAVIGATION_SMSS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * TNC,TXZ
 	 * \else
-	 * TNC,为凯立德地图中心导航格式，TXZ,为天行者地图中心导航格式
+	 * TNC,N*?-A"5B5XM<VPPD5<:=8qJ=#,TXZ,N*LlPPU_5XM<VPPD5<:=8qJ=
 	 * \endif
 	 */
 	public byte                szNavigationType[] = new byte[16];
@@ -82,7 +82,7 @@ public class SDKDEV_NAVIGATION_SMSS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * address
 	 * \else
-	 * 地点信息
+	 * 5X5cPEO"
 	 * \endif
 	 */
 	public byte                szAddress[] = new byte[32];
@@ -91,7 +91,7 @@ public class SDKDEV_NAVIGATION_SMSS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * mode
 	 * \else
-	 * 导航模式 有Recommend推荐，Economical经济型，Fastest 最快；Shortest 最短；
+	 * 5<:=D#J= SPRecommendMF<v#,Economical>-<CPM#,Fastest Wn?l#;Shortest Wn6L#;
 	 * \endif
 	 */
 	public byte                szNavigationMode[] = new byte[32];
@@ -100,7 +100,7 @@ public class SDKDEV_NAVIGATION_SMSS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * passing
 	 * \else
-	 * 经由点
+	 * >-SI5c
 	 * \endif
 	 */
 	public SDKDEV_LONGI_LATI    stPassLogiLati[] = new SDKDEV_LONGI_LATI[5];
@@ -109,7 +109,7 @@ public class SDKDEV_NAVIGATION_SMSS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * no passing
 	 * \else
-	 * 不经由点
+	 * 2;>-SI5c
 	 * \endif
 	 */
 	public SDKDEV_LONGI_LATI    stNoPassLogiLati[] = new SDKDEV_LONGI_LATI[5];

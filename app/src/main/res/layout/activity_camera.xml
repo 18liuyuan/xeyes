@@ -13,12 +13,13 @@
         android:orientation="vertical">
 
 
-        <SurfaceView
-            android:id="@+id/sv_screen"
+        <com.conwin.dhvideo.VideoPlayer
+            android:id="@+id/video_player"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" >
 
-            android:layout_gravity="center_horizontal" />
+            </com.conwin.dhvideo.VideoPlayer>
         <TextView
             android:id="@+id/tv_info"
             android:layout_width="match_parent"

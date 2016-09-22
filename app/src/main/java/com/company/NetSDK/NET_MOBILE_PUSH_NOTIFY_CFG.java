@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Mobile push notification configuration, using RegisterID + AppID subscription (CFG_CMD_MOBILE_PUSH_NOFITY_CFG)
  * \else
- * 手机push notification配置,  使用RegisterID+AppID订阅(对应 CFG_CMD_MOBILE_PUSH_NOFITY_CFG)
+ * JV;zpush notificationEdVC,  J9SCRegisterID+AppID6)TD(6TS& CFG_CMD_MOBILE_PUSH_NOFITY_CFG)
  * \endif
  */
 public class NET_MOBILE_PUSH_NOTIFY_CFG implements Serializable {
@@ -20,7 +20,7 @@ public class NET_MOBILE_PUSH_NOTIFY_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Mobile phone registered returned with the Appple/Android server, every time is different 
 	 * \else
-	 * 手机向Appple/ Android服务器注册返回的，每次不同
+	 * JV;zOrAppple/ Android7~NqFwW"2a75;X5D#,C?4N2;M,
 	 * \endif
 	 */
 	public byte                           szRegisterID[] = new byte[FinalVar.MAX_REGISTER_ID_LEN];
@@ -29,7 +29,7 @@ public class NET_MOBILE_PUSH_NOTIFY_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Mobile phone for every client, will produce one 
 	 * \else
-	 * 手机每开一个客户端，会产生一个
+	 * JV;zC??*R;8v?M;'6K#,;a2zIzR;8v
 	 * \endif
 	 */
 	public byte                           szAppID[] = new byte[FinalVar.MAX_APP_ID_LEN];
@@ -38,7 +38,7 @@ public class NET_MOBILE_PUSH_NOTIFY_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Platform Type 
 	 * \else
-	 * 平台类型, EM_MOBILE_SERVER_TYPE
+	 * F=L(@`PM, EM_MOBILE_SERVER_TYPE
 	 * \endif
 	 */
 	public int                             emServerType;
@@ -47,8 +47,9 @@ public class NET_MOBILE_PUSH_NOTIFY_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Push the gateway type, when emServerType is EM_MOBILE_SERVER_TYPE_SDKCLOUD effective
 	 * \else
-	 * 推送网关类型 EM_PUSH_GATEWAY_TYPE, emServerType为EM_MOBILE_SERVER_TYPE_SDKCLOUD时有效
+	 * MFKMMx9X@`PM  emServerTypeN*EM_MOBILE_SERVER_TYPE_SDKCLOUDJ1SPP'
 	 * \endif
+	 * @see EM_PUSH_GATEWAY_TYPE
 	 */
 	public int                             emPushGatewayType;
 	
@@ -56,7 +57,7 @@ public class NET_MOBILE_PUSH_NOTIFY_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Valid time, the unit is in seconds
 	 * \else
-	 * 有效时间，单位为秒
+	 * SPP'J1<d#,5%N;N*Ck
 	 * \endif
 	 */
 	public int                             nPeriodOfValidity;
@@ -65,7 +66,7 @@ public class NET_MOBILE_PUSH_NOTIFY_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Android authentication server address
 	 * \else
-	 * Android验证服务器地址
+	 * AndroidQiV$7~NqFw5XV7
 	 * \endif
 	 */
 	public byte                          szAuthServerAddr[] = new byte[FinalVar.MAX_URL_LEN];
@@ -74,7 +75,7 @@ public class NET_MOBILE_PUSH_NOTIFY_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Android authentication server port
 	 * \else
-	 * Android验证服务器端口
+	 * AndroidQiV$7~NqFw6K?Z
 	 * \endif
 	 */
 	public int                             nAuthServerPort;
@@ -84,8 +85,8 @@ public class NET_MOBILE_PUSH_NOTIFY_CFG implements Serializable {
 	 * Push the address of the server (DAHUA agent, at the end of the selected server, for compatible)
 	 * By DAHUA server according to the requirements of the official server, use the latest encryption algorithm and then forwarded to the official server
 	 * \else
-	 * 推送服务器地址(大华代理，末选服务器，供兼容)
-	 * 由大华服务器按官方服务器要求，选用最新的加密算法再转发给官方服务器
+	 * MFKM7~NqFw5XV7(4s;*4z@m#,D)Q!7~NqFw#,9)<fH])
+	 * SI4s;*7~NqFw049Y7=7~NqFwR*Gs#,Q!SCWnPB5D<SC\Kc7(TYW*7"8x9Y7=7~NqFw
 	 * \endif
 	 */
 	public byte                          szPushServerAddr[] = new byte[FinalVar.MAX_URL_LEN];
@@ -94,7 +95,7 @@ public class NET_MOBILE_PUSH_NOTIFY_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Push server port (DAHUA agent)
 	 * \else
-	 * 推送服务器端口(大华代理)
+	 * MFKM7~NqFw6K?Z(4s;*4z@m)
 	 * \endif
 	 */
 	public int                             nPushServerPort;
@@ -103,7 +104,7 @@ public class NET_MOBILE_PUSH_NOTIFY_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Set display equipment alias, mobile terminal 
 	 * \else
-	 * 设备别名，手机端设置显示
+	 * Ih181pC{#,JV;z6KIhVCOTJ>
 	 * \endif
 	 */
 	public byte                            szDevName[] = new byte[FinalVar.SDK_COMMON_STRING_64];
@@ -112,7 +113,7 @@ public class NET_MOBILE_PUSH_NOTIFY_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device identifier, mobile terminal settings to use 
 	 * \else
-	 * 设备标识，手机端设置使用
+	 * Ih181jJ6#,JV;z6KIhVCJ9SC
 	 * \endif
 	 */
 	public byte                            szDevID[] = new byte[FinalVar.SDK_COMMON_STRING_64];
@@ -121,7 +122,7 @@ public class NET_MOBILE_PUSH_NOTIFY_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Login user name 
 	 * \else
-	 * 登陆用户名
+	 * 5GB=SC;'C{
 	 * \endif
 	 */
 	public byte                            szUser[] = new byte[FinalVar.SDK_COMMON_STRING_64];
@@ -130,7 +131,7 @@ public class NET_MOBILE_PUSH_NOTIFY_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Password
 	 * \else
-	 * 密码
+	 * C\Bk
 	 * \endif
 	 */
 	public byte                            szPassword[] = new byte[FinalVar.SDK_COMMON_STRING_64];
@@ -139,7 +140,7 @@ public class NET_MOBILE_PUSH_NOTIFY_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * ios certificate information, string after Base64, effective when need to use TLS encryption 
 	 * \else
-	 * ios证书信息，base64之后的字符串，需要采用TLS加密时有效
+	 * iosV$JiPEO"#,base64V.:s5DWV7{4.#,PhR*2ISCTLS<SC\J1SPP'
 	 * \endif
 	 */
 	public byte                          szCertificate[] = new byte[FinalVar.MAX_IOS_CERTIFICATE_LEN];
@@ -148,7 +149,7 @@ public class NET_MOBILE_PUSH_NOTIFY_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * ios secret key,after the base64 string 
 	 * \else
-	 * ios密钥，base64之后字符串
+	 * iosC\T?#,base64V.:sWV7{4.
 	 * \endif
 	 */
 	public byte                          szSecretKey[] = new byte[FinalVar.MAX_IOS_SECRET_KEY_LEN];
@@ -157,7 +158,7 @@ public class NET_MOBILE_PUSH_NOTIFY_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Subscription number MAX, number of object in  pstuSubscribes
 	 * \else
-	 * 最大订阅类型个数, 表示pstuSubscribes的对象数量
+	 * Wn4s6)TD@`PM8vJ}, 1mJ>pstuSubscribes5D6TOsJ}A?
 	 * \endif
 	 */
 	public int                            nSubScribeMax;
@@ -166,7 +167,7 @@ public class NET_MOBILE_PUSH_NOTIFY_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Subscription number in actual, valid in get configuration
 	 * \else
-	 * 实际的订阅类型个数, 获取配置有效
+	 * J5<J5D6)TD@`PM8vJ}, ;qH!EdVCSPP'
 	 * \endif
 	 */
 	public int                             nSubScribeNum;
@@ -175,10 +176,28 @@ public class NET_MOBILE_PUSH_NOTIFY_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Subscription type
 	 * \else
-	 * 订阅类型
+	 * 6)TD@`PM
 	 * \endif
 	 */
 	public NET_SUBSCRIBE_INFO              pstuSubscribes[];
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * Push the server configuration, the official. Preferred server, if push fail, and try again redirection or proxy server 
+	 * \else
+	 * MFKM7~NqFwEdVC, 9Y7=!#JWQ!7~NqFw#,Hg9{MFKMJ'0\#,TY3"JTVX6(Or;r4z@m7~NqFw
+	 * \endif
+	 */
+	public NET_PUSH_SERVER_INFO            stuPushServerMain = new NET_PUSH_SERVER_INFO();
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * Push the server configuration (DAHUA redirection, second server)
+	 * \else
+	 * MFKM7~NqFwEdVC(4s;*VX6(Or#,4NQ!7~NqFw)
+	 * \endif
+	 */
+	public NET_PUSH_SERVER_INFO            stuPushRedirectServer = new NET_PUSH_SERVER_INFO();
 	
 	public NET_MOBILE_PUSH_NOTIFY_CFG(int nSubScribeMax) {
 		this.nSubScribeMax = nSubScribeMax;

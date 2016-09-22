@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Video Tampering Configuration 
  * \else
- * 视频遮挡报警配置
+ * JSF5UZ521(>/EdVC
  * \endif
  */
 public class CFG_SHELTER_INFO implements Serializable {
@@ -20,7 +20,7 @@ public class CFG_SHELTER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel ID1~Maximum Number of Channels	
 	 * \else
-	 * 报警通道号(0开始)
+	 * 1(>/M(5@:E(0?*J<)
 	 * \endif
 	 */
 	public int					nChannelID;									
@@ -29,16 +29,16 @@ public class CFG_SHELTER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Occlusion Detection Enable 
 	 * \else
-	 * 使能开关
+	 * J9D\?*9X
 	 * \endif
 	 */
 	public boolean				bEnable;									
 
 	/**
 	 * \if ENGLISH_LANG
-	 * level of sensitivity 1~6，Min 1，Max 6
+	 * level of sensitivity 1~6#,Min 1#,Max 6
 	 * \else
-	 * 灵敏度
+	 * AiCt6H
 	 * \endif
 	 */
 	public int					nSenseLevel;								
@@ -47,7 +47,7 @@ public class CFG_SHELTER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Event Handler 
 	 * \else
-	 * 报警联动
+	 * 1(>/A*6/
 	 * \endif
 	 */
 	public CFG_ALARM_MSG_HANDLE stuEventHandler = new CFG_ALARM_MSG_HANDLE();							
@@ -56,7 +56,7 @@ public class CFG_SHELTER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Event Respond Period
 	 * \else
-	 * 事件响应时间段
+	 * JB<~OlS&J1<d6N
 	 * \endif
 	 */
 	public CFG_TIME_SECTION		stuTimeSection[][] = new CFG_TIME_SECTION[FinalVar.WEEK_DAY_NUM][FinalVar.MAX_REC_TSECT];

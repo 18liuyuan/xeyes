@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * when nTriggerType==2, client snap info
  * \else
- * nTriggerType==2时 客户端触发抓拍参数
+ * nTriggerType==2J1 ?M;'6K4%7"W%ED2NJ}
  * \endif
  */
 public class NET_CLIENT_SNAP_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class NET_CLIENT_SNAP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Frame no.
 	 * \else
-	 * 帧序号
+	 * V!Pr:E
 	 * \endif
 	 */
 	public int                 nFrameSequence;
@@ -28,16 +28,16 @@ public class NET_CLIENT_SNAP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Time stamp, 64 bit ms time stamp
 	 * \else
-	 * 时间戳,64位毫秒时间戳
+	 * J1<d4A,64N;:ACkJ1<d4A
 	 * \endif
 	 */
 	public double              PTS;
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * String，client custom,"\0" end
+	 * String#,client custom,"\0" end
 	 * \else
-	 * 字符串，客户端自定义,"\0"结尾
+	 * WV7{4.#,?M;'6KWT6(Re,"\0"=aN2
 	 * \endif
 	 */
 	public byte				szUserDefinedInfo[] = new byte[FinalVar.SDK_MAX_USER_DEFINE_INFO];
@@ -46,7 +46,7 @@ public class NET_CLIENT_SNAP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Client Type {@link com.company.NetSDK.SNAP_CLIENT_TYPE SNAP_CLIENT_TYPE}
 	 * \else
-	 * 客户端类型 {@link com.company.NetSDK.SNAP_CLIENT_TYPE SNAP_CLIENT_TYPE}
+	 * ?M;'6K@`PM {@link com.company.NetSDK.SNAP_CLIENT_TYPE SNAP_CLIENT_TYPE}
 	 * \endif
 	 */
 	public int    emSNAP_CLIENT_TYPE;
@@ -55,7 +55,7 @@ public class NET_CLIENT_SNAP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Issue card quantity
 	 * \else
-	 * 卡片个数
+	 * ?(F,8vJ}
 	 * \endif
 	 */
 	public int               dwRetCardNumber;
@@ -64,7 +64,7 @@ public class NET_CLIENT_SNAP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Card Info
 	 * \else
-	 * 卡片信息
+	 * ?(F,PEO"
 	 * \endif
 	 */
 	public EVENT_CARD_INFO     stuCardInfo[] = new EVENT_CARD_INFO[FinalVar.SDK_EVENT_MAX_CARD_NUM];

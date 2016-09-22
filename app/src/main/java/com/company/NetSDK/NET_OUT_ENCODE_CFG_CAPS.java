@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * get device encode config corresponding capacity output parameter
  * \else
- * 获取设备编码配置对应能力输出参数
+ * ;qH!Ih181`BkEdVC6TS&D\A&Jd3v2NJ}
  * \endif
  */
 public class NET_OUT_ENCODE_CFG_CAPS implements Serializable {
@@ -19,7 +19,7 @@ public class NET_OUT_ENCODE_CFG_CAPS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * main stream corresponding capacity
 	 * \else
-	 * 主码流配置对应能力
+	 * VwBkAwEdVC6TS&D\A&
 	 * \endif
 	 */
 	public NET_STREAM_CFG_CAPS stuMainFormatCaps[] = new NET_STREAM_CFG_CAPS[REC_TYPE.SDK_REC_TYPE_NUM]; 
@@ -28,7 +28,7 @@ public class NET_OUT_ENCODE_CFG_CAPS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * sub streamconfig corresponding capacity
 	 * \else
-	 * 辅码流配置对应能力
+	 * 8(BkAwEdVC6TS&D\A&
 	 * \endif
 	 */
 	public NET_STREAM_CFG_CAPS stuExtraFormatCaps[] = new NET_STREAM_CFG_CAPS[FinalVar.SDK_N_ENCODE_AUX]; 
@@ -37,7 +37,7 @@ public class NET_OUT_ENCODE_CFG_CAPS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * sub stream config corresponding capacity
 	 * \else
-	 * 辅码流配置对应能力
+	 * 8(BkAwEdVC6TS&D\A&
 	 * \endif
 	 */
 	public NET_STREAM_CFG_CAPS stuSnapFormatCaps[] = new NET_STREAM_CFG_CAPS[SNAP_TYPE.SNAP_TYP_NUM]; 

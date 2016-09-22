@@ -13,7 +13,7 @@ public class GPS_POINT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * longitude
 	 * \else
-	 * 经度(单位是百万分之度，范围0-360度)如东经120.178274度表示为300178274
+	 * >-6H(5%N;JG0YMr7VV.6H#,76N'0-3606H)Hg6+>-120.1782746H1mJ>N*300178274
 	 * \endif
 	 */
 	public int         dwLongitude; 
@@ -22,7 +22,7 @@ public class GPS_POINT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * latidude
 	 * \else
-	 * 纬度(单位是百万分之度，范围0-180度)如北纬30.183382度表示为120183382
+	 * N36H(5%N;JG0YMr7VV.6H#,76N'0-1806H)Hg11N330.1833826H1mJ>N*120183382
 	 * \endif
 	 */
 	public int         dwLatidude; 

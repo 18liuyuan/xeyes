@@ -12,7 +12,7 @@ public class EM_LOGIN_SPAC_CAP_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * TCP login, default
 	 * \else
-	 * TCP登陆, 默认方式
+	 * TCP5GB=, D,HO7=J=
 	 * \endif
 	 */
     public final static int EM_LOGIN_SPEC_CAP_TCP               = 0;
@@ -21,7 +21,7 @@ public class EM_LOGIN_SPAC_CAP_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * No criteria login
 	 * \else
-	 * 无条件登陆
+	 * N^Lu<~5GB=
 	 * \endif
 	 */
     public final static int EM_LOGIN_SPEC_CAP_ANY               = 1;
@@ -30,7 +30,7 @@ public class EM_LOGIN_SPAC_CAP_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * auto sign up login
 	 * \else
-	 * 主动注册的登入
+	 * Vw6/W"2a5D5GHk
 	 * \endif
 	 */
     public final static int EM_LOGIN_SPEC_CAP_SERVER_CONN       = 2;
@@ -39,7 +39,7 @@ public class EM_LOGIN_SPAC_CAP_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * multicast login, default
 	 * \else
-	 * 组播登陆, 默认方式
+	 * Wi2%5GB=, D,HO7=J=
 	 * \endif
 	 */
     public final static int EM_LOGIN_SPEC_CAP_MULTICAST         = 3;
@@ -48,7 +48,7 @@ public class EM_LOGIN_SPAC_CAP_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * UDP method login
 	 * \else
-	 * UDP方式下的登入
+	 * UDP7=J=OB5D5GHk
 	 * \endif
 	 */
     public final static int EM_LOGIN_SPEC_CAP_UDP               = 4;
@@ -57,7 +57,7 @@ public class EM_LOGIN_SPAC_CAP_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * only main connection login
 	 * \else
-	 * 只建主连接下的登入
+	 * V;=(VwA,=SOB5D5GHk
 	 * \endif
 	 */
     public final static int EM_LOGIN_SPEC_CAP_MAIN_CONN_ONLY    = 6;
@@ -66,7 +66,7 @@ public class EM_LOGIN_SPAC_CAP_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * SSL encryption login
 	 * \else
-	 * SSL加密方式登陆
+	 * SSL<SC\7=J=5GB=
 	 * \endif
 	 */
     public final static int EM_LOGIN_SPEC_CAP_SSL               = 7;
@@ -75,7 +75,7 @@ public class EM_LOGIN_SPAC_CAP_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Chendu Jiafa login
 	 * \else
-	 * 成都佳发登陆
+	 * 3I6<<Q7"5GB=
 	 * \endif
 	 */
     public final static int EM_LOGIN_SPEC_CAP_CD_JF             = 8;
@@ -84,7 +84,7 @@ public class EM_LOGIN_SPAC_CAP_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * login IVS box remote device
 	 * \else
-	 * 登录智能盒远程设备
+	 * 5GB<VGD\:PT63LIh18
 	 * \endif
 	 */
     public final static int EM_LOGIN_SPEC_CAP_INTELLIGENT_BOX   = 9;
@@ -93,7 +93,7 @@ public class EM_LOGIN_SPAC_CAP_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * login device do not config
 	 * \else
-	 * 登录设备后不做取配置操作
+	 * 5GB<Ih18:s2;WvH!EdVC2YWw
 	 * \endif
 	 */
     public final static int EM_LOGIN_SPEC_CAP_NO_CONFIG         = 10;
@@ -102,7 +102,7 @@ public class EM_LOGIN_SPAC_CAP_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * USB key device login
 	 * \else
-	 * 用U盾设备的登入
+	 * SCU6\Ih185D5GHk
 	 * \endif
 	 */
     public final static int EM_LOGIN_SPEC_CAP_U_LOGIN           = 11;
@@ -111,16 +111,16 @@ public class EM_LOGIN_SPAC_CAP_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * LDAP login
 	 * \else
-	 * LDAP方式登录
+	 * LDAP7=J=5GB<
 	 * \endif
 	 */
     public final static int EM_LOGIN_SPEC_CAP_LDAP              = 12;
     
     /**
 	 * \if ENGLISH_LANG
-	 * AD（ActiveDirectory） login
+	 * AD#(ActiveDirectory#) login
 	 * \else
-	 * AD（ActiveDirectory）登录方式
+	 * AD#(ActiveDirectory#)5GB<7=J=
 	 * \endif
 	 */
     public final static int EM_LOGIN_SPEC_CAP_AD                = 13;
@@ -129,7 +129,7 @@ public class EM_LOGIN_SPAC_CAP_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Radius  login 
 	 * \else
-	 * Radius 登录方式
+	 * Radius 5GB<7=J=
 	 * \endif
 	 */
     public final static int EM_LOGIN_SPEC_CAP_RADIUS            = 14;
@@ -138,7 +138,7 @@ public class EM_LOGIN_SPAC_CAP_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Socks5 login
 	 * \else
-	 * Socks5登陆方式
+	 * Socks55GB=7=J=
 	 * \endif
 	 */
     public final static int EM_LOGIN_SPEC_CAP_SOCKET_5          = 15;
@@ -147,7 +147,7 @@ public class EM_LOGIN_SPAC_CAP_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * cloud login
 	 * \else
-	 * 云登陆方式
+	 * TF5GB=7=J=
 	 * \endif
 	 */
     public final static int EM_LOGIN_SPEC_CAP_CLOUD             = 16;
@@ -156,7 +156,7 @@ public class EM_LOGIN_SPAC_CAP_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * dual authentication loin
 	 * \else
-	 * 二次鉴权登陆方式
+	 * 6~4N<xH(5GB=7=J=
 	 * \endif
 	 */
     public final static int EM_LOGIN_SPEC_CAP_AUTH_TWICE        = 17;
@@ -165,7 +165,7 @@ public class EM_LOGIN_SPAC_CAP_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * TS stream client login
 	 * \else
-	 * TS码流客户端登陆方式
+	 * TSBkAw?M;'6K5GB=7=J=
 	 * \endif
 	 */
     public final static int EM_LOGIN_SPEC_CAP_TS                = 18;
@@ -174,7 +174,7 @@ public class EM_LOGIN_SPAC_CAP_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * web private login
 	 * \else
-	 * 为P2P登陆方式
+	 * N*P2P5GB=7=J=
 	 * \endif
 	 */
     public final static int EM_LOGIN_SPEC_CAP_P2P               = 19;
@@ -183,7 +183,7 @@ public class EM_LOGIN_SPAC_CAP_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * mobile client login
 	 * \else
-	 * 手机客户端登陆
+	 * JV;z?M;'6K5GB=
 	 * \endif
 	 */
     public final static int EM_LOGIN_SPEC_CAP_MOBILE            = 20;
@@ -192,7 +192,7 @@ public class EM_LOGIN_SPAC_CAP_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * invalid login
 	 * \else
-	 * 无效的登陆方式
+	 * N^P'5D5GB=7=J=
 	 * \endif
 	 */
     public final static int EM_LOGIN_SPEC_CAP_INVALID           = 21;

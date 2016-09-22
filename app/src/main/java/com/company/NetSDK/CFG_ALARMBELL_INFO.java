@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Alarm configuration
  * \else
- * 警号配置
+ * >/:EEdVC
  * \endif
  */
 public class CFG_ALARMBELL_INFO implements Serializable {
@@ -20,7 +20,7 @@ public class CFG_ALARMBELL_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Duty cycle
 	 * \else
-	 * 警号输出持续时间, 单位: 分钟(0-99), 0 表示响一下就停止
+	 * >/:EJd3v3VPxJ1<d, 5%N;: 7VVS(0-99), 0 1mJ>OlR;OB>MM#V9
 	 * \endif
 	 */
 	public int nPersistentTime;

@@ -6,10 +6,9 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * User information list. Support 16-bit user name and password length
  * \else
- * 用户信息表
+ * SC;'PEO"1m
  * \endif
  */
-
 public class USER_MANAGE_INFO_EX implements Serializable {
 	/**
 	 *
@@ -20,97 +19,93 @@ public class USER_MANAGE_INFO_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Right list length 
 	 * \else
-	 * 权限信息
+	 * H(O^PEO"
 	 * \endif
 	 */
-	public int					dwRightNum;				
+	public int					dwRightNum;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Right info 
 	 * \else
-	 * 权限信息 
+	 * H(O^PEO" 
 	 * \endif
 	 */
 	public OPR_RIGHT_EX		rightList[] = new OPR_RIGHT_EX[FinalVar.SDK_MAX_RIGHT_NUM];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Group list length 
 	 * \else
-	 * 组列表长度 
+	 * WiAP1m3$6H 
 	 * \endif
 	 */
-	public int					dwGroupNum;				
+	public int					dwGroupNum;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * User group info 
 	 * \else
-	 * 用户组信息
+	 * SC;'WiPEO"
 	 * \endif
 	 */
 	public USER_GROUP_INFO_EX  groupList[] = new USER_GROUP_INFO_EX[FinalVar.SDK_MAX_GROUP_NUM];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * User list length 
 	 * \else
-	 * 用户列表长度
+	 * SC;'AP1m3$6H
 	 * \endif
 	 */
-	public int					dwUserNum;				
+	public int					dwUserNum;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * User info 
 	 * \else
-	 * 用户信息
+	 * SC;'PEO"
 	 * \endif
 	 */
 	public USER_INFO_EX		userList[] = new USER_INFO_EX[FinalVar.SDK_MAX_USER_NUM];
+	
 	/**
 	 * \if ENGLISH_LANG
-	 * Submask；0x00000001 - support account reuse，0x00000002 - Need verification when change password 
+	 * Submask#;0x00000001 - support account reuse#,0x00000002 - Need verification when change password 
 	 * \else
-	 * 掩码；0x00000001 - 支持用户复用，0x00000002 - 密码修改需要校验
+	 * QZBk#;0x00000001 - V'3VSC;'84SC#,0x00000002 - C\BkP^8DPhR*P#Qi
 	 * \endif
 	 */
-	public int					dwFouctionMask;			
+	public int					dwFouctionMask;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Need verification when change password
 	 * \else
-	 * 支持的用户名最大长度
+	 * V'3V5DSC;'C{Wn4s3$6H
 	 * \endif
 	 */
-	public byte				byNameMaxLength;		
+	public byte				byNameMaxLength;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * The max password length supported 
 	 * \else
-	 * 支持的密码最大长度
+	 * V'3V5DC\BkWn4s3$6H
 	 * \endif
 	 */
-	public byte				byPSWMaxLength;			
-	/**
-	 * \if ENGLISH_LANG
-	 * Reserved
-	 * \else
-	 * 保留
-	 * \endif
-	 */
-	public byte				byReserve[] = new byte[254];
+	public byte				byPSWMaxLength;
 	
-	public USER_MANAGE_INFO_EX()
-	{
-		for (int i = 0; i < FinalVar.SDK_MAX_RIGHT_NUM; i++)
-		{
+	public USER_MANAGE_INFO_EX() {
+		for (int i = 0; i < FinalVar.SDK_MAX_RIGHT_NUM; i++) {
 			rightList[i] = new OPR_RIGHT_EX();
 		}
 		
-		for (int i = 0; i < FinalVar.SDK_MAX_GROUP_NUM; i++)
-		{
+		for (int i = 0; i < FinalVar.SDK_MAX_GROUP_NUM; i++) {
 			groupList[i] = new USER_GROUP_INFO_EX();
 		}
 		
-		for (int i = 0; i < FinalVar.SDK_MAX_USER_NUM; i++)
-		{
+		for (int i = 0; i < FinalVar.SDK_MAX_USER_NUM; i++) {
 			userList[i] = new USER_INFO_EX();
 		}
 	}

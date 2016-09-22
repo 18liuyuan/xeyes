@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * MAC info
  * \else
- * MAC信息
+ * MACPEO"
  * \endif
  */
 public class MACFILTER_INFO implements Serializable {
@@ -20,7 +20,7 @@ public class MACFILTER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * MAC count
 	 * \else
-	 * MAC个数
+	 * MAC8vJ}
 	 * \endif
 	 */
 	public int                dwMacNum; 

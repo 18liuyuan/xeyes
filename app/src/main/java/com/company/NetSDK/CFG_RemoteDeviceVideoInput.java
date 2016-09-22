@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Video input channel
  * \else
- * 视频输入通道
+ * JSF5JdHkM(5@
  * \endif
  */
 public class CFG_RemoteDeviceVideoInput implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_RemoteDeviceVideoInput implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable
 	 * \else
-	 * 使能 
+	 * J9D\ 
 	 * \endif
 	 */
 	public boolean			bEnable;
@@ -28,7 +28,7 @@ public class CFG_RemoteDeviceVideoInput implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device name 
 	 * \else
-	 * 设备名称 
+	 * Ih18C{3F 
 	 * \endif
 	 */
 	public byte[]			szName = new byte[FinalVar.MAX_DEVICE_NAME_LEN];
@@ -37,7 +37,7 @@ public class CFG_RemoteDeviceVideoInput implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Control ID 
 	 * \else
-	 * 控制ID 
+	 * ?XVFID 
 	 * \endif
 	 */
 	public byte[]			szControlID = new byte[FinalVar.MAX_DEV_ID_LEN_EX];
@@ -46,7 +46,7 @@ public class CFG_RemoteDeviceVideoInput implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Main stream url address
 	 * \else
-	 * 主码流url地址
+	 * VwBkAwurl5XV7
 	 * \endif
 	 */
 	public byte[]			szMainUrl = new byte[FinalVar.MAX_PATH];
@@ -55,7 +55,7 @@ public class CFG_RemoteDeviceVideoInput implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Sub stream url address
 	 * \else
-	 * 辅码流url地址 
+	 * 8(BkAwurl5XV7 
 	 * \endif
 	 */
 	public byte[]			szExtraUrl = new byte[FinalVar.MAX_PATH];
@@ -64,7 +64,7 @@ public class CFG_RemoteDeviceVideoInput implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Server type, 0-TCP, 1-UDP, 2-MCAST, -1-AUTO
 	 * \else
-	 * 服务类型, 0-TCP, 1-UDP, 2-MCAST, -1-AUTO
+	 * 7~Nq@`PM, 0-TCP, 1-UDP, 2-MCAST, -1-AUTO
 	 * \endif
 	 */
 	public int				nServiceType;

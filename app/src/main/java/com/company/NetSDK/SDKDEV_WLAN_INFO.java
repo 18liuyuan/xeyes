@@ -2,12 +2,11 @@ package com.company.NetSDK;
 
 import java.io.Serializable;
 
-
 /**
  * \if ENGLISH_LANG
  * Config wireless network info
  * \else
- * 配置无线网络信息
+ * EdVCN^O_MxBgPEO"
  * \endif
  */
 public class SDKDEV_WLAN_INFO implements Serializable {
@@ -20,7 +19,7 @@ public class SDKDEV_WLAN_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Wireless enable
 	 * \else
-	 * 无线使能
+	 * N^O_J9D\
 	 * \endif
 	 */
 	public int                 nEnable;
@@ -36,9 +35,9 @@ public class SDKDEV_WLAN_INFO implements Serializable {
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * Connection mode；0：auto,1：adhoc,2：Infrastructure
+	 * Connection mode#;0#:auto,1#:adhoc,2#:Infrastructure
 	 * \else
-	 * 连接模式；0：auto，1：adhoc，2：Infrastructure
+	 * A,=SD#J=#;0#:auto#,1#:adhoc#,2#:Infrastructure
 	 * \endif
 	 */
 	public int                 nLinkMode;
@@ -54,7 +53,7 @@ public class SDKDEV_WLAN_INFO implements Serializable {
 	 * <tr><td>5</td><td>WPA-PSK-CCMP</td></tr>
 	 * </table>
 	 * \else
-	 * 加密方式
+	 * <SC\7=J=
 	 * <table>
 	 * <tr><td>0</td><td>off</td></tr>
 	 * <tr><td>2</td><td>WEP64bit</td></tr>
@@ -68,9 +67,9 @@ public class SDKDEV_WLAN_INFO implements Serializable {
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * 0：Hex,1：ASCII
+	 * 0#:Hex,1#:ASCII
 	 * \else
-	 * 0：Hex，1：ASCII
+	 * 0#:Hex#,1#:ASCII
 	 * \endif
 	 */
 	public int                 nKeyType;
@@ -79,7 +78,7 @@ public class SDKDEV_WLAN_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * SN
 	 * \else
-	 * 序号
+	 * Pr:E
 	 * \endif
 	 */
 	public int                 nKeyID;
@@ -88,7 +87,7 @@ public class SDKDEV_WLAN_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 4 passwords
 	 * \else
-	 * 四组密码
+	 * KDWiC\Bk
 	 * \endif
 	 */
 	public byte            szKeys[][] = new byte[4][32];
@@ -97,7 +96,7 @@ public class SDKDEV_WLAN_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * When nEncryption is 4 or 5, send 128 length and no end symbol. 
 	 * \else
-	 * nEncryption为4、5时使用，传128长度，不用结束符。
+	 * nEncryptionN*4!"5J1J9SC#,4+1283$6H#,2;SC=aJx7{!#
 	 * \endif
 	 */
 	public byte            szWPAKeys[] = new byte[128];
@@ -106,7 +105,7 @@ public class SDKDEV_WLAN_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Encryption type
 	 * \else
-	 * 加密类型
+	 * <SC\@`PM
 	 * \endif
 	 */
     public int                 nKeyFlag;
@@ -115,7 +114,7 @@ public class SDKDEV_WLAN_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0: no connection, 1:connected
 	 * \else
-	 * 0: 无连接, 1: 连接
+	 * 0: N^A,=S, 1: A,=S
 	 * \endif
 	 */
     public byte                byConnectedFlag; 

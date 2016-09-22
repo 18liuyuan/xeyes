@@ -6,10 +6,9 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Snapshot parameter structure 
  * \else
- * 抓图参数结构体
+ * W%M<2NJ}=a99Le
  * \endif
  */
-
 public class SNAP_PARAMS implements Serializable {
 	/**
 	 *
@@ -20,56 +19,53 @@ public class SNAP_PARAMS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Snapshot channel
 	 * \else
-	 * 抓图的通道
+	 * W%M<5DM(5@
 	 * \endif
 	 */
-	public int				Channel;				
+	public int				Channel;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Image quality:level 1 to level 6
 	 * \else
-	 * 画质；1~6
+	 * ;-VJ#;1~6
 	 * \endif
 	 */
-	public int				Quality;				
+	public int				Quality;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Video size;0:QCIF,1:CIF,2:D1
 	 * \else
-	 * 画面大小；0：QCIF，1：CIF，2：D1
+	 * ;-Cf4sP!#;0#:QCIF#,1#:CIF#,2#:D1
 	 * \endif
 	 */
-	public int				ImageSize;				
+	public int				ImageSize;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Snapshot mode;0:request one frame,1:send out requestion regularly,2: Request consecutively
 	 * \else
-	 * 抓图模式；0：表示请求一帧，1：表示定时发送请求，2：表示连续请求
+	 * W%M<D#J=#;0#:1mJ>GkGsR;V!#,1#:1mJ>6(J17"KMGkGs#,2#:1mJ>A,PxGkGs
 	 * \endif
 	 */
-	public int				mode;					
+	public int				mode;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Time unit is second.If mode=1, it means send out requestion regularly. The time is valid.
 	 * \else
-	 * 时间单位秒；若mode=1表示定时发送请求时，此时间有效
+	 * J1<d5%N;Ck#;Htmode=11mJ>6(J17"KMGkGsJ1#,4KJ1<dSPP'
 	 * \endif
 	 */
-	public int				InterSnap;				
+	public int				InterSnap;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Request serial number
 	 * \else
-	 * 请求序列号
+	 * GkGsPrAP:E
 	 * \endif
 	 */
-	public int				CmdSerial;				
-	/**
-	 * \if ENGLISH_LANG
-	 * Reserved
-	 * \else
-	 * 保留
-	 * \endif
-	 */
-	public int				Reserved[] = new int[4];
+	public int				CmdSerial;
 }

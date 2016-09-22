@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Remote Host Configuration
  * \else
- * 远程主机配置
+ * T63LVw;zEdVC
  * \endif
  */
 public class SDK_REMOTE_HOST implements Serializable {
@@ -19,7 +19,7 @@ public class SDK_REMOTE_HOST implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Connection enabled
 	 * \else
-	 * 连接使能
+	 * A,=SJ9D\
 	 * \endif
 	 */
 	public byte                byEnable;
@@ -32,10 +32,10 @@ public class SDK_REMOTE_HOST implements Serializable {
 	 * <tr><td>1</td><td>In the wired Wireless card dialing</td></tr>
 	 * </table>
 	 * \else
-	 * 目前只对于PPPoE服务器有用
+	 * D?G0V;6TSZPPPoE7~NqFwSPSC
 	 * <table>
-	 * <tr><td>0</td><td>在有线网卡拨号</td></tr>
-	 * <tr><td>1</td><td>在无线网卡上拨号</td></tr>
+	 * <tr><td>0</td><td>TZSPO_Mx?(2&:E</td></tr>
+	 * <tr><td>1</td><td>TZN^O_Mx?(IO2&:E</td></tr>
 	 * </table>
 	 * \endif
 	 */
@@ -45,7 +45,7 @@ public class SDK_REMOTE_HOST implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Remote host port
 	 * \else
-	 * 远程主机端口
+	 * T63LVw;z6K?Z
 	 * \endif
 	 */
 	public short                wHostPort;
@@ -54,7 +54,7 @@ public class SDK_REMOTE_HOST implements Serializable {
 	 * \if ENGLISH_LANG
 	 * IP address of the remote host
 	 * \else
-	 * 远程主机IP地址
+	 * T63LVw;zIP5XV7
 	 * \endif
 	 */
 	public byte                sHostIPAddr[] = new byte[FinalVar.SDK_MAX_IPADDR_LEN];
@@ -63,7 +63,7 @@ public class SDK_REMOTE_HOST implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The user name of the remote host
 	 * \else
-	 * 远程主机用户名
+	 * T63LVw;zSC;'C{
 	 * \endif
 	 */
 	public byte                sHostUser[] = new byte[FinalVar.SDK_MAX_HOST_NAMELEN];
@@ -72,7 +72,7 @@ public class SDK_REMOTE_HOST implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The user password of the remote host
 	 * \else
-	 * 远程主机密码
+	 * T63LVw;zC\Bk
 	 * \endif
 	 */
 	public byte                sHostPassword[] = new byte[FinalVar.SDK_MAX_HOST_PSWLEN];

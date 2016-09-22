@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Audio Format
  * \else
- * “Ù∆µ±‡¬Îƒ£ Ω
+ * RtF51`BkD#J=
  * \endif
  */
 public class CFG_AUDIO_FORMAT implements Serializable {

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Split capability
  * \else
- * 分割能力
+ * 7V8nD\A&
  * \endif
  */
 public class SDK_SPLIT_CAPS implements Serializable {
@@ -19,64 +19,112 @@ public class SDK_SPLIT_CAPS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The split amount supported
 	 * \else
-	 * 支持的分割模式数量
+	 * V'3V5D7V8nD#J=J}A?
 	 * \endif
 	 */
-	public int					nModeCount;				
+	public int					nModeCount;
+	
 	/**
 	 * \if ENGLISH_LANG
-	 * The split mode supported
+	 * The split mode supported#, corresponding to SDK_SPLIT_MODE
 	 * \else
-	 * 支持的分割模式
+	 * V'3V5D7V8nD#J=, 6TS&@`SDK_SPLIT_MODE
 	 * \endif
 	 */
-	public int					emSplitMode[] = new int[FinalVar.SDK_MAX_SPLIT_MODE_NUM];	
+	public int					emSplitMode[] = new int[FinalVar.SDK_MAX_SPLIT_MODE_NUM];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Max display source allocation amount
 	 * \else
-	 * 最大显示源配置数
+	 * Wn4sOTJ>T4EdVCJ}
 	 * \endif
 	 */
-	public int				    nMaxSourceCount;		
+	public int				    nMaxSourceCount;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Count of free window support
 	 * \else
-	 * 支持的最大自由开窗数目
+	 * V'3V5DWn4sWTSI?*40J}D?
 	 * \endif
 	 */
-	public int					nFreeWindowCount;		
+	public int					nFreeWindowCount;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Support collection
 	 * \else
-	 * 是否支持区块收藏
+	 * JG7qV'3VGx?iJU2X
 	 * \endif
 	 */
-	public boolean				bCollectionSupported;	
+	public boolean				bCollectionSupported;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 掩码表示多个显示类型，具体见SDK_SPLIT_DISPLAY_TYPE（注释各模式下显示内容由"PicInPic"决定, 各模式下显示内容按NVD旧有规则决定（即DisChn字段决定）。兼容，没有这一个项时，默认为普通显示类型,即"General"）
+	 * QZBk1mJ>6`8vOTJ>@`PM#,>_Le<{SDK_SPLIT_DISPLAY_TYPE#(W"JM8wD#J=OBOTJ>DZH]SI"PicInPic">v6(, 8wD#J=OBOTJ>DZH]04NVD>ISP9fTr>v6(#(<4DisChnWV6N>v6(#)!#<fH]#,C;SPUbR;8vOnJ1#,D,HON*FUM(OTJ>@`PM,<4"General"#)
 	 * \endif
 	 */
-	public int              	dwDisplayType;          
+	public int              	dwDisplayType;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 画中画支持的分割模式数量
+	 * ;-VP;-V'3V5D7V8nD#J=J}A?
 	 * \endif
 	 */
-	public int					nPIPModeCount;			
+	public int					nPIPModeCount;
+	
 	/**
 	 * \if ENGLISH_LANG
-	 * Port serial number
+	 * Port serial number#, corresponding to SDK_SPLIT_MODE
 	 * \else
-	 * 画中画支持的分割模式
+	 * ;-VP;-V'3V5D7V8nD#J=#, 6TS&@`SDK_SPLIT_MODE
 	 * \endif
 	 */
-	public int					emPIPSplitMode[] = new int[FinalVar.SDK_MAX_SPLIT_MODE_NUM];	
+	public int					emPIPSplitMode[] = new int[FinalVar.SDK_MAX_SPLIT_MODE_NUM];
+	
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * supported input channel
+	 * \else
+	 * V'3V5DJdHkM(5@
+	 * \endif
+	 */
+	 public int                szInputChannels[] = new int[FinalVar.SDK_SPLIT_INPUT_NUM];  
+	 
+	/**
+	 * \if ENGLISH_LANG
+	 *  supported input channel quantity, 0 means no input channel limit
+	 * \else
+	 * V'3V5DJdHkM(5@8vJ}, 01mJ>C;SPJdHkM(5@O^VF
+	 * \endif
+	*/
+	 public int					nInputChannelCount;
+	 
+
+	 /**
+		 * \if ENGLISH_LANG
+		 * enable split mode quantity
+		 * \else
+		 * Ft6/7V8nD#J=J}A?
+		 * \endif
+	 */
+	 
+	 public int					nBootModeCount;
+	 
+	 /**
+		 * \if ENGLISH_LANG
+		 * support enable default video split mode#,value corresponding to SDK_SPLIT_MODE
+		 * \else
+		 * V'3V5DFt6/D,HO;-Cf7V8nD#J=, V56TS&@`SDK_SPLIT_MODE
+		 * \endif
+	 */
+	 public int					emBootMode[] = new int[FinalVar.SDK_MAX_SPLIT_MODE_NUM];
+	 
+	 
 }

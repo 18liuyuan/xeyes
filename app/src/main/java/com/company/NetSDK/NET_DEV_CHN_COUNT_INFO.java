@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Device channel quantity info
  * \else
- * 设备通道数量信息
+ * Ih18M(5@J}A?PEO"
  * \endif
  */
 public class NET_DEV_CHN_COUNT_INFO implements Serializable {
@@ -20,7 +20,7 @@ public class NET_DEV_CHN_COUNT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Video input channel
 	 * \else
-	 * 视频输入通道
+	 * JSF5JdHkM(5@
 	 * \endif
 	 */
 	public NET_CHN_COUNT_INFO	stuVideoIn = new NET_CHN_COUNT_INFO();					
@@ -29,7 +29,7 @@ public class NET_DEV_CHN_COUNT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Video output channel
 	 * \else
-	 * 视频输出通道
+	 * JSF5Jd3vM(5@
 	 * \endif
 	 */
 	public NET_CHN_COUNT_INFO	stuVideoOut = new NET_CHN_COUNT_INFO();				

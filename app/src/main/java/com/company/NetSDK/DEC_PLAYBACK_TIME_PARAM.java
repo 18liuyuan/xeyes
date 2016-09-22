@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Playback Time Parameters
  * \else
- * 按时间回放前端设备条件
+ * 04J1<d;X7EG06KIh18Lu<~
  * \endif
  */
 public class DEC_PLAYBACK_TIME_PARAM implements Serializable {
@@ -19,7 +19,7 @@ public class DEC_PLAYBACK_TIME_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * IP address of Front-end DVR
 	 * \else
-	 * 前端DVR的IP地址
+	 * G06KDVR5DIP5XV7
 	 * \endif
 	 */
 	public byte			szDevIp[] = new byte[FinalVar.SDK_MAX_IPADDR_LEN];
@@ -28,7 +28,7 @@ public class DEC_PLAYBACK_TIME_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port of Front-end DVR
 	 * \else
-	 * 前端DVR的端口号
+	 * G06KDVR5D6K?Z:E
 	 * \endif
 	 */
 	public int				wDevPort;
@@ -37,7 +37,7 @@ public class DEC_PLAYBACK_TIME_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Decoder channel enable
 	 * \else
-	 * 解码通道使能
+	 * =bBkM(5@J9D\
 	 * \endif
 	 */
 	public byte			bDevChnEnable;
@@ -46,7 +46,7 @@ public class DEC_PLAYBACK_TIME_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The corresponding channel number
 	 * \else
-	 * 对应解码通道号
+	 * 6TS&=bBkM(5@:E
 	 * \endif
 	 */
 	public byte			byDecoderID;
@@ -55,7 +55,7 @@ public class DEC_PLAYBACK_TIME_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * User Name
 	 * \else
-	 * 用户名
+	 * SC;'C{
 	 * \endif
 	 */
 	public byte			szDevUser[] = new byte[FinalVar.SDK_USER_NAME_LENGTH_EX];
@@ -64,7 +64,7 @@ public class DEC_PLAYBACK_TIME_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Password
 	 * \else
-	 * 密码
+	 * C\Bk
 	 * \endif
 	 */
 	public byte			szDevPwd[] = new byte[FinalVar.SDK_USER_PSW_LENGTH_EX];
@@ -73,7 +73,7 @@ public class DEC_PLAYBACK_TIME_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel ID
 	 * \else
-	 * 通道id 
+	 * M(5@id 
 	 * \endif
 	 */
 	public int				nChannelID;
@@ -82,7 +82,7 @@ public class DEC_PLAYBACK_TIME_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Start Time 
 	 * \else
-	 * 起始时间
+	 * FpJ<J1<d
 	 * \endif
 	 */
 	public NET_TIME		startTime = new NET_TIME();
@@ -91,7 +91,7 @@ public class DEC_PLAYBACK_TIME_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * End Time 
 	 * \else
-	 * 结束时间
+	 * =aJxJ1<d
 	 * \endif
 	 */
 	public NET_TIME		endTime = new NET_TIME();

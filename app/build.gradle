@@ -4,6 +4,7 @@ android {
     compileSdkVersion 23
     buildToolsVersion "24.0.2"
 
+
     defaultConfig {
         applicationId "com.conwin.dhvideo"
         minSdkVersion 10
@@ -23,6 +24,11 @@ android {
             jniLibs.srcDirs =['libs']
         }
     }
+
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "GBK"
 }
 
 dependencies {

@@ -7,8 +7,8 @@ import java.io.Serializable;
  * According to the mobile function
  * (Event triggers message)MMS Configuration Structure
  * \else
- * 以下是mobile功能相关
- * (事件触发多媒体彩信/短信发送)MMS配置结构体
+ * RTOBJGmobile9&D\O`9X
+ * (JB<~4%7"6`C=Le2JPE/6LPE7"KM)MMSEdVC=a99Le
  * \endif
  */
 public class SDKDEV_MMS_CFG implements Serializable {
@@ -21,7 +21,7 @@ public class SDKDEV_MMS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable
 	 * \else
-	 * 使能
+	 * J9D\
 	 * \endif
 	 */
 	public int               dwEnable;
@@ -30,7 +30,7 @@ public class SDKDEV_MMS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Receiver amount
 	 * \else
-	 * 短信接收者个数
+	 * 6LPE=SJUU_8vJ}
 	 * \endif
 	 */
 	public int               dwReceiverNum;
@@ -39,7 +39,7 @@ public class SDKDEV_MMS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Receiver,normally cellphone
 	 * \else
-	 * 短信接收者，一般为手机号码
+	 * 6LPE=SJUU_#,R;0cN*JV;z:EBk
 	 * \endif
 	 */
 	public byte				SZReceiver[][] = new byte[FinalVar.SDK_MMS_RECEIVER_NUM][32];
@@ -48,7 +48,7 @@ public class SDKDEV_MMS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Message type 0:MMS;1:SMS
 	 * \else
-	 * 短信信息类型 0:MMS；1:SMS
+	 * 6LPEPEO"@`PM 0:MMS#;1:SMS
 	 * \endif
 	 */
 	public byte                byType;
@@ -57,7 +57,7 @@ public class SDKDEV_MMS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Message title
 	 * \else
-	 * 短信信息标题
+	 * 6LPEPEO"1jLb
 	 * \endif
 	 */
 	public byte                SZTitle[] = new byte[32];

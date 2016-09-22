@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * H264 code level
  * \else
- * H264 编码级别
+ * H264 1`Bk<61p
  * \endif
  */
 public class CFG_H264_PROFILE_RANK implements Serializable {
@@ -17,18 +17,18 @@ public class CFG_H264_PROFILE_RANK implements Serializable {
 
 	/**
 	 * \if ENGLISH_LANG
-	 * Provide I/P frame，only support progressive and CAVLC
+	 * Provide I/P frame#,only support progressive and CAVLC
 	 * \else
-	 * 提供I/P帧，仅支持progressive(逐行扫描)和CAVLC
+	 * La9)I/PV!#,=vV'3Vprogressive(VpPPI(Ch):MCAVLC
 	 * \endif
 	 */
 	public static final int PROFILE_BASELINE = 1;                       
 
 	/**
 	 * \if ENGLISH_LANG
-	 * Provide I/P/B frame，support progressiv and interlaced，provide CAVLC or CABAC
+	 * Provide I/P/B frame#,support progressiv and interlaced#,provide CAVLC or CABAC
 	 * \else
-	 * 提供I/P/B帧，支持progressiv和interlaced，提供CAVLC或CABAC
+	 * La9)I/P/BV!#,V'3Vprogressiv:Minterlaced#,La9)CAVLC;rCABAC
 	 * \endif
 	 */
 	public static final int PROFILE_MAIN = 2;                               
@@ -37,18 +37,18 @@ public class CFG_H264_PROFILE_RANK implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Provide I/P/B/SP/SI frame, only support progressive and CAVLC
 	 * \else
-	 * 提供I/P/B/SP/SI帧，仅支持progressive(逐行扫描)和CAVLC
+	 * La9)I/P/B/SP/SIV!#,=vV'3Vprogressive(VpPPI(Ch):MCAVLC
 	 * \endif
 	 */
 	public static final int PROFILE_EXTENDED = 3;                           
 
 	/**
 	 * \if ENGLISH_LANG
-	 * As FRExt，Main_Profile new：8x8 intra prediction(8x8 frame forecast), custom 
+	 * As FRExt#,Main_Profile new#:8x8 intra prediction(8x8 frame forecast), custom 
 	 * quant(custom), lossless video coding, more yuv formats
 	 * \else
-	 * 即FRExt，Main_Profile基础上新增：8x8 intra prediction(8x8 帧内预测), custom\n
-	 * quant(自定义量化), lossless video coding(无损视频编码), 更多的yuv格式
+	 * <4FRExt#,Main_Profile;y4!IOPBTv#:8x8 intra prediction(8x8 V!DZT$2b), custom\n
+	 * quant(WT6(ReA?;/), lossless video coding(N^KpJSF51`Bk), 8|6`5Dyuv8qJ=
 	 * \endif
 	 */
 	public static final int PROFILE_HIGH = 4;                               

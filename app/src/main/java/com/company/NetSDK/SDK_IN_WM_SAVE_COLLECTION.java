@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * SaveMonitorWallCollection's interface input param(save monitor wall plans)
  * \else
- * SaveMonitorWallCollection接口输入参数(保存电视墙预案)
+ * SaveMonitorWallCollection=S?ZJdHk2NJ}(1#4f5gJSG=T$08)
  * \endif
  */
 public class SDK_IN_WM_SAVE_COLLECTION implements Serializable {
@@ -19,16 +19,17 @@ public class SDK_IN_WM_SAVE_COLLECTION implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Monitor wall ID
 	 * \else
-	 * 电视墙序号
+	 * 5gJSG=Pr:E
 	 * \endif
 	 */
-	public int					nMonitorWallID;				
+	public int					nMonitorWallID;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Name pf plan
 	 * \else
-	 * 预案名称
+	 * T$08C{3F
 	 * \endif
 	 */
-	public String				pszName;					
+	public String				pszName;
 }

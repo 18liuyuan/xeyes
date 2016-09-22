@@ -12,7 +12,7 @@ public class SDK_PIC_INFO_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * file size,unit:byte
 	 * \else
-	 * 文件大小, 单位:字节
+	 * ND<~4sP!, 5%N;:WV=Z
 	 * \endif
 	 */
 	public int                dwFileLenth; 
@@ -21,7 +21,7 @@ public class SDK_PIC_INFO_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * file path
 	 * \else
-	 * 文件路径      
+	 * ND<~B7>6      
 	 * \endif
 	 */
 	public byte                 szFilePath[] = new byte[FinalVar.MAX_PATH];     

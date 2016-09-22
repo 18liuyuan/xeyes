@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Panorama switch alarm configuration
  * \else
- * 全景切换报警配置
+ * H+>0GP;;1(>/EdVC
  * \endif
  */
 public class SDK_PANORAMA_SWITCH_CFG implements Serializable {
@@ -19,7 +19,7 @@ public class SDK_PANORAMA_SWITCH_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enabled
 	 * \else
-	 * 使能
+	 * J9D\
 	 * \endif
 	 */
 	public boolean                bEnable; 
@@ -37,7 +37,7 @@ public class SDK_PANORAMA_SWITCH_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Process way
 	 * \else
-	 * 报警联动
+	 * 1(>/A*6/
 	 * \endif
 	 */
 	public SDK_MSG_HANDLE       struHandle = new SDK_MSG_HANDLE(); 

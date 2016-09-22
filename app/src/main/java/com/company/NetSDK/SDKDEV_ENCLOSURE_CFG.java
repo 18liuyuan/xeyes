@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * enclosure config
  * \else
- * 电子围栏配置
+ * 5gWSN'@8EdVC
  * \endif
  */
 public class SDKDEV_ENCLOSURE_CFG implements Serializable {
@@ -20,7 +20,7 @@ public class SDKDEV_ENCLOSURE_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * mask
 	 * \else
-	 * 电子围栏类型掩码，见 ENCLOSURE_TYPE
+	 * 5gWSN'@8@`PMQZBk#,<{ ENCLOSURE_TYPE
 	 * \endif
 	 */
 	public int          unType;
@@ -29,7 +29,7 @@ public class SDKDEV_ENCLOSURE_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * front 4 bit means country, province, city, town
 	 * \else
-	 * 前四位分别代表国家、省、市或区、县(0-255)，后4bytes保留
+	 * G0KDN;7V1p4z1m9z<R!"J!!"JP;rGx!"OX(0-255)#,:s4bytes1#At
 	 * \endif
 	 */
 	public byte          bRegion[] = new byte[8];
@@ -38,7 +38,7 @@ public class SDKDEV_ENCLOSURE_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * rect id
 	 * \else
-	 * 一个区域以一个ID标识
+	 * R;8vGxSrRTR;8vID1jJ6
 	 * \endif
 	 */
 	public int          unId;
@@ -47,7 +47,7 @@ public class SDKDEV_ENCLOSURE_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * speed limit(km/h)
 	 * \else
-	 * 限速，单位km/h
+	 * O^KY#,5%N;km/h
 	 * \endif
 	 */
 	public int          unSpeedLimit;
@@ -56,7 +56,7 @@ public class SDKDEV_ENCLOSURE_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * rect point number
 	 * \else
-	 * 电子围栏区域顶点数
+	 * 5gWSN'@8GxSr6%5cJ}
 	 * \endif
 	 */
 	public int          unPointNum;
@@ -65,7 +65,7 @@ public class SDKDEV_ENCLOSURE_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * rect point info
 	 * \else
-	 * 电子围栏区域信息
+	 * 5gWSN'@8GxSrPEO"
 	 * \endif
 	 */
 	public GPS_POINT     stPoints[] = new GPS_POINT[128];
@@ -74,7 +74,7 @@ public class SDKDEV_ENCLOSURE_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * station name
 	 * \else
-	 * 电子围栏包围的车站站点名称
+	 * 5gWSN'@80|N'5D35U>U>5cC{3F
 	 * \endif
 	 */
 	public byte          szStationName[] = new byte[FinalVar.SDK_STATION_NAME_LEN];

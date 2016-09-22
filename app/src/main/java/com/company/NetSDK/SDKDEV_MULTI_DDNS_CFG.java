@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Multi ddns configuration
  * \else
- * ∂‡ddns≈‰÷√
+ * 6`ddnsEdVC
  * \endif
  */
 public class SDKDEV_MULTI_DDNS_CFG implements Serializable {
@@ -19,7 +19,7 @@ public class SDKDEV_MULTI_DDNS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * ddns number
 	 * \else
-	 * ddns ˝ƒø
+	 * ddnsJ}D?
 	 * \endif
 	 */
 	public int                dwDdnsServerNum;
@@ -28,7 +28,7 @@ public class SDKDEV_MULTI_DDNS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * ddns configuration
 	 * \else
-	 * ddns≈‰÷√
+	 * ddnsEdVC
 	 * \endif
 	 */
 	public SDK_DDNS_SERVER_CFG   struDdnsServer[] = new SDK_DDNS_SERVER_CFG[FinalVar.SDK_MAX_DDNS_NUM];

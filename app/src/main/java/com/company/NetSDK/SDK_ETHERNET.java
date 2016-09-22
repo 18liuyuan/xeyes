@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Ethernet Settings
  * \else
- * 以太网配置
+ * RTL+MxEdVC
  * \endif
  */
 public class SDK_ETHERNET implements Serializable {
@@ -19,7 +19,7 @@ public class SDK_ETHERNET implements Serializable {
 	 * \if ENGLISH_LANG
 	 * DVR IP Address
 	 * \else
-	 * DVR IP 地址
+	 * DVR IP 5XV7
 	 * \endif
 	 */
 	public byte                sDevIPAddr[] = new byte[FinalVar.SDK_MAX_IPADDR_LEN];
@@ -28,7 +28,7 @@ public class SDK_ETHERNET implements Serializable {
 	 * \if ENGLISH_LANG
 	 * IP Mask
 	 * \else
-	 * 网关地址
+	 * Mx9X5XV7
 	 * \endif
 	 */
 	public byte                sDevIPMask[] = new byte[FinalVar.SDK_MAX_IPADDR_LEN];
@@ -46,15 +46,15 @@ public class SDK_ETHERNET implements Serializable {
 	 * <tr><td>7</td><td>Self-adaption</td></tr>
 	 * </table>
 	 * \else
-	 * 10M/100M 自适应,索引:
+	 * 10M/100M WTJJS&,KwR}:
 	 * <table>
-	 * <tr><td>1</td><td>10Mbps 全双工</td></tr>
-	 * <tr><td>2</td><td>10Mbps 自适应</td></tr>
-	 * <tr><td>3</td><td>10Mbps 半双工</td></tr>
-	 * <tr><td>4</td><td>100Mbps 全双工</td></tr>
-	 * <tr><td>5</td><td>100Mbps 自适应</td></tr>
-	 * <tr><td>6</td><td>100Mbps 半双工</td></tr>
-	 * <tr><td>7</td><td>自适应</td></tr>
+	 * <tr><td>1</td><td>10Mbps H+K+9$</td></tr>
+	 * <tr><td>2</td><td>10Mbps WTJJS&</td></tr>
+	 * <tr><td>3</td><td>10Mbps 0kK+9$</td></tr>
+	 * <tr><td>4</td><td>100Mbps H+K+9$</td></tr>
+	 * <tr><td>5</td><td>100Mbps WTJJS&</td></tr>
+	 * <tr><td>6</td><td>100Mbps 0kK+9$</td></tr>
+	 * <tr><td>7</td><td>WTJJS&</td></tr>
 	 * </table>
 	 * \endif
 	 */
@@ -71,27 +71,27 @@ public class SDK_ETHERNET implements Serializable {
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * 0：Wired,1：Wireless
+	 * 0#:Wired,1#:Wireless
 	 * \else
-	 * 0：有线，1：无线
+	 * 0#:SPO_#,1#:N^O_
 	 * \endif
 	 */
 	public byte                bTranMedia;
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * Bit 1, 1：Valid 0：Invalid；Bit 2：0：DHCP disable 1：DHCP enable；Bit 3：0：Not support DHCP 1：Support DHCP
+	 * Bit 1, 1#:Valid 0#:Invalid#;Bit 2#:0#:DHCP disable 1#:DHCP enable#;Bit 3#:0#:Not support DHCP 1#:Support DHCP
 	 * \else
-	 * 按位表示，第一位：1：有效 0：无效；第二位：0：DHCP关闭 1：DHCP使能；第三位：0：不支持DHCP 1：支持DHCP
+	 * 04N;1mJ>#,5ZR;N;#:1#:SPP' 0#:N^P'#;5Z6~N;#:0#:DHCP9X1U 1#:DHCPJ9D\#;5ZH}N;#:0#:2;V'3VDHCP 1#:V'3VDHCP
 	 * \endif
 	 */
 	public byte                bValid;
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * Default NIC, 1：Default 0：Non default
+	 * Default NIC, 1#:Default 0#:Non default
 	 * \else
-	 * 是否作为默认的网卡, 1：默认 0：非默认
+	 * JG7qWwN*D,HO5DMx?(, 1#:D,HO 0#:7GD,HO
 	 * \endif
 	 */
 	public byte                bDefaultEth;
@@ -100,8 +100,8 @@ public class SDK_ETHERNET implements Serializable {
 	 * \if ENGLISH_LANG
 	 * MAC address,read only
 	 * \else
-	 * MAC地址，只读
+	 * MAC5XV7#,V;6A
 	 * \endif
 	 */
-	public byte                byMACAddr[] = new byte[FinalVar.SDK_MACADDR_LEN];          // MAC地址，只读
+	public byte                byMACAddr[] = new byte[FinalVar.SDK_MACADDR_LEN];
 }

@@ -13,7 +13,7 @@ public class POINTEANBLE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Preset range[1,80], invalid setting is 0.
 	 * \else
-	 * 预制点的有效范围闭区间[1,80]，无效设置为0。
+	 * T$VF5c5DSPP'76N'1UGx<d[1,80]#,N^P'IhVCN*0!#
 	 * \endif
 	 */
 	public byte             bPoint;
@@ -22,7 +22,7 @@ public class POINTEANBLE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Valid or not,0 invalid,1 valid
 	 * \else
-	 * 是否有效,0无效，1有效
+	 * JG7qSPP',0N^P'#,1SPP'
 	 * \endif
 	 */
 	public byte             bEnable;

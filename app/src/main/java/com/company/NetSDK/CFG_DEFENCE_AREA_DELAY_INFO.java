@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * 
  * \else
- * 防区延时配置(对应 CFG_CMD_DEFENCE_AREA_DELAY 命令)
+ * 7@GxQSJ1EdVC(6TS& CFG_CMD_DEFENCE_AREA_DELAY C|An)
  * \endif
  */
 public class CFG_DEFENCE_AREA_DELAY_INFO implements Serializable {
@@ -20,7 +20,7 @@ public class CFG_DEFENCE_AREA_DELAY_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 
 	 * \else
-	 * 有进入延时的防区类型，除防区类型EM_CFG_DefenceAreaType_Entrance2外, 都使用此进入延时
+	 * SP=xHkQSJ15D7@Gx@`PM#,3}7@Gx@`PMEM_CFG_DefenceAreaType_Entrance2Mb, 6<J9SC4K=xHkQSJ1
 	 * \endif
 	 */
 	public int                 nEnterDelay1;
@@ -29,7 +29,7 @@ public class CFG_DEFENCE_AREA_DELAY_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 
 	 * \else
-	 * 只有防区类型为EM_CFG_DefenceAreaType_Entrance2, 才会使用此进入延时
+	 * V;SP7@Gx@`PMN*EM_CFG_DefenceAreaType_Entrance2, 2E;aJ9SC4K=xHkQSJ1
 	 * \endif
 	 */
 	public int                 nEnterDelay2;
@@ -38,7 +38,7 @@ public class CFG_DEFENCE_AREA_DELAY_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 
 	 * \else
-	 * 所有有退出延时的防区, 都使用此退出延时
+	 * KySPSPMK3vQSJ15D7@Gx, 6<J9SC4KMK3vQSJ1
 	 * \endif
 	 */
 	public int                 nExitDelay;

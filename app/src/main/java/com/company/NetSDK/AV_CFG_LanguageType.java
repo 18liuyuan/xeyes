@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Language
  * \else
- * 语言
+ * SoQT
  * \endif
  */
 public class AV_CFG_LanguageType implements Serializable {
@@ -20,7 +20,7 @@ public class AV_CFG_LanguageType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * English
 	 * \else
-	 * 英文
+	 * S"ND
 	 * \endif
 	 */
 	public static final int AV_CFG_Language_English = 0;
@@ -29,7 +29,7 @@ public class AV_CFG_LanguageType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Simplified Chinese
 	 * \else
-	 * 简体中文
+	 * <rLeVPND
 	 * \endif
 	 */
 	public static final int AV_CFG_Language_SimpChinese = 1;
@@ -38,7 +38,7 @@ public class AV_CFG_LanguageType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Traditional Chinese
 	 * \else
-	 * 繁体中文
+	 * 71LeVPND
 	 * \endif
 	 */
 	public static final int AV_CFg_Language_TradChinese = 2;
@@ -47,7 +47,7 @@ public class AV_CFG_LanguageType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Italian
 	 * \else
-	 * 意大利文
+	 * Rb4s@{ND
 	 * \endif
 	 */
 	public static final int AV_CFG_Language_Italian = 3;
@@ -56,7 +56,7 @@ public class AV_CFG_LanguageType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Spanish
 	 * \else
-	 * 西班牙文
+	 * Nw0`Q@ND
 	 * \endif
 	 */
 	public static final int AV_CFG_Language_Spanish = 4;
@@ -65,7 +65,7 @@ public class AV_CFG_LanguageType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Japanese
 	 * \else
-	 * 日文
+	 * HUND
 	 * \endif
 	 */
 	public static final int AV_CFG_Language_Janpanese = 5;
@@ -74,7 +74,7 @@ public class AV_CFG_LanguageType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Russian
 	 * \else
-	 * 俄文
+	 * 6mND
 	 * \endif
 	 */
 	public static final int AV_CFG_Language_Russian = 6;
@@ -83,7 +83,7 @@ public class AV_CFG_LanguageType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * French
 	 * \else
-	 * 法文
+	 * 7(ND
 	 * \endif
 	 */
 	public static final int AV_CFG_Language_French = 7;
@@ -92,7 +92,7 @@ public class AV_CFG_LanguageType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * German
 	 * \else
-	 * 德文
+	 * 5BND
 	 * \endif
 	 */
 	public static final int AV_CFG_Language_German = 8;

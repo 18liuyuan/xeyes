@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * HDD info(alarm)
  * \else
- * 硬盘消息(内部报警)
+ * S2ELO{O"(DZ2?1(>/)
  * \endif
  */
 public class SDK_DISK_ALARM_CFG_EX implements Serializable {
@@ -20,7 +20,7 @@ public class SDK_DISK_ALARM_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * No HDD alarm
 	 * \else
-	 * 无硬盘时报警
+	 * N^S2ELJ11(>/
 	 * \endif
 	 */
 	public byte                byNoDiskEn;
@@ -38,7 +38,7 @@ public class SDK_DISK_ALARM_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Handle method
 	 * \else
-	 * 处理方式
+	 * 4&@m7=J=
 	 * \endif
 	 */
 	public SDK_MSG_HANDLE_EX    struNDHandle = new SDK_MSG_HANDLE_EX();
@@ -47,7 +47,7 @@ public class SDK_DISK_ALARM_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Low capacity alarm
 	 * \else
-	 * 硬盘低容量时报警
+	 * S2EL5MH]A?J11(>/
 	 * \endif
 	 */
     public byte                byLowCapEn;
@@ -56,7 +56,7 @@ public class SDK_DISK_ALARM_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Lower limit,0-99
 	 * \else
-	 * 容量阀值，0-99
+	 * H]A?7'V5#,0-99
 	 * \endif
 	 */
     public byte                byLowerLimit;
@@ -74,7 +74,7 @@ public class SDK_DISK_ALARM_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Handle method
 	 * \else
-	 * 处理方式
+	 * 4&@m7=J=
 	 * \endif
 	 */
     public SDK_MSG_HANDLE_EX    struLCHandle = new SDK_MSG_HANDLE_EX();
@@ -83,7 +83,7 @@ public class SDK_DISK_ALARM_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * HDD error alarm
 	 * \else
-	 * 硬盘故障报警
+	 * S2EL9JUO1(>/
 	 * \endif
 	 */
     public byte                byDiskErrEn;
@@ -110,7 +110,7 @@ public class SDK_DISK_ALARM_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Handle method
 	 * \else
-	 * 处理方式
+	 * 4&@m7=J=
 	 * \endif
 	 */
     public SDK_MSG_HANDLE_EX    struEDHandle = new SDK_MSG_HANDLE_EX();

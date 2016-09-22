@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Split mode info
  * \else
- * 一屏幕的分割模式信息
+ * R;FAD;5D7V8nD#J=PEO"
  * \endif
  */
 public class SDK_SPLIT_MODE_INFO implements Serializable {
@@ -17,26 +17,28 @@ public class SDK_SPLIT_MODE_INFO implements Serializable {
 
 	/**
 	 * \if ENGLISH_LANG
-	 * Split mode
+	 * Split mode#,value corresponding to SDK_SPLIT_MODE
 	 * \else
-	 * 分割模式
+	 * 7V8nD#J=, V56TS&@`SDK_SPLIT_MODE
 	 * \endif
 	 */
-	public int         		emSplitMode;			
+	public int         		emSplitMode;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Group SN
 	 * \else
-	 * 分组序号
+	 * 7VWiPr:E
 	 * \endif
 	 */
-	public int					nGroupID;				
+	public int					nGroupID;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Display type, look for SDK_SPLIT_DISPLAY_TYPE
 	 * \else
-	 * 显示类型；具体见SDK_SPLIT_DISPLAY_TYPE（注释各模式下显示内容由"PicInPic"决定, 各模式下显示内容按NVD旧有规则决定（即DisChn字段决定）。兼容，没有这一个项时，默认为普通显示类型,即"General"）
+	 * OTJ>@`PM#;>_Le<{SDK_SPLIT_DISPLAY_TYPE#(W"JM8wD#J=OBOTJ>DZH]SI"PicInPic">v6(, 8wD#J=OBOTJ>DZH]04NVD>ISP9fTr>v6(#(<4DisChnWV6N>v6(#)!#<fH]#,C;SPUbR;8vOnJ1#,D,HON*FUM(OTJ>@`PM,<4"General"#)
 	 * \endif
 	 */
-	public int	                dwDisplayType;          
+	public int	                dwDisplayType;
 }

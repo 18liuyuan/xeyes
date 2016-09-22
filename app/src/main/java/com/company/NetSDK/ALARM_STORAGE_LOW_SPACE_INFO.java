@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * alarm of storage low space
  * \else
- * 存储容量不足事件
+ * 4f4"H]A?2;WcJB<~
  * \endif
  */
 public class ALARM_STORAGE_LOW_SPACE_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_STORAGE_LOW_SPACE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:start 2:stop
 	 * \else
-	 * 0:开始 1:停止
+	 * 0:?*J< 1:M#V9
 	 * \endif
 	 */
 	public int                 nAction;
@@ -28,7 +28,7 @@ public class ALARM_STORAGE_LOW_SPACE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * name
 	 * \else
-	 * 事件名称
+	 * JB<~C{3F
 	 * \endif
 	 */
 	public byte                szName[] = new byte[FinalVar.SDK_EVENT_NAME_LEN];
@@ -37,7 +37,7 @@ public class ALARM_STORAGE_LOW_SPACE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * device name
 	 * \else
-	 * 存储设备名称
+	 * 4f4"Ih18C{3F
 	 * \endif
 	 */
 	public byte                szDevice[] = new byte[FinalVar.SDK_STORAGE_NAME_LEN];
@@ -46,7 +46,7 @@ public class ALARM_STORAGE_LOW_SPACE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * group name 
 	 * \else
-	 * 存储组名称
+	 * 4f4"WiC{3F
 	 * \endif
 	 */
 	public byte                szGroup[] = new byte[FinalVar.SDK_STORAGE_NAME_LEN];
@@ -55,7 +55,7 @@ public class ALARM_STORAGE_LOW_SPACE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * total space byte
 	 * \else
-	 * 总容量, byte
+	 * W\H]A?, byte
 	 * \endif
 	 */
 	public long               nTotalSpace;
@@ -64,7 +64,7 @@ public class ALARM_STORAGE_LOW_SPACE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * free space byte
 	 * \else
-	 * 剩余容量, byte
+	 * J#S`H]A?, byte
 	 * \endif
 	 */
 	public long               nFreeSpace;
@@ -73,7 +73,7 @@ public class ALARM_STORAGE_LOW_SPACE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * used percent
 	 * \else
-	 * 已经使用的百分比
+	 * RQ>-J9SC5D0Y7V1H
 	 * \endif
 	 */
 	public int                 nPercent;

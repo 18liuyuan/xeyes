@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Event file info
  * \else
- * 事件对应文件信息
+ * JB<~6TS&ND<~PEO"
  * \endif
  */
 public class SDK_EVENT_FILE_INFO implements Serializable {
@@ -19,48 +19,53 @@ public class SDK_EVENT_FILE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The file count in the current file's group
 	 * \else
-	 * 当前文件所在文件组中的文件总数
+	 * 51G0ND<~KyTZND<~WiVP5DND<~W\J}
 	 * \endif
 	 */
-	public byte               	bCount;                               
+	public byte               	bCount;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * The index of the file in the group
 	 * \else
-	 * 当前文件在文件组中的文件编号(编号1开始)
+	 * 51G0ND<~TZND<~WiVP5DND<~1`:E(1`:E1?*J<)
 	 * \endif
 	 */
-	public byte               	bIndex;                               
+	public byte               	bIndex;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * File tag, see the enum struct EM_EVENT_FILETAG
 	 * \else
-	 * 文件标签，具体说明见枚举类型EM_EVENT_FILETAG
+	 * ND<~1jG)#,>_LeK5Cw<{C6>Y@`PMEM_EVENT_FILETAG
 	 * \endif
 	 */
-	public byte               	bFileTag;                             
+	public byte               	bFileTag;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * File type,0-normal 1-compose 2-cut picture
 	 * \else
-	 * 文件类型，0-普通 1-合成 2-抠图
+	 * ND<~@`PM#,0-FUM( 1-:O3I 2-?YM<
 	 * \endif
 	 */
-	public byte               	bFileType;                            
+	public byte               	bFileType;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * File time
 	 * \else
-	 * 文件时间
+	 * ND<~J1<d
 	 * \endif
 	 */
-	public NET_TIME_EX        	stuFileTime = new NET_TIME_EX();                          
+	public NET_TIME_EX        	stuFileTime = new NET_TIME_EX();
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * The only id of one group file
 	 * \else
-	 * 同一组抓拍文件的唯一标识
+	 * M,R;WiW%EDND<~5DN(R;1jJ6
 	 * \endif
 	 */
-	public int              	nGroupId;                             
+	public int              	nGroupId;
 }

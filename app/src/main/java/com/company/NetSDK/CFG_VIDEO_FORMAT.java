@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Video Format
  * \else
- * 视频格式
+ * JSF58qJ=
  * \endif
  */
 public class CFG_VIDEO_FORMAT implements Serializable {
@@ -20,7 +20,7 @@ public class CFG_VIDEO_FORMAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Capacity 
 	 * \else
-	 * 能力
+	 * D\A&
 	 * \endif
 	 */
 	public boolean				abCompression;
@@ -38,7 +38,7 @@ public class CFG_VIDEO_FORMAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Compression Format , CFG_VIDEO_COMPRESSION
 	 * \else
-	 * 视频压缩格式, CFG_VIDEO_COMPRESSION
+	 * JSF5Q9Ku8qJ=, CFG_VIDEO_COMPRESSION
 	 * \endif
 	 */
 	public int					emCompression;			
@@ -47,7 +47,7 @@ public class CFG_VIDEO_FORMAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Video Width
 	 * \else
-	 * 视频宽度
+	 * JSF5?m6H
 	 * \endif
 	 */
 	public int					nWidth;						
@@ -56,7 +56,7 @@ public class CFG_VIDEO_FORMAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Video Height 
 	 * \else
-	 * 视频高度
+	 * JSF58_6H
 	 * \endif
 	 */
 	public int					nHeight;					
@@ -65,7 +65,7 @@ public class CFG_VIDEO_FORMAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Bit Rate Control, CFG_VIDEO_COMPRESSION
 	 * \else
-	 * 码流控制模式, CFG_VIDEO_COMPRESSION
+	 * BkAw?XVFD#J=, CFG_VIDEO_COMPRESSION
 	 * \endif
 	 */
 	public int					emBitRateControl;			
@@ -74,7 +74,7 @@ public class CFG_VIDEO_FORMAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Bit Rate(kbps) 
 	 * \else
-	 * 视频码流(kbps)
+	 * JSF5BkAw(kbps)
 	 * \endif
 	 */
 	public int					nBitRate;					
@@ -83,7 +83,7 @@ public class CFG_VIDEO_FORMAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Frame Rate 
 	 * \else
-	 * 视频帧率
+	 * JSF5V!BJ
 	 * \endif
 	 */
 	public float				nFrameRate;					
@@ -92,25 +92,25 @@ public class CFG_VIDEO_FORMAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * I Frame Interval 
 	 * \else
-	 * I帧间隔(1-100)，比如50表示每49个B帧或P帧，设置一个I帧。
+	 * IV!<d8t(1-100)#,1HHg501mJ>C?498vBV!;rPV!#,IhVCR;8vIV!!#
 	 * \endif
 	 */
 	public int					nIFrameInterval;			
 
 	/**
 	 * \if ENGLISH_LANG
-	 * Image Quality（VBR）。value：1-6 6：best image quality, CFG_VIDEO_COMPRESSION
+	 * Image Quality#(VBR#)!#value#:1-6 6#:best image quality, CFG_VIDEO_COMPRESSION
 	 * \else
-	 * 图像质量, CFG_VIDEO_COMPRESSION
+	 * M<OqVJA?, CFG_VIDEO_COMPRESSION
 	 * \endif
 	 */
 	public int					emImageQuality;				
 
 	/**
 	 * \if ENGLISH_LANG
-	 * Frame Type 0－DHAV，1－"PS"
+	 * Frame Type 0#-DHAV#,1#-"PS"
 	 * \else
-	 * 打包模式.0－DHAV，1－"PS"
+	 * 4r0|D#J=.0#-DHAV#,1#-"PS"
 	 * \endif
 	 */
 	public int					nFrameType;					
@@ -119,7 +119,7 @@ public class CFG_VIDEO_FORMAT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * CFG_H264_PROFILE_RANK
 	 * \else
-	 * H.264编码级别, CFG_H264_PROFILE_RANK
+	 * H.2641`Bk<61p, CFG_H264_PROFILE_RANK
 	 * \endif
 	 */
 	public int					emProfile;                

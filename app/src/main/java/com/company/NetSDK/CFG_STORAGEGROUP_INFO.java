@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Storage Position Group Information
  * \else
- * 存储组信息
+ * 4f4"WiPEO"
  * \endif
  */
 public class CFG_STORAGEGROUP_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_STORAGEGROUP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Storage Pool Name 
 	 * \else
-	 * 存储组名称
+	 * 4f4"WiC{3F
 	 * \endif
 	 */
 	public byte[]				szGroupName = new byte[FinalVar.MAX_STORAGEGROUPNAME_LEN];
@@ -28,7 +28,7 @@ public class CFG_STORAGEGROUP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Disks Buffer 
 	 * \else
-	 * 物理磁盘序号缓冲区
+	 * No@m4EELPr:E;:3eGx
 	 * \endif
 	 */
 	public int					nBufSize;
@@ -37,7 +37,7 @@ public class CFG_STORAGEGROUP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Buffer Length 
 	 * \else
-	 * 缓冲区byDisks的长度
+	 * ;:3eGxbyDisks5D3$6H
 	 * \endif
 	 */
 	public byte[]				byDisks;
@@ -46,7 +46,7 @@ public class CFG_STORAGEGROUP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Disk Number 
 	 * \else
-	 * 存储组中的磁盘数
+	 * 4f4"WiVP5D4EELJ}
 	 * \endif
 	 */
 	public int					nDiskNum;
@@ -55,7 +55,7 @@ public class CFG_STORAGEGROUP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Storage Group INdex (1~Maximum Number of Disks) 
 	 * \else
-	 * 存储组序号(1~最大硬盘数)
+	 * 4f4"WiPr:E(1~Wn4sS2ELJ})
 	 * \endif
 	 */
 	public int					nGoupIndex;

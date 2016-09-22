@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Input parameter about the status informations of subscribe to video phone
  * \else
- * 订阅视频电话状态信息 输入参数
+ * 6)TDJSF55g;0W4L,PEO" JdHk2NJ}
  * \endif
  */
 public class NET_IN_VTP_CALL_STATE_ATTACH implements Serializable {
@@ -20,7 +20,7 @@ public class NET_IN_VTP_CALL_STATE_ATTACH implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The call type for checking, EM_NET_VTP_CALL_TYPE
 	 * \else
-	 * 待查询的呼叫类型, EM_NET_VTP_CALL_TYPE
+	 * 4}2iQ/5D:t=P@`PM, EM_NET_VTP_CALL_TYPE
 	 * \endif
 	 */
     public int        emCallType; 
@@ -29,7 +29,7 @@ public class NET_IN_VTP_CALL_STATE_ATTACH implements Serializable {
      * \if ENGLISH_LANG
      * The device ID for forward, NULL means not formard
      * \else
-     * 转发目标设备ID,为NULL表示不转发
+     * W*7"D?1jIh18ID,N*NULL1mJ>2;W*7"
      * \endif
      */
     public String     szTargetID; 

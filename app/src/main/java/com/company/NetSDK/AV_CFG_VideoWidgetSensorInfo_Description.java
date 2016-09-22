@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Encoding object - overlay sensor information - superimposed Description
  * \else
- *  编码物件-叠加传感器信息-叠加内容描述
+ *  1`BkNo<~-5~<S4+8PFwPEO"-5~<SDZH]ChJv
  * \endif
  */
 public class AV_CFG_VideoWidgetSensorInfo_Description implements Serializable {
@@ -19,7 +19,7 @@ public class AV_CFG_VideoWidgetSensorInfo_Description implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Need to describe the sensor ID (analog alarm channel number) 
 	 * \else
-	 * 需要描述的传感器的ID(即模拟量报警通道号)
+	 * PhR*ChJv5D4+8PFw5DID(<4D#DbA?1(>/M(5@:E)
 	 * \endif
 	 */
 	public int	nSensorID;

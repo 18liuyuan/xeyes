@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * 
  * \else
- * 事件子类型
+ * JB<~WS@`PM
  * \endif
  */
 public class EM_EVENT_SUB_CODE implements Serializable  {
@@ -20,7 +20,7 @@ public class EM_EVENT_SUB_CODE implements Serializable  {
 	 * \if ENGLISH_LANG
 	 * Unknown
 	 * \else
-	 * 未知
+	 * N4V*
 	 * \endif
 	 */
 	public static final int EM_EVENT_SUB_CODE_UNKNOWN = -1;

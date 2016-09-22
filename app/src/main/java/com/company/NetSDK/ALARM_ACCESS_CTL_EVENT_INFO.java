@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Access Control Event
  * \else
- * 门禁事件
+ * CE={JB<~
  * \endif
  */
 public class ALARM_ACCESS_CTL_EVENT_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_ACCESS_CTL_EVENT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Door Channel No.
 	 * \else
-	 * 门通道号
+	 * CEM(5@:E
 	 * \endif
 	 */
 	public int                         nDoor;
@@ -28,7 +28,7 @@ public class ALARM_ACCESS_CTL_EVENT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Access Control Name
 	 * \else
-	 * 门禁名称
+	 * CE={C{3F
 	 * \endif
 	 */
 	public byte                        szDoorName[] = new byte[FinalVar.SDK_MAX_DOORNAME_LEN];
@@ -37,7 +37,7 @@ public class ALARM_ACCESS_CTL_EVENT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm Event Time
 	 * \else
-	 * 报警事件发生的时间
+	 * 1(>/JB<~7"Iz5DJ1<d
 	 * \endif
 	 */
 	public NET_TIME                    stuTime = new NET_TIME();
@@ -46,7 +46,7 @@ public class ALARM_ACCESS_CTL_EVENT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Access Control Event Type
 	 * \else
-	 * 门禁事件类型
+	 * CE={JB<~@`PM
 	 * \endif
 	 */
 	public int                         emEventType;
@@ -55,7 +55,7 @@ public class ALARM_ACCESS_CTL_EVENT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Access Control Event Type
 	 * \else
-	 * 刷卡结果，TRUE表示成功，FALSE表示失败
+	 * K"?(=a9{#,TRUE1mJ>3I9&#,FALSE1mJ>J'0\
 	 * \endif
 	 */
 	public boolean                     bStatus;
@@ -64,7 +64,7 @@ public class ALARM_ACCESS_CTL_EVENT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Card Type
 	 * \else
-	 * 卡类型
+	 * ?(@`PM
 	 * \endif
 	 */
 	public int                         emCardType;
@@ -73,7 +73,7 @@ public class ALARM_ACCESS_CTL_EVENT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Unlock Method
 	 * \else
-	 * 开门方式
+	 * ?*CE7=J=
 	 * \endif
 	 */
 	public int                         emOpenMethod;
@@ -82,7 +82,7 @@ public class ALARM_ACCESS_CTL_EVENT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Card No.
 	 * \else
-	 * 卡号
+	 * ?(:E
 	 * \endif
 	 */
 	public byte                        szCardNo[] = new byte[FinalVar.SDK_MAX_CARDNO_LEN];
@@ -91,7 +91,7 @@ public class ALARM_ACCESS_CTL_EVENT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Password
 	 * \else
-	 * 密码
+	 * C\Bk
 	 * \endif
 	 */
 	public byte                        szPwd[] = new byte[FinalVar.SDK_MAX_CARDPWD_LEN];

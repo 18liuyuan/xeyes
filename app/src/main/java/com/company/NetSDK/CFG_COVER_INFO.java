@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Cover Info
  * \else
- * 遮挡信息
+ * UZ52PEO"
  * \endif
  */
 public class CFG_COVER_INFO implements Serializable {
@@ -20,7 +20,7 @@ public class CFG_COVER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Capability 
 	 * \else
-	 * 能力
+	 * D\A&
 	 * \endif
 	 */
 	public boolean				abBlockType;
@@ -31,7 +31,7 @@ public class CFG_COVER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Covered Area Coordinate 
 	 * \else
-	 * 覆盖的区域坐标
+	 * 828G5DGxSrWx1j
 	 * \endif
 	 */
 	public CFG_RECT				stuRect = new CFG_RECT();					
@@ -40,7 +40,7 @@ public class CFG_COVER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Covered Color 
 	 * \else
-	 * 覆盖的颜色
+	 * 828G5DQUI+
 	 * \endif
 	 */
 	public CFG_RGBA				stuColor = new CFG_RGBA();					
@@ -49,7 +49,7 @@ public class CFG_COVER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Covering Type. 0-Black, 1-Mosaic
 	 * \else
-	 * 覆盖方式;0－黑块，1－马赛克
+	 * 828G7=J=;0#-:Z?i#,1#-BmH|?K
 	 * \endif
 	 */
 	public int					nBlockType;					
@@ -58,7 +58,7 @@ public class CFG_COVER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Encode Blend.1-Take Effect;0-No Effect
 	 * \else
-	 * 编码级遮挡;1－生效，0－不生效
+	 * 1`Bk<6UZ52;1#-IzP'#,0#-2;IzP'
 	 * \endif
 	 */
 	public int					nEncodeBlend;				
@@ -67,7 +67,7 @@ public class CFG_COVER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Preview Blend;1-Take Effect;0-No Effect
 	 * \else
-	 * 预览遮挡;1－生效，0－不生效
+	 * T$@@UZ52;1#-IzP'#,0#-2;IzP'
 	 * \endif
 	 */
 	public int					nPreviewBlend;				

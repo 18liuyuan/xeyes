@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Record info, corresponde to CLIENT_FindFileEx, search result
  * \else
- * 录像信息对应 FindFileEx接口的 SDK_FILE_QUERY_FILE 命令 查询结果
+ * B<OqPEO"6TS& FindFileEx=S?Z5D SDK_FILE_QUERY_FILE C|An 2iQ/=a9{
  * \endif
  */
 public class NET_OUT_MEDIA_QUERY_FILE implements Serializable {
@@ -19,72 +19,71 @@ public class NET_OUT_MEDIA_QUERY_FILE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel ID,from 0,-1 means search all
 	 * \else
-	 * 通道号从0开始，-1表示查询所有通道
+	 * M(5@:E4S0?*J<#,-11mJ>2iQ/KySPM(5@
 	 * \endif
 	 */
-	public int					nChannelID;				 
+	public int					nChannelID;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Start time
 	 * \else
-	 * 开始时间
+	 * ?*J<J1<d
 	 * \endif
 	 */
-    public NET_TIME			stuStartTime = new NET_TIME();			 	
+    public NET_TIME			stuStartTime = new NET_TIME();
+    
 	/**
 	 * \if ENGLISH_LANG
 	 * End time
 	 * \else
-	 * 结束时间
+	 * =aJxJ1<d
 	 * \endif
 	 */
-    public NET_TIME			stuEndTime = new NET_TIME();				 
+    public NET_TIME			stuEndTime = new NET_TIME();
+    
 	/**
 	 * \if ENGLISH_LANG
 	 * Size of file
 	 * \else
-	 * 文件长度
+	 * ND<~3$6H
 	 * \endif
 	 */
-    public int					nFileSize;				 
+    public int					nFileSize;
+    
 	/**
 	 * \if ENGLISH_LANG
 	 * File type 1:jpg, 2: dav
 	 * \else
-	 * 文件类型 1:jpg图片, 2: dav
+	 * ND<~@`PM 1:jpgM<F,, 2: dav
 	 * \endif
 	 */
-    public byte				byFileType;				 
+    public byte				byFileType;
+    
 	/**
 	 * \if ENGLISH_LANG
 	 * Drive no.
 	 * \else
-	 * 磁盘号
+	 * 4EEL:E
 	 * \endif
 	 */
-    public byte                byDriveNo;               
-	/**
-	 * \if ENGLISH_LANG
-	 * Reserved
-	 * \else
-	 * 保留字段
-	 * \endif
-	 */
-    public byte                byReserved1[] = new byte[2];          
+    public byte                byDriveNo;
+    
 	/**
 	 * \if ENGLISH_LANG
 	 * Cluster
 	 * \else
-	 * 簇号
+	 * 4X:E
 	 * \endif
 	 */
-    public int      			nCluster;                
+    public int      			nCluster;
+    
 	/**
 	 * \if ENGLISH_LANG
 	 * Path of file
 	 * \else
-	 * 文件路径
+	 * ND<~B7>6
 	 * \endif
 	 */
-    public char				szFilePath[] = new char[FinalVar.MAX_PATH];	 
+    public char				szFilePath[] = new char[FinalVar.MAX_PATH];
 }

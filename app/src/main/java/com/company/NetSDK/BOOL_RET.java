@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * boolean class
  * \else
- * 返回boolean值得类，用Boolean会报错，原因未知 
+ * 75;XbooleanV55C@`#,SCBoolean;a1(4m#,T-RrN4V* 
  * \endif
  */
 public class BOOL_RET implements Serializable {

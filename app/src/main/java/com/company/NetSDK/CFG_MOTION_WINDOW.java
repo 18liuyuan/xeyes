@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Motion detection supported video window config
  * \else
- * 动检支持的视频窗口配置
+ * 6/<lV'3V5DJSF540?ZEdVC
  * \endif
  */
 public class CFG_MOTION_WINDOW implements Serializable {
@@ -18,18 +18,18 @@ public class CFG_MOTION_WINDOW implements Serializable {
 
 	/**
 	 * \if ENGLISH_LANG
-	 * Area threshold，value [0, 100]
+	 * Area threshold#,value [0, 100]
 	 * \else
-	 * 面积阀值，取值[0, 100]
+	 * Cf;}7'V5#,H!V5[0, 100]
 	 * \endif
 	 */
 	public int                  nThreshold;           
 
 	/**
 	 * \if ENGLISH_LANG
-	 * Sensitivity，value[0, 100]
+	 * Sensitivity#,value[0, 100]
 	 * \else
-	 * 灵敏度，取值[0, 100]
+	 * AiCt6H#,H!V5[0, 100]
 	 * \endif
 	 */
 	public int                  nSensitive;           
@@ -38,7 +38,7 @@ public class CFG_MOTION_WINDOW implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Motion detection area, coordinate value [0, 8192)
 	 * \else
-	 * 动检窗口区域, 坐标位置取值[0, 8192)
+	 * 6/<l40?ZGxSr, Wx1jN;VCH!V5[0, 8192)
 	 * \endif
 	 */
 	public CFG_RECT             stuWindow = new CFG_RECT();            

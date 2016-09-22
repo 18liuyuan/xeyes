@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Zone Status Info Output Parameter
  * \else
- * 防区状态信息的输出参数
+ * 7@GxW4L,PEO"5DJd3v2NJ}
  * \endif
  */
 public class NET_OUT_DEFENCE_STATE_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class NET_OUT_DEFENCE_STATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Zone valid number
 	 * \else
-	 * 防区有效个数
+	 * 7@GxSPP'8vJ}
 	 * \endif
 	 */
 	public int             nDefenceNum;
@@ -28,7 +28,7 @@ public class NET_OUT_DEFENCE_STATE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Zone status info, EM_DEFENCE_STATE_TYPE
 	 * \else
-	 * 防区状态信息, EM_DEFENCE_STATE_TYPE
+	 * 7@GxW4L,PEO", EM_DEFENCE_STATE_TYPE
 	 * \endif
 	 */
 	public int anDefenceState[] = new int[FinalVar.SDK_MAX_ALARMIN];  

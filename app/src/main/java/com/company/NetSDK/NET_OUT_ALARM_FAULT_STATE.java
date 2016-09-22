@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Alarm Failure Status, Output Parameter
  * \else
- * 报警故障状态, 输出参数
+ * 1(>/9JUOW4L,, Jd3v2NJ}
  * \endif
  */
 public class NET_OUT_ALARM_FAULT_STATE implements Serializable {
@@ -19,7 +19,7 @@ public class NET_OUT_ALARM_FAULT_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0: Unknown, 1: Normal, 2:Failure
 	 * \else
-	 * 0: 未知, 1: 正常, 2:故障
+	 * 0: N4V*, 1: U}3#, 2:9JUO
 	 * \endif
 	 */
 	public int             nConnectFaultState;
@@ -28,7 +28,7 @@ public class NET_OUT_ALARM_FAULT_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Bell valid number
 	 * \else
-	 * 警号有效个数
+	 * >/:ESPP'8vJ}
 	 * \endif
 	 */
 	public int             nBell;
@@ -37,7 +37,7 @@ public class NET_OUT_ALARM_FAULT_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Bell failure status info 0: Unknown, 1: Normal, 2:Failure
 	 * \else
-	 * 警号故障状态信息 0: 未知, 1: 正常, 2:故障
+	 * >/:E9JUOW4L,PEO" 0: N4V*, 1: U}3#, 2:9JUO
 	 * \endif
 	 */
 	public int             anBellState[] = new int[FinalVar.SDK_MAX_BELL_NUM];
@@ -46,7 +46,7 @@ public class NET_OUT_ALARM_FAULT_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Keyboard failure valid number
 	 * \else
-	 * 键盘故障有效个数
+	 * <|EL9JUOSPP'8vJ}
 	 * \endif
 	 */
 	public int             nFaultKeyboard;
@@ -55,7 +55,7 @@ public class NET_OUT_ALARM_FAULT_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Keyboard failure info 0: Unknown, 1: Normal, 2:Failure
 	 * \else
-	 * 键盘故障信息 0: 未知, 1: 正常, 2:故障
+	 * <|EL9JUOPEO" 0: N4V*, 1: U}3#, 2:9JUO
 	 * \endif
 	 */
 	public int             anFaultKeyboard[] = new int[FinalVar.SDK_MAX_KEYBOARD_NUM];
@@ -64,7 +64,7 @@ public class NET_OUT_ALARM_FAULT_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Keyboard valid vandal-proof number
 	 * \else
-	 * 键盘有效防拆个数
+	 * <|ELSPP'7@2p8vJ}
 	 * \endif
 	 */
 	public int             nTamperKeyboard;
@@ -73,7 +73,7 @@ public class NET_OUT_ALARM_FAULT_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Keyboard vandal-proof info 0: Unknown, 1: Normal, 2:Failure
 	 * \else
-	 * 键盘防拆信息 0: 未知, 1: 正常, 2:故障
+	 * <|EL7@2pPEO" 0: N4V*, 1: U}3#, 2:9JUO
 	 * \endif
 	 */
 	public int             anTamperKeyboard[] = new int[FinalVar.SDK_MAX_KEYBOARD_NUM];
@@ -82,7 +82,7 @@ public class NET_OUT_ALARM_FAULT_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Sensor valid short circuit number
 	 * \else
-	 * 传感器有效短路个数
+	 * 4+8PFwSPP'6LB78vJ}
 	 * \endif
 	 */
 	public int             nShortOutSensor;
@@ -91,7 +91,7 @@ public class NET_OUT_ALARM_FAULT_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Sensor short circuit info 0: Unknown, 1: Normal, 2:Failure
 	 * \else
-	 * 传感器短路信息 0: 未知, 1: 正常, 2:故障
+	 * 4+8PFw6LB7PEO" 0: N4V*, 1: U}3#, 2:9JUO
 	 * \endif
 	 */
 	public int             anShortOutSensor[] = new int[FinalVar.SDK_MAX_ALARMIN];
@@ -100,7 +100,7 @@ public class NET_OUT_ALARM_FAULT_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Sensor valid vandal-proof number
 	 * \else
-	 * 传感器有效防拆个数
+	 * 4+8PFwSPP'7@2p8vJ}
 	 * \endif
 	 */
 	public int             nTamperSensor;
@@ -109,7 +109,7 @@ public class NET_OUT_ALARM_FAULT_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Sensor vandal-proof info 0: Unknown, 1: Normal, 2:Failure
 	 * \else
-	 * 传感器防拆信息 0: 未知, 1: 正常, 2:故障
+	 * 4+8PFw7@2pPEO" 0: N4V*, 1: U}3#, 2:9JUO
 	 * \endif
 	 */
 	public int             anTamperSensor[] = new int[FinalVar.SDK_MAX_ALARMIN];

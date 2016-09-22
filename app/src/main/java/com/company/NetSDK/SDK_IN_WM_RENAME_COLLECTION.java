@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * RenameMonitorWallCollection's interface input param(plan rename)
  * \else
- * RenameMonitorWallCollection接口输入参数(预案重命名)
+ * RenameMonitorWallCollection=S?ZJdHk2NJ}(T$08VXC|C{)
  * \endif
  */
 public class SDK_IN_WM_RENAME_COLLECTION implements Serializable {
@@ -19,24 +19,26 @@ public class SDK_IN_WM_RENAME_COLLECTION implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Monitor wall ID
 	 * \else
-	 * 电视墙序号
+	 * 5gJSG=Pr:E
 	 * \endif
 	 */
-	public int					nMonitorWallID;				
+	public int					nMonitorWallID;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Old name
 	 * \else
-	 * 原名称
+	 * T-C{3F
 	 * \endif
 	 */
-	public String				pszOldName;					
+	public String				pszOldName;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * New name
 	 * \else
-	 * 新名称
+	 * PBC{3F
 	 * \endif
 	 */
-	public String				pszNewName;					
+	public String				pszNewName;
 }

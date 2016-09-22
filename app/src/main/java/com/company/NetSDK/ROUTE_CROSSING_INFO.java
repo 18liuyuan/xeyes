@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Route crossing information, INetSDK.ControlDevice(SDK_CTRL_ROUTE_CROSSING)
  * \else
- * 路线点位信息, INetSDK.ControlDevice(SDK_CTRL_ROUTE_CROSSING)
+ * B7O_5cN;PEO", INetSDK.ControlDevice(SDK_CTRL_ROUTE_CROSSING)
  * \endif
  */
 public class ROUTE_CROSSING_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class ROUTE_CROSSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * valid number is 1~DH_MAX_CROSSING_NUM
 	 * \else
-	 * 路口有效数量范围1~DH_MAX_CROSSING_NUM
+	 * B7?ZSPP'J}A?76N'1~DH_MAX_CROSSING_NUM
 	 * \endif
 	 */
 	public byte 			    byCrossingNum;
@@ -28,7 +28,7 @@ public class ROUTE_CROSSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Crossing range(m)
 	 * \else
-	 * 定位精度范围单位m
+	 * 6(N;>+6H76N'5%N;m
 	 * \endif
 	 */
 	public int                	wCrossingRange; 
@@ -37,7 +37,7 @@ public class ROUTE_CROSSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Crossing information struct array
 	 * \else
-	 * 路口信息最大支持128个路口
+	 * B7?ZPEO"Wn4sV'3V1288vB7?Z
 	 * \endif
 	 */
 	public CROSSING_INFO 	    stCrossingInfo[] 		= new CROSSING_INFO[FinalVar.SDK_MAX_CROSSING_NUM];

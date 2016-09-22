@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Event title content structure
  * \else
- * 事件标题内容结构体
+ * JB<~1jLbDZH]=a99Le
  * \endif
  */
 public class CFG_EVENT_TITLE implements Serializable {
@@ -20,7 +20,7 @@ public class CFG_EVENT_TITLE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * title content 
 	 * \else
-	 * 标题
+	 * 1jLb
 	 * \endif
 	 */
 	public char					szText[] = new char[FinalVar.MAX_CHANNELNAME_LEN];
@@ -29,16 +29,16 @@ public class CFG_EVENT_TITLE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Title Upper left coordinate, use 0-8191  relative coordinate systemTie
 	 * \else
-	 * 标题左上角坐标, 采用0-8191相对坐标系
+	 * 1jLbWsIO=GWx1j, 2ISC0-8191O`6TWx1jO5
 	 * \endif
 	 */
 	public CFG_POLYGON			stuPoint = new CFG_POLYGON();			
 
 	/**
 	 * \if ENGLISH_LANG
-	 * Title width and height,use 0-8191  relative coordinate system，one or two item(s) is(are)0 means text self-adaptive to width-height
+	 * Title width and height,use 0-8191  relative coordinate system#,one or two item(s) is(are)0 means text self-adaptive to width-height
 	 * \else
-	 * 标题的宽度和高度,采用0-8191相对坐标系，某项或者两项为0表示按照字体自适应宽高
+	 * 1jLb5D?m6H:M8_6H,2ISC0-8191O`6TWx1jO5#,D3On;rU_A=OnN*01mJ>04UUWVLeWTJJS&?m8_
 	 * \endif
 	 */
 	public CFG_SIZE     		stuSize = new CFG_SIZE();			
@@ -47,7 +47,7 @@ public class CFG_EVENT_TITLE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Foreground color
 	 * \else
-	 * 前景颜色
+	 * G0>0QUI+
 	 * \endif
 	 */
 	public CFG_RGBA				stuFrontColor = new CFG_RGBA();		
@@ -56,7 +56,7 @@ public class CFG_EVENT_TITLE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Background color
 	 * \else
-	 * 背景颜色
+	 * 13>0QUI+
 	 * \endif
 	 */
 	public CFG_RGBA				stuBackColor = new CFG_RGBA();		

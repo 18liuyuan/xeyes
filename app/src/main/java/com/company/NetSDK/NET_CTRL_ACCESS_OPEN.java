@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * INetSDK.ControlDevice's param: SDK_CTRL_ACCESS_OPEN
  * \else
- * INetSDK.ControlDevice接口的 SDK_CTRL_ACCESS_OPEN 命令参数
+ * INetSDK.ControlDevice=S?Z5D SDK_CTRL_ACCESS_OPEN C|An2NJ}
  * \endif
  */
 public class NET_CTRL_ACCESS_OPEN implements Serializable {
@@ -19,7 +19,7 @@ public class NET_CTRL_ACCESS_OPEN implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel ID (start from 0) 
 	 * \else
-	 * 通道号(0开始)
+	 * M(5@:E(0?*J<)
 	 * \endif
 	 */
 	public int					nChannelID; 
@@ -28,7 +28,7 @@ public class NET_CTRL_ACCESS_OPEN implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Target ID, NULL equals to not transmit
 	 * \else
-	 * 转发目标设备ID,为NULL表示不转发
+	 * W*7"D?1jIh18ID,N*NULL1mJ>2;W*7"
 	 * \endif
 	 */
     public String               szTargetID;

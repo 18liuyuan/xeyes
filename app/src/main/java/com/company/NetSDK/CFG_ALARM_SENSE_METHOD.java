@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Sensor Alarm Way
  * \else
- * 传感器报警方式
+ * 4+8PFw1(>/7=J=
  * \endif
  */
 public class CFG_ALARM_SENSE_METHOD implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_ALARM_SENSE_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The Number of Supported Sensors Way
 	 * \else
-	 * 支持的传感器方式数
+	 * V'3V5D4+8PFw7=J=J}
 	 * \endif
 	 */
 	public int                 nSupportSenseMethodNum;
@@ -28,7 +28,7 @@ public class CFG_ALARM_SENSE_METHOD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Supported Sensor Way
 	 * \else
-	 * 支持的传感器方式
+	 * V'3V5D4+8PFw7=J=
 	 * \endif
 	 */
 	public int                 emSupportSenseMethod[] = new int[FinalVar.MAX_ALARM_SENSE_METHOD_NUM];

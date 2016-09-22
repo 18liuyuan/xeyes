@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Preview video parameter
  * \else
- * 预览图像参数
+ * T$@@M<Oq2NJ}
  * \endif
  */
 public class SDKDEV_PREVIEW_CFG implements Serializable {
@@ -19,7 +19,7 @@ public class SDKDEV_PREVIEW_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel audio/video property
 	 * \else
-	 * 通道音视频属性
+	 * M(5@RtJSF5JtPT
 	 * \endif
 	 */
 	public SDK_VIDEOENC_OPT     stPreView = new SDK_VIDEOENC_OPT();
@@ -28,7 +28,7 @@ public class SDKDEV_PREVIEW_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Video color property
 	 * \else
-	 * 画面颜色属性
+	 * ;-CfQUI+JtPT
 	 * \endif
 	 */
 	public SDK_COLOR_CFG        stColorCfg[] = new SDK_COLOR_CFG[FinalVar.SDK_N_COL_TSECT];

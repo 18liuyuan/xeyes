@@ -13,7 +13,7 @@ public class SDK_REMOTE_DEVICE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * enable
 	 * \else
-	 * 使能
+	 * J9D\
 	 * \endif
 	 */
 	public boolean                bEnable;
@@ -31,7 +31,7 @@ public class SDK_REMOTE_DEVICE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * username
 	 * \else
-	 * 用户名
+	 * SC;'C{
 	 * \endif
 	 */
 	public byte                szUser[] = new byte[FinalVar.SDK_USER_NAME_LENGTH];
@@ -40,7 +40,7 @@ public class SDK_REMOTE_DEVICE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * password
 	 * \else
-	 * 密码
+	 * C\Bk
 	 * \endif
 	 */
 	public byte                szPwd[] = new byte[FinalVar.SDK_USER_PSW_LENGTH];
@@ -49,7 +49,7 @@ public class SDK_REMOTE_DEVICE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * port
 	 * \else
-	 * 端口
+	 * 6K?Z
 	 * \endif
 	 */
 	public int                 nPort;
@@ -58,7 +58,7 @@ public class SDK_REMOTE_DEVICE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * definition. 0-standard definition, 1-high definition
 	 * \else
-	 * 清晰度, 0-标清, 1-高清
+	 * GeNz6H, 0-1jGe, 1-8_Ge
 	 * \endif
 	 */
 	public int                 nDefinition;
@@ -67,7 +67,7 @@ public class SDK_REMOTE_DEVICE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * protocol type, SDK_DEVICE_PROTOCOL
 	 * \else
-	 * 协议类型, SDK_DEVICE_PROTOCOL
+	 * P-Ri@`PM, SDK_DEVICE_PROTOCOL
 	 * \endif
 	 */
 	public int                 emProtocol;
@@ -76,7 +76,7 @@ public class SDK_REMOTE_DEVICE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * device name
 	 * \else
-	 * 设备名称
+	 * Ih18C{3F
 	 * \endif
 	 */
 	public byte                szDevName[] = new byte[FinalVar.SDK_DEVICE_NAME_LEN];
@@ -85,7 +85,7 @@ public class SDK_REMOTE_DEVICE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * count channel of video input
 	 * \else
-	 * 视频输入通道数
+	 * JSF5JdHkM(5@J}
 	 * \endif
 	 */
 	public int                 nVideoInputChannels;
@@ -94,7 +94,7 @@ public class SDK_REMOTE_DEVICE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * count channel of audio input
 	 * \else
-	 * 音频输入通道数
+	 * RtF5JdHkM(5@J}
 	 * \endif
 	 */
 	public int                 nAudioInputChannels;
@@ -103,7 +103,7 @@ public class SDK_REMOTE_DEVICE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * device type, such as IPC, DVR, NVR
 	 * \else
-	 * 设备类型, 如IPC, DVR, NVR等
+	 * Ih18@`PM, HgIPC, DVR, NVR5H
 	 * \endif
 	 */
 	public byte                szDevClass[] = new byte[FinalVar.SDK_DEV_TYPE_LEN];
@@ -112,7 +112,7 @@ public class SDK_REMOTE_DEVICE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * device type, such as IPC-HF3300
 	 * \else
-	 * 设备具体型号, 如IPC-HF3300
+	 * Ih18>_LePM:E, HgIPC-HF3300
 	 * \endif
 	 */
 	public byte                szDevType[] = new byte[FinalVar.SDK_DEV_TYPE_LEN];
@@ -121,7 +121,7 @@ public class SDK_REMOTE_DEVICE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Http port
 	 * \else
-	 * Http端口
+	 * Http6K?Z
 	 * \endif
 	 */
 	public int                 nHttpPort;
@@ -130,7 +130,7 @@ public class SDK_REMOTE_DEVICE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * max count of video input
 	 * \else
-	 * 视频输入通道最大数
+	 * JSF5JdHkM(5@Wn4sJ}
 	 * \endif
 	 */
 	public int                 nMaxVideoInputCount;
@@ -139,7 +139,7 @@ public class SDK_REMOTE_DEVICE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * return count
 	 * \else
-	 * 返回实际通道个数
+	 * 75;XJ5<JM(5@8vJ}
 	 * \endif
 	 */
 	public int                 nRetVideoInputCount;
@@ -148,7 +148,7 @@ public class SDK_REMOTE_DEVICE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * max count of audion input
 	 * \else
-	 * 视频输入通道信息
+	 * JSF5JdHkM(5@PEO"
 	 * \endif
 	 */
     public SDK_VIDEO_INPUTS    pstuVideoInputs[]; 
@@ -156,7 +156,7 @@ public class SDK_REMOTE_DEVICE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * machine address
 	 * \else
-	 * 设备部署地
+	 * Ih182?Jp5X
 	 * \endif
 	 */
 	public byte                szMachineAddress[] = new byte[FinalVar.SDK_MAX_CARD_INFO_LEN];
@@ -165,7 +165,7 @@ public class SDK_REMOTE_DEVICE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * serial no.
 	 * \else
-	 * 设备序列号
+	 * Ih18PrAP:E
 	 * \endif
 	 */
 	public byte                szSerialNo[] = new byte[FinalVar.SDK_SERIALNO_LEN];
@@ -174,8 +174,26 @@ public class SDK_REMOTE_DEVICE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Rtsp Port
 	 * \else
-	 * Rtsp端口
+	 * Rtsp6K?Z
 	 * \endif
 	 */
 	public int                 nRtspPort;
+	
+	public SDK_REMOTE_DEVICE()
+	{
+		
+	}
+	
+	public SDK_REMOTE_DEVICE(int nMaxVideoInputCount)
+	{
+		if(nMaxVideoInputCount > 0)
+		{
+			this.nMaxVideoInputCount = nMaxVideoInputCount;
+			pstuVideoInputs = new SDK_VIDEO_INPUTS[this.nMaxVideoInputCount];
+			for(int i = 0; i < this.nMaxVideoInputCount; i++)
+			{
+				pstuVideoInputs[i] = new SDK_VIDEO_INPUTS();
+			}
+		}
+	}
 }

@@ -1,12 +1,12 @@
 package com.company.CodecSDK;
 
 public class Setformat {
-	public int 		outbits;              /* ±àÂëµÄÂëÂÊ(Ö§³Ö8ÖÖÂëÂÊÊäÈë)          */
+	public int 		outbits;              /* ç¼–ç çš„ç ç‡(æ”¯æŒ8ç§ç ç‡è¾“å…¥)          */
 									   /* 0 -- 4.75kbits/s  1 -- 5.15kbits.s   */
 									   /* 2 -- 5.9kbits/s   3 -- 6.7kbits.s    */
 									   /* 4 -- 7.4kbits/s   5 -- 7.95kbits.s   */
 									   /* 6 -- 10.2kbits/s  7 -- 12.2kbits.s   */
-	public int 		dtx;                  /* ÊÇ·ñ¿ªÆô²»Á¬ĞøÊäÈë£¬¾²ÒôÑ¹Ëõ         */
-										   /* 1 ±íÊ¾¿ªÆôÊ¹ÄÜ±àÂë£¬0 ±íÊ¾²»¿ªÆô     */
-									    /* ½¨ÒéÑ¡ 1                             */
+	public int 		dtx;                  /* æ˜¯å¦å¼€å¯ä¸è¿ç»­è¾“å…¥ï¼Œé™éŸ³å‹ç¼©         */
+										   /* 1 è¡¨ç¤ºå¼€å¯ä½¿èƒ½ç¼–ç ï¼Œ0 è¡¨ç¤ºä¸å¼€å¯     */
+									    /* å»ºè®®é€‰ 1                             */
 }

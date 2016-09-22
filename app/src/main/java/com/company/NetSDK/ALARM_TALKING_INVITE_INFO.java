@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Alarm Event Type SDK_ALARM_TALKING_INVITE(Device request talk event)Corresponding Data Description Info
  * \else
- * 报警事件类型SDK_ALARM_TALKING_INVITE(设备请求对方发起对讲事件)对应的数据描述信息
+ * 1(>/JB<~@`PMSDK_ALARM_TALKING_INVITE(Ih18GkGs6T7=7"Fp6T=2JB<~)6TS&5DJ}>]ChJvPEO"
  * \endif
  */
 public class ALARM_TALKING_INVITE_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_TALKING_INVITE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device Expected Talk Start Party
 	 * \else
-	 * 设备希望的对讲发起方
+	 * Ih18O#M{5D6T=27"Fp7=
 	 * \endif
 	 */
 	public int                  emCaller;
@@ -28,7 +28,7 @@ public class ALARM_TALKING_INVITE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Event Trigger Time
 	 * \else
-	 * 事件触发时间
+	 * JB<~4%7"J1<d
 	 * \endif
 	 */
 	public NET_TIME             stuTime = new NET_TIME();

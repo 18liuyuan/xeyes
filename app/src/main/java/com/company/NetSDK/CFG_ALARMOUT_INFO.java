@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * The state of the alarm output channel configuration 
  * \else
- * 报警输出通道的状态的配置
+ * 1(>/Jd3vM(5@5DW4L,5DEdVC
  * \endif
  */
 public class CFG_ALARMOUT_INFO implements Serializable {
@@ -20,7 +20,7 @@ public class CFG_ALARMOUT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm channel number (from zero)
 	 * \else
-	 * 报警通道号(0开始)
+	 * 1(>/M(5@:E(0?*J<)
 	 * \endif
 	 */
 	public int					nChannelID;
@@ -29,7 +29,7 @@ public class CFG_ALARMOUT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm channel name
 	 * \else
-	 * 报警通道名称
+	 * 1(>/M(5@C{3F
 	 * \endif
 	 */
 	public byte				szChnName[] = new byte[FinalVar.MAX_CHANNELNAME_LEN];
@@ -38,7 +38,7 @@ public class CFG_ALARMOUT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Output types, user-defined
 	 * \else
-	 * 输出类型, 用户自定义
+	 * Jd3v@`PM, SC;'WT6(Re
 	 * \endif
 	 */
 	public byte				szOutputType[] = new byte[FinalVar.MAX_NAME_LEN];
@@ -47,7 +47,7 @@ public class CFG_ALARMOUT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Output mode, 0 - automatic alarm 1 - Forced Alarm 2 - Turn off the alarm
 	 * \else
-	 * 输出模式, 0-自动报警, 1-强制报警, 2-关闭报警
+	 * Jd3vD#J=, 0-WT6/1(>/, 1-G?VF1(>/, 2-9X1U1(>/
 	 * \endif
 	 */
 	public int					nOutputMode;
@@ -56,16 +56,16 @@ public class CFG_ALARMOUT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Pulse mode output time, unit is second(0-255s)
 	 * \else
-	 * 脉冲模式输出时间, 单位为秒(0-255秒)
+	 * Bv3eD#J=Jd3vJ1<d, 5%N;N*Ck(0-255Ck)
 	 * \endif
 	 */
 	public int                 nPulseDelay;
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * Root address, 0 means local channel, 1 means connection expansion channel on first serial, 2?￠3...and so on, -1 means invalid
+	 * Root address, 0 means local channel, 1 means connection expansion channel on first serial, 2?!i3...and so on, -1 means invalid
 	 * \else
-	 * 根地址, 0表示本地通道, 1表示连接在第一个串口上的扩展通道, 2、3...以此类推, -1表示无效
+	 * 8y5XV7, 01mJ>1>5XM(5@, 11mJ>A,=STZ5ZR;8v4.?ZIO5D@)U9M(5@, 2!"3...RT4K@`MF, -11mJ>N^P'
 	 * \endif
 	 */
 	public int                 nSlot;
@@ -74,7 +74,7 @@ public class CFG_ALARMOUT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * First level cascading address, means connected at no. nSlot serial no. nLevel1 sensor or meter, start from 0, -1 means invalid
 	 * \else
-	 * 第一级级联地址, 表示连接在第nSlot串口上的第nLevel1个探测器或仪表, 从0开始, -1表示无效
+	 * 5ZR;<6<6A*5XV7, 1mJ>A,=STZ5ZnSlot4.?ZIO5D5ZnLevel18vL=2bFw;rRG1m, 4S0?*J<, -11mJ>N^P'
 	 * \endif
 	 */
 	public int                 nLevel1;
@@ -83,7 +83,7 @@ public class CFG_ALARMOUT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * means nLevel2 field exists or not
 	 * \else
-	 * 表示nLevel2字段是否存在
+	 * 1mJ>nLevel2WV6NJG7q4fTZ
 	 * \endif
 	 */
 	public boolean                abLevel2;
@@ -92,7 +92,7 @@ public class CFG_ALARMOUT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Second level cascading address, means connected at no. nLevel1 meter sensor no., start from 0
 	 * \else
-	 * 第二级级联地址, 表示连接在第nLevel1个的仪表上的探测器序号, 从0开始
+	 * 5Z6~<6<6A*5XV7, 1mJ>A,=STZ5ZnLevel18v5DRG1mIO5DL=2bFwPr:E, 4S0?*J<
 	 * \endif
 	 */
     public int                 nLevel2;

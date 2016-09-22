@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * alarm of good weight
  * \else
- * 车载货重报警
+ * 35TX;uVX1(>/
  * \endif
  */
 public class ALARM_GOODS_WEIGHT_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_GOODS_WEIGHT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0-start, 1-stop
 	 * \else
-	 * 0-开始, 1-停止
+	 * 0-?*J<, 1-M#V9
 	 * \endif
 	 */
 	public int          nAction;
@@ -28,7 +28,7 @@ public class ALARM_GOODS_WEIGHT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0-greater than dwMaxGoodsWeight, 1-less than dwMinGoodsWeight, 2-the change greater than dwAlarmWeight
 	 * \else
-	 * 0-大于最大货重, 1-小于最小货重, 2-货重变化超过报警阈值
+	 * 0-4sSZWn4s;uVX, 1-P!SZWnP!;uVX, 2-;uVX1d;/3,9}1(>/cPV5
 	 * \endif
 	 */
 	public int          nAlarmType;
@@ -37,7 +37,7 @@ public class ALARM_GOODS_WEIGHT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * good weight(kg)
 	 * \else
-	 * 当前货重(kg)
+	 * 51G0;uVX(kg)
 	 * \endif
 	 */
 	public int        dwGoodsWeight;
@@ -46,7 +46,7 @@ public class ALARM_GOODS_WEIGHT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * self weight(kg)
 	 * \else
-	 * 自重(kg)
+	 * WTVX(kg)
 	 * \endif
 	 */
 	public int        dwSelfWeight;
@@ -55,7 +55,7 @@ public class ALARM_GOODS_WEIGHT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * total weight(kg)
 	 * \else
-	 * 总重(kg)
+	 * W\VX(kg)
 	 * \endif
 	 */
 	public int        dwTotalWeight;
@@ -64,7 +64,7 @@ public class ALARM_GOODS_WEIGHT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * standard weight(kg)
 	 * \else
-	 * 核定货重(kg)
+	 * :K6(;uVX(kg)
 	 * \endif
 	 */
 	public int        dwStandardWeight;
@@ -73,7 +73,7 @@ public class ALARM_GOODS_WEIGHT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * weight scale
 	 * \else
-	 * 货重比例
+	 * ;uVX1H@}
 	 * \endif
 	 */
 	public int        dwWeightScale;
@@ -82,7 +82,7 @@ public class ALARM_GOODS_WEIGHT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * the max(kg)
 	 * \else
-	 * 最大货重(kg)
+	 * Wn4s;uVX(kg)
 	 * \endif
 	 */
 	public int        dwMaxGoodsWeight;
@@ -91,7 +91,7 @@ public class ALARM_GOODS_WEIGHT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * the min(kg)
 	 * \else
-	 * 最小货重(kg)
+	 * WnP!;uVX(kg)
 	 * \endif
 	 */
 	public int        dwMinGoodsWeight;
@@ -100,7 +100,7 @@ public class ALARM_GOODS_WEIGHT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * alarm of threshold(kg)
 	 * \else
-	 * 报警阈值(kg)
+	 * 1(>/cPV5(kg)
 	 * \endif
 	 */
 	public int        dwAlarmWeight;
@@ -109,7 +109,7 @@ public class ALARM_GOODS_WEIGHT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * whight change when gather(kg)
 	 * \else
-	 * 采集时间间隔内货重变化(kg)
+	 * 2I</J1<d<d8tDZ;uVX1d;/(kg)
 	 * \endif
 	 */
 	public int          nWeightChange;
@@ -118,7 +118,7 @@ public class ALARM_GOODS_WEIGHT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * gather time(s)
 	 * \else
-	 * 静止采集时间(s)
+	 * >2V92I</J1<d(s)
 	 * \endif
 	 */
 	public int          nCheckTime;

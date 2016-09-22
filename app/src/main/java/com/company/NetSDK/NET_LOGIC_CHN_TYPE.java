@@ -13,7 +13,7 @@ public class NET_LOGIC_CHN_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Unknow
 	 * \else
-	 * 未知
+	 * N4V*
 	 * \endif
 	 */
 	public static final int LOGIC_CHN_UNKNOWN = 0; 
@@ -22,7 +22,7 @@ public class NET_LOGIC_CHN_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Local channel 
 	 * \else
-	 * 本地通道
+	 * 1>5XM(5@
 	 * \endif
 	 */
 	public static final int LOGIC_CHN_LOCAL = 1; 
@@ -31,7 +31,7 @@ public class NET_LOGIC_CHN_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Remote access channel
 	 * \else
-	 * 远程通道
+	 * T63LM(5@
 	 * \endif
 	 */
 	public static final int LOGIC_CHN_REMOTE = 2; 
@@ -40,16 +40,16 @@ public class NET_LOGIC_CHN_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Synthesis of channel, for the judicial equipment contains picture in picture channel and mixing channel 
 	 * \else
-	 * 合成通道, 对于庭审设备包含画中画通道和混音通道
+	 * :O3IM(5@, 6TSZM%IsIh180|:,;-VP;-M(5@:M;lRtM(5@
 	 * \endif
 	 */
 	public static final int LOGIC_CHN_COMPOSE = 3; 
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * matrix channel，including analog matrix and digital matrix
+	 * matrix channel#,including analog matrix and digital matrix
 	 * \else
-	 * 模拟矩阵通道
+	 * D#Db>XUsM(5@
 	 * \endif
 	 */
 	public static final int LOGIC_CHN_MATRIX = 4; 
@@ -58,7 +58,7 @@ public class NET_LOGIC_CHN_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * cascading channel
 	 * \else
-	 * 级联通道
+	 * <6A*M(5@
 	 * \endif
 	 */
 	public static final int LOGIC_CHN_CASCADE = 5; 

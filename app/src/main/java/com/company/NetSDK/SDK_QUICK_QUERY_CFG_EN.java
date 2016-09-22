@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Quick query structure configuration capability
  * \else
- * 快速查询配置能力结构体
+ * ?lKY2iQ/EdVCD\A&=a99Le
  * \endif
  */
 public class SDK_QUICK_QUERY_CFG_EN implements Serializable {
@@ -26,7 +26,7 @@ public class SDK_QUICK_QUERY_CFG_EN implements Serializable {
 	 * Recommended setting 60S)
 	 * </pre>
 	 * \else
-	 * 1是设备支持配置命令快速返回，请设置配置时间足够长以保证窄带下配置的正常读取。建议设置60S
+	 * 1JGIh18V'3VEdVCC|An?lKY75;X#,GkIhVCEdVCJ1<dWc9;3$RT1#V$U-4xOBEdVC5DU}3#6AH!!#=(RiIhVC60S
 	 * \endif
 	 */
 	public char		IsQuickQueryEnable;		

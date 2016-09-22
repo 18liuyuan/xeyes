@@ -2,7 +2,6 @@ package com.company.NetSDK;
 
 import java.io.Serializable;
 
-
 public class SDK_AUDIO_DETECT_CFG implements Serializable {
 	/**
 	 *

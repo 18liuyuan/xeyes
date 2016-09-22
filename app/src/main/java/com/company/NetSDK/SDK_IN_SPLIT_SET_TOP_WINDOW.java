@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * SetSplitWindowLevels's interface input param(setting window order)
  * \else
- * SetSplitWindowLevels接口输入参数(设置窗口次序)
+ * SetSplitWindowLevels=S?ZJdHk2NJ}(IhVC40?Z4NPr)
  * \endif
  */
 public class SDK_IN_SPLIT_SET_TOP_WINDOW implements Serializable {
@@ -19,16 +19,17 @@ public class SDK_IN_SPLIT_SET_TOP_WINDOW implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel ID
 	 * \else
-	 * 通道号(屏号)
+	 * M(5@:E(FA:E)
 	 * \endif
 	 */
-	public int					nChannel;					
+	public int					nChannel;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Wndown ID
 	 * \else
-	 * 窗口序号
+	 * 40?ZPr:E
 	 * \endif
 	 */
-	public int					nWindowID;					
+	public int					nWindowID;
 }

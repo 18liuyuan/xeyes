@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Tour Information
  * \else
- * 解码器轮巡信息
+ * =bBkFwBVQ2PEO"
  * \endif
  */
 public class DEC_TOUR_COMBIN implements Serializable {
@@ -19,7 +19,7 @@ public class DEC_TOUR_COMBIN implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Tour Interval(s)
 	 * \else
-	 * 轮巡间隔(秒)
+	 * BVQ2<d8t(Ck)
 	 * \endif
 	 */
 	public int				nTourTime;
@@ -28,7 +28,7 @@ public class DEC_TOUR_COMBIN implements Serializable {
 	 * \if ENGLISH_LANG
 	 * the number of combination
 	 * \else
-	 * 组合个数
+	 * Wi:O8vJ}
 	 * \endif
 	 */
 	public int				nCombinNum;
@@ -37,7 +37,7 @@ public class DEC_TOUR_COMBIN implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Combination Table
 	 * \else
-	 * 组合表
+	 * Wi:O1m
 	 * \endif
 	 */
 	public byte			bCombinID[]		= new byte[FinalVar.DEC_COMBIN_NUM];
@@ -46,7 +46,7 @@ public class DEC_TOUR_COMBIN implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Combination option state,0:close;1:open
 	 * \else
-	 * 组合项的使能状态，0：关；1：开
+	 * Wi:OOn5DJ9D\W4L,#,0#:9X#;1#:?*
 	 * \endif
 	 */
 	public byte			bCombinState[] 	= new byte[FinalVar.DEC_COMBIN_NUM];

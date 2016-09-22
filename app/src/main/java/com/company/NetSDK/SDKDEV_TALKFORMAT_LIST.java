@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * The bidirectional talk type device supported
  * \else
- * 设备支持的语音对讲类型
+ * Ih18V'3V5DSoRt6T=2@`PM
  * \endif
  */
 public class SDKDEV_TALKFORMAT_LIST implements Serializable {
@@ -19,18 +19,19 @@ public class SDKDEV_TALKFORMAT_LIST implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Amount 
 	 * \else
-	 * 个数
+	 * 8vJ}
 	 * \endif
 	 */
-	public int						nSupportNum;							
+	public int						nSupportNum;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Encode type 
 	 * \else
-	 * 编码类型
+	 * 1`Bk@`PM
 	 * \endif
 	 */
-	public SDKDEV_TALKDECODE_INFO type[] = new SDKDEV_TALKDECODE_INFO[64];	
+	public SDKDEV_TALKDECODE_INFO type[] = new SDKDEV_TALKDECODE_INFO[64];
 	
 	public SDKDEV_TALKFORMAT_LIST() {
 		for(int i=0 ; i < 64 ; i++) {

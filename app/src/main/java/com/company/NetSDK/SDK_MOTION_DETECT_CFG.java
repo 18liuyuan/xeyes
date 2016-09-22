@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Dynamic detection alarm
  * \else
- * 动态检测报警
+ * 6/L,<l2b1(>/
  * \endif
  */
 public class SDK_MOTION_DETECT_CFG implements Serializable {
@@ -19,7 +19,7 @@ public class SDK_MOTION_DETECT_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Dynamic detection alarm Enable
 	 * \else
-	 * 动态检测报警使能
+	 * 6/L,<l2b1(>/J9D\
 	 * \endif
 	 */
 	public byte                byMotionEn;
@@ -28,7 +28,7 @@ public class SDK_MOTION_DETECT_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Sensitivity 1 ~~ 6,1 is the minimum,6 is the maximum
 	 * \else
-	 * 灵敏度1~6，1是最低，6是最高
+	 * AiCt6H1~6#,1JGWn5M#,6JGWn8_
 	 * \endif
 	 */
 	public int                wSenseLevel;
@@ -37,7 +37,7 @@ public class SDK_MOTION_DETECT_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The number of rows of the dynamic detection area
 	 * \else
-	 * 动态检测区域的行数
+	 * 6/L,<l2bGxSr5DPPJ}
 	 * \endif
 	 */
 	public int                wMotionRow;
@@ -46,7 +46,7 @@ public class SDK_MOTION_DETECT_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The number of columns of the dynamic detection area
 	 * \else
-	 * 动态检测区域的列数
+	 * 6/L,<l2bGxSr5DAPJ}
 	 * \endif
 	 */
 	public int                wMotionCol;
@@ -55,7 +55,7 @@ public class SDK_MOTION_DETECT_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Detection region, up to 32 * 32 block region
 	 * \else
-	 * 检测区域，最多32*32块区域
+	 * <l2bGxSr#,Wn6`32*32?iGxSr
 	 * \endif
 	 */
     public byte                byDetected[][] = new byte[FinalVar.SDK_MOTION_ROW][FinalVar.SDK_MOTION_COL];
@@ -73,7 +73,7 @@ public class SDK_MOTION_DETECT_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Handle Mode
 	 * \else
-	 * 处理方式
+	 * 4&@m7=J=
 	 * \endif
 	 */
     public SDK_MSG_HANDLE       struHandle = new SDK_MSG_HANDLE();

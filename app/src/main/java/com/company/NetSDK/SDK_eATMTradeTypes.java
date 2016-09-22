@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Trade type
  * \else
- * 交易类型
+ * =;RW@`PM
  * \endif
  */
 public class SDK_eATMTradeTypes implements Serializable {
@@ -19,96 +19,107 @@ public class SDK_eATMTradeTypes implements Serializable {
 	 * \if ENGLISH_LANG
 	 * INSERTCARD
 	 * \else
-	 * 插卡 
+	 * 2e?( 
 	 * \endif
 	 */
-	public static final int TRADE_TYPE_INC = 0;         
+	public static final int TRADE_TYPE_INC = 0;
+	
  	/**
 	 * \if ENGLISH_LANG
 	 * WITHDRAWCARD
 	 * \else
-	 * 退卡
+	 * MK?(
 	 * \endif
 	 */
-	public static final int TRADE_TYPE_WDC = 1;             
+	public static final int TRADE_TYPE_WDC = 1;
+	
  	/**
 	 * \if ENGLISH_LANG
 	 * CHECKTIME
 	 * \else
-	 * 校时
+	 * P#J1
 	 * \endif
 	 */
-	public static final int TRADE_TYPE_CKT = 2;             
+	public static final int TRADE_TYPE_CKT = 2;
+	
  	/**
 	 * \if ENGLISH_LANG
 	 * QUERY
 	 * \else
-	 * 查询
+	 * 2iQ/
 	 * \endif
 	 */
-	public static final int TRADE_TYPE_INQ = 3;             
+	public static final int TRADE_TYPE_INQ = 3;
+	
  	/**
 	 * \if ENGLISH_LANG
 	 * Withdrawal
 	 * \else
-	 * 取款
+	 * H!?n
 	 * \endif
 	 */
-	public static final int TRADE_TYPE_CWD = 4;             
+	public static final int TRADE_TYPE_CWD = 4;
+	
  	/**
 	 * \if ENGLISH_LANG
 	 * Change password
 	 * \else
-	 * 改密
+	 * 8DC\
 	 * \endif
 	 */
-	public static final int TRADE_TYPE_PIN = 5;             
+	public static final int TRADE_TYPE_PIN = 5;
+	
  	/**
 	 * \if ENGLISH_LANG
 	 * Treansfer
 	 * \else
-	 * 转帐
+	 * W*UJ
 	 * \endif
 	 */
-	public static final int TRADE_TYPE_TFR = 6;             
+	public static final int TRADE_TYPE_TFR = 6;
+	
  	/**
 	 * \if ENGLISH_LANG
 	 * Saving
 	 * \else
-	 * 存款
+	 * 4f?n
 	 * \endif
 	 */
-	public static final int TRADE_TYPE_DEP = 7;             
+	public static final int TRADE_TYPE_DEP = 7;
+	
  	/**
 	 * \if ENGLISH_LANG
 	 * No-card search
 	 * \else
-	 * 无卡查询
+	 * N^?(2iQ/
 	 * \endif
 	 */
-	public static final int TRADE_TYPE_NCINQ = 8;           
+	public static final int TRADE_TYPE_NCINQ = 8;
+	
  	/**
 	 * \if ENGLISH_LANG
 	 * No-card saving
 	 * \else
-	 * 无卡存款
+	 * N^?(4f?n
 	 * \endif
 	 */
-	public static final int TRADE_TYPE_NCDEP = 9;          
+	public static final int TRADE_TYPE_NCDEP = 9;
+	
  	/**
 	 * \if ENGLISH_LANG
 	 * Other
 	 * \else
-	 * 其它
+	 * FdK|
 	 * \endif
 	 */
-	public static final int TRADE_TYPE_OTHERS = 10;         
+	public static final int TRADE_TYPE_OTHERS = 10;
+	
  	/**
 	 * \if ENGLISH_LANG
 	 * Total
 	 * \else
-	 * 总
+	 * W\
 	 * \endif
 	 */
-	public static final int TRADE_TYPE_ALL = 11;            
+	public static final int TRADE_TYPE_ALL = 11;
 }

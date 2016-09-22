@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Record state of everyday in one month
  * \else
- * 某月的各天是否存在录像的状态信息
+ * D3TB5D8wLlJG7q4fTZB<Oq5DW4L,PEO"
  * \endif
  */
 public class NET_RECORD_STATUS implements Serializable {
@@ -19,7 +19,7 @@ public class NET_RECORD_STATUS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Has record this day 0-no, 1-yes
 	 * \else
-	 * 某月内的各天是否存在录像的状态掩码，0表示没有，1表示有。
+	 * D3TBDZ5D8wLlJG7q4fTZB<Oq5DW4L,QZBk#,01mJ>C;SP#,11mJ>SP!#
 	 * \endif
 	 */
 	public byte 	 		   flag[] = new byte[32];

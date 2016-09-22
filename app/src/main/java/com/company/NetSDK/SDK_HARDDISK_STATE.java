@@ -8,7 +8,7 @@ import com.company.NetSDK.NET_DEV_DISKSTATE;
  * \if ENGLISH_LANG
  * Device HDD informaiton 
  * \else
- * 设备硬盘信息
+ * Ih18S2ELPEO"
  * \endif
  */
 public class SDK_HARDDISK_STATE implements Serializable {
@@ -21,15 +21,16 @@ public class SDK_HARDDISK_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Amount
 	 * \else
-	 * 个数
+	 * 8vJ}
 	 * \endif
 	 */
-	public int					dwDiskNum;				
+	public int					dwDiskNum;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * HDD or subarea information 
 	 * \else
-	 * 硬盘或分区信息
+	 * S2EL;r7VGxPEO"
 	 * \endif
 	 */
 	public NET_DEV_DISKSTATE	stDisks[] = new NET_DEV_DISKSTATE[FinalVar.SDK_MAX_DISKNUM];

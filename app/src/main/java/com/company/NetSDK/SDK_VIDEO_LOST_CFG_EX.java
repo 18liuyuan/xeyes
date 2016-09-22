@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Video loss alarm
  * \else
- * 视频丢失报警
+ * JSF56*J'1(>/
  * \endif
  */
 public class SDK_VIDEO_LOST_CFG_EX implements Serializable {
@@ -20,7 +20,7 @@ public class SDK_VIDEO_LOST_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Video loss alarm enabling
 	 * \else
-	 * 视频丢失报警使能
+	 * JSF56*J'1(>/J9D\
 	 * \endif
 	 */
 	public byte                byAlarmEn;
@@ -38,7 +38,7 @@ public class SDK_VIDEO_LOST_CFG_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Handle method
 	 * \else
-	 * 处理方式
+	 * 4&@m7=J=
 	 * \endif
 	 */
 	public SDK_MSG_HANDLE_EX    struHandle = new SDK_MSG_HANDLE_EX();

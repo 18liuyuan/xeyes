@@ -13,7 +13,7 @@ public class SDKDEV_DST_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * DST position way. 0: position in date  , 1:position in week
 	 * \else
-	 * 夏令时定位方式 0:按日期定位方式, 1:按周定位方式
+	 * ODAnJ16(N;7=J= 0:04HUFZ6(N;7=J=, 1:04V\6(N;7=J=
 	 * \endif
 	 */
 	public int                 nDSTType;
@@ -22,7 +22,7 @@ public class SDKDEV_DST_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable DTS
 	 * \else
-	 * 开始夏令时
+	 * ?*J<ODAnJ1
 	 * \endif
 	 */
 	public SDK_DST_POINT        stDSTStart = new SDK_DST_POINT();
@@ -31,7 +31,7 @@ public class SDKDEV_DST_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * End DTS
 	 * \else
-	 * 结束夏令时
+	 * =aJxODAnJ1
 	 * \endif
 	 */
 	public SDK_DST_POINT        stDSTEnd = new SDK_DST_POINT();

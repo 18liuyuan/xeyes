@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * No HDD Alarm Linkage Configuration 
  * \else
- * 无硬盘报警联动配置
+ * N^S2EL1(>/A*6/EdVC
  * \endif
  */
 public class CFG_STORAGENOEXIST_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_STORAGENOEXIST_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable 
 	 * \else
-	 * 使能开关
+	 * J9D\?*9X
 	 * \endif
 	 */
 	public boolean				 bEnable;
@@ -28,7 +28,7 @@ public class CFG_STORAGENOEXIST_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Event Handler 
 	 * \else
-	 * 报警联动
+	 * 1(>/A*6/
 	 * \endif
 	 */
 	public CFG_ALARM_MSG_HANDLE stuEventHandler = new CFG_ALARM_MSG_HANDLE();							    

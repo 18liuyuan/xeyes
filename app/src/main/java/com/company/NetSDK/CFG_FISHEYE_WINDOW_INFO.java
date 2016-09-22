@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * fish eye window location info
  * \else
- * 鱼眼窗口位置信息
+ * ScQ[40?ZN;VCPEO"
  * \endif
  */
 public class CFG_FISHEYE_WINDOW_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_FISHEYE_WINDOW_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * window ID
 	 * \else
-	 * 窗口ID
+	 * 40?ZID
 	 * \endif
 	 */
 	public int               dwWindowID;
@@ -28,7 +28,7 @@ public class CFG_FISHEYE_WINDOW_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * EPtz, focus x axis
 	 * \else
-	 * EPtz（电子云台）的焦点横坐标
+	 * EPtz#(5gWSTFL(#)5D=95c:aWx1j
 	 * \endif
 	 */
 	public int               nFocusX;
@@ -37,7 +37,7 @@ public class CFG_FISHEYE_WINDOW_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * EPtz, focus y axis   
 	 * \else
-	 * EPtz (电子云台）的焦点纵坐标
+	 * EPtz (5gWSTFL(#)5D=95cW]Wx1j
 	 * \endif
 	 */
 	public int               nFocusY;
@@ -46,7 +46,7 @@ public class CFG_FISHEYE_WINDOW_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * EPtz h-angle
 	 * \else
-	 * EPtz的水平角度
+	 * EPtz5DK.F==G6H
 	 * \endif
 	 */
 	public int               nHorizontalAngle;
@@ -55,7 +55,7 @@ public class CFG_FISHEYE_WINDOW_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * EPtz v-angle
 	 * \else
-	 * EPtz的垂直角度
+	 * EPtz5D49V1=G6H
 	 * \endif
 	 */
 	public int               nVerticalAngle;

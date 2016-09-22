@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Vehicle detector redundancy info
  * \else
- * 车检器冗余信息
+ * 35<lFwH_S`PEO"
  * \endif
  */
 public class SDK_SIG_CARWAY_INFO_EX implements Serializable {	
@@ -19,7 +19,7 @@ public class SDK_SIG_CARWAY_INFO_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The vehicle detector generates the snap signal redundancy info
 	 * \else
-	 * 由车检器产生抓拍信号冗余信息
+	 * SI35<lFw2zIzW%EDPE:EH_S`PEO"
 	 * \endif
 	 */
 	public byte                byRedundance[] = new byte[8];                

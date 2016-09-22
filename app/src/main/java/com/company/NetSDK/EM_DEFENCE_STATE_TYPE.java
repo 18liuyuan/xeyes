@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Zone Status Type
  * \else
- * 防区状态类型
+ * 7@GxW4L,@`PM
  * \endif
  */
 public class EM_DEFENCE_STATE_TYPE implements Serializable {
@@ -19,7 +19,7 @@ public class EM_DEFENCE_STATE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Unknown
 	 * \else
-	 * 未知
+	 * N4V*
 	 * \endif
 	 */
     public final static int EM_DEFENCE_STATE_UNKNOWN  = 0 ;
@@ -28,7 +28,7 @@ public class EM_DEFENCE_STATE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Bypass
 	 * \else
-	 * 旁路
+	 * ETB7
 	 * \endif
 	 */
     public final static int EM_DEFENCE_STATE_BYPASS   = 1 ; 
@@ -37,7 +37,7 @@ public class EM_DEFENCE_STATE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Open, for alarm under disarming
 	 * \else
-	 * 打开, 指撤防情况下发生报警
+	 * 4r?*, V8377@Gi?vOB7"Iz1(>/
 	 * \endif
 	 */
     public final static int EM_DEFENCE_STATE_OPEN     = 2 ; 
@@ -46,7 +46,7 @@ public class EM_DEFENCE_STATE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Close
 	 * \else
-	 * 关闭
+	 * 9X1U
 	 * \endif
 	 */
     public final static int EM_DEFENCE_STATE_CLOSE    = 3 ; 
@@ -55,7 +55,7 @@ public class EM_DEFENCE_STATE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm, for alarm under arming
 	 * \else
-	 * 报警, 指布防情况下发生报警
+	 * 1(>/, V82<7@Gi?vOB7"Iz1(>/
 	 * \endif
 	 */
     public final static int EM_DEFENCE_STATE_ALARMING = 4 ; 

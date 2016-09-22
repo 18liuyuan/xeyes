@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Video Encoding ROI(Region of Intrest)Configuration
  * \else
- * 视频编码ROI(Region of Intrest)配置
+ * JSF51`BkROI(Region of Intrest)EdVC
  * \endif
  */
 public class CFG_VIDEOENCODEROI_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_VIDEOENCODEROI_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Region Number
 	 * \else
-	 * 优化区域个数
+	 * SE;/GxSr8vJ}
 	 * \endif
 	 */
 	public int				nRegionNum;
@@ -28,7 +28,7 @@ public class CFG_VIDEOENCODEROI_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Optimization Regions Coordinate System[0~8191]
 	 * \else
-	 * 优化区域 支持多个优化区域，使用相对坐标体系，取值均为0~8191
+	 * SE;/GxSr V'3V6`8vSE;/GxSr#,J9SCO`6TWx1jLeO5#,H!V5>yN*0~8191
 	 * \endif
 	 */
 	public CFG_RECT[]		stRegions = new CFG_RECT[FinalVar.MAX_QUALITY_REGION_NUM];
@@ -37,7 +37,7 @@ public class CFG_VIDEOENCODEROI_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Image Quality Value1~6 1:the lowes 6:the highest 
 	 * \else
-	 * 图像质量 取值1~6，值越大，图像质量越好
+	 * M<OqVJA? H!V51~6#,V5T=4s#,M<OqVJA?T=:C
 	 * \endif
 	 */
 	public byte				byQuality;
@@ -46,7 +46,7 @@ public class CFG_VIDEOENCODEROI_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Optimize Video Encoding Capacity of Main Stream1 Enable 
 	 * \else
-	 * 优化主码流视频编码
+	 * SE;/VwBkAwJSF51`Bk
 	 * \endif
 	 */
 	public boolean			bMain;
@@ -55,7 +55,7 @@ public class CFG_VIDEOENCODEROI_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Optimize Video Encoding Capacity of Auxiliary Stream1 Enable 
 	 * \else
-	 * 优化辅码流1视频编码
+	 * SE;/8(BkAw1JSF51`Bk
 	 * \endif
 	 */
 	public boolean			bExtra1;
@@ -64,7 +64,7 @@ public class CFG_VIDEOENCODEROI_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Optimize Video Encoding Capacity of Auxiliary Stream2 Enable 
 	 * \else
-	 * 优化辅码流2视频编码
+	 * SE;/8(BkAw2JSF51`Bk
 	 * \endif
 	 */
 	public boolean			bExtra2;
@@ -73,7 +73,7 @@ public class CFG_VIDEOENCODEROI_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Optimize Video Encoding Capacity of Auxiliary Stream3 Enable 
 	 * \else
-	 * 优化辅码流3视频编码
+	 * SE;/8(BkAw3JSF51`Bk
 	 * \endif
 	 */
 	public boolean			bExtra3;
@@ -82,7 +82,7 @@ public class CFG_VIDEOENCODEROI_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Optimize Video Encoding Capacity of Snapshot Enable 
 	 * \else
-	 * 优化抓图编码
+	 * SE;/W%M<1`Bk
 	 * \endif
 	 */
 	public boolean			bSnapshot;

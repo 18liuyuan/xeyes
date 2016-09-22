@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Optical Fiber Code Ability Alarm
  * \else
- * 光纤编码能力报警
+ * 9bOK1`BkD\A&1(>/
  * \endif
  */
 public class ALARM_FDDI_ALARM implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_FDDI_ALARM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Optical Fiber Amounts 
 	 * \else
-	 * 光纤数目
+	 * 9bOKJ}D?
 	 * \endif
 	 */
 	public int         nFDDINum;
@@ -28,7 +28,7 @@ public class ALARM_FDDI_ALARM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Optical Fiber Alarm
 	 * \else
-	 * 光纤报警
+	 * 9bOK1(>/
 	 * \endif
 	 */
 	public byte        bAlarm[] = new byte[256];

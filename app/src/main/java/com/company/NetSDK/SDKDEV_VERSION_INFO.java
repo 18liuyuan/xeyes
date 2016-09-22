@@ -6,10 +6,9 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Device software version information. Corresponding to QueryDevState
  * \else
- * 设备软件版本信息，对应CLIENT_QueryDevState接口
+ * Ih18Hm<~0f1>PEO"#,6TS& QueryDevState=S?Z
  * \endif
  */
-
 public class SDKDEV_VERSION_INFO implements Serializable {
 	/**
 	 *
@@ -20,111 +19,124 @@ public class SDKDEV_VERSION_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * SN
 	 * \else
-	 * 序列号
+	 * PrAP:E
 	 * \endif
 	 */
-	public byte				szDevSerialNo[] = new byte[FinalVar.SDK_DEV_SERIALNO_LEN];	
+	public byte				szDevSerialNo[] = new byte[FinalVar.SDK_DEV_SERIALNO_LEN];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Device type. See enumeration NET_DEVICE_TYPE. Please refer to SDKDEV_SYSTEM_ATTR_CFG 
 	 * \else
-	 * 设备类型，见枚举 NET_DEVICE_TYPE,参见 SDKDEV_SYSTEM_ATTR_CFG 
+	 * Ih18@`PM#,<{C6>Y NET_DEVICE_TYPE,2N<{ SDKDEV_SYSTEM_ATTR_CFG 
 	 * \endif
 	 */
-	public byte				byDevType;				
+	public byte				byDevType;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Device detailed type. String format. It may bu null.
 	 * \else
-	 * 设备详细型号，字符串格式，可能为空
+	 * Ih18OjO8PM:E#,WV7{4.8qJ=#,?ID\N*?U
 	 * \endif
 	 */
-	public byte				szDevType[] = new byte[FinalVar.SDK_DEV_TYPE_LEN];	
+	public byte				szDevType[] = new byte[FinalVar.SDK_DEV_TYPE_LEN];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Protocol version No. 
 	 * \else
-	 * 协议版本号
+	 * P-Ri0f1>:E
 	 * \endif
 	 */
-	public int				nProtocalVer;			
+	public int				nProtocalVer;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Software version 
 	 * \else
-	 * 软件版本 
+	 * Hm<~0f1> 
 	 * \endif
 	 */
 	public byte				szSoftWareVersion[] = new byte[FinalVar.SDK_MAX_URL_LEN];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Software version build date 
 	 * \else
-	 * 软件版本编译日期
+	 * Hm<~0f1>1`RkHUFZ
 	 * \endif
 	 */
 	public int				dwSoftwareBuildDate;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Dsp software version 
 	 * \else
-	 * 从片版本信息，字符串格式，可能为空
+	 * 4SF,0f1>PEO"#,WV7{4.8qJ=#,?ID\N*?U
 	 * \endif
 	 */
-	public byte				szPeripheralSoftwareVersion[] = new byte[FinalVar.SDK_MAX_URL_LEN];	
+	public byte				szPeripheralSoftwareVersion[] = new byte[FinalVar.SDK_MAX_URL_LEN];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Dsp software version build date 
 	 * \else
-	 * 从片版本编译日期
+	 * 4SF,0f1>1`RkHUFZ
 	 * \endif
 	 */
 	public int				dwPeripheralSoftwareBuildDate;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Not in use now 
 	 * \else
-	 * 地理信息定位芯片版本信息，字符串格式，可能为空
+	 * 5X@mPEO"6(N;P>F,0f1>PEO"#,WV7{4.8qJ=#,?ID\N*?U
 	 * \endif
 	 */
-	public byte				szGeographySoftwareVersion[] = new byte[FinalVar.SDK_MAX_URL_LEN];		
+	public byte				szGeographySoftwareVersion[] = new byte[FinalVar.SDK_MAX_URL_LEN];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 地理信息定位芯片版本编译日期
+	 * 5X@mPEO"6(N;P>F,0f1>1`RkHUFZ
 	 * \endif
 	 */
 	public int				dwGeographySoftwareBuildDate;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Hadrware version 
 	 * \else
-	 * 硬件版本
+	 * S2<~0f1>
 	 * \endif
 	 */
 	public byte				szHardwareVersion[] = new byte[FinalVar.SDK_MAX_URL_LEN];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Not in use now 
 	 * \else
-	 * 现在没有使用 
+	 * OVTZC;SPJ9SC 
 	 * \endif
 	 */
 	public int				dwHardwareDate;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Web version 
 	 * \else
-	 * web版本 
+	 * web0f1> 
 	 * \endif
 	 */
 	public byte				szWebVersion[] = new byte[FinalVar.SDK_MAX_URL_LEN];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Web version build date 
 	 * \else
-	 * web版本编译日期 
+	 * web0f1>1`RkHUFZ 
 	 * \endif
 	 */
 	public int				dwWebBuildDate;

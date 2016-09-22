@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * INetSDK.ControlDevice interface SDK_CTRL_START_PLAYAUDIO Order Parameter
  * \else
- * INetSDK.ControlDevice接口的 SDK_CTRL_START_PLAYAUDIO 命令参数
+ * INetSDK.ControlDevice=S?Z5D SDK_CTRL_START_PLAYAUDIO C|An2NJ}
  * \endif
  */
 public class NET_CTRL_START_PLAYAUDIO implements Serializable {

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Channel video input color config 
  * \else
- * 通道视频输入颜色配置
+ * M(5@JSF5JdHkQUI+EdVC
  * \endif
  */
 public class AV_CFG_ChannelVideoColor implements Serializable {
@@ -19,7 +19,7 @@ public class AV_CFG_ChannelVideoColor implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel color config amount
 	 * \else
-	 * 通道颜色配置数
+	 * M(5@QUI+EdVCJ}
 	 * \endif
 	 */
 	public int			nColorNum;
@@ -28,7 +28,7 @@ public class AV_CFG_ChannelVideoColor implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel color config. Each input video has several corresponding color setups.
 	 * \else
-	 * 通道颜色配置, 每个通道对应多个颜色配置
+	 * M(5@QUI+EdVC, C?8vM(5@6TS&6`8vQUI+EdVC
 	 * \endif
 	 */
 	public AV_CFG_VideoColor	stuColor[] = new AV_CFG_VideoColor[FinalVar.AV_CFG_Max_VideoColor];

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Interface type,responding to the interface CLIENT_SetSubconnCallBack
  * \else
- * 接口类型，对应CLIENT_SetSubconnCallBack接口
+ * =S?Z@`PM#,6TS&CLIENT_SetSubconnCallBack=S?Z
  * \endif
  */
 public class EM_INTERFACE_TYPE implements Serializable {
@@ -19,7 +19,7 @@ public class EM_INTERFACE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Unknown interface
 	 * \else
-	 * 未知接口
+	 * N4V*=S?Z
 	 * \endif
 	 */
 	public static int 		SDK_INTERFACE_OTHER = 0;
@@ -28,7 +28,7 @@ public class EM_INTERFACE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Realtime monitoring interface
 	 * \else
-	 * 实时监视接口
+	 * J5J1<`JS=S?Z
 	 * \endif
 	 */
 	public static int 		SDK_INTERFACE_REALPLAY = 1;
@@ -37,7 +37,7 @@ public class EM_INTERFACE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Realtime multiple-window preview
 	 * \else
-	 * 多画面预览接口
+	 * 6`;-CfT$@@=S?Z
 	 * \endif
 	 */
 	public static int 		SDK_INTERFACE_PREVIEW = 2;
@@ -46,7 +46,7 @@ public class EM_INTERFACE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Playback interface
 	 * \else
-	 * 端回放接口
+	 * 6K;X7E=S?Z
 	 * \endif
 	 */
 	public static int 		SDK_INTERFACE_PLAYBACK = 3;
@@ -55,7 +55,7 @@ public class EM_INTERFACE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Download interface
 	 * \else
-	 * 下载接口
+	 * OBTX=S?Z
 	 * \endif
 	 */
 	public static int 		SDK_INTERFACE_DOWNLOAD = 4;
@@ -64,7 +64,7 @@ public class EM_INTERFACE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Download picture interface
 	 * \else
-	 * 下载智能图片接口
+	 * OBTXVGD\M<F,=S?Z
 	 * \endif
 	 */
 	public static int 		SDK_INTERFACE_REALLOADPIC = 5;

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Display source
  * \else
- * 显示源
+ * OTJ>T4
  * \endif
  */
 public class SDK_SPLIT_SOURCE implements Serializable {
@@ -19,164 +19,182 @@ public class SDK_SPLIT_SOURCE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable
 	 * \else
-	 * 使能
+	 * J9D\
 	 * \endif
 	 */
-	public boolean			    bEnable;						    
+	public boolean			    bEnable;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * IP, null means there is no setup.
 	 * \else
-	 * IP, 空表示没有设置
+	 * IP, ?U1mJ>C;SPIhVC
 	 * \endif
 	 */
-	public char			    szIp[] = new char[FinalVar.SDK_MAX_IPADDR_LEN];		    
+	public byte			    szIp[] = new byte[FinalVar.SDK_MAX_IPADDR_LEN];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * User name
 	 * \else
-	 * 用户名
+	 * SC;'C{
 	 * \endif
 	 */
-	public char			    szUser[] = new char[FinalVar.SDK_USER_NAME_LENGTH];	    
+	public byte			    szUser[] = new byte[FinalVar.SDK_USER_NAME_LENGTH];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Password
 	 * \else
-	 * 密码
+	 * C\Bk
 	 * \endif
 	 */
-	public char			    szPwd[] = new char[FinalVar.SDK_USER_PSW_LENGTH];	    	
+	public byte			    szPwd[] = new byte[FinalVar.SDK_USER_PSW_LENGTH];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Port
 	 * \else
-	 * 端口
+	 * 6K?Z
 	 * \endif
 	 */
-	public int			    	nPort;							    
+	public int			    	nPort;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Channel No.
 	 * \else
-	 * 通道号
+	 * M(5@:E
 	 * \endif
 	 */
-	public int				    nChannelID;						    
+	public int				    nChannelID;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Video bit stream. -1-auto, 0-main stream, 1-extra stream 1, 2-extra stream 2, 3-extra stream 3
 	 * \else
-	 * 视频码流, -1-自动, 0-主码流, 1-辅码流1, 2-辅码流2, 3-辅码流3, 4-snap, 5-预览
+	 * JSF5BkAw, -1-WT6/, 0-VwBkAw, 1-8(BkAw1, 2-8(BkAw2, 3-8(BkAw3, 4-snap, 5-T$@@
 	 * \endif
 	 */
-	public int				    nStreamType;					    
+	public int				    nStreamType;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Definition, 0-standard definition, 1-high definition
 	 * \else
-	 * 清晰度, 0-标清, 1-高清
+	 * GeNz6H, 0-1jGe, 1-8_Ge
 	 * \endif
 	 */
-	public int				    nDefinition;					    
+	public int				    nDefinition;
+	
 	/**
 	 * \if ENGLISH_LANG
-	 * Protocol type
+	 * Protocol type#, value corresponding to SDK_DEVICE_PROTOCOL
 	 * \else
-	 * 协议类型
+	 * P-Ri@`PM. V56TS&@`SDK_DEVICE_PROTOCOL
 	 * \endif
 	 */
-	public int					emProtocol;							
+	public int					emProtocol;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Device name
 	 * \else
-	 * 设备名称
+	 * Ih18C{3F
 	 * \endif
 	 */
-	public char			    szDevName[] = new char[FinalVar.SDK_DEVICE_NAME_LEN];		
+	public byte			    szDevName[] = new byte[FinalVar.SDK_DEVICE_NAME_LEN];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Video input channel amount
 	 * \else
-	 * 视频输入通道数
+	 * JSF5JdHkM(5@J}
 	 * \endif
 	 */
-	public int					nVideoChannel;						
+	public int					nVideoChannel;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Audio input channel amount
 	 * \else
-	 * 音频输入通道数
+	 * RtF5JdHkM(5@J}
 	 * \endif
 	 */
-	public int					nAudioChannel;						
-	
+	public int					nAudioChannel;
 
 	/**
 	 * \if ENGLISH_LANG
 	 * Decoder or not.
 	 * \else
-	 * 是否是解码器
+	 * JG7qJG=bBkFw
 	 * \endif
 	 */
-	public boolean				bDecoder;							
+	public boolean				bDecoder;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * 0:TCP;1:UDP;2:multicast
 	 * \else
-	 * -1: auto, 0：TCP；1：UDP；2：组播
+	 * -1: auto, 0#:TCP#;1#:UDP#;2#:Wi2%
 	 * \endif
 	 */
-	public byte				byConnType;							
+	public byte				byConnType;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * 0:connect directly; 1:transfer 
 	 * \else
-	 * 0：直连；1：转发
+	 * 0#:V1A,#;1#:W*7"
 	 * \endif
 	 */
-	public byte				byWorkMode;							
+	public byte				byWorkMode;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Isten port, valid with transfer; when byConnType is multicast, it is multiport
 	 * \else
-	 * 指示侦听服务的端口，转发时有效; byConnType为组播时，则作为多播端口
+	 * V8J>UlL}7~Nq5D6K?Z#,W*7"J1SPP'; byConnTypeN*Wi2%J1#,TrWwN*6`2%6K?Z
 	 * \endif
 	 */
-	public int					wListenPort;						
+	public int				wListenPort;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * SzDevIp extension, front DVR Ip address (enter domain name)
 	 * \else
-	 * szDevIp扩展，前端DVR的IP地址(可以输入域名)
+	 * szDevIp@)U9#,G06KDVR5DIP5XV7(?IRTJdHkSrC{)
 	 * \endif
 	 */
-	public char				szDevIpEx[] = new char[FinalVar.SDK_MAX_IPADDR_OR_DOMAIN_LEN];
+	public byte				szDevIpEx[] = new byte[FinalVar.SDK_MAX_IPADDR_OR_DOMAIN_LEN];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Snapshot mode (valid when nStreamType==4) 0: request for single frame, 1: sechdule sending request
 	 * \else
-	 * 抓图模式(nStreamType==4时有效) 0：表示请求一帧,1：表示定时发送请求
+	 * W%M<D#J=(nStreamType==4J1SPP') 0#:1mJ>GkGsR;V!,1#:1mJ>6(J17"KMGkGs
 	 * \endif
 	 */
-	public byte				bySnapMode;                         
+	public byte				bySnapMode;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Target device manufacturer. Refer to EM_IPC_TYPE for detailed information.
 	 * \else
-	 * 目标设备的生产厂商, 具体参考EM_IPC_TYPE类
+	 * D?1jIh185DIz2z3'IL, >_Le2N?<EM_IPC_TYPE@`
 	 * \endif
 	 */
-	public byte				byManuFactory;						
+	public byte				byManuFactory;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Target device type, 0:IPC
 	 * \else
-	 * 目标设备的设备类型, 0:IPC
+	 * D?1jIh185DIh18@`PM, 0:IPC
 	 * \endif
 	 */
-	public byte				byDeviceType;                       
+	public byte				byDeviceType;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Target device decode policy, 0:compatible with previous  
@@ -185,127 +203,212 @@ public class SDK_SPLIT_SOURCE implements Serializable {
 	 * 5: fluency level high 6: fluency level medium
 	 * 7: fluency level low
 	 * \else
-	 * 目标设备的解码策略, 0:兼容以前	
-	 * 1:实时等级高  2:实时等级中	
-	 * 3:实时等级低  4:默认等级	
-	 * 5:流畅等级高  6:流畅等级中	
-	 * 7:流畅等级低
+	 * D?1jIh185D=bBk2_BT, 0:<fH]RTG0	
+	 * 1:J5J15H<68_  2:J5J15H<6VP	
+	 * 3:J5J15H<65M  4:D,HO5H<6	
+	 * 5:Aw3)5H<68_  6:Aw3)5H<6VP	
+	 * 7:Aw3)5H<65M
 	 * \endif
 	 */
-	public byte				byDecodePolicy;                 
+	public byte				byDecodePolicy;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Http port number, 0-65535
 	 * \else
-	 * Http端口号, 0-65535
+	 * Http6K?Z:E, 0-65535
 	 * \endif
 	 */
-	public int					dwHttpPort;                         
+	public int					dwHttpPort;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Rtsp port number, 0-65535
 	 * \else
-	 * Rtsp端口号, 0-65535
+	 * Rtsp6K?Z:E, 0-65535
 	 * \endif
 	 */
-	public int					dwRtspPort;                         
+	public int					dwRtspPort;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Remote channel name, modifiable only when name read is not vacant
 	 * \else
-	 * 远程通道名称, 只有读取到的名称不为空时才可以修改该通道的名称
+	 * T63LM(5@C{3F, V;SP6AH!5=5DC{3F2;N*?UJ12E?IRTP^8D8CM(5@5DC{3F
 	 * \endif
 	 */
-	public char				szChnName[] = new char[FinalVar.SDK_DEVICE_NAME_LEN];		
+	public byte				szChnName[] = new byte[FinalVar.SDK_DEVICE_NAME_LEN];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Multicast IP address. Valid only when byConnType is multicast
 	 * \else
-	 * 多播IP地址, byConnType为组播时有效
+	 * 6`2%IP5XV7, byConnTypeN*Wi2%J1SPP'
 	 * \endif
 	 */
-	public char				szMcastIP[] = new char[FinalVar.SDK_MAX_IPADDR_LEN];       
+	public byte				szMcastIP[] = new byte[FinalVar.SDK_MAX_IPADDR_LEN];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Device ID, ""-null, "Local"  "Remote"
 	 * \else
-	 * 设备ID, ""-null, "Local"-本地通道, "Remote"-远程通道, 或者填入具体的RemoteDevice中的设备ID
+	 * Ih18ID, ""-null, "Local"-1>5XM(5@, "Remote"-T63LM(5@, ;rU_LnHk>_Le5DRemoteDeviceVP5DIh18ID
 	 * \endif
 	 */
-	public char				szDeviceID[] = new char[FinalVar.SDK_DEV_ID_LEN_EX];		
+	public byte				szDeviceID[] = new byte[FinalVar.SDK_DEV_ID_LEN_EX];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Is remote channel or not(read only)
 	 * \else
-	 * 是否远程通道(只读)
+	 * JG7qT63LM(5@(V;6A)
 	 * \endif
 	 */
-	public boolean				bRemoteChannel;						
+	public boolean				bRemoteChannel;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Remote channel ID (read only), effective when bRemoteChannel=TRUE
 	 * \else
-	 * 远程通道ID(只读), bRemoteChannel=TRUE时有效
+	 * T63LM(5@ID(V;6A), bRemoteChannel=TRUEJ1SPP'
 	 * \endif
 	 */
-	public int 				nRemoteChannelID;					
+	public int 				nRemoteChannelID;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Type of device, such as IPC, DVR, NVR and so on
 	 * \else
-	 * 设备类型, 如IPC, DVR, NVR等
+	 * Ih18@`PM, HgIPC, DVR, NVR5H
 	 * \endif
 	 */
-	public char				szDevClass[] = new char[FinalVar.SDK_DEV_TYPE_LEN];		
+	public byte				szDevClass[] = new byte[FinalVar.SDK_DEV_TYPE_LEN];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Device specific type, such as IPC-HF3300
 	 * \else
-	 * 设备具体型号, 如IPC-HF3300
+	 * Ih18>_LePM:E, HgIPC-HF3300
 	 * \endif
 	 */
-	public char				szDevType[] = new char[FinalVar.SDK_DEV_TYPE_LEN];			
+	public byte				szDevType[] = new byte[FinalVar.SDK_DEV_TYPE_LEN];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Main stream url, effective when byManuFactory = SDK_IPC_OTHER
 	 * \else
-	 * 主码流url地址, byManuFactory为 SDK_IPC_OTHER时有效
+	 * VwBkAwurl5XV7, byManuFactoryN* SDK_IPC_OTHERJ1SPP'
 	 * \endif
 	 */
-	public char				szMainStreamUrl[] = new char[FinalVar.MAX_PATH];			
+	public byte				szMainStreamUrl[] = new byte[FinalVar.MAX_PATH];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Extra stream url, effective when byManuFactory = SDK_IPC_OTHER
 	 * \else
-	 * 辅码流url地址, byManuFactory为 SDK_IPC_OTHER 时有效
+	 * 8(BkAwurl5XV7, byManuFactoryN* SDK_IPC_OTHER J1SPP'
 	 * \endif
 	 */
-	public char				szExtraStreamUrl[] = new char[FinalVar.MAX_PATH];			
+	public byte				szExtraStreamUrl[] = new byte[FinalVar.MAX_PATH];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Unique channel ID, read only
 	 * \else
-	 * 设备内统一编号的唯一通道号, 只读
+	 * Ih18DZM3R;1`:E5DN(R;M(5@:E, V;6A
 	 * \endif
 	 */
-	public int					nUniqueChannel;						
+	public int					nUniqueChannel;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Ssascade authemyication, effective when device ID = Local/Cascade/SerialNo,  SerialNo is device seral no.
 	 * \else
-	 * 级联认证信息, 设备ID为Local/Cascade/SerialNo时有效, 其中SerialNo是设备序列号
+	 * <6A*HOV$PEO", Ih18IDN*Local/Cascade/SerialNoJ1SPP', FdVPSerialNoJGIh18PrAP:E
 	 * \endif
 	 */
 	public SDK_CASCADE_AUTHENTICATOR stuCascadeAuth = new SDK_CASCADE_AUTHENTICATOR();
 	
-	public int                 nHint;                                  // 0-普通视频源, 1-报警视频源
-	public int                 nOptionalMainUrlCount;                  // 备用主码流地址数量
-	public byte                szOptionalMainUrls[][] = new byte[FinalVar.SDK_MAX_OPTIONAL_URL_NUM][FinalVar.MAX_PATH];  // 备用主码流地址列表
-	public int                 nOptionalExtraUrlCount;                 // 备用辅码流地址数量
-	public byte                szOptionalExtraUrls[][] = new byte[FinalVar.SDK_MAX_OPTIONAL_URL_NUM][FinalVar.MAX_PATH]; // 备用辅码流地址列表
-    //--------------------------------------------------------------------------------------
-    //协议后续添加字段
-	public int                 nInterval;                              // 轮巡时间间隔	单位：秒
-	public byte                szUserEx[] = new byte[FinalVar.SDK_NEW_USER_NAME_LENGTH];      // 用户名
-	public byte                szPwdEx[] = new byte[FinalVar.SDK_NEW_USER_PSW_LENGTH];        // 密码
+	/**
+	 * \if ENGLISH_LANG
+	 * 0-normal video source, 1- alarm video source
+	 * \else
+	 * 0-FUM(JSF5T4, 1-1(>/JSF5T4
+	 * \endif
+	 */
+	public int                 nHint; 
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * back main stream address quantity
+	 * \else
+	 * 18SCVwBkAw5XV7J}A?
+	 * \endif
+	 */
+	public int                 nOptionalMainUrlCount; 
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * backup main stream address list
+	 * \else
+	 * 18SCVwBkAw5XV7AP1m
+	 * \endif
+	 */
+	public byte                szOptionalMainUrls[][] = new byte[FinalVar.SDK_MAX_OPTIONAL_URL_NUM][FinalVar.MAX_PATH]; 
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * backup sub stream address quantity
+	 * \else
+	 * 18SC8(BkAw5XV7J}A?
+	 * \endif
+	 */
+	public int                 nOptionalExtraUrlCount; 
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * backup sub stream address list
+	 * \else
+	 * 18SC8(BkAw5XV7AP1m
+	 * \endif
+	 */
+	public byte                szOptionalExtraUrls[][] = new byte[FinalVar.SDK_MAX_OPTIONAL_URL_NUM][FinalVar.MAX_PATH];
+
+	/**
+	 * \if ENGLISH_LANG
+	 * tour time intertval	unit#:second
+	 * \else
+	 * BVQ2J1<d<d8t	5%N;#:Ck
+	 * \endif
+	 */
+	public int                 nInterval;
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * 
+	 * \else
+	 * SC;'C{
+	 * \endif
+	 */
+	public byte                szUserEx[] = new byte[FinalVar.SDK_NEW_USER_NAME_LENGTH];
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * 
+	 * \else
+	 * C\Bk
+	 * \endif
+	 */
+	public byte                szPwdEx[] = new byte[FinalVar.SDK_NEW_USER_PSW_LENGTH];
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * type of pushstream,effective when byConnType is TCP-Push or UDP-Push 
+	 * \else
+	 * MFAw7=J=5DBkAw@`PM,V;SPbyConnTypeN*TCP-Push;rUDP-Push2ESP8CWV6N
+	 * \endif
+	 * @see EM_SRC_PUSHSTREAM_TYPE
+	 */
+	public int 				   emPushStream;           
+
 }

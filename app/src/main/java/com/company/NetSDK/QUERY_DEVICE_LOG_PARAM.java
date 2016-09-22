@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Search log parameter
  * \else
- * 查询日志参数
+ * 2iQ/HUV>2NJ}
  * \endif
  */
 public class QUERY_DEVICE_LOG_PARAM implements Serializable {
@@ -17,80 +17,64 @@ public class QUERY_DEVICE_LOG_PARAM implements Serializable {
 
 	/**
 	 * \if ENGLISH_LANG
-	 * Searched log type
+	 * Searched log type ,enumeration value, as: SDK_LOG_QUERY_TYPE
 	 * \else
-	 * 查询日志类型
+	 * 2iQ/HUV>@`PM, C6>YV5#,<{SDK_LOG_QUERY_TYPE
 	 * \endif
 	 */
-	public int					emLogType;				 
+	public int					emLogType;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * The searched log start time
 	 * \else
-	 * 查询日志的开始时间
+	 * 2iQ/HUV>5D?*J<J1<d
 	 * \endif
 	 */
-	public NET_TIME			stuStartTime;			 
+	public NET_TIME			stuStartTime = new NET_TIME();
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * The searched log end time.
 	 * \else
-	 * 查询日志的结束时间
+	 * 2iQ/HUV>5D=aJxJ1<d
 	 * \endif
 	 */
-	public NET_TIME			stuEndTime;				  
+	public NET_TIME			stuEndTime = new NET_TIME();
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * The search begins from which log in one period. It shall begin with 0 if it is the first time search.
 	 * \else
-	 * 在时间段中从第几条日志开始查询，开始第一次查询可设为0
+	 * TZJ1<d6NVP4S5Z<8LuHUV>?*J<2iQ/#,?*J<5ZR;4N2iQ/?IIhN*0
 	 * \endif
 	 */
-	public int					nStartNum;				 
+	public int					nStartNum;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * The ended log serial number in one search,the max returning number is 1024 
 	 * \else
-	 * 一次查询中到第几条日志结束,日志返回条数的最大值为1024
+	 * R;4N2iQ/VP5=5Z<8LuHUV>=aJx,HUV>75;XLuJ}5DWn4sV5N*1024
 	 * \endif
 	 */
-	public int					nEndNum;				 
+	public int					nEndNum;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * log struct type,0:SDK_DEVICE_LOG_ITEM;1: SDK_DEVICE_LOG_ITEM_EX
 	 * \else
-	 * 日志数据结构体类型,0:表示DH_DEVICE_LOG_ITEM；1:表示 SDK_DEVICE_LOG_ITEM_EX
+	 * HUV>J}>]=a99Le@`PM,0:1mJ>DH_DEVICE_LOG_ITEM#;1:1mJ> SDK_DEVICE_LOG_ITEM_EX
 	 * \endif
 	 */
-	public byte                nLogStuType;            
-	/**
-	 * \if ENGLISH_LANG
-	 * Reserved
-	 * \else
-	 * 保留 对齐
-	 * \endif
-	 */
-	public byte                reserved[] = new byte[3];             
+	public byte                nLogStuType;
+            
 	/**
 	 * \if ENGLISH_LANG
 	 * Channel no. 0:Compatible with previous all channel numbers. The channel No. begins with 1.1: The first channel.
 	 * \else
-	 * 通道号,0:兼容之前表示所有通道号，所以通道号从1开始; 1:第一个通道
+	 * M(5@:E,0:<fH]V.G01mJ>KySPM(5@:E#,KyRTM(5@:E4S1?*J<; 1:5ZR;8vM(5@
 	 * \endif
 	 */
-	public int        			nChannelID;              
-	/**
-	 * \if ENGLISH_LANG
-	 * Reserved
-	 * \else
-	 * 保留
-	 * \endif
-	 */
-	public byte				bReserved[] = new byte[40];
-	
-	public QUERY_DEVICE_LOG_PARAM()
-	{
-		stuStartTime = new NET_TIME();
-		stuEndTime = new NET_TIME();
-	}
+	public int        			nChannelID;
 }

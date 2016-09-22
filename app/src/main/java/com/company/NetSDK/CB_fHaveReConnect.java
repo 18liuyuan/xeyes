@@ -4,7 +4,7 @@ package com.company.NetSDK;
  * \if ENGLISH_LANG
  * Network re-connection callback function original shape
  * \else
- * 网络连接恢复回调函数原形
+ * MxBgA,=S;V84;X5w:/J}T-PN
  * \endif
  */
 public interface CB_fHaveReConnect {
@@ -15,10 +15,10 @@ public interface CB_fHaveReConnect {
 	 * @param pchDVRIP ip of device
 	 * @param nDVRPort port of device
 	 * \else
-	 * 网络连接恢复回调函数
-	 * @param lLoginID 登录句柄, {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx}或者{@link com.company.NetSDK.INetSDK#Login() Login}的返回值
-	 * @param pchDVRIP 设备IP
-	 * @param nDVRPort 设备端口
+	 * MxBgA,=S;V84;X5w:/J}
+	 * @param lLoginID 5GB<>d1z, {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx};rU_{@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5
+	 * @param pchDVRIP Ih18IP
+	 * @param nDVRPort Ih186K?Z
 	 * \endif
 	 */
 	public void invoke(long lLoginID, String pchDVRIP, int nDVRPort);

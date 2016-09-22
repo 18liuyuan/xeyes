@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * (Wireless) Infrared Alarm Configuration
  * \else
- * (无线)红外报警配置
+ * (N^O_):lMb1(>/EdVC
  * \endif
  */
 public class SDK_INFRARED_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class SDK_INFRARED_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable 
 	 * \else
-	 * 报警输入使能
+	 * 1(>/JdHkJ9D\
 	 * \endif
 	 */
 	public boolean                bEnable;
@@ -28,7 +28,7 @@ public class SDK_INFRARED_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm Input Name
 	 * \else
-	 * 报警输入名称
+	 * 1(>/JdHkC{3F
 	 * \endif
 	 */
 	public byte                szAlarmName[] = new byte[FinalVar.SDK_MAX_ALARM_NAME];
@@ -37,7 +37,7 @@ public class SDK_INFRARED_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm In Pattern
 	 * \else
-	 * 报警器输入波形
+	 * 1(>/FwJdHk2(PN
 	 * \endif
 	 */
 	public int                 nAlarmInPattern;
@@ -46,7 +46,7 @@ public class SDK_INFRARED_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * AlarmOutPattern
 	 * \else
-	 * 报警输出波形
+	 * 1(>/Jd3v2(PN
 	 * \endif
 	 */
 	public int                 nAlarmOutPattern;
@@ -55,7 +55,7 @@ public class SDK_INFRARED_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * AlarmInAddress
 	 * \else
-	 * 报警输入地址
+	 * 1(>/JdHk5XV7
 	 * \endif
 	 */
 	public byte                szAlarmInAddress[] = new byte[FinalVar.SDK_MAX_ALARM_NAME];
@@ -64,7 +64,7 @@ public class SDK_INFRARED_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * SensorType, normal open or normal close
 	 * \else
-	 * 外部设备传感器类型常开 or 常闭
+	 * Mb2?Ih184+8PFw@`PM3#?* or 3#1U
 	 * \endif
 	 */
 	public int                 nSensorType;
@@ -73,7 +73,7 @@ public class SDK_INFRARED_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * DefendEfectTime
 	 * \else
-	 * 布撤防延时时间，在此时间后该报警输入有效
+	 * 2<377@QSJ1J1<d#,TZ4KJ1<d:s8C1(>/JdHkSPP'
 	 * \endif
 	 */
 	public int                 nDefendEfectTime;
@@ -82,7 +82,7 @@ public class SDK_INFRARED_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * DefendAreaType
 	 * \else
-	 * 防区类型
+	 * 7@Gx@`PM
 	 * \endif
 	 */
 	public int                 nDefendAreaType;
@@ -91,7 +91,7 @@ public class SDK_INFRARED_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * AlarmSmoothTime
 	 * \else
-	 * 报警平滑时间，即在此时间内如果只有一个报警输入连续输入两次则忽略掉后面一次
+	 * 1(>/F=;,J1<d#,<4TZ4KJ1<dDZHg9{V;SPR;8v1(>/JdHkA,PxJdHkA=4NTr:vBT5t:sCfR;4N
 	 * \endif
 	 */
 	public int                 nAlarmSmoothTime;
@@ -100,7 +100,7 @@ public class SDK_INFRARED_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Schedule
 	 * \else
-	 * 时间表
+	 * J1<d1m
 	 * \endif
 	 */
 	public SDK_TSECT            stSect[][] = new SDK_TSECT[FinalVar.SDK_N_WEEKS][FinalVar.SDK_N_REC_TSECT];
@@ -109,7 +109,7 @@ public class SDK_INFRARED_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Handle Mode
 	 * \else
-	 * 处理方式
+	 * 4&@m7=J=
 	 * \endif
 	 */
 	public SDK_MSG_HANDLE       struHandle = new SDK_MSG_HANDLE();

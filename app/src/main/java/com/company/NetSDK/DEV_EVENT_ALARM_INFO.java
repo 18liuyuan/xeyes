@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * the describe of EVENT_ALARM_LOCALALARM and EVENT_ALARM_MOTIONALARM's data
  * \else
- * 报警事件类型 EVENT_ALARM_LOCALALARM(外部报警)，EVENT_ALARM_MOTIONALARM(动检报警)报警)
+ * 1(>/JB<~@`PM EVENT_ALARM_LOCALALARM(Mb2?1(>/)#,EVENT_ALARM_MOTIONALARM(6/<l1(>/)1(>/)
  * \endif
  */
 public class DEV_EVENT_ALARM_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class DEV_EVENT_ALARM_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * channel id
 	 * \else
-	 * 通道号
+	 * M(5@:E
 	 * \endif
 	 */
 	public int                 nChannelID;
@@ -28,7 +28,7 @@ public class DEV_EVENT_ALARM_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * evnent name
 	 * \else
-	 * 事件名称
+	 * JB<~C{3F
 	 * \endif
 	 */
 	public byte                szName[] = new byte[128];
@@ -37,7 +37,7 @@ public class DEV_EVENT_ALARM_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * PTS(ms)
 	 * \else
-	 * 时间戳(单位是毫秒)
+	 * J1<d4A(5%N;JG:ACk)
 	 * \endif
 	 */
 	public double              PTS;
@@ -46,7 +46,7 @@ public class DEV_EVENT_ALARM_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * the event happen time
 	 * \else
-	 * 事件发生的时间
+	 * JB<~7"Iz5DJ1<d
 	 * \endif
 	 */
 	public NET_TIME_EX         UTC = new NET_TIME_EX();
@@ -55,7 +55,7 @@ public class DEV_EVENT_ALARM_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * evnet ID 
 	 * \else
-	 * 事件ID
+	 * JB<~ID
 	 * \endif
 	 */
 	public int                 nEventID;

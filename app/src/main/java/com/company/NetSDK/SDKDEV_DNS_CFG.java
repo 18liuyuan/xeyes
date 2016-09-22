@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * DNS server setup 
  * \else
- * DNS·şÎñÆ÷ÅäÖÃ
+ * DNS7~NqFwEdVC
  * \endif
  */
 public class SDKDEV_DNS_CFG implements Serializable {

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Activation Type 
  * \else
- * 云台联动类型
+ * TFL(A*6/@`PM
  * \endif
  */
 public class CFG_LINK_TYPE implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_LINK_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * No Activation
 	 * \else
-	 * 无联动
+	 * N^A*6/
 	 * \endif
 	 */
 	public static final int LINK_TYPE_NONE = 0;						    		
@@ -28,7 +28,7 @@ public class CFG_LINK_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Activitation Preset Point
 	 * \else
-	 * 联动预置点
+	 * A*6/T$VC5c
 	 * \endif
 	 */
 	public static final int LINK_TYPE_PRESET = 1;								
@@ -37,7 +37,7 @@ public class CFG_LINK_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Activation Tour
 	 * \else
-	 * 联动巡航
+	 * A*6/Q2:=
 	 * \endif
 	 */
 	public static final int LINK_TYPE_TOUR = 2;									
@@ -46,7 +46,7 @@ public class CFG_LINK_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Activation Pattern
 	 * \else
-	 * 联动轨迹
+	 * A*6/9l<#
 	 * \endif
 	 */
 	public static final int LINK_TYPE_PATTERN = 3;								

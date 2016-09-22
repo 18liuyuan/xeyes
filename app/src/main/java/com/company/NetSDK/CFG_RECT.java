@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Rectangle Information
  * \else
- * «¯”Ú–≈œ¢
+ * GxSrPEO"
  * \endif
  */
 public class CFG_RECT implements Serializable {

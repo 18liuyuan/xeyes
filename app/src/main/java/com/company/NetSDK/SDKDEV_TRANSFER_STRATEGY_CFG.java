@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Network transmission strategy configuration
  * \else
- * 网络传输策略配置
+ * MxBg4+Jd2_BTEdVC
  * \endif
  */
 public class SDKDEV_TRANSFER_STRATEGY_CFG implements Serializable {
@@ -19,16 +19,16 @@ public class SDKDEV_TRANSFER_STRATEGY_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable
 	 * \else
-	 * 使能
+	 * J9D\
 	 * \endif
 	 */
 	public boolean                bEnable;
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * 0：Video quality priority,1：Fluency priority,2：Auto,
+	 * 0#:Video quality priority,1#:Fluency priority,2#:Auto,
 	 * \else
-	 * 0：画质优先，1：流畅性优先，2：自动。
+	 * 0#:;-VJSEOH#,1#:Aw3)PTSEOH#,2#:WT6/!#
 	 * \endif
 	 */
 	public int                 iStrategy;

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Color type
  * \else
- * 颜色类型 
+ * QUI+@`PM 
  * \endif
  */
 public class EM_COLOR_TYPE implements Serializable {
@@ -19,7 +19,7 @@ public class EM_COLOR_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Red
 	 * \else
-	 * 红色
+	 * :lI+
 	 * \endif
 	 */
 	public static final int NET_COLOR_TYPE_RED 		= 0 ;
@@ -28,7 +28,7 @@ public class EM_COLOR_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Yellow
 	 * \else
-	 * 黄色
+	 * ;FI+
 	 * \endif
 	 */
 	public static final int NET_COLOR_TYPE_YELLOW 	= 1	;
@@ -37,7 +37,7 @@ public class EM_COLOR_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Green
 	 * \else
-	 * 绿色
+	 * BLI+
 	 * \endif
 	 */
 	public static final int NET_COLOR_TYPE_GREEN 	= 2 ;
@@ -46,7 +46,7 @@ public class EM_COLOR_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Cyan
 	 * \else
-	 * 青色
+	 * G`I+
 	 * \endif
 	 */
 	public static final int NET_COLOR_TYPE_CYAN		= 3 ;
@@ -55,7 +55,7 @@ public class EM_COLOR_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Blue
 	 * \else
-	 * 蓝色
+	 * @6I+
 	 * \endif
 	 */
 	public static final int NET_COLOR_TYPE_BLUE		= 4 ;
@@ -64,7 +64,7 @@ public class EM_COLOR_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Purple
 	 * \else
-	 * 紫色
+	 * WOI+
 	 * \endif
 	 */
 	public static final int NET_COLOR_TYPE_PURPLE	= 5	;
@@ -73,7 +73,7 @@ public class EM_COLOR_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Black
 	 * \else
-	 * 黑色
+	 * :ZI+
 	 * \endif
 	 */
 	public static final int NET_COLOR_TYPE_BLACK	= 6 ;
@@ -82,7 +82,7 @@ public class EM_COLOR_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * White
 	 * \else
-	 * 白色
+	 * 0WI+
 	 * \endif
 	 */
 	public static final int NET_COLOR_TYPE_WHITE	= 7 ;

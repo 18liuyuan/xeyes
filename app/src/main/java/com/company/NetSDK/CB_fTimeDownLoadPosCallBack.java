@@ -4,7 +4,7 @@ package com.company.NetSDK;
  * \if ENGLISH_LANG
  * Playback process by time callback function original shape
  * \else
- * 按时间下载回调函数原型
+ * 04J1<dOBTX;X5w:/J}T-PM
  * \endif
  */
 public interface CB_fTimeDownLoadPosCallBack {
@@ -17,12 +17,12 @@ public interface CB_fTimeDownLoadPosCallBack {
 	 * @param index 
 	 * @param recordfileinfo Record info
 	 * \else
-	 * 按时间下载回调函数
-	 * @param lPlayHandle {@link com.company.NetSDK.INetSDK#PlayBackByTime() PlayBackByTime} 的返回值
-	 * @param dwTotalSize 指本次播放总大小，单位为KB 
-	 * @param dwDownLoadSize 指已经播放的大小，单位为KB，当其值为-1时表示本次回放结束，-2表示写文件失败 
-	 * @param index 序号
-	 * @param recordfileinfo 录像内容信息
+	 * 04J1<dOBTX;X5w:/J}
+	 * @param lPlayHandle {@link com.company.NetSDK.INetSDK#PlayBackByTime() PlayBackByTime} 5D75;XV5
+	 * @param dwTotalSize V81>4N2%7EW\4sP!#,5%N;N*KB 
+	 * @param dwDownLoadSize V8RQ>-2%7E5D4sP!#,5%N;N*KB#,51FdV5N*-1J11mJ>1>4N;X7E=aJx#,-21mJ>P4ND<~J'0\ 
+	 * @param index Pr:E
+	 * @param recordfileinfo B<OqDZH]PEO"
 	 * \endif
 	 */
 	public void invoke(long lPlayHandle, int dwTotalSize, int dwDownLoadSize, int index, NET_RECORDFILE_INFO recordfileinfo);

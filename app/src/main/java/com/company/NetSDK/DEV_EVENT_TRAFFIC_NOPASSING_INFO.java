@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * the describe of EVENT_IVS_TRAFFIC_NOPASSING's data
  * \else
- * 事件类型EVENT_IVS_TRAFFIC_NOPASSING(交通违章-禁止通行事件)对应的数据块描述信息
+ * JB<~@`PMEVENT_IVS_TRAFFIC_NOPASSING(=;M(N%UB-={V9M(PPJB<~)6TS&5DJ}>]?iChJvPEO"
  * \endif
  */
 public class DEV_EVENT_TRAFFIC_NOPASSING_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class DEV_EVENT_TRAFFIC_NOPASSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * channel ID
 	 * \else
-	 * 通道号
+	 * M(5@:E
 	 * \endif
 	 */
 	public int                 nChannelID;
@@ -28,7 +28,7 @@ public class DEV_EVENT_TRAFFIC_NOPASSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * event name
 	 * \else
-	 * 事件名称
+	 * JB<~C{3F
 	 * \endif
 	 */
 	public byte                szName[] = new byte[FinalVar.SDK_EVENT_NAME_LEN];
@@ -37,7 +37,7 @@ public class DEV_EVENT_TRAFFIC_NOPASSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Trigger Type, 0 vehicle inspection device, 1 radar, 2 video
 	 * \else
-	 * TriggerType:触发类型，0车检器，1雷达，2视频
+	 * TriggerType:4%7"@`PM#,035<lFw#,1@W4o#,2JSF5
 	 * \endif
 	 */
 	public int                 nTriggerType;
@@ -46,7 +46,7 @@ public class DEV_EVENT_TRAFFIC_NOPASSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * PTS(ms)
 	 * \else
-	 * 时间戳(单位是毫秒)
+	 * J1<d4A(5%N;JG:ACk)
 	 * \endif
 	 */
 	public int               PTS;
@@ -55,7 +55,7 @@ public class DEV_EVENT_TRAFFIC_NOPASSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * the event happen time
 	 * \else
-	 * 事件发生的时间
+	 * JB<~7"Iz5DJ1<d
 	 * \endif
 	 */
 	public NET_TIME_EX         UTC = new NET_TIME_EX();
@@ -64,7 +64,7 @@ public class DEV_EVENT_TRAFFIC_NOPASSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * event ID
 	 * \else
-	 * 事件ID
+	 * JB<~ID
 	 * \endif
 	 */
 	public int                 nEventID;
@@ -82,7 +82,7 @@ public class DEV_EVENT_TRAFFIC_NOPASSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 
 	 * \else
-	 * 底层产生的触发抓拍帧标记
+	 * 5W2c2zIz5D4%7"W%EDV!1j<G
 	 * \endif
 	 */
 	public int                 nMark;
@@ -91,7 +91,7 @@ public class DEV_EVENT_TRAFFIC_NOPASSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * snap index: such as 3,2,1,1 means the last one,0 means there has some exception and snap stop
 	 * \else
-	 * 表示抓拍序号，如3,2,1,1表示抓拍结束,0表示异常结束
+	 * 1mJ>W%EDPr:E#,Hg3,2,1,11mJ>W%ED=aJx,01mJ>Rl3#=aJx
 	 * \endif
 	 */
 	public int                 nSequence;
@@ -100,7 +100,7 @@ public class DEV_EVENT_TRAFFIC_NOPASSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * event file info
 	 * \else
-	 * 事件对应文件信息
+	 * JB<~6TS&ND<~PEO"
 	 * \endif
 	 */
 	public SDK_EVENT_FILE_INFO  stuFileInfo = new SDK_EVENT_FILE_INFO();
@@ -109,7 +109,7 @@ public class DEV_EVENT_TRAFFIC_NOPASSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Event action,0 means pulse event,1 means continuous event's begin,2means continuous event's end;
 	 * \else
-	 * 事件动作，0表示脉冲事件,1表示持续性事件开始,2表示持续性事件结束;
+	 * JB<~6/Ww#,01mJ>Bv3eJB<~,11mJ>3VPxPTJB<~?*J<,21mJ>3VPxPTJB<~=aJx;
 	 * \endif
 	 */
 	public byte                bEventAction;
@@ -118,7 +118,7 @@ public class DEV_EVENT_TRAFFIC_NOPASSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * TrafficCar info
 	 * \else
-	 * 交通车辆信息
+	 * =;M(35A>PEO"
 	 * \endif
 	 */
 	public DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO stTrafficCar = new DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO();
@@ -127,7 +127,7 @@ public class DEV_EVENT_TRAFFIC_NOPASSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * flag(by bit),see NET_RESERVED_COMMON
 	 * \else
-	 * 抓图标志(按位)，具体见NET_RESERVED_COMMON
+	 * W%M<1jV>(04N;)#,>_Le<{NET_RESERVED_COMMON
 	 * \endif
 	 */
 	public int               dwSnapFlagMask;
@@ -136,7 +136,7 @@ public class DEV_EVENT_TRAFFIC_NOPASSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * picture resolution
 	 * \else
-	 * 对应图片的分辨率
+	 * 6TS&M<F,5D7V1fBJ
 	 * \endif
 	 */
 	public SDK_RESOLUTION_INFO  stuResolution = new SDK_RESOLUTION_INFO();
@@ -145,7 +145,7 @@ public class DEV_EVENT_TRAFFIC_NOPASSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Serial number of the picture, in the same time (accurate to seconds) may have multiple images, starting from 0
 	 * \else
-	 * 图片的序号, 同一时间内(精确到秒)可能有多张图片, 从0开始
+	 * M<F,5DPr:E, M,R;J1<dDZ(>+H75=Ck)?ID\SP6`UEM<F,, 4S0?*J<
 	 * \endif
 	 */
 	public byte                byImageIndex;
@@ -154,7 +154,7 @@ public class DEV_EVENT_TRAFFIC_NOPASSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Corresponding lane number
 	 * \else
-	 * 对应车道号
+	 * 6TS&355@:E
 	 * \endif
 	 */
 	public int                 nLane;
@@ -163,7 +163,7 @@ public class DEV_EVENT_TRAFFIC_NOPASSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Object to be detected
 	 * \else
-	 * 检测到的物体
+	 * <l2b5=5DNoLe
 	 * \endif
 	 */
 	public SDK_MSG_OBJECT       stuObject = new SDK_MSG_OBJECT();
@@ -172,7 +172,7 @@ public class DEV_EVENT_TRAFFIC_NOPASSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * car body information
 	 * \else
-	 * 车身信息
+	 * 35ImPEO"
 	 * \endif
 	 */
 	public SDK_MSG_OBJECT       stuVehicle = new SDK_MSG_OBJECT();
@@ -181,7 +181,7 @@ public class DEV_EVENT_TRAFFIC_NOPASSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Video analysis frame number
 	 * \else
-	 * 视频分析帧序号
+	 * JSF57VNvV!Pr:E
 	 * \endif
 	 */
 	public int                 nFrameSequence;
@@ -190,7 +190,7 @@ public class DEV_EVENT_TRAFFIC_NOPASSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Data source address of the video analysis
 	 * \else
-	 * 视频分析的数据源地址
+	 * JSF57VNv5DJ}>]T45XV7
 	 * \endif
 	 */
 	public int                 nSource;
@@ -199,7 +199,7 @@ public class DEV_EVENT_TRAFFIC_NOPASSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * public info
 	 * \else
-	 * 公共信息
+	 * 9+92PEO"
 	 * \endif
 	 */
 	public EVENT_COMM_INFO     stCommInfo = new EVENT_COMM_INFO();

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * TrafficSnapByNetwork's input param
  * \else
- * 接口(TrafficSnapByNetwork)输入参数
+ * =S?Z(TrafficSnapByNetwork)JdHk2NJ}
  * \endif
  */
 public class NET_IN_SNAPSHOT implements Serializable {
@@ -19,7 +19,7 @@ public class NET_IN_SNAPSHOT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Trigger type	0-unknown 1-zhongmeng net trigger
 	 * \else
-	 * 触发类型	0-未知	1-中盟网络触发 2-客户端触发（传入NET_CLIENT_SNAP_INFO类的对象）
+	 * 4%7"@`PM	0-N4V*	1-VPCKMxBg4%7" 2-?M;'6K4%7"#(4+HkNET_CLIENT_SNAP_INFO@`5D6TOs#)
 	 * \endif
 	 */
 	public int					nTriggerType;			

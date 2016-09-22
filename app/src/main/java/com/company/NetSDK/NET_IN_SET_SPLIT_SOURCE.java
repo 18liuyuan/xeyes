@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * SetSplitSourceEx  Port input parameter
  * \else
- * SetSplitSourceEx 接口的输入参数
+ * SetSplitSourceEx =S?Z5DJdHk2NJ}
  * \endif
  */
 public class NET_IN_SET_SPLIT_SOURCE implements Serializable {
@@ -19,7 +19,7 @@ public class NET_IN_SET_SPLIT_SOURCE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Video output control {@link com.company.NetSDK.EM_VIDEO_OUT_CTRL_TYPE EM_VIDEO_OUT_CTRL_TYPE}
 	 * \else
-	 * 视频输出控制方式 {@link com.company.NetSDK.EM_VIDEO_OUT_CTRL_TYPE EM_VIDEO_OUT_CTRL_TYPE}
+	 * JSF5Jd3v?XVF7=J= {@link com.company.NetSDK.EM_VIDEO_OUT_CTRL_TYPE EM_VIDEO_OUT_CTRL_TYPE}
 	 * \endif
 	 */
 	public int 					emCtrlType;
@@ -28,7 +28,7 @@ public class NET_IN_SET_SPLIT_SOURCE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Video output logic channel no., emCtrlType as EM_VIDEO_OUT_CTRL_CHANNEL is valid
 	 * \else
-	 * 视频输出逻辑通道号, emCtrlType为EM_VIDEO_OUT_CTRL_CHANNEL时有效
+	 * JSF5Jd3vB_<-M(5@:E, emCtrlTypeN*EM_VIDEO_OUT_CTRL_CHANNELJ1SPP'
 	 * \endif
 	 */
 	public int						nChannel;
@@ -37,7 +37,7 @@ public class NET_IN_SET_SPLIT_SOURCE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Splicing screen ID, emCtrlType as EM_VIDEO_OUT_CTRL_COMPOSITE_ID is valid
 	 * \else
-	 * 拼接屏ID, emCtrlType为EM_VIDEO_OUT_CTRL_COMPOSITE_ID时有效
+	 * F4=SFAID, emCtrlTypeN*EM_VIDEO_OUT_CTRL_COMPOSITE_IDJ1SPP'
 	 * \endif
 	 */
 	public String					pszCompositeID;
@@ -46,7 +46,7 @@ public class NET_IN_SET_SPLIT_SOURCE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Window no., -1 means current split mode all windows
 	 * \else
-	 * 窗口号, -1表示当前分割模式下的所有窗口
+	 * 40?Z:E, -11mJ>51G07V8nD#J=OB5DKySP40?Z
 	 * \endif
 	 */
 	public int						nWindow;
@@ -55,7 +55,7 @@ public class NET_IN_SET_SPLIT_SOURCE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Video source info, When nWindow=-1, video source is a group, and quantity match window
 	 * \else
-	 * 视频源信息, 当nWindow=-1时, 视频源是个数组, 且数量与窗口数一致
+	 * JSF5T4PEO", 51nWindow=-1J1, JSF5T4JG8vJ}Wi, GRJ}A?Sk40?ZJ}R;VB
 	 * \endif
 	 */
 	public SDK_SPLIT_SOURCE			pstuSources[];
@@ -64,7 +64,7 @@ public class NET_IN_SET_SPLIT_SOURCE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Video source quantity
 	 * \else
-	 * 视频源数量
+	 * JSF5T4J}A?
 	 * \endif
 	 */
 	public int						nSourceCount;	 

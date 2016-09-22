@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Video polling
  * \else
- * 视频轮巡
+ * JSF5BVQ2
  * \endif
  */
 public class SDK_VIDEOGROUP_CFG implements Serializable {
@@ -19,7 +19,7 @@ public class SDK_VIDEOGROUP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Polling enabled
 	 * \else
-	 * 轮巡使能
+	 * BVQ2J9D\
 	 * \endif
 	 */
 	public boolean                bTourEnable;
@@ -28,7 +28,7 @@ public class SDK_VIDEOGROUP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Polling interval in seconds, 5-300
 	 * \else
-	 * 轮巡间隔，单位秒, 5-300
+	 * BVQ2<d8t#,5%N;Ck, 5-300
 	 * \endif
 	 */
 	public int                 nTourPeriod;
@@ -37,7 +37,7 @@ public class SDK_VIDEOGROUP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The polling channel mask form
 	 * \else
-	 * 轮巡的通道，掩码形式表示
+	 * BVQ25DM(5@#,QZBkPNJ=1mJ>
 	 * \endif
 	 */
 	public int               dwChannelMask;

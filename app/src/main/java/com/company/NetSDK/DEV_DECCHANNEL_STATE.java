@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Current decoding channel status(including channel status, decoding stream info and etc.)
  * \else
- * 当前解码通道状态信息(包括通道状态，解码流信息等)
+ * 51G0=bBkM(5@W4L,PEO"(0|@(M(5@W4L,#,=bBkAwPEO"5H)
  * \endif
  */
 public class DEV_DECCHANNEL_STATE implements Serializable {
@@ -19,7 +19,7 @@ public class DEV_DECCHANNEL_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Responding decoding channel number
 	 * \else
-	 * 对应解码通道号
+	 * 6TS&=bBkM(5@:E
 	 * \endif
 	 */
 	public byte			byDecoderID;
@@ -28,7 +28,7 @@ public class DEV_DECCHANNEL_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Current decoding channel in opertion status:0 -free,1 -realtime monitoring,2 - playback 3 - Decode Tour
 	 * \else
-	 * 当前解码通道正在操作状态:0－空闲，1－实时监视，2－回放 3 - 轮巡
+	 * 51G0=bBkM(5@U}TZ2YWwW4L,:0#-?UOP#,1#-J5J1<`JS#,2#-;X7E 3 - BVQ2
 	 * \endif
 	 */
 	public byte            byChnState;
@@ -37,7 +37,7 @@ public class DEV_DECCHANNEL_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Current data frame rate
 	 * \else
-	 * 当前数据帧率
+	 * 51G0J}>]V!BJ
 	 * \endif
 	 */
 	public byte			byFrame;
@@ -46,7 +46,7 @@ public class DEV_DECCHANNEL_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Decoding channel data amount
 	 * \else
-	 * 解码通道数据总量
+	 * =bBkM(5@J}>]W\A?
 	 * \endif
 	 */
 	public int				nChannelFLux;
@@ -55,7 +55,7 @@ public class DEV_DECCHANNEL_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Decoding data amount
 	 * \else
-	 * 解码数据量
+	 * =bBkJ}>]A?
 	 * \endif
 	 */
 	public int             nDecodeFlux;
@@ -64,7 +64,7 @@ public class DEV_DECCHANNEL_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Current data resolution
 	 * \else
-	 * 当前数据分辨率
+	 * 51G0J}>]7V1fBJ
 	 * \endif
 	 */
 	public byte            szResolution[] = new byte[16];

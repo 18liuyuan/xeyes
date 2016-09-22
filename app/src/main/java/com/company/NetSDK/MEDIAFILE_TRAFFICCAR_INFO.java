@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * The media file information searched by SDK_MEDIA_QUERY_TRAFFICCAR
  * \else
- * SDK_MEDIA_QUERY_TRAFFICCAR查询出来的media文件信息
+ * SDK_MEDIA_QUERY_TRAFFICCAR2iQ/3v@45DmediaND<~PEO"
  * \endif
  */
 public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel number
 	 * \else
-	 * 通道号
+	 * M(5@:E
 	 * \endif
 	 */
 	public int        ch;
@@ -28,7 +28,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * File path
 	 * \else
-	 * 文件路径
+	 * ND<~B7>6
 	 * \endif
 	 */
 	public char			szFilePath[] 		= new char[128];
@@ -37,7 +37,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * File length
 	 * \else
-	 * 文件长度
+	 * ND<~3$6H
 	 * \endif
 	 */
 	public int        size;
@@ -46,7 +46,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Start time
 	 * \else
-	 * 开始时间
+	 * ?*J<J1<d
 	 * \endif
 	 */
 	public NET_TIME            starttime = new NET_TIME();
@@ -55,7 +55,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * End time
 	 * \else
-	 * 结束时间
+	 * =aJxJ1<d
 	 * \endif
 	 */
 	public NET_TIME            endtime = new NET_TIME();
@@ -64,7 +64,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Working directory serial number
 	 * \else
-	 * 工作目录编号
+	 * 9$WwD?B<1`:E
 	 * \endif
 	 */
 	public int        nWorkDirSN;
@@ -73,7 +73,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * File type.  1:jpg file
 	 * \else
-	 * 文件类型  1：jpg图片
+	 * ND<~@`PM  1#:jpgM<F,
 	 * \endif
 	 */
 	public byte                nFileType;
@@ -82,7 +82,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * File location index
 	 * \else
-	 * 文件定位索引
+	 * ND<~6(N;KwR}
 	 * \endif
 	 */
 	public byte                bHint;
@@ -91,7 +91,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * drive number
 	 * \else
-	 * 磁盘号
+	 * 4EEL:E
 	 * \endif
 	 */
 	public byte                bDriveNo;
@@ -100,7 +100,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * cluster number
 	 * \else
-	 * 簇号
+	 * 4X:E
 	 * \endif
 	 */
 	public int        nCluster;
@@ -109,18 +109,18 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * flags
 	 * \else
-	 * 图片类型, 0-普通, 1-合成, 2-抠图
+	 * M<F,@`PM, 0-FUM(, 1-:O3I, 2-?YM<
 	 * \endif
 	 */
 	public byte                byPictureType;
 
-	//以下是交通车辆信息
+	//RTOBJG=;M(35A>PEO"
 	
 	/**
 	 * \if ENGLISH_LANG
 	 * Vehicle plate number
 	 * \else
-	 * 车牌号码
+	 * 35EF:EBk
 	 * \endif
 	 */
 	public char			szPlateNumber[] 	= new char[32];
@@ -132,10 +132,10 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * "SAR" =HK SAR or Macao SAR plate; "Trainning" =rehearsal plate; "Personal"=Personal plate; "Agri"=Agricultural plate
 	 * "Embassy"=Embassy plate; "Moto"=Moto plate ; "Tractor"=Tractor plate; "Other"=Other plate 
 	 * \else
-	 * 号牌类型"Unknown" 未知; "Normal" 蓝牌黑牌; "Yellow" 黄牌; "DoubleYellow" 双层黄尾牌
-	 * "Police" 警牌; "Armed" 武警牌; "Military" 部队号牌; "DoubleMilitary" 部队双层
-	 * "SAR" 港澳特区号牌; "Trainning" 教练车号牌; "Personal" 个性号牌; "Agri" 农用牌
-	 * "Embassy" 使馆号牌; "Moto" 摩托车号牌; "Tractor" 拖拉机号牌; "Other" 其他号牌
+	 * :EEF@`PM"Unknown" N4V*; "Normal" @6EF:ZEF; "Yellow" ;FEF; "DoubleYellow" K+2c;FN2EF
+	 * "Police" >/EF; "Armed" Nd>/EF; "Military" 2?6S:EEF; "DoubleMilitary" 2?6SK+2c
+	 * "SAR" 8[0DLXGx:EEF; "Trainning" =LA735:EEF; "Personal" 8vPT:EEF; "Agri" E)SCEF
+	 * "Embassy" J99]:EEF; "Moto" D&MP35:EEF; "Tractor" MO@-;z:EEF; "Other" FdK{:EEF
 	 * \endif
 	 */
 	public char			szPlateType[] 		= new char[32];
@@ -144,7 +144,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Plate color:"Blue","Yellow", "White","Black"
 	 * \else
-	 * 车牌颜色:"Blue","Yellow", "White","Black"
+	 * 35EFQUI+:"Blue","Yellow", "White","Black"
 	 * \endif
 	 */
 	public char			szPlateColor[] 		= new char[16];
@@ -153,7 +153,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Vehicle color:"White", "Black", "Red", "Yellow", "Gray", "Blue","Green"
 	 * \else
-	 * 车身颜色:"White", "Black", "Red", "Yellow", "Gray", "Blue","Green"
+	 * 35ImQUI+:"White", "Black", "Red", "Yellow", "Gray", "Blue","Green"
 	 * \endif
 	 */
 	public char			szVehicleColor[] 	= new char[16];
@@ -162,7 +162,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Speed. The unit is Km/H
 	 * \else
-	 * 车速,单位Km/H
+	 * 35KY,5%N;Km/H
 	 * \endif
 	 */
 	public int                 nSpeed;
@@ -171,7 +171,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Activation event amount
 	 * \else
-	 * 关联的事件个数
+	 * 9XA*5DJB<~8vJ}
 	 * \endif
 	 */
 	public int                 nEventsNum;
@@ -180,7 +180,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Activation event list. The number refers to the corresponding event. Please refer to Intelligent Analytics Event Type.
 	 * \else
-	 * 关联的事件列表,数组值表示相应的事件，详见"智能分析事件类型"
+	 * 9XA*5DJB<~AP1m,J}WiV51mJ>O`S&5DJB<~#,Oj<{"VGD\7VNvJB<~@`PM"
 	 * \endif
 	 */
 	public int                 nEvents[] = new int[32];
@@ -190,8 +190,8 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * Detailed offense type subnet mask. The first bit means redlight offense, the second bit is illegal straight/left-turn/right-turn driving.
 	 * The third bit is the wrong way driving; the four bit is illegal U-turn. Otherwise default value is intersection accident. 
 	 * \else
-	 * 具体违章类型掩码,第一位:闯红灯; 第二位:不按规定车道行驶;
-	 * 第三位:逆行; 第四位：违章掉头;否则默认为:交通路口事件
+	 * >_LeN%UB@`PMQZBk,5ZR;N;:43:l5F; 5Z6~N;:2;049f6(355@PPJ;;
+	 * 5ZH}N;:DfPP; 5ZKDN;#:N%UB5tM7;7qTrD,HON*:=;M(B7?ZJB<~
 	 * \endif
 	 */	
 	public long			dwBreakingRule;
@@ -200,7 +200,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Vehicle type:"Light-duty"=small;"Medium"=medium; "Oversize"=large
 	 * \else
-	 * 车辆大小类型:"Light-duty":小型车;"Medium":中型车; "Oversize":大型车
+	 * 35A>4sP!@`PM:"Light-duty":P!PM35;"Medium":VPPM35; "Oversize":4sPM35
 	 * \endif
 	 */
 	public char			szVehicleSize[] 	= new char[16];
@@ -209,7 +209,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Local or remote channel name
 	 * \else
-	 * 本地或远程的通道名称
+	 * 1>5X;rT63L5DM(5@C{3F
 	 * \endif
 	 */
 	public char			szChannelName[]		= new char[FinalVar.SDK_CHAN_NAME_LEN];
@@ -218,7 +218,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Local or remote device name
 	 * \else
-	 * 本地或远程设备名称
+	 * 1>5X;rT63LIh18C{3F
 	 * \endif
 	 */
 	public char			szMachineName[] 	= new char[FinalVar.SDK_MAX_NAME_LEN];
@@ -227,7 +227,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * up limit of speed, km/h
 	 * \else
-	 * 速度上限 单位: km/h
+	 * KY6HIOO^ 5%N;: km/h
 	 * \endif
 	 */
 	public int                 nSpeedUpperLimit;
@@ -236,7 +236,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * lower limit of speed km/h
 	 * \else
-	 * 速度下限 单位: km/h
+	 * KY6HOBO^ 5%N;: km/h
 	 * \endif
 	 */
 	public int                 nSpeedLowerLimit;
@@ -245,7 +245,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * id of event group
 	 * \else
-	 * 事件里的组编号
+	 * JB<~@o5DWi1`:E
 	 * \endif
 	 */
 	public int                 nGroupID;
@@ -254,7 +254,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * total count of the event group
 	 * \else
-	 * 一个事件组内的抓拍张数
+	 * R;8vJB<~WiDZ5DW%EDUEJ}
 	 * \endif
 	 */
 	public byte                byCountInGroup;
@@ -263,7 +263,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * the index of this event
 	 * \else
-	 * 一个事件组内的抓拍序号
+	 * R;8vJB<~WiDZ5DW%EDPr:E
 	 * \endif
 	 */
 	public byte                byIndexInGroup;
@@ -272,7 +272,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * lane number
 	 * \else
-	 * 车道,参见MEDIA_QUERY_TRAFFICCAR_PARAM
+	 * 355@,2N<{MEDIA_QUERY_TRAFFICCAR_PARAM
 	 * \endif
 	 */
 	public byte                byLane;
@@ -281,7 +281,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * direction,MEDIA_QUERY_TRAFFICCAR_PARAM
 	 * \else
-	 * 车道方向,参见MEDIA_QUERY_TRAFFICCAR_PARAM
+	 * 355@7=Or,2N<{MEDIA_QUERY_TRAFFICCAR_PARAM
 	 * \endif
 	 */
 	public int			nDirection;
@@ -290,7 +290,7 @@ public class MEDIAFILE_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * machine address
 	 * \else
-	 * 机器部署地点
+	 * ;zFw2?Jp5X5c
 	 * \endif
 	 */
 	public char      	szMachineAddress[] 	= new char[FinalVar.MAX_PATH];

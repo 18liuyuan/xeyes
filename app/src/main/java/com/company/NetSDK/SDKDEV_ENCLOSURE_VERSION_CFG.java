@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * enclosure version config
  * \else
- * 电子围栏版本号配置 
+ * 5gWSN'@80f1>:EEdVC 
  * \endif
  */
 public class SDKDEV_ENCLOSURE_VERSION_CFG implements Serializable {
@@ -20,7 +20,7 @@ public class SDKDEV_ENCLOSURE_VERSION_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * type mask,such as LIMITSPEED | DRIVEALLOW
 	 * \else
-	 * 围栏类型掩码，如LIMITSPEED | DRIVEALLOW
+	 * N'@8@`PMQZBk#,HgLIMITSPEED | DRIVEALLOW
 	 * \endif
 	 */
 	public int          unType; 
@@ -29,7 +29,7 @@ public class SDKDEV_ENCLOSURE_VERSION_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * version
 	 * \else
-	 * 每个类型一个版本号,用于统一平台与设备上的围栏配置
+	 * C?8v@`PMR;8v0f1>:E,SCSZM3R;F=L(SkIh18IO5DN'@8EdVC
 	 * \endif
 	 */
 	public int          unVersion[] = new int[32]; 

@@ -4,7 +4,7 @@ package com.company.NetSDK;
  * \if ENGLISH_LANG
  * Network disconnect deal interface
  * \else
- * 监听CAN总线数据回调函数原形
+ * <`L}CANW\O_J}>];X5w:/J}T-PN
  * \endif
  */
 public interface CB_fAttachCANCB {
@@ -15,10 +15,10 @@ public interface CB_fAttachCANCB {
 	 * @param lAttachHandle return from {@link com.company.NetSDK.INetSDK#AttachCAN() AttachCAN}
 	 * @param pBuf data info {@link com.company.NetSDK.NET_CB_CANDATA NET_CB_CANDATA}
 	 * \else
-	 * 监听CAN总线数据回调函数
-	 * @param lLoginID 登录句柄, {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx}或者{@link com.company.NetSDK.INetSDK#Login() Login}的返回值
-	 * @param lAttachHandle {@link com.company.NetSDK.INetSDK#AttachCAN() AttachCAN}返回值
-	 * @param pBuf 数据信息，{@link com.company.NetSDK.NET_CB_CANDATA NET_CB_CANDATA}
+	 * <`L}CANW\O_J}>];X5w:/J}
+	 * @param lLoginID 5GB<>d1z, {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx};rU_{@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5
+	 * @param lAttachHandle {@link com.company.NetSDK.INetSDK#AttachCAN() AttachCAN}75;XV5
+	 * @param pBuf J}>]PEO"#,{@link com.company.NetSDK.NET_CB_CANDATA NET_CB_CANDATA}
 	 * \endif
 	 */
 	public void invoke(long lLoginID, long lAttachHandle, NET_CB_CANDATA pBuf);

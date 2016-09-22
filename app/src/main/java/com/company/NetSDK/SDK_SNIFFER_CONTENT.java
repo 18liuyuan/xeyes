@@ -13,7 +13,7 @@ public class SDK_SNIFFER_CONTENT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Symbol position bit offset
 	 * \else
-	 * 标志位的位偏移
+	 * 1jV>N;5DN;F+RF
 	 * \endif
 	 */
 	public int           Offset;
@@ -22,7 +22,7 @@ public class SDK_SNIFFER_CONTENT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * It is invalid now
 	 * \else
-	 * 目前没有应用
+	 * D?G0C;SPS&SC
 	 * \endif
 	 */
 	public int           Offset2;
@@ -31,7 +31,7 @@ public class SDK_SNIFFER_CONTENT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The symbol position length
 	 * \else
-	 * 标志位的长度
+	 * 1jV>N;5D3$6H
 	 * \endif
 	 */
 	public int           Length;
@@ -40,7 +40,7 @@ public class SDK_SNIFFER_CONTENT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * It is invalid now
 	 * \else
-	 * 目前没有应用
+	 * D?G0C;SPS&SC
 	 * \endif
 	 */
 	public int           Length2;
@@ -49,7 +49,7 @@ public class SDK_SNIFFER_CONTENT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Title value
 	 * \else
-	 * 标题的值
+	 * 1jLb5DV5
 	 * \endif
 	 */
 	public byte          Title[] = new byte[12];
@@ -58,7 +58,7 @@ public class SDK_SNIFFER_CONTENT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Key value
 	 * \else
-	 * 关键字的值
+	 * 9X<|WV5DV5
 	 * \endif
 	 */
 	public byte          Key[] = new byte[12];

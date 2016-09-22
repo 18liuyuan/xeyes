@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Video input color config. Each input video has several corresponding color setups. 
  * \else
- * 视频输入颜色配置, 每个视频输入通道对应多个颜色配置
+ * JSF5JdHkQUI+EdVC, C?8vJSF5JdHkM(5@6TS&6`8vQUI+EdVC
  * \endif
  */
 public class AV_CFG_VideoColor implements Serializable {
@@ -19,7 +19,7 @@ public class AV_CFG_VideoColor implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Period
 	 * \else
-	 * 时间段
+	 * J1<d6N
 	 * \endif
 	 */
 	public AV_CFG_TimeSection	stuTimeSection = new AV_CFG_TimeSection();
@@ -28,7 +28,7 @@ public class AV_CFG_VideoColor implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Brightness, 1~100
 	 * \else
-	 * 亮度, 0~100
+	 * AA6H, 0~100
 	 * \endif
 	 */
 	public int			nBrightness;
@@ -37,7 +37,7 @@ public class AV_CFG_VideoColor implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Contrastness, 1~100
 	 * \else
-	 * 对比度, 0~100
+	 * 6T1H6H, 0~100
 	 * \endif
 	 */
 	public int			nContrast;
@@ -46,7 +46,7 @@ public class AV_CFG_VideoColor implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Saturation, 1~100
 	 * \else
-	 * 饱和度, 0~100
+	 * 1%:M6H, 0~100
 	 * \endif
 	 */
 	public int			nSaturation;
@@ -55,7 +55,7 @@ public class AV_CFG_VideoColor implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Hue, 1~100
 	 * \else
-	 * 色调, 0~100
+	 * I+5w, 0~100
 	 * \endif
 	 */
 	public int			nHue;
@@ -64,7 +64,7 @@ public class AV_CFG_VideoColor implements Serializable {
 	 * \if ENGLISH_LANG
 	 * plus, 0~100
 	 * \else
-	 * 增益, 0~100
+	 * TvRf, 0~100
 	 * \endif
 	 */
 	public int			nGamma;

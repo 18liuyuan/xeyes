@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Bypass Status Change Event Info
  * \else
- * 旁路状态变化事件的信息
+ * ETB7W4L,1d;/JB<~5DPEO"
  * \endif
  */
 public class ALARM_BYPASSMODE_CHANGE_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_BYPASSMODE_CHANGE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel No.
 	 * \else
-	 * 通道号
+	 * M(5@:E
 	 * \endif
 	 */
 	public int                     nChannelID;
@@ -28,7 +28,7 @@ public class ALARM_BYPASSMODE_CHANGE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm Event Time
 	 * \else
-	 * 报警事件发生的时间
+	 * 1(>/JB<~7"Iz5DJ1<d
 	 * \endif
 	 */
 	public NET_TIME                stuTime = new NET_TIME();
@@ -37,7 +37,7 @@ public class ALARM_BYPASSMODE_CHANGE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Armed Zone Type {@link com.company.NetSDK.NET_DEFENCEAREA_TYPE NET_DEFENCEAREA_TYPE}
 	 * \else
-	 * 防区类型 {@link com.company.NetSDK.NET_DEFENCEAREA_TYPE NET_DEFENCEAREA_TYPE}
+	 * 7@Gx@`PM {@link com.company.NetSDK.NET_DEFENCEAREA_TYPE NET_DEFENCEAREA_TYPE}
 	 * \endif
 	 */
 	public int                     emDefenceType;
@@ -46,7 +46,7 @@ public class ALARM_BYPASSMODE_CHANGE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Whether as extension (channel) armed zone or not, 1: extension channel, 0: non-extension channel
 	 * \else
-	 * 是否为扩展(通道)防区, 1:扩展通道, 0: 非扩展通道
+	 * JG7qN*@)U9(M(5@)7@Gx, 1:@)U9M(5@, 0: 7G@)U9M(5@
 	 * \endif
 	 */
 	public int                     nIsExtend;
@@ -55,7 +55,7 @@ public class ALARM_BYPASSMODE_CHANGE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Mode After Change {@link com.company.NetSDK.NET_BYPASS_MODE NET_BYPASS_MODE}
 	 * \else
-	 * 变化后的模式 {@link com.company.NetSDK.NET_BYPASS_MODE NET_BYPASS_MODE}
+	 * 1d;/:s5DD#J= {@link com.company.NetSDK.NET_BYPASS_MODE NET_BYPASS_MODE}
 	 * \endif
 	 */
 	public int                    emMode;
@@ -64,7 +64,7 @@ public class ALARM_BYPASSMODE_CHANGE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * ID number, remote control number or keypad address, emTriggerMode=0 when belong to NET_EM_TRIGGER_MODE_NET
 	 * \else
-	 * ID号, 遥控器编号或键盘地址, emTriggerMode为NET_EM_TRIGGER_MODE_NET类型时为0
+	 * ID:E, R#?XFw1`:E;r<|EL5XV7, emTriggerModeN*NET_EM_TRIGGER_MODE_NET@`PMJ1N*0
 	 * \endif
 	 */
 	public int                     dwID; 
@@ -73,7 +73,7 @@ public class ALARM_BYPASSMODE_CHANGE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * trigger mode, NET_EM_TRIGGER_MODE
 	 * \else
-	 * 触发方式, NET_EM_TRIGGER_MODE
+	 * 4%7"7=J=, NET_EM_TRIGGER_MODE
 	 * \endif
 	 */
 	public int                     emTriggerMode; 

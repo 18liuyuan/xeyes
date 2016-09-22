@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * INetSDK.ControlDevice interface SDK_CTRL_CLOSE_BURNER 
  * \else
- * INetSDK.ControlDevice接口的 SDK_CTRL_CLOSE_BURNER 等 命令参数
+ * INetSDK.ControlDevice=S?Z5D SDK_CTRL_CLOSE_BURNER 5H C|An2NJ}
  * \endif
  */
 public class NET_CTRL_BURNERDOOR implements Serializable {
@@ -19,7 +19,7 @@ public class NET_CTRL_BURNERDOOR implements Serializable {
 	 * \if ENGLISH_LANG
 	 * cd name,like "/dev/sda"
 	 * \else
-	 * 光盘名称，如“/dev/sda”
+	 * 9bELC{3F#,Hg!0/dev/sda!1
 	 * \endif
 	 */
 	public String       szBurnerName; 
@@ -28,7 +28,7 @@ public class NET_CTRL_BURNERDOOR implements Serializable {
 	 * \if ENGLISH_LANG
 	 * operate result
 	 * \else
-	 * 操作结果
+	 * 2YWw=a9{
 	 * \endif
 	 */
 	public boolean      bResult; 
@@ -37,7 +37,7 @@ public class NET_CTRL_BURNERDOOR implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Whether The Security Pop-up Drive, Data Save TRUE- pop Up Before, FALSE- Display)
 	 * \else
-	 * 是否安全弹出光驱, TRUE-弹出前做数据保存, FALSE-直接弹出
+	 * JG7q02H+5/3v9bG}, TRUE-5/3vG0WvJ}>]1#4f, FALSE-V1=S5/3v
 	 * \endif
 	 */
 	public boolean		bSafeEject; 

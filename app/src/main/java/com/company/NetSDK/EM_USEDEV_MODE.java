@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Audio talk way
  * \else
- * 对讲方式
+ * 6T=27=J=
  * \endif
  */
 public class EM_USEDEV_MODE implements Serializable {
@@ -19,7 +19,7 @@ public class EM_USEDEV_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Set client-end mode to begin audio talk 
 	 * \else
-	 * 设置客户端方式进行语音对讲
+	 * IhVC?M;'6K7=J==xPPSoRt6T=2
 	 * \endif
 	 */
 	public static final int     SDK_TALK_CLIENT_MODE = 0;
@@ -28,7 +28,7 @@ public class EM_USEDEV_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Set server mode to begin audio talk
 	 * \else
-	 * 设置服务器方式进行语音对讲
+	 * IhVC7~NqFw7=J==xPPSoRt6T=2
 	 * \endif
 	 */
 	public static final int     SDK_TALK_SERVER_MODE = 1;
@@ -37,7 +37,7 @@ public class EM_USEDEV_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Set encode format for audio talk
 	 * \else
-	 * 设置语音对讲编码格式
+	 * IhVCSoRt6T=21`Bk8qJ=
 	 * \endif
 	 */
 	public static final int     SDK_TALK_ENCODE_TYPE = 2;
@@ -46,7 +46,7 @@ public class EM_USEDEV_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Set alarm subscribe way 
 	 * \else
-	 * 设置报警订阅方式
+	 * IhVC1(>/6)TD7=J=
 	 * \endif
 	 */
 	public static final int     SDK_ALARM_LISTEN_MODE = 3;
@@ -55,7 +55,7 @@ public class EM_USEDEV_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Set user right to realize configuration management
 	 * \else
-	 * 设置通过权限进行配置管理
+	 * IhVCM(9}H(O^=xPPEdVC9\@m
 	 * \endif
 	 */
 	public static final int     SDK_CONFIG_AUTHORITY_MODE = 4;
@@ -64,7 +64,7 @@ public class EM_USEDEV_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Set talking channel(0~MaxChannel-1)
 	 * \else
-	 * 设置对讲通道(0~MaxChannel-1)
+	 * IhVC6T=2M(5@(0~MaxChannel-1)
 	 * \endif
 	 */
 	public static final int     SDK_TALK_TALK_CHANNEL = 5;
@@ -73,7 +73,7 @@ public class EM_USEDEV_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Set the stream type of the record for query(0-both main and extra stream,1-only main stream,2-only extra stream)  
 	 * \else
-	 * 设置待查询及按时间回放的录像码流类型(0-主辅码流,1-主码流,2-辅码流) 
+	 * IhVC4}2iQ/<004J1<d;X7E5DB<OqBkAw@`PM(0-Vw8(BkAw,1-VwBkAw,2-8(BkAw) 
 	 * \endif
 	 */
 	public static final int     SDK_RECORD_STREAM_TYPE = 6;
@@ -82,7 +82,7 @@ public class EM_USEDEV_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Set speaking parameter,corresponding to NET_SPEAK_PARAM
 	 * \else
-	 * 设置语音对讲喊话参数，对应结构体  NET_SPEAK_PARAM
+	 * IhVCSoRt6T=2:0;02NJ}#,6TS&=a99Le  NET_SPEAK_PARAM
 	 * \endif
 	 */
 	public static final int     SDK_TALK_SPEAK_PARAM = 7;
@@ -91,7 +91,7 @@ public class EM_USEDEV_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Set by time video playback and download the video file TYPE (see.net RECORD TYPE)
 	 * \else
-	 * 设置按时间录像回放及下载的录像文件类型(详见NET_RECORD_TYPE)
+	 * IhVC04J1<dB<Oq;X7E<0OBTX5DB<OqND<~@`PM(Oj<{NET_RECORD_TYPE)
 	 * \endif
 	 */
     public static final int     SDK_RECORD_TYPE = 8; 
@@ -100,16 +100,16 @@ public class EM_USEDEV_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Set voice intercom parameters of three generations of equipment and the corresponding structure NET TALK the EX
 	 * \else
-	 * 设置三代设备的语音对讲参数, 对应结构体NET_TALK_EX
+	 * IhVCH}4zIh185DSoRt6T=22NJ}, 6TS&=a99LeNET_TALK_EX
 	 * \endif
 	 */
     public static final int     SDK_TALK_MODE3 = 9;
     
     /**
 	 * \if ENGLISH_LANG
-	 * set real time playback function(0-off，1-on)
+	 * set real time playback function(0-off#,1-on)
 	 * \else
-	 * 设置实时回放功能(0-关闭，1开启)
+	 * IhVCJ5J1;X7E9&D\(0-9X1U#,1?*Ft)
 	 * \endif
 	 */
     public static final int     SDK_PLAYBACK_REALTIME_MODE = 10; 
@@ -118,7 +118,7 @@ public class EM_USEDEV_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Judge the voice intercom if it was a forwarding mode, (corresponding to  NET_TALK_TRANSFER_PARAM)
 	 * \else
-	 * 设置语音对讲是否为转发模式, 对应结构体 NET_TALK_TRANSFER_PARAM
+	 * IhVCSoRt6T=2JG7qN*W*7"D#J=, 6TS&=a99Le NET_TALK_TRANSFER_PARAM
 	 * \endif
 	 */
     public static final int     SDK_TALK_TRANSFER_MODE = 11; 

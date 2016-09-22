@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * cascading order window
  * \else
- * ´°¿Ú²ãµþ´ÎÐò
+ * 40?Z2c5~4NPr
  * \endif
  */
 public class SDK_WND_ZORDER implements Serializable {
@@ -19,16 +19,17 @@ public class SDK_WND_ZORDER implements Serializable {
 	 * \if ENGLISH_LANG
 	 * window ID
 	 * \else
-	 * ´°¿ÚÐòºÅ
+	 * 40?ZPr:E
 	 * \endif
 	 */
-	public int				nWindowID;					
+	public int				nWindowID;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Z order
 	 * \else
-	 * Z´ÎÐò
+	 * Z4NPr
 	 * \endif
 	 */
-	public int				nZOrder;					
+	public int				nZOrder;
 }

@@ -6,10 +6,9 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Wireless network signal intensity structure
  * \else
- * 无线网络信号强度结构体
+ * N^O_MxBgPE:EG?6H=a99Le
  * \endif
  */
-
 public class SDKDEV_WIRELESS_RSS_INFO implements Serializable {
 	/**
 	 *
@@ -18,44 +17,49 @@ public class SDKDEV_WIRELESS_RSS_INFO implements Serializable {
 
 	/**
 	 * \if ENGLISH_LANG
-	 * TD-SCDMA intensity,range:0－100 
+	 * TD-SCDMA intensity,range:0#-100 
 	 * \else
-	 * TD-SCDMA强度,范围:0－100
+	 * TD-SCDMAG?6H,76N':0#-100
 	 * \endif
 	 */
-	public int				dwTDSCDMA;				
+	public int				dwTDSCDMA;
+	
 	/**
 	 * \if ENGLISH_LANG
-	 * WCDMA intensity,range:0－100 
+	 * WCDMA intensity,range:0#-100 
 	 * \else
-	 * WCDMA强度,范围:0－100
+	 * WCDMAG?6H,76N':0#-100
 	 * \endif
 	 */
-	public int				dwWCDMA;				
+	public int				dwWCDMA;
+	
 	/**
 	 * \if ENGLISH_LANG
-	 * CDMA1x intensity,intensity:0－100 
+	 * CDMA1x intensity,intensity:0#-100 
 	 * \else
-	 * CDMA1x强度,范围:0－100
+	 * CDMA1xG?6H,76N':0#-100
 	 * \endif
 	 */
-	public int				dwCDMA1x;				
+	public int				dwCDMA1x;
+	
 	/**
 	 * \if ENGLISH_LANG
-	 * EDGE intensity,range:0－100 
+	 * EDGE intensity,range:0#-100 
 	 * \else
-	 * EDGE强度,范围:0－100
+	 * EDGEG?6H,76N':0#-100
 	 * \endif
 	 */
-	public int				dwEDGE;					
+	public int				dwEDGE;
+	
 	/**
 	 * \if ENGLISH_LANG
-	 * EVDO intensity,range:0－100 
+	 * EVDO intensity,range:0#-100 
 	 * \else
-	 * EVDO强度,范围:0－100
+	 * EVDOG?6H,76N':0#-100
 	 * \endif
 	 */
-	public int				dwEVDO;					
+	public int				dwEVDO;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Current type
@@ -69,9 +73,9 @@ public class SDKDEV_WIRELESS_RSS_INFO implements Serializable {
 	 *  6	TD-LTE
 	 *  </pre>
 	 * \else
-	 * 当前类型
+	 * 51G0@`PM
 	 * <pre>
-	 *  0	设备不支持这一项
+	 *  0	Ih182;V'3VUbR;On
 	 *  1   TD-SCDMA
 	 *  2	WCDMA
 	 *  3	CDMA_1x
@@ -81,13 +85,13 @@ public class SDKDEV_WIRELESS_RSS_INFO implements Serializable {
 	 *  </pre>
 	 * \endif
 	 */
-	public int				nCurrentType;			
+	public int				nCurrentType;
 												
 	/**
 	 * \if ENGLISH_LANG
-	 * TD-LTE intensity,range:0－100 
+	 * TD-LTE intensity,range:0#-100 
 	 * \else
-	 * TD-LTE强度,范围:0－100
+	 * TD-LTEG?6H,76N':0#-100
 	 * \endif
 	 */
 	public int				dwTDLTE;				

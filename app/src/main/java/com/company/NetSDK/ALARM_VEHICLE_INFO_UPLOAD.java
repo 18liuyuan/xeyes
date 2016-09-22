@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * vehicle info uploading (SDK_DEVSTATE_VIHICLE_INFO_UPLOAD)
  * \else
- * 车载自定义信息上传(SDK_DEVSTATE_VIHICLE_INFO_UPLOAD)
+ * 35TXWT6(RePEO"IO4+(SDK_DEVSTATE_VIHICLE_INFO_UPLOAD)
  * \endif
  */
 public class ALARM_VEHICLE_INFO_UPLOAD implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_VEHICLE_INFO_UPLOAD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * type: DriverCheck ,Driver check in or check out
 	 * \else
-	 * 信息类别: DriverCheck：司机签入签出
+	 * PEO"@`1p: DriverCheck#:K>;zG)HkG)3v
 	 * \endif
 	 */
 	public byte                szType[] = new byte[FinalVar.SDK_VEHICLE_TYPE_LEN];
@@ -28,7 +28,7 @@ public class ALARM_VEHICLE_INFO_UPLOAD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Check in, Check out
 	 * \else
-	 * 签入：CheckIn、签出：CheckOut  
+	 * G)Hk#:CheckIn!"G)3v#:CheckOut  
 	 * \endif
 	 */
 	public byte                szCheckInfo[] = new byte[FinalVar.SDK_VEHICLE_INFO_LEN];
@@ -37,7 +37,7 @@ public class ALARM_VEHICLE_INFO_UPLOAD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Driver NO. string
 	 * \else
-	 * 司机工号字符串
+	 * K>;z9$:EWV7{4.
 	 * \endif
 	 */
 	public byte                szDirverNO[] = new byte[FinalVar.SDK_VEHICLE_DRIVERNO_LEN];
@@ -46,7 +46,7 @@ public class ALARM_VEHICLE_INFO_UPLOAD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * time
 	 * \else
-	 * 报警发生时间
+	 * 1(>/7"IzJ1<d
 	 * \endif
 	 */
 	public SDKDEVTIME           stTime = new SDKDEVTIME();
@@ -55,7 +55,7 @@ public class ALARM_VEHICLE_INFO_UPLOAD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0-real time 1-to fill 
 	 * \else
-	 * 0-实时 1-补传 
+	 * 0-J5J1 1-294+ 
 	 * \endif
 	 */
 	public byte                bOffline;

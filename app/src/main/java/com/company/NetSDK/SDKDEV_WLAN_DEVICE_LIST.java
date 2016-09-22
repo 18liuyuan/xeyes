@@ -2,12 +2,11 @@ package com.company.NetSDK;
 
 import java.io.Serializable;
 
-
 /**
  * \if ENGLISH_LANG
  * Searched wireless device list
  * \else
- * 搜索到的无线设备列表
+ * KQKw5=5DN^O_Ih18AP1m
  * \endif
  */
 public class SDKDEV_WLAN_DEVICE_LIST implements Serializable {
@@ -20,7 +19,7 @@ public class SDKDEV_WLAN_DEVICE_LIST implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Searched wireless device amount
 	 * \else
-	 * 搜索到的无线设备个数
+	 * KQKw5=5DN^O_Ih188vJ}
 	 * \endif
 	 */
 	public byte                bWlanDevCount;
@@ -29,7 +28,7 @@ public class SDKDEV_WLAN_DEVICE_LIST implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Select to use one wireless device
 	 * \else
-	 * 选择使用某个无线设备
+	 * Q!TqJ9SCD38vN^O_Ih18
 	 * \endif
 	 */
 	public SDKDEV_WLAN_DEVICE   lstWlanDev[] = new SDKDEV_WLAN_DEVICE[FinalVar.SDK_MAX_WLANDEVICE_NUM];

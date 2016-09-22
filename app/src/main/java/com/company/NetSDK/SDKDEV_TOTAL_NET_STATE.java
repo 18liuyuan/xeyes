@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Network running status info
  * \else
- * 网络运行状态信息
+ * MxBgTKPPW4L,PEO"
  * \endif
  */
 public class SDKDEV_TOTAL_NET_STATE implements Serializable {
@@ -19,7 +19,7 @@ public class SDKDEV_TOTAL_NET_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * User amount 
 	 * \else
-	 * 用户数量
+	 * SC;'J}A?
 	 * \endif
 	 */
 	public int					nUserCount;
@@ -28,7 +28,7 @@ public class SDKDEV_TOTAL_NET_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Network info of the user 
 	 * \else
-	 * 用户使用网络信息
+	 * SC;'J9SCMxBgPEO"
 	 * \endif
 	 */
 	public SDKDEV_USER_NET_INFO	stuUserInfo[] = new SDKDEV_USER_NET_INFO[32];

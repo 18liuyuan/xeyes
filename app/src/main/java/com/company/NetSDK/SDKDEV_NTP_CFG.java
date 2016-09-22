@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * NTP setup 
  * \else
- * NTP配置
+ * NTPEdVC
  * \endif
  */
 public class SDKDEV_NTP_CFG implements Serializable {
@@ -19,7 +19,7 @@ public class SDKDEV_NTP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable or not
 	 * \else
-	 * 是否启用
+	 * JG7qFtSC
 	 * \endif
 	 */
 	public boolean                bEnable;
@@ -28,7 +28,7 @@ public class SDKDEV_NTP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * NTP  server default port is 123
 	 * \else
-	 * NTP服务器默认端口为123
+	 * NTP7~NqFwD,HO6K?ZN*123
 	 * \endif
 	 */
 	public int                 nHostPort;
@@ -37,7 +37,7 @@ public class SDKDEV_NTP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Host IP
 	 * \else
-	 * 主机IP
+	 * Vw;zIP
 	 * \endif
 	 */
 	public byte                szHostIp[] = new byte[32];
@@ -46,7 +46,7 @@ public class SDKDEV_NTP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Domain name
 	 * \else
-	 * 域名
+	 * SrC{
 	 * \endif
 	 */
 	public byte                szDomainName[] = new byte[128];
@@ -55,7 +55,7 @@ public class SDKDEV_NTP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Read only ,0:IP,1:domain name ,2:IP and domain name
 	 * \else
-	 * 不可设置，0：表示IP，1：表示域名，2：表示IP和域名
+	 * 2;?IIhVC#,0#:1mJ>IP#,1#:1mJ>SrC{#,2#:1mJ>IP:MSrC{
 	 * \endif
 	 */
 	public int                 nType;
@@ -64,7 +64,7 @@ public class SDKDEV_NTP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Update time(minute)
 	 * \else
-	 * 更新时间(分钟)
+	 * 8|PBJ1<d(7VVS)
 	 * \endif
 	 */
 	public int                 nUpdateInterval;
@@ -73,7 +73,7 @@ public class SDKDEV_NTP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Please refer to SDK_TIME_ZONE_TYPE
 	 * \else
-	 * 见SDK_TIME_ZONE_TYPE
+	 * <{SDK_TIME_ZONE_TYPE
 	 * \endif
 	 */
 	public int                 nTimeZone;

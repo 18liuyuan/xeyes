@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Record-storage group corresponding info
  * \else
- * 录像-存储组 对应信息
+ * B<Oq-4f4"Wi 6TS&PEO"
  * \endif
  */
 public class CFG_RECORDTOGROUP_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_RECORDTOGROUP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel Id 
 	 * \else
-	 * 通道号
+	 * M(5@:E
 	 * \endif
 	 */
 	public int				nChannelID;
@@ -28,7 +28,7 @@ public class CFG_RECORDTOGROUP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable 
 	 * \else
-	 * 使能  
+	 * J9D\  
 	 * \endif
 	 */
 	public boolean			bEnable;
@@ -37,7 +37,7 @@ public class CFG_RECORDTOGROUP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Storage Group Name, Read-only 
 	 * \else
-	 * 存储组名称, 只读
+	 * 4f4"WiC{3F, V;6A
 	 * \endif
 	 */
 	public byte[]			szGroupName = new byte[FinalVar.MAX_STORAGEGROUPNAME_LEN];
@@ -46,7 +46,7 @@ public class CFG_RECORDTOGROUP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Storage GroupIndex(1~max group, 0 no group) 
 	 * \else
-	 * 存储组序号(1~最大盘组, 0则表示无对应盘组)，通过此参数与CFG_STORAGE_GROUP_INFO关联
+	 * 4f4"WiPr:E(1~Wn4sELWi, 0Tr1mJ>N^6TS&ELWi)#,M(9}4K2NJ}SkCFG_STORAGE_GROUP_INFO9XA*
 	 * \endif
 	 */
 	public int				nGroupIndex;

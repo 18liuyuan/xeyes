@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * INetSDK.ControlDevice's param: SDK_CTRL_SET_BYPASS 
  * \else
- * INetSDK.ControlDevice接口的 SDK_CTRL_SET_BYPASS 命令参数
+ * INetSDK.ControlDevice=S?Z5D SDK_CTRL_SET_BYPASS C|An2NJ}
  * \endif
  */
 public class NET_CTRL_SET_BYPASS implements Serializable {
@@ -20,7 +20,7 @@ public class NET_CTRL_SET_BYPASS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Login Device Password
 	 * \else
-	 * 登入设备的密码
+	 * 5GHkIh185DC\Bk
 	 * \endif
 	 */
 	public String				szDevPwd; 
@@ -29,7 +29,7 @@ public class NET_CTRL_SET_BYPASS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel Statue, NET_BYPASS_MODE
 	 * \else
-	 * 通道状态, NET_BYPASS_MODE
+	 * M(5@W4L,, NET_BYPASS_MODE
 	 * \endif
 	 */
 	public int					emMode; 
@@ -38,7 +38,7 @@ public class NET_CTRL_SET_BYPASS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Local Alarm Input Channnel Number
 	 * \else
-	 * 本地报警输入通道个数
+	 * 1>5X1(>/JdHkM(5@8vJ}
 	 * \endif
 	 */
 	public int					nLocalCount; 
@@ -47,7 +47,7 @@ public class NET_CTRL_SET_BYPASS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Local Alarm Input Channnel ID 
 	 * \else
-	 * 本地报警输入通道号
+	 * 1>5X1(>/JdHkM(5@:E
 	 * \endif
 	 */
 	public int					pnLocal[]; 
@@ -56,7 +56,7 @@ public class NET_CTRL_SET_BYPASS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Expand Module Alarm Input Channel Number
 	 * \else
-	 * 扩展模块报警输入通道个数
+	 * @)U9D#?i1(>/JdHkM(5@8vJ}
 	 * \endif
 	 */
 	public int					nExtendedCount; 
@@ -65,7 +65,7 @@ public class NET_CTRL_SET_BYPASS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Expand Module Alarm Input Channel ID
 	 * \else
-	 * 扩展模块报警输入通道号
+	 * @)U9D#?i1(>/JdHkM(5@:E
 	 * \endif
 	 */
 	public int					pnExtended[]; 

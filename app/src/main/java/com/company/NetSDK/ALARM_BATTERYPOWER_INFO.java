@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * battery scheduled notice event
  * \else
- * 电池电量定时通知事件
+ * 5g3X5gA?6(J1M(V*JB<~
  * \endif
  */
 public class ALARM_BATTERYPOWER_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_BATTERYPOWER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * battery no.
 	 * \else
-	 * 电池序号
+	 * 5g3XPr:E
 	 * \endif
 	 */
 	public int 		  nChannel;
@@ -28,7 +28,7 @@ public class ALARM_BATTERYPOWER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * event time
 	 * \else
-	 * 事件时间
+	 * JB<~J1<d
 	 * \endif
 	 */
 	public NET_TIME   stuTime = new NET_TIME();
@@ -37,7 +37,7 @@ public class ALARM_BATTERYPOWER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * battery percentage
 	 * \else
-	 * 电池电量百分比
+	 * 5g3X5gA?0Y7V1H
 	 * \endif
 	 */
 	public int        nPercent;

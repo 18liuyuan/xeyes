@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Raid Info Structure
  * \else
- * Raid信息
+ * RaidPEO"
  * \endif
  */
 public class AV_CFG_Raid implements Serializable {
@@ -20,7 +20,7 @@ public class AV_CFG_Raid implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Name 
 	 * \else
-	 * 名称
+	 * C{3F
 	 * \endif
 	 */
 	public byte[]		szName = new byte[FinalVar.AV_CFG_Raid_Name_Len];
@@ -29,7 +29,7 @@ public class AV_CFG_Raid implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Level 
 	 * \else
-	 * 等级
+	 * 5H<6
 	 * \endif
 	 */
 	public int			nLevel;
@@ -38,7 +38,7 @@ public class AV_CFG_Raid implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Disk Member Count 
 	 * \else
-	 * 磁盘成员数量
+	 * 4EEL3IT1J}A?
 	 * \endif
 	 */
 	public int			nMemberNum;
@@ -47,7 +47,7 @@ public class AV_CFG_Raid implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Disk Member 
 	 * \else
-	 * 磁盘成员
+	 * 4EEL3IT1
 	 * \endif
 	 */
 	public byte[][]		szMembers = new byte[FinalVar.AV_CFG_Max_Rail_Member][FinalVar.AV_CFG_Max_Path];

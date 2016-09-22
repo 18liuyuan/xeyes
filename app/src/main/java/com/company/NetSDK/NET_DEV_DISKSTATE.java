@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * HDD informaiton 
  * \else
- * 硬盘信息
+ * S2ELPEO"
  * \endif
  */
 public class NET_DEV_DISKSTATE implements Serializable {
@@ -19,7 +19,7 @@ public class NET_DEV_DISKSTATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * HDD capacity 
 	 * \else
-	 * 硬盘的容量, 单位MB(B表示字节)
+	 * S2EL5DH]A?, 5%N;MB(B1mJ>WV=Z)
 	 * \endif
 	 */
 	public int					dwVolume;
@@ -28,7 +28,7 @@ public class NET_DEV_DISKSTATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * HDD free space
 	 * \else
-	 * 硬盘的剩余空间, 单位MB(B表示字节)
+	 * S2EL5DJ#S`?U<d, 5%N;MB(B1mJ>WV=Z)
 	 * \endif
 	 */
 	public int					dwFreeSpace;
@@ -37,7 +37,7 @@ public class NET_DEV_DISKSTATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Higher 4 byte instruct hdd type, see the enum struct EM_DISK_TYPE; lower four byte instruct HDD status,0-hiberation,1-active,2-malfucntion and etc.;Devide DWORD into four BYTE
 	 * \else
-	 * 高四位的值表示硬盘类型，具体见枚举类型EM_DISK_TYPE；低四位的值表示硬盘的状态，0-休眠,1-活动,2-故障等；将DWORD拆成四个BYTE
+	 * 8_KDN;5DV51mJ>S2EL@`PM#,>_Le<{C6>Y@`PMEM_DISK_TYPE#;5MKDN;5DV51mJ>S2EL5DW4L,#,0-P]C_,1-;n6/,2-9JUO5H#;=+DWORD2p3IKD8vBYTE
 	 * \endif
 	 */
 	public byte					dwStatus;
@@ -46,7 +46,7 @@ public class NET_DEV_DISKSTATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * HDD number
 	 * \else
-	 * 硬盘号
+	 * S2EL:E
 	 * \endif
 	 */
 	public byte					bDiskNum;
@@ -55,7 +55,7 @@ public class NET_DEV_DISKSTATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Subarea number
 	 * \else
-	 * 分区号
+	 * 7VGx:E
 	 * \endif
 	 */
 	public byte					bSubareaNum;
@@ -64,7 +64,7 @@ public class NET_DEV_DISKSTATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Symbol. 0:local. 1:remote
 	 * \else
-	 * 标识，0为本地 1为远程
+	 * 1jJ6#,0N*1>5X 1N*T63L
 	 * \endif
 	 */
 	public byte					bSignal;

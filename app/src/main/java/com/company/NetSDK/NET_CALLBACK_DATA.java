@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Callback data(Asynchronous interface)
  * \else
- * 回调数据(异步接口)
+ * ;X5wJ}>](Rl2==S?Z)
  * \endif
  */
 public class NET_CALLBACK_DATA implements Serializable {
@@ -19,7 +19,7 @@ public class NET_CALLBACK_DATA implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Result code;0:Success
 	 * \else
-	 * 返回码；0：成功
+	 * 75;XBk#;0#:3I9&
 	 * \endif
 	 */
 	public int					nResultCode;
@@ -28,7 +28,7 @@ public class NET_CALLBACK_DATA implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Receive data,buffer is opened by the user,from the interface parameters
 	 * \else
-	 * 接收数据
+	 * =SJUJ}>]
 	 * \endif
 	 */
 	public char[]				pBuf;
@@ -37,7 +37,7 @@ public class NET_CALLBACK_DATA implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The length of receive data
 	 * \else
-	 * 接收长度
+	 * =SJU3$6H
 	 * \endif
 	 */
 	public int					nRetLen;
@@ -46,7 +46,7 @@ public class NET_CALLBACK_DATA implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Operating handle
 	 * \else
-	 * 操作句柄
+	 * 2YWw>d1z
 	 * \endif
 	 */
 	public long				lOperateHandle;
@@ -55,7 +55,7 @@ public class NET_CALLBACK_DATA implements Serializable {
 	 * \if ENGLISH_LANG
 	 * User parameters
 	 * \else
-	 * 操作对应用户参数
+	 * 2YWw6TS&SC;'2NJ}
 	 * \endif
 	 */
 	public long				userdata;

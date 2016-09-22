@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * alarm of storage failure
  * \else
- * 存储错误报警
+ * 4f4"4mNs1(>/
  * \endif
  */
 public class ALARM_STORAGE_FAILURE_EX implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_STORAGE_FAILURE_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:start 1:stop
 	 * \else
-	 * 0:开始 1:停止
+	 * 0:?*J< 1:M#V9
 	 * \endif
 	 */
 	public int                 nAction;
@@ -28,7 +28,7 @@ public class ALARM_STORAGE_FAILURE_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * name
 	 * \else
-	 * 事件名称
+	 * JB<~C{3F
 	 * \endif
 	 */
 	public byte                szName[] = new byte[FinalVar.SDK_EVENT_NAME_LEN];
@@ -37,7 +37,7 @@ public class ALARM_STORAGE_FAILURE_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * device name
 	 * \else
-	 * 存储设备名称
+	 * 4f4"Ih18C{3F
 	 * \endif
 	 */
 	public byte                szDevice[] = new byte[FinalVar.SDK_STORAGE_NAME_LEN];
@@ -46,7 +46,7 @@ public class ALARM_STORAGE_FAILURE_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * group name
 	 * \else
-	 * 存储组名称
+	 * 4f4"WiC{3F
 	 * \endif
 	 */
 	public byte                szGroup[] = new byte[FinalVar.SDK_STORAGE_NAME_LEN];
@@ -55,7 +55,7 @@ public class ALARM_STORAGE_FAILURE_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * path
 	 * \else
-	 * 路径
+	 * B7>6
 	 * \endif
 	 */
 	public byte                szPath[] = new byte[FinalVar.MAX_PATH];
@@ -64,7 +64,7 @@ public class ALARM_STORAGE_FAILURE_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * error type
 	 * \else
-	 * 错误类型
+	 * 4mNs@`PM
 	 * \endif
 	 */
 	public int                 emError;

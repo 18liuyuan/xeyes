@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * FTP Upload Configuration
  * \else
- * FTP…œ¥´≈‰÷√
+ * FTPIO4+EdVC
  * \endif
  */
 public class SDK_FTP_UPLOAD_CFG implements Serializable {

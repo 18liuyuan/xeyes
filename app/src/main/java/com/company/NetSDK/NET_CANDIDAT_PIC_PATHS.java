@@ -12,7 +12,7 @@ public class NET_CANDIDAT_PIC_PATHS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * actual file amount
 	 * \else
-	 * 实际文件个数
+	 * J5<JND<~8vJ}
 	 * \endif
 	 */
 	public int                  nFileCount; 
@@ -21,7 +21,7 @@ public class NET_CANDIDAT_PIC_PATHS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * file information
 	 * \else
-	 * 文件信息
+	 * ND<~PEO"
 	 * \endif
 	 */
 	public SDK_PIC_INFO_EX       stFiles[] = new SDK_PIC_INFO_EX[FinalVar.SDK_MAX_PERSON_IMAGE_NUM];

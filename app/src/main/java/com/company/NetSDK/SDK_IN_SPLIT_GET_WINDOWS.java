@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * GetSplitWindowsInfo's interface input param
  * \else
- * GetSplitWindowsInfo接口输入参数
+ * GetSplitWindowsInfo=S?ZJdHk2NJ}
  * \endif
  */
 public class SDK_IN_SPLIT_GET_WINDOWS implements Serializable {
@@ -19,7 +19,7 @@ public class SDK_IN_SPLIT_GET_WINDOWS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel
 	 * \else
-	 * 通道号
+	 * M(5@:E
 	 * \endif
 	 */
 	public int					nChannel;				

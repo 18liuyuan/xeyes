@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * alarm of disk burned full
  * \else
- * 硬盘刻录满报警事件
+ * S2EL?LB<Bz1(>/JB<~
  * \endif
  */
 public class ALARM_DISKBURNED_FULL_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_DISKBURNED_FULL_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * index
 	 * \else
-	 * 光盘号
+	 * 9bEL:E
 	 * \endif
 	 */
 	public int         nIndex; 

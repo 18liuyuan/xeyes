@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * alarm of speed limit (SDK_DEVSTATE_SPEED_LIMIT)
  * \else
- * 限速报警或路口限速报警 (SDK_DEVSTATE_SPEED_LIMIT)
+ * O^KY1(>/;rB7?ZO^KY1(>/ (SDK_DEVSTATE_SPEED_LIMIT)
  * \endif
  */
 public class ALARM_SPEED_LIMIT implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_SPEED_LIMIT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * alarm type oLowerSpeed, UpperSpeed	
 	 * \else
-	 * 限速报警类别：LowerSpeed, UpperSpeed
+	 * O^KY1(>/@`1p#:LowerSpeed, UpperSpeed
 	 * \endif
 	 */
 	public byte                szType[] = new byte[FinalVar.SDK_SPEEDLIMIT_TYPE_LEN];
@@ -28,7 +28,7 @@ public class ALARM_SPEED_LIMIT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * limit speed KM/H 
 	 * \else
-	 * 限速 单位KM/H 
+	 * O^KY 5%N;KM/H 
 	 * \endif
 	 */
 	public int                 iSpeedLimit;
@@ -37,7 +37,7 @@ public class ALARM_SPEED_LIMIT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * speed KM/H
 	 * \else
-	 * 速度 单位KM/H
+	 * KY6H 5%N;KM/H
 	 * \endif
 	 */
 	public int                 iSpeed;
@@ -46,7 +46,7 @@ public class ALARM_SPEED_LIMIT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * crossing ID
 	 * \else
-	 * 路口序列号
+	 * B7?ZPrAP:E
 	 * \endif
 	 */
 	public byte                szCrossingID[] = new byte[FinalVar.SDK_MAX_CROSSING_ID];
@@ -55,7 +55,7 @@ public class ALARM_SPEED_LIMIT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * longitude(millionth degree, 0-360)
 	 * \else
-	 * 经度(单位是百万分之度，范围0-360度)如东经120.178274度表示为300178274
+	 * >-6H(5%N;JG0YMr7VV.6H#,76N'0-3606H)Hg6+>-120.1782746H1mJ>N*300178274
 	 * \endif
 	 */
 	public int                 dwLongitude;
@@ -64,7 +64,7 @@ public class ALARM_SPEED_LIMIT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * latidude(millionth degree,0-180)
 	 * \else
-	 * 纬度(单位是百万分之度，范围0-180度)如北纬30.183382度表示为120183382
+	 * N36H(5%N;JG0YMr7VV.6H#,76N'0-1806H)Hg11N330.1833826H1mJ>N*120183382
 	 * \endif
 	 */
 	public int                 dwLatidude;
@@ -73,7 +73,7 @@ public class ALARM_SPEED_LIMIT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * time
 	 * \else
-	 * 报警发生时间
+	 * 1(>/7"IzJ1<d
 	 * \endif
 	 */
 	public SDKDEVTIME          stTime = new SDKDEVTIME();
@@ -82,7 +82,7 @@ public class ALARM_SPEED_LIMIT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0-in real time,1-to fill 
 	 * \else
-	 * 0-实时 1-补传 
+	 * 0-J5J1 1-294+ 
 	 * \endif
 	 */
 	public byte                bOffline;

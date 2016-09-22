@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * \if ENGLISH_LANG
- * 抓图功能属性结构体
+ * W%M<9&D\JtPT=a99Le
  * \else
  * Capture functional attributes structure
  * \endif
@@ -19,16 +19,16 @@ public class SDK_SNAP_ATTR_EN implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel amount
 	 * \else
-	 * 通道个数
+	 * M(5@8vJ}
 	 * \endif
 	 */
-	public int					nChannelCount;			// 
+	public int					nChannelCount;
 	
 	/**
 	 * \if ENGLISH_LANG
 	 * Capture properties 
 	 * \else
-	 * 抓图属性
+	 * W%M<JtPT
 	 * \endif
 	 */
 	public SDK_QUERY_SNAP_INFO  stuSnap[] = new SDK_QUERY_SNAP_INFO[FinalVar.SDK_MAX_CHANNUM];

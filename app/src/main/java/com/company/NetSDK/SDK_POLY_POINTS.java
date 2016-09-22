@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * 
  * \else
- * 区域或曲线顶点信息
+ * GxSr;rGzO_6%5cPEO"
  * \endif
  */
 public class SDK_POLY_POINTS implements Serializable {
@@ -20,7 +20,7 @@ public class SDK_POLY_POINTS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * point number
 	 * \else
-	 * 顶点数
+	 * 6%5cJ}
 	 * \endif
 	 */
 	public int        nPointNum; 
@@ -29,7 +29,7 @@ public class SDK_POLY_POINTS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * point info
 	 * \else
-	 * 顶点信息
+	 * 6%5cPEO"
 	 * \endif
 	 */
 	public SDK_POINT   stuPoints[] = new SDK_POINT[FinalVar.SDK_MAX_DETECT_REGION_NUM]; 

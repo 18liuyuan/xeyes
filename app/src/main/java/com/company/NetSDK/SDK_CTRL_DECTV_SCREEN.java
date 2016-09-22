@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Port serial number
  * \else
- * CtrlDecTVScreen 接口参数
+ * CtrlDecTVScreen =S?Z2NJ}
  * \endif
  */
 public class SDK_CTRL_DECTV_SCREEN implements Serializable {
@@ -19,40 +19,35 @@ public class SDK_CTRL_DECTV_SCREEN implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 分割模式
+	 * 7V8nD#J=
 	 * \endif
 	 */
-	public int             nSplitType;                         
+	public int             nSplitType;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 显示通道,dwDisplayType=SDK_SPLIT_DISPLAY_TYPE_GENERAL时有效,调用者分配的内存长度不能小于nSplitType的大小
+	 * OTJ>M(5@,dwDisplayType=SDK_SPLIT_DISPLAY_TYPE_GENERALJ1SPP',5wSCU_7VEd5DDZ4f3$6H2;D\P!SZnSplitType5D4sP!
 	 * \endif
 	 */
-	public byte[]          pEncoderChannel;                    
+	public byte[]          pEncoderChannel;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 输入通道组号,dwDisplayType=SDK_SPLIT_DISPLAY_TYPE_PIP时表示画中画显示类型下有效；
+	 * JdHkM(5@Wi:E,dwDisplayType=SDK_SPLIT_DISPLAY_TYPE_PIPJ11mJ>;-VP;-OTJ>@`PMOBSPP'#;
 	 * \endif
 	 */
-	public byte            byGroupNo;     						
+	public byte            byGroupNo;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 保留字节
+	 * OTJ>@`PM#;>_Le<{SDK_SPLIT_DISPLAY_TYPE#(W"JM8wD#J=OBOTJ>DZH]SI"PicInPic">v6(, 8wD#J=OBOTJ>DZH]04NVD>ISP9fTr>v6(#(<4DisChnWV6N>v6(#)!#<fH]#,C;SPUbR;8vOnJ1#,D,HON*FUM(OTJ>@`PM,<4"General"#)
 	 * \endif
 	 */
-	public char			reserved[] = new char[3];           
-	/**
-	 * \if ENGLISH_LANG
-	 * Port serial number
-	 * \else
-	 * 显示类型；具体见SDK_SPLIT_DISPLAY_TYPE（注释各模式下显示内容由"PicInPic"决定, 各模式下显示内容按NVD旧有规则决定（即DisChn字段决定）。兼容，没有这一个项时，默认为普通显示类型,即"General"）
-	 * \endif
-	 */
-	public int             dwDisplayType;                      
+	public int             dwDisplayType;
 }

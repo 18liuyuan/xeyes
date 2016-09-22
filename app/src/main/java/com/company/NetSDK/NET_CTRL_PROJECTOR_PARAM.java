@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * projector control parameter
  * \else
- * 投影仪控制参数
+ * M6S0RG?XVF2NJ}
  * \endif
  */
 public class NET_CTRL_PROJECTOR_PARAM implements Serializable {
@@ -19,7 +19,7 @@ public class NET_CTRL_PROJECTOR_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * device ID
 	 * \else
-	 * 设备ID
+	 * Ih18ID
 	 * \endif
 	 */
 	public String		pszDeviceID; 

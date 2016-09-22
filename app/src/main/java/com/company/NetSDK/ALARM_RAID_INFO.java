@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Query RAID state
  * \else
- * 查询RAID状态
+ * 2iQ/RAIDW4L,
  * \endif
  */
 public class ALARM_RAID_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_RAID_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * RAID number
 	 * \else
-	 * 上报的RAID个数   
+	 * IO1(5DRAID8vJ}   
 	 * \endif
 	 */
 	public int              nRaidNumber;
@@ -28,7 +28,7 @@ public class ALARM_RAID_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * RAID info
 	 * \else
-	 * 异常的RAID信息
+	 * Rl3#5DRAIDPEO"
 	 * \endif
 	 */
 	public RAID_STATE_INFO  stuRaidInfo[] = new RAID_STATE_INFO[FinalVar.SDK_MAX_RAID_NUM];

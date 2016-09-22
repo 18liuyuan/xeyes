@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * person info
  * \else
- * 人员信息
+ * HKT1PEO"
  * \endif
  */
 public class FACERECOGNITION_PERSON_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class FACERECOGNITION_PERSON_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 *  name
 	 * \else
-	 * 姓名，此参数作废
+	 * PUC{#,4K2NJ}Ww7O
 	 * \endif
 	 */
 	public byte           	szPersonName[] 		= new byte[FinalVar.SDK_MAX_NAME_LEN]; 
@@ -28,7 +28,7 @@ public class FACERECOGNITION_PERSON_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * birth year
 	 * \else
-	 * 出生年，作为查询条件时，此参数填0，则表示此参数无效
+	 * 3vIzDj#,WwN*2iQ/Lu<~J1#,4K2NJ}Ln0#,Tr1mJ>4K2NJ}N^P'
 	 * \endif
 	 */
 	public int				wYear; 
@@ -37,7 +37,7 @@ public class FACERECOGNITION_PERSON_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * birth month
 	 * \else
-	 * 出生月，作为查询条件时，此参数填0，则表示此参数无效
+	 * 3vIzTB#,WwN*2iQ/Lu<~J1#,4K2NJ}Ln0#,Tr1mJ>4K2NJ}N^P'
 	 * \endif
 	 */
 	public byte				byMonth; 
@@ -46,7 +46,7 @@ public class FACERECOGNITION_PERSON_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * birth day
 	 * \else
-	 * 出生日，作为查询条件时，此参数填0，则表示此参数无效
+	 * 3vIzHU#,WwN*2iQ/Lu<~J1#,4K2NJ}Ln0#,Tr1mJ>4K2NJ}N^P'
 	 * \endif
 	 */
 	public byte				byDay; 
@@ -55,7 +55,7 @@ public class FACERECOGNITION_PERSON_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * the unicle ID for the person
 	 * \else
-	 * 人员唯一标示(身份证号码，工号，或其他编号)
+	 * HKT1N(R;1jJ>(Im7]V$:EBk#,9$:E#,;rFdK{1`:E)
 	 * \endif
 	 */
 	public byte      		szID[] 				= new byte[FinalVar.SDK_MAX_PERSON_ID_LEN]; 
@@ -64,7 +64,7 @@ public class FACERECOGNITION_PERSON_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * importance level,1~10,the higher value the higher level
 	 * \else
-	 * 人员重要等级,1~10，数值越高越重要，作为查询条件时，此参数填0，则表示此参数无效
+	 * HKT1VXR*5H<6,1~10#,J}V5T=8_T=VXR*#,WwN*2iQ/Lu<~J1#,4K2NJ}Ln0#,Tr1mJ>4K2NJ}N^P'
 	 * \endif
 	 */
 	public byte          	bImportantRank; 
@@ -73,7 +73,7 @@ public class FACERECOGNITION_PERSON_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * sex, 0-man, 1-female
 	 * \else
-	 * 性别，1-男，2-女，作为查询条件时，此参数填0，则表示此参数无效
+	 * PT1p#,1-DP#,2-E.#,WwN*2iQ/Lu<~J1#,4K2NJ}Ln0#,Tr1mJ>4K2NJ}N^P'
 	 * \endif
 	 */
 	public byte          	bySex; 
@@ -82,7 +82,7 @@ public class FACERECOGNITION_PERSON_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * picture number
 	 * \else
-	 * 图片张数
+	 * M<F,UEJ}
 	 * \endif
 	 */
 	public int           	wFacePicNum; 
@@ -91,7 +91,7 @@ public class FACERECOGNITION_PERSON_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * picture info
 	 * \else
-	 * 当前人员对应的图片信息
+	 * 51G0HKT16TS&5DM<F,PEO"
 	 * \endif
 	 */
 	public SDK_PIC_INFO  	szFacePicInfo[] 	= new SDK_PIC_INFO[FinalVar.SDK_MAX_PERSON_IMAGE_NUM];
@@ -100,7 +100,7 @@ public class FACERECOGNITION_PERSON_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Personnel types, see EM_PERSON_TYPE
 	 * \else
-	 * 人员类型，详见 EM_PERSON_TYPE
+	 * HKT1@`PM#,Oj<{ EM_PERSON_TYPE
 	 * \endif
 	 */
 	public byte          	byType; 
@@ -109,7 +109,7 @@ public class FACERECOGNITION_PERSON_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Document types, see EM_CERTIFICATE_TYPE
 	 * \else
-	 * 证件类型，详见 EM_CERTIFICATE_TYPE
+	 * V$<~@`PM#,Oj<{ EM_CERTIFICATE_TYPE
 	 * \endif
 	 */
 	public byte            	byIDType; 
@@ -118,7 +118,7 @@ public class FACERECOGNITION_PERSON_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * province
 	 * \else
-	 * 省份
+	 * J!7]
 	 * \endif
 	 */
 	public byte         	szProvince[] 		= new byte[FinalVar.SDK_MAX_PROVINCE_NAME_LEN]; 
@@ -127,7 +127,7 @@ public class FACERECOGNITION_PERSON_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * city
 	 * \else
-	 * 城市
+	 * 3GJP
 	 * \endif
 	 */
 	public byte          	szCity[] 			= new byte[FinalVar.SDK_MAX_CITY_NAME_LEN]; 
@@ -136,7 +136,7 @@ public class FACERECOGNITION_PERSON_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Name, the name is too long due to the presence of 16 bytes can not be Storage problems, the increase in this parameter
 	 * \else
-	 * 姓名，因存在姓名过长，16字节无法存放问题，故增加此参数，
+	 * PUC{#,Rr4fTZPUC{9}3$#,16WV=ZN^7(4f7ENJLb#,9JTv<S4K2NJ}#,
 	 * \endif
 	 */
 	public byte          	szPersonNameEx[] 	= new byte[FinalVar.SDK_MAX_PERSON_NAME_LEN];

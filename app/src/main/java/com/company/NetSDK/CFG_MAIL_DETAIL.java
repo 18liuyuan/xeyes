@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Mail detail content
  * \else
- * 邮件详细内容
+ * SJ<~OjO8DZH]
  * \endif
  */
 public class CFG_MAIL_DETAIL implements Serializable {
@@ -20,25 +20,25 @@ public class CFG_MAIL_DETAIL implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Attachment type
 	 * \else
-	 * 附件类型, CFG_ATTACHMENT_TYPE
+	 * 8=<~@`PM, CFG_ATTACHMENT_TYPE
 	 * \endif
 	 */
 	public int				   emAttachType;                 
 
 	/**
 	 * \if ENGLISH_LANG
-	 * File upload limit，unit kB
+	 * File upload limit#,unit kB
 	 * \else
-	 * 文件大小上限，单位kB
+	 * ND<~4sP!IOO^#,5%N;kB
 	 * \endif
 	 */
 	public int                 nMaxSize;                     
 
 	/**
 	 * \if ENGLISH_LANG
-	 * Max record length, unit is s，valid to video
+	 * Max record length, unit is s#,valid to video
 	 * \else
-	 * 最大录像时间长度，单位秒，对video有效
+	 * Wn4sB<OqJ1<d3$6H#,5%N;Ck#,6TvideoSPP'
 	 * \endif
 	 */
 	public int                 nMaxTimeLength;               

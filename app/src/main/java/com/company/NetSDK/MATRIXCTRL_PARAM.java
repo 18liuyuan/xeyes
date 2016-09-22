@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Matrix control
  * \else
- * 矩阵控制
+ * >XUs?XVF
  * \endif
  */
 public class MATRIXCTRL_PARAM implements Serializable {
@@ -19,7 +19,7 @@ public class MATRIXCTRL_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Video input number. It begins from  0.
 	 * \else
-	 * 视频输入号，从0开始
+	 * JSF5JdHk:E#,4S0?*J<
 	 * \endif
 	 */
 	public 	int					nChannelNo; 
@@ -28,7 +28,7 @@ public class MATRIXCTRL_PARAM implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Matrix output number. It begins from 0
 	 * \else
-	 * 矩阵输出号，从0开始
+	 * >XUsJd3v:E#,4S0?*J<
 	 * \endif
 	 */
 	public  int					nMatrixNo; 

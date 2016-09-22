@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Network Area Server Configuration 
  * \else
- * 网络存储服务器配置 
+ * MxBg4f4"7~NqFwEdVC 
  * \endif
  */
 public class CFG_NAS_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_NAS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable
 	 * \else
-	 * 使能开关
+	 * J9D\?*9X
 	 * \endif
 	 */
 	public boolean				bEnable;
@@ -28,7 +28,7 @@ public class CFG_NAS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Version of Network Area Server 0=FTP,1=NAS 
 	 * \else
-	 * 网络存储服务器版本0=老的FTP，1=NAS存储
+	 * MxBg4f4"7~NqFw0f1>0=@O5DFTP#,1=NAS4f4"
 	 * \endif
 	 */
 	public int					nVersion;
@@ -37,7 +37,7 @@ public class CFG_NAS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Protocol Type0=FTP 1=SMB 
 	 * \else
-	 * 协议类型0=FTP 1=SMB
+	 * P-Ri@`PM0=FTP 1=SMB
 	 * \endif
 	 */
 	public int					nProtocol;
@@ -46,7 +46,7 @@ public class CFG_NAS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * IP or Domain Name 
 	 * \else
-	 * IP地址或网络名
+	 * IP5XV7;rMxBgC{
 	 * \endif
 	 */
 	public byte[]				szAddress = new byte[FinalVar.MAX_ADDRESS_LEN];
@@ -55,7 +55,7 @@ public class CFG_NAS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port Number 
 	 * \else
-	 * 端口号
+	 * 6K?Z:E
 	 * \endif
 	 */
 	public int					nPort;
@@ -64,7 +64,7 @@ public class CFG_NAS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * User Name 
 	 * \else
-	 * 帐户名
+	 * UJ;'C{
 	 * \endif
 	 */
 	public byte[]				szUserName = new byte[FinalVar.MAX_USERNAME_LEN];
@@ -73,7 +73,7 @@ public class CFG_NAS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Password
 	 * \else
-	 * 密码
+	 * C\Bk
 	 * \endif
 	 */
 	public byte[]				szPassword = new byte[FinalVar.MAX_PASSWORD_LEN];
@@ -82,7 +82,7 @@ public class CFG_NAS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Shared Directory 
 	 * \else
-	 * 共享的目录名
+	 * 92Om5DD?B<C{
 	 * \endif
 	 */
 	public byte[]				szDirectory = new byte[FinalVar.MAX_DIRECTORY_LEN];
@@ -91,7 +91,7 @@ public class CFG_NAS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Lenth of file 
 	 * \else
-	 * 文件长度
+	 * ND<~3$6H
 	 * \endif
 	 */
 	public int					nFileLen;
@@ -100,7 +100,7 @@ public class CFG_NAS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Interval 
 	 * \else
-	 * 相邻文件时间间隔
+	 * O`AZND<~J1<d<d8t
 	 * \endif
 	 */
 	public int					nInterval;
@@ -109,7 +109,7 @@ public class CFG_NAS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Period of Storage 
 	 * \else
-	 * 存储时间段
+	 * 4f4"J1<d6N
 	 * \endif
 	 */
 	public CFG_CHANNEL_TIME_SECTION[] stuChnTime = new CFG_CHANNEL_TIME_SECTION[FinalVar.MAX_VIDEO_CHANNEL_NUM];
@@ -118,7 +118,7 @@ public class CFG_NAS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Valid Number of Storage 
 	 * \else
-	 * 有效的存储时间段数
+	 * SPP'5D4f4"J1<d6NJ}
 	 * \endif
 	 */
 	public int					nChnTimeCount;

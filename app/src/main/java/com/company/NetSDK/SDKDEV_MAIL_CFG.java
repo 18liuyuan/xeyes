@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Mail configuration structure 
  * \else
- * 邮件配置结构体
+ * SJ<~EdVC=a99Le
  * \endif
  */
 public class SDKDEV_MAIL_CFG implements Serializable {
@@ -19,7 +19,7 @@ public class SDKDEV_MAIL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Mail server address(IP and domain name )
 	 * \else
-	 * 邮件服务器地址(IP或者域名)
+	 * SJ<~7~NqFw5XV7(IP;rU_SrC{)
 	 * \endif
 	 */
 	public byte                sMailIPAddr[] = new byte[FinalVar.SDK_MAX_DOMAIN_NAME_LEN];
@@ -30,7 +30,7 @@ public class SDKDEV_MAIL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Mail server port
 	 * \else
-	 * 邮件服务器端口
+	 * SJ<~7~NqFw6K?Z
 	 * \endif
 	 */
 	public short                wMailPort;
@@ -41,7 +41,7 @@ public class SDKDEV_MAIL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * From
 	 * \else
-	 * 发送地址
+	 * 7"KM5XV7
 	 * \endif
 	 */
 	public byte                sSenderAddr[] = new byte[FinalVar.SDK_MAX_MAIL_ADDR_LEN];
@@ -50,7 +50,7 @@ public class SDKDEV_MAIL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * User name
 	 * \else
-	 * 用户名
+	 * SC;'C{
 	 * \endif
 	 */
 	public byte                sUserName[] = new byte[FinalVar.SDK_MAX_MAIL_NAME_LEN];
@@ -59,7 +59,7 @@ public class SDKDEV_MAIL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * password
 	 * \else
-	 * 用户密码
+	 * SC;'C\Bk
 	 * \endif
 	 */
 	public byte                sUserPsw[] = new byte[FinalVar.SDK_MAX_MAIL_NAME_LEN];
@@ -68,7 +68,7 @@ public class SDKDEV_MAIL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * To
 	 * \else
-	 * 目的地址
+	 * D?5D5XV7
 	 * \endif
 	 */
 	public byte                sDestAddr[] = new byte[FinalVar.SDK_MAX_MAIL_ADDR_LEN];
@@ -77,7 +77,7 @@ public class SDKDEV_MAIL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * CC
 	 * \else
-	 * 抄送地址
+	 * 3-KM5XV7
 	 * \endif
 	 */
 	public byte                sCcAddr[] = new byte[FinalVar.SDK_MAX_MAIL_ADDR_LEN];
@@ -86,7 +86,7 @@ public class SDKDEV_MAIL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * BCC
 	 * \else
-	 * 暗抄地址
+	 * 053-5XV7
 	 * \endif
 	 */
 	public byte                sBccAddr[] = new byte[FinalVar.SDK_MAX_MAIL_ADDR_LEN];
@@ -95,7 +95,7 @@ public class SDKDEV_MAIL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Subject
 	 * \else
-	 * 标题
+	 * 1jLb
 	 * \endif
 	 */
 	public byte                sSubject[] = new byte[FinalVar.SDK_MAX_MAIL_SUBJECT_LEN];
@@ -104,7 +104,7 @@ public class SDKDEV_MAIL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable 0:false,	1:true
 	 * \else
-	 * 使能0:false,    1:true
+	 * J9D\0:false,    1:true
 	 * \endif
 	 */
 	public byte                bEnable;
@@ -113,7 +113,7 @@ public class SDKDEV_MAIL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * SSL enable
 	 * \else
-	 * SSL使能
+	 * SSLJ9D\
 	 * \endif
 	 */
 	public byte                bSSLEnable;
@@ -122,7 +122,7 @@ public class SDKDEV_MAIL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Send interval,[0,3600]s
 	 * \else
-	 * 发送时间间隔,[0,3600]秒
+	 * 7"KMJ1<d<d8t,[0,3600]Ck
 	 * \endif
 	 */
 	public short                wSendInterval;
@@ -131,7 +131,7 @@ public class SDKDEV_MAIL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Anonymous Options[0,1], 0:FALSE,1:TRUE.
 	 * \else
-	 * 匿名选项[0,1], 0表示FALSE,1表示TRUE.
+	 * DdC{Q!On[0,1], 01mJ>FALSE,11mJ>TRUE.
 	 * \endif
 	 */
 	public byte                bAnonymous;
@@ -140,7 +140,7 @@ public class SDKDEV_MAIL_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Attach enable[0,1], 0:FALSE,1:TRUE.
 	 * \else
-	 * 附件使能[0,1], 0表示FALSE,1表示TRUE.
+	 * 8=<~J9D\[0,1], 01mJ>FALSE,11mJ>TRUE.
 	 * \endif
 	 */
 	public byte                bAttachEnable;

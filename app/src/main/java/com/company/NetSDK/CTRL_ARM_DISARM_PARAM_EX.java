@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * alarm arm/diarm control expansion(corresponding to SDK_CTRL_ARMED_EX)
  * \else
- * 报警布撤防控制扩展(对应SDK_CTRL_ARMED_EX)
+ * 1(>/2<377@?XVF@)U9(6TS&SDK_CTRL_ARMED_EX)
  * \endif
  */
 public class CTRL_ARM_DISARM_PARAM_EX implements Serializable {
@@ -20,7 +20,7 @@ public class CTRL_ARM_DISARM_PARAM_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * alarm arm/disarm control input
 	 * \else
-	 * 报警布撤防控制输入
+	 * 1(>/2<377@?XVFJdHk
 	 * \endif
 	 */
 	public CTRL_ARM_DISARM_PARAM_EX_IN  stuIn = new CTRL_ARM_DISARM_PARAM_EX_IN(); 
@@ -29,7 +29,7 @@ public class CTRL_ARM_DISARM_PARAM_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * alarm arm/diarm control output
 	 * \else
-	 * 报警布撤防控制输出
+	 * 1(>/2<377@?XVFJd3v
 	 * \endif
 	 */
 	public CTRL_ARM_DISARM_PARAM_EX_OUT stuOut = new CTRL_ARM_DISARM_PARAM_EX_OUT(); 

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * wireless Ability to structure
  * \else
- * wireless能力结构体
+ * wirelessD\A&=a99Le
  * \endif
  */
 public class SDK_WIRELESS_EN implements Serializable {

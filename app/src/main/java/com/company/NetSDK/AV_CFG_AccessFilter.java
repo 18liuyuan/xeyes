@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Visiting Sites Filter Structure
  * \else
- * 访问地址过滤
+ * 7CNJ5XV79}BK
  * \endif
  */
 public class AV_CFG_AccessFilter implements Serializable {
@@ -20,7 +20,7 @@ public class AV_CFG_AccessFilter implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable 
 	 * \else
-	 * 使能
+	 * J9D\
 	 * \endif
 	 */
 	public boolean		bEnable;
@@ -29,7 +29,7 @@ public class AV_CFG_AccessFilter implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Types, 0-Black List, 1-White List 
 	 * \else
-	 * 类型, 0-黑名单, 1-白名单
+	 * @`PM, 0-:ZC{5%, 1-0WC{5%
 	 * \endif
 	 */
 	public int			nType;
@@ -38,7 +38,7 @@ public class AV_CFG_AccessFilter implements Serializable {
 	 * \if ENGLISH_LANG
 	 * White List IP Amounts 
 	 * \else
-	 * 白名单IP数量
+	 * 0WC{5%IPJ}A?
 	 * \endif
 	 */
 	public int			nWhiteListNum;
@@ -47,7 +47,7 @@ public class AV_CFG_AccessFilter implements Serializable {
 	 * \if ENGLISH_LANG
 	 * White List 
 	 * \else
-	 * 白名单
+	 * 0WC{5%
 	 * \endif
 	 */
 	public byte[][]		szWhiteList = new byte[FinalVar.AV_CFG_Max_White_List][FinalVar.AV_CFG_Filter_IP_Len];
@@ -56,7 +56,7 @@ public class AV_CFG_AccessFilter implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Black List IP OrIP Segment Black List 
 	 * \else
-	 * 黑名单IP或IP段数量
+	 * :ZC{5%IP;rIP6NJ}A?
 	 * \endif
 	 */
 	public int			nBlackListNum;
@@ -65,7 +65,7 @@ public class AV_CFG_AccessFilter implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Black List 
 	 * \else
-	 * 黑名单
+	 * :ZC{5%
 	 * \endif
 	 */
 	public byte[][]		szBlackList = new byte[FinalVar.AV_CFG_Max_Black_List][FinalVar.AV_CFG_Filter_IP_Len];

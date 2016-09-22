@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * format the partition information, INetSDK.ControlDevice(SDK_CTRL_FORMAT_PATITION)
  * \else
- * 格式化分区信息, INetSDK.ControlDevice(SDK_CTRL_FORMAT_PATITION)
+ * 8qJ=;/7VGxPEO", INetSDK.ControlDevice(SDK_CTRL_FORMAT_PATITION)
  * \endif
  */
 public class SDK_FORMAT_PATITION implements Serializable {
@@ -19,7 +19,7 @@ public class SDK_FORMAT_PATITION implements Serializable {
 	 * \if ENGLISH_LANG
 	 * storage name
 	 * \else
-	 * 存储设备名称
+	 * 4f4"Ih18C{3F
 	 * \endif
 	 */
 	public String		pszStorageName; 
@@ -28,7 +28,7 @@ public class SDK_FORMAT_PATITION implements Serializable {
 	 * \if ENGLISH_LANG
 	 * partition name
 	 * \else
-	 * 分区名
+	 * 7VGxC{
 	 * \endif
 	 */
 	public String		pszPatitionName; 

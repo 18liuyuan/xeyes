@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * larm of High CPU Occupancy rate, temporarily we set the max limit as 95%
  * \else
- * CPU占用率过高事件报警，暂定上限95%。
+ * CPUU<SCBJ9}8_JB<~1(>/#,T]6(IOO^95%!#
  * \endif
  */
 public class ALARM_HIGH_CPU implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_HIGH_CPU implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0: Stop, 1: start
 	 * \else
-	 * 0：停止， 1：开始
+	 * 0#:M#V9#, 1#:?*J<
 	 * \endif
 	 */
 	public int      ActionType;
@@ -28,7 +28,7 @@ public class ALARM_HIGH_CPU implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 1000 times of  CPU Occupancy rate
 	 * \else
-	 * CPU占用率的1000倍
+	 * CPUU<SCBJ5D100016
 	 * \endif
 	 */
 	public int      nUsed;
@@ -37,7 +37,7 @@ public class ALARM_HIGH_CPU implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Event occurrence time
 	 * \else
-	 * 事件发生时间    
+	 * JB<~7"IzJ1<d    
 	 * \endif
 	 */
 	public NET_TIME  stuTime = new NET_TIME();         

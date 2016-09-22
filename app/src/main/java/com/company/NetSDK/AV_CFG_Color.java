@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Color
  * \else
- * ÑÕÉ«
+ * QUI+
  * \endif
  */
 public class AV_CFG_Color implements Serializable {
@@ -19,7 +19,7 @@ public class AV_CFG_Color implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Red
 	 * \else
-	 * ºì
+	 * :l
 	 * \endif
 	 */
 	public int			nRed;
@@ -28,7 +28,7 @@ public class AV_CFG_Color implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Green
 	 * \else
-	 * ÂÌ
+	 * BL
 	 * \endif
 	 */
 	public int			nGreen;
@@ -37,7 +37,7 @@ public class AV_CFG_Color implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Blue
 	 * \else
-	 * À¶
+	 * @6
 	 * \endif
 	 */
 	public int			nBlue;
@@ -46,7 +46,7 @@ public class AV_CFG_Color implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Transparent
 	 * \else
-	 * Í¸Ã÷
+	 * M8Cw
 	 * \endif
 	 */
 	public int			nAlpha;

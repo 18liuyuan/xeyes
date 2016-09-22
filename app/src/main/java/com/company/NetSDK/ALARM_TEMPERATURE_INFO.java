@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * temperature alarm info
  * \else
- * 温度过高报警
+ * NB6H9}8_1(>/
  * \endif
  */
 public class ALARM_TEMPERATURE_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_TEMPERATURE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * sensor name
 	 * \else
-	 * 温度传感器名称
+	 * NB6H4+8PFwC{3F
 	 * \endif
 	 */
 	public byte               szSensorName[] = new byte[FinalVar.SDK_MACHINE_NAME_NUM];
@@ -28,7 +28,7 @@ public class ALARM_TEMPERATURE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * channel id
 	 * \else
-	 * 通道号
+	 * M(5@:E
 	 * \endif
 	 */
 	public int                nChannelID;
@@ -37,7 +37,7 @@ public class ALARM_TEMPERATURE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:stop 1:start	
 	 * \else
-	 * 0:开始 1:停止
+	 * 0:?*J< 1:M#V9
 	 * \endif
 	 */
 	public int                nAction;
@@ -46,7 +46,7 @@ public class ALARM_TEMPERATURE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * current temperature, unit:degree centigrade
 	 * \else
-	 * 当前温度值, 单位摄氏度
+	 * 51G0NB6HV5, 5%N;IcJO6H
 	 * \endif
 	 */
 	public float              fTemperature;
@@ -55,7 +55,7 @@ public class ALARM_TEMPERATURE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * event happen time
 	 * \else
-	 * 事件发生时间
+	 * JB<~7"IzJ1<d
 	 * \endif
 	 */
 	public NET_TIME           stTime = new NET_TIME();

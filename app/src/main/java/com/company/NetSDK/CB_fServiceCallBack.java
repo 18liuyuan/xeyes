@@ -4,7 +4,7 @@ package com.company.NetSDK;
  * \if ENGLISH_LANG
  * Listening server callback function original shape
  * \else
- * 监听回调
+ * <`L};X5w
  * \endif
  */
 public interface CB_fServiceCallBack {
@@ -14,15 +14,15 @@ public interface CB_fServiceCallBack {
 	 * @param lHandle recall info servier handle , return from {@link com.company.NetSDK.INetSDK#StartService() StartService}
 	 * @param pIp upload info device Ip 
 	 * @param wPort upload info device Port 
-	 * @param lCommand alarm type，as SetDVRMessCallBack 
+	 * @param lCommand alarm type#,as SetDVRMessCallBack 
 	 * @param pParam alarm info buffering area
 	 * \else
-	 * 侦听服务器回调函数
-	 * @param lHandle 服务句柄 ,{@link com.company.NetSDK.INetSDK#StartService() StartService}返回值
-	 * @param pIp 连接到服务的设备端ip 
-	 * @param wPort 连接到服务的设备端port 
-	 * @param lCommand 设备请求命令, 详见  SetDVRMessCallBack
-	 * @param pParam 设备请求命令的参数：设备序列号 
+	 * UlL}7~NqFw;X5w:/J}
+	 * @param lHandle 7~Nq>d1z ,{@link com.company.NetSDK.INetSDK#StartService() StartService}75;XV5
+	 * @param pIp A,=S5=7~Nq5DIh186Kip 
+	 * @param wPort A,=S5=7~Nq5DIh186Kport 
+	 * @param lCommand Ih18GkGsC|An, Oj<{  SetDVRMessCallBack
+	 * @param pParam Ih18GkGsC|An5D2NJ}#:Ih18PrAP:E 
 	 * \endif
 	 */
 	public int invoke(long lHandle, String pIp, short wPort, int lCommand, Object pParam);

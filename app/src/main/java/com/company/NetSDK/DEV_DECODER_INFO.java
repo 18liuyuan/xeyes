@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Decoder information
  * \else
- * 连接的编码器信息
+ * A,=S5D1`BkFwPEO"
  * \endif
  */
 public class DEV_DECODER_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class DEV_DECODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * type
 	 * \else
-	 * 类型
+	 * @`PM
 	 * \endif
 	 */
 	public byte			szDecType[] = new byte[64];
@@ -28,7 +28,7 @@ public class DEV_DECODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * TV number
 	 * \else
-	 * TV个数
+	 * TV8vJ}
 	 * \endif
 	 */
 	public int				nMonitorNum;
@@ -37,7 +37,7 @@ public class DEV_DECODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Decoder channel number
 	 * \else
-	 * 解码通道个数
+	 * =bBkM(5@8vJ}
 	 * \endif
 	 */
 	public int				nEncoderNum;
@@ -46,7 +46,7 @@ public class DEV_DECODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Supported by a number of TV screen partition
 	 * \else
-	 * 支持的TV画面分割数，以数组形式表示，0为结尾
+	 * V'3V5DTV;-Cf7V8nJ}#,RTJ}WiPNJ=1mJ>#,0N*=aN2
 	 * \endif
 	 */
 	public byte			szSplitMode[] = new byte[16];
@@ -55,7 +55,7 @@ public class DEV_DECODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * TV enable
 	 * \else
-	 * 各TV使能
+	 * 8wTVJ9D\
 	 * \endif
 	 */
 	public byte            bMonitorEnable[] = new byte[16];
@@ -64,7 +64,7 @@ public class DEV_DECODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * TV tip display enable 0:not support 1:support.
 	 * \else
-	 * 指示是否支持TV提示信息叠加设置, 0:不支持 1:支持.
+	 * V8J>JG7qV'3VTVLaJ>PEO"5~<SIhVC, 0:2;V'3V 1:V'3V.
 	 * \endif
 	 */
 	public byte            bTVTipDisplay;
@@ -73,7 +73,7 @@ public class DEV_DECODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 各解码通道显示叠加信息使能
+	 * 8w=bBkM(5@OTJ>5~<SPEO"J9D\
 	 * \endif
 	 */
 	public byte            byLayoutEnable[] = new byte[48];
@@ -82,7 +82,7 @@ public class DEV_DECODER_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 各解码通道显示叠加信息使能掩码,从低位到高位支持64个通道,其中dwLayoutEnMask[0]是低32位
+	 * 8w=bBkM(5@OTJ>5~<SPEO"J9D\QZBk,4S5MN;5=8_N;V'3V648vM(5@,FdVPdwLayoutEnMask[0]JG5M32N;
 	 * \endif
 	 */
 	public int           	dwLayoutEnMask[] = new int[2];

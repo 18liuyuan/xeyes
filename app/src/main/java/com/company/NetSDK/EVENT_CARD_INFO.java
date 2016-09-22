@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Event report with card info
  * \else
- * ¶Ë¿ÚÐòºÅ
+ * 6K?ZPr:E
  * \endif
  */
 public class EVENT_CARD_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class EVENT_CARD_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Card no. string
 	 * \else
-	 * ¿¨Æ¬ÐòºÅ×Ö·û´®
+	 * ?(F,Pr:EWV7{4.
 	 * \endif
 	 */
 	public byte szCardNumber[] = new byte[FinalVar.SDK_EVENT_CARD_LEN];     

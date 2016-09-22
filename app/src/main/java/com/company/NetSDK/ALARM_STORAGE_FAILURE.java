@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * storage failure alarm info
  * \else
- * 存储异常报警
+ * 4f4"Rl3#1(>/
  * \endif
  */
 public class ALARM_STORAGE_FAILURE implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_STORAGE_FAILURE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:stop 1:start
 	 * \else
-	 * 0：停止， 1：开始
+	 * 0#:M#V9#, 1#:?*J<
 	 * \endif
 	 */
 	public int      ActionType;
@@ -28,7 +28,7 @@ public class ALARM_STORAGE_FAILURE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * protocol type
 	 * \else
-	 * 协议类型，目前只支持FTP
+	 * P-Ri@`PM#,D?G0V;V'3VFTP
 	 * \endif
 	 */
 	public byte      szProtocol[] = new byte[FinalVar.SDK_MAX_STRING_LEN];
@@ -37,7 +37,7 @@ public class ALARM_STORAGE_FAILURE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * server device's ip 
 	 * \else
-	 * 服务器IP地址
+	 * 7~NqFwIP5XV7
 	 * \endif
 	 */
 	public byte      szServerAddr[] = new byte[FinalVar.SDK_MAX_IPADDR_OR_DOMAIN_LEN];
@@ -46,7 +46,7 @@ public class ALARM_STORAGE_FAILURE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * port number
 	 * \else
-	 * 端口号
+	 * 6K?Z:E
 	 * \endif
 	 */
 	public int     dwPort;
@@ -55,7 +55,7 @@ public class ALARM_STORAGE_FAILURE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * event happen time
 	 * \else
-	 * 事件发生时间
+	 * JB<~7"IzJ1<d
 	 * \endif
 	 */
 	public NET_TIME  stuTime = new NET_TIME();
@@ -64,7 +64,7 @@ public class ALARM_STORAGE_FAILURE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * channel, from 1, 0 means does not distinguish
 	 * \else
-	 * 通道号, 从1开始, 0表示不区分通道
+	 * M(5@:E, 4S1?*J<, 01mJ>2;Gx7VM(5@
 	 * \endif
 	 */
 	public int       nChannel;

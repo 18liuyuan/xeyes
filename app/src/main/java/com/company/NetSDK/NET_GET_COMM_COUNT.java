@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Port serial number
  * \else
- * 设备信息
+ * Ih18PEO"
  * \endif
  */
 public class NET_GET_COMM_COUNT implements Serializable {
@@ -19,7 +19,7 @@ public class NET_GET_COMM_COUNT implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 获取到的串口数
+	 * ;qH!5=5D4.?ZJ}
 	 * \endif
 	 */
 	public int				nChannelCout;		 

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * TrafficCar
  * \else
- * 交通车辆信息
+ * =;M(35A>PEO"
  * \endif
  */
 public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Plate number
 	 * \else
-	 * 车牌号码
+	 * 35EF:EBk
 	 * \endif
 	 */
 	public byte               szPlateNumber[] 	= new byte[32];          
@@ -27,7 +27,7 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Plate type
 	 * \else
-	 * 号牌类型	参见VideoAnalyseRule中车牌类型定义
+	 * :EEF@`PM	2N<{VideoAnalyseRuleVP35EF@`PM6(Re
 	 * \endif
 	 */
 	public byte               szPlateType[] 	= new byte[32];          
@@ -35,7 +35,7 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * plate color, "Blue","Yellow", "White","Black"
 	 * \else
-	 * 车牌颜色	"Blue","Yellow", "White","Black"
+	 * 35EFQUI+	"Blue","Yellow", "White","Black"
 	 * \endif
 	 */
 	public byte               szPlateColor[] 	= new byte[32];          
@@ -43,7 +43,7 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * vehicle color, "White", "Black", "Red", "Yellow", "Gray", "Blue","Green"
 	 * \else
-	 * 车身颜色	"White", "Black", "Red", "Yellow", "Gray", "Blue","Green"
+	 * 35ImQUI+	"White", "Black", "Red", "Yellow", "Gray", "Blue","Green"
 	 * \endif
 	 */
 	public byte               szVehicleColor[] = new byte[32];          
@@ -51,7 +51,7 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * speed, Km/H
 	 * \else
-	 * 速度	单位Km/H
+	 * KY6H	5%N;Km/H
 	 * \endif
 	 */
 	public int                nSpeed;                          		 
@@ -59,7 +59,7 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * trigger event type
 	 * \else
-	 * 触发的相关事件	参见事件列表Event List，只包含交通相关事件。
+	 * 4%7"5DO`9XJB<~	2N<{JB<~AP1mEvent List#,V;0|:,=;M(O`9XJB<~!#
 	 * \endif
 	 */
 	public byte               szEvent[] = new byte[64];                 
@@ -67,7 +67,7 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * violation code, see TrafficGlobal.ViolationCode
 	 * \else
-	 * 违章代码	详见TrafficGlobal.ViolationCode
+	 * N%UB4zBk	Oj<{TrafficGlobal.ViolationCode
 	 * \endif
 	 */
 	public byte               szViolationCode[] = new byte[32];         
@@ -75,7 +75,7 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * violation describe
 	 * \else
-	 * 违章描述
+	 * N%UBChJv
 	 * \endif
 	 */
 	public byte               szViolationDesc[] = new byte[64];         
@@ -83,7 +83,7 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * lower speed limit
 	 * \else
-	 * 速度下限
+	 * KY6HOBO^
 	 * \endif
 	 */
 	public int                nLowerSpeedLimit;                
@@ -91,7 +91,7 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * upper speed limit
 	 * \else
-	 * 速度上限
+	 * KY6HIOO^
 	 * \endif
 	 */
 	public int                nUpperSpeedLimit;                
@@ -99,7 +99,7 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * over speed margin, km/h 
 	 * \else
-	 * 限高速宽限值	单位：km/h
+	 * O^8_KY?mO^V5	5%N;#:km/h
 	 * \endif
 	 */
 	public int                nOverSpeedMargin;                 
@@ -107,7 +107,7 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * under speed margin, km/h 
 	 * \else
-	 * 限低速宽限值	单位：km/h 
+	 * O^5MKY?mO^V5	5%N;#:km/h 
 	 * \endif
 	 */
 	public int                nUnderSpeedMargin;               
@@ -115,7 +115,7 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * lane
 	 * \else
-	 * 车道	参见事件列表Event List中卡口和路口事件。
+	 * 355@	2N<{JB<~AP1mEvent ListVP?(?Z:MB7?ZJB<~!#
 	 * \endif
 	 */
 	public int                nLane;                           
@@ -123,12 +123,12 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * vehicle size, see VideoAnalyseRule's describe
 	 * \else
-	 * 车辆大小,-1表示未知，否则按位
-	 * 第0位:"Light-duty", 小型车
-	 * 第1位:"Medium", 中型车
-	 * 第2位:"Oversize", 大型车
-	 * 第3位:"Minisize", 微型车
-	 * 第4位:"Largesize", 长车
+	 * 35A>4sP!,-11mJ>N4V*#,7qTr04N;
+	 * 5Z0N;:"Light-duty", P!PM35
+	 * 5Z1N;:"Medium", VPPM35
+	 * 5Z2N;:"Oversize", 4sPM35
+	 * 5Z3N;:"Minisize", N"PM35
+	 * 5Z4N;:"Largesize", 3$35
 	 * \endif
 	 */
 	public int                nVehicleSize;                    
@@ -137,7 +137,7 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * vehicle length, (m)
 	 * \else
-	 * 车辆长度	单位米
+	 * 35A>3$6H	5%N;CW
 	 * \endif
 	 */
 	public float             fVehicleLength;                  
@@ -145,7 +145,7 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * snap mode 0-normal,1-globle,2-near,4-snap on the same side,8-snap on the reverse side,16-plant picture
 	 * \else
-	 * 抓拍方式	0-未分类，1-全景，2-近景，4-同向抓拍，8-反向抓拍，16-号牌图像
+	 * W%ED7=J=	0-N47V@`#,1-H+>0#,2-=|>0#,4-M,OrW%ED#,8-74OrW%ED#,16-:EEFM<Oq
 	 * \endif
 	 */
 	public int                nSnapshotMode;                   
@@ -153,7 +153,7 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * channel name
 	 * \else
-	 * 本地或远程的通道名称，可以是地点信息	来源于通道标题配置ChannelTitle.Name 
+	 * 1>5X;rT63L5DM(5@C{3F#,?IRTJG5X5cPEO"	@4T4SZM(5@1jLbEdVCChannelTitle.Name 
 	 * \endif
 	 */
 	public byte               szChannelName[] = new byte[32];               
@@ -161,7 +161,7 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Machine name
 	 * \else
-	 * 本地或远程设备名称	来源于普通配置General.MachineName
+	 * 1>5X;rT63LIh18C{3F	@4T4SZFUM(EdVCGeneral.MachineName
 	 * \endif
 	 */
 	public byte               szMachineName[] = new byte[256];              
@@ -169,7 +169,7 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * machine group
 	 * \else
-	 * 机器分组或叫设备所属单位	默认为空，用户可以将不同的设备编为一组，便于管理，可重复。
+	 * ;zFw7VWi;r=PIh18KyJt5%N;	D,HON*?U#,SC;'?IRT=+2;M,5DIh181`N*R;Wi#,1cSZ9\@m#,?IVX84!#
 	 * \endif
 	 */
 	public byte               szMachineGroup[] = new byte[256];             
@@ -177,7 +177,7 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * road way number	
 	 * \else
-	 * 道路编号
+	 * 5@B71`:E
 	 * \endif
 	 */
 	public byte               szRoadwayNo[] = new byte[64];                 
@@ -187,10 +187,10 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * "Approach" means driving direction,where the car is more near;"Leave"-means where if mor far to the car
 	 * the second and third param means the location of the driving direction
 	 * \else
-     * "DrivingDirection" : ["Approach", "上海", "杭州"],行驶方向
-     * "Approach"-上行，即车辆离设备部署点越来越近；"Leave"-下行，
-     * 即车辆离设备部署点越来越远，第二和第三个参数分别代表上行和
-     * 下行的两个地点
+     * "DrivingDirection" : ["Approach", "IO:#", ":<V]"],PPJ;7=Or
+     * "Approach"-IOPP#,<435A>@kIh182?Jp5cT=@4T==|#;"Leave"-OBPP#,
+     * <435A>@kIh182?Jp5cT=@4T=T6#,5Z6~:M5ZH}8v2NJ}7V1p4z1mIOPP:M
+     * OBPP5DA=8v5X5c
 	 * \endif
 	 */
 	public byte               szDrivingDirection[][] = new byte[3][FinalVar.SDK_MAX_DRIVINGDIRECTION];    
@@ -198,7 +198,7 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * device address,OSD superimposed onto the image,from TrafficSnapshot.DeviceAddress,'\0'means end.
 	 * \else
-	 * 设备地址,OSD叠加到图片上的,来源于配置TrafficSnapshot.DeviceAddress,'\0'结束
+	 * Ih185XV7,OSD5~<S5=M<F,IO5D,@4T4SZEdVCTrafficSnapshot.DeviceAddress,'\0'=aJx
 	 * \endif
 	 */
 	public byte[]             szDeviceAddress;                 
@@ -206,7 +206,7 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Vehicle mark, such as "Unknown"-unknown, "Audi"-Audi, "Honda"-Honda ...
 	 * \else
-	 * 车辆标识, 例如 "Unknown"-未知, "Audi"-奥迪, "Honda"-本田 ...
+	 * 35A>1jJ6, @}Hg "Unknown"-N4V*, "Audi"-0B5O, "Honda"-1>Lo ...
 	 * \endif
 	 */
 	public byte			   szVehicleSign[] = new byte[32];				
@@ -214,7 +214,7 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Vehicle detector generated snapshot signal redundant info
 	 * \else
-	 * 由车检器产生抓拍信号冗余信息
+	 * SI35<lFw2zIzW%EDPE:EH_S`PEO"
 	 * \endif
 	 */
 	public SDK_SIG_CARWAY_INFO_EX stuSigInfo = new SDK_SIG_CARWAY_INFO_EX();                   
@@ -222,23 +222,23 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device allocation location
 	 * \else
-	 * 设备部署地点
+	 * Ih182?Jp5X5c
 	 * \endif
 	 */
 	public byte[]			   szMachineAddr;					
 	/**
 	 * \if ENGLISH_LANG
-	 * Current picture exposure time，unit is ms
+	 * Current picture exposure time#,unit is ms
 	 * \else
-	 * 当前图片曝光时间，单位为毫秒
+	 * 51G0M<F,FX9bJ1<d#,5%N;N*:ACk
 	 * \endif
 	 */
-	public double              fActualShutter;                  
+	public float              fActualShutter;                  
 	/**
 	 * \if ENGLISH_LANG
-	 * Current picture gain，range is 0~100
+	 * Current picture gain#,range is 0~100
 	 * \else
-	 * 当前图片增益，范围为0~100
+	 * 51G0M<F,TvRf#,76N'N*0~100
 	 * \endif
 	 */
 	public byte               byActualGain;                    
@@ -246,7 +246,7 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0-S to N 1-SW to NE 2-W to E 3-NW to SE 4-N to S 5-NE to SW 6-E to W 7-SE to NW 8-Unknown
 	 * \else
-	 * 0-南向北 1-西南向东北 2-西向东 3-西北向东南 4-北向南 5-东北向西南 6-东向西 7-东南向西北 8-未知
+	 * 0-DOOr11 1-NwDOOr6+11 2-NwOr6+ 3-Nw11Or6+DO 4-11OrDO 5-6+11OrNwDO 6-6+OrNw 7-6+DOOrNw11 8-N4V*
 	 * \endif
 	 */
 	public byte			   byDirection;						
@@ -254,7 +254,7 @@ public class DEV_EVENT_TRAFFIC_TRAFFICCAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Detailed addreaa, as szDeviceAddress compensation
 	 * \else
-	 * 详细地址, 作为szDeviceAddress的补充
+	 * OjO85XV7, WwN*szDeviceAddress5D293d
 	 * \endif
 	 */
 	public byte[]			   szDetailedAddress;				

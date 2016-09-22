@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * TV Wall Display Information Control Parameters
  * \else
- * 电视墙显示信息控制参数
+ * 5gJSG=OTJ>PEO"?XVF2NJ}
  * \endif
  */
 public class NET_CTRL_MONITORWALL_TVINFO implements Serializable {
@@ -19,7 +19,7 @@ public class NET_CTRL_MONITORWALL_TVINFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * TV Wall ID
 	 * \else
-	 * 电视墙ID
+	 * 5gJSG=ID
 	 * \endif
 	 */
 	public int					nMonitorWallID;
@@ -28,7 +28,7 @@ public class NET_CTRL_MONITORWALL_TVINFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Display Decoding Channel Information
 	 * \else
-	 * 显示解码通道信息
+	 * OTJ>=bBkM(5@PEO"
 	 * \endif
 	 */
 	public boolean				bDecodeChannel;

@@ -12,7 +12,7 @@ public class SDKDEV_CDMAGPRS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Wireless module enable
 	 * \else
-	 * 无线模块使能标志
+	 * N^O_D#?iJ9D\1jV>
 	 * \endif
 	 */
 	public boolean                bEnable;
@@ -24,10 +24,10 @@ public class SDKDEV_CDMAGPRS_CFG implements Serializable {
 	 * The fourth bit:CDMA 1.x network;The fifth bit:GPRS network;The sixth bit:EVDO network
 	 * The seventh bit:EVDO network;The eighth bit:WIFI network;
 	 * \else
-	 * 设备支持网络类型掩码;按位表示,第一位;自动选择;
-	 * 第二位：TD-SCDMA网络；第三位：WCDMA网络;
-	 * 第四位：CDMA 1.x网络;第五位：CDMA2000网络;第六位：GPRS网络;
-	 * 第七位：EVDO网络;第八位：WIFI
+	 * Ih18V'3VMxBg@`PMQZBk;04N;1mJ>,5ZR;N;;WT6/Q!Tq;
+	 * 5Z6~N;#:TD-SCDMAMxBg#;5ZH}N;#:WCDMAMxBg;
+	 * 5ZKDN;#:CDMA 1.xMxBg;5ZNeN;#:CDMA2000MxBg;5ZAyN;#:GPRSMxBg;
+	 * 5ZF_N;#:EVDOMxBg;5Z0KN;#:WIFI
 	 * \endif
 	 */
 	public int               dwTypeMask;
@@ -36,7 +36,7 @@ public class SDKDEV_CDMAGPRS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Types of wireless networks,EM_GPRSCDMA_NETWORK_TYPE
 	 * \else
-	 * 当前的无线网络类型，为EM_GPRSCDMA_NETWORK_TYPE值
+	 * 51G05DN^O_MxBg@`PM#,N*EM_GPRSCDMA_NETWORK_TYPEV5
 	 * \endif
 	 */
 	public int               dwNetType;
@@ -45,7 +45,7 @@ public class SDKDEV_CDMAGPRS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Access Point Name
 	 * \else
-	 * 接入点名称
+	 * =SHk5cC{3F
 	 * \endif
 	 */
 	public byte                szAPN[] = new byte[128];
@@ -54,7 +54,7 @@ public class SDKDEV_CDMAGPRS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Dial-up number
 	 * \else
-	 * 拨号号码
+	 * 2&:E:EBk
 	 * \endif
 	 */
 	public byte                szDialNum[] = new byte[128];
@@ -63,7 +63,7 @@ public class SDKDEV_CDMAGPRS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Dial-up user name
 	 * \else
-	 * 拨号用户名
+	 * 2&:ESC;'C{
 	 * \endif
 	 */
 	public byte                szUserName[] = new byte[128];
@@ -72,17 +72,17 @@ public class SDKDEV_CDMAGPRS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Dial-up Password
 	 * \else
-	 * 拨号密码
+	 * 2&:EC\Bk
 	 * \endif
 	 */
 	public byte                szPWD[] = new byte[128];
     
-    /* 下面是设备的只读部分 */
+    /* OBCfJGIh185DV;6A2?7V */
 	/**
 	 * \if ENGLISH_LANG
 	 * Wireless network registration status
 	 * \else
-	 * 无线网络注册状态
+	 * N^O_MxBgW"2aW4L,
 	 * \endif
 	 */
 	public boolean                iAccessStat;
@@ -91,7 +91,7 @@ public class SDKDEV_CDMAGPRS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * dial-up IP of Front-end equipment
 	 * \else
-	 * 前端设备拨号IP，字符串, 包括'\0'结束符共16byte
+	 * G06KIh182&:EIP#,WV7{4., 0|@('\0'=aJx7{9216byte
 	 * \endif
 	 */
 	public byte                szDevIP[] = new byte[16];
@@ -100,7 +100,7 @@ public class SDKDEV_CDMAGPRS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Dial-up mask of Front-end equipment
 	 * \else
-	 * 前端设备拨号子网掩码，字符串, 包括'\0'结束符共16byte
+	 * G06KIh182&:EWSMxQZBk#,WV7{4., 0|@('\0'=aJx7{9216byte
 	 * \endif
 	 */
 	public byte                szSubNetMask[] = new byte[16];
@@ -109,16 +109,17 @@ public class SDKDEV_CDMAGPRS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Dial-up Gateway of Front-end equipment
 	 * \else
-	 * 前端设备拨号网关，字符串, 包括'\0'结束符共16byte
+	 * G06KIh182&:EMx9X#,WV7{4., 0|@('\0'=aJx7{9216byte
 	 * \endif
 	 */
 	public byte                szGateWay[] = new byte[16];
-    /* 上面是设备的只读部分 */
+	
+    /* IOCfJGIh185DV;6A2?7V */
 	/**
 	 * \if ENGLISH_LANG
 	 * Keep-alive time
 	 * \else
-	 * 保活时间
+	 * 1#;nJ1<d
 	 * \endif
 	 */
 	public int                 iKeepLive;
@@ -127,15 +128,16 @@ public class SDKDEV_CDMAGPRS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 3G dial period,valid time period,start dialing;beyond this period,shut the dial.
 	 * \else
-	 * 3G拨号时间段，有效时间段之内，开启拨号；有效时间段之外，关闭拨号。
+	 * 3G2&:EJ1<d6N#,SPP'J1<d6NV.DZ#,?*Ft2&:E#;SPP'J1<d6NV.Mb#,9X1U2&:E!#
 	 * \endif
 	 */
     public SDK_3G_TIMESECT      stSect[][] = new SDK_3G_TIMESECT[FinalVar.SDK_N_WEEKS][FinalVar.SDK_N_TSECT];
+    
     /**
 	 * \if ENGLISH_LANG
 	 * Whether need to be active by voice or message
 	 * \else
-	 * 是否需要被语音或短信激活
+	 * JG7qPhR*1;SoRt;r6LPE<$;n
 	 * \endif
 	 */
 	public byte                byActivate;
@@ -144,7 +146,7 @@ public class SDKDEV_CDMAGPRS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * SIM(UIM) State: 1, 0 (read-only data) be occupied the 1 byte
 	 * \else
-	 * SIM(UIM)状态:存在1,不存在0  (只读数据) 占用Reserved的1个字节
+	 * SIM(UIM)W4L,:4fTZ1,2;4fTZ0  (V;6AJ}>]) U<SCReserved5D18vWV=Z
 	 * \endif
 	 */
 	public byte                bySimStat;
@@ -153,7 +155,7 @@ public class SDKDEV_CDMAGPRS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * identify mode
 	 * \else
-	 * 鉴权方式
+	 * <xH(7=J=
 	 * \endif
 	 */
 	public byte                szIdentify[] = new byte[128];
@@ -162,7 +164,7 @@ public class SDKDEV_CDMAGPRS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * PPP Dial-up,0- cut down ppp connect,1-ppp dial-up
 	 * \else
-	 * PPP拨号,0-断开ppp连接，1-ppp拨号
+	 * PPP2&:E,0-6O?*pppA,=S#,1-ppp2&:E
 	 * \endif
 	 */
 	public boolean                bPPPEnable;
@@ -171,7 +173,7 @@ public class SDKDEV_CDMAGPRS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * PPP Dial-up statr(real only),see EM_MOBILE_PPP_STATE
 	 * \else
-	 * PPP拨号状态(只读)，具体含义见EM_MOBILE_PPP_STATE
+	 * PPP2&:EW4L,(V;6A)#,>_Le:,Re<{EM_MOBILE_PPP_STATE
 	 * \endif
 	 */
 	public byte                bPPPState;
@@ -180,7 +182,7 @@ public class SDKDEV_CDMAGPRS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * net card state(read only),see EM_3GMOBILE_STATE
 	 * \else
-	 * 网卡所处状态(只读)，具体含义见EM_3GMOBILE_STATE
+	 * Mx?(Ky4&W4L,(V;6A)#,>_Le:,Re<{EM_3GMOBILE_STATE
 	 * \endif
 	 */
 	public byte                bNetCardState;
@@ -189,7 +191,7 @@ public class SDKDEV_CDMAGPRS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * physics card no.
 	 * \else
-	 * 物理卡号
+	 * No@m?(:E
 	 * \endif
 	 */
 	public byte                szPhyCardNo[] = new byte[32];
@@ -198,7 +200,7 @@ public class SDKDEV_CDMAGPRS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * PIN show or not(read only), 0-don't support 1-show, 2-don't show
 	 * \else
-	 * PIN码是否显示(只读), 0-不支持, 1-显示, 2-不显示
+	 * PINBkJG7qOTJ>(V;6A), 0-2;V'3V, 1-OTJ>, 2-2;OTJ>
 	 * \endif
 	 */
 	public byte                byPinShow;
@@ -207,7 +209,7 @@ public class SDKDEV_CDMAGPRS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * PIN setting enable(read only), 0-disable, 1-enable
 	 * \else
-	 * PIN码设置使能(只读), 0-不使能, 1-使能
+	 * PINBkIhVCJ9D\(V;6A), 0-2;J9D\, 1-J9D\
 	 * \endif
 	 */
 	public byte                byPinEnable;
@@ -216,17 +218,17 @@ public class SDKDEV_CDMAGPRS_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * the rest of pin setting number(read only), 0~3
 	 * \else
-	 * PIN码剩余设置次数(只读), 0~3
+	 * PINBkJ#S`IhVC4NJ}(V;6A), 0~3
 	 * \endif
 	 */
 	public byte                byPinCount;
 	
-    //-------------------------------以下字段设置dwSize后才有效------------------------------------
+    //-------------------------------RTOBWV6NIhVCdwSize:s2ESPP'------------------------------------
 	/**
 	 * \if ENGLISH_LANG
 	 * value of PIN, a combination of letters or numbers
 	 * \else
-	 * PIN码值, 字母或数字的任意组合
+	 * PINBkV5, WVD8;rJ}WV5DHNRbWi:O
 	 * \endif
 	 */
 	public byte                szPinNo[] = new byte[16];

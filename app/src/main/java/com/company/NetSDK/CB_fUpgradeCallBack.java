@@ -4,7 +4,7 @@ package com.company.NetSDK;
  * \if ENGLISH_LANG
  * Upgrade device callback function original shape
  * \else
- * 升级设备程序回调
+ * I}<6Ih183LPr;X5w
  * \endif
  */
 public interface CB_fUpgradeCallBack {
@@ -14,13 +14,13 @@ public interface CB_fUpgradeCallBack {
 	 * @param lLoginID login handle, return from {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx}or{@link com.company.NetSDK.INetSDK#Login() Login}
 	 * @param lUpgradeChannel handle, return from{@link com.company.NetSDK.INetSDK#StartUpgrade() StartUpgrade}
 	 * @param nTotalSize update file total length(unit:byte) 
-	 * @param nSendSize Sent file length(unit:byte)，when it is-1，meand update file sending ends 
+	 * @param nSendSize Sent file length(unit:byte)#,when it is-1#,meand update file sending ends 
 	 * \else
-	 * 升级设备程序回调函数
-	 * @param lLoginID 登录句柄, {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx}或者{@link com.company.NetSDK.INetSDK#Login() Login}的返回值
-	 * @param lUpgradeChannel {@link com.company.NetSDK.INetSDK#StartUpgrade() StartUpgrade}返回的升级句柄ID 
-	 * @param nTotalSize 升级文件的总长度(单位:字节) 
-	 * @param nSendSize 已发送的文件长度(单位:字节)，为-1时，表示发送升级文件结束 
+	 * I}<6Ih183LPr;X5w:/J}
+	 * @param lLoginID 5GB<>d1z, {@link com.company.NetSDK.INetSDK#LoginEx() LoginEx};rU_{@link com.company.NetSDK.INetSDK#Login() Login}5D75;XV5
+	 * @param lUpgradeChannel {@link com.company.NetSDK.INetSDK#StartUpgrade() StartUpgrade}75;X5DI}<6>d1zID 
+	 * @param nTotalSize I}<6ND<~5DW\3$6H(5%N;:WV=Z) 
+	 * @param nSendSize RQ7"KM5DND<~3$6H(5%N;:WV=Z)#,N*-1J1#,1mJ>7"KMI}<6ND<~=aJx 
 	 * \endif
 	 */
 	public void invoke(long lLoginID , long lUpgradeChannel , int nTotalSize , int nSendSize);

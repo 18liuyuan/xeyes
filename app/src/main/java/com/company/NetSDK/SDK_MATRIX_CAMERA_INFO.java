@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * available according to the source of information
  * \else
- * 可用的显示源信息
+ * ?ISC5DOTJ>T4PEO"
  * \endif
  */
 public class SDK_MATRIX_CAMERA_INFO implements Serializable {
@@ -20,7 +20,7 @@ public class SDK_MATRIX_CAMERA_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * name
 	 * \else
-	 * 名称
+	 * C{3F
 	 * \endif
 	 */
 	public byte                szName[] = new byte[FinalVar.SDK_DEV_ID_LEN_EX];
@@ -29,7 +29,7 @@ public class SDK_MATRIX_CAMERA_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * device ID
 	 * \else
-	 * 设备ID
+	 * Ih18ID
 	 * \endif
 	 */
 	public byte                szDevID[] = new byte[FinalVar.SDK_DEV_ID_LEN_EX];
@@ -38,7 +38,7 @@ public class SDK_MATRIX_CAMERA_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * control ID
 	 * \else
-	 * 控制ID
+	 * ?XVFID
 	 * \endif
 	 */
 	public byte                szControlID[] = new byte[FinalVar.SDK_DEV_ID_LEN_EX];
@@ -47,7 +47,7 @@ public class SDK_MATRIX_CAMERA_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * channel ID, DeviceID is unique
 	 * \else
-	 * 通道号, DeviceID设备内唯一
+	 * M(5@:E, DeviceIDIh18DZN(R;
 	 * \endif
 	 */
 	public int                 nChannelID;
@@ -56,7 +56,7 @@ public class SDK_MATRIX_CAMERA_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * unique channel
 	 * \else
-	 * 设备内统一编号的唯一通道号
+	 * Ih18DZM3R;1`:E5DN(R;M(5@:E
 	 * \endif
 	 */
 	public int                 nUniqueChannel;
@@ -65,7 +65,7 @@ public class SDK_MATRIX_CAMERA_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * support remote device or not
 	 * \else
-	 * 是否远程设备
+	 * JG7qT63LIh18
 	 * \endif
 	 */
 	public boolean                bRemoteDevice;
@@ -74,16 +74,16 @@ public class SDK_MATRIX_CAMERA_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * info of remote device
 	 * \else
-	 * 远程设备信息
+	 * T63LIh18PEO"
 	 * \endif
 	 */
-	public SDK_REMOTE_DEVICE    stuRemoteDevice = new SDK_REMOTE_DEVICE();
+	public SDK_REMOTE_DEVICE    stuRemoteDevice;
 	
 	/**
 	 * \if ENGLISH_LANG
 	 * stream type, NET_STREAM_TYPE
 	 * \else
-	 * 视频码流类型, NET_STREAM_TYPE
+	 * JSF5BkAw@`PM, NET_STREAM_TYPE
 	 * \endif
 	 */
 	public int                 emStreamType;
@@ -92,8 +92,22 @@ public class SDK_MATRIX_CAMERA_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel Types, NET_LOGIC_CHN_TYPE
 	 * \else
-	 * 通道类型, NET_LOGIC_CHN_TYPE
+	 * M(5@@`PM, NET_LOGIC_CHN_TYPE
 	 * \endif
 	 */
 	public int                 emChannelType;
+	
+	public SDK_MATRIX_CAMERA_INFO()
+	{
+		 stuRemoteDevice = new SDK_REMOTE_DEVICE();
+	}
+	
+	public SDK_MATRIX_CAMERA_INFO(int nMaxVideoInputCount)
+	{
+		if(nMaxVideoInputCount > 0)
+		{
+			stuRemoteDevice = new SDK_REMOTE_DEVICE(nMaxVideoInputCount);
+		}
+	}
+	
 }

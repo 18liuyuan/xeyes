@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Scene Mode
  * \else
- * 情景模式
+ * Gi>0D#J=
  * \endif
  */
 public class NET_SCENE_MODE implements Serializable {
@@ -19,7 +19,7 @@ public class NET_SCENE_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Unknown Scene
 	 * \else
-	 * 未知场景
+	 * N4V*3!>0
 	 * \endif
 	 */
 	public static final int NET_SCENE_MODE_UNKNOWN = 0;
@@ -28,7 +28,7 @@ public class NET_SCENE_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Out Mode
 	 * \else
-	 * 外出模式
+	 * Mb3vD#J=
 	 * \endif
 	 */
 	public static final int NET_SCENE_MODE_OUTDOOR = 1;
@@ -37,12 +37,44 @@ public class NET_SCENE_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * In Mode
 	 * \else
-	 * 室内模式
+	 * JRDZD#J=
 	 * \endif
 	 */
 	public static final int NET_SCENE_MODE_INDOOR = 2;
 	
-	public static final int NET_SCENE_MODE_WHOLE = 3;      // 全局模式
+	/**
+	 * \if ENGLISH_LANG
+	 * global mode
+	 * \else
+	 * H+>VD#J=
+	 * \endif
+	 */
+	public static final int NET_SCENE_MODE_WHOLE = 3;
 	
-	public static final int NET_SCENE_MODE_RIGHTNOW = 4;   // 立即模式
+	/**
+	 * \if ENGLISH_LANG
+	 * immediate mode
+	 * \else
+	 * A"<4D#J=
+	 * \endif
+	 */
+	public static final int NET_SCENE_MODE_RIGHTNOW = 4;
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * sleeping mode
+	 * \else
+	 * >MG^D#J=
+	 * \endif
+	 */
+	public static final int NET_SCENE_MODE_SLEEPING = 5;
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * custom mode
+	 * \else
+	 * WT6(ReD#J=
+	 * \endif
+	 */
+	public static final int NET_SCENE_MODE_CUSTOM = 6;
 }

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Matrix sub card info
  * \else
- * 矩阵子卡	
+ * >XUsWS?(	
  * \endif
  */
 public class SDK_MATRIX_CARD implements Serializable {
@@ -19,360 +19,423 @@ public class SDK_MATRIX_CARD implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Valid or not
 	 * \else
-	 * 是否有效
+	 * JG7qSPP'
 	 * \endif
 	 */
-	public boolean				bEnable;					
+	public boolean				bEnable;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Sub card type
 	 * \else
-	 * 子卡类型
+	 * WS?(@`PM
 	 * \endif
 	 */
-	public int					dwCardType;					
+	public int					dwCardType;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Signal interface type, "CVBS", "VGA", "DVI"...
 	 * \else
-	 * 信号接口类型, "CVBS", "VGA", "DVI"...
+	 * PE:E=S?Z@`PM, "CVBS", "VGA", "DVI"...
 	 * \endif
 	 */
-	public byte		    	szInterface[] = new byte[FinalVar.SDK_MATRIX_INTERFACE_LEN];	
+	public byte		    	szInterface[] = new byte[FinalVar.SDK_MATRIX_INTERFACE_LEN];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Device IP or domain name. The sub card that has no network conneciton can be null.
 	 * \else
-	 * 设备ip或域名, 无网络接口的子卡可以为空
+	 * Ih18ip;rSrC{, N^MxBg=S?Z5DWS?(?IRTN*?U
 	 * \endif
 	 */
-	public byte		    	szAddress[] = new byte[FinalVar.SDK_MAX_IPADDR_OR_DOMAIN_LEN];	
+	public byte		    	szAddress[] = new byte[FinalVar.SDK_MAX_IPADDR_OR_DOMAIN_LEN];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Port No. The sub card that has no network conneciton can be 0.
 	 * \else
-	 * 端口号, 无网络接口的子卡可以为0
+	 * 6K?Z:E, N^MxBg=S?Z5DWS?(?IRTN*0
 	 * \endif
 	 */
-	public int			    	nPort;						
+	public int			    	nPort;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Definition. 0=standard definition. 1=High definition
 	 * \else
-	 * 清晰度, 0=标清, 1=高清
+	 * GeNz6H, 0=1jGe, 1=8_Ge
 	 * \endif
 	 */
-	public int					nDefinition;				
+	public int					nDefinition;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Video input channel amount
 	 * \else
-	 * 视频输入通道数
+	 * JSF5JdHkM(5@J}
 	 * \endif
 	 */
-	public int					nVideoInChn;				
+	public int					nVideoInChn;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Audio input channel amount
 	 * \else
-	 * 音频输入通道数
+	 * RtF5JdHkM(5@J}
 	 * \endif
 	 */
-	public int					nAudioInChn;				
+	public int					nAudioInChn;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Video output channel amount
 	 * \else
-	 * 视频输出通道数
+	 * JSF5Jd3vM(5@J}
 	 * \endif
 	 */
-	public int					nVideoOutChn;	
+	public int					nVideoOutChn;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Audio output channel amount
 	 * \else
-	 * 音频输出通道数
+	 * RtF5Jd3vM(5@J}
 	 * \endif
 	 */
-	public int				    nAudioOutChn;				
+	public int				    nAudioOutChn;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Video encode channel amount	
 	 * \else
-	 * 视频编码通道数
+	 * JSF51`BkM(5@J}
 	 * \endif
 	 */
-	public int			    	nVideoEncChn;				
+	public int			    	nVideoEncChn;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Audio encode channel amount
 	 * \else
-	 * 音频编码通道数
+	 * RtF51`BkM(5@J}
 	 * \endif
 	 */
-	public int				    nAudioEncChn;				
+	public int				    nAudioEncChn;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Video decode channel amount
 	 * \else
-	 * 视频解码通道数
+	 * JSF5=bBkM(5@J}
 	 * \endif
 	 */
-	public int			    	nVideoDecChn;				
+	public int			    	nVideoDecChn;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Audio decode channel amount
 	 * \else
-	 * 音频解码通道数
+	 * RtF5=bBkM(5@J}
 	 * \endif
 	 */
-	public int			    	nAudioDecChn;				
+	public int			    	nAudioDecChn;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Status: 0-OK, 1-no respond, 2-network disconnection, 3-conflict, 4-upgrading now
 	 * \else
-	 * 状态: 0-正常, 1-无响应, 2-网络掉线, 3-冲突, 4-正在升级
+	 * W4L,: 0-U}3#, 1-N^OlS&, 2-MxBg5tO_, 3-3eM;, 4-U}TZI}<6
 	 * \endif
 	 */
-	public int					nStauts;					
+	public int					nStauts;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * COM amount
 	 * \else
-	 * 串口数
+	 * 4.?ZJ}
 	 * \endif
 	 */
-	public int					nCommPorts;					
+	public int					nCommPorts;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Video input channel min value
 	 * \else
-	 * 视频输入通道号最小值
+	 * JSF5JdHkM(5@:EWnP!V5
 	 * \endif
 	 */
-	public int					nVideoInChnMin;				
+	public int					nVideoInChnMin;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Video input channel max value
 	 * \else
-	 * 视频输入通道号最大值
+	 * JSF5JdHkM(5@:EWn4sV5
 	 * \endif
 	 */
-	public int					nVideoInChnMax;				
+	public int					nVideoInChnMax;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Audio input channel min value
 	 * \else
-	 * 音频输入通道号最小值
+	 * RtF5JdHkM(5@:EWnP!V5
 	 * \endif
 	 */
-	public int					nAudioInChnMin;				
+	public int					nAudioInChnMin;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Audio input channel max value
 	 * \else
-	 * 音频输入通道号最大值
+	 * RtF5JdHkM(5@:EWn4sV5
 	 * \endif
 	 */
-	public int					nAudioInChnMax;				
+	public int					nAudioInChnMax;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Video output channel min value
 	 * \else
-	 * 视频输出通道号最小值
+	 * JSF5Jd3vM(5@:EWnP!V5
 	 * \endif
 	 */
-	public int					nVideoOutChnMin;			
+	public int					nVideoOutChnMin;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Video output channel max value
 	 * \else
-	 * 视频输出通道号最大值
+	 * JSF5Jd3vM(5@:EWn4sV5
 	 * \endif
 	 */
-	public int					nVideoOutChnMax;			
+	public int					nVideoOutChnMax;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Audio output channel min value
 	 * \else
-	 * 音频输出通道号最小值
+	 * RtF5Jd3vM(5@:EWnP!V5
 	 * \endif
 	 */
-	public int					nAudioOutChnMin;			
+	public int					nAudioOutChnMin;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Audio output channel max value
 	 * \else
-	 * 音频输出通道号最大值	
+	 * RtF5Jd3vM(5@:EWn4sV5	
 	 * \endif
 	 */
-	public int					nAudioOutChnMax;			
+	public int					nAudioOutChnMax;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Video encode channel min value
 	 * \else
-	 * 视频编码通道号最小值
+	 * JSF51`BkM(5@:EWnP!V5
 	 * \endif
 	 */
-	public int					nVideoEncChnMin;			
+	public int					nVideoEncChnMin;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Video encode channel max value
 	 * \else
-	 * 视频编码通道号最大值
+	 * JSF51`BkM(5@:EWn4sV5
 	 * \endif
 	 */
-	public int					nVideoEncChnMax;			
+	public int					nVideoEncChnMax;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Audio encode channel min value
 	 * \else
-	 * 音频编码通道号最小值
+	 * RtF51`BkM(5@:EWnP!V5
 	 * \endif
 	 */
-	public int					nAudioEncChnMin;			
+	public int					nAudioEncChnMin;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Audio encode channel max value
 	 * \else
-	 * 音频编码通道号最大值
+	 * RtF51`BkM(5@:EWn4sV5
 	 * \endif
 	 */
-	public int					nAudioEncChnMax;			
+	public int					nAudioEncChnMax;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Video decode channel min value
 	 * \else
-	 * 视频解码通道号最小值
+	 * JSF5=bBkM(5@:EWnP!V5
 	 * \endif
 	 */
-	public int					nVideoDecChnMin;			
+	public int					nVideoDecChnMin;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Video decode channel max value
 	 * \else
-	 * 视频解码通道号最大值
+	 * JSF5=bBkM(5@:EWn4sV5
 	 * \endif
 	 */
-	public int					nVideoDecChnMax;			
+	public int					nVideoDecChnMax;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Audio decode channel min value
 	 * \else
-	 * 音频解码通道号最小值
+	 * RtF5=bBkM(5@:EWnP!V5
 	 * \endif
 	 */
-	public int					nAudioDecChnMin;			
+	public int					nAudioDecChnMin;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Audio decode channel max value
 	 * \else
-	 * 音频解码通道号最大值
+	 * RtF5=bBkM(5@:EWn4sV5
 	 * \endif
 	 */
-	public int					nAudioDecChnMax;			
+	public int					nAudioDecChnMax;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Number of cascade channel
 	 * \else
-	 * 级联通道数
+	 * <6A*M(5@J}
 	 * \endif
 	 */
-	public int					nCascadeChannels;			
+	public int					nCascadeChannels;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Cascade channel bitrate (Mbps)
 	 * \else
-	 * 级联通道带宽, 单位Mbps
+	 * <6A*M(5@4x?m, 5%N;Mbps
 	 * \endif
 	 */
-	public int					nCascadeChannelBitrate;		
+	public int					nCascadeChannelBitrate;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 报警输入通道数
+	 * 1(>/JdHkM(5@J}
 	 * \endif
 	 */
-	public int					nAlarmInChnCount;			
+	public int					nAlarmInChnCount;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 报警输入通道号最小值
+	 * 1(>/JdHkM(5@:EWnP!V5
 	 * \endif
 	 */
-	public int					nAlarmInChnMin;				
+	public int					nAlarmInChnMin;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 报警输入通道号最大值
+	 * 1(>/JdHkM(5@:EWn4sV5
 	 * \endif
 	 */
-	public int					nAlarmInChnMax;				
+	public int					nAlarmInChnMax;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 报警输出通道数
+	 * 1(>/Jd3vM(5@J}
 	 * \endif
 	 */
-	public int					nAlarmOutChnCount;			
+	public int					nAlarmOutChnCount;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 报警输入通道号最小值
+	 * 1(>/JdHkM(5@:EWnP!V5
 	 * \endif
 	 */
-	public int					nAlarmOutChnMin;			
+	public int					nAlarmOutChnMin;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 报警输入通道号最大值
+	 * 1(>/JdHkM(5@:EWn4sV5
 	 * \endif
 	 */
-	public int					nAlarmOutChnMax;			
+	public int					nAlarmOutChnMax;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 智能分析通道数
+	 * VGD\7VNvM(5@J}
 	 * \endif
 	 */
-	public int					nVideoAnalyseChnCount;		
+	public int					nVideoAnalyseChnCount;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 智能分析通道号最小值
+	 * VGD\7VNvM(5@:EWnP!V5
 	 * \endif
 	 */
-	public int					nVideoAnalyseChnMin;		
+	public int					nVideoAnalyseChnMin;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 智能分析通道号最大值
+	 * VGD\7VNvM(5@:EWn4sV5
 	 * \endif
 	 */
-	public int					nVideoAnalyseChnMax;		
+	public int					nVideoAnalyseChnMax;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 串口号最小值
+	 * 4.?Z:EWnP!V5
 	 * \endif
 	 */
-	public int					nCommPortMin;				
+	public int					nCommPortMin;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 串口号最大值
+	 * 4.?Z:EWn4sV5
 	 * \endif
 	 */
-	public int					nCommPortMax;				
+	public int					nCommPortMax;
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * Version
+	 * \else
+	 * 0f1>PEO"
+	 * \endif
+	 */
+	public byte[]               szVersion = new byte[FinalVar.SDK_COMMON_STRING_32];
+	
+	/**
+	 * \if ENGLISH_LANG
+	 * Build Time
+	 * \else
+	 * 1`RkJ1<d
+	 * \endif
+	 */
+    public NET_TIME             stuBuildTime = new NET_TIME(); 
+	
 }

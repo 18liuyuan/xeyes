@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * IP Information extended
  * \else
- * IP信息扩展
+ * IPPEO"@)U9
  * \endif
  */
 public class IPIFILTER_INFO_EX implements Serializable {
@@ -19,7 +19,7 @@ public class IPIFILTER_INFO_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * IP count
 	 * \else
-	 * IP个数
+	 * IP8vJ}
 	 * \endif
 	 */
 	public int               dwIPNum;

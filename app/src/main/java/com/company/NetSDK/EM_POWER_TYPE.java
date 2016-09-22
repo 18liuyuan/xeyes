@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Power Type
  * \else
- * 电源类型
+ * 5gT4@`PM
  * \endif
  */
 public class EM_POWER_TYPE implements Serializable {
@@ -19,7 +19,7 @@ public class EM_POWER_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Main Power
 	 * \else
-	 * 主电源
+	 * Vw5gT4
 	 * \endif
 	 */
 	public static final int EM_POWER_TYPE_MAIN = 0;
@@ -28,7 +28,7 @@ public class EM_POWER_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Backup Power
 	 * \else
-	 * 备用电源
+	 * 18SC5gT4
 	 * \endif
 	 */
 	public static final int EM_POWER_TYPE_BACKUP = 1;

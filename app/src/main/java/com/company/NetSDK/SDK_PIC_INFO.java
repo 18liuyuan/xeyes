@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Picture info
  * \else
- * 物体对应图片文件信息
+ * NoLe6TS&M<F,ND<~PEO"
  * \endif
  */
 public class SDK_PIC_INFO implements Serializable {
@@ -19,32 +19,35 @@ public class SDK_PIC_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Current picture file's offset in the binary file, byte
 	 * \else
-	 * 文件在二进制数据块中的偏移位置, 单位:字节
+	 * ND<~TZ6~=xVFJ}>]?iVP5DF+RFN;VC, 5%N;:WV=Z
 	 * \endif
 	 */
-	public int                dwOffSet;                       
+	public int                dwOffSet;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Current picture file's size, byte
 	 * \else
-	 * 文件大小, 单位:字节
+	 * ND<~4sP!, 5%N;:WV=Z
 	 * \endif
 	 */
-	public int                dwFileLenth;                    
+	public int                dwFileLenth;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Picture width, pixel
 	 * \else
-	 * 图片宽度, 单位:像素
+	 * M<F,?m6H, 5%N;:OqKX
 	 * \endif
 	 */
-	public int                wWidth;                         
+	public int                wWidth;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Picture high, pixel
 	 * \else
-	 * 图片高度, 单位:像素          
+	 * M<F,8_6H, 5%N;:OqKX          
 	 * \endif
 	 */
-	public int                wHeight;                        
+	public int                wHeight;
 }

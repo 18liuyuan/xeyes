@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Device type
  * \else
- * 设备类型
+ * Ih18@`PM
  * \endif
  */
 public class NET_DEVICE_TYPE implements Serializable {
@@ -21,7 +21,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Non real-time MACE
 	 * \else
-	 * 非实时MACE
+	 * 7GJ5J1MACE
 	 * \endif
 	 */
 	public static final int NET_DVR_NONREALTIME_MACE = 1;					
@@ -30,7 +30,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Non real-time
 	 * \else
-	 * 非实时
+	 * 7GJ5J1
 	 * \endif
 	 */
 	public static final int NET_DVR_NONREALTIME = 2;						
@@ -39,7 +39,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * NVS
 	 * \else
-	 * 网络视频服务器
+	 * MxBgJSF57~NqFw
 	 * \endif
 	 */
 	public static final int NET_NVS_MPEG1 = 3;								
@@ -48,7 +48,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * MPEG1 2-channel DVR
 	 * \else
-	 * MPEG1二路录像机
+	 * MPEG16~B7B<Oq;z
 	 * \endif
 	 */
 	public static final int NET_DVR_MPEG1_2 = 4;							
@@ -57,7 +57,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * MPEG1 8-channel DVR
 	 * \else
-	 * MPEG1八路录像机
+	 * MPEG10KB7B<Oq;z
 	 * \endif
 	 */
 	public static final int NET_DVR_MPEG1_8 = 5;							
@@ -66,7 +66,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * MPEG4 8-channel DVR
 	 * \else
-	 * MPEG4八路录像机
+	 * MPEG40KB7B<Oq;z
 	 * \endif
 	 */
 	public static final int NET_DVR_MPEG4_8 = 6;							
@@ -75,7 +75,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * MPEG4 16-channel DVR
 	 * \else
-	 * MPEG4十六路录像机
+	 * MPEG4J.AyB7B<Oq;z
 	 * \endif
 	 */
 	public static final int NET_DVR_MPEG4_16 = 7;							
@@ -84,7 +84,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * LB series DVR
 	 * \else
-	 * LB系列录像机
+	 * LBO5APB<Oq;z
 	 * \endif
 	 */
 	public static final int NET_DVR_MPEG4_SX2 = 8;							
@@ -93,7 +93,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * GB series DVR
 	 * \else
-	 * GB系列录像机
+	 * GBO5APB<Oq;z
 	 * \endif
 	 */
 	public static final int NET_DVR_MEPG4_ST2 = 9;							
@@ -102,7 +102,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * HB series DVR
 	 * \else
-	 * HB系列录像机
+	 * HBO5APB<Oq;z
 	 * \endif
 	 */
 	public static final int NET_DVR_MEPG4_SH2 = 10;							
@@ -111,7 +111,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * GBE series DVR
 	 * \else
-	 * GBE系列录像机
+	 * GBEO5APB<Oq;z
 	 * \endif
 	 */
 	public static final int NET_DVR_MPEG4_GBE = 11;							
@@ -120,7 +120,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * II NVS
 	 * \else
-	 * II代网络视频服务器
+	 * II4zMxBgJSF57~NqFw
 	 * \endif
 	 */
 	public static final int NET_DVR_MPEG4_NVSII = 12;						
@@ -129,7 +129,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * New standard configuration protocol
 	 * \else
-	 * 新标准配置协议
+	 * PB1jW<EdVCP-Ri
 	 * \endif
 	 */
 	public static final int NET_DVR_STD_NEW = 13;							
@@ -138,7 +138,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * DDNS server
 	 * \else
-	 * DDNS服务器
+	 * DDNS7~NqFw
 	 * \endif
 	 */
 	public static final int NET_DVR_DDNS = 14;								
@@ -147,7 +147,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * ATM
 	 * \else
-	 * ATM机
+	 * ATM;z
 	 * \endif
 	 */
 	public static final int NET_DVR_ATM = 15;								
@@ -156,7 +156,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The 2nd non real-time NB DVR
 	 * \else
-	 * 二代非实时NB系列机器
+	 * 6~4z7GJ5J1NBO5AP;zFw
 	 * \endif
 	 */
 	public static final int NET_NB_SERIAL = 16;								
@@ -165,7 +165,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * LN series DVR
 	 * \else
-	 * LN系列产品
+	 * LNO5AP2zF7
 	 * \endif
 	 */
 	public static final int NET_LN_SERIAL = 17;								
@@ -174,7 +174,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * BAV series DVR
 	 * \else
-	 * BAV系列产品
+	 * BAVO5AP2zF7
 	 * \endif
 	 */
 	public static final int NET_BAV_SERIAL = 18;								
@@ -183,7 +183,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * SDIP series DVR
 	 * \else
-	 * SDIP系列产品
+	 * SDIPO5AP2zF7
 	 * \endif
 	 */
 	public static final int NET_SDIP_SERIAL = 19;							
@@ -192,7 +192,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * IPC series DVR
 	 * \else
-	 * IPC系列产品
+	 * IPCO5AP2zF7
 	 * \endif
 	 */
 	public static final int NET_IPC_SERIAL = 20;								
@@ -201,7 +201,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * NVS B series
 	 * \else
-	 * NVS B系列
+	 * NVS BO5AP
 	 * \endif
 	 */
 	public static final int NET_NVS_B = 21;									
@@ -210,7 +210,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * NVS H series
 	 * \else
-	 * NVS H系列
+	 * NVS HO5AP
 	 * \endif
 	 */
 	public static final int NET_NVS_C = 22;									
@@ -219,7 +219,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * NVS S series
 	 * \else
-	 * NVS S系列
+	 * NVS SO5AP
 	 * \endif
 	 */
 	public static final int NET_NVS_S = 23;									
@@ -228,7 +228,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * NVS E series
 	 * \else
-	 * NVS E系列
+	 * NVS EO5AP
 	 * \endif
 	 */
 	public static final int NET_NVS_E = 24;									
@@ -237,7 +237,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Search device type from QueryDevState. By string format.
 	 * \else
-	 * 从QueryDevState中查询设备类型,以字符串格式
+	 * 4SQueryDevStateVP2iQ/Ih18@`PM,RTWV7{4.8qJ=
 	 * \endif
 	 */
 	public static final int NET_DVR_NEW_PROTOCOL = 25;						
@@ -246,7 +246,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Decoder
 	 * \else
-	 * 解码器
+	 * =bBkFw
 	 * \endif
 	 */
 	public static final int NET_NVD_SERIAL = 26;								
@@ -264,7 +264,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Hybrid dvr
 	 * \else
-	 * 混合DVR
+	 * ;l:ODVR
 	 * \endif
 	 */
 	public static final int NET_DVR_MIX_DVR = 28;							
@@ -273,7 +273,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * SVR series
 	 * \else
-	 * SVR系列
+	 * SVRO5AP
 	 * \endif
 	 */
 	public static final int NET_SVR_SERIAL = 29;								
@@ -291,7 +291,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * NVR series
 	 * \else
-	 * NVR系列
+	 * NVRO5AP
 	 * \endif
 	 */
 	public static final int NET_NVR_SERIAL = 31;								
@@ -309,7 +309,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * ITSE intelligent analysis box
 	 * \else
-	 * ITSE 智能分析盒
+	 * ITSE VGD\7VNv:P
 	 * \endif
 	 */
 	public static final int NET_ITSE_SERIAL = 33;							
@@ -318,7 +318,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * ITS camera
 	 * \else
-	 * 智能交通像机设备
+	 * VGD\=;M(Oq;zIh18
 	 * \endif
 	 */
 	public static final int NET_ITC_SERIAL = 34;                             
@@ -327,7 +327,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Radar speed measuring device
 	 * \else
-	 * 雷达测速仪HWS
+	 * @W4o2bKYRGHWS
 	 * \endif
 	 */
 	public static final int NET_HWS_SERIAL = 35;                             
@@ -336,16 +336,16 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * PVR
 	 * \else
-	 * 便携式音视频录像机
+	 * 1cP/J=RtJSF5B<Oq;z
 	 * \endif
 	 */
 	public static final int NET_PVR_SERIAL = 36;                             
 
 	/**
 	 * \if ENGLISH_LANG
-	 * IVS（intelligent video server series）
+	 * IVS#(intelligent video server series#)
 	 * \else
-	 * IVS（智能视频服务器系列）
+	 * IVS#(VGD\JSF57~NqFwO5AP#)
 	 * \endif
 	 */
 	public static final int NET_IVS_SERIAL = 37;                             
@@ -354,7 +354,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * General intelligent video detect server
 	 * \else
-	 * 通用智能视频侦测服务器
+	 * M(SCVGD\JSF5Ul2b7~NqFw
 	 * \endif
 	 */
 	public static final int NET_IVS_B = 38;                                  
@@ -363,7 +363,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Facial recognition server
 	 * \else
-	 * 人脸识别服务器
+	 * HKA3J61p7~NqFw
 	 * \endif
 	 */
 	public static final int NET_IVS_F = 39;                                  
@@ -372,7 +372,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Video quality analysis server
 	 * \else
-	 * 视频质量诊断服务器
+	 * JSF5VJA?Uo6O7~NqFw
 	 * \endif
 	 */
 	public static final int NET_IVS_V = 40;                                  
@@ -381,7 +381,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Matrix
 	 * \else
-	 * 矩阵
+	 * >XUs
 	 * \endif
 	 */
 	public static final int NET_MATRIX_SERIAL = 41;							
@@ -417,7 +417,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * People counting server
 	 * \else
-	 * 人数统计服务器
+	 * HKJ}M3<F7~NqFw
 	 * \endif
 	 */
 	public static final int NET_IVS_PC = 45;                                 
@@ -435,7 +435,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Video wall controller
 	 * \else
-	 * 大屏控制器
+	 * 4sFA?XVFFw
 	 * \endif
 	 */
 	public static final int NET_DSCON = 47;									
@@ -444,7 +444,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * NVS
 	 * \else
-	 * 网络视频存储服务器
+	 * MxBgJSF54f4"7~NqFw
 	 * \endif
 	 */
 	public static final int NET_EVS = 48;									
@@ -453,7 +453,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Embedded IVS video analysis system
 	 * \else
-	 * 嵌入式智能分析视频系统
+	 * G6HkJ=VGD\7VNvJSF5O5M3
 	 * \endif
 	 */
 	public static final int NET_EIVS = 49;									
@@ -471,7 +471,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Universal decoder
 	 * \else
-	 * 万能解码器
+	 * MrD\=bBkFw
 	 * \endif
 	 */
 	public static final int NET_UDS = 51;
@@ -480,7 +480,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Bank alarm host
 	 * \else
-	 * 银行报警主机
+	 * RxPP1(>/Vw;z
 	 * \endif
 	 */
 	public static final int NET_AF6016 = 52;
@@ -489,7 +489,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Video site alarm host
 	 * \else
-	 * 视频网络报警主机
+	 * JSF5MxBg1(>/Vw;z
 	 * \endif
 	 */
 	public static final int NET_AS5008 = 53;
@@ -498,7 +498,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Net alarm host
 	 * \else
-	 * 网络报警主机
+	 * MxBg1(>/Vw;z
 	 * \endif
 	 */
 	public static final int NET_AH2008 = 54;
@@ -507,7 +507,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm host series
 	 * \else
-	 * 报警主机系列
+	 * 1(>/Vw;zO5AP
 	 * \endif
 	 */
 	public static final int NET_A_SERIAL = 55;
@@ -516,7 +516,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * A&C series
 	 * \else
-	 * 门禁系列产品
+	 * CE={O5AP2zF7
 	 * \endif
 	 */
 	public static final int NET_BSC_SERIAL = 56;
@@ -525,7 +525,7 @@ public class NET_DEVICE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * NVS series
 	 * \else
-	 * NVS系列产品
+	 * NVSO5AP2zF7
 	 * \endif
 	 */
 	public static final int NET_NVS_SERIAL = 57;

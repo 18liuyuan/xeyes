@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * New audio detection alarm setup 
  * \else
- * 新音频检测报警配置
+ * PBRtF5<l2b1(>/EdVC
  * \endif
  */
 public class SDK_AUDIO_DETECT_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class SDK_AUDIO_DETECT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable alarm input 
 	 * \else
-	 * 报警输入使能
+	 * 1(>/JdHkJ9D\
 	 * \endif
 	 */
 	public boolean                bEnable; 
@@ -28,7 +28,7 @@ public class SDK_AUDIO_DETECT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Min volume
 	 * \else
-	 * 音量的最小值
+	 * RtA?5DWnP!V5
 	 * \endif
 	 */
 	public int                 Volume_min; 
@@ -37,7 +37,7 @@ public class SDK_AUDIO_DETECT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Max volume
 	 * \else
-	 * 音量的最大值
+	 * RtA?5DWn4sV5
 	 * \endif
 	 */
 	public int                 Volume_max; 
@@ -55,7 +55,7 @@ public class SDK_AUDIO_DETECT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Process way 
 	 * \else
-	 * 处理方式
+	 * 4&@m7=J=
 	 * \endif
 	 */
 	public SDK_MSG_HANDLE       struHandle = new SDK_MSG_HANDLE(); 

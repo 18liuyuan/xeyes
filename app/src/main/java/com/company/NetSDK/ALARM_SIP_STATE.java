@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * SIP Status Changes Alarm
  * \else
- * SIP状态改变报警
+ * SIPW4L,8D1d1(>/
  * \endif
  */
 public class ALARM_SIP_STATE implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_SIP_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel No. 
 	 * \else
-	 * 通道号
+	 * M(5@:E
 	 * \endif
 	 */
 	public int     nChannelID;
@@ -28,7 +28,7 @@ public class ALARM_SIP_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:Registration Succeed,1:Not Registered,2:Invalid,3:Registering,4:Communicating 
 	 * \else
-	 * 0:注册成功,1:未注册,2:无效,3:注册中,4:通话中
+	 * 0:W"2a3I9&,1:N4W"2a,2:N^P',3:W"2aVP,4:M(;0VP
 	 * \endif
 	 */
 	public byte    byStatus;                         

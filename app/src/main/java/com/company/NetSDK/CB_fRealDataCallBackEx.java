@@ -4,7 +4,7 @@ package com.company.NetSDK;
  * \if ENGLISH_LANG
  * Real-time monitor data callback function original shape---extensive
  * \else
- * 实时监控回调函数原型
+ * J5J1<`?X;X5w:/J}T-PM
  * \endif
  */
 public interface CB_fRealDataCallBackEx {
@@ -12,7 +12,7 @@ public interface CB_fRealDataCallBackEx {
 	 * \if ENGLISH_LANG
 	 * Real-time monitor data callback function original shape---extensive
 	 * @param lRealHandle real time monitor ID ,return from {@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}or{@link com.company.NetSDK.INetSDK#RealPlayEx() RealPlayEx}
-	 * @param dwDataType label recalled data type ，only dwFlag set labeled data will be recalled：
+	 * @param dwDataType label recalled data type #,only dwFlag set labeled data will be recalled#:
 	 * <table>
 	 * <tr><td>dwDataType</td><td>data type </td></tr>
 	 * <tr><td>0</td><td>original data (identicla SaveRealData saveddata)</td></tr>
@@ -20,23 +20,23 @@ public interface CB_fRealDataCallBackEx {
 	 * <tr><td>2</td><td>yuv data </td></tr>
 	 * <tr><td>3</td><td>pcm audio data </td></tr>
 	 * </table>
-	 * @param pBuffer recall data ，based on different data type each time recall different length data ，except type 0，other data type all by frame，each time recall one frame data 
-	 * @param dwBufSize recall data parameter structure，based on different type ，parameter structure differ
-	 * @param param recall data length，based on different type ，length differ(unit byte) 
+	 * @param pBuffer recall data #,based on different data type each time recall different length data #,except type 0#,other data type all by frame#,each time recall one frame data 
+	 * @param dwBufSize recall data parameter structure#,based on different type #,parameter structure differ
+	 * @param param recall data length#,based on different type #,length differ(unit byte) 
 	 * \else
-	 * 网络断线回调函数
-	 * @param lRealHandle 实时监视ID,{@link com.company.NetSDK.INetSDK#RealPlay() RealPlay}或者{@link com.company.NetSDK.INetSDK#RealPlayEx() RealPlayEx}返回值
-	 * @param dwDataType 回调出来的数据类型
+	 * MxBg6OO_;X5w:/J}
+	 * @param lRealHandle J5J1<`JSID,{@link com.company.NetSDK.INetSDK#RealPlay() RealPlay};rU_{@link com.company.NetSDK.INetSDK#RealPlayEx() RealPlayEx}75;XV5
+	 * @param dwDataType ;X5w3v@45DJ}>]@`PM
 	 * <table>
-	 * <tr><td>dwDataType</td><td>pBuffer数据类型</td></tr> 
-	 * <tr><td>0</td><td>原始数据(与SaveRealData保存的数据一致) </td></tr>
-	 * <tr><td>1</td><td>帧数据 </td></tr>
-	 * <tr><td>2</td><td>yuv数据 </td></tr>
-	 * <tr><td>3</td><td>pcm音频数据 </td></tr>
+	 * <tr><td>dwDataType</td><td>pBufferJ}>]@`PM</td></tr> 
+	 * <tr><td>0</td><td>T-J<J}>](SkSaveRealData1#4f5DJ}>]R;VB) </td></tr>
+	 * <tr><td>1</td><td>V!J}>] </td></tr>
+	 * <tr><td>2</td><td>yuvJ}>] </td></tr>
+	 * <tr><td>3</td><td>pcmRtF5J}>] </td></tr>
 	 * </table>
-	 * @param pBuffer 回调数据，根据数据类型的不同每次回调不同的长度的数据，除类型0，其他数据类型都是按帧，每次回调一帧数据 
-	 * @param dwBufSize 回调数据参数结构体，根据不同的类型，参数结构也不一致
-	 * @param param 回调数据的长度，根据不同的类型，长度也不同(单位字节) 
+	 * @param pBuffer ;X5wJ}>]#,8y>]J}>]@`PM5D2;M,C?4N;X5w2;M,5D3$6H5DJ}>]#,3}@`PM0#,FdK{J}>]@`PM6<JG04V!#,C?4N;X5wR;V!J}>] 
+	 * @param dwBufSize ;X5wJ}>]2NJ}=a99Le#,8y>]2;M,5D@`PM#,2NJ}=a99R22;R;VB
+	 * @param param ;X5wJ}>]5D3$6H#,8y>]2;M,5D@`PM#,3$6HR22;M,(5%N;WV=Z) 
 	 * \endif
 	 */
 	public void invoke(long lRealHandle, int dwDataType, byte[] pBuffer, int dwBufSize, int param);

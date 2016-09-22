@@ -2,7 +2,6 @@ package com.company.NetSDK;
 
 import java.io.Serializable;
 
-
 public class NET_RECENCY_CAR_INFO implements Serializable {
 	/**
 	 *
@@ -15,7 +14,7 @@ public class NET_RECENCY_CAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * newest
 	 * \else
-	 * ×îÐÂ
+	 * WnPB
 	 * \endif
 	 */
 	public static final int   RECENCY_CAR_INFOO_NEWEST = 1 	;
@@ -24,7 +23,7 @@ public class NET_RECENCY_CAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * oldest
 	 * \else
-	 * ×î¾É
+	 * Wn>I
 	 * \endif
 	 */
 	public static final int   RECENCY_CAR_INFO_ODLEST  = 2  ;

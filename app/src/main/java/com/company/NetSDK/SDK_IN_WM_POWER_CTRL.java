@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * PowerControl's interface input param(monitor wall power control)
  * \else
- * PowerControl接口输入参数(电视墙电源控制)
+ * PowerControl=S?ZJdHk2NJ}(5gJSG=5gT4?XVF)
  * \endif
  */
 public class SDK_IN_WM_POWER_CTRL implements Serializable {
@@ -19,32 +19,35 @@ public class SDK_IN_WM_POWER_CTRL implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Monitor wall ID
 	 * \else
-	 * 电视墙序号
+	 * 5gJSG=Pr:E
 	 * \endif
 	 */
-	public int					nMonitorWallID;				
+	public int					nMonitorWallID;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Block ID, NULL/""- means all
 	 * \else
-	 * 区块ID, NULL/""-所有区块
+	 * Gx?iID, NULL/""-KySPGx?i
 	 * \endif
 	 */
-	public String				pszBlockID;					
+	public String				pszBlockID;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * TV ID, -1 means all
 	 * \else
-	 * 显示单元序号, -1表示区块中所有显示单元
+	 * OTJ>5%T*Pr:E, -11mJ>Gx?iVPKySPOTJ>5%T*
 	 * \endif
 	 */
-	public int					nTVID;						
+	public int					nTVID;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Power on or not
 	 * \else
-	 * 是否打开电源
+	 * JG7q4r?*5gT4
 	 * \endif
 	 */
-	public boolean				bPowerOn;					
+	public boolean				bPowerOn;
 }

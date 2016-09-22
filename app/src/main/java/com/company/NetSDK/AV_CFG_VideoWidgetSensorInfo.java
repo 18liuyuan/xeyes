@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Encoding object - overlay sensor information
  * \else
- * 编码物件-叠加传感器信息
+ * 1`BkNo<~-5~<S4+8PFwPEO"
  * \endif
  */
 public class AV_CFG_VideoWidgetSensorInfo implements Serializable {
@@ -19,7 +19,7 @@ public class AV_CFG_VideoWidgetSensorInfo implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Overlay the preview video 
 	 * \else
-	 * 叠加到预览视频
+	 * 5~<S5=T$@@JSF5
 	 * \endif
 	 */
 	public boolean		bPreviewBlend;
@@ -28,7 +28,7 @@ public class AV_CFG_VideoWidgetSensorInfo implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Stack to the main stream of video coding 
 	 * \else
-	 * 叠加到主码流视频编码
+	 * 5~<S5=VwBkAwJSF51`Bk
 	 * \endif
 	 */
 	public boolean		bEncodeBlend;
@@ -37,7 +37,7 @@ public class AV_CFG_VideoWidgetSensorInfo implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Area, coordinates ranging from 0 to 8191
 	 * \else
-	 * 区域, 坐标取值0~8191
+	 * GxSr, Wx1jH!V50~8191
 	 * \endif
 	 */
 	public AV_CFG_Rect	stuRect = new AV_CFG_Rect();
@@ -46,7 +46,7 @@ public class AV_CFG_VideoWidgetSensorInfo implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The Description number of stacking area 
 	 * \else
-	 * 叠加区域描述数目
+	 * 5~<SGxSrChJvJ}D?
 	 * \endif
 	 */
 	public int			nDescriptionNum;
@@ -55,7 +55,7 @@ public class AV_CFG_VideoWidgetSensorInfo implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Stacking area description information 
 	 * \else
-	 * 叠加区域描述信息
+	 * 5~<SGxSrChJvPEO"
 	 * \endif
 	 */
 	public AV_CFG_VideoWidgetSensorInfo_Description 

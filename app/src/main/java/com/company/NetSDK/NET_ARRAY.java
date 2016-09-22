@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * General long character ended with '\0'
  * \else
- * 通用变长字符串以‘\0’结束
+ * M(SC1d3$WV7{4.RT!.\0!/=aJx
  * \endif
  */
 public class NET_ARRAY implements Serializable {
@@ -19,16 +19,16 @@ public class NET_ARRAY implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Buffer zone. Now the min value is 260 byte.Caller shall apply for the memory. The filling in data shall ended with '\0'. 
 	 * \else
-	 * 缓冲区 目前最小260字节，调用者申请内存 填充数据保证是'\0'结束
+	 * ;:3eGx D?G0WnP!260WV=Z#,5wSCU_IjGkDZ4f Ln3dJ}>]1#V$JG'\0'=aJx
 	 * \endif
 	 */
-	public char[]             pArray;
+	public byte[]             pArray;
 	
 	/**
 	 * \if ENGLISH_LANG
 	 * Buffer space length
 	 * \else
-	 * 缓冲空间长度
+	 * ;:3e?U<d3$6H
 	 * \endif
 	 */
 	public int                dwArrayLen;                     

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * fan speed abnormal
  * \else
- * 风扇转速异常事件
+ * 7gIHW*KYRl3#JB<~
  * \endif
  */
 public class ALARM_FAN_SPEED implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_FAN_SPEED implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0-start, 1-stop
 	 * \else
-	 * 0-开始, 1-停止
+	 * 0-?*J<, 1-M#V9
 	 * \endif
 	 */
 	public int                dwAction;
@@ -28,7 +28,7 @@ public class ALARM_FAN_SPEED implements Serializable {
 	 * \if ENGLISH_LANG
 	 * index
 	 * \else
-	 * 风扇序号
+	 * 7gIHPr:E
 	 * \endif
 	 */
 	public int                dwIndex;
@@ -37,7 +37,7 @@ public class ALARM_FAN_SPEED implements Serializable {
 	 * \if ENGLISH_LANG
 	 * name
 	 * \else
-	 * 传感器名称
+	 * 4+8PFwC{3F
 	 * \endif
 	 */
 	public byte                 szName[] = new byte[FinalVar.SDK_MACHINE_NAME_NUM];
@@ -46,7 +46,7 @@ public class ALARM_FAN_SPEED implements Serializable {
 	 * \if ENGLISH_LANG
 	 * time
 	 * \else
-	 * 事件发生时间
+	 * JB<~7"IzJ1<d
 	 * \endif
 	 */
 	public NET_TIME             stuTime = new NET_TIME();
@@ -55,7 +55,7 @@ public class ALARM_FAN_SPEED implements Serializable {
 	 * \if ENGLISH_LANG
 	 * current speed
 	 * \else
-	 * 当前转速
+	 * 51G0W*KY
 	 * \endif
 	 */
 	public int                dwCurrent;                           

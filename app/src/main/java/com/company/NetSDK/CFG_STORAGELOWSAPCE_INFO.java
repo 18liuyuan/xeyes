@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Limit HDD Alarm Linkage Configuration
  * \else
- * 存储设备空间不足报警配置
+ * 4f4"Ih18?U<d2;Wc1(>/EdVC
  * \endif
  */
 public class CFG_STORAGELOWSAPCE_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_STORAGELOWSAPCE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable 
 	 * \else
-	 * 使能开关
+	 * J9D\?*9X
 	 * \endif
 	 */
 	public boolean				bEnable;
@@ -28,7 +28,7 @@ public class CFG_STORAGELOWSAPCE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Lower Limit, Percentage(0~99) 
 	 * \else
-	 * 硬盘剩余容量下限，百分数(0~99)
+	 * S2ELJ#S`H]A?OBO^#,0Y7VJ}(0~99)
 	 * \endif
 	 */
 	public int					nLowerLimit;
@@ -37,7 +37,7 @@ public class CFG_STORAGELOWSAPCE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Event Handler 
 	 * \else
-	 * 报警联动	
+	 * 1(>/A*6/	
 	 * \endif
 	 */
 	public CFG_ALARM_MSG_HANDLE stuEventHandler = new CFG_ALARM_MSG_HANDLE();

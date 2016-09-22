@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * The setup of alarm upload
  * \else
- * 报警上传的配置
+ * 1(>/IO4+5DEdVC
  * \endif
  */
 public class ALARMCENTER_UP_CFG implements Serializable {
@@ -19,7 +19,7 @@ public class ALARMCENTER_UP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable upload
 	 * \else
-	 * 上传使能
+	 * IO4+J9D\
 	 * \endif
 	 */
 	public byte                byEnable;
@@ -28,7 +28,7 @@ public class ALARMCENTER_UP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm center listening port 
 	 * \else
-	 * 报警中心侦听端口
+	 * 1(>/VPPDUlL}6K?Z
 	 * \endif
 	 */
 	public short                wHostPort;
@@ -37,7 +37,7 @@ public class ALARMCENTER_UP_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm center IP
 	 * \else
-	 * 报警中心IP
+	 * 1(>/VPPDIP
 	 * \endif
 	 */
     public byte                sHostIPAddr[] = new byte[FinalVar.SDK_MAX_IPADDR_LEN];
@@ -46,7 +46,7 @@ public class ALARMCENTER_UP_CFG implements Serializable {
      * \if ENGLISH_LANG
      * Enable scheduled upload.Use it to upload IP or domain name to the centre.
      * \else
-     * 定时上传使能，可以用来向中心上传IP或域名等
+     * 6(J1IO4+J9D\#,?IRTSC@4OrVPPDIO4+IP;rSrC{5H
      * \endif
      */
     public int                 nByTimeEn;
@@ -58,7 +58,7 @@ public class ALARMCENTER_UP_CFG implements Serializable {
      * "Monday = 3", Tuesday = 4", "Wednesday = 5",
      * "Thursday = 6", "Friday = 7", "Saturday = 8"
      * \else
-     * 设置上传日期  
+     * IhVCIO4+HUFZ  
      * "Never = 0", "Everyday = 1", "Sunday = 2", 
      * "Monday = 3", Tuesday = 4", "Wednesday = 5",
      * "Thursday = 6", "Friday = 7", "Saturday = 8"
@@ -70,7 +70,7 @@ public class ALARMCENTER_UP_CFG implements Serializable {
      * \if ENGLISH_LANG
      * Set upload time ,[0~23]o'clock
      * \else
-     * 设置上传时间 ,[0~23]点
+     * IhVCIO4+J1<d ,[0~23]5c
      * \endif
      */
     public int                 nUploadHour;

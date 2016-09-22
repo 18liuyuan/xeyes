@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * black list snap info
  * \else
- * 黑名单车辆抓拍事件
+ * :ZC{5%35A>W%EDJB<~
  * \endif
  */
 public class SDK_BLACKLIST_SNAP_INFO implements Serializable {
@@ -19,16 +19,17 @@ public class SDK_BLACKLIST_SNAP_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * number of plate
 	 * \else
-	 * 车牌号
+	 * 35EF:E
 	 * \endif
 	 */
-	public byte      szPlateNumber[] = new byte[32];                          
+	public byte      szPlateNumber[] = new byte[32];
+	
  	/**
 	 * \if ENGLISH_LANG
 	 * time
 	 * \else
-	 * 事件发生时间
+	 * JB<~7"IzJ1<d
 	 * \endif
 	 */
-	public NET_TIME  stuTime = new NET_TIME();                                    
+	public NET_TIME  stuTime = new NET_TIME();
 }

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Crossing information
  * \else
- * 路口信息
+ * B7?ZPEO"
  * \endif
  */
 public class CROSSING_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class CROSSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Crossing ID
 	 * \else
-	 * 路口序列号
+	 * B7?ZPrAP:E
 	 * \endif
 	 */
 	public byte				szCrossingID[] = new byte[FinalVar.SDK_MAX_CROSSING_ID]; 
@@ -28,7 +28,7 @@ public class CROSSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Latitude(0-180 Degree, 30.183382 degree==120183382)
 	 * \else
-	 * 纬度(单位是百万分之度，范围0-180度)如北纬30（.）183382度表示为120183382)
+	 * N36H(5%N;JG0YMr7VV.6H#,76N'0-1806H)Hg11N330#(.#)1833826H1mJ>N*120183382)
 	 * \endif
 	 */
 	public int 				dwLatitude; 
@@ -37,7 +37,7 @@ public class CROSSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Longitude(0-360 Degree, 120.178274 degree==300178274)
 	 * \else
-	 * 经度(单位是百万分之度，范围0-360度) 如东经120（.）178274度表示为300178274）
+	 * >-6H(5%N;JG0YMr7VV.6H#,76N'0-3606H) Hg6+>-120#(.#)1782746H1mJ>N*300178274#)
 	 * \endif
 	 */
 	public int				dwLongitude; 
@@ -46,7 +46,7 @@ public class CROSSING_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * limit speed(KM/H)
 	 * \else
-	 * 路口限速值,单位Km/h 0表示不限速,其他表示限速值上限
+	 * B7?ZO^KYV5,5%N;Km/h 01mJ>2;O^KY,FdK{1mJ>O^KYV5IOO^
 	 * \endif
 	 */
 	public short			wSpeedLimit;

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Watermark Congiguration
  * \else
- * 水印配置
+ * K.S!EdVC
  * \endif
  */
 public class CFG_WATERMARK_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_WATERMARK_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * ChannelID(from 0) 
 	 * \else
-	 * 通道号(0开始)
+	 * M(5@:E(0?*J<)
 	 * \endif
 	 */
 	public int 					nChannelID;
@@ -28,25 +28,25 @@ public class CFG_WATERMARK_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable 
 	 * \else
-	 * 使能开关
+	 * J9D\?*9X
 	 * \endif
 	 */
 	public boolean				bEnable;
 	
  	/**
 	 * \if ENGLISH_LANG
-	 * Stream Type(1～n)0-all 
+	 * Stream Type(1!+n)0-all 
 	 * \else
-	 * 码流类型(1～n)，0－所有码流
+	 * BkAw@`PM(1!+n)#,0#-KySPBkAw
 	 * \endif
 	 */
 	public int					nStreamType;
 	
  	/**
 	 * \if ENGLISH_LANG
-	 * Data Type1-Character，2-Picture 
+	 * Data Type1-Character#,2-Picture 
 	 * \else
-	 * 数据类型，1－文字，2－图片
+	 * J}>]@`PM#,1#-NDWV#,2#-M<F,
 	 * \endif
 	 */
 	public int					nDataType;
@@ -55,7 +55,7 @@ public class CFG_WATERMARK_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Character Watermark Data 
 	 * \else
-	 * 字符串水印数据
+	 * WV7{4.K.S!J}>]
 	 * \endif
 	 */
 	public byte[]				pData = new byte[FinalVar.SDK_MAX_WATERMAKE_DATA];

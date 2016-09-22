@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * General alarm informaiton
  * \else
- * 普通报警信息
+ * FUM(1(>/PEO"
  * \endif
  */
 public class NET_CLIENT_STATE implements Serializable {
@@ -19,7 +19,7 @@ public class NET_CLIENT_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel No. 
 	 * \else
-	 * 通道数
+	 * M(5@J}
 	 * \endif
 	 */
 	public int					channelcount;
@@ -28,7 +28,7 @@ public class NET_CLIENT_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm input port amount 
 	 * \else
-	 * 报警输入口数
+	 * 1(>/JdHk?ZJ}
 	 * \endif
 	 */
 	public int					alarminputcount;
@@ -37,7 +37,7 @@ public class NET_CLIENT_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * External alarm 
 	 * \else
-	 * 外部报警
+	 * Mb2?1(>/
 	 * \endif
 	 */
 	public byte					alarm[] = new byte[16];
@@ -46,7 +46,7 @@ public class NET_CLIENT_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Motion detection 
 	 * \else
-	 * 动态检测
+	 * 6/L,<l2b
 	 * \endif
 	 */
 	public byte					motiondection[] = new byte[16];
@@ -55,7 +55,7 @@ public class NET_CLIENT_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Video loss 
 	 * \else
-	 * 视频丢失
+	 * JSF56*J'
 	 * \endif
 	 */
 	public byte					videolost[] = new byte[16];

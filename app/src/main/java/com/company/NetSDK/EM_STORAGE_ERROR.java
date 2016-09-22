@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * storage error
  * \else
- * 存储错误类型
+ * 4f4"4mNs@`PM
  * \endif
  */
 public class EM_STORAGE_ERROR implements Serializable {
@@ -19,7 +19,7 @@ public class EM_STORAGE_ERROR implements Serializable {
 	 * \if ENGLISH_LANG
 	 * no error
 	 * \else
-	 * 无
+	 * N^
 	 * \endif
 	 */
 	public static final int STORAGE_ERROR_NONE = 0;
@@ -28,7 +28,7 @@ public class EM_STORAGE_ERROR implements Serializable {
 	 * \if ENGLISH_LANG
 	 * patition error 
 	 * \else
-	 * 分区错误          
+	 * 7VGx4mNs          
 	 * \endif
 	 */
 	public static final int STORAGE_ERROR_PATITION = 1;
@@ -37,7 +37,7 @@ public class EM_STORAGE_ERROR implements Serializable {
 	 * \if ENGLISH_LANG
 	 * init system file error	
 	 * \else
-	 * 初始化文件系统错误    
+	 * 3uJ<;/ND<~O5M34mNs    
 	 * \endif
 	 */
 	public static final int STORAGE_ERROR_INIT_FS = 2;
@@ -46,7 +46,7 @@ public class EM_STORAGE_ERROR implements Serializable {
 	 * \if ENGLISH_LANG
 	 * read data error
 	 * \else
-	 * 读数据失败
+	 * 6AJ}>]J'0\
 	 * \endif
 	 */
 	public static final int STORAGE_ERROR_READ_DATA = 3;
@@ -55,7 +55,7 @@ public class EM_STORAGE_ERROR implements Serializable {
 	 * \if ENGLISH_LANG
 	 * write data error
 	 * \else
-	 * 写数据失败
+	 * P4J}>]J'0\
 	 * \endif
 	 */
 	public static final int STORAGE_ERROR_WRITE_DATA = 4;
@@ -64,7 +64,7 @@ public class EM_STORAGE_ERROR implements Serializable {
 	 * \if ENGLISH_LANG
 	 * RAID error
 	 * \else
-	 * RAID错误
+	 * RAID4mNs
 	 * \endif
 	 */
 	public static final int STORAGE_ERROR_RAID_FAILED = 5;
@@ -73,7 +73,7 @@ public class EM_STORAGE_ERROR implements Serializable {
 	 * \if ENGLISH_LANG
 	 * RAID degranded 
 	 * \else
-	 * RAID降级
+	 * RAID=5<6
 	 * \endif
 	 */
 	public static final int STORAGE_ERROR_RAID_DEGRADED = 6;
@@ -82,7 +82,7 @@ public class EM_STORAGE_ERROR implements Serializable {
 	 * \if ENGLISH_LANG
 	 * iSCSI error
 	 * \else
-	 * iSCSI错误
+	 * iSCSI4mNs
 	 * \endif
 	 */
 	public static final int STORAGE_ERROR_ISCSI_FAILED = 7;

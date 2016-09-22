@@ -13,7 +13,7 @@ public class SDK_FTP_UPLOAD_CFG_INNER implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable invalid
 	 * \else
-	 * 该时间段内的“使能”无效，可忽略
+	 * 8CJ1<d6NDZ5D!0J9D\!1N^P'#,?I:vBT
 	 * \endif
 	 */
 	public SDK_TSECT        struSect = new SDK_TSECT();
@@ -22,7 +22,7 @@ public class SDK_FTP_UPLOAD_CFG_INNER implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Upload Motion Detect Record
 	 * \else
-	 * 上传动态检测录象
+	 * IO4+6/L,<l2bB<Os
 	 * \endif
 	 */
 	public boolean            bMdEn;
@@ -31,7 +31,7 @@ public class SDK_FTP_UPLOAD_CFG_INNER implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Upload Alarm Record
 	 * \else
-	 * 上传外部报警录象
+	 * IO4+Mb2?1(>/B<Os
 	 * \endif
 	 */
 	public boolean            bAlarmEn;
@@ -40,7 +40,7 @@ public class SDK_FTP_UPLOAD_CFG_INNER implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Upload Normal Record
 	 * \else
-	 * 上传普通定时录像
+	 * IO4+FUM(6(J1B<Oq
 	 * \endif
 	 */
 	public boolean            bTimerEn;

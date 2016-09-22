@@ -19,7 +19,7 @@ public class DISKCTRL_SUBAREA implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The number of pre-partition
 	 * \else
-	 * 预分区的个数
+	 * T$7VGx5D8vJ}
 	 * \endif
 	 */
 	public byte	bSubareaNum;
@@ -28,7 +28,7 @@ public class DISKCTRL_SUBAREA implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Subscript of array stDisks of informaiton structure DH_HARDDISK_STATE. It begins from 0. 
 	 * \else
-	 * 为硬盘信息结构体DH_HARDDISK_STATE里的数组stDisks下标，从0开始
+	 * N*S2ELPEO"=a99LeDH_HARDDISK_STATE@o5DJ}WistDisksOB1j#,4S0?*J<
 	 * \endif
 	 */
 	public byte	bIndex;
@@ -37,7 +37,7 @@ public class DISKCTRL_SUBAREA implements Serializable {
 	 * \if ENGLISH_LANG
 	 * partition Size(Percentage)
 	 * \else
-	 * 分区大小（百分比）
+	 * 7VGx4sP!#(0Y7V1H#)
 	 * \endif
 	 */
 	public byte	bSubareaSize[] = new byte[32];

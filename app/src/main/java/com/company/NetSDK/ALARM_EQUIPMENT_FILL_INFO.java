@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Light CompensationDevice Fault Alarm
  * \else
- * 补光设备故障报警
+ * 299bIh189JUO1(>/
  * \endif
  */
 public class ALARM_EQUIPMENT_FILL_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_EQUIPMENT_FILL_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Vehicle Lane No. 
 	 * \else
-	 * 车道号
+	 * 355@:E
 	 * \endif
 	 */
 	public int                 nDriveWayID;
@@ -28,16 +28,16 @@ public class ALARM_EQUIPMENT_FILL_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm Occuring Time 
 	 * \else
-	 * 报警发生时间
+	 * 1(>/7"IzJ1<d
 	 * \endif
 	 */
 	public NET_TIME            stuTime = new NET_TIME();
 	
  	/**
 	 * \if ENGLISH_LANG
-	 * Device Status，0 Means Fault Recovery，1 Means Fault Occurs 
+	 * Device Status#,0 Means Fault Recovery#,1 Means Fault Occurs 
 	 * \else
-	 * 设备状态，0表示故障恢复，1表示发生故障
+	 * Ih18W4L,#,01mJ>9JUO;V84#,11mJ>7"Iz9JUO
 	 * \endif
 	 */
 	public int                 nState;
@@ -46,7 +46,7 @@ public class ALARM_EQUIPMENT_FILL_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm Channel No. 
 	 * \else
-	 * 报警的通道号
+	 * 1(>/5DM(5@:E
 	 * \endif
 	 */
 	public int                 dwChannel;

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * raid control, INetSDK.ControlDevice(SDK_CTRL_RAID)
  * \else
- * raid操作, INetSDK.ControlDevice(SDK_CTRL_RAID)
+ * raid2YWw, INetSDK.ControlDevice(SDK_CTRL_RAID)
  * \endif
  */
 public class CTRL_RAID_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class CTRL_RAID_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Add,Delete
 	 * \else
-	 * Add增加，Delete删除
+	 * AddTv<S#,DeleteI>3}
 	 * \endif
 	 */
 	public byte			szAction[] 	= new byte[16];
@@ -28,7 +28,7 @@ public class CTRL_RAID_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Raid name
 	 * \else
-	 * Raid名称
+	 * RaidC{3F
 	 * \endif
 	 */
 	public byte			szName[]	= new byte[16];
@@ -37,7 +37,7 @@ public class CTRL_RAID_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * type 1:Jbod     2:Raid0      3:Raid1     4:Raid5
 	 * \else
-	 * 类型 1:Jbod     2:Raid0      3:Raid1     4:Raid5
+	 * @`PM 1:Jbod     2:Raid0      3:Raid1     4:Raid5
 	 * \endif
 	 */
 	public int			nType;
@@ -46,7 +46,7 @@ public class CTRL_RAID_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * status 0:unknown ,1:active,2:degraded,3:inactive,4:recovering
 	 * \else
-	 * 状态 0:unknown ，1:active，2:degraded，3:inactive，4:recovering
+	 * W4L, 0:unknown #,1:active#,2:degraded#,3:inactive#,4:recovering
 	 * \endif
 	 */
 	public int			nStatus;
@@ -55,7 +55,7 @@ public class CTRL_RAID_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * nMember count
 	 * \else
-	 * nMember数组的有效数据个数
+	 * nMemberJ}Wi5DSPP'J}>]8vJ}
 	 * \endif
 	 */
 	public int			nCntMem;
@@ -64,7 +64,7 @@ public class CTRL_RAID_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 1,2,3,... 
 	 * \else
-	 * 1,2,3,... 组成磁盘通道,是个数组
+	 * 1,2,3,... Wi3I4EELM(5@,JG8vJ}Wi
 	 * \endif
 	 */
 	public int			nMember[]	= new int[32];
@@ -73,7 +73,7 @@ public class CTRL_RAID_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * capacity(G)
 	 * \else
-	 * 容量,单位G
+	 * H]A?,5%N;G
 	 * \endif
 	 */
 	public int			nCapacity;
@@ -82,7 +82,7 @@ public class CTRL_RAID_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * remain space(M)
 	 * \else
-	 * 剩余容量，单位M
+	 * J#S`H]A?#,5%N;M
 	 * \endif
 	 */
 	public int			nRemainSpace;
@@ -91,7 +91,7 @@ public class CTRL_RAID_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * tank 0:main,1:tank1,2:tank2.....
 	 * \else
-	 * 扩展柜 0:主机，1:扩展柜1，2:扩展柜2，……
+	 * @)U99q 0:Vw;z#,1:@)U99q1#,2:@)U99q2#,!-!-
 	 * \endif
 	 */
 	public int			nTank;

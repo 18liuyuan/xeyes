@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * CLIENT_StartUploadFileBurned()input param
  * \else
- * StartUploadFileBurned()输入参数
+ * StartUploadFileBurned()JdHk2NJ}
  * \endif
  */
 public class NET_IN_FILEBURNED_START implements Serializable {
@@ -19,7 +19,7 @@ public class NET_IN_FILEBURNED_START implements Serializable {
 	 * \if ENGLISH_LANG
 	 * type of upload,"append", append mode " FILE.zip ",filename be ignored
 	 * \else
-	 * 文件上传方式"append",追加模式,此时刻录文件名固定为" FILE.zip ",filename被忽略
+	 * ND<~IO4+7=J="append",W7<SD#J=,4KJ1?LB<ND<~C{9L6(N*" FILE.zip ",filename1;:vBT
 	 * \endif
 	 */
 	public String         		szMode;                         
@@ -27,7 +27,7 @@ public class NET_IN_FILEBURNED_START implements Serializable {
 	 * \if ENGLISH_LANG
 	 * device name,example "/dev/sda"
 	 * \else
-	 * 光盘名称，如“/dev/sda”
+	 * 9bELC{3F#,Hg!0/dev/sda!1
 	 * \endif
 	 */
 	public String         		szDeviceName;                   
@@ -35,7 +35,7 @@ public class NET_IN_FILEBURNED_START implements Serializable {
 	 * \if ENGLISH_LANG
 	 * local file name
 	 * \else
-	 * 本地文件名称
+	 * 1>5XND<~C{3F
 	 * \endif
 	 */
 	public String         		szFilename;                     
@@ -43,7 +43,7 @@ public class NET_IN_FILEBURNED_START implements Serializable {
 	 * \if ENGLISH_LANG
 	 * burn progress callback function
 	 * \else
-	 * 刻录进度回调
+	 * ?LB<=x6H;X5w
 	 * \endif
 	 */
 	public CB_fBurnFileCallBack   cbBurnPos;                      

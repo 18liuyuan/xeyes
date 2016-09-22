@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * decode policy configuration
  * \else
- * 机器相关的配置
+ * ;zFwO`9X5DEdVC
  * \endif
  */
 public class SDKDEV_DECODEPOLICY_CFG implements Serializable {
@@ -20,7 +20,7 @@ public class SDKDEV_DECODEPOLICY_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * (read only):minimal delay time(ms)
 	 * \else
-	 * 码缓冲时间范围(只读)：最小缓冲时间(单位：ms)
+	 * Bk;:3eJ1<d76N'(V;6A)#:WnP!;:3eJ1<d(5%N;#:ms)
 	 * \endif
 	 */
 	public int                 nMinTime;
@@ -29,7 +29,7 @@ public class SDKDEV_DECODEPOLICY_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * (read only):maximal delay time(ms)
 	 * \else
-	 * 码缓冲时间范围(只读)：最大缓冲时间(单位：ms)
+	 * Bk;:3eJ1<d76N'(V;6A)#:Wn4s;:3eJ1<d(5%N;#:ms)
 	 * \endif
 	 */
 	public int                 nMaxTime;
@@ -38,7 +38,7 @@ public class SDKDEV_DECODEPOLICY_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * device decode delay time(ms)
 	 * \else
-	 * 目标设备解码缓冲时间(单位：ms)
+	 * D?1jIh18=bBk;:3eJ1<d(5%N;#:ms)
 	 * \endif
 	 */
 	public int                 nDeocdeBufTime;

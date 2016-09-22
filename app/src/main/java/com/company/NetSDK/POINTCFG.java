@@ -21,7 +21,7 @@ public class POINTCFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port
 	 * \else
-	 * 端口    
+	 * 6K?Z    
 	 * \endif
 	 */
 	public int              nPort;
@@ -30,7 +30,7 @@ public class POINTCFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Preset enable
 	 * \else
-	 * 预制点使能
+	 * T$VF5cJ9D\
 	 * \endif
 	 */
 	public POINTEANBLE      stuPointEnable[] = new POINTEANBLE[80];

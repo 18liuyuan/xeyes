@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  *  Electronic Fence Type
  * \else
- * 电子围栏类型枚举
+ * 5gWSN'@8@`PMC6>Y
  * \endif
  */
 public class ENCLOSURE_TYPE implements Serializable {
@@ -19,7 +19,7 @@ public class ENCLOSURE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Speed Zone
 	 * \else
-	 * 限速区
+	 * O^KYGx
 	 * \endif
 	 */
 	public static final int ENCLOSURE_LIMITSPEED = 0x01;                    
@@ -27,7 +27,7 @@ public class ENCLOSURE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Driver Zone
 	 * \else
-	 * 驾驶区
+	 * <]J;Gx
 	 * \endif
 	 */
 	public static final int ENCLOSURE_DRIVEALLOW = 0x02;                    
@@ -35,7 +35,7 @@ public class ENCLOSURE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Forbidden Zone
 	 * \else
-	 * 禁止区
+	 * ={V9Gx
 	 * \endif
 	 */
 	public static final int ENCLOSURE_FORBIDDRIVE = 0x04;                   
@@ -43,7 +43,7 @@ public class ENCLOSURE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Loading Area
 	 * \else
-	 * 装货区
+	 * W0;uGx
 	 * \endif
 	 */
 	public static final int ENCLOSURE_LOADGOODS = 0x08;                     
@@ -51,7 +51,7 @@ public class ENCLOSURE_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Unloading Area
 	 * \else
-	 * 卸货区
+	 * P6;uGx
 	 * \endif
 	 */
 	public static final int ENCLOSURE_UPLOADGOODS = 0x10;                   

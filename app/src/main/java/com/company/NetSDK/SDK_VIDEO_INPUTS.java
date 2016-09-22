@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * channel info of video input
  * \else
- * 视频输入通道信息
+ * JSF5JdHkM(5@PEO"
  * \endif
  */
 public class SDK_VIDEO_INPUTS implements Serializable {
@@ -20,7 +20,7 @@ public class SDK_VIDEO_INPUTS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * channel name
 	 * \else
-	 * 通道名称
+	 * M(5@C{3F
 	 * \endif
 	 */
 	public byte                szChnName[] = new byte[FinalVar.SDK_DEVICE_NAME_LEN];
@@ -29,7 +29,7 @@ public class SDK_VIDEO_INPUTS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * enable
 	 * \else
-	 * 使能
+	 * J9D\
 	 * \endif
 	 */
 	public boolean                bEnable;
@@ -38,7 +38,7 @@ public class SDK_VIDEO_INPUTS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * control ID
 	 * \else
-	 * 控制ID
+	 * ?XVFID
 	 * \endif
 	 */
 	public byte                szControlID[] = new byte[FinalVar.SDK_DEV_ID_LEN_EX];
@@ -47,7 +47,7 @@ public class SDK_VIDEO_INPUTS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * main stream url
 	 * \else
-	 * 主码流url地址
+	 * VwBkAwurl5XV7
 	 * \endif
 	 */
 	public byte                szMainStreamUrl[] = new byte[FinalVar.MAX_PATH];
@@ -56,7 +56,7 @@ public class SDK_VIDEO_INPUTS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * extra stream url
 	 * \else
-	 * 辅码流url地址
+	 * 8(BkAwurl5XV7
 	 * \endif
 	 */
 	public byte                szExtraStreamUrl[] = new byte[FinalVar.MAX_PATH];
@@ -65,7 +65,7 @@ public class SDK_VIDEO_INPUTS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * spare main stream address quantity
 	 * \else
-	 * 备用主码流地址数量
+	 * 18SCVwBkAw5XV7J}A?
 	 * \endif
 	 */
 	public int                 nOptionalMainUrlCount;
@@ -74,7 +74,7 @@ public class SDK_VIDEO_INPUTS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * spare main stream address list
 	 * \else
-	 * 备用主码流地址列表
+	 * 18SCVwBkAw5XV7AP1m
 	 * \endif
 	 */
     public byte                szOptionalMainUrls[][] = new byte[FinalVar.SDK_MAX_OPTIONAL_URL_NUM][FinalVar.MAX_PATH];
@@ -83,7 +83,7 @@ public class SDK_VIDEO_INPUTS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * spare sub stream address quantity
 	 * \else
-	 * 备用辅码流地址数量
+	 * 18SC8(BkAw5XV7J}A?
 	 * \endif
 	 */
     public int                 nOptionalExtraUrlCount;
@@ -92,7 +92,7 @@ public class SDK_VIDEO_INPUTS implements Serializable {
 	 * \if ENGLISH_LANG
 	 * spare substream address list
 	 * \else
-	 * 备用辅码流地址列表
+	 * 18SC8(BkAw5XV7AP1m
 	 * \endif
 	 */
     public byte                szOptionalExtraUrls[][] = new byte[FinalVar.SDK_MAX_OPTIONAL_URL_NUM][FinalVar.MAX_PATH];

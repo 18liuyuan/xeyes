@@ -2,7 +2,6 @@ package com.company.NetSDK;
 
 import java.io.Serializable;
 
-
 public class SDKDEV_USER_REJECT_INFO implements Serializable {
 	/**
 	 *
@@ -13,7 +12,7 @@ public class SDKDEV_USER_REJECT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * ip
 	 * \else
-	 * ip地址
+	 * ip5XV7
 	 * \endif
 	 */
 	public byte                szIpAddress[] = new byte[FinalVar.SDK_MAX_IPADDR_LEN];
@@ -22,7 +21,7 @@ public class SDKDEV_USER_REJECT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * User Group
 	 * \else
-	 * 用户组
+	 * SC;'Wi
 	 * \endif
 	 */
 	public byte                szUserGroup[] = new byte[32]; 
@@ -31,7 +30,7 @@ public class SDKDEV_USER_REJECT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * User Name
 	 * \else
-	 * 用户名
+	 * SC;'C{
 	 * \endif
 	 */
 	public byte                szUserName[] = new byte[32]; 

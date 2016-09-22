@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * 232 Serial port configuration
  * \else
- * 232串口配置
+ * 2324.?ZEdVC
  * \endif
  */
 public class SDK_RS232_CFG implements Serializable{
@@ -20,7 +20,7 @@ public class SDK_RS232_CFG implements Serializable{
 	 * \if ENGLISH_LANG
 	 * Serial port Property
 	 * \else
-	 * 串口属性
+	 * 4.?ZJtPT
 	 * \endif
 	 */
 	public SDK_COMM_PROP        struComm = new SDK_COMM_PROP();
@@ -29,7 +29,7 @@ public class SDK_RS232_CFG implements Serializable{
 	 * \if ENGLISH_LANG
 	 * Serial port functions,Correspond"SDKDEV_COMM_CFG""s232FuncName"(Function name list)
 	 * \else
-	 * 串口功能，对应"SDKDEV_COMM_CFG"中"s232FuncName"(功能名列表)的下标
+	 * 4.?Z9&D\#,6TS&"SDKDEV_COMM_CFG"VP"s232FuncName"(9&D\C{AP1m)5DOB1j
 	 * \endif
 	 */
 	public byte                byFunction;

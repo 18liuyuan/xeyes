@@ -12,7 +12,7 @@ public class NET_CLIENT_ALARM_CHANNELS_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The type of query alarm channel, NET_ALARM_CHANNEL_TYPE
 	 * \else
-	 * 查询报警通道的类型, NET_ALARM_CHANNEL_TYPE
+	 * 2iQ/1(>/M(5@5D@`PM, NET_ALARM_CHANNEL_TYPE
 	 * \endif
 	 */
 	public int                         emType;
@@ -21,7 +21,7 @@ public class NET_CLIENT_ALARM_CHANNELS_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm input number, specified by the user 
 	 * \else
-	 * 报警输入个数，由用户指定
+	 * 1(>/JdHk8vJ}#,SISC;'V86(
 	 * \endif
 	 */
 	public int                         nAlarmInCount;
@@ -30,7 +30,7 @@ public class NET_CLIENT_ALARM_CHANNELS_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The number of returned alarm input 
 	 * \else
-	 * 报警输入个数，由用户指定
+	 * 1(>/JdHk8vJ}#,SISC;'V86(
 	 * \endif
 	 */
 	public int                         nAlarmInRetCount;
@@ -39,7 +39,7 @@ public class NET_CLIENT_ALARM_CHANNELS_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm state of input arrays, memory allocated by the user, each element represents a channel status, TRUE for input, FALSE for no input 
 	 * \else
-	 * 报警输入状态数组，由用户分配内存，每个元素表示一个通道状态,TRUE为有输入,FALSE为无输入
+	 * 1(>/JdHkW4L,J}Wi#,SISC;'7VEdDZ4f#,C?8vT*KX1mJ>R;8vM(5@W4L,,TRUEN*SPJdHk,FALSEN*N^JdHk
 	 * \endif
 	 */
 	public boolean                     pbAlarmInState[];
@@ -48,7 +48,7 @@ public class NET_CLIENT_ALARM_CHANNELS_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The number of alarm output,specified by the user 
 	 * \else
-	 * 报警输出个数，由用户指定
+	 * 1(>/Jd3v8vJ}#,SISC;'V86(
 	 * \endif
 	 */
     public int                         nAlarmOutCount;
@@ -57,7 +57,7 @@ public class NET_CLIENT_ALARM_CHANNELS_STATE implements Serializable {
      * \if ENGLISH_LANG
      * The number of alarm output 
      * \else
-     * 报警输出个数
+     * 1(>/Jd3v8vJ}
      * \endif
      */
     public int                         nAlarmOutRetCount;
@@ -66,7 +66,7 @@ public class NET_CLIENT_ALARM_CHANNELS_STATE implements Serializable {
      * \if ENGLISH_LANG
      * Alarm state of output arrays, memory allocated by the user, each element represents a channel status, TRUE for output, FALSE for no output 
      * \else
-     * 报警输出状态数组，由用户分配内存，每个元素表示一个通道状态,TRUE为有输出,FALSE为输出
+     * 1(>/Jd3vW4L,J}Wi#,SISC;'7VEdDZ4f#,C?8vT*KX1mJ>R;8vM(5@W4L,,TRUEN*SPJd3v,FALSEN*Jd3v
      * \endif
      */
     public boolean                     pbAlarmOutState[];
@@ -75,7 +75,7 @@ public class NET_CLIENT_ALARM_CHANNELS_STATE implements Serializable {
      * \if ENGLISH_LANG
      * Alarm Number,specified by the user 
      * \else
-     * 警号个数，由用户指定
+     * >/:E8vJ}#,SISC;'V86(
      * \endif
      */
     public int                         nAlarmBellCount;
@@ -84,7 +84,7 @@ public class NET_CLIENT_ALARM_CHANNELS_STATE implements Serializable {
      * \if ENGLISH_LANG
      * Returned Alarm Number 
      * \else
-     * 警号返回个数
+     * >/:E75;X8vJ}
      * \endif
      */
     public int                         nAlarmBellRetCount;
@@ -93,7 +93,7 @@ public class NET_CLIENT_ALARM_CHANNELS_STATE implements Serializable {
      * \if ENGLISH_LANG
      * Alarm state array, allocate memory by the user, each element represents a channel status, TRUE for output, FALSE for no output
      * \else
-     * 警号状态数组，由用户分配内存，每个元素表示一个通道状态,TRUE为有输出,FALSE为无输出
+     * >/:EW4L,J}Wi#,SISC;'7VEdDZ4f#,C?8vT*KX1mJ>R;8vM(5@W4L,,TRUEN*SPJd3v,FALSEN*N^Jd3v
      * \endif
      */
     public boolean                     pbAlarmBellState[];
@@ -102,7 +102,7 @@ public class NET_CLIENT_ALARM_CHANNELS_STATE implements Serializable {
      * \if ENGLISH_LANG
      * Extension module alarm input number, specified by the user 
      * \else
-     * 扩展模块报警输入个数，由用户指定
+     * @)U9D#?i1(>/JdHk8vJ}#,SISC;'V86(
      * \endif
      */
     public int                         nExAlarmInCount;
@@ -111,16 +111,16 @@ public class NET_CLIENT_ALARM_CHANNELS_STATE implements Serializable {
      * \if ENGLISH_LANG
      * The number of returned extension module alarm input 
      * \else
-     * 扩展模块报警输入返回个数
+     * @)U9D#?i1(>/JdHk75;X8vJ}
      * \endif
      */
     public int                         nExAlarmInRetCount;
     
     /**
      * \if ENGLISH_LANG
-     * Extension module alarm input state array，Memory allocated by the user, each element represents a channel status, TRUE for output, FALSE for no output 
+     * Extension module alarm input state array#,Memory allocated by the user, each element represents a channel status, TRUE for output, FALSE for no output 
      * \else
-     * 扩展模块报警输入状态数组，由用户分配内存，每个元素表示一个通道状态,TRUE为有输出,FALSE为无输出
+     * @)U9D#?i1(>/JdHkW4L,J}Wi#,SISC;'7VEdDZ4f#,C?8vT*KX1mJ>R;8vM(5@W4L,,TRUEN*SPJd3v,FALSEN*N^Jd3v
      * \endif
      */
     public boolean                     pbExAlarmInState[];
@@ -129,7 +129,7 @@ public class NET_CLIENT_ALARM_CHANNELS_STATE implements Serializable {
      * \if ENGLISH_LANG
      * The location of the extension module alarm input effective channels 
      * \else
-     * 扩展模块报警输入有效通道的位置
+     * @)U9D#?i1(>/JdHkSPP'M(5@5DN;VC
      * \endif
      */
     public int                         pnExAlarmInDestionation[];
@@ -138,7 +138,7 @@ public class NET_CLIENT_ALARM_CHANNELS_STATE implements Serializable {
      * \if ENGLISH_LANG
      * Extension module alarm output number, specified by the user
      * \else
-     * 扩展模块报警输出个数，由用户指定
+     * @)U9D#?i1(>/Jd3v8vJ}#,SISC;'V86(
      * \endif
      */
     public int                         nExAlarmOutCount;
@@ -147,16 +147,16 @@ public class NET_CLIENT_ALARM_CHANNELS_STATE implements Serializable {
      * \if ENGLISH_LANG
      * Extension module alarm output number 
      * \else
-     * 扩展模块报警输出个数
+     * @)U9D#?i1(>/Jd3v8vJ}
      * \endif
      */
     public int                         nExAlarmOutRetCount;
     
     /**
      * \if ENGLISH_LANG
-     * Extension module alarm output state array，Memory allocated by the user, each element represents a channel status, TRUE for output, FALSE for no output 
+     * Extension module alarm output state array#,Memory allocated by the user, each element represents a channel status, TRUE for output, FALSE for no output 
      * \else
-     * 扩展模块报警输出状态数组，由用户分配内存，每个元素表示一个通道状态,TRUE为有输出,FALSE为无输出
+     * @)U9D#?i1(>/Jd3vW4L,J}Wi#,SISC;'7VEdDZ4f#,C?8vT*KX1mJ>R;8vM(5@W4L,,TRUEN*SPJd3v,FALSEN*N^Jd3v
      * \endif
      */
     public boolean                     pbExAlarmOutState[];
@@ -165,7 +165,7 @@ public class NET_CLIENT_ALARM_CHANNELS_STATE implements Serializable {
      * \if ENGLISH_LANG
      * The location of the extension module alarm output effective channels
      * \else
-     * 扩展模块报警输出有效通道的位置
+     * @)U9D#?i1(>/Jd3vSPP'M(5@5DN;VC
      * \endif
      */
     public int                         pnExAlarmOutDestionation[];

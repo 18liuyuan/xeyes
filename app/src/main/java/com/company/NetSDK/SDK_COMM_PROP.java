@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * COMM Properties
  * \else
- * 串口基本属性
+ * 4.?Z;y1>JtPT
  * \endif
  */
 public class SDK_COMM_PROP implements Serializable {
@@ -18,7 +18,7 @@ public class SDK_COMM_PROP implements Serializable {
 
 	/**
 	 * \if ENGLISH_LANG
-	 * DataBit：
+	 * DataBit#:
 	 * <table>
 	 * <tr><td>0</td><td>5</td></tr>
 	 * <tr><td>1</td><td>6</td></tr>
@@ -26,7 +26,7 @@ public class SDK_COMM_PROP implements Serializable {
 	 * <tr><td>3</td><td>8</td></tr>
 	 * </table>
 	 * \else
-	 * 数据位：
+	 * J}>]N;#:
 	 * <table>
 	 * <tr><td>0</td><td>5</td></tr>
 	 * <tr><td>1</td><td>6</td></tr>
@@ -39,18 +39,18 @@ public class SDK_COMM_PROP implements Serializable {
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * Stop Bit：
+	 * Stop Bit#:
 	 * <table>
 	 * <tr><td>0</td><td>1Bit</td></tr>
 	 * <tr><td>1</td><td>1.5Bits</td></tr>
 	 * <tr><td>2</td><td>2Bits</td></tr>
 	 * </table>
 	 * \else
-	 * 停止位：
+	 * M#V9N;#:
 	 * <table>
-	 * <tr><td>0</td><td>1位</td></tr>
-	 * <tr><td>1</td><td>1.5位</td></tr>
-	 * <tr><td>2</td><td>2位</td></tr>
+	 * <tr><td>0</td><td>1N;</td></tr>
+	 * <tr><td>1</td><td>1.5N;</td></tr>
+	 * <tr><td>2</td><td>2N;</td></tr>
 	 * </table>
 	 * \endif
 	 */
@@ -58,7 +58,7 @@ public class SDK_COMM_PROP implements Serializable {
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * Check Bit：
+	 * Check Bit#:
 	 * <table>
 	 * <tr><td>0</td><td>None</td></tr>
 	 * <tr><td>1</td><td>Odd</td></tr>
@@ -67,13 +67,13 @@ public class SDK_COMM_PROP implements Serializable {
 	 * <tr><td>4</td><td>Empty check</td></tr>
 	 * </table>
 	 * \else
-	 * 校验位：
+	 * P#QiN;#:
 	 * <table>
-	 * <tr><td>0</td><td>无校验</td></tr>
-	 * <tr><td>1</td><td>奇校验</td></tr>
-	 * <tr><td>2</td><td>偶校验</td></tr>
-	 * <tr><td>3</td><td>标志校验</td></tr>
-	 * <tr><td>4</td><td>空校验</td></tr>
+	 * <tr><td>0</td><td>N^P#Qi</td></tr>
+	 * <tr><td>1</td><td>FfP#Qi</td></tr>
+	 * <tr><td>2</td><td>E<P#Qi</td></tr>
+	 * <tr><td>3</td><td>1jV>P#Qi</td></tr>
+	 * <tr><td>4</td><td>?UP#Qi</td></tr>
 	 * </table>
 	 * \endif
 	 */
@@ -81,7 +81,7 @@ public class SDK_COMM_PROP implements Serializable {
 	
 	/**
 	 * \if ENGLISH_LANG
-	 * BaudRate：
+	 * BaudRate#:
 	 * <table>
 	 * <tr><td>0</td><td>300</td></tr>
 	 * <tr><td>1</td><td>600</td></tr>
@@ -95,7 +95,7 @@ public class SDK_COMM_PROP implements Serializable {
 	 * <tr><td>9</td><td>115200</td></tr>
 	 * </table>
 	 * \else
-	 * 波特率：
+	 * 2(LXBJ#:
 	 * <table>
 	 * <tr><td>0</td><td>300</td></tr>
 	 * <tr><td>1</td><td>600</td></tr>

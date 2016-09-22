@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Corresponding to SearchDevicesByIPs
  * \else
- * 对应 SearchDevicesByIPs 接口
+ * 6TS& SearchDevicesByIPs =S?Z
  * \endif
  */
 public class DEVICE_IP_SEARCH_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class DEVICE_IP_SEARCH_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The IPs number for search
 	 * \else
-	 * 当前搜索的IP个数
+	 * 51G0KQKw5DIP8vJ}
 	 * \endif
 	 */
 	public int                 nIpNum;
@@ -28,7 +28,7 @@ public class DEVICE_IP_SEARCH_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The IPs for search
 	 * \else
-	 * 具体待搜索的IP信息
+	 * >_Le4}KQKw5DIPPEO"
 	 * \endif
 	 */
 	public byte                szIP[][] = new byte[FinalVar.SDK_MAX_SAERCH_IP_NUM][64];  

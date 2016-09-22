@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Electronic Fence Alarm
  * \else
- * 电子围栏报警
+ * 5gWSN'@81(>/
  * \endif
  */
 public class ALARM_ENCLOSURE_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_ENCLOSURE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Effective Electronic Fence Types Number 
 	 * \else
-	 * 有效电子围栏类型个数
+	 * SPP'5gWSN'@8@`PM8vJ}
 	 * \endif
 	 */
 	public int           nTypeNumber;
@@ -28,7 +28,7 @@ public class ALARM_ENCLOSURE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Electronic Fence Type, Details As Follows ENCLOSURE_TYPE
 	 * \else
-	 * 电子围栏类型, 见ENCLOSURE_TYPE
+	 * 5gWSN'@8@`PM, <{ENCLOSURE_TYPE
 	 * \endif
 	 */
 	public byte          bType[] = new byte[16];
@@ -37,16 +37,16 @@ public class ALARM_ENCLOSURE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The Effective Alarm Types Number 
 	 * \else
-	 * 有效报警类型个数
+	 * SPP'1(>/@`PM8vJ}
 	 * \endif
 	 */
 	public int           nAlarmTypeNumber;
 	
  	/**
 	 * \if ENGLISH_LANG
-	 * Alarm Types，Details As Follows  ENCLOSURE_ALARM_TYPE
+	 * Alarm Types#,Details As Follows  ENCLOSURE_ALARM_TYPE
 	 * \else
-	 * 报警类型，见 ENCLOSURE_ALARM_TYPE
+	 * 1(>/@`PM#,<{ ENCLOSURE_ALARM_TYPE
 	 * \endif
 	 */
 	public byte          bAlarmType[] = new byte[16];
@@ -55,7 +55,7 @@ public class ALARM_ENCLOSURE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Driver Job Number 
 	 * \else
-	 * 司机工号
+	 * K>;z9$:E
 	 * \endif
 	 */
 	public byte          szDriverId[] = new byte[FinalVar.SDK_VEHICLE_DRIVERNO_LEN];
@@ -64,16 +64,16 @@ public class ALARM_ENCLOSURE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Electronic FenceID 
 	 * \else
-	 * 电子围栏ID
+	 * 5gWSN'@8ID
 	 * \endif
 	 */
 	public int          unEnclosureId;
 	
  	/**
 	 * \if ENGLISH_LANG
-	 * Speed Limit，Unit km/h 
+	 * Speed Limit#,Unit km/h 
 	 * \else
-	 * 限速，单位km/h
+	 * O^KY#,5%N;km/h
 	 * \endif
 	 */
 	public int          unLimitSpeed;
@@ -82,7 +82,7 @@ public class ALARM_ENCLOSURE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Current Speed 
 	 * \else
-	 * 当前速度
+	 * 51G0KY6H
 	 * \endif
 	 */
 	public int          unCurrentSpeed;
@@ -91,25 +91,25 @@ public class ALARM_ENCLOSURE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm Occuring time 
 	 * \else
-	 * 报警发生时间
+	 * 1(>/7"IzJ1<d
 	 * \endif
 	 */
 	public NET_TIME      stAlarmTime;
 	
  	/**
 	 * \if ENGLISH_LANG
-	 * Longitude(Unit is 1/1,000,000°，Ranges From 0-360°)As East Longitude120.178274°Means 300178274 
+	 * Longitude(Unit is 1/1,000,000!c#,Ranges From 0-360!c)As East Longitude120.178274!cMeans 300178274 
 	 * \else
-	 * 经度(单位是百万分之度，范围0-360度)如东经120.178274度表示为300178274
+	 * >-6H(5%N;JG0YMr7VV.6H#,76N'0-3606H)Hg6+>-120.1782746H1mJ>N*300178274
 	 * \endif
 	 */
 	public int         dwLongitude;
 	
  	/**
 	 * \if ENGLISH_LANG
-	 * Latitude(Unit is 1/1,000,000°，Ranges From0-180°)As North Latitude 30.183382°Means120183382 
+	 * Latitude(Unit is 1/1,000,000!c#,Ranges From0-180!c)As North Latitude 30.183382!cMeans120183382 
 	 * \else
-	 * 纬度(单位是百万分之度，范围0-180度)如北纬30.183382度表示为120183382
+	 * N36H(5%N;JG0YMr7VV.6H#,76N'0-1806H)Hg11N330.1833826H1mJ>N*120183382
 	 * \endif
 	 */
 	public int         dwLatidude;
@@ -118,7 +118,7 @@ public class ALARM_ENCLOSURE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0-live 1-send 
 	 * \else
-	 * 0-实时 1-补传 
+	 * 0-J5J1 1-294+ 
 	 * \endif
 	 */
 	public byte          bOffline;

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Push the gateway type
  * \else
- * 推送网关类型
+ * MFKMMx9X@`PM
  * \endif
  */
 public class EM_PUSH_GATEWAY_TYPE implements Serializable {
@@ -20,7 +20,7 @@ public class EM_PUSH_GATEWAY_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Unknown
 	 * \else
-	 * 未知
+	 * N4V*
 	 * \endif
 	 */
 	public static final int EM_PUSH_GATEWAY_TYPE_UNKNOWN = 0; 
@@ -29,7 +29,7 @@ public class EM_PUSH_GATEWAY_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Apple push gateway, ApplePush
 	 * \else
-	 * 苹果推送网关, ApplePush
+	 * F;9{MFKMMx9X, ApplePush
 	 * \endif
 	 */
 	public static final int EM_PUSH_GATEWAY_TYPE_APPLE_PUSH = 1; 
@@ -38,7 +38,7 @@ public class EM_PUSH_GATEWAY_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Android DAHUA push gateway, AndroidDahuaPush
 	 * \else
-	 * 安卓大华推送网关, AndroidDahuaPush
+	 * 02W?4s;*MFKMMx9X, AndroidDahuaPush
 	 * \endif
 	 */
 	public static final int EM_PUSH_GATEWAY_TYPE_ANDROID_SDKPUSH = 2; 
@@ -47,7 +47,7 @@ public class EM_PUSH_GATEWAY_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Android aurora push gateway, AndroidJPush
 	 * \else
-	 * 安卓极光推送网关, AndroidJPush
+	 * 02W?<+9bMFKMMx9X, AndroidJPush
 	 * \endif
 	 */
 	public static final int EM_PUSH_GATEWAY_TYPE_ANDROID_JPUSH = 3; 
@@ -56,7 +56,7 @@ public class EM_PUSH_GATEWAY_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Android GCM gateway, AndroidGCM
 	 * \else
-	 * 安卓GCM网关, AndroidGCM
+	 * 02W?GCMMx9X, AndroidGCM
 	 * \endif
 	 */
 	public static final int EM_PUSH_GATEWAY_TYPE_ANDROID_GCM = 4; 

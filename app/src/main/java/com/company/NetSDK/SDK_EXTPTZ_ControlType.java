@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * PTZ control extensive command 
  * \else
- * 云台控制扩展命令, SDK_EXTPTZ_ControlType
+ * TFL(?XVF@)U9C|An, SDK_EXTPTZ_ControlType
  * \endif
  */
 public class SDK_EXTPTZ_ControlType implements Serializable {
@@ -19,119 +19,133 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Upper left
 	 * \else
-	 * 左上
+	 * WsIO
 	 * \endif
 	 */
-	public static final int     SDK_EXTPTZ_LEFTTOP = 0x20;					
+	public static final int     SDK_EXTPTZ_LEFTTOP = 0x20;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Upper right 
 	 * \else
-	 * 右上
+	 * SRIO
 	 * \endif
 	 */
-	public static final int     SDK_EXTPTZ_RIGHTTOP = 0x21;							
+	public static final int     SDK_EXTPTZ_RIGHTTOP = 0x21;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Down left
 	 * \else
-	 * 左下
+	 * WsOB
 	 * \endif
 	 */
-	public static final int     SDK_EXTPTZ_LEFTDOWN = 0x22;							
+	public static final int     SDK_EXTPTZ_LEFTDOWN = 0x22;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Down right 
 	 * \else
-	 * 右下
+	 * SROB
 	 * \endif
 	 */
-	public static final int     SDK_EXTPTZ_RIGHTDOWN = 0x23;						
+	public static final int     SDK_EXTPTZ_RIGHTDOWN = 0x23;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Add preset to tour tour preset value
 	 * \else
-	 * 加入预置点到巡航 巡航线路 预置点值
+	 * <SHkT$VC5c5=Q2:= Q2:=O_B7 T$VC5cV5
 	 * \endif
 	 */
-	public static final int     SDK_EXTPTZ_ADDTOLOOP = 0x24;						
+	public static final int     SDK_EXTPTZ_ADDTOLOOP = 0x24;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Delete preset in tour tour preset value
 	 * \else
-	 * 删除巡航中预置点 巡航线路 预置点值
+	 * I>3}Q2:=VPT$VC5c Q2:=O_B7 T$VC5cV5
 	 * \endif
 	 */
-	public static final int     SDK_EXTPTZ_DELFROMLOOP = 0x25;						
+	public static final int     SDK_EXTPTZ_DELFROMLOOP = 0x25;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Delete tour
 	 * \else
-	 * 清除巡航 巡航线路
+	 * Ge3}Q2:= Q2:=O_B7
 	 * \endif
 	 */
-	public static final int     SDK_EXTPTZ_CLOSELOOP = 0x26;						
+	public static final int     SDK_EXTPTZ_CLOSELOOP = 0x26;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Begin pan rotation	
 	 * \else
-	 * 开始水平旋转
+	 * ?*J<K.F=P}W*
 	 * \endif
 	 */
-	public static final int     SDK_EXTPTZ_STARTPANCRUISE = 0x27;					
+	public static final int     SDK_EXTPTZ_STARTPANCRUISE = 0x27;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Stop pan rotation	
 	 * \else
-	 * 停止水平旋转
+	 * M#V9K.F=P}W*
 	 * \endif
 	 */
-	public static final int     SDK_EXTPTZ_STOPPANCRUISE = 0x28;					
+	public static final int     SDK_EXTPTZ_STOPPANCRUISE = 0x28;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Set left limit	
 	 * \else
-	 * 设置左边界
+	 * IhVCWs1_=g
 	 * \endif
 	 */
-	public static final int     SDK_EXTPTZ_SETLEFTBORDER = 0x29;					
+	public static final int     SDK_EXTPTZ_SETLEFTBORDER = 0x29;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Set right limit	
 	 * \else
-	 * 设置右边界
+	 * IhVCSR1_=g
 	 * \endif
 	 */
-	public static final int     SDK_EXTPTZ_SETRIGHTBORDER = 0x2a;					
+	public static final int     SDK_EXTPTZ_SETRIGHTBORDER = 0x2a;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Begin scanning	
 	 * \else
-	 * 开始线扫
+	 * ?*J<O_I(
 	 * \endif
 	 */
-	public static final int     SDK_EXTPTZ_STARTLINESCAN = 0x2b;					
+	public static final int     SDK_EXTPTZ_STARTLINESCAN = 0x2b;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Stop scanning	
 	 * \else
-	 * 停止线扫
+	 * M#V9O_I(
 	 * \endif
 	 */
-	public static final int     SDK_EXTPTZ_CLOSELINESCAN = 0x2c;					
+	public static final int     SDK_EXTPTZ_CLOSELINESCAN = 0x2c;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Start mode	mode line	
 	 * \else
-	 * 设置模式开始	模式线路
+	 * IhVCD#J=?*J<	D#J=O_B7
 	 * \endif
 	 */
-	public static final int     SDK_EXTPTZ_SETMODESTART = 0x2d;						
+	public static final int     SDK_EXTPTZ_SETMODESTART = 0x2d;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Stop mode	mode line
 	 * \else
-	 * 设置模式结束	模式线路
+	 * IhVCD#J==aJx	D#J=O_B7
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_SETMODESTOP = 0x2e;						
@@ -139,7 +153,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable mode	Mode line
 	 * \else
-	 * 运行模式	模式线路
+	 * TKPPD#J=	D#J=O_B7
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_RUNMODE = 0x2f;							
@@ -147,7 +161,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Disable mode	Mode line	
 	 * \else
-	 * 停止模式	模式线路
+	 * M#V9D#J=	D#J=O_B7
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_STOPMODE = 0x30;							
@@ -155,7 +169,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Delete mode	Mode line
 	 * \else
-	 * 清除模式	模式线路
+	 * Ge3}D#J=	D#J=O_B7
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_DELETEMODE = 0x31;						
@@ -163,7 +177,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Flip
 	 * \else
-	 * 翻转命令
+	 * 7-W*C|An
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_REVERSECOMM = 0x32;						
@@ -171,7 +185,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 3D position	X address(8192)	Y address(8192)	zoom(4)
 	 * \else
-	 * 快速定位 水平坐标(8192) 垂直坐标(8192) 变倍(4)
+	 * ?lKY6(N; K.F=Wx1j(8192) 49V1Wx1j(8192) 1d16(4)
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_FASTGOTO = 0x33;							
@@ -179,7 +193,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Auxiliary open	Auxiliary point	
 	 * \else
-	 * 辅助开关开 辅助点
+	 * 8(Vz?*9X?* 8(Vz5c
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_AUXIOPEN = 0x34;							
@@ -187,7 +201,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Auxiliary close	Auxiliary point
 	 * \else
-	 * 辅助开关关 辅助点
+	 * 8(Vz?*9X9X 8(Vz5c
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_AUXICLOSE = 0x35;						
@@ -195,7 +209,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Open dome menu 
 	 * \else
-	 * 打开球机菜单
+	 * 4r?*Gr;z2K5%
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_OPENMENU = 0x36;					
@@ -203,7 +217,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Close menu 
 	 * \else
-	 * 关闭菜单
+	 * 9X1U2K5%
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_CLOSEMENU = 0x37;						
@@ -211,7 +225,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Confirm menu 
 	 * \else
-	 * 菜单确定
+	 * 2K5%H76(
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_MENUOK = 0x38;							
@@ -219,7 +233,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Cancel menu 
 	 * \else
-	 * 菜单取消
+	 * 2K5%H!O{
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_MENUCANCEL = 0x39;						
@@ -227,7 +241,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Menu up 
 	 * \else
-	 * 菜单上
+	 * 2K5%IO
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_MENUUP = 0x3a;							
@@ -235,7 +249,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Menu down
 	 * \else
-	 * 菜单下
+	 * 2K5%OB
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_MENUDOWN = 0x3b;							
@@ -243,7 +257,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Menu left
 	 * \else
-	 * 菜单左
+	 * 2K5%Ws
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_MENULEFT = 0x3c;							
@@ -251,7 +265,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Menu right 
 	 * \else
-	 * 菜单右
+	 * 2K5%SR
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_MENURIGHT = 0x3d;						
@@ -259,7 +273,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm activate PTZ parm1:Alarm input channel;parm2:Alarm activation type  1-preset 2-scan 3-tour;parm 3:activation value,such as preset value.
 	 * \else
-	 * 报警联动云台 parm1：报警输入通道；parm2：报警联动类型1-预置点2-线扫3-巡航；parm3：联动值，如预置点号
+	 * 1(>/A*6/TFL( parm1#:1(>/JdHkM(5@#;parm2#:1(>/A*6/@`PM1-T$VC5c2-O_I(3-Q2:=#;parm3#:A*6/V5#,HgT$VC5c:E
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_ALARMHANDLE = 0x40;				
@@ -267,7 +281,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Matrix switch parm1:monitor number(video output number);parm2:video input number;parm3:matrix number
 	 * \else
-	 * 矩阵切换 parm1：监视器号(视频输出号)；parm2：视频输入号；parm3：矩阵号
+	 * >XUsGP;; parm1#:<`JSFw:E(JSF5Jd3v:E)#;parm2#:JSF5JdHk:E#;parm3#:>XUs:E
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_MATRIXSWITCH = 0x41;				
@@ -275,7 +289,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Light controller
 	 * \else
-	 * 灯光控制器
+	 * 5F9b?XVFFw
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_LIGHTCONTROL = 0x42;						
@@ -283,7 +297,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 3D accurately positioning parm1:Pan degree(0~3600); parm2: tilt coordinates(0~900); parm3:zoom(1~128)
 	 * \else
-	 * 三维精确定位 parm1：水平角度(0~3600)；parm2：垂直坐标(0~900)；parm3：变倍(1~128)
+	 * H}N,>+H76(N; parm1#:K.F==G6H(0~3600)#;parm2#:49V1Wx1j(0~900)#;parm3#:1d16(1~128)
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_EXACTGOTO = 0x43;						
@@ -291,7 +305,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Reset  3D positioning as zero
 	 * \else
-	 * 三维定位重设零位
+	 * H}N,6(N;VXIhAcN;
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_RESETZERO = 0x44;                        
@@ -299,7 +313,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 绝对移动控制命令，param4对应结构PTZ_CONTROL_ABSOLUTELY
+	 * >x6TRF6/?XVFC|An#,param46TS&=a99PTZ_CONTROL_ABSOLUTELY
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_MOVE_ABSOLUTELY = 0x45;                  
@@ -307,7 +321,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 持续移动控制命令，param4对应结构PTZ_CONTROL_CONTINUOUSLY
+	 * 3VPxRF6/?XVFC|An#,param46TS&=a99PTZ_CONTROL_CONTINUOUSLY
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_MOVE_CONTINUOUSLY = 0x46;                
@@ -315,7 +329,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 云台控制命令，以一定速度转到预置位点，parm4对应结构PTZ_CONTROL_GOTOPRESET
+	 * TFL(?XVFC|An#,RTR;6(KY6HW*5=T$VCN;5c#,parm46TS&=a99PTZ_CONTROL_GOTOPRESET
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_GOTOPRESET = 0x47;                       
@@ -323,7 +337,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 设置可视域(param4对应结构 PTZ_VIEW_RANGE_INFO)
+	 * IhVC?IJSSr(param46TS&=a99 PTZ_VIEW_RANGE_INFO)
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_SET_VIEW_RANGE = 0x49;           	
@@ -331,7 +345,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 绝对聚焦(param4对应结构PTZ_FOCUS_ABSOLUTELY)
+	 * >x6T>[=9(param46TS&=a99PTZ_FOCUS_ABSOLUTELY)
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_FOCUS_ABSOLUTELY = 0x4A;         	
@@ -339,7 +353,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 水平扇扫(param4对应PTZ_CONTROL_SECTORSCAN,param1、param2、param3无效)
+	 * K.F=IHI((param46TS&PTZ_CONTROL_SECTORSCAN,param1!"param2!"param3N^P')
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_HORSECTORSCAN = 0x4B;             
@@ -347,7 +361,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 垂直扇扫(param4对应PTZ_CONTROL_SECTORSCAN,param1、param2、param3无效)
+	 * 49V1IHI((param46TS&PTZ_CONTROL_SECTORSCAN,param1!"param2!"param3N^P')
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_VERSECTORSCAN = 0x4C;             
@@ -355,7 +369,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Port serial number
 	 * \else
-	 * 设定绝对焦距、聚焦值,param1为焦距,范围:[0,255],param2为聚焦,范围:[0,255],param3、param4无效
+	 * Ih6(>x6T=9>`!">[=9V5,param1N*=9>`,76N':[0,255],param2N*>[=9,76N':[0,255],param3!"param4N^P'
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_SET_ABS_ZOOMFOCUS = 0x4D;         
@@ -363,7 +377,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Up + TELE param1=speed (1-8) 
 	 * \else
-	 * 上 + TELE param1=速度(1-8)，下同
+	 * IO + TELE param1=KY6H(1-8)#,OBM,
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_UP_TELE = 0x70;					
@@ -371,7 +385,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Down + TELE
 	 * \else
-	 * 下 + TELE
+	 * OB + TELE
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_DOWN_TELE = 0x71;						
@@ -379,7 +393,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Left + TELE
 	 * \else
-	 * 左 + TELE
+	 * Ws + TELE
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_LEFT_TELE = 0x72;						
@@ -387,7 +401,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Right + TELE
 	 * \else
-	 * 右 + TELE
+	 * SR + TELE
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_RIGHT_TELE = 0x73;						
@@ -395,7 +409,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Upper left + TELE
 	 * \else
-	 * 左上 + TELE
+	 * WsIO + TELE
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_LEFTUP_TELE = 0x74;						
@@ -403,7 +417,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Down left + TELE
 	 * \else
-	 * 左下 + TELE
+	 * WsOB + TELE
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_LEFTDOWN_TELE = 0x75;					
@@ -411,7 +425,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Upper right + TELE
 	 * \else
-	 * 右上 + TELE
+	 * SRIO + TELE
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_TIGHTUP_TELE = 0x76;						
@@ -419,7 +433,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Down right + TELE
 	 * \else
-	 * 右下 + TELE
+	 * SROB + TELE
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_RIGHTDOWN_TELE = 0x77;					
@@ -427,7 +441,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Up + WIDE param1=speed (1-8) 
 	 * \else
-	 * 上 + WIDE param1=速度(1-8)，下同
+	 * IO + WIDE param1=KY6H(1-8)#,OBM,
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_UP_WIDE = 0x78;							
@@ -435,7 +449,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Down + WIDE
 	 * \else
-	 * 下 + WIDE
+	 * OB + WIDE
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_DOWN_WIDE = 0x79;						
@@ -443,7 +457,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Left + WIDE
 	 * \else
-	 * 左 + WIDE
+	 * Ws + WIDE
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_LEFT_WIDE = 0x7a;						
@@ -451,7 +465,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Right + WIDE
 	 * \else
-	 * 右 + WIDE
+	 * SR + WIDE
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_RIGHT_WIDE = 0x7b;						
@@ -459,7 +473,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Upper left + WIDE
 	 * \else
-	 * 左上 + WIDE
+	 * WsIO + WIDE
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_LEFTUP_WIDE = 0x7c;						
@@ -467,7 +481,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Down left+ WIDE
 	 * \else
-	 * 左下 + WIDE
+	 * WsOB + WIDE
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_LEFTDOWN_WIDE = 0x7d;					
@@ -475,7 +489,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Upper right + WIDE
 	 * \else
-	 * 右上 + WIDE
+	 * SRIO + WIDE
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_TIGHTUP_WIDE = 0x7e;						
@@ -483,7 +497,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Down right + WIDE
 	 * \else
-	 * 右下 + WIDE
+	 * SROB + WIDE
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_RIGHTDOWN_WIDE = 0x7f;					
@@ -491,7 +505,7 @@ public class SDK_EXTPTZ_ControlType implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Max command value
 	 * \else
-	 * 最大命令值
+	 * Wn4sC|AnV5
 	 * \endif
 	 */
 	public static final int     SDK_EXTPTZ_TOTAL = 0x80;							

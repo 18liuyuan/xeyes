@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * alarm of ivs
  * \else
- * 智能报警事件
+ * VGD\1(>/JB<~
  * \endif
  */
 public class ALARM_IVS_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_IVS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * time
 	 * \else
-	 * 事件发生时间    
+	 * JB<~7"IzJ1<d    
 	 * \endif
 	 */
 	public NET_TIME   stuTime = new NET_TIME();
@@ -28,7 +28,7 @@ public class ALARM_IVS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * channel ID,from 0
 	 * \else
-	 * 通道号，从0开始
+	 * M(5@:E#,4S0?*J<
 	 * \endif
 	 */
 	public int        nChannelID;
@@ -37,7 +37,7 @@ public class ALARM_IVS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * type
 	 * \else
-	 * 报警类型
+	 * 1(>/@`PM
 	 * \endif
 	 */
 	public byte       szType[] = new byte[FinalVar.MAX_PATH];
@@ -46,7 +46,7 @@ public class ALARM_IVS_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * state,0-reset,1-setting,2-pulse
 	 * \else
-	 * 报警状态，0-报警复位，1-报警置位, 2-脉冲式报警
+	 * 1(>/W4L,#,0-1(>/84N;#,1-1(>/VCN;, 2-Bv3eJ=1(>/
 	 * \endif
 	 */
 	public int        nState;

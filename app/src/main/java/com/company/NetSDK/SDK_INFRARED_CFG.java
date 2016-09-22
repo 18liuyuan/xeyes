@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Wireless Alarm Output Configuration
  * \else
- * 无线报警输出配置
+ * N^O_1(>/Jd3vEdVC
  * \endif
  */
 public class SDK_INFRARED_CFG implements Serializable {
@@ -19,7 +19,7 @@ public class SDK_INFRARED_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm Input quantity
 	 * \else
-	 * 无线报警输入数
+	 * N^O_1(>/JdHkJ}
 	 * \endif
 	 */
 	public byte                    bAlarmInNum;
@@ -28,7 +28,7 @@ public class SDK_INFRARED_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm Output quantity
 	 * \else
-	 * 无线报警输出数
+	 * N^O_1(>/Jd3vJ}
 	 * \endif
 	 */
 	public byte                    bAlarmOutNum;
@@ -37,7 +37,7 @@ public class SDK_INFRARED_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm Output Address
 	 * \else
-	 * 报警输出地址
+	 * 1(>/Jd3v5XV7
 	 * \endif
 	 */
 	public SDK_WI_CONFIG_ALARM_OUT  AlarmOutAddr[] = new SDK_WI_CONFIG_ALARM_OUT[16];
@@ -46,7 +46,7 @@ public class SDK_INFRARED_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Remote Control quantity
 	 * \else
-	 * 遥控器个数
+	 * R#?XFw8vJ}
 	 * \endif
 	 */
     public byte                    bRobotNum;
@@ -55,7 +55,7 @@ public class SDK_INFRARED_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Remote Control Address
 	 * \else
-	 * 遥控器地址
+	 * R#?XFw5XV7
 	 * \endif
 	 */
     public SDK_WI_CONFIG_ROBOT      RobotAddr[] = new SDK_WI_CONFIG_ROBOT[16];
@@ -64,7 +64,7 @@ public class SDK_INFRARED_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Infrared Alarm config
 	 * \else
-	 * 红外报警配置
+	 * :lMb1(>/EdVC
 	 * \endif
 	 */
     public SDK_INFRARED_INFO        InfraredAlarm[] = new SDK_INFRARED_INFO[16];

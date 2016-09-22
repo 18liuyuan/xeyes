@@ -13,7 +13,7 @@ public class NET_IN_DELETECFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 
 	 * \else
-	 * ≈‰÷√√¸¡Ó
+	 * EdVCC|An
 	 * \endif
 	 */
 	public String         szCommand;

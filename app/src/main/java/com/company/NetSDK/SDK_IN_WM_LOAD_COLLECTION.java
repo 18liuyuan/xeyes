@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * LoadMonitorWallCollection's interface input param(load monitor wall plans)
  * \else
- * LoadMonitorWallCollection接口输入参数(载入电视墙预案)
+ * LoadMonitorWallCollection=S?ZJdHk2NJ}(TXHk5gJSG=T$08)
  * \endif
  */
 public class SDK_IN_WM_LOAD_COLLECTION implements Serializable {
@@ -19,16 +19,17 @@ public class SDK_IN_WM_LOAD_COLLECTION implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Monitor wall ID
 	 * \else
-	 * 电视墙序号
+	 * 5gJSG=Pr:E
 	 * \endif
 	 */
-	public int					nMonitorWallID;				
+	public int					nMonitorWallID;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Name of plan
 	 * \else
-	 * 预案名称
+	 * T$08C{3F
 	 * \endif
 	 */
-	public String				pszName;					
+	public String				pszName;
 }

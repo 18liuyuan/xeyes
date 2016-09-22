@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 /**
  * \if ENGLISH_LANG
- * INetSDK.ControlDevice port SDK_CTRL_START_ALARMBELL、SDK_CTRL_STOP_ALARMBELL command parameter
+ * INetSDK.ControlDevice port SDK_CTRL_START_ALARMBELL!"SDK_CTRL_STOP_ALARMBELL command parameter
  * \else
- * INetSDK.ControlDevice接口的 SDK_CTRL_START_ALARMBELL、SDK_CTRL_STOP_ALARMBELL命令参数
+ * INetSDK.ControlDevice=S?Z5D SDK_CTRL_START_ALARMBELL!"SDK_CTRL_STOP_ALARMBELLC|An2NJ}
  * \endif
  */
 public class NET_CTRL_ALARMBELL implements Serializable {
@@ -19,7 +19,7 @@ public class NET_CTRL_ALARMBELL implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel ID (start from 0) 
 	 * \else
-	 * 通道号(0开始)      
+	 * M(5@:E(0?*J<)      
 	 * \endif
 	 */
 	public int					nChannelID;			

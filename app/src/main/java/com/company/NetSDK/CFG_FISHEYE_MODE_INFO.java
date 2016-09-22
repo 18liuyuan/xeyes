@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * fish eye mode window location info
  * \else
- * 模块数
+ * D#?iJ}
  * \endif
  */
 public class CFG_FISHEYE_MODE_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_FISHEYE_MODE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * mode type, see CFG_CALIBRATE_MODE
 	 * \else
-	 * 模式类型，详见 CFG_CALIBRATE_MODE
+	 * D#J=@`PM#,Oj<{ CFG_CALIBRATE_MODE
 	 * \endif
 	 */
 	public int                nModeType;
@@ -28,7 +28,7 @@ public class CFG_FISHEYE_MODE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * current mode window number
 	 * \else
-	 * 当前模式下的窗口数
+	 * 51G0D#J=OB5D40?ZJ}
 	 * \endif
 	 */
 	public int                nWindowNum;
@@ -37,7 +37,7 @@ public class CFG_FISHEYE_MODE_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * see window info 
 	 * \else
-	 * 具体窗口信息
+	 * >_Le40?ZPEO"
 	 * \endif
 	 */
 	public CFG_FISHEYE_WINDOW_INFO stuWindwos[] = new CFG_FISHEYE_WINDOW_INFO[FinalVar.CFG_MAX_FISHEYE_WINDOW_NUM];

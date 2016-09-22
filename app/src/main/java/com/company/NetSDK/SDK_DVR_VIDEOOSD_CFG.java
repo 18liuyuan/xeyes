@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * OSD Information for Each Channel
  * \else
- * 每个通道的OSD信息
+ * C?8vM(5@5DOSDPEO"
  * \endif
  */
 public class SDK_DVR_VIDEOOSD_CFG implements Serializable {
@@ -19,7 +19,7 @@ public class SDK_DVR_VIDEOOSD_CFG implements Serializable {
 	 * \if ENGLISH_LANG
 	 * OSD information for each channel
 	 * \else
-	 * 每个通道的OSD信息
+	 * C?8vM(5@5DOSDPEO"
 	 * \endif
 	 */
 	public SDK_DVR_VIDEOITEM 	StOSDTitleOpt[] = new SDK_DVR_VIDEOITEM[FinalVar.SDK_VIDEO_CUSTOM_OSD_NUM];

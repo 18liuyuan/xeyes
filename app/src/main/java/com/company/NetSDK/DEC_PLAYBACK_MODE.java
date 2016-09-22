@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Play back mode for decoder
  * \else
- * 解码器回放方式
+ * =bBkFw;X7E7=J=
  * \endif
  */
 public class DEC_PLAYBACK_MODE implements Serializable {
@@ -19,7 +19,7 @@ public class DEC_PLAYBACK_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * by file mode
 	 * \else
-	 * 按文件方式
+	 * 04ND<~7=J=
 	 * \endif
 	 */
 	public static final int     Dec_By_Device_File = 0;
@@ -28,7 +28,7 @@ public class DEC_PLAYBACK_MODE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * by time mode
 	 * \else
-	 * 按时间方式
+	 * 04J1<d7=J=
 	 * \endif
 	 */
 	public static final int     Dec_By_Device_Time = 1;

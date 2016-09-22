@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Structure of multi-screen preview capability
  * \else
- * 多画面预览能力结构体
+ * 6`;-CfT$@@D\A&=a99Le
  * \endif
  */
 public class SDK_MULTIPLAY_EN implements Serializable {
@@ -19,16 +19,17 @@ public class SDK_MULTIPLAY_EN implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 1 support; 0 does not support 
 	 * \else
-	 * 1 支持；0 不支持
+	 * 1 V'3V#;0 2;V'3V
 	 * \endif
 	 */
-	public int			nEnable;				
+	public int			nEnable;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Multi-screen preview mask, this parameter does not work 
 	 * \else
-	 * 多画面预览掩码
+	 * 6`;-CfT$@@QZBk
 	 * \endif
 	 */
-	public int			dwMultiPlayMask;		
+	public int			dwMultiPlayMask;
 }

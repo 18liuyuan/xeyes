@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * alarm sub system activation setup parameter(corresponding SDK_CTRL_ALARM_SUBSYSTEM_ACTIVE_SET command)
  * \else
- * 报警子系统激活设置参数(对应SDK_CTRL_ALARM_SUBSYSTEM_ACTIVE_SET命令)
+ * 1(>/WSO5M3<$;nIhVC2NJ}(6TS&SDK_CTRL_ALARM_SUBSYSTEM_ACTIVE_SETC|An)
  * \endif
  */
 public class NET_CTRL_ALARM_SUBSYSTEM_SETACTIVE implements Serializable {
@@ -19,7 +19,7 @@ public class NET_CTRL_ALARM_SUBSYSTEM_SETACTIVE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * sub system no.
 	 * \else
-	 * 子系统号
+	 * WSO5M3:E
 	 * \endif
 	 */
 	public int					nChannelId;
@@ -28,7 +28,7 @@ public class NET_CTRL_ALARM_SUBSYSTEM_SETACTIVE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * sub system enable status ,TRUE means enable, FALSE means disable
 	 * \else
-	 * 子系统启用状态,TRUE 表示启用,FALSE表示不启用
+	 * WSO5M3FtSCW4L,,TRUE 1mJ>FtSC,FALSE1mJ>2;FtSC
 	 * \endif
 	 */
 	public boolean 				bActive; 

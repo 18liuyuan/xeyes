@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Armed Zone Type
  * \else
- * 防区类型
+ * 7@Gx@`PM
  * \endif
  */
 public class NET_DEFENCEAREA_TYPE implements Serializable {
@@ -19,7 +19,7 @@ public class NET_DEFENCEAREA_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Unknown Armed Zone
 	 * \else
-	 * 未知类型防区
+	 * N4V*@`PM7@Gx
 	 * \endif
 	 */
 	public static final int NET_DEFENCEAREA_TYPE_UNKNOWN = 0;
@@ -28,7 +28,7 @@ public class NET_DEFENCEAREA_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * On/Off Armed Zone
 	 * \else
-	 * 开关量防区
+	 * ?*9XA?7@Gx
 	 * \endif
 	 */
 	public static final int NET_DEFENCEAREA_TYPE_ALARM = 1;

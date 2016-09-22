@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * battery in-place status
  * \else
- * 电池在位状态
+ * 5g3XTZN;W4L,
  * \endif
  */
 public class EM_BATTERY_EXIST_STATE implements Serializable {
@@ -19,7 +19,7 @@ public class EM_BATTERY_EXIST_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Unkown
 	 * \else
-	 * 未知
+	 * N4V*
 	 * \endif
 	 */
 	public final static int 	EM_BATTERY_EXIST_STATE_UNKNOWN = 0 ;
@@ -28,7 +28,7 @@ public class EM_BATTERY_EXIST_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * battery in-place
 	 * \else
-	 * 电池在位
+	 * 5g3XTZN;
 	 * \endif
 	 */
 	public final static int    	EM_BATTERY_EXIST_STATE_EXIST   = 1 ;
@@ -37,7 +37,7 @@ public class EM_BATTERY_EXIST_STATE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * battery lost
 	 * \else
-	 * 电池丢失
+	 * 5g3X6*J'
 	 * \endif
 	 */
 	public final static int     EM_BATTERY_EXIST_STATE_MISSING = 2 ; 

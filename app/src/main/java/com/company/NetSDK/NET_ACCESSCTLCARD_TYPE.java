@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Card Type
  * \else
- * ¿¨ÀàÐÍ
+ * ?(@`PM
  * \endif
  */
 public class NET_ACCESSCTLCARD_TYPE implements Serializable {
@@ -19,7 +19,7 @@ public class NET_ACCESSCTLCARD_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Unknown
 	 * \else
-	 * Î´Öª
+	 * N4V*
 	 * \endif
 	 */
 	public static final int NET_ACCESSCTLCARD_TYPE_UNKNOWN = -1;
@@ -28,7 +28,7 @@ public class NET_ACCESSCTLCARD_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Normal Card
 	 * \else
-	 * Ò»°ã¿¨
+	 * R;0c?(
 	 * \endif
 	 */
 	public static final int NET_ACCESSCTLCARD_TYPE_GENERAL = 0;
@@ -37,7 +37,7 @@ public class NET_ACCESSCTLCARD_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * VIP
 	 * \else
-	 * VIP¿¨
+	 * VIP?(
 	 * \endif
 	 */
 	public static final int NET_ACCESSCTLCARD_TYPE_VIP = 1;
@@ -46,7 +46,7 @@ public class NET_ACCESSCTLCARD_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Guest Card
 	 * \else
-	 * À´±ö¿¨
+	 * @41v?(
 	 * \endif
 	 */
 	public static final int NET_ACCESSCTLCARD_TYPE_GUEST = 2;
@@ -55,7 +55,7 @@ public class NET_ACCESSCTLCARD_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Patrol Card
 	 * \else
-	 * Ñ²Âß¿¨
+	 * Q2B_?(
 	 * \endif
 	 */
 	public static final int NET_ACCESSCTLCARD_TYPE_PATROL = 3;
@@ -64,7 +64,7 @@ public class NET_ACCESSCTLCARD_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Black List Card
 	 * \else
-	 * ºÚÃûµ¥¿¨
+	 * :ZC{5%?(
 	 * \endif
 	 */
 	public static final int NET_ACCESSCTLCARD_TYPE_BLACKLIST = 4;
@@ -73,7 +73,7 @@ public class NET_ACCESSCTLCARD_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Threat Card
 	 * \else
-	 * Ð²ÆÈ¿¨
+	 * P2FH?(
 	 * \endif
 	 */
 	public static final int NET_ACCESSCTLCARD_TYPE_CORCE = 5;
@@ -82,7 +82,7 @@ public class NET_ACCESSCTLCARD_TYPE implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Master Card
 	 * \else
-	 * Ä¸¿¨
+	 * D8?(
 	 * \endif
 	 */
 	public static final int NET_ACCESSCTLCARD_TYPE_MOTHERCARD = 0xff;

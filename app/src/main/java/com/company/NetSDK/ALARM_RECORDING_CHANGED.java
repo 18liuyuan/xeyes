@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Record Status Changes Alarm Info
  * \else
- * 录像状态变化报警信息
+ * B<OqW4L,1d;/1(>/PEO"
  * \endif
  */
 public class ALARM_RECORDING_CHANGED implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_RECORDING_CHANGED implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Record Channel No.
 	 * \else
-	 * 录像通道号
+	 * B<OqM(5@:E
 	 * \endif
 	 */
 	public int                 nChannel;                

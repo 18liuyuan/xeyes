@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Abnormal record alarm
  * \else
- * 录像异常报警
+ * B<OqRl3#1(>/
  * \endif
  */
 public class ALARM_RECORD_FAILED_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_RECORD_FAILED_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:start 1:stop
 	 * \else
-	 * 0:开始 1:停止
+	 * 0:?*J< 1:M#V9
 	 * \endif
 	 */
 	public int                  nAction;
@@ -28,7 +28,7 @@ public class ALARM_RECORD_FAILED_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel no
 	 * \else
-	 * 通道号
+	 * M(5@:E
 	 * \endif
 	 */
 	public int                  nIndex;

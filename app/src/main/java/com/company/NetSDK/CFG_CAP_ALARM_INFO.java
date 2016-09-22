@@ -12,7 +12,7 @@ public class CFG_CAP_ALARM_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device support PIR alarm or not(thermal sensors),a kind of external alarm
 	 * \else
-	 * 设备是否支持PIR(人体热式感应器)报警,外部报警的一种
+	 * Ih18JG7qV'3VPIR(HKLeHHJ=8PS&Fw)1(>/,Mb2?1(>/5DR;VV
 	 * \endif
 	 */
 	public boolean                 bAlarmPir;
@@ -21,7 +21,7 @@ public class CFG_CAP_ALARM_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Device support flash light of not
 	 * \else
-	 * 设备是否支持补光灯
+	 * Ih18JG7qV'3V299b5F
 	 * \endif
 	 */
 	public boolean                 bFlashLight;
@@ -30,7 +30,7 @@ public class CFG_CAP_ALARM_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * DefenceArea Type Number ,0 Indicates No Such Alarm Input does not Use as a DefenceArea
 	 * \else
-	 * 防区类型种类数,为0表示无此字段时报警输入不作为防区使用。
+	 * 7@Gx@`PMVV@`J},N*01mJ>N^4KWV6NJ11(>/JdHk2;WwN*7@GxJ9SC!#
 	 * \endif
 	 */
 	public int					 nDefenceAreaTypeNum;
@@ -39,7 +39,7 @@ public class CFG_CAP_ALARM_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Supported DefenceArea Type 
 	 * \else
-	 * 支持防区类型 , EM_CFG_DEFENCEAREATYPE
+	 * V'3V7@Gx@`PM , EM_CFG_DEFENCEAREATYPE
 	 * \endif
 	 */
 	public int     			emDefenceAreaType[] = new int[FinalVar.MAX_ALARM_DEFENCE_TYPE_NUM];
@@ -48,7 +48,7 @@ public class CFG_CAP_ALARM_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Delay DefenceArea Maximum Time,Unit:Second, Only Support Delay DefenceArea is Effective
 	 * \else
-	 * 延时防区的最大延时时间,单位为秒，只有支持延时防区时此字段才有效。
+	 * QSJ17@Gx5DWn4sQSJ1J1<d,5%N;N*Ck#,V;SPV'3VQSJ17@GxJ14KWV6N2ESPP'!#
 	 * \endif
 	 */
 	public int				 	 nMaxDelay;
@@ -57,7 +57,7 @@ public class CFG_CAP_ALARM_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm Channel,In Order to Maintain Compatibility, 0 Indicates that Each Channel  Support All Types of Sensors
 	 * \else
-	 * 报警通道数,为了保持兼容性,此为0时表示每个通道支持所有类型的传感器
+	 * 1(>/M(5@J},N*AK1#3V<fH]PT,4KN*0J11mJ>C?8vM(5@V'3VKySP@`PM5D4+8PFw
 	 * \endif
 	 */
 	public int					 nAlarmChannelNum;
@@ -66,7 +66,7 @@ public class CFG_CAP_ALARM_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Alarm Channel Set
 	 * \else
-	 * 报警通道集合
+	 * 1(>/M(5@</:O
 	 * \endif
 	 */
 	public CFG_ALARM_SENSE_METHOD stuAlarmChannel[] = new CFG_ALARM_SENSE_METHOD[FinalVar.MAX_ALARM_CHANNEL_NUM];
@@ -75,7 +75,7 @@ public class CFG_CAP_ALARM_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Number of Alarm
 	 * \else
-	 * 警号个数
+	 * >/:E8vJ}
 	 * \endif
 	 */
 	public int					 nAlarmBellCount;
@@ -84,7 +84,7 @@ public class CFG_CAP_ALARM_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The Maximum number of alarms backup center,The default is 0 when no such field,0 indicates no support for alternate Alarm Center
 	 * \else
-	 * 最大备用报警中心数,无此字段时默认为0,0表示不支持备用报警中心
+	 * Wn4s18SC1(>/VPPDJ},N^4KWV6NJ1D,HON*0,01mJ>2;V'3V18SC1(>/VPPD
 	 * \endif
 	 */
 	public int					 nMaxBackupAlarmServer;
@@ -93,7 +93,7 @@ public class CFG_CAP_ALARM_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The Maximum number of Phone alarms  center, he default is 0 when no such field,0 indicates no support for Phone Alarm Center
 	 * \else
-	 * 最大电话报警中心数, 无此字段时默认为0,0表示不支持电话报警中心。
+	 * Wn4s5g;01(>/VPPDJ}, N^4KWV6NJ1D,HON*0,01mJ>2;V'3V5g;01(>/VPPD!#
 	 * \endif
 	 */
 	public int					 nMaxPSTNAlarmServer;

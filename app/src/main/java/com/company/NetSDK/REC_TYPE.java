@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Record related (schedule,motion detection,alarm)
  * \else
- * 录象类型(定时、动态检测、报警)
+ * B<Os@`PM(6(J1!"6/L,<l2b!"1(>/)
  * \endif
  */
 public class REC_TYPE implements Serializable {

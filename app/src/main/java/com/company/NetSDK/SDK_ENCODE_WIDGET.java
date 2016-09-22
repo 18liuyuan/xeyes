@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * OSD attribute structure
  * \else
- * OSD属性结构
+ * OSDJtPT=a99
  * \endif
  */
 public class SDK_ENCODE_WIDGET implements Serializable {
@@ -19,41 +19,44 @@ public class SDK_ENCODE_WIDGET implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Front ground 
 	 * \else
-	 * 物件的前景；按字节表示，分别为红、绿、蓝和透明度
+	 * No<~5DG0>0#;04WV=Z1mJ>#,7V1pN*:l!"BL!"@6:MM8Cw6H
 	 * \endif
 	 */
-	public int				rgbaFrontground;		
+	public int				rgbaFrontground;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Back ground 
 	 * \else
-	 * 物件的背景；按字节表示，分别为红、绿、蓝和透明度
+	 * No<~5D13>0#;04WV=Z1mJ>#,7V1pN*:l!"BL!"@6:MM8Cw6H
 	 * \endif
 	 */
-	public int				rgbaBackground;			
+	public int				rgbaBackground;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Position 
 	 * \else
-	 * 位置
+	 * N;VC
 	 * \endif
 	 */
-	public SDK_RECT				rcRect = new SDK_RECT();					
+	public SDK_RECT				rcRect = new SDK_RECT();
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Show
 	 * \else
-	 * 显示使能
+	 * OTJ>J9D\
 	 * \endif
 	 */
-	public byte				bShow;					
+	public byte				bShow;
+	
 	/**
 	 * \if ENGLISH_LANG
-	 * Extend Function Mask，0-Not Display，1-Display 
+	 * Extend Function Mask#,0-Not Display#,1-Display 
 	 * \else
-	 * 扩展使能 ，掩码  bit0 表示是否显示星期几，0-不显示 1-显示 
+	 * @)U9J9D\ #,QZBk  bit0 1mJ>JG7qOTJ>PGFZ<8#,0-2;OTJ> 1-OTJ> 
 	 * \endif
 	 */
-	public byte                bExtFuncMask;           
-                                                
+	public byte                bExtFuncMask;
 }

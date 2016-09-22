@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Region Appointed Information
  * \else
- * 区域顶点信息
+ * GxSr6%5cPEO"
  * \endif
  */
 public class CFG_POLYGON implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_POLYGON implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Abscissa 0~8191
 	 * \else
-	 * 横坐标 0~8191
+	 * :aWx1j 0~8191
 	 * \endif
 	 */
 	public int					nX;
@@ -28,7 +28,7 @@ public class CFG_POLYGON implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Ordinate 0~8191
 	 * \else
-	 * 纵坐标 0~8191
+	 * W]Wx1j 0~8191
 	 * \endif
 	 */
 	public int					nY;

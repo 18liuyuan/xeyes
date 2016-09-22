@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Quality
  * \else
- * 画质, CFG_IMAGE_QUALITY
+ * ;-VJ, CFG_IMAGE_QUALITY
  * \endif
  */
 public class CFG_IMAGE_QUALITY implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_IMAGE_QUALITY implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Caputre Quality 10%
 	 * \else
-	 * 图像质量10%
+	 * M<OqVJA?10%
 	 * \endif
 	 */
 	public static final int     IMAGE_QUALITY_Q10 = 1;
@@ -28,7 +28,7 @@ public class CFG_IMAGE_QUALITY implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Caputre Quality 30%
 	 * \else
-	 * 图像质量30%
+	 * M<OqVJA?30%
 	 * \endif
 	 */
 	public static final int     IMAGE_QUALITY_Q30 = 2;
@@ -37,7 +37,7 @@ public class CFG_IMAGE_QUALITY implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Caputre Quality 50%
 	 * \else
-	 * 图像质量50%
+	 * M<OqVJA?50%
 	 * \endif
 	 */
 	public static final int     IMAGE_QUALITY_Q50 = 3;
@@ -46,7 +46,7 @@ public class CFG_IMAGE_QUALITY implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Caputre Quality 60%
 	 * \else
-	 * 图像质量60%
+	 * M<OqVJA?60%
 	 * \endif
 	 */
 	public static final int     IMAGE_QUALITY_Q60 = 4;
@@ -55,7 +55,7 @@ public class CFG_IMAGE_QUALITY implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Caputre Quality 80%r
 	 * \else
-	 * 图像质量80%
+	 * M<OqVJA?80%
 	 * \endif
 	 */
 	public static final int     IMAGE_QUALITY_Q80 = 5;
@@ -64,7 +64,7 @@ public class CFG_IMAGE_QUALITY implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Caputre Quality 100%
 	 * \else
-	 * 图像质量100%
+	 * M<OqVJA?100%
 	 * \endif
 	 */
 	public static final int     IMAGE_QUALITY_Q100 = 6;

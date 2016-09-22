@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * alarm of file system
  * \else
- * 文件系统告警
+ * ND<~O5M38f>/
  * \endif
  */
 public class ALARM_FILE_SYSTEM_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class ALARM_FILE_SYSTEM_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * mount name
 	 * \else
-	 * 文件系统挂载名
+	 * ND<~O5M39RTXC{
 	 * \endif
 	 */
 	public byte                 szMountDir[] = new byte[FinalVar.MAX_PATH];
@@ -28,7 +28,7 @@ public class ALARM_FILE_SYSTEM_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * state, 0: Unkown, 1: Normal, 2: Error
 	 * \else
-	 * 文件系统状态, 0: Unkown, 1: Normal, 2: Error
+	 * ND<~O5M3W4L,, 0: Unkown, 1: Normal, 2: Error
 	 * \endif
 	 */
 	public int                nState;

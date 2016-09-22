@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * PTZ property information
  * \else
- * 云台属性信息
+ * TFL(JtPTPEO"
  * \endif
  */
 public class PTZ_OPT_ATTR implements Serializable {	
@@ -19,176 +19,197 @@ public class PTZ_OPT_ATTR implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Operation mask high bit 
 	 * \else
-	 * 操作的掩码高位
+	 * 2YWw5DQZBk8_N;
 	 * \endif
 	 */
-	public int				dwHighMask;							 
+	public int				dwHighMask;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Operation mask low bit 
 	 * \else
-	 * 操作的掩码低位
+	 * 2YWw5DQZBk5MN;
 	 * \endif
 	 */
-	public int				dwLowMask;							 
+	public int				dwLowMask;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Operation protocol name 
 	 * \else
-	 * 操作的协议名
+	 * 2YWw5DP-RiC{
 	 * \endif
 	 */
-	public char				szName[] = new char[FinalVar.NAME_MAX_LEN];	 
+	public byte				szName[] = new byte[FinalVar.NAME_MAX_LEN];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Channel address min value
 	 * \else
-	 * 通道地址的最小值
+	 * M(5@5XV75DWnP!V5
 	 * \endif
 	 */
-	public int				wCamAddrMin;						 
+	public int				wCamAddrMin;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Channel address max value
 	 * \else
-	 * 通道地址的最大值
+	 * M(5@5XV75DWn4sV5
 	 * \endif
 	 */
-	public int				wCamAddrMax;						 
+	public int				wCamAddrMax;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Monitor address min value
 	 * \else
-	 * 监视地址的最小值
+	 * <`JS5XV75DWnP!V5
 	 * \endif
 	 */
-	public int				wMonAddrMin;						 
+	public int				wMonAddrMin;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Monitor address max value
 	 * \else
-	 * 监视地址的最大值
+	 * <`JS5XV75DWn4sV5
 	 * \endif
 	 */
-	public int				wMonAddrMax;						 
+	public int				wMonAddrMax;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Preset min value
 	 * \else
-	 * 预置点的最小值
+	 * T$VC5c5DWnP!V5
 	 * \endif
 	 */
-	public byte				bPresetMin;							 
+	public byte				bPresetMin;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Preset max value
 	 * \else
-	 * 预置点的最大值
+	 * T$VC5c5DWn4sV5
 	 * \endif
 	 */
-	public byte				bPresetMax;							 
+	public byte				bPresetMax;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Auto tour min value
 	 * \else
-	 * 自动巡航线路的最小值
+	 * WT6/Q2:=O_B75DWnP!V5
 	 * \endif
 	 */
-	public byte				bTourMin;							 
+	public byte				bTourMin;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Auto tour max value
 	 * \else
-	 * 自动巡航线路的最大值
+	 * WT6/Q2:=O_B75DWn4sV5
 	 * \endif
 	 */
-	public byte				bTourMax;							 
+	public byte				bTourMax;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Pattern min value
 	 * \else
-	 * 轨迹线路的最小值
+	 * 9l<#O_B75DWnP!V5
 	 * \endif
 	 */
-	public byte				bPatternMin;						 
+	public byte				bPatternMin;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Pattern max value
 	 * \else
-	 * 轨迹线路的最大值
+	 * 9l<#O_B75DWn4sV5
 	 * \endif
 	 */
-	public byte				bPatternMax;						 
+	public byte				bPatternMax;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Tilt speed min value
 	 * \else
-	 * 垂直速度的最小值
+	 * 49V1KY6H5DWnP!V5
 	 * \endif
 	 */
-	public byte				bTileSpeedMin;						 
+	public byte				bTileSpeedMin;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Tilt speed max value
 	 * \else
-	 * 垂直速度的最大值
+	 * 49V1KY6H5DWn4sV5
 	 * \endif
 	 */
-	public byte				bTileSpeedMax;						 
+	public byte				bTileSpeedMax;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Pan speed min value
 	 * \else
-	 * 水平速度的最小值
+	 * K.F=KY6H5DWnP!V5
 	 * \endif
 	 */
-	public byte				bPanSpeedMin;						 
+	public byte				bPanSpeedMin;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Pan speed max value
 	 * \else
-	 * 水平速度的最大值
+	 * K.F=KY6H5DWn4sV5
 	 * \endif
 	 */
-	public byte				bPanSpeedMax;						 
+	public byte				bPanSpeedMax;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Aux function min value
 	 * \else
-	 * 辅助功能的最小值
+	 * 8(Vz9&D\5DWnP!V5
 	 * \endif
 	 */
-	public byte				bAuxMin;							 
+	public byte				bAuxMin;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Aux function max value
 	 * \else
-	 * 辅助功能的最大值
+	 * 8(Vz9&D\5DWn4sV5
 	 * \endif
 	 */
-	public byte				bAuxMax;							 
+	public byte				bAuxMax;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Command interval
 	 * \else
-	 * 发送命令的时间间隔
+	 * 7"KMC|An5DJ1<d<d8t
 	 * \endif
 	 */
-	public int				nInternal;							 
+	public int				nInternal;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Protocol type
 	 * \else
-	 * 协议的类型
+	 * P-Ri5D@`PM
 	 * \endif
 	 */
-	public byte				bType;								 
+	public byte				bType;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Function mask :0x01 - support PTZ-inside function
 	 * \else
-	 * 协议功能掩码,按位表示,置１表示支持,第一位表示内置云台功能，其它７位暂时保留
+	 * P-Ri9&D\QZBk,04N;1mJ>,VC#11mJ>V'3V,5ZR;N;1mJ>DZVCTFL(9&D\#,FdK|#7N;T]J11#At
 	 * \endif
 	 */
-	public byte				bFuncMask;							 
+	public byte				bFuncMask;
 }

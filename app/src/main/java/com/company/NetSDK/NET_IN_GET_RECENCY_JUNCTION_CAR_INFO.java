@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * INetSDK.QueryDevInfo , NET_QUERY_RECENCY_JNNCTION_CAR_INFO port input parameter
  * \else
- * INetSDK.QueryDevInfo , NET_QUERY_RECENCY_JNNCTION_CAR_INFO接口输入参数
+ * INetSDK.QueryDevInfo , NET_QUERY_RECENCY_JNNCTION_CAR_INFO=S?ZJdHk2NJ}
  * \endif
  */
 public class NET_IN_GET_RECENCY_JUNCTION_CAR_INFO implements Serializable {
@@ -19,25 +19,25 @@ public class NET_IN_GET_RECENCY_JUNCTION_CAR_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * snapshot channel no.
 	 * \else
-	 * 抓拍通道号
+	 * W%EDM(5@:E
 	 * \endif
 	 */
     public int                  nChannel;
     
     /**
 	 * \if ENGLISH_LANG
-	 * get vehicle info type，newest or latest, NET_RECENCY_CAR_INFO
+	 * get vehicle info type#,newest or latest, NET_RECENCY_CAR_INFO
 	 * \else
-	 * 获取车辆信息的类型，最新的还是最旧的, NET_RECENCY_CAR_INFO
+	 * ;qH!35A>PEO"5D@`PM#,WnPB5D;9JGWn>I5D, NET_RECENCY_CAR_INFO
 	 * \endif
 	 */
     public int    				emRecencyType;
     
     /**
 	 * \if ENGLISH_LANG
-	 * no. vehicle info, from 1，if it is 0, it alsomeans no. 1
+	 * no. vehicle info, from 1#,if it is 0, it alsomeans no. 1
 	 * \else
-	 * 第几个车辆信息,从1开始，如果为0也表示第1个
+	 * 5Z<88v35A>PEO",4S1?*J<#,Hg9{N*0R21mJ>5Z18v
 	 * \endif
 	 */
     public int                  nIndex;

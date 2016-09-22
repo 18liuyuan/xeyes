@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * VIDEO LOST  
  * \else
- * 视频丢失报警配置 
+ * JSF56*J'1(>/EdVC 
  * \endif
  */
 public class CFG_VIDEOLOST_INFO implements Serializable {
@@ -19,7 +19,7 @@ public class CFG_VIDEOLOST_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * ChannelID(from 0)  
 	 * \else
-	 * 报警通道号(0开始), nVersion=1时，此字段无效
+	 * 1(>/M(5@:E(0?*J<), nVersion=1J1#,4KWV6NN^P'
 	 * \endif
 	 */
 	public int					 nChannelID;
@@ -28,7 +28,7 @@ public class CFG_VIDEOLOST_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Enable 
 	 * \else
-	 * 使能开关
+	 * J9D\?*9X
 	 * \endif
 	 */
 	public boolean				 bEnable;
@@ -37,7 +37,7 @@ public class CFG_VIDEOLOST_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Event Handler  
 	 * \else
-	 * 使报警联动
+	 * J91(>/A*6/
 	 * \endif
 	 */
 	public CFG_ALARM_MSG_HANDLE stuEventHandler = new CFG_ALARM_MSG_HANDLE();
@@ -46,7 +46,7 @@ public class CFG_VIDEOLOST_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Event Respond Period  
 	 * \else
-	 * 事件响应时间段
+	 * JB<~OlS&J1<d6N
 	 * \endif
 	 */
 	public CFG_TIME_SECTION	 	stuTimeSection[][] = new CFG_TIME_SECTION[FinalVar.WEEK_DAY_NUM][FinalVar.MAX_REC_TSECT];

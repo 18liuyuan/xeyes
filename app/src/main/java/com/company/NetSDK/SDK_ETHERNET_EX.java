@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Ethernet extended Configuration
  * \else
- * 以太网扩展配置
+ * RTL+Mx@)U9EdVC
  * \endif
  */
 public class SDK_ETHERNET_EX implements Serializable {
@@ -20,7 +20,7 @@ public class SDK_ETHERNET_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * DVR IP  address
 	 * \else
-	 * DVR IP 地址
+	 * DVR IP 5XV7
 	 * \endif
 	 */
 	public byte                sDevIPAddr[] = new byte[FinalVar.SDK_MAX_IPADDR_LEN];
@@ -29,7 +29,7 @@ public class SDK_ETHERNET_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * DVR IP subnet mask
 	 * \else
-	 * DVR IP 地址掩码
+	 * DVR IP 5XV7QZBk
 	 * \endif
 	 */
 	public byte                sDevIPMask[] = new byte[FinalVar.SDK_MAX_IPADDR_LEN];
@@ -45,14 +45,14 @@ public class SDK_ETHERNET_EX implements Serializable {
 	 * 6:100Mbps half-duplex
 	 * 7:auto
 	 * \else
-	 * 网关地址
-	 * 1：10Mbps 全双工
-     * 2：10Mbps 自适应
-     * 3：10Mbps 半双工
-     * 4：100Mbps 全双工
-     * 5：100Mbps 自适应
-     * 6：100Mbps 半双工
-     * 7：自适应
+	 * Mx9X5XV7
+	 * 1#:10Mbps H+K+9$
+     * 2#:10Mbps WTJJS&
+     * 3#:10Mbps 0kK+9$
+     * 4#:100Mbps H+K+9$
+     * 5#:100Mbps WTJJS&
+     * 6#:100Mbps 0kK+9$
+     * 7#:WTJJS&
 	 * \endif
 	 */
 	public byte                sGatewayIP[] = new byte[FinalVar.SDK_MAX_IPADDR_LEN];
@@ -70,7 +70,7 @@ public class SDK_ETHERNET_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * 0:cable,1:wireless
 	 * \else
-	 * 0：有线，1：无线
+	 * 0#:SPO_#,1#:N^O_
 	 * \endif
 	 */
 	public byte                bTranMedia;
@@ -79,7 +79,7 @@ public class SDK_ETHERNET_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Use bit to represent, The first bit:1:valid 0:invalid;The second bit:0:Disable DHCP 1:Enable DHCP;The third bit:0:Do not support DHCP 1:Support DHCP
 	 * \else
-	 * 按位表示，第一位：1：有效 0：无效；第二位：0：DHCP关闭 1：DHCP使能；第三位：0：不支持DHCP 1：支持DHCP
+	 * 04N;1mJ>#,5ZR;N;#:1#:SPP' 0#:N^P'#;5Z6~N;#:0#:DHCP9X1U 1#:DHCPJ9D\#;5ZH}N;#:0#:2;V'3VDHCP 1#:V'3VDHCP
 	 * \endif
 	 */
 	public byte                bValid;
@@ -88,7 +88,7 @@ public class SDK_ETHERNET_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * To be the default network card or not.  1: default 0:non-default
 	 * \else
-	 * 是否作为默认的网卡 1：默认 0：非默认
+	 * JG7qWwN*D,HO5DMx?( 1#:D,HO 0#:7GD,HO
 	 * \endif
 	 */
 	public byte                bDefaultEth;
@@ -97,7 +97,7 @@ public class SDK_ETHERNET_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * MAC address , read-only.
 	 * \else
-	 * MAC地址，只读
+	 * MAC5XV7#,V;6A
 	 * \endif
 	 */
 	public byte                byMACAddr[] = new byte[FinalVar.SDK_MACADDR_LEN];
@@ -106,7 +106,7 @@ public class SDK_ETHERNET_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * mode, 1:balance, 2:multi, 3:fault-toerant
 	 * \else
-	 * 网卡所处模式, 0:绑定模式, 1:负载均衡模式, 2:多址模式, 3:容错模式
+	 * Mx?(Ky4&D#J=, 0:0s6(D#J=, 1:8:TX>y:bD#J=, 2:6`V7D#J=, 3:H]4mD#J=
 	 * \endif
 	 */
 	public byte                bMode;
@@ -115,7 +115,7 @@ public class SDK_ETHERNET_EX implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Card name, read only
 	 * \else
-	 * 网卡名，只读
+	 * Mx?(C{#,V;6A
 	 * \endif
 	 */
 	public byte                szEthernetName[] = new byte[FinalVar.SDK_MAX_NAME_LEN];

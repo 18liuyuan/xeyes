@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * SetSplitWindowLevels's interface output param(setting window order)
  * \else
- * SetSplitWindowLevels接口输出参数(设置窗口次序)
+ * SetSplitWindowLevels=S?ZJd3v2NJ}(IhVC40?Z4NPr)
  * \endif
  */
 public class SDK_OUT_SPLIT_SET_TOP_WINDOW implements Serializable {
@@ -19,33 +19,33 @@ public class SDK_OUT_SPLIT_SET_TOP_WINDOW implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Window order array
 	 * \else
-	 * 窗口次序数组
+	 * 40?Z4NPrJ}Wi
 	 * \endif
 	 */
-	public SDK_WND_ZORDER		pZOders[];					
+	public SDK_WND_ZORDER		pZOders[];
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Window order array size
 	 * \else
-	 * 窗口次序数组大小
+	 * 40?Z4NPrJ}Wi4sP!
 	 * \endif
 	 */
-	public int					nMaxWndCount;				
+	public int					nMaxWndCount;
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Count of returned window
 	 * \else
-	 * 返回的窗口数量
+	 * 75;X5D40?ZJ}A?
 	 * \endif
 	 */
-	public int					nWndCount;					
+	public int					nWndCount;
 	
-	public SDK_OUT_SPLIT_SET_TOP_WINDOW(int nMax)
-	{
+	public SDK_OUT_SPLIT_SET_TOP_WINDOW(int nMax) {
 		nMaxWndCount = nMax;
 		pZOders = new SDK_WND_ZORDER[nMaxWndCount];
-		for (int i = 0; i < nMaxWndCount; i++)
-		{
+		for (int i = 0; i < nMaxWndCount; i++) {
 			pZOders[i] = new SDK_WND_ZORDER();
 		}
 	}

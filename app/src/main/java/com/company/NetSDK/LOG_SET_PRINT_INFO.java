@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * SDK global log print
  * \else
- * SDK全局日志打印信息
+ * SDKH+>VHUV>4rS!PEO"
  * \endif
  */
 public class LOG_SET_PRINT_INFO implements Serializable {
@@ -20,7 +20,7 @@ public class LOG_SET_PRINT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * reset log path
 	 * \else
-	 * 是否重设日志路径
+	 * JG7qVXIhHUV>B7>6
 	 * \endif
 	 */
 	public boolean            bSetFilePath;
@@ -29,7 +29,7 @@ public class LOG_SET_PRINT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * log path(default"./sdk_log/sdk_log.log")
 	 * \else
-	 * 日志路径(默认"./sdk_log/sdk_log.log")
+	 * HUV>B7>6(D,HO"./sdk_log/sdk_log.log")
 	 * \endif
 	 */
 	public byte            szLogFilePath[] = new byte[FinalVar.MAX_LOG_PATH_LEN];
@@ -38,7 +38,7 @@ public class LOG_SET_PRINT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * reset log size
 	 * \else
-	 * 是否重设日志文件大小
+	 * JG7qVXIhHUV>ND<~4sP!
 	 * \endif
 	 */
 	public boolean            bSetFileSize;
@@ -47,7 +47,7 @@ public class LOG_SET_PRINT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * each log file size(default size 10240), unit:bit
 	 * \else
-	 * 每个日志文件的大小(默认大小10240), 单位:比特
+	 * C?8vHUV>ND<~5D4sP!(D,HO4sP!10240), 5%N;:1HLX
 	 * \endif
 	 */
 	public int    nFileSize;
@@ -56,7 +56,7 @@ public class LOG_SET_PRINT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * reset log file number
 	 * \else
-	 * 是否重设日志文件个数
+	 * JG7qVXIhHUV>ND<~8vJ}
 	 * \endif
 	 */
 	public boolean            bSetFileNum;
@@ -65,7 +65,7 @@ public class LOG_SET_PRINT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * log file quantity(default size 10)
 	 * \else
-	 * 绕接日志文件个数(默认大小10)
+	 * HF=SHUV>ND<~8vJ}(D,HO4sP!10)
 	 * \endif
 	 */
 	public int    nFileNum;
@@ -74,7 +74,7 @@ public class LOG_SET_PRINT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * reset log print strategy
 	 * \else
-	 * 是否重设日志打印输出策略
+	 * JG7qVXIhHUV>4rS!Jd3v2_BT
 	 * \endif
 	 */
 	public boolean            bSetPrintStrategy;
@@ -83,7 +83,7 @@ public class LOG_SET_PRINT_INFO implements Serializable {
 	 * \if ENGLISH_LANG
 	 * log out strategy, 0: output to file(defualt); 1:output to window
 	 * \else
-	 * 日志输出策略, 0:输出到文件(默认); 1:输出到窗口
+	 * HUV>Jd3v2_BT, 0:Jd3v5=ND<~(D,HO); 1:Jd3v5=40?Z
 	 * \endif
 	 */
 	public int    nPrintStrategy;

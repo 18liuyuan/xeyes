@@ -6,7 +6,7 @@ import java.io.Serializable;
  * \if ENGLISH_LANG
  * Video encode widget config
  * \else
- * 视频编码物件配置
+ * JSF51`BkNo<~EdVC
  * \endif
  */
 public class AV_CFG_VideoWidget implements Serializable {
@@ -19,7 +19,7 @@ public class AV_CFG_VideoWidget implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Channel title
 	 * \else
-	 * 通道标题
+	 * M(5@1jLb
 	 * \endif
 	 */
 	public AV_CFG_VideoWidgetChannelTitle	stuChannelTitle = new AV_CFG_VideoWidgetChannelTitle();	
@@ -28,7 +28,7 @@ public class AV_CFG_VideoWidget implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Time title
 	 * \else
-	 * 时间标题
+	 * J1<d1jLb
 	 * \endif
 	 */
 	public AV_CFG_VideoWidgetTimeTitle		stuTimeTitle = new AV_CFG_VideoWidgetTimeTitle();
@@ -37,7 +37,7 @@ public class AV_CFG_VideoWidget implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Privacy mask zone amount
 	 * \else
-	 * 区域覆盖数量
+	 * GxSr828GJ}A?
 	 * \endif
 	 */
 	public int								nConverNum;		
@@ -46,7 +46,7 @@ public class AV_CFG_VideoWidget implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Privacy mask zone
 	 * \else
-	 * 覆盖区域
+	 * 828GGxSr
 	 * \endif
 	 */
 	public AV_CFG_VideoWidgetCover			stuCovers[] = new AV_CFG_VideoWidgetCover[FinalVar.AV_CFG_Max_Video_Widget_Cover];
@@ -55,7 +55,7 @@ public class AV_CFG_VideoWidget implements Serializable {
 	 * \if ENGLISH_LANG
 	 *  Self-defined title amount
 	 * \else
-	 * 自定义标题数量
+	 * WT6(Re1jLbJ}A?
 	 * \endif
 	 */
 	public int								nCustomTitleNum;	
@@ -64,7 +64,7 @@ public class AV_CFG_VideoWidget implements Serializable {
 	 * \if ENGLISH_LANG
 	 * Self-defined title
 	 * \else
-	 * 自定义标题
+	 * WT6(Re1jLb
 	 * \endif
 	 */
 	public AV_CFG_VideoWidgetCustomTitle	stuCustomTitle[] = new AV_CFG_VideoWidgetCustomTitle[FinalVar.AV_CFG_Max_Video_Widget_Custom_Title];
@@ -73,20 +73,82 @@ public class AV_CFG_VideoWidget implements Serializable {
 	 * \if ENGLISH_LANG
 	 * The number of sensor information overlay area
 	 * \else
-	 * 传感器信息叠加区域数目
+	 * 4+8PFwPEO"5~<SGxSrJ}D?
 	 * \endif
 	 */
-	public int								nSensorInfo;		
-
+	public int								nSensorInfo;	
+	
 	/**
 	 * \if ENGLISH_LANG
 	 * Sensor information overlay zone information
 	 * \else
-	 * 传感器信息叠加区域信息
+	 * 4+8PFwPEO"5~<SGxSrPEO"
 	 * \endif
 	 */
 	public AV_CFG_VideoWidgetSensorInfo		stuSensorInfo[] = new AV_CFG_VideoWidgetSensorInfo[FinalVar.AV_CFG_Max_Video_Widget_Sensor_Info];		
 	
+	/**
+	 * \if ENGLISH_LANG
+	 * Font size scale
+	 * when fFontSizeScale!Y0 , nFontSize not work
+	 * when fFontSizeScale=0 , nFontSize work
+	 * \else
+	 * 5~<SWVLe4sP!7E4s1H@}
+	 * 51fFontSizeScale!Y0J1,nFontSize2;FpWwSC
+     * 51fFontSizeScale=0J1,nFontSizeFpWwSC
+	 * \endif
+	 */
+	public double                           fFontSizeScale;            
+
+	/**
+	 * \if ENGLISH_LANG
+	 * Main Stream Font Size(unit px),work with fFontSizeScale
+	 * \else
+	 * 5~<S5=VwBkAwIO5DH+>VWVLe4sP!,5%N; px.:MfFontSizeScale92M,WwSC
+	 * \endif
+	 */
+	public int                        nFontSize;                
+	/**
+	 * \if ENGLISH_LANG
+	 * Extra1 Stream Font Size(unit px)
+	 * \else
+	 * 5~<S5=8(BkAw1IO5DH+>VWVLe4sP!,5%N; px
+	 * \endif
+	 */
+	public int      nFontSizeExtra1;     
+	/**
+	 * \if ENGLISH_LANG
+	 * Extra2 Stream Font Size(unit px)
+	 * \else
+	 * 5~<S5=8(BkAw2IO5DH+>VWVLe4sP!,5%N; px
+	 * \endif
+	 */
+	public int                        nFontSizeExtra2;        
+	/**
+	 * \if ENGLISH_LANG
+	 * Extra3 Stream Font Size(unit px)
+	 * \else
+	 * 5~<S5=8(BkAw3IO5DH+>VWVLe4sP!,5%N; px
+	 * \endif
+	 */
+	public int                        nFontSizeExtra3;         
+	/**
+	 * \if ENGLISH_LANG
+	 * SnapShot Font Size(unit px)
+	 * \else
+	 * 5~<S5=W%M<AwIO5DH+>VWVLe4sP!, 5%N; px
+	 * \endif
+	 */
+	public int                        nFontSizeSnapshot;      
+	/**
+	 * \if ENGLISH_LANG
+	 * Merge SnapShot Font Size(unit px)
+	 * \else
+	 * 5~<S5=W%M<AwIO:O3IM<F,5DWVLe4sP!,5%N; px
+	 * \endif
+	 */
+	public int                        nFontSizeMergeSnapshot;  
+
 	public AV_CFG_VideoWidget() {
 		for (int i =0 ; i<FinalVar.AV_CFG_Max_Video_Widget_Cover;i++) {
 			stuCovers[i] = new AV_CFG_VideoWidgetCover();
