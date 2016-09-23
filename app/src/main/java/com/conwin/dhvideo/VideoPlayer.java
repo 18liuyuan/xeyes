@@ -5,6 +5,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.SurfaceView;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -17,6 +18,7 @@ public class VideoPlayer extends LinearLayout {
     View mRootView;
     View mViewloadding;
     TextView mTvLoadTitle;
+    View mViewCtrl;
     public VideoPlayer(Context context) {
         super(context);
         initView(context);
@@ -49,4 +51,34 @@ public class VideoPlayer extends LinearLayout {
             mViewloadding.setVisibility(View.GONE);
         }
     }
+
+    /*
+  设置屏幕横竖屏
+  1 竖屏
+  2 横屏
+   */
+    public void setScreenOrientation(int value){
+        ViewGroup.LayoutParams params = this.getLayoutParams();
+        ViewGroup.LayoutParams svParams = mSurfaceView.getLayoutParams();
+        if(value == 1){
+
+            params.height = LayoutParams.WRAP_CONTENT;
+            params.width = LayoutParams.MATCH_PARENT;
+
+            svParams.height = LayoutParams.WRAP_CONTENT;
+            svParams.width = LayoutParams.MATCH_PARENT;
+
+
+        } else if (value == 2){
+            params.height = LayoutParams.MATCH_PARENT;
+            params.width = LayoutParams.MATCH_PARENT;
+
+            svParams.height = LayoutParams.MATCH_PARENT;
+            svParams.width = LayoutParams.WRAP_CONTENT;
+        }
+        this.setLayoutParams(params);
+        mSurfaceView.setLayoutParams(svParams);
+
+    }
+
 }

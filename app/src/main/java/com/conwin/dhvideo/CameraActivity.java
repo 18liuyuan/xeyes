@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,6 +32,8 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
     VideoPlayer mVideoPlayer;
     //IPlaySDK.PLAYInputData
     TextView mTvFullScreen;
+    View mViewTitleBar;
+    View mViewExtend;
 
 
 
@@ -99,6 +102,8 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
         });
 
 
+        mViewTitleBar = findViewById(R.id.ll_title_bar);
+        mViewExtend = findViewById(R.id.ll_extend);
 
         mDhPlayerSdk.initPlayer();
         mDhPlayerSdk.setSaveThumbEnable(true, ""+mCameraId);
@@ -126,6 +131,33 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.tv_fullscreen:
                 switchFullScreen();
                 break;
+        }
+    }
+
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        if(this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
+            mViewExtend.setVisibility(View.GONE);
+            mViewTitleBar.setVisibility(View.GONE);
+            WindowManager.LayoutParams attrs = getWindow().getAttributes();
+            attrs.flags |= WindowManager.LayoutParams.FLAG_FULLSCREEN;
+            getWindow().setAttributes(attrs);
+            getWindow().addFlags( WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+
+               mVideoPlayer.setScreenOrientation(2);
+
+        } else if(this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
+            mViewExtend.setVisibility(View.VISIBLE);
+            mViewTitleBar.setVisibility(View.VISIBLE);
+            WindowManager.LayoutParams attrs = getWindow().getAttributes();
+            attrs.flags &= (~WindowManager.LayoutParams.FLAG_FULLSCREEN);
+            getWindow().setAttributes(attrs);
+            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+
+               mVideoPlayer.setScreenOrientation(1);
         }
     }
 
