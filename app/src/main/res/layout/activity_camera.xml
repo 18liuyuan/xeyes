@@ -15,45 +15,104 @@
         <include layout="@layout/title_bar" />
     </LinearLayout>
 
-    <com.conwin.dhvideo.VideoPlayer
-        android:id="@+id/video_player"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
-
-    </com.conwin.dhvideo.VideoPlayer>
+        android:layout_height="wrap_content">
 
 
-
-    <LinearLayout
-        android:id="@+id/ll_player"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-50dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/tv_fullscreen"
+        <com.conwin.dhvideo.VideoPlayer
+            android:id="@+id/video_player"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="全屏"
-            android:textColor="@color/colorWhite"
+            android:layout_gravity="center_horizontal"/>
+        <RelativeLayout
+            android:id="@+id/ll_player_ctrl1"
+            android:layout_width="match_parent"
+            android:background="@color/colorBlackTran"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true">
 
-            android:textSize="22sp" />
+            <ImageView
+                android:id="@+id/iv_full_screen"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="7dp"
+                android:src="@drawable/full_screen"
+                android:background="@drawable/video_marker_btn_bg"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true" />
 
-    </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_player_ctrl2"
+            android:layout_width="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:background="@color/colorBlackTran"
+            android:layout_alignBottom="@+id/video_player"
+            android:layout_alignParentLeft="true">
+
+            <ImageView
+                android:id="@+id/iv_audio"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="7dp"
+                android:src="@drawable/audio_on"
+                android:background="@drawable/video_marker_btn_bg"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true" />
+
+            <ImageView
+                android:id="@+id/iv_talk"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="7dp"
+                android:src="@drawable/talk_on"
+                android:background="@drawable/video_marker_btn_bg"
+                android:layout_alignTop="@+id/iv_audio"
+                android:layout_toRightOf="@+id/iv_audio"
+                android:layout_marginLeft="20dp" />
+
+            <ImageView
+                android:id="@+id/iv_camera"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="7dp"
+                android:src="@drawable/camera"
+                android:background="@drawable/video_marker_btn_bg"
+                android:layout_marginLeft="20dp"
+                android:layout_alignTop="@+id/iv_talk"
+                android:layout_toRightOf="@+id/iv_talk" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
 
     <LinearLayout
         android:id="@+id/ll_extend"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:visibility="visible">
 
         <TextView
             android:id="@+id/tv_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/lv_event"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+
+            android:dividerHeight="5dp"/>
     </LinearLayout>
 </LinearLayout>
 

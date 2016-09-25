@@ -6,9 +6,11 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorWhiteTran">#80FFFFFF</color>
+    <color name="colorVideoMarkBg">#30FFFFFF</color>
     <color name="colorBlack">#000000</color>
     <color name="colorBlackTran">#80000000</color>
     <color name="colorSplitLine">#80AAAAAA</color>
     <color name="colorGray">#88888888</color>
     <color name="colorLightGray">#80CCCCCC</color>
+    <color name="colorTran">#00000000</color>
 </resources>

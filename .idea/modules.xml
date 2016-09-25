@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/gimoutils/gimoutils.iml" filepath="$PROJECT_DIR$/gimoutils/gimoutils.iml" />
       <module fileurl="file://$PROJECT_DIR$/pulltorefresh/pulltorefresh.iml" filepath="$PROJECT_DIR$/pulltorefresh/pulltorefresh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xeyes.iml" filepath="$PROJECT_DIR$/xeyes.iml" />
     </modules>
   </component>
 </project>

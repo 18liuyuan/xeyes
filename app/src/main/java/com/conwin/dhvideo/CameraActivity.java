@@ -1,18 +1,29 @@
 package com.conwin.dhvideo;
 
+import android.animation.AnimatorInflater;
+import android.animation.LayoutTransition;
+import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.view.animation.AnimationUtils;
+import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.conwin.gimoutils.ACache;
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -31,11 +42,16 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
    // SurfaceView mSurfaceView;
     VideoPlayer mVideoPlayer;
     //IPlaySDK.PLAYInputData
-    TextView mTvFullScreen;
+    ImageView mIvFullScreen;
+    ImageView mIvAudio;
+    ImageView mIvTalk;
+    ImageView mIvCamera;
     View mViewTitleBar;
     View mViewExtend;
-
-
+    RelativeLayout mPlayerControl1;
+    RelativeLayout mPlayerControl2;
+    CameraEventListAdapter mCameraEventListAdapter;
+    PullToRefreshListView mLvCameraEvent;
 
     interface MSG_DEF{
         int LOGIN_SUCCESS = 0;
@@ -50,8 +66,16 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
         mMsgHandler = new MsgHandler();
         TextView tvTitle = (TextView)findViewById(R.id.tv_tb_title);
         tvTitle.setText("视频");
-        mTvFullScreen = (TextView)findViewById(R.id.tv_fullscreen);
-        mTvFullScreen.setOnClickListener(this);
+        mIvFullScreen = (ImageView)findViewById(R.id.iv_full_screen);
+        mIvAudio = (ImageView)findViewById(R.id.iv_audio);
+        mIvTalk = (ImageView)findViewById(R.id.iv_talk);
+        mIvCamera = (ImageView)findViewById(R.id.iv_camera);
+        mLvCameraEvent = (PullToRefreshListView) findViewById(R.id.lv_event);
+
+        mIvFullScreen.setOnClickListener(this);
+        mIvAudio.setOnClickListener(this);
+        mIvTalk.setOnClickListener(this);
+        mIvCamera.setOnClickListener(this);
        // mSurfaceView = (SurfaceView) findViewById(R.id.sv_screen);
         mVideoPlayer = (VideoPlayer) findViewById(R.id.video_player);
 //        INetSDK.LoadLibrarys();
@@ -104,6 +128,48 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
 
         mViewTitleBar = findViewById(R.id.ll_title_bar);
         mViewExtend = findViewById(R.id.ll_extend);
+        mPlayerControl1 = (RelativeLayout) findViewById(R.id.ll_player_ctrl1);
+        mPlayerControl1.setOnClickListener(this);
+        mPlayerControl2 = (RelativeLayout) findViewById(R.id.ll_player_ctrl2);
+        mPlayerControl2.setOnClickListener(this);
+
+        mVideoPlayer.setOnClickListener(this);
+
+        mLvCameraEvent.setMode(PullToRefreshBase.Mode.BOTH);
+        mLvCameraEvent.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ListView>() {
+
+            @Override
+            public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
+              //  FreshCameraListTask task = new FreshCameraListTask();
+              //  task.execute("start");
+                mLvCameraEvent.onRefreshComplete();
+            }
+
+            @Override
+            public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
+             //   FreshCameraListTask task = new FreshCameraListTask();
+             //   task.execute("start");
+                mLvCameraEvent.onRefreshComplete();
+            }
+        });
+
+        mLvCameraEvent.setOnPullEventListener(new PullToRefreshBase.OnPullEventListener<ListView>() {
+            @Override
+            public void onPullEvent(PullToRefreshBase<ListView> refreshView, PullToRefreshBase.State state, PullToRefreshBase.Mode direction) {
+
+            }
+        });
+
+//        LayoutTransition transition=new LayoutTransition();
+//        transition.getDuration(2000);
+//        transition.setAnimator(LayoutTransition.APPEARING, AnimatorInflater.loadAnimator(getApplicationContext(), R.animator.smooth_appear_from_top));
+//        transition.setAnimator(LayoutTransition.CHANGE_APPEARING, transition.getAnimator(LayoutTransition.CHANGE_APPEARING));
+//        transition.setAnimator(LayoutTransition.DISAPPEARING, transition.getAnimator(LayoutTransition.DISAPPEARING));
+//        transition.setAnimator(LayoutTransition.CHANGE_DISAPPEARING,transition.getAnimator(LayoutTransition.CHANGE_DISAPPEARING));
+//        mPlayerControl1.setLayoutTransition(transition);
+
+        mCameraEventListAdapter = new CameraEventListAdapter(this);
+        mLvCameraEvent.setAdapter(mCameraEventListAdapter);
 
         mDhPlayerSdk.initPlayer();
         mDhPlayerSdk.setSaveThumbEnable(true, ""+mCameraId);
@@ -128,8 +194,29 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.tv_fullscreen:
+            case R.id.iv_full_screen:
                 switchFullScreen();
+                break;
+            case R.id.iv_audio:
+                break;
+            case R.id.iv_talk:
+                break;
+            case R.id.iv_camera:
+                break;
+            case R.id.video_player:
+                if (mPlayerControl1.getVisibility() == View.GONE){
+                    mPlayerControl1.setVisibility(View.VISIBLE);
+                    mPlayerControl2.setVisibility(View.VISIBLE);
+
+                    mPlayerControl1.setAnimation(AnimationUtils.loadAnimation(this, R.anim.smooth_appear_from_top));
+                    mPlayerControl2.setAnimation(AnimationUtils.loadAnimation(this, R.anim.smooth_appear_from_bottom));
+                } else {
+                    mPlayerControl1.setVisibility(View.GONE);
+                    mPlayerControl2.setVisibility(View.GONE);
+                    mPlayerControl1.setAnimation(AnimationUtils.loadAnimation(this, R.anim.smooth_disappear_to_top));
+                    mPlayerControl2.setAnimation(AnimationUtils.loadAnimation(this, R.anim.smooth_disappear_to_bottom));
+                }
+
                 break;
         }
     }
@@ -149,6 +236,7 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
 
                mVideoPlayer.setScreenOrientation(2);
 
+
         } else if(this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
             mViewExtend.setVisibility(View.VISIBLE);
             mViewTitleBar.setVisibility(View.VISIBLE);
@@ -157,7 +245,8 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
             getWindow().setAttributes(attrs);
             getWindow().clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 
-               mVideoPlayer.setScreenOrientation(1);
+            mVideoPlayer.setScreenOrientation(1);
+
         }
     }
 
@@ -252,6 +341,38 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
                 mVideoPlayer.showLoadding(false);
             }
 
+        }
+    }
+
+    class CameraEventListAdapter extends BaseAdapter {
+
+        Context mContext;
+        public CameraEventListAdapter(Context context){
+            mContext = context;
+        }
+
+        @Override
+        public int getCount() {
+            return 10;
+        }
+
+        @Override
+        public Object getItem(int i) {
+            return null;
+        }
+
+        @Override
+        public long getItemId(int i) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int i, View view, ViewGroup viewGroup) {
+
+            TextView tv = new TextView(mContext);
+
+            tv.setText("测试评论"+(i+1));
+            return tv;
         }
     }
 
