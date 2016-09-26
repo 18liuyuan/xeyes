@@ -1,7 +1,6 @@
 package com.conwin.dhvideo;
 
 import android.app.Application;
-import android.os.Environment;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 
@@ -34,5 +33,10 @@ public class XeyesApplication extends Application {
         if (!tmpFile.exists()) {
             tmpFile.mkdirs();
         }
+        tmpFile = new File(rootFile + "/" + GlobalDefine.DIRS.CAMERA_CAPTURE);
+        if (!tmpFile.exists()) {
+            tmpFile.mkdirs();
+        }
+
     }
 }

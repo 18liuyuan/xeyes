@@ -1,13 +1,19 @@
 package com.conwin.dhvideo;
 
+import android.util.Log;
+
 import com.company.NetSDK.CB_fDisConnect;
 import com.company.NetSDK.CB_fHaveReConnect;
 import com.company.NetSDK.CB_fRealDataCallBackEx;
 import com.company.NetSDK.CB_fSubDisConnect;
+import com.company.NetSDK.CB_pfAudioDataCallBack;
+import com.company.NetSDK.EM_USEDEV_MODE;
 import com.company.NetSDK.INetSDK;
 import com.company.NetSDK.NET_DEVICEINFO;
 import com.company.NetSDK.NET_PARAM;
+import com.company.NetSDK.SDKDEV_TALKDECODE_INFO;
 import com.company.NetSDK.SDK_RealPlayType;
+import com.company.NetSDK.SDK_TALK_CODING_TYPE;
 
 /**
  * Created by Administrator on 2016/9/10.
@@ -16,6 +22,7 @@ public class DhNetSdk {
 
     long mLoginHandle = 0;
     long mRealStreamHandle = 0;
+    long mTalkHandle = 0;
     boolean mLogining = false;//正在登陆
 
    // RealStreamCalllBack mRealStreamCallBack;
@@ -96,6 +103,10 @@ public class DhNetSdk {
 
     }
 
+    public interface  AudioStreamCallBack extends CB_pfAudioDataCallBack{
+
+    }
+
 
     public interface LoginResultCallBack {
         void OnLoginResult(long lResult);
@@ -144,5 +155,56 @@ public class DhNetSdk {
 
     }
 
+    /*
+    return
+    0 成功
+    <0失败
+    -1 未播放视频
+    -2 开启对讲失败
+     */
+    public int startTalk(AudioStreamCallBack cb){
+        if (mLoginHandle == 0  || mRealStreamHandle == 0){
+            return -1;
+        }
+        if (false == INetSDK.SetDeviceMode(mLoginHandle,
+                EM_USEDEV_MODE.SDK_TALK_CLIENT_MODE, null)) {
+            Log.i("player",
+                    "startTalkEx SetDeviceMode SDK_TALK_SERVER_MODE error");
+            return -2;
+        }
 
+        SDKDEV_TALKDECODE_INFO decodeInfo = new SDKDEV_TALKDECODE_INFO();
+        decodeInfo.dwSampleRate = 8000;
+        decodeInfo.encodeType = SDK_TALK_CODING_TYPE.SDK_TALK_G711a;
+        decodeInfo.nAudioBit = 16;
+        decodeInfo.nPacketPeriod = 0;
+
+        if (false == INetSDK.SetDeviceMode(mLoginHandle,
+                EM_USEDEV_MODE.SDK_TALK_ENCODE_TYPE, decodeInfo)) {
+            return -2;
+        }
+
+       // AudioStreamCallBack audiaDatacb = new AudioStreamCallBack(cb);
+        mTalkHandle = INetSDK.StartTalkEx(mLoginHandle, cb);
+
+        if (mTalkHandle == 0) {
+            // boolean b = INetSDK.RecordStart();
+            int err = INetSDK.GetLastError();
+            Log.i("player", "INetSDK.RecordStart error,code=" + err);
+            System.out.println();
+            return -1;
+        }
+        return 0;
+        //startAudioRecord();
+    }
+
+    public void stopTalk(){
+        INetSDK.StopTalkEx(mTalkHandle);
+        mTalkHandle = 0;
+    }
+
+    public boolean sendTalkDataToDevice(byte[] data){
+       int nRet = INetSDK.TalkSendData(mTalkHandle, data);
+        return nRet==0?false:true;
+    }
 }

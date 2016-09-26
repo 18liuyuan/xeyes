@@ -1,14 +1,11 @@
 package com.conwin.dhvideo;
 
-import android.animation.AnimatorInflater;
-import android.animation.LayoutTransition;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,11 +32,14 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
     JSONObject mCameraInfo;
     DhNetSdk mDhNetSdk;
     DhPlayerSdk mDhPlayerSdk;
+    DhPlayerSdk mDhPlayerTalkSdk;
 
     MyRealStreamCalllBack mRealStreamCalllBack;
+    MyAudioStreamCallBack mAudioStreamCalllBack;
+    MyAudioRecordCallBack mAudioRecordCalllBack;
     MsgHandler mMsgHandler;
     int mChannel;
-   // SurfaceView mSurfaceView;
+    // SurfaceView mSurfaceView;
     VideoPlayer mVideoPlayer;
     //IPlaySDK.PLAYInputData
     ImageView mIvFullScreen;
@@ -53,7 +53,10 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
     CameraEventListAdapter mCameraEventListAdapter;
     PullToRefreshListView mLvCameraEvent;
 
-    interface MSG_DEF{
+    boolean mAudioOn = false;
+    boolean mTalkOn = false;
+
+    interface MSG_DEF {
         int LOGIN_SUCCESS = 0;
         int LOGIN_FAILURE = 1;
     }
@@ -64,19 +67,19 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_camera);
 
         mMsgHandler = new MsgHandler();
-        TextView tvTitle = (TextView)findViewById(R.id.tv_tb_title);
+        TextView tvTitle = (TextView) findViewById(R.id.tv_tb_title);
         tvTitle.setText("视频");
-        mIvFullScreen = (ImageView)findViewById(R.id.iv_full_screen);
-        mIvAudio = (ImageView)findViewById(R.id.iv_audio);
-        mIvTalk = (ImageView)findViewById(R.id.iv_talk);
-        mIvCamera = (ImageView)findViewById(R.id.iv_camera);
+        mIvFullScreen = (ImageView) findViewById(R.id.iv_full_screen);
+        mIvAudio = (ImageView) findViewById(R.id.iv_audio);
+        mIvTalk = (ImageView) findViewById(R.id.iv_talk);
+        mIvCamera = (ImageView) findViewById(R.id.iv_camera);
         mLvCameraEvent = (PullToRefreshListView) findViewById(R.id.lv_event);
 
         mIvFullScreen.setOnClickListener(this);
         mIvAudio.setOnClickListener(this);
         mIvTalk.setOnClickListener(this);
         mIvCamera.setOnClickListener(this);
-       // mSurfaceView = (SurfaceView) findViewById(R.id.sv_screen);
+        // mSurfaceView = (SurfaceView) findViewById(R.id.sv_screen);
         mVideoPlayer = (VideoPlayer) findViewById(R.id.video_player);
 //        INetSDK.LoadLibrarys();
 //        INetSDK.LoadLibrarys();
@@ -84,6 +87,7 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
         mACache = ACache.get(this, "dhvideo");
         mDhNetSdk = new DhNetSdk();
         mDhPlayerSdk = new DhPlayerSdk();
+        mDhPlayerTalkSdk = new DhPlayerSdk();
         mRealStreamCalllBack = new MyRealStreamCalllBack();
         Bundle b = this.getIntent().getExtras();
         mCameraId = b.getInt("chId");
@@ -105,7 +109,6 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
             info.append("端口:");
             info.append(mCameraInfo.get("port"));
             info.append("\r\n");
-
 
 
             tvInfo.setText(info.toString());
@@ -140,15 +143,15 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
 
             @Override
             public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
-              //  FreshCameraListTask task = new FreshCameraListTask();
-              //  task.execute("start");
+                //  FreshCameraListTask task = new FreshCameraListTask();
+                //  task.execute("start");
                 mLvCameraEvent.onRefreshComplete();
             }
 
             @Override
             public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
-             //   FreshCameraListTask task = new FreshCameraListTask();
-             //   task.execute("start");
+                //   FreshCameraListTask task = new FreshCameraListTask();
+                //   task.execute("start");
                 mLvCameraEvent.onRefreshComplete();
             }
         });
@@ -172,7 +175,8 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
         mLvCameraEvent.setAdapter(mCameraEventListAdapter);
 
         mDhPlayerSdk.initPlayer();
-        mDhPlayerSdk.setSaveThumbEnable(true, ""+mCameraId);
+        mDhPlayerTalkSdk.initTalkPlayer();
+        mDhPlayerSdk.setSaveThumbEnable(true, "" + mCameraId);
         startRealPlay();
     }
 
@@ -184,27 +188,65 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
 
 
         mDhPlayerSdk.stopPlayer();
-        mDhPlayerSdk.uninitPlayer();
-
-
+        mDhPlayerSdk.unInitPlayer();
+        mDhPlayerTalkSdk.unInitTalkPlayer();
 
         super.onDestroy();
     }
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.iv_full_screen:
                 switchFullScreen();
                 break;
             case R.id.iv_audio:
+                if (mTalkOn) {
+                    Toast.makeText(this, "请先关闭对讲", Toast.LENGTH_SHORT).show();
+                } else if (mAudioOn) {
+                    mDhPlayerSdk.closeAudio();
+                    mIvAudio.setImageResource(R.drawable.audio_off);
+                    mAudioOn = false;
+                } else {
+                    int nRet = mDhPlayerSdk.openAudio();
+                    if (nRet == 0) {
+                        mIvAudio.setImageResource(R.drawable.audio_on);
+                        mAudioOn = true;
+                    } else {
+                        Toast.makeText(this, "开启声音失败", Toast.LENGTH_SHORT).show();
+                    }
+                }
                 break;
             case R.id.iv_talk:
+                if (mAudioOn) {
+                    Toast.makeText(this, "请先关闭声音", Toast.LENGTH_SHORT).show();
+                } else if (mTalkOn) {
+                    mDhNetSdk.stopTalk();
+                    mIvTalk.setImageResource(R.drawable.talk_off);
+                    mTalkOn = false;
+                } else {
+                    int nRet = mDhNetSdk.startTalk(new MyAudioStreamCallBack());
+                    if (nRet == 0) {
+                        mIvTalk.setImageResource(R.drawable.talk_on);
+                        mTalkOn = true;
+                        mDhPlayerSdk.startAudioRecord(new MyAudioRecordCallBack());
+                    } else {
+                        Toast.makeText(this, "开启对讲失败", Toast.LENGTH_SHORT).show();
+                    }
+                }
                 break;
             case R.id.iv_camera:
+                String curTimeStr = GlobalFunction.getCurrentTimeString("yyyy_MM_dd_HH_mm_ss");
+                String saveFile = GlobalFunction.getStoreFile()+"/"+GlobalDefine.DIRS.CAMERA_CAPTURE+"/"+curTimeStr+".jpg";
+                boolean bRet = mDhPlayerSdk.capturePic(saveFile);
+                if (bRet){
+                    Toast.makeText(this, "图片已保存到"+GlobalDefine.DIRS.CAMERA_CAPTURE, Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "抓图失败", Toast.LENGTH_SHORT).show();
+                }
                 break;
             case R.id.video_player:
-                if (mPlayerControl1.getVisibility() == View.GONE){
+                if (mPlayerControl1.getVisibility() == View.GONE) {
                     mPlayerControl1.setVisibility(View.VISIBLE);
                     mPlayerControl2.setVisibility(View.VISIBLE);
 
@@ -226,18 +268,18 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
 
-        if(this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
+        if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
             mViewExtend.setVisibility(View.GONE);
             mViewTitleBar.setVisibility(View.GONE);
             WindowManager.LayoutParams attrs = getWindow().getAttributes();
             attrs.flags |= WindowManager.LayoutParams.FLAG_FULLSCREEN;
             getWindow().setAttributes(attrs);
-            getWindow().addFlags( WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 
-               mVideoPlayer.setScreenOrientation(2);
+            mVideoPlayer.setScreenOrientation(2);
 
 
-        } else if(this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
+        } else if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
             mViewExtend.setVisibility(View.VISIBLE);
             mViewTitleBar.setVisibility(View.VISIBLE);
             WindowManager.LayoutParams attrs = getWindow().getAttributes();
@@ -250,7 +292,7 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
-    void switchFullScreen(){
+    void switchFullScreen() {
         if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
 
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -259,23 +301,23 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
-    boolean startRealPlay(){
-        String ip ;
-        int port ;
-        String user ;
-        String pwd ;
+    boolean startRealPlay() {
+        String ip;
+        int port;
+        String user;
+        String pwd;
         int channel;
 
         try {
-             ip = mCameraInfo.getString("ip");
-             port = mCameraInfo.getInt("port");
-             user = mCameraInfo.getString("user");
-             pwd = mCameraInfo.getString("pwd");
-             channel = mCameraInfo.getInt("channel");
+            ip = mCameraInfo.getString("ip");
+            port = mCameraInfo.getInt("port");
+            user = mCameraInfo.getString("user");
+            pwd = mCameraInfo.getString("pwd");
+            channel = mCameraInfo.getInt("channel");
         } catch (JSONException e) {
 
             e.printStackTrace();
-            return  false;
+            return false;
         }
         mVideoPlayer.setLoadingTitle("正在连接设备");
         mVideoPlayer.showLoadding(true);
@@ -286,7 +328,7 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void OnLoginResult(long lResult) {
                 Message msg = Message.obtain();
-                if (lResult == 0){
+                if (lResult == 0) {
                     msg.what = MSG_DEF.LOGIN_FAILURE;
                 } else {
                     msg.what = MSG_DEF.LOGIN_SUCCESS;
@@ -296,21 +338,17 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
         });
 
 
-
-      return true;
+        return true;
     }
-
-
-
 
 
     //抓图
-    boolean capPicture(){
-        return  false;
+    boolean capPicture() {
+        return false;
     }
 
     //保存camera缩略图
-    boolean saveCameraThumbPic(){
+    boolean saveCameraThumbPic() {
         return false;
     }
 
@@ -322,21 +360,38 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
+    private class MyAudioStreamCallBack implements DhNetSdk.AudioStreamCallBack {
+
+        @Override
+        public void invoke(long lTalkHandle, byte[] pDataBuf, byte byAudioFlag) {
+            mDhPlayerTalkSdk.inputTalkData(pDataBuf, pDataBuf.length);
+        }
+    }
+
+    private class MyAudioRecordCallBack implements DhPlayerSdk.AudioRecordCallBack {
+
+        @Override
+        public void invoke(byte[] bytes, int i, long l) {
+            byte[] encodeData = mDhPlayerSdk.AudioEncode(bytes);
+            mDhNetSdk.sendTalkDataToDevice(encodeData);
+        }
+    }
+
     class MsgHandler extends Handler {
 
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            if (msg.what == MSG_DEF.LOGIN_SUCCESS){
+            if (msg.what == MSG_DEF.LOGIN_SUCCESS) {
 
-                boolean bRet =  mDhNetSdk.realPlay(mChannel, mRealStreamCalllBack );
-                if (bRet){
+                boolean bRet = mDhNetSdk.realPlay(mChannel, mRealStreamCalllBack);
+                if (bRet) {
 
                 } else {
                     Toast.makeText(CameraActivity.this, "播放失败", Toast.LENGTH_SHORT).show();
                 }
                 mVideoPlayer.showLoadding(false);
-            } else if (msg.what == MSG_DEF.LOGIN_FAILURE){
+            } else if (msg.what == MSG_DEF.LOGIN_FAILURE) {
                 Toast.makeText(CameraActivity.this, "登录失败", Toast.LENGTH_SHORT).show();
                 mVideoPlayer.showLoadding(false);
             }
@@ -347,7 +402,8 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
     class CameraEventListAdapter extends BaseAdapter {
 
         Context mContext;
-        public CameraEventListAdapter(Context context){
+
+        public CameraEventListAdapter(Context context) {
             mContext = context;
         }
 
@@ -371,7 +427,7 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
 
             TextView tv = new TextView(mContext);
 
-            tv.setText("测试评论"+(i+1));
+            tv.setText("测试评论" + (i + 1));
             return tv;
         }
     }

@@ -3,8 +3,10 @@ package com.conwin.dhvideo;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
+import com.company.NetSDK.INetSDK;
 import com.company.PlaySDK.Constants;
 import com.company.PlaySDK.IPlaySDK;
+import com.company.PlaySDK.IPlaySDKCallBack;
 
 import java.io.File;
 
@@ -18,6 +20,7 @@ public class DhPlayerSdk {
     SurfaceHolder mSurfaceHolder;
     SurfaceView mSurfaceView;
     String mCameraId = "";
+    int mTalkPort = 99;
     /* 预览图片生成标志
      1 不生成视频预览图片
      2 等待生成预览图片
@@ -44,6 +47,16 @@ public class DhPlayerSdk {
             IPlaySDK.PLAYSetStreamOpenMode(mPlayPort, Constants.STREAME_FILE);
         }
 
+        return true;
+    }
+
+    public boolean initTalkPlayer(){
+        //初始化音频解码
+
+        int nRet = IPlaySDK.PLAYOpenStream(mTalkPort, null, 0, 1024 * 1024);
+        nRet = IPlaySDK.PLAYPlay(mTalkPort, null);
+        nRet = IPlaySDK.PLAYPlaySoundShare(mTalkPort);
+        IPlaySDK.PLAYSetVolume(mTalkPort, 0xffff);
         return true;
     }
 
@@ -87,10 +100,11 @@ public class DhPlayerSdk {
     }
 
     public void stopPlayer(){
+        stopAudoRecord();
         IPlaySDK.PLAYStop(mPlayPort);
         IPlaySDK.PLAYStopSoundShare(mPlayPort);
         IPlaySDK.PLAYCloseStream(mPlayPort);
-
+        IPlaySDK.UinitSurface(mPlayPort);
     }
 
 
@@ -112,6 +126,18 @@ public class DhPlayerSdk {
         return lRet==0?false:true;
     }
 
+    public boolean inputTalkData(byte[] pBuffer, int dwBufSize){
+        int lRet =  IPlaySDK.PLAYInputData(mTalkPort, pBuffer,
+                pBuffer.length);
+        if (lRet == 0){
+            Integer iR = new Integer(0);
+            IPlaySDK.PLAYGetLastError(iR);
+            System.out.println();
+        }
+        return lRet==0?false:true;
+    }
+
+
     //抓图
     public boolean capturePic(String path){
         if (mPlayPort < 0){
@@ -128,8 +154,78 @@ public class DhPlayerSdk {
 
     }
 
-    public void uninitPlayer(){
+    /*
+   return
+   0 成功
+   <0失败
+   -1 未播放视频
+   -2 开启声音失败
+    */
+    public int openAudio(){
+
+        if(mPlayPort < 0 ){
+            return  -1;
+        }
+       int nRet =  IPlaySDK.PLAYPlaySoundShare(mPlayPort);
+        return nRet==0?-2:0;
+    }
+
+    public void closeAudio(){
+        if (mPlayPort>-1) {
+            IPlaySDK.PLAYStopSoundShare(mPlayPort);
+        }
+    }
+
+    public boolean startAudioRecord(AudioRecordCallBack cb){
+        int nFrameLength = 1280;// G711a
+
+        int nRet = IPlaySDK.PLAYOpenAudioRecord(cb, 16, 8000,
+                nFrameLength, 0);
+        return  nRet==0?false:true;
+    }
+
+    public void stopAudoRecord(){
+        IPlaySDK.PLAYCloseAudioRecord();
+    }
+
+    public byte[] AudioEncode(byte[] pDataBuffer) {
+        int DataLength = pDataBuffer.length;
+
+        byte pbOut[] = new byte[102400];
+        int iCbLen = INetSDK.g711aEncode(pDataBuffer, pbOut, DataLength);
+
+        byte pCbData[] = null;
+        pCbData = new byte[iCbLen + 8];
+
+        // bit stream format frame head
+        pCbData[0] = 0x00;
+        pCbData[1] = 0x00;
+        pCbData[2] = 0x01;
+        pCbData[3] = (byte) 0xF0;
+
+        pCbData[4] = 0x0E; // G711A
+        pCbData[5] = 0x02;// dwSampleRate 8k //pCbData[5] = 0x04; //dwSampleRate
+        // = 16K
+
+        pCbData[6] = (byte) (iCbLen & 0xff);
+        pCbData[7] = (byte) (iCbLen >> 8);
+        System.arraycopy(pbOut, 0, pCbData, 8, iCbLen);
+        return pCbData;
+
+    }
+
+    public void unInitPlayer(){
         IPlaySDK.UinitSurface(mPlayPort);
     }
 
+    public void unInitTalkPlayer(){
+        //音频反初始化
+       // IPlaySDK.PLAYCloseAudioRecord();
+        IPlaySDK.PLAYStop(mTalkPort);
+        IPlaySDK.PLAYStopSoundShare(mTalkPort);
+        IPlaySDK.PLAYCloseStream(mTalkPort);
+    }
+    public  interface AudioRecordCallBack extends IPlaySDKCallBack.pCallFunction{
+
+    }
 }

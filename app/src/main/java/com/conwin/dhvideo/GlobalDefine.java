@@ -7,5 +7,6 @@ public class GlobalDefine {
 
     public interface DIRS{
         String CAMERA_THUMB = "xeyes/camera_thumb";
+        String CAMERA_CAPTURE = "xeyes/camera_capture";
     }
 }

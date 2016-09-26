@@ -63,7 +63,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:padding="7dp"
-                android:src="@drawable/audio_on"
+                android:src="@drawable/audio_off"
                 android:background="@drawable/video_marker_btn_bg"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true" />
@@ -73,7 +73,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:padding="7dp"
-                android:src="@drawable/talk_on"
+                android:src="@drawable/talk_off"
                 android:background="@drawable/video_marker_btn_bg"
                 android:layout_alignTop="@+id/iv_audio"
                 android:layout_toRightOf="@+id/iv_audio"
@@ -105,7 +105,8 @@
         <TextView
             android:id="@+id/tv_info"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
         <com.handmark.pulltorefresh.library.PullToRefreshListView
             android:id="@+id/lv_event"
             android:layout_width="match_parent"

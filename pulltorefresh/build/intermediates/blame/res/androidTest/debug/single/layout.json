@@ -1,10 +1,10 @@
 [
     {
-        "merged": "F:\\workplace\\android\\xeyes\\pulltorefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\pull_to_refresh_header_vertical.xml",
-        "source": "F:\\workplace\\android\\xeyes\\pulltorefresh\\build\\intermediates\\bundles\\debug\\res\\layout\\pull_to_refresh_header_vertical.xml"
+        "merged": "D:\\Users\\Gimo\\AndroidStudioProjects\\DHVideo\\pulltorefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\pull_to_refresh_header_vertical.xml",
+        "source": "D:\\Users\\Gimo\\AndroidStudioProjects\\DHVideo\\pulltorefresh\\build\\intermediates\\bundles\\debug\\res\\layout\\pull_to_refresh_header_vertical.xml"
     },
     {
-        "merged": "F:\\workplace\\android\\xeyes\\pulltorefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\pull_to_refresh_header_horizontal.xml",
-        "source": "F:\\workplace\\android\\xeyes\\pulltorefresh\\build\\intermediates\\bundles\\debug\\res\\layout\\pull_to_refresh_header_horizontal.xml"
+        "merged": "D:\\Users\\Gimo\\AndroidStudioProjects\\DHVideo\\pulltorefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\pull_to_refresh_header_horizontal.xml",
+        "source": "D:\\Users\\Gimo\\AndroidStudioProjects\\DHVideo\\pulltorefresh\\build\\intermediates\\bundles\\debug\\res\\layout\\pull_to_refresh_header_horizontal.xml"
     }
 ]
