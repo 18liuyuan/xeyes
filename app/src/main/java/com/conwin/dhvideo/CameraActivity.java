@@ -3,32 +3,50 @@ package com.conwin.dhvideo;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.conwin.gimoutils.ACache;
+import com.facebook.drawee.backends.pipeline.Fresco;
+import com.facebook.drawee.interfaces.DraweeController;
+import com.facebook.drawee.view.SimpleDraweeView;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.JsonHttpResponseHandler;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.zip.Inflater;
+
+import cz.msebera.android.httpclient.Header;
 
 public class CameraActivity extends AppCompatActivity implements View.OnClickListener {
 
     ACache mACache;
     int mCameraId;
+    // String mCameraIp;
     JSONObject mCameraInfo;
     DhNetSdk mDhNetSdk;
     DhPlayerSdk mDhPlayerSdk;
@@ -52,7 +70,8 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
     RelativeLayout mPlayerControl2;
     CameraEventListAdapter mCameraEventListAdapter;
     PullToRefreshListView mLvCameraEvent;
-
+    JSONArray mCameraEventData;
+    LayoutInflater mInflater;
     boolean mAudioOn = false;
     boolean mTalkOn = false;
 
@@ -66,6 +85,7 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
 
+        mInflater = getLayoutInflater();
         mMsgHandler = new MsgHandler();
         TextView tvTitle = (TextView) findViewById(R.id.tv_tb_title);
         tvTitle.setText("视频");
@@ -89,10 +109,14 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
         mDhPlayerSdk = new DhPlayerSdk();
         mDhPlayerTalkSdk = new DhPlayerSdk();
         mRealStreamCalllBack = new MyRealStreamCalllBack();
+        mCameraEventData = new JSONArray();
         Bundle b = this.getIntent().getExtras();
         mCameraId = b.getInt("chId");
+        // mCameraIp = b.getString("cameraIp");
+
         try {
-            mCameraInfo = mACache.getAsJSONArray("cameraList").getJSONObject(mCameraId);
+            mCameraInfo = new JSONObject(b.getString("cameraInfo"));
+            mCameraId = mCameraInfo.getInt("_id");
             tvTitle.setText(mCameraInfo.getString("name"));
 
             TextView tvInfo = (TextView) findViewById(R.id.tv_info);
@@ -121,12 +145,13 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
         ImageView ivLeft = (ImageView) findViewById(R.id.iv_tb_left);
         ivLeft.setImageResource(R.drawable.go_back);
         ivLeft.setVisibility(View.VISIBLE);
-        ivLeft.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        ivLeft.setOnClickListener(this);
+
+        ImageView ivBack = (ImageView) findViewById(R.id.iv_back);
+        ivBack.setImageResource(R.drawable.go_back);
+        ivBack.setVisibility(View.VISIBLE);
+        ivBack.setOnClickListener(this);
+
 
 
         mViewTitleBar = findViewById(R.id.ll_title_bar);
@@ -145,14 +170,14 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
             public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
                 //  FreshCameraListTask task = new FreshCameraListTask();
                 //  task.execute("start");
-                mLvCameraEvent.onRefreshComplete();
+               // mLvCameraEvent.onRefreshComplete();
             }
 
             @Override
             public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
                 //   FreshCameraListTask task = new FreshCameraListTask();
                 //   task.execute("start");
-                mLvCameraEvent.onRefreshComplete();
+              //  mLvCameraEvent.onRefreshComplete();
             }
         });
 
@@ -173,10 +198,12 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
 
         mCameraEventListAdapter = new CameraEventListAdapter(this);
         mLvCameraEvent.setAdapter(mCameraEventListAdapter);
+        getCommentList();
 
         mDhPlayerSdk.initPlayer();
         mDhPlayerTalkSdk.initTalkPlayer();
         mDhPlayerSdk.setSaveThumbEnable(true, "" + mCameraId);
+
         startRealPlay();
     }
 
@@ -237,10 +264,10 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
                 break;
             case R.id.iv_camera:
                 String curTimeStr = GlobalFunction.getCurrentTimeString("yyyy_MM_dd_HH_mm_ss");
-                String saveFile = GlobalFunction.getStoreFile()+"/"+GlobalDefine.DIRS.CAMERA_CAPTURE+"/"+curTimeStr+".jpg";
+                String saveFile = GlobalFunction.getStoreFile() + "/" + GlobalDefine.DIRS.CAMERA_CAPTURE + "/" + curTimeStr + ".jpg";
                 boolean bRet = mDhPlayerSdk.capturePic(saveFile);
-                if (bRet){
-                    Toast.makeText(this, "图片已保存到"+GlobalDefine.DIRS.CAMERA_CAPTURE, Toast.LENGTH_SHORT).show();
+                if (bRet) {
+                    Toast.makeText(this, "图片已保存到" + GlobalDefine.DIRS.CAMERA_CAPTURE, Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(this, "抓图失败", Toast.LENGTH_SHORT).show();
                 }
@@ -259,6 +286,11 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
                     mPlayerControl2.setAnimation(AnimationUtils.loadAnimation(this, R.anim.smooth_disappear_to_bottom));
                 }
 
+                break;
+
+            case R.id.iv_tb_left:
+            case R.id.iv_back:
+                finish();
                 break;
         }
     }
@@ -312,7 +344,7 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
             ip = mCameraInfo.getString("ip");
             port = mCameraInfo.getInt("port");
             user = mCameraInfo.getString("user");
-            pwd = mCameraInfo.getString("pwd");
+            pwd = mCameraInfo.getString("password");
             channel = mCameraInfo.getInt("channel");
         } catch (JSONException e) {
 
@@ -409,7 +441,8 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
 
         @Override
         public int getCount() {
-            return 10;
+            int count = mCameraEventData.length();
+            return count;
         }
 
         @Override
@@ -424,12 +457,81 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
 
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
+            if (view == null){
+                view = mInflater.inflate(R.layout.comment_item, null);
+            }
 
-            TextView tv = new TextView(mContext);
+            TextView tvUser = (TextView) view.findViewById(R.id.tv_user);
+            TextView tvTime = (TextView) view.findViewById(R.id.tv_time);
+            SimpleDraweeView ivPic = (SimpleDraweeView) view.findViewById(R.id.profile_photo);
+            LinearLayout commentPanel = (LinearLayout) view.findViewById(R.id.comment_panel);
+            commentPanel.removeAllViews();
 
-            tv.setText("测试评论" + (i + 1));
-            return tv;
+            JSONObject jComment = null;
+            try {
+                jComment = mCameraEventData.getJSONObject(i);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            try {
+
+                String nickName = jComment.getString("nick_name");
+                tvUser.setText(nickName);
+                tvTime.setText(jComment.getString("time"));
+                TextView tvComment = new TextView(mContext);
+                tvComment.setText(jComment.getString("content"));
+
+                String thumbPath = jComment.getString("profile_photo");
+               // Fresco.getImagePipeline().evictFromCache(Uri.parse(thumbPath));
+              //  Uri uri = Uri.fromFile(new File(thumbPath));
+                Uri uri = Uri.parse(thumbPath);
+
+                DraweeController controller = Fresco.newDraweeControllerBuilder()
+
+                        .setUri(uri)
+                        .build();
+                ivPic.setController(controller);
+                commentPanel.addView(tvComment);
+            } catch (JSONException e) {
+
+                tvUser.setText("");
+                tvTime.setText("");
+                TextView tvComment = new TextView(mContext);
+
+                commentPanel.removeAllViews();
+                e.printStackTrace();
+            }
+
+            return view;
         }
     }
 
+
+    void getCommentList() {
+        AsyncHttpClient httpClient = new AsyncHttpClient();
+        httpClient.get("http://gimo.site:5300/api/get_comment_list?cameraid=" + mCameraId, null, new JsonHttpResponseHandler() {
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                if (statusCode == 200) {
+                    if (response.has("result")) {
+                        try {
+                            int result = response.getInt("result");
+                            if (result == 0 && response.has("data")) {
+                                mCameraEventData = response.getJSONArray("data");
+
+                                mCameraEventListAdapter.notifyDataSetChanged();
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            }
+
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+
+            }
+        });
+
+
+    }
 }

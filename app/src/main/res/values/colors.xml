@@ -12,5 +12,7 @@
     <color name="colorSplitLine">#80AAAAAA</color>
     <color name="colorGray">#88888888</color>
     <color name="colorLightGray">#80CCCCCC</color>
+    <color name="colorGrayBg">#ebebeb</color>
     <color name="colorTran">#00000000</color>
+    <color name="colorCommenter">#3e8edf</color>
 </resources>

@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.conwin.gimoutils.ACache;
 import com.facebook.drawee.backends.pipeline.Fresco;
@@ -18,6 +19,8 @@ import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.JsonHttpResponseHandler;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -30,14 +33,18 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import cz.msebera.android.httpclient.Header;
+
 
 public class MainActivity extends AppCompatActivity {
 
     PullToRefreshListView mLvCamera;
-    List<JSONObject> mListCamera;
+    JSONArray mListCamera;
     LayoutInflater mInflater;
     CameraListAdapter mCameraAdapter;
     ACache mCache;
+
+    String mCameraIp = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,12 +89,12 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        mListCamera = new ArrayList<JSONObject>();
+        mListCamera = new JSONArray();
 
         mCameraAdapter = new CameraListAdapter();
         mLvCamera.setAdapter(mCameraAdapter);
-        initCameraList();
-
+        getCameraList();
+       // getCameraIp();
 
     }
 
@@ -98,26 +105,52 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
-    void initCameraList(){
-        mListCamera.clear();
-        ACache cache = ACache.get(this,"dhvideo");
-        JSONArray cameraList = cache.getAsJSONArray("cameraList");
-        for (int i=0;cameraList!=null && i<cameraList.length();i++){
-            try {
-                mListCamera.add(cameraList.getJSONObject(i));
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-        mCameraAdapter.notifyDataSetChanged();
-    }
+//    void initCameraList(){
+//        mListCamera.clear();
+//        ACache cache = ACache.get(this,"dhvideo");
+//        JSONArray cameraList = cache.getAsJSONArray("cameraList");
+//        for (int i=0;cameraList!=null && i<cameraList.length();i++){
+//            try {
+//                mListCamera.add(cameraList.getJSONObject(i));
+//            } catch (JSONException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//        mCameraAdapter.notifyDataSetChanged();
+//    }
 
+
+    void getCameraList(){
+        AsyncHttpClient httpClient = new AsyncHttpClient();
+        httpClient.get("http://gimo.site:5300/api/get_camera_list",null, new JsonHttpResponseHandler(){
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                if (statusCode == 200){
+                    if(response.has("result") ){
+                        try {
+                            int result = response.getInt("result") ;
+                            if (result == 0 && response.has("data")){
+                                mListCamera = response.getJSONArray("data");
+                                mCameraAdapter.notifyDataSetChanged();
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            }
+
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+
+            }
+        });
+
+    }
 
     class CameraListAdapter extends BaseAdapter{
 
         @Override
         public int getCount() {
-            return mListCamera.size();
+            return mListCamera.length();
         }
 
         @Override
@@ -135,17 +168,25 @@ public class MainActivity extends AppCompatActivity {
             if(convertView == null){
                 convertView = mInflater.inflate(R.layout.main_camera_item, null);
             }
-           JSONObject jCamera =  mListCamera.get(position);
+            JSONObject jCamera = null ;
+            try {
+                jCamera = mListCamera.getJSONObject(position);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
             String cameraName = "";
+            int cameraId = 0;
             try {
                 cameraName = jCamera.getString("name");
+                cameraId = jCamera.getInt("_id");
             } catch (JSONException e) {
                 e.printStackTrace();
             }
 
+
             SimpleDraweeView ivPic = (SimpleDraweeView) convertView.findViewById(R.id.iv_camera_pic);
            // ivPic.setAspectRatio(1.33f); // 设置宽高比为4:3
-            String thumbPath = GlobalFunction.getStoreFile()+"/"+GlobalDefine.DIRS.CAMERA_THUMB+"/camera"+position+".jpg";
+            String thumbPath = GlobalFunction.getStoreFile()+"/"+GlobalDefine.DIRS.CAMERA_THUMB+"/camera"+cameraId+".jpg";
            // Uri uri = Uri.parse("http://img0.imgtn.bdimg.com/it/u=2925305502,4225644286&fm=206&gp=0.jpg");
           //  ImagePipelineFactory.getInstance().getImagePipeline().clearMemoryCaches();
 
@@ -161,15 +202,17 @@ public class MainActivity extends AppCompatActivity {
 
             TextView tvName = (TextView) convertView.findViewById(R.id.tv_name);
             tvName.setText(cameraName);
-            convertView.setTag(position);
+            convertView.setTag(jCamera.toString());
             convertView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    String sCamera =  v.getTag().toString();
                     Intent iCamera = new Intent(MainActivity.this, CameraActivity.class);
                     Bundle b = new Bundle();
 
-                    int position = Integer.parseInt(v.getTag().toString());
-                    b.putInt("chId", position);
+
+
+                    b.putString("cameraInfo", sCamera);
                     iCamera.putExtras(b);
                     startActivity(iCamera);
                 }
@@ -194,7 +237,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Boolean aBoolean) {
-            initCameraList();
+            getCameraList();
             mLvCamera.onRefreshComplete();
             super.onPostExecute(aBoolean);
         }
@@ -205,9 +248,15 @@ public class MainActivity extends AppCompatActivity {
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onPostEvent(EventObject.CameraUpdate cu) {
-        initCameraList();
+        getCameraList();
       //  Toast.makeText(getActivity(), event.message, Toast.LENGTH_SHORT).show();
     }
+
+
+
+
+
+
 
 
 }

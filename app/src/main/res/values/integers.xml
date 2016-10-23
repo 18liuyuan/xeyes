@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    <integer name="vidoe_mark_smooth_duration_time">500</integer>
+    <integer name="vidoe_mark_smooth_duration_time">300</integer>
 </resources>

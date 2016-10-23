@@ -1,50 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/CodecSDK/AAC_ENC_Format.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/CodecSDK/AudioBuf.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/CodecSDK/Setformat.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARMCENTER_UP_CFG.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARMCTRL_PARAM.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_ACCESS_CTL_BREAK_IN_INFO.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_ACCESS_CTL_DURESS_INFO.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_ACCESS_CTL_EVENT_INFO.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_ACCESS_CTL_NOT_CLOSE_INFO.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_ACCESS_CTL_REPEAT_ENTER_INFO.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_ALARMEXTENDED_INFO.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_ALARM_INFO_EX2.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_ARM_DISARM_STATE_INFO.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_ATM_INFO_UPLOAD_CHNL.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_BATTERYLOWPOWER_INFO.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_BATTERYPOWER_INFO.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_BELLSTATUS_INFO.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_BYPASSMODE_CHANGE_INFO.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_CAMERA_MOVE_INFO.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_CARD_RECORD_INFO_UPLOAD.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_CHASSISINTRUDED_INFO.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_CIDEVENT_INFO.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_COLDSPOT_WARNING_INFO.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_CONTROL.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_DEFENCE_STATUS_CHANGE_INFO.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_DETAILEDMOTION_CHNL_INFO.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_DISKBURNED_FULL_INFO.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_DISK_FLUX.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_DISK_INFO.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_ENCLOSURE_INFO.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_FACE_OVERHEATING_INFO.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_FAN_SPEED.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_FDDI_ALARM.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALARM_FILE_SYSTEM_INFO.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/ALGO_PARAM_INFO.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/AV_CFG_AccessFilter.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/AV_CFG_ChannelVideoColor.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/AV_CFG_Color.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/NET_DEFENCE_STATE_INFO.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/SDKDEV_SHIELD_USER.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/SDKDEV_SNAP_UPLOAD_CFG.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/company/NetSDK/SDKDEV_SYSLOG_REMOTE_SERVER.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/conwin/dhvideo/DhNetSdk.java" charset="GBK" />
+  <component name="Encoding">
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
