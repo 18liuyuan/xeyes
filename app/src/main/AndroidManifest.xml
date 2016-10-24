@@ -30,7 +30,8 @@
         <activity android:name=".CameraInsertActivity" />
         <activity android:name=".CameraActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
         <activity android:name=".CameraEditActivity"/>
     </application>
 

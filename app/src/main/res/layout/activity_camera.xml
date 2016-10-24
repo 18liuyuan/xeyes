@@ -111,7 +111,8 @@
     <LinearLayout
         android:id="@+id/ll_extend"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:orientation="vertical"
         android:visibility="visible"
         android:background="@color/colorGrayBg">
@@ -133,26 +134,40 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/colorGray"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:padding="5dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-            <EditText
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:paddingLeft="3dp"
-                android:background="@drawable/default_editview"/>
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="5dp"
-                android:background="@mipmap/chat_add"
-                android:id="@+id/chat_add" />
-        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:padding="3dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+
+            android:background="@mipmap/chat_add"
+            android:id="@+id/chat_add" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:paddingLeft="5dp"
+            android:background="@drawable/default_editview"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/default_editview"
+            android:text="发送"/>
+
     </LinearLayout>
 </LinearLayout>
 
