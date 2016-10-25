@@ -161,11 +161,11 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
-
+            android:id="@+id/tv_commit"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:layout_marginLeft="5dp"
-            android:background="@drawable/default_editview"
+            android:background="@drawable/gray_hollow_btn"
             android:text="发送"/>
 
     </LinearLayout>

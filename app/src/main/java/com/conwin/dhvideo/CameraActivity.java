@@ -94,11 +94,12 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
         mIvTalk = (ImageView) findViewById(R.id.iv_talk);
         mIvCamera = (ImageView) findViewById(R.id.iv_camera);
         mLvCameraEvent = (PullToRefreshListView) findViewById(R.id.lv_event);
-
+        findViewById(R.id.tv_commit).setOnClickListener(this);
         mIvFullScreen.setOnClickListener(this);
         mIvAudio.setOnClickListener(this);
         mIvTalk.setOnClickListener(this);
         mIvCamera.setOnClickListener(this);
+
         // mSurfaceView = (SurfaceView) findViewById(R.id.sv_screen);
         mVideoPlayer = (VideoPlayer) findViewById(R.id.video_player);
 //        INetSDK.LoadLibrarys();
@@ -291,6 +292,8 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.iv_tb_left:
             case R.id.iv_back:
                 finish();
+                break;
+            case R.id.tv_commit:
                 break;
         }
     }
