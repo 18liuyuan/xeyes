@@ -3,7 +3,7 @@
     <color name="colorPrimary">#6caee4</color>
     <color name="colorPrimaryTran">#806caee4</color>
     <color name="colorPrimaryDark">#0e7fdc</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#80bcbaba</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorWhiteTran">#80FFFFFF</color>
     <color name="colorVideoMarkBg">#30FFFFFF</color>

@@ -13,7 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.animation.AnimationUtils;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -28,17 +30,12 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.JsonHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.zip.Inflater;
 
 import cz.msebera.android.httpclient.Header;
 
@@ -64,6 +61,7 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
     ImageView mIvAudio;
     ImageView mIvTalk;
     ImageView mIvCamera;
+    EditText mEtComment;
     View mViewTitleBar;
     View mViewExtend;
     RelativeLayout mPlayerControl1;
@@ -74,7 +72,7 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
     LayoutInflater mInflater;
     boolean mAudioOn = false;
     boolean mTalkOn = false;
-
+    int mRefreshStatus = 0;//0正常状态，1等待状态
     interface MSG_DEF {
         int LOGIN_SUCCESS = 0;
         int LOGIN_FAILURE = 1;
@@ -94,12 +92,13 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
         mIvTalk = (ImageView) findViewById(R.id.iv_talk);
         mIvCamera = (ImageView) findViewById(R.id.iv_camera);
         mLvCameraEvent = (PullToRefreshListView) findViewById(R.id.lv_event);
-        findViewById(R.id.tv_commit).setOnClickListener(this);
+        mEtComment = (EditText) findViewById(R.id.et_commit_content);
+
         mIvFullScreen.setOnClickListener(this);
         mIvAudio.setOnClickListener(this);
         mIvTalk.setOnClickListener(this);
         mIvCamera.setOnClickListener(this);
-
+        findViewById(R.id.tv_commit).setOnClickListener(this);
         // mSurfaceView = (SurfaceView) findViewById(R.id.sv_screen);
         mVideoPlayer = (VideoPlayer) findViewById(R.id.video_player);
 //        INetSDK.LoadLibrarys();
@@ -154,7 +153,6 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
         ivBack.setOnClickListener(this);
 
 
-
         mViewTitleBar = findViewById(R.id.ll_title_bar);
         mViewExtend = findViewById(R.id.ll_extend);
         mPlayerControl1 = (RelativeLayout) findViewById(R.id.ll_player_ctrl1);
@@ -169,16 +167,20 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
 
             @Override
             public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
+                mRefreshStatus = 1;
+                getCommentList(0,1,10);
                 //  FreshCameraListTask task = new FreshCameraListTask();
                 //  task.execute("start");
-               // mLvCameraEvent.onRefreshComplete();
+                // mLvCameraEvent.onRefreshComplete();
             }
 
             @Override
             public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
+                mRefreshStatus = 1;
+                getCommentList(0,1,10);
                 //   FreshCameraListTask task = new FreshCameraListTask();
                 //   task.execute("start");
-              //  mLvCameraEvent.onRefreshComplete();
+                //  mLvCameraEvent.onRefreshComplete();
             }
         });
 
@@ -199,7 +201,7 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
 
         mCameraEventListAdapter = new CameraEventListAdapter(this);
         mLvCameraEvent.setAdapter(mCameraEventListAdapter);
-        getCommentList();
+        getCommentList(0, 1,10);
 
         mDhPlayerSdk.initPlayer();
         mDhPlayerTalkSdk.initTalkPlayer();
@@ -294,6 +296,13 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
                 finish();
                 break;
             case R.id.tv_commit:
+                EditText etCommit = (EditText) findViewById(R.id.et_commit_content);
+                String content = etCommit.getText().toString().trim();
+                if (content.length() == 0) {
+                    Toast.makeText(this, "请输入评论内容", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                publistComment(content);
                 break;
         }
     }
@@ -460,7 +469,7 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
 
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
-            if (view == null){
+            if (view == null) {
                 view = mInflater.inflate(R.layout.comment_item, null);
             }
 
@@ -485,8 +494,8 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
                 tvComment.setText(jComment.getString("content"));
 
                 String thumbPath = jComment.getString("profile_photo");
-               // Fresco.getImagePipeline().evictFromCache(Uri.parse(thumbPath));
-              //  Uri uri = Uri.fromFile(new File(thumbPath));
+                // Fresco.getImagePipeline().evictFromCache(Uri.parse(thumbPath));
+                //  Uri uri = Uri.fromFile(new File(thumbPath));
                 Uri uri = Uri.parse(thumbPath);
 
                 DraweeController controller = Fresco.newDraweeControllerBuilder()
@@ -510,9 +519,17 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
     }
 
 
-    void getCommentList() {
+
+    /*
+    startId 起始的comment_id，0最新发布;大于0为实际的comment_id
+    dir 方向,1发布时间早于startId；2发布时间晚于startId。starId=0时，该参数无效
+    size 最大数量
+     */
+    void getCommentList(int startId, int dir, int size) {
         AsyncHttpClient httpClient = new AsyncHttpClient();
+
         httpClient.get("http://gimo.site:5300/api/get_comment_list?cameraid=" + mCameraId, null, new JsonHttpResponseHandler() {
+
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 if (statusCode == 200) {
                     if (response.has("result")) {
@@ -522,6 +539,53 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
                                 mCameraEventData = response.getJSONArray("data");
 
                                 mCameraEventListAdapter.notifyDataSetChanged();
+                                int len = mCameraEventData.length();
+                                if (len > 1) {
+                                    mLvCameraEvent.getRefreshableView().setSelection(mCameraEventData.length());
+                                }
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+
+                if (mRefreshStatus == 1){
+                    mLvCameraEvent.onRefreshComplete();
+                    mRefreshStatus = 0;
+                }
+            }
+
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                if (mRefreshStatus == 1){
+                    mLvCameraEvent.onRefreshComplete();
+                    mRefreshStatus = 0;
+                }
+            }
+        });
+    }
+
+    void publistComment(String content) {
+
+        AsyncHttpClient httpClient = new AsyncHttpClient();
+        RequestParams p = new RequestParams();
+        p.put("camera_id", mCameraId);
+        p.put("content", content);
+        httpClient.post("http://gimo.site:5300/api/publish_comment", p, new JsonHttpResponseHandler() {
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                if (statusCode == 200) {
+                    if (response.has("result")) {
+                        try {
+                            int result = response.getInt("result");
+                            if (result == 0) {
+                                getCommentList(0,1,10);
+                                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                                //imm.showSoftInput(view,InputMethodManager.SHOW_FORCED);
+
+                                imm.hideSoftInputFromWindow(mEtComment.getWindowToken(), 0); //强制隐藏键盘
+                                mEtComment.setText("");
+                            } else {
+                                Toast.makeText(CameraActivity.this, "发表失败", Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -534,7 +598,5 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
 
             }
         });
-
-
     }
 }
